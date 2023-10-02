@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_OLDALE_TOWN",
-      "offset": 0,
+      "offset": -1,
       "direction": "down"
     },
     {
-      "map": "MAP_SLATEPORT_CITY",
-      "offset": -10,
+      "map": "MAP_PETALBURG_CITY",
+      "offset": -2,
       "direction": "up"
     }
   ],

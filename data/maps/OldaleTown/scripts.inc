@@ -295,7 +295,7 @@ OldaleTown_EventScript_HelperToLab::
 	closedoor 11, 6
 	waitdooranim
 	special RemoveCameraObject
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 0
+	warp MAP_OLDALE_TOWN_PROFESSOR_ROWANS_LAB, 0
 	waitstate
 	release
 	end
