@@ -77,8 +77,8 @@
       ],
       "encounters": [
         {
-          "map": "MAP_ROUTE101",
-          "base_label": "gRoute101",
+          "map": "MAP_ROUTE201",
+          "base_label": "gRoute201",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -146,8 +146,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE102",
-          "base_label": "gRoute102",
+          "map": "MAP_ROUTE202",
+          "base_label": "gRoute202",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [

@@ -17,8 +17,8 @@
 #define MAPSEC_MOSSDEEP_CITY                0x0D
 #define MAPSEC_SOOTOPOLIS_CITY              0x0E
 #define MAPSEC_EVER_GRANDE_CITY             0x0F
-#define MAPSEC_ROUTE_101                    0x10
-#define MAPSEC_ROUTE_102                    0x11
+#define MAPSEC_ROUTE_201                    0x10
+#define MAPSEC_ROUTE_202                    0x11
 #define MAPSEC_ROUTE_103                    0x12
 #define MAPSEC_ROUTE_104                    0x13
 #define MAPSEC_ROUTE_105                    0x14

@@ -26,6 +26,7 @@ LittlerootTown_MapScripts::
 	@ State descriptions for VAR_ALTERNATE_TEXT
 	@ 1: Talked to Mom saying bye in intro event
 	@ 2: Talked to Rival's Mom after Rival leaves Twinleaf
+	@ 3: Talked to Helper Route 202 without telling Mom
 
 LittlerootTown_OnTransition:
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_EventScript_LeaveRunning

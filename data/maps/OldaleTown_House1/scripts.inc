@@ -10,12 +10,12 @@ OldaleTown_House1_EventScript_Boy::
 
 OldaleTown_House1_Text_Aroma:
 	.string "A good Trainer is one that takes care\n"
-	.string "not to let their Pokemon faint from\l"
+	.string "not to let their Pokémon faint from\l"
 	.string "losing HP.$"
 
 OldaleTown_House1_Text_Boy:
-	.string "Pokemon grow steadily stronger from\n"
-	.string "battling against other Pokemon.\p"
+	.string "Pokémon grow steadily stronger from\n"
+	.string "battling against other Pokémon.\p"
 	.string "At first, you should heal your\n"
-	.string "Pokemon regularly at Poke Centers\l"
+	.string "Pokémon regularly at Poké Centers\l"
 	.string "while you're leveling them up.$"

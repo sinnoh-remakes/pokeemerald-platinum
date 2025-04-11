@@ -2,8 +2,8 @@
   "id": "MAP_LAKEFRONT_VERITY",
   "name": "LakefrontVerity",
   "layout": "LAYOUT_LAKEFRONT_VERITY",
-  "music": "MUS_ROUTE101",
-  "region_map_section": "MAPSEC_ROUTE_101",
+  "music": "MUS_ROUTE201",
+  "region_map_section": "MAPSEC_ROUTE_201",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE101",
+      "map": "MAP_ROUTE201",
       "offset": 2,
       "direction": "right"
     }
@@ -56,7 +56,7 @@
       "x": 2,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
+      "var": "VAR_ROUTE201_STATE",
       "var_value": "1",
       "script": "LakefrontVerity_EventScript_EnterLake"
     },
@@ -65,7 +65,7 @@
       "x": 3,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
+      "var": "VAR_ROUTE201_STATE",
       "var_value": "1",
       "script": "LakefrontVerity_EventScript_EnterLake"
     },
@@ -74,7 +74,7 @@
       "x": 2,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
+      "var": "VAR_ROUTE201_STATE",
       "var_value": "3",
       "script": "LakefrontVerity_EventScript_ReturnLake"
     },
@@ -83,7 +83,7 @@
       "x": 3,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
+      "var": "VAR_ROUTE201_STATE",
       "var_value": "3",
       "script": "LakefrontVerity_EventScript_ReturnLake"
     }

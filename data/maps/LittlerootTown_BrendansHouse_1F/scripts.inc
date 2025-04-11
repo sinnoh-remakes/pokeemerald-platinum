@@ -155,16 +155,12 @@ LittlerootTown_BrendansHouse_1F_EventScript_Impatient::
 
 LittlerootTown_BrendansHouse_1F_EventScript_MomAlternate::
 	goto_if_lt VAR_ALTERNATE_TEXT, 1, LittlerootTown_BrendansHouse_1F_EventScript_TakeCare
-	goto LittlerootTown_BrendansHouse_1F_EventScript_RivalWaiting
+	msgbox LittlerootTown_BrendansHouse_1F_Text_RivalWaiting, MSGBOX_NPC
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_TakeCare::
 	setvar VAR_ALTERNATE_TEXT, 1
 	msgbox LittlerootTown_BrendansHouse_1F_Text_TakeCare, MSGBOX_NPC
-	end
-
-LittlerootTown_BrendansHouse_1F_EventScript_RivalWaiting::
-	msgbox LittlerootTown_BrendansHouse_1F_Text_RivalWaiting, MSGBOX_NPC
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_RunningShoesManual::

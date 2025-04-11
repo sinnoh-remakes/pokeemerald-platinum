@@ -5,12 +5,12 @@ LakefrontVerity_MapScripts::
 	.byte 0
 
 LakefrontVerity_OnFrame:
-	map_script_2 VAR_ROUTE101_STATE, 2, LakefrontVerity_EventScript_ExitLake
+	map_script_2 VAR_ROUTE201_STATE, 2, LakefrontVerity_EventScript_ExitLake
 	.2byte 0
 
 LakefrontVerity_EventScript_EnterLake::
 	lock
-	setvar VAR_ROUTE101_STATE, 2
+	setvar VAR_ROUTE201_STATE, 2
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox LakefrontVerity_Text_EnterLake, MSGBOX_SIGN
@@ -36,9 +36,9 @@ LakefrontVerity_EventScript_ExitLake::
 	applymovement LOCALID_RIVAL, LakefrontVerity_Movement_WalkUpRight
 	waitmovement 0
 	setvar VAR_FOLLOWER_TEXT, 0
-	setvar VAR_ROUTE101_STATE, 3
+	setvar VAR_ROUTE201_STATE, 3
 	setflag FLAG_HIDE_VERITY_LAKEFRONT_RIVAL
-	clearflag FLAG_HIDE_ROUTE_101_PROF
+	clearflag FLAG_HIDE_ROUTE_201_PROF
 	loadword 0 LakefrontVerity_EventScript_Rival
 	setfollower LOCALID_RIVAL 0x100
 	release

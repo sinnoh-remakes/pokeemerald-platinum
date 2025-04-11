@@ -1,71 +1,71 @@
-Route102_Text_CalvinIntro:
+Route202_Text_CalvinIntro:
 	.string "If you have POKéMON with you, then\n"
 	.string "you're an official POKéMON TRAINER!\l"
 	.string "You can't say no to my challenge!$"
 
-Route102_Text_CalvinDefeated:
+Route202_Text_CalvinDefeated:
 	.string "Arrgh, I lost…\n"
 	.string "I should have trained mine more…$"
 
-Route102_Text_CalvinPostBattle:
+Route202_Text_CalvinPostBattle:
 	.string "Listen, you. If you're strong,\n"
 	.string "you should have told me before!$"
 
-Route102_Text_CalvinRegister:
+Route202_Text_CalvinRegister:
 	.string "I've been working hard at this since\n"
 	.string "I saw you before.\p"
 	.string "I'd like to battle you again, so can\n"
 	.string "you register me in your POKéNAV?$"
 
-Route102_Text_CalvinRegisterShort:
+Route202_Text_CalvinRegisterShort:
 	.string "I'd like to battle you again, so can\n"
 	.string "you register me in your POKéNAV?$"
 
-Route102_Text_CalvinRematchIntro:
+Route202_Text_CalvinRematchIntro:
 	.string "Ever since I lost to you, I desperately\n"
 	.string "trained my POKéMON.\l"
 	.string "You can't say no to my challenge!$"
 
-Route102_Text_CalvinRematchDefeated:
+Route202_Text_CalvinRematchDefeated:
 	.string "Arrgh, I lost…\n"
 	.string "Is my training method not right?$"
 
-Route102_Text_CalvinRematchPostBattle:
+Route202_Text_CalvinRematchPostBattle:
 	.string "If you're going to get stronger,\n"
 	.string "I'll get stronger, too.$"
 
-Route102_Text_AllenIntro:
+Route202_Text_AllenIntro:
 	.string "Did you just become a TRAINER?\n"
 	.string "We're both beginners!$"
 
-Route102_Text_AllenDefeated:
+Route202_Text_AllenDefeated:
 	.string "I called you because I thought\n"
 	.string "I could beat you…$"
 
-Route102_Text_AllenPostBattle:
+Route202_Text_AllenPostBattle:
 	.string "I haven't won once yet…\n"
 	.string "I wish I would win soon…$"
 
-Route102_Text_RickIntro:
+Route202_Text_RickIntro:
 	.string "Hahah! Our eyes met!\n"
 	.string "I'll take you on with my BUG POKéMON!$"
 
-Route102_Text_RickDefeated:
+Route202_Text_RickDefeated:
 	.string "Ow! Down and out!$"
 
-Route102_Text_RickPostBattle:
+Route202_Text_RickPostBattle:
 	.string "If you lock eyes with a TRAINER,\n"
 	.string "you have to challenge! It's a rule!$"
 
-Route102_Text_TianaIntro:
+Route202_Text_TianaIntro:
 	.string "I'm going to keep winning and aim\n"
 	.string "to be the best TRAINER.\p"
 	.string "Help me further my career!$"
 
-Route102_Text_TianaDefeated:
+Route202_Text_TianaDefeated:
 	.string "I ended up furthering your career…$"
 
-Route102_Text_TianaPostBattle:
+Route202_Text_TianaPostBattle:
 	.string "To keep winning my way up, I see that\n"
 	.string "I have to catch more POKéMON.$"
 
