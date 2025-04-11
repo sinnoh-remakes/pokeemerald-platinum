@@ -549,7 +549,7 @@ Route201_Text_TipSign:
 	.string "invaluable information and advice.$"
 
 Route201_Text_NextRouteSign:
-	.string "{RIGHT_ARROW} R.201\n"
+	.string "{RIGHT_ARROW} Rt.201\n"
 	.string "   Sandgem Town$"
 
 Route201_Text_BoyTalk:

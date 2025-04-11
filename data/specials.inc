@@ -309,9 +309,9 @@ gSpecials::
 	def_special FoundAbandonedShipRoom2Key
 	def_special FoundAbandonedShipRoom4Key
 	def_special FoundAbandonedShipRoom6Key
-	def_special LeadMonHasEffortRibbon
-	def_special GiveLeadMonEffortRibbon
-	def_special Special_AreLeadMonEVsMaxedOut
+	def_special LeadMonHasEffortRibbon @ Unused
+	def_special GiveLeadMonEffortRibbon @ Unused
+	def_special Special_AreLeadMonEVsMaxedOut @ Unused
 	def_special Script_FacePlayer
 	def_special Script_ClearHeldMovement
 	def_special InitRoamer

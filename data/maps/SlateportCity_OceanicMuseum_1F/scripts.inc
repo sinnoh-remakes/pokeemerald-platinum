@@ -7,20 +7,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_EntranceAttendant::
 	msgbox SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself, MSGBOX_NPC
 	end
 
-SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFeeLeft::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	goto SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee
-	end
-
-SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFeeRight::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	goto SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee
-	end
-
+@ TODO: Unused
 SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee::
 	showmoneybox 0, 0
 	msgbox SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter, MSGBOX_YESNO
@@ -39,7 +26,6 @@ SlateportCity_OceanicMuseum_1F_EventScript_CheckMoneyForFee::
 	removemoney 50
 	updatemoneybox
 	msgbox SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself, MSGBOX_DEFAULT
-	setvar VAR_SLATEPORT_MUSEUM_1F_STATE, 1
 	hidemoneybox
 	releaseall
 	end
@@ -56,7 +42,6 @@ SlateportCity_OceanicMuseum_1F_EventScript_NotEnoughMoney::
 
 SlateportCity_OceanicMuseum_1F_EventScript_AllowEntranceAnyway::
 	msgbox SlateportCity_OceanicMuseum_1F_Text_CatchUpWithYourGroup, MSGBOX_DEFAULT
-	setvar VAR_SLATEPORT_MUSEUM_1F_STATE, 1
 	hidemoneybox
 	releaseall
 	end

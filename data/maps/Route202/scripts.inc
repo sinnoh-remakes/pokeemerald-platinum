@@ -17,7 +17,6 @@ Route202_OnFrame:
 
 Route202_EventScript_HelperExclaim::
 	lockall
-	setvar VAR_ROUTE202_STATE, 1
 	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 10
@@ -121,7 +120,7 @@ Route202_EventScript_HelperAccept::
 	waitmovement 0
 	removeobject LOCALID_HELPER
 	setflag FLAG_HIDE_ROUTE_202_HELPER
-	setvar VAR_ROUTE202_STATE, 2
+	setvar VAR_ROUTE202_STATE, 1
 	delay 48
 	releaseall
 	end
@@ -257,76 +256,71 @@ Route202_EventScript_FartherB::
 	msgbox Route202_Text_FartherB, MSGBOX_SIGN
 	return
 
-Route202_EventScript_LittleBoy::
-	msgbox Route202_Text_ImNotVeryTall, MSGBOX_NPC
+Route202_EventScript_RouteSignSandgem::
+	msgbox Route202_Text_RouteSignSandgem, MSGBOX_SIGN
 	end
 
-Route202_EventScript_RouteSignOldale::
-	msgbox Route202_Text_RouteSignOldale, MSGBOX_SIGN
-	end
-
-Route202_EventScript_RouteSignPetalburg::
-	msgbox Route202_Text_RouteSignPetalburg, MSGBOX_SIGN
+Route202_EventScript_RouteSignJubilife::
+	msgbox Route202_Text_RouteSignJubilife, MSGBOX_SIGN
 	end
 
 Route202_EventScript_Boy::
-	msgbox Route202_Text_CatchWholeBunchOfPokemon, MSGBOX_NPC
+	msgbox Route202_Text_KeepWaiting, MSGBOX_NPC
 	end
 
-Route202_EventScript_Calvin::
-	trainerbattle_single TRAINER_CALVIN_1, Route202_Text_CalvinIntro, Route202_Text_CalvinDefeated, Route202_EventScript_CalvinRegisterMatchCallAfterBattle
+Route202_EventScript_TrainerTips::
+	msgbox Route202_Text_TrainerTips, MSGBOX_SIGN
+	end
+
+Route202_EventScript_Tristan::
+	trainerbattle_single TRAINER_TRISTAN_1, Route202_Text_TristanIntro, Route202_Text_TristanDefeated, Route202_EventScript_TristanRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route202_EventScript_CalvinRematch
-	setvar VAR_0x8004, TRAINER_CALVIN_1
+	goto_if_eq VAR_RESULT, TRUE, Route202_EventScript_TristanRematch
+	setvar VAR_0x8004, TRAINER_TRISTAN_1
 	specialvar VAR_RESULT, IsTrainerRegistered
-	goto_if_eq VAR_RESULT, FALSE, Route202_EventScript_CalvinTryRegister
-	msgbox Route202_Text_CalvinPostBattle, MSGBOX_DEFAULT
+	goto_if_eq VAR_RESULT, FALSE, Route202_EventScript_TristanTryRegister
+	msgbox Route202_Text_TristanPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-Route202_EventScript_CalvinRegisterMatchCallAfterBattle::
+Route202_EventScript_TristanRegisterMatchCallAfterBattle::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	goto_if_set FLAG_HAS_MATCH_CALL, Route202_EventScript_CalvinRegisterMatchCall
+	goto_if_set FLAG_HAS_MATCH_CALL, Route202_EventScript_TristanRegisterMatchCall
 	release
 	end
 
-Route202_EventScript_CalvinRegisterMatchCall::
-	msgbox Route202_Text_CalvinRegisterShort, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CALVIN_1
+Route202_EventScript_TristanRegisterMatchCall::
+	msgbox Route202_Text_TristanRegisterShort, MSGBOX_DEFAULT
+	register_matchcall TRAINER_TRISTAN_1
 	release
 	end
 
-Route202_EventScript_CalvinTryRegister::
-	goto_if_set FLAG_HAS_MATCH_CALL, Route202_EventScript_CalvinRegister
-	msgbox Route202_Text_CalvinPostBattle, MSGBOX_DEFAULT
+Route202_EventScript_TristanTryRegister::
+	goto_if_set FLAG_HAS_MATCH_CALL, Route202_EventScript_TristanRegister
+	msgbox Route202_Text_TristanPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-Route202_EventScript_CalvinRegister::
-	msgbox Route202_Text_CalvinRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CALVIN_1
+Route202_EventScript_TristanRegister::
+	msgbox Route202_Text_TristanRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_TRISTAN_1
 	release
 	end
 
-Route202_EventScript_CalvinRematch::
-	trainerbattle_rematch TRAINER_CALVIN_1, Route202_Text_CalvinRematchIntro, Route202_Text_CalvinRematchDefeated
-	msgbox Route202_Text_CalvinRematchPostBattle, MSGBOX_AUTOCLOSE
+Route202_EventScript_TristanRematch::
+	trainerbattle_rematch TRAINER_TRISTAN_1, Route202_Text_TristanRematchIntro, Route202_Text_TristanRematchDefeated
+	msgbox Route202_Text_TristanRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route202_EventScript_Rick::
-	trainerbattle_single TRAINER_RICK, Route202_Text_RickIntro, Route202_Text_RickDefeated
-	msgbox Route202_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+Route202_EventScript_Natalie::
+	trainerbattle_single TRAINER_NATALIE, Route202_Text_NatalieIntro, Route202_Text_NatalieDefeated
+	msgbox Route202_Text_NataliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route202_EventScript_Tiana::
-	trainerbattle_single TRAINER_TIANA, Route202_Text_TianaIntro, Route202_Text_TianaDefeated
-	msgbox Route202_Text_TianaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route202_EventScript_Allen::
-	trainerbattle_single TRAINER_ALLEN, Route202_Text_AllenIntro, Route202_Text_AllenDefeated
-	msgbox Route202_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
+Route202_EventScript_Logan::
+	trainerbattle_single TRAINER_LOGAN, Route202_Text_LoganIntro, Route202_Text_LoganDefeated
+	msgbox Route202_Text_LoganPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
@@ -439,21 +433,23 @@ Route202_Text_LetsGoBack:
 	.string "{PLAYER}, thank you!\n"
 	.string "Let's go back to the GYM!$"
 
-Route202_Text_ImNotVeryTall:
-	.string "I'm…not very tall, so I sink right\n"
-	.string "into tall grass.\p"
-	.string "The grass goes up my nose and…\n"
-	.string "Fwafwafwafwafwa…\p"
-	.string "Fwatchoo!$"
+Route202_Text_KeepWaiting:
+	.string "Some Pokémon only appear in the\n"
+	.string "morning. Some only come out at night.\p"
+	.string "I'm going to keep waiting right here\n"
+	.string "till I've seen every last one of 'em!$"
 
-Route202_Text_CatchWholeBunchOfPokemon:
-	.string "I'm going to catch a whole bunch of\n"
-	.string "POKéMON!$"
+Route202_Text_TrainerTips:
+	.string "TRAINER TIPS!\p"
+	.string "All Pokémon that are involved in\n"
+	.string "a battle earn Exp. Points\p"
+	.string "The more your Pokémon battle,\n"
+	.string "the stronger they will become.$"
 
-Route202_Text_RouteSignOldale:
-	.string "ROUTE 202\n"
-	.string "{RIGHT_ARROW} OLDALE TOWN$"
+Route202_Text_RouteSignSandgem:
+	.string "{DOWN_ARROW} Rt.202\n"
+	.string "   Sandgem Town$"
 
-Route202_Text_RouteSignPetalburg:
-	.string "ROUTE 202\n"
-	.string "{LEFT_ARROW} PETALBURG CITY$"
+Route202_Text_RouteSignJubilife:
+	.string "{UP_ARROW} Rt.202\n"
+	.string "   Jubilife City$"

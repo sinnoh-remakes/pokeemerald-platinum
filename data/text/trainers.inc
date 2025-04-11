@@ -1,73 +1,64 @@
-Route202_Text_CalvinIntro:
-	.string "If you have POKéMON with you, then\n"
-	.string "you're an official POKéMON TRAINER!\l"
-	.string "You can't say no to my challenge!$"
+Route202_Text_TristanIntro:
+	.string "You're a Pokémon Trainer!\n"
+	.string "I happen to be a Pokémon Trainer!\p"
+	.string "Our eyes met, so battle we must!$"
 
-Route202_Text_CalvinDefeated:
-	.string "Arrgh, I lost…\n"
-	.string "I should have trained mine more…$"
+Route202_Text_TristanDefeated:
+	.string "Too strong!\n"
+	.string "Too strong!$"
 
-Route202_Text_CalvinPostBattle:
-	.string "Listen, you. If you're strong,\n"
-	.string "you should have told me before!$"
+Route202_Text_TristanPostBattle:
+	.string "Don't be shy about talking to\n"
+	.string "Trainers you'd like to battle.\p"
+	.string "Pokémon grow stronger and stronger\n"
+	.string "from battling.$"
 
-Route202_Text_CalvinRegister:
+Route202_Text_TristanRegister:
 	.string "I've been working hard at this since\n"
 	.string "I saw you before.\p"
 	.string "I'd like to battle you again, so can\n"
 	.string "you register me in your POKéNAV?$"
 
-Route202_Text_CalvinRegisterShort:
+Route202_Text_TristanRegisterShort:
 	.string "I'd like to battle you again, so can\n"
 	.string "you register me in your POKéNAV?$"
 
-Route202_Text_CalvinRematchIntro:
+Route202_Text_TristanRematchIntro:
 	.string "Ever since I lost to you, I desperately\n"
 	.string "trained my POKéMON.\l"
 	.string "You can't say no to my challenge!$"
 
-Route202_Text_CalvinRematchDefeated:
+Route202_Text_TristanRematchDefeated:
 	.string "Arrgh, I lost…\n"
 	.string "Is my training method not right?$"
 
-Route202_Text_CalvinRematchPostBattle:
+Route202_Text_TristanRematchPostBattle:
 	.string "If you're going to get stronger,\n"
 	.string "I'll get stronger, too.$"
 
-Route202_Text_AllenIntro:
-	.string "Did you just become a TRAINER?\n"
-	.string "We're both beginners!$"
+Route202_Text_LoganIntro:
+	.string "Let's have a Pokémon battle!\n"
+	.string "Humph! But I'm gonna win!$"
 
-Route202_Text_AllenDefeated:
-	.string "I called you because I thought\n"
-	.string "I could beat you…$"
+Route202_Text_LoganDefeated:
+	.string "You're, like, wow!$"
 
-Route202_Text_AllenPostBattle:
-	.string "I haven't won once yet…\n"
-	.string "I wish I would win soon…$"
+Route202_Text_LoganPostBattle:
+	.string "It's fun to battle others!\n"
+	.string "I'm gonna battle all sorts of people!$"
 
-Route202_Text_RickIntro:
-	.string "Hahah! Our eyes met!\n"
-	.string "I'll take you on with my BUG POKéMON!$"
+Route202_Text_NatalieIntro:
+	.string "I spy, with my little eye...\n"
+	.string "A Trainer!\p"
+	.string "A battle, please!$"
 
-Route202_Text_RickDefeated:
-	.string "Ow! Down and out!$"
+Route202_Text_NatalieDefeated:
+	.string "Oh, boo!\n"
+	.string "I can't win!$"
 
-Route202_Text_RickPostBattle:
-	.string "If you lock eyes with a TRAINER,\n"
-	.string "you have to challenge! It's a rule!$"
-
-Route202_Text_TianaIntro:
-	.string "I'm going to keep winning and aim\n"
-	.string "to be the best TRAINER.\p"
-	.string "Help me further my career!$"
-
-Route202_Text_TianaDefeated:
-	.string "I ended up furthering your career…$"
-
-Route202_Text_TianaPostBattle:
-	.string "To keep winning my way up, I see that\n"
-	.string "I have to catch more POKéMON.$"
+Route202_Text_NataliePostBattle:
+	.string "My Pokémon are all tuckered out!\n"
+	.string "I need to go to a Poké Center!$"
 
 Route103_Text_DaisyIntro:
 	.string "Did you feel the tug of our\n"

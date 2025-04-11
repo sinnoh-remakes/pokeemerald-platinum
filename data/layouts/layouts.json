@@ -185,7 +185,7 @@
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
       "width": 60,
-      "height": 30,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route103/border.bin",

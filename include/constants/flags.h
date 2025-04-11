@@ -167,7 +167,7 @@
 #define FLAG_CAUGHT_LUGIA                    0x91
 #define FLAG_CAUGHT_HO_OH                    0x92
 #define FLAG_MR_BRINEY_SAILING_INTRO         0x93
-#define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
+#define FLAG_UNUSED_0x94                     0x94
 #define FLAG_DELIVERED_DEVON_GOODS           0x95
 #define FLAG_RECEIVED_CONTEST_PASS           0x96 // Unused, leftover from R/S
 #define FLAG_RECEIVED_CASTFORM               0x97
@@ -362,7 +362,7 @@
 #define FLAG_MIRAGE_TOWER_VISIBLE            0x14E
 #define FLAG_CHOSE_ROOT_FOSSIL               0x14F
 #define FLAG_CHOSE_CLAW_FOSSIL               0x150
-#define FLAG_RECEIVED_POWDER_JAR             0x151
+#define FLAG_UNUSED_0x151                    0x151
 
 #define FLAG_CHOSEN_MULTI_BATTLE_NPC_PARTNER 0x152
 
@@ -415,7 +415,7 @@
 #define FLAG_REGISTERED_MIGUEL               (TRAINER_REGISTERED_FLAGS_START + REMATCH_MIGUEL)
 #define FLAG_REGISTERED_TIMOTHY              (TRAINER_REGISTERED_FLAGS_START + REMATCH_TIMOTHY)
 #define FLAG_REGISTERED_SHELBY               (TRAINER_REGISTERED_FLAGS_START + REMATCH_SHELBY)
-#define FLAG_REGISTERED_CALVIN               (TRAINER_REGISTERED_FLAGS_START + REMATCH_CALVIN)
+#define FLAG_REGISTERED_TRISTAN              (TRAINER_REGISTERED_FLAGS_START + REMATCH_TRISTAN)
 #define FLAG_REGISTERED_ELLIOT               (TRAINER_REGISTERED_FLAGS_START + REMATCH_ELLIOT)
 #define FLAG_REGISTERED_ISAIAH               (TRAINER_REGISTERED_FLAGS_START + REMATCH_ISAIAH)
 #define FLAG_REGISTERED_MARIA                (TRAINER_REGISTERED_FLAGS_START + REMATCH_MARIA)
@@ -849,7 +849,7 @@
 #define FLAG_HIDE_LUGIA                                             0x320
 #define FLAG_HIDE_HO_OH                                             0x321
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_REPORTER                    0x322
-#define FLAG_HIDE_SLATEPORT_CITY_CONTEST_REPORTER                   0x323
+#define FLAG_UNUSED_0x323                                           0x323
 #define FLAG_HIDE_MAUVILLE_CITY_WALLY                               0x324
 #define FLAG_HIDE_MAUVILLE_CITY_WALLYS_UNCLE                        0x325
 #define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY                0x326
@@ -887,14 +887,14 @@
 #define FLAG_UNUSED_0x346                                           0x346
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1                             0x347
 #define FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN                      0x348
-#define FLAG_HIDE_SLATEPORT_CITY_HARBOR_CAPTAIN_STERN               0x349
+#define FLAG_UNUSED_0x349                                           0x349
 #define FLAG_HIDE_BATTLE_FRONTIER_SUDOWOODO                         0x34A
 #define FLAG_HIDE_ROUTE_111_ROCK_SMASH_TIP_GUY                      0x34B
 #define FLAG_HIDE_RUSTBORO_CITY_SCIENTIST                           0x34C
-#define FLAG_HIDE_SLATEPORT_CITY_HARBOR_AQUA_GRUNT                  0x34D
-#define FLAG_HIDE_SLATEPORT_CITY_HARBOR_ARCHIE                      0x34E
+#define FLAG_UNUSED_0x34D                                           0x34D
+#define FLAG_UNUSED_0x34E                                           0x34E
 #define FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD                           0x34F
-#define FLAG_HIDE_SLATEPORT_CITY_HARBOR_SUBMARINE_SHADOW            0x350
+#define FLAG_UNUSED_0x350                                           0x350
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL          0x351
 #define FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON_ASLEEP                   0x352
 #define FLAG_HIDE_ROUTE_119_RIVAL                                   0x353

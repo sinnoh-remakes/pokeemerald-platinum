@@ -5940,7 +5940,7 @@ Hariyama
 Level: 39
 IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
 
-=== TRAINER_CALVIN_1 ===
+=== TRAINER_TRISTAN_1 ===
 Name: CALVIN
 Class: Youngster
 Pic: Youngster
@@ -5949,7 +5949,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Starly
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6206,8 +6206,8 @@ Zigzagoon
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ALLEN ===
-Name: ALLEN
+=== TRAINER_LOGAN ===
+Name: LOGAN
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -6215,12 +6215,8 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Taillow
-Level: 3
+Shinx
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMMY ===
@@ -11044,8 +11040,8 @@ Camerupt
 Level: 25
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_TIANA ===
-Name: TIANA
+=== TRAINER_NATALIE ===
+Name: NATALIE
 Class: Lass
 Pic: Lass
 Gender: Female
@@ -11053,12 +11049,12 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
+Bidoof
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Shroomish
-Level: 4
+Bidoof
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_1 ===

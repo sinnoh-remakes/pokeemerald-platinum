@@ -187,7 +187,7 @@
 #define VAR_TRICK_HOUSE_ENTRANCE_STATE                   0x40A7
 #define VAR_UNUSED_0x40A8                                0x40A8 // Unused Var
 #define VAR_CYCLING_CHALLENGE_STATE                      0x40A9
-#define VAR_SLATEPORT_MUSEUM_1F_STATE                    0x40AA
+#define VAR_UNUSED_0x40AA                                0x40AA
 #define VAR_TRICK_HOUSE_PUZZLE_1_STATE                   0x40AB
 #define VAR_TRICK_HOUSE_PUZZLE_2_STATE                   0x40AC
 #define VAR_TRICK_HOUSE_PUZZLE_3_STATE                   0x40AD
@@ -227,7 +227,7 @@
 #define VAR_FRONTIER_FACILITY                            0x40CF
 #define VAR_HAS_ENTERED_BATTLE_FRONTIER                  0x40D0 // Var is used like a flag.
 #define VAR_SCOTT_STATE                                  0x40D1
-#define VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE               0x40D2
+#define VAR_UNUSED_0x40D2                                0x40D2
 #define VAR_DEX_UPGRADE_JOHTO_STARTER_STATE              0x40D3
 #define VAR_SS_TIDAL_SCOTT_STATE                         0x40D4 // Always equal to FLAG_MET_SCOTT_ON_SS_TIDAL
 #define VAR_ROAMER_POKEMON                               0x40D5 // 0 = Latias, 1 = Latios
