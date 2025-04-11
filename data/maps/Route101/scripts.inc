@@ -1,4 +1,6 @@
 .set LOCALID_RIVAL, 1
+.set LOCALID_PROF, 2
+.set LOCALID_HELPER, 3
 
 Route101_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
@@ -6,16 +8,17 @@ Route101_MapScripts::
 	.byte 0
 
 	@ State descriptions for VAR_ROUTE101_STATE
-	@ 1: Prior to First Lake Scene
-	@ 2: Post First Lake Scene
-	@ 3: Post Professor Scene
+	@ 1: Prior to first lake event
+	@ 2: Post first lake event
+	@ 3: Returned from first lake event
+	@ 4: Post professor event
+	@ 5: Received Potion sample
 
 Route101_OnTransition:
-	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_EventScript_IntroScene
+	call Common_EventScript_SetupRivalGfxId
 	end
 
 Route101_OnFrame:
-	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_HideMapNamePopup
 	.2byte 0
 
 Route101_EventScript_RivalSee1::
@@ -41,6 +44,7 @@ Route101_EventScript_RivalSee::
 	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 10
+	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
@@ -52,6 +56,7 @@ Route101_EventScript_RivalSee::
 	call_if_eq VAR_0x8004, 3, Route101_EventScript_RivalShift3
 	call_if_eq VAR_0x8004, 4, Route101_EventScript_RivalShift4
 	msgbox Route101_Text_RivalMeet, MSGBOX_SIGN
+	setflag FLAG_HIDE_ROUTE_101_RIVAL
 	loadword 0 Route101_EventScript_Rival
 	setfollower LOCALID_RIVAL 0x100
 	release
@@ -98,6 +103,7 @@ Route101_EventScript_RouteSign::
 	end
 
 Route101_EventScript_Rival::
+	@ TODO: Faceplayer not working
 	faceplayer
 	goto_if_eq VAR_FOLLOWER_TEXT, 0, Route101_EventScript_RivalTalk1
 	goto_if_eq VAR_FOLLOWER_TEXT, 1, Route101_EventScript_RivalTalk2
@@ -171,9 +177,221 @@ Route101_EventScript_FollowGrassSpecial::
 	release
 	end
 
+Route101_EventScript_ProfessorA::
+	lock
+	setvar VAR_0x8004, 0
+	goto Route101_EventScript_Professor1
+	
+Route101_EventScript_ProfessorB::
+	lock
+	setvar VAR_0x8004, 1
+	goto Route101_EventScript_Professor1
+
+Route101_EventScript_Professor1::
+	setvar VAR_ROUTE101_STATE, 4
+	setflag FLAG_HIDE_ROUTE_101_PROF
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	delay 48
+	msgbox Route101_Text_RivalProf, MSGBOX_SIGN
+	delay 48
+	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	delay 48
+	call_if_eq VAR_0x8004, 0, Route101_EventScript_ProfessorMove1
+	call_if_eq VAR_0x8004, 1, Route101_EventScript_ProfessorMove2
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route101_EventScript_ProfessorSay4
+	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_ProfessorSay5
+	switch VAR_STARTER_MON
+	case 0, Route101_EventScript_ProfessorSay1
+	case 1, Route101_EventScript_ProfessorSay2
+	case 2, Route101_EventScript_ProfessorSay3
+	end
+
+Route101_EventScript_Professor2::
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route101_EventScript_ProfessorSay6
+	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_ProfessorSay7
+	call_if_eq VAR_0x8004, 0, Route101_EventScript_HelperMove1
+	call_if_eq VAR_0x8004, 1, Route101_EventScript_HelperMove2
+	applymovement LOCALID_PROF, Route101_Movement_ProfessorLeave
+	waitmovement 0
+	removeobject LOCALID_PROF
+	call_if_eq VAR_RESULT, MALE, Route_EventScript_HelperSay1
+	call_if_eq VAR_RESULT, FEMALE, Route_EventScript_HelperSay2
+	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	call_if_eq VAR_RESULT, MALE, Route_EventScript_HelperSay3
+	call_if_eq VAR_RESULT, FEMALE, Route_EventScript_HelperSay4
+	applymovement LOCALID_HELPER, Route101_Movement_HelperLeave
+	waitmovement 0
+	removeobject LOCALID_HELPER
+	msgbox Route101_Text_RivalLeave, MSGBOX_SIGN
+	delay 48
+	setvar VAR_LITTLEROOT_INTRO_STATE, 5
+	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 1, 5
+	fadedefaultbgm
+	fadescreen FADE_TO_BLACK
+	destroyfollower
+	release
+	end
+
+Route101_EventScript_ProfessorSay1::
+	msgbox Route101_Text_Professor1, MSGBOX_SIGN
+	goto Route101_EventScript_Professor2
+	end
+
+Route101_EventScript_ProfessorSay2::
+	msgbox Route101_Text_Professor2, MSGBOX_SIGN
+	goto Route101_EventScript_Professor2
+	end
+Route101_EventScript_ProfessorSay3::
+	msgbox Route101_Text_Professor3, MSGBOX_SIGN
+	goto Route101_EventScript_Professor2
+	end
+
+Route101_EventScript_ProfessorSay4::
+	msgbox Route101_Text_Professor4, MSGBOX_SIGN
+	return
+
+Route101_EventScript_ProfessorSay5::
+	msgbox Route101_Text_Professor5, MSGBOX_SIGN
+	return
+
+Route101_EventScript_ProfessorSay6::
+	msgbox Route101_Text_Professor6, MSGBOX_SIGN
+	return
+
+Route101_EventScript_ProfessorSay7::
+	msgbox Route101_Text_Professor7, MSGBOX_SIGN
+	return
+
+Route101_EventScript_ProfessorMove1::
+	applymovement LOCALID_PROF, Route101_Movement_Professor1
+	waitmovement 0
+	return
+	
+Route101_EventScript_ProfessorMove2::
+	applymovement LOCALID_PROF, Route101_Movement_Professor2
+	waitmovement 0
+	return
+
+Route_EventScript_HelperSay1::
+	msgbox Route101_Text_Helper1, MSGBOX_SIGN
+	return
+
+Route_EventScript_HelperSay2::
+	msgbox Route101_Text_Helper2, MSGBOX_SIGN
+	return
+
+Route_EventScript_HelperSay3::
+	msgbox Route101_Text_Helper3, MSGBOX_SIGN
+	return
+
+Route_EventScript_HelperSay4::
+	msgbox Route101_Text_Helper4, MSGBOX_SIGN
+	return
+
+Route101_EventScript_HelperMove1::
+	applymovement LOCALID_HELPER, Route101_Movement_Helper1
+	return
+
+Route101_EventScript_HelperMove2::
+	applymovement LOCALID_HELPER, Route101_Movement_Helper2
+	return
+
+Route101_Movement_Professor1:
+	walk_left
+	walk_left
+	step_end
+
+Route101_Movement_Professor2:
+	walk_left
+	walk_down
+	walk_left
+	step_end
+
+Route101_Movement_ProfessorLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Route101_Movement_Helper1:
+	delay_16
+	delay_16
+	walk_in_place_right
+	step_end
+
+Route101_Movement_Helper2:
+	delay_16
+	walk_up
+	walk_in_place_down
+	walk_in_place_right
+	step_end
+
+Route101_Movement_HelperLeave:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+Route101_EventScript_TipSign::
+	msgbox Route101_Text_TipSign, MSGBOX_SIGN
+	end
+
+Route101_EventScript_NextRouteSign::
+	msgbox Route101_Text_NextRouteSign, MSGBOX_SIGN
+	end
+
+Route101_EventScript_BoyTalk::
+	msgbox Route101_Text_BoyTalk, MSGBOX_NPC
+	end
+
+Route101_EventScript_LassTalk::
+	msgbox Route101_Text_LassTalk, MSGBOX_NPC
+	end
+
+Route101_EventScript_MartSample::
+	goto_if_eq VAR_ROUTE101_STATE, 4, Route101_EventScript_MartSample1
+	goto Route101_EventScript_MartSample2
+	end
+
+Route101_EventScript_MartSample1::
+	lockall
+	setvar VAR_ROUTE101_STATE, 5
+	msgbox Route101_Text_MartSample1, MSGBOX_SIGN
+	giveitem ITEM_POTION
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+	releaseall
+	end
+
+Route101_EventScript_MartSample2::
+	msgbox Route101_EventScript_MartSample2, MSGBOX_NPC
+	end
+
+Route101_EventScript_SchoolKidTalk::
+	msgbox Route101_Text_SchoolKidTalk, MSGBOX_NPC
+	end
+
 Route101_Text_RouteSign:
 	.string "{DOWN_ARROW} R.201\n"
-	.string "     Twinleaf Town$"
+	.string "   Twinleaf Town$"
 
 @ TODO: Figure out how to add delimited quotes to string
 Route101_Text_RivalMeet:
@@ -244,3 +462,125 @@ Route101_Text_FollowGrass:
 	.string "you if you're walking in the tall grass.\p"
 	.string "'It would be OK if you had your\n"
 	.string "own Pokemon, but...'$"
+
+Route101_Text_RivalProf:
+	.string "{RIVAL}: Hey, it's those people!\n"
+	.string "Is that old guy staring at us?$"
+
+Route101_Text_Professor1:
+	.string "Hmm...\n"
+	.string "TURTWIG and CHIMCHAR...\p"
+	.string "...\p"
+	.string "Hmm...\p"
+	.string "I see...\n"
+	.string "That's how it is...$"
+	
+Route101_Text_Professor2:
+	.string "Hmm...\n"
+	.string "CHIMCHAR and PIPLUP...\p"
+	.string "...\p"
+	.string "Hmm...\p"
+	.string "I see...\n"
+	.string "That's how it is...$"
+	
+Route101_Text_Professor3:
+	.string "Hmm...\n"
+	.string "PIPLUP and TURTWIG...\p"
+	.string "...\p"
+	.string "Hmm...\p"
+	.string "I see...\n"
+	.string "That's how it is...$"
+
+Route101_Text_Professor4:
+	.string "Professor: Hmm...\p"
+	.string "I heard from Dawn that\n"
+	.string "you used our Pokemon?\l"
+	.string "Let me see them, please.$"
+
+Route101_Text_Professor5:
+	.string "Professor: Hmm...\p"
+	.string "I heard from Lucas that\n"
+	.string "you used our Pokemon?\l"
+	.string "Let me see them, please.$"
+
+Route101_Text_Professor6:
+	.string "Dawn!\n"
+	.string "I'm going back to my lab!$"
+
+Route101_Text_Professor7:
+	.string "Lucas!\n"
+	.string "I'm going back to my lab!$"
+
+Route101_Text_Helper1:
+	.string "Dawn: Um...Yes!\n"
+	.string "Professor, please wait for me!$"
+
+Route101_Text_Helper2:
+	.string "Lucas: Uh... Yeah, Of course!\n"
+	.string "Professor, wait for me!$"
+
+Route101_Text_Helper3:
+	.string "I think you should visit our lab\n"
+	.string "later.\p"
+	.string "OK, see you!$"
+	
+Route101_Text_Helper4:
+	.string "You should visit us at our lab later,\n"
+	.string "I think.\p"
+	.string "We'll be seeing you!$"
+
+Route101_Text_RivalLeave:
+	.string "{RIVAL}: What was all that\n"
+	.string "craziness about?\p"
+	.string "I mean, if he was angry, he could've\n"
+	.string "just yelled at us, or whatever...\p"
+	.string "And didn't he want their Pokemon\n"
+	.string "back...?\p"
+	.string "{PLAYER}...\n"
+	.string "We should go home, too...$"
+
+Route101_Text_TipSign:
+	.string "Trainer Tips!\p"
+	.string "Don't be shy! Talk to anyone and\n"
+	.string "everyone you happen to see.\p"
+	.string "By talking to people, you will get\n"
+	.string "invaluable information and advice.$"
+
+Route101_Text_NextRouteSign:
+	.string "{RIGHT_ARROW} R.201\n"
+	.string "   Sandgem Town$"
+
+Route101_Text_BoyTalk:
+	.string "Wild Pokemon lurk in tall grass. They\n"
+	.string "can come bursting out at any time.\p"
+	.string "So, if you're wanting to battle wild\n"
+	.string "Pokemon, just walk in tall grass.\p"
+	.string "If you want to avoid wild Pokemon,\n"
+	.string "then stay out of the tall grass.$"
+	
+Route101_Text_LassTalk:
+	.string "If your Pokemon's health--that's its\n"
+	.string "HP--is getting low, you should go\l"
+	.string "home and get some rest.$"
+
+Route101_Text_MartSample1:
+	.string "Hi!\n"
+	.string "I work at a Pokemon Mart.\p"
+	.string "Did you know that a Pokemon's health\n"
+	.string "is measured by Hit Pointer (HP)?\p"
+	.string "If a Pokemon runs out of HP, it\n"
+	.string "faints and can't battle anymore.\p"
+	.string "If a Pokemon's HP gets low, you\n"
+	.string "should heal it with a Potion.\p"
+	.string "Here, let me give you a Potion as\n"
+	.string "a free sample. First one's free!\p"
+	.string "It will automatically go in the\n"
+	.string "Medicine Pocket of your Bag.$"
+
+Route101_Text_MartSample2:
+	.string "You can find a Pokemon Mart in\n"
+	.string "cities and most major towns.$"
+
+Route101_Text_SchoolKidTalk:
+	.string "That ledge is one way. Jump down\n"
+	.string "for a shortcut to Twinleaf Town!$"

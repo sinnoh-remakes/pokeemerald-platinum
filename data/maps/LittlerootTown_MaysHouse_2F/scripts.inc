@@ -33,12 +33,13 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
 	msgbox LittlerootTown_MaysHouse_2F_RivalMessage1, MSGBOX_SIGN
 	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
@@ -66,10 +67,10 @@ LittlerootTown_MaysHouse_2F_Movement_RivalRun1:
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
+	walk_fast_left
 	step_end
 	
 LittlerootTown_MaysHouse_2F_Movement_RivalRun2:
-	walk_fast_left
 	walk_fast_left
 	walk_fast_up
 	step_end

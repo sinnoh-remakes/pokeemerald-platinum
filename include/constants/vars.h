@@ -158,7 +158,7 @@
 #define VAR_CONTEST_PRIZE_PICKUP                         0x408A
 #define VAR_UNUSED_0x408B                                0x408B
 #define VAR_UNUSED_0x408C                                0x408C
-#define VAR_UNUSED_0x408D                                0x408D
+#define VAR_ALTERNATE_TEXT                               0x408D
 #define VAR_BOARD_BRINEY_BOAT_STATE                      0x408E
 #define VAR_DEVON_CORP_3F_STATE                          0x408F
 #define VAR_BRINEY_HOUSE_STATE                           0x4090

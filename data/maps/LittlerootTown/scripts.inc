@@ -9,15 +9,22 @@ LittlerootTown_MapScripts::
 	@ State descriptions for VAR_LITTLEROOT_TOWN_STATE
 	@ 1: Left with Rival to see lake
 	@ 2: Entered lake event
-	@ 3: Returned from lab @ TODO
+	@ 3: Left Twinleaf with Running Shoes
 
 	@ State descriptions for VAR_LITTLEROOT_INTRO_STATE
 	@ 1: Talked to Mom once
 	@ 2: Talked to Mom twice
 	@ 3: Bumped into Rival
 	@ 4: Spoken to Rival in room
+	@ 5: Returned from lake event
+	@ 6: Received Running Shoes
+
+	@ State descriptions for VAR_ALTERNATE_TEXT
+	@ 1: Talked to Mom saying bye in intro event
+	@ 2: Talked to Rival's Mom after Rival leaves Twinleaf
 
 LittlerootTown_OnTransition:
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_EventScript_LeaveRunning
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	end
 
@@ -40,6 +47,7 @@ LittlerootTown_EventScript_RivalMeet::
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
@@ -48,21 +56,20 @@ LittlerootTown_EventScript_RivalMeet::
 	waitmovement 0
 	closemessage
 	msgbox LittlerootTown_Text_RivalBump, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerFaceRight
 	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalRight
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerFaceRight
-	waitmovement 0
-	@ TODO: Fix exclamation not showing
+	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerFaceUp
 	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalLeft
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerFaceUp
 	waitmovement 0
 	delay 30
 	msgbox LittlerootTown_Text_RivalForget, MSGBOX_SIGN
@@ -130,12 +137,11 @@ LittlerootTown_EventScript_BlockExclaim::
 	applymovement LOCALID_BLOCK, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 10
+	playse SE_PIN
 	applymovement LOCALID_BLOCK, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_BLOCK, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_BLOCK, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	return
 
 LittlerootTown_EventScript_LeaveBlock1::
@@ -348,6 +354,10 @@ LittlerootTown_Movement_WalkLeft7:
 	walk_down
 	step_end
 
+LittlerootTown_EventScript_LeaveRunning::
+	setvar VAR_LITTLEROOT_TOWN_STATE, 3
+	end
+
 LittlerootTown_Text_Thud:
 	.string "Thud!!$"
 
@@ -357,7 +367,7 @@ LittlerootTown_Text_RivalBump:
 	.string "Hey! I'm going to the lake!\n"
 	.string "You come too! And be quick about it!\p"
 	.string "OK, B?\n"
-	@ TODO: Fix dollar sign ₽
+	@ TODO: Add dollar sign ₽
 	.string "I'm fining you 1 million if you're late!$"
 
 LittlerootTown_Text_RivalForget:
@@ -405,12 +415,22 @@ LittlerootTown_EventScript_FatMan::
 	end
 
 LittlerootTown_EventScript_Aroma::
-	msgbox LittlerootTown_Text_Aroma, MSGBOX_NPC
+	goto_if_lt VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_EventScript_Aroma_Talk1
+	goto LittlerootTown_EventScript_Aroma_Talk2
+	end
+
+LittlerootTown_EventScript_Aroma_Talk1::
+	msgbox LittlerootTown_Text_Aroma1, MSGBOX_NPC
+	end
+
+LittlerootTown_EventScript_Aroma_Talk2::
+	msgbox LittlerootTown_Text_Aroma2, MSGBOX_NPC
 	end
 
 LittlerootTown_EventScript_Guitarist::
-	call_if_lt VAR_LITTLEROOT_INTRO_STATE, 4, LittlerootTown_EventScript_Guitarist_Talk1
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, LittlerootTown_EventScript_Guitarist_Talk2
+	goto_if_lt VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_EventScript_Guitarist_Talk1
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_EventScript_Guitarist_Talk2
+	goto LittlerootTown_EventScript_Guitarist_Talk3
 	end
 
 LittlerootTown_EventScript_Guitarist_Talk1::
@@ -421,16 +441,25 @@ LittlerootTown_EventScript_Guitarist_Talk2::
 	msgbox LittlerootTown_Text_Guitarist2, MSGBOX_NPC
 	end
 
+LittlerootTown_EventScript_Guitarist_Talk3::
+	msgbox LittlerootTown_Text_Guitarist3, MSGBOX_NPC
+	end
+
 LittlerootTown_Text_FatMan:
 	.string "Technology just blows me away!\p"
 	.string "I mean, now you can play with people\n"
 	.string "around the world... wirelessly!$"
 
-LittlerootTown_Text_Aroma:
+LittlerootTown_Text_Aroma1:
 	.string "It's true that wild Pokemon do attack\n"
 	.string "people sometimes...\p"
 	.string "However, Pokemon also let you become\n"
 	.string "friends with them.$"
+
+@ TODO: Add poke sign P
+LittlerootTown_Text_Aroma2:
+	.string "Oh! A Pokemon!\n"
+	.string "You look good together!$"
 	
 LittlerootTown_Text_Guitarist1:
 	.string "Hiya, {PLAYER}.\n"
@@ -445,6 +474,10 @@ LittlerootTown_Text_Guitarist2:
 	.string "while ago.\p"
 	.string "He's probably not gone too far.\n"
 	.string "Why not go chase after him?$"
+	
+LittlerootTown_Text_Guitarist3:
+	.string "{RIVAL}? He went tearing off\n"
+	.string "in a huge rush a while ago.$"
 
 LittlerootTown_Text_TownSign:
 	.string "Twinleaf Town\n"
