@@ -5,7 +5,13 @@ Route101_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_OnFrame
 	.byte 0
 
+	@ State descriptions for VAR_ROUTE101_STATE
+	@ 1: Prior to First Lake Scene
+	@ 2: Post First Lake Scene
+	@ 3: Post Professor Scene
+
 Route101_OnTransition:
+	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_EventScript_IntroScene
 	end
 
 Route101_OnFrame:
@@ -43,9 +49,8 @@ Route101_EventScript_RivalSee::
 	waitmovement 0
 	call_if_eq VAR_0x8004, 1, Route101_EventScript_RivalShift1
 	call_if_eq VAR_0x8004, 2, Route101_EventScript_RivalShift2
+	call_if_eq VAR_0x8004, 3, Route101_EventScript_RivalShift3
 	call_if_eq VAR_0x8004, 4, Route101_EventScript_RivalShift4
-	applymovement LOCALID_RIVAL, Common_Movement_WalkDown
-	waitmovement 0
 	msgbox Route101_Text_RivalMeet, MSGBOX_SIGN
 	loadword 0 Route101_EventScript_Rival
 	setfollower LOCALID_RIVAL 0x100
@@ -53,34 +58,40 @@ Route101_EventScript_RivalSee::
 	end
 
 Route101_EventScript_RivalShift1::
-	applymovement LOCALID_RIVAL, Route101_Movement_RivalLeft
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
+	applymovement LOCALID_RIVAL, Route101_Movement_RivalShift1
 	waitmovement 0
 	return
 
-Route101_Movement_RivalLeft:
+Route101_Movement_RivalShift1:
 	walk_left
 	walk_left
+	walk_down
 	step_end
 
 Route101_EventScript_RivalShift2::
-	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
+	applymovement LOCALID_RIVAL, Route101_Movement_RivalShift2
+	waitmovement 0
+	return
+
+Route101_Movement_RivalShift2:
+	walk_left
+	walk_down
+	step_end
+
+Route101_EventScript_RivalShift3::
+	applymovement LOCALID_RIVAL, Common_Movement_WalkDown
 	waitmovement 0
 	return
 
 Route101_EventScript_RivalShift4::
-	applymovement LOCALID_RIVAL, Common_Movement_WalkRight
+	applymovement LOCALID_RIVAL, Route101_Movement_RivalShift4
 	waitmovement 0
 	return
 
-Route101_EventScript_Youngster::
-	msgbox Route101_Text_TakeTiredPokemonToPokeCenter, MSGBOX_NPC
-	end
-
-Route101_EventScript_Boy::
-	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
-	end
+Route101_Movement_RivalShift4:
+	walk_right
+	walk_down
+	step_end
 
 Route101_EventScript_RouteSign::
 	msgbox Route101_Text_RouteSign, MSGBOX_SIGN
@@ -145,8 +156,6 @@ Route101_EventScript_FollowGrass::
 	goto_if_eq VAR_FACING, DIR_NORTH, Route101_EventScript_FollowGrassSpecial
 	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_FaceRight
 	waitmovement 0
 	delay 30
 	release

@@ -4420,6 +4420,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/LittlerootTown_OtherHouseB/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_OtherHouseB/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKEFRONT_VERITY",
+      "name": "LakefrontVerity_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/LakefrontVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakefrontVerity/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VERITY",
+      "name": "LakeVerity_Layout",
+      "width": 20,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/LakeVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     }
   ]
 }

@@ -746,7 +746,7 @@
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
-#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
+#define FLAG_HIDE_EVENTOBJ                                          0x2BC
 #define FLAG_HIDE_APPRENTICE                                        0x2BD
 #define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
 #define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF
@@ -768,7 +768,7 @@
 #define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
 #define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
 #define FLAG_UNUSED_0x2D1                                           0x2D1
-#define FLAG_HIDE_LITTLEROOT_TOWN_RIVAL                             0x2D2
+#define FLAG_UNUSED_0x2D2                                           0x2D2
 #define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
@@ -943,8 +943,8 @@
 #define FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND                        0x37E
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_CONTEST_ATTENDANT_2         0x37F
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_UNKNOWN_0x380          0x380
-#define FLAG_HIDE_ROUTE_101_BIRCH                                   0x381
-#define FLAG_HIDE_ROUTE_103_BIRCH                                   0x382
+#define FLAG_HIDE_VERITY_INTRO_MAY                                  0x381
+#define FLAG_HIDE_VERITY_INTRO_BRENDAN                              0x382
 #define FLAG_HIDE_TRICK_HOUSE_END_MAN                               0x383
 #define FLAG_HIDE_ROUTE_110_TEAM_AQUA                               0x384
 #define FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2                          0x385
@@ -1037,7 +1037,7 @@
 #define FLAG_HIDE_ROUTE_120_KECLEON_5                               0x3DC
 #define FLAG_HIDE_ROUTE_119_KECLEON_1                               0x3DD
 #define FLAG_HIDE_ROUTE_119_KECLEON_2                               0x3DE
-#define FLAG_HIDE_ROUTE_101_BOY                                     0x3DF
+#define FLAG_HIDE_VERITY_INTRO_OTHER                                0x3DF
 #define FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M                 0x3E0
 #define FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON          0x3E1
 #define FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY                       0x3E2

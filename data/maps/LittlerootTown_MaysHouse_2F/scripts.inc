@@ -32,10 +32,11 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	lock
 	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_RivalMessage1, MSGBOX_DEFAULT
-	closemessage
+	msgbox LittlerootTown_MaysHouse_2F_RivalMessage1, MSGBOX_SIGN
 	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
@@ -44,14 +45,16 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_RivalMessage2, MSGBOX_DEFAULT
-	closemessage
+	msgbox LittlerootTown_MaysHouse_2F_RivalMessage2, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun1
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_BumpPlayer
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun2
 	waitmovement 0
 	removeobject LOCALID_RIVAL
+	special RemoveCameraObject
 	release
 	end
 
