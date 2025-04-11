@@ -10,6 +10,6 @@ LittlerootTown_OtherHouseB_EventScript_Man::
 
 LittlerootTown_OtherHouseB_Text_Man:
 	.string "I went on an adventure with some\n"
-	.string "Pokemon a long time ago.\p"
+	.string "Pokémon a long time ago.\p"
 	.string "It was only to the next town, though.\n"
 	.string "Yeah, good times...$"

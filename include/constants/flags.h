@@ -151,7 +151,7 @@
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_UNUSED_0x82                     0x82
 #define FLAG_RECEIVED_DOLL_LANETTE           0x83
-#define FLAG_RECEIVED_POTION_OLDALE          0x84
+#define FLAG_UNUSED_0x84                     0x84
 #define FLAG_UNUSED_0x85                     0x85
 #define FLAG_PENDING_DAYCARE_EGG             0x86
 #define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87
@@ -766,7 +766,7 @@
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
 #define FLAG_HIDE_MEW                                               0x2CE
 #define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
-#define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
+#define FLAG_HIDE_OLDALE_HELPER                                     0x2D0
 #define FLAG_UNUSED_0x2D1                                           0x2D1
 #define FLAG_UNUSED_0x2D2                                           0x2D2
 #define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3

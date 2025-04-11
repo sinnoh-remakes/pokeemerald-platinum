@@ -84,7 +84,7 @@ LittlerootTown_MaysHouse_2F_RivalMessage1:
 	.string "...I'd better take my Bag and Journal,\n"
 	.string "too...$"
 
-@ TODO: Fix dollar sign ₽
+@ TODO: Add dollar sign ₽
 LittlerootTown_MaysHouse_2F_RivalMessage2:
 	.string "Oh hey! {PLAYER}!\p"
 	.string "We're going to the lake!\n"

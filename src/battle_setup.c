@@ -845,6 +845,11 @@ void ChooseStarter(void)
     gMain.savedCallback = CB2_GiveStarter;
 }
 
+// void StartFirstBattle(void)
+// {
+//     SetMainCallback2(CB2_StartFirstBattle);
+// }
+
 static void CB2_GiveStarter(void)
 {
     u16 starterMon;

@@ -220,9 +220,9 @@ LittlerootTown_BrendansHouse_1F_Text_Emergency:
 LittlerootTown_BrendansHouse_1F_Text_LeaveHouse:
 	.string "Mom: Oh yes! {PLAYER}!\p"
 	.string "Don't go into the tall grass. Wild\n"
-	.string "Pokemon might attack you.\p"
+	.string "Pokémon might attack you.\p"
 	.string "It would be OK if you had your own\n"
-	.string "Pokemon, but you don't so...$"
+	.string "Pokémon, but you don't so...$"
 
 LittlerootTown_BrendansHouse_1F_Text_MomTalk1:
 	.string "Mom: You know how impatient\n"
@@ -249,12 +249,12 @@ LittlerootTown_BrendansHouse_1F_Text_MomKitchen1:
 	.string "most likely Professor Rowan of\l"
 	.string "Sandgem Town.\p"
 	.string "I've heard that he is well known for\n"
-	.string "his studies on Pokemon.\p"
+	.string "his studies on Pokémon.\p"
 	.string "I hear he's also quite intimidating...\p"
 	.string "{PLAYER}, I think you need to\n"
 	.string "visit him in Sandgem Town.\p"
 	.string "You need to properly explain why you\n"
-	.string "had no choice but to use his Pokemon.\p"
+	.string "had no choice but to use his Pokémon.\p"
 	.string "Don't worry!\n"
 	.string "I'm sure he will understand.$"
 
@@ -278,16 +278,15 @@ LittlerootTown_BrendansHouse_1F_Text_RunningShoesGet:
 	.string "{PLAYER} received a pair of\n"
 	.string "Running Shoes!$"
 
-@ TODO: Figure out how to add delimited quotes to string
 LittlerootTown_BrendansHouse_1F_Text_RunningShoesManual:
-	.string "'Press the B Button and dash\n"
+	.string "“Press the B Button and dash\n"
 	.string "about faster than ever before!\p"
-	.string "'Put on the Running Shoes and\n"
-	.string "blaze new trails of adventure!'\p"
+	.string "“Put on the Running Shoes and\n"
+	.string "blaze new trails of adventure!“\p"
 	.string "Well, isn't that just nifty!$"
 
 LittlerootTown_BrendansHouse_1F_Text_TakeQuickRest:
 	.string "Mom: Welcome home, {PLAYER}.\n"
-	.string "Are you and your Pokemon healthy?\p"
+	.string "Are you and your Pokémon healthy?\p"
 	.string "I just made dinner.\n"
 	.string "Take a quick rest, dear.$"

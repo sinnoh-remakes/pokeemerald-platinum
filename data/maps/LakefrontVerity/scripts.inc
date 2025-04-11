@@ -75,7 +75,7 @@ LakefrontVerity_Movement_WalkUpRight:
 	step_end
 
 LakefrontVerity_EventScript_Rival::
-	faceplayer
+	facefollower
 	goto_if_eq VAR_FOLLOWER_TEXT, 0, LakefrontVerity_EventScript_RivalTalk1
 	goto_if_eq VAR_FOLLOWER_TEXT, 1, LakefrontVerity_EventScript_RivalTalk2
 	goto_if_eq VAR_FOLLOWER_TEXT, 2, LakefrontVerity_EventScript_RivalTalk3
@@ -105,7 +105,7 @@ LakefrontVerity_Text_RouteSign:
 LakefrontVerity_Text_ExitLake:
 	.string "{RIVAL}: You go ahead...\p"
 	.string "...I know we have to go return these\n"
-	.string "Pokemon. They're not ours.\p"
+	.string "Pokémon. They're not ours.\p"
 	.string "But I want to spend just a little\n"
 	.string "more time with this little guy...$"
 
@@ -113,15 +113,15 @@ LakefrontVerity_Text_RivalLeave:
 	.string "{RIVAL}: Hey, hey!\n"
 	.string "Where do you think you're going?\p"
 	.string "We have to go return these\n"
-	.string "Pokemon...$"
+	.string "Pokémon...$"
 
 LakefrontVerity_Text_RivalTalk1:
 	.string "{RIVAL}: We didn't have any\n"
 	.string "choice in using those people's\l"
-	.string "Pokemon, right?\p"
-	.string "But these Pokemon belong to them...\n"
+	.string "Pokémon, right?\p"
+	.string "But these Pokémon belong to them...\n"
 	.string "They'll want them back, won't they?\p"
-	.string "But this is the first Pokemon I've\n"
+	.string "But this is the first Pokémon I've\n"
 	.string "ever battled with...$"
 
 LakefrontVerity_Text_RivalTalk2:

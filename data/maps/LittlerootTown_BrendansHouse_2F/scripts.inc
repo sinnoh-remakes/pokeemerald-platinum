@@ -50,11 +50,11 @@ LittlerootTown_BrendansHouse_2F_EventScript_Controls_Text_0:
 	.string "The X button opens the menu!$"
 
 LittlerootTown_BrendansHouse_2F_Text_Notebook:
-	.string "Pokemon Basics...\p"
-	.string "People live alongside Pokemon in\n"
+	.string "Pokémon Basics...\p"
+	.string "People live alongside Pokémon in\n"
 	.string "this world.\p"
-	.string "The people that battle Pokemon are\n"
-	.string "called Pokemon Trainers.$"
+	.string "The people that battle Pokémon are\n"
+	.string "called Pokémon Trainers.$"
 
 LittlerootTown_BrendansHouse_2F_Text_TV:
 	.string "The TV is showing the title screen\n"

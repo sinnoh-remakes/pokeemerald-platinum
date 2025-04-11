@@ -103,8 +103,7 @@ Route101_EventScript_RouteSign::
 	end
 
 Route101_EventScript_Rival::
-	@ TODO: Faceplayer not working
-	faceplayer
+	facefollower
 	goto_if_eq VAR_FOLLOWER_TEXT, 0, Route101_EventScript_RivalTalk1
 	goto_if_eq VAR_FOLLOWER_TEXT, 1, Route101_EventScript_RivalTalk2
 	goto_if_eq VAR_FOLLOWER_TEXT, 2, Route101_EventScript_RivalTalk3
@@ -374,15 +373,20 @@ Route101_EventScript_MartSample::
 
 Route101_EventScript_MartSample1::
 	lockall
-	setvar VAR_ROUTE101_STATE, 5
-	msgbox Route101_Text_MartSample1, MSGBOX_SIGN
+	msgbox Route101_Text_MartSample1, MSGBOX_NPC
 	giveitem ITEM_POTION
-	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+	goto_if_eq VAR_RESULT, FALSE, Route101_EventScript_BagIsFull
+	setvar VAR_ROUTE101_STATE, 5
 	releaseall
 	end
 
 Route101_EventScript_MartSample2::
 	msgbox Route101_EventScript_MartSample2, MSGBOX_NPC
+	end
+
+Route101_EventScript_BagIsFull::
+	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
+	releaseall
 	end
 
 Route101_EventScript_SchoolKidTalk::
@@ -393,49 +397,48 @@ Route101_Text_RouteSign:
 	.string "{DOWN_ARROW} R.201\n"
 	.string "   Twinleaf Town$"
 
-@ TODO: Figure out how to add delimited quotes to string
 Route101_Text_RivalMeet:
 	.string "{RIVAL}: Hey you saw that news\n"
 	.string "report that was on TV, right?\p"
-	.string "You know, 'Search for the Red\n"
+	.string "You know, “Search for the Red\n"
 	.string "GYARADOS! The mysterious appearance\l"
-	.string "of the furious Pokemon in a lake!'\p"
+	.string "of the furious Pokémon in a lake!“\p"
 	.string "That show got me to thinking.\p"
-	.string "I'll bet our local lake has a Pokemon\n"
+	.string "I'll bet our local lake has a Pokémon\n"
 	.string "like that in it, too!\p"
 	.string "So that's what we're gonna do.\n"
-	.string "We'll go find a Pokemon like that!$"
+	.string "We'll go find a Pokémon like that!$"
 
 Route101_Text_RivalTalk1:
 	.string "{RIVAL}: Hey, if we run into a\n"
-	.string "Pokemon, I'm gonna catch it somehow.\p"
-	.string "Because I'm gonne be a Pokemon\n"
+	.string "Pokémon, I'm gonna catch it somehow.\p"
+	.string "Because I'm gonne be a Pokémon\n"
 	.string "Trainer.\p"
 	.string "You know what a Trainer does, right?\n"
-	.string "Makes Pokemon battle and all that?$"
+	.string "Makes Pokémon battle and all that?$"
 
 Route101_Text_RivalTalk2:
-	.string "{RIVAL}: Pokemon all have\n"
+	.string "{RIVAL}: Pokémon all have\n"
 	.string "different moves, huh?\p"
-	.string "A Trainer makes his Pokemon battle\n"
+	.string "A Trainer makes his Pokémon battle\n"
 	.string "by ordering them to use moves.\p"
 	.string "That's so awesomely cool.$"
 	
 Route101_Text_RivalTalk3:
-	.string "{RIVAL}: I want Pokemon of my\n"
+	.string "{RIVAL}: I want Pokémon of my\n"
 	.string "own, and not too soon, either.\p"
 	.string "I'd be able to go everywhere with my\n"
-	.string "Pokemon that way.$"
+	.string "Pokémon that way.$"
 	
 Route101_Text_RivalTalk4:
 	.string "{RIVAL}: That lake has a mirage\n"
-	.string "Pokemon living in it.\p"
+	.string "Pokémon living in it.\p"
 	.string "Everyone says nothing lives there,\n"
 	.string "but I know I'm right.$"
 	
 Route101_Text_RivalTalk5:
 	.string "{RIVAL}: I'm gonna become\n"
-	.string "a Pokemon Trainer for sure.\p"
+	.string "a Pokémon Trainer for sure.\p"
 	.string "Not just any trainer either.\n"
 	.string "I'm going to be the greatest ever.\l"
 	.string "That's my dream.$"
@@ -449,19 +452,18 @@ Route101_Text_RivalTalk6:
 Route101_Text_FollowLeave:
 	.string "{RIVAL}: Hey!\n"
 	.string "Where are you wandering off to?!\p"
-	.string "That mystery Pokemon on TV!\n"
+	.string "That mystery Pokémon on TV!\n"
 	.string "It's calling out to me!\p"
 	.string "Forget about going back home!$"
 
-@ TODO: Figure out how to add delimited quotes to string
 Route101_Text_FollowGrass:
 	.string "Remember what your mother said?\p"
-	.string "Mom: '{PLAYER}!\n"
+	.string "Mom: “{PLAYER}!\n"
 	.string "Don't go into the tall grass!\p"
-	.string "'Remember, wild Pokemon may attack\n"
+	.string "“Remember, wild Pokémon may attack\n"
 	.string "you if you're walking in the tall grass.\p"
-	.string "'It would be OK if you had your\n"
-	.string "own Pokemon, but...'$"
+	.string "“It would be OK if you had your\n"
+	.string "own Pokémon, but...“$"
 
 Route101_Text_RivalProf:
 	.string "{RIVAL}: Hey, it's those people!\n"
@@ -494,13 +496,13 @@ Route101_Text_Professor3:
 Route101_Text_Professor4:
 	.string "Professor: Hmm...\p"
 	.string "I heard from Dawn that\n"
-	.string "you used our Pokemon?\l"
+	.string "you used our Pokémon?\l"
 	.string "Let me see them, please.$"
 
 Route101_Text_Professor5:
 	.string "Professor: Hmm...\p"
 	.string "I heard from Lucas that\n"
-	.string "you used our Pokemon?\l"
+	.string "you used our Pokémon?\l"
 	.string "Let me see them, please.$"
 
 Route101_Text_Professor6:
@@ -534,7 +536,7 @@ Route101_Text_RivalLeave:
 	.string "craziness about?\p"
 	.string "I mean, if he was angry, he could've\n"
 	.string "just yelled at us, or whatever...\p"
-	.string "And didn't he want their Pokemon\n"
+	.string "And didn't he want their Pokémon\n"
 	.string "back...?\p"
 	.string "{PLAYER}...\n"
 	.string "We should go home, too...$"
@@ -551,26 +553,26 @@ Route101_Text_NextRouteSign:
 	.string "   Sandgem Town$"
 
 Route101_Text_BoyTalk:
-	.string "Wild Pokemon lurk in tall grass. They\n"
+	.string "Wild Pokémon lurk in tall grass. They\n"
 	.string "can come bursting out at any time.\p"
 	.string "So, if you're wanting to battle wild\n"
-	.string "Pokemon, just walk in tall grass.\p"
-	.string "If you want to avoid wild Pokemon,\n"
+	.string "Pokémon, just walk in tall grass.\p"
+	.string "If you want to avoid wild Pokémon,\n"
 	.string "then stay out of the tall grass.$"
 	
 Route101_Text_LassTalk:
-	.string "If your Pokemon's health--that's its\n"
+	.string "If your Pokémon's health--that's its\n"
 	.string "HP--is getting low, you should go\l"
 	.string "home and get some rest.$"
 
 Route101_Text_MartSample1:
 	.string "Hi!\n"
-	.string "I work at a Pokemon Mart.\p"
-	.string "Did you know that a Pokemon's health\n"
+	.string "I work at a Pokémon Mart.\p"
+	.string "Did you know that a Pokémon's health\n"
 	.string "is measured by Hit Pointer (HP)?\p"
-	.string "If a Pokemon runs out of HP, it\n"
+	.string "If a Pokémon runs out of HP, it\n"
 	.string "faints and can't battle anymore.\p"
-	.string "If a Pokemon's HP gets low, you\n"
+	.string "If a Pokémon's HP gets low, you\n"
 	.string "should heal it with a Potion.\p"
 	.string "Here, let me give you a Potion as\n"
 	.string "a free sample. First one's free!\p"
@@ -578,7 +580,7 @@ Route101_Text_MartSample1:
 	.string "Medicine Pocket of your Bag.$"
 
 Route101_Text_MartSample2:
-	.string "You can find a Pokemon Mart in\n"
+	.string "You can find a Pokémon Mart in\n"
 	.string "cities and most major towns.$"
 
 Route101_Text_SchoolKidTalk:

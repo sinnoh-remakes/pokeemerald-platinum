@@ -469,7 +469,7 @@ LakeVerity_Text_Rival4:
 	.string "Don't go into the tall grass?\p"
 	.string "No problem, no problem!\p"
 	.string "We won't be in there long enough\n"
-	.string "for a wild Pokemon to come out.$"
+	.string "for a wild Pokémon to come out.$"
 	
 LakeVerity_Text_Rival5:
 	.string "It's...\n"
@@ -481,7 +481,7 @@ LakeVerity_Text_Rival5:
 
 LakeVerity_Text_Rival6:
 	.string "Waaah!\n"
-	.string "Po-Pokemon?!$"
+	.string "Po-Pokémon?!$"
 	
 LakeVerity_Text_Rival7:
 	.string "What's going on?!$"
@@ -492,7 +492,7 @@ LakeVerity_Text_RivalA:
 	.string "But my CHIMCHAR was way tougher\n"
 	.string "than yours!\p"
 	.string "...They were other people's\n"
-	.string "Pokemon, though...\p"
+	.string "Pokémon, though...\p"
 	.string "But we had to use them...\n"
 	.string "They won't mind, will they?$"
 
@@ -502,7 +502,7 @@ LakeVerity_Text_RivalB:
 	.string "But my PIPLUP was way tougher\n"
 	.string "than yours!\p"
 	.string "...They were other people's\n"
-	.string "Pokemon, though...\p"
+	.string "Pokémon, though...\p"
 	.string "But we had to use them...\n"
 	.string "They won't mind, will they?$"
 
@@ -512,7 +512,7 @@ LakeVerity_Text_RivalC:
 	.string "But my TURTWIG was way tougher\n"
 	.string "than yours!\p"
 	.string "...They were other people's\n"
-	.string "Pokemon, though...\p"
+	.string "Pokémon, though...\p"
 	.string "But we had to use them...\n"
 	.string "They won't mind, will they?$"
 
@@ -522,10 +522,10 @@ LakeVerity_Text_Rival8:
 LakeVerity_Text_Rival9:
 	.string "I don't know what's going on.\n"
 	.string "{PLAYER}, let's get out of here.\p"
-	.string "My Pokemon got hurt from that\n"
+	.string "My Pokémon got hurt from that\n"
 	.string "battle.\p"
 	.string "If we get attacked by another\n"
-	.string "Pokemon, we might be in trouble.$"
+	.string "Pokémon, we might be in trouble.$"
 
 LakeVerity_Text_Professor1:
 	.string "Professor, there isn't anything out\n"
@@ -555,7 +555,7 @@ LakeVerity_Text_Helper1:
 	.string "it must be exciting again?\p"
 	.string "Professor: ...Hm.\n"
 	.string "There is one thing I can say.\p"
-	.string "There are many rare kinds of Pokemon\n"
+	.string "There are many rare kinds of Pokémon\n"
 	.string "in Sinnoh.\p"
 	.string "The region should serve us very well\n"
 	.string "in regard to our studies.$"
@@ -567,7 +567,7 @@ LakeVerity_Text_Helper2:
 	.string "Sinnoh?\p"
 	.string "Professor: ...Hm.\n"
 	.string "There is one thing I can say.\p"
-	.string "There are many rare kinds of Pokemon\n"
+	.string "There are many rare kinds of Pokémon\n"
 	.string "in Sinnoh.\p"
 	.string "The region should serve us very well\n"
 	.string "in regard to our studies.$"
@@ -593,7 +593,7 @@ LakeVerity_Text_Helper7:
 	.string "Dawn: Huh?\n"
 	.string "On, no!\p"
 	.string "Did you...\n"
-	.string "Did you use the Pokemon in here?\p"
+	.string "Did you use the Pokémon in here?\p"
 	.string "You did?! Oh, my gosh!\n"
 	.string "What's the professor going to say...?\p"
 	.string "...This is so not good...\n"
@@ -603,7 +603,7 @@ LakeVerity_Text_Helper8:
 	.string "Lucas: Hunh?\n"
 	.string "Whaaaat?!\p"
 	.string "Did you guys...\n"
-	.string "Did you use these Pokemon?!\p"
+	.string "Did you use these Pokémon?!\p"
 	.string "Oh, man... How am I gonna explain\n"
 	.string "this to the professor?\p"
 	.string "...This briefcase is the professor's,\n"
