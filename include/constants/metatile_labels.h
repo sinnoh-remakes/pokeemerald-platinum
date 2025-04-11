@@ -103,7 +103,7 @@
 #define METATILE_BikeShop_Wall_Edge_Top            0x281
 
 // gTileset_BrendansMaysHouse
-#define METATILE_BrendansMaysHouse_BookOnTable       0x293
+#define METATILE_Unused_0x293                        0x293
 #define METATILE_BrendansMaysHouse_BrendanPC_Off     0x25A
 #define METATILE_BrendansMaysHouse_BrendanPC_On      0x27F
 #define METATILE_BrendansMaysHouse_MayPC_Off         0x259
@@ -250,12 +250,12 @@
 #define METATILE_GenericBuilding_TrickHouse_Stairs_Down  0x219
 
 // gTileset_InsideOfTruck
-#define METATILE_InsideOfTruck_DoorClosedFloor_Bottom  0x21D
-#define METATILE_InsideOfTruck_DoorClosedFloor_Mid     0x215
-#define METATILE_InsideOfTruck_DoorClosedFloor_Top     0x20D
-#define METATILE_InsideOfTruck_ExitLight_Bottom        0x218
-#define METATILE_InsideOfTruck_ExitLight_Mid           0x210
-#define METATILE_InsideOfTruck_ExitLight_Top           0x208
+#define METATILE_UNUSED_0x21D                           0x21D
+#define METATILE_UNUSED_0x215                           0x215
+#define METATILE_UNUSED_0x20D                           0x20D
+#define METATILE_UNUSED_0x218                           0x218
+#define METATILE_UNUSED_0x210                           0x210
+#define METATILE_UNUSED_0x208                           0x208
 
 // gTileset_InsideShip
 #define METATILE_InsideShip_DoorIndent_Locked           0x234

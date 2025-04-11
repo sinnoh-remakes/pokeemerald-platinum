@@ -146,6 +146,11 @@ bool8 TryAddRoamer(u16 species, u8 level)
 }
 
 // gSpecialVar_0x8004 here corresponds to the options in the multichoice MULTI_TV_LATI (0 for 'Red', 1 for 'Blue')
+// sample of multiple choice code:
+//     multichoice 22, 8, MULTI_TV_LATI, TRUE
+//     copyvar VAR_0x8004, VAR_RESULT
+//     special InitRoamer
+//     copyvar VAR_ROAMER_POKEMON, VAR_RESULT
 void InitRoamer(void)
 {
     if (gSpecialVar_0x8004 == 0) // Red

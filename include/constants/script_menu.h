@@ -116,7 +116,7 @@
 #define MULTI_GO_ON_RECORD_RETIRE          105
 #define MULTI_GO_ON_RETIRE                 106
 #define MULTI_TOURNEY_NO_RECORD            107
-#define MULTI_TV_LATI                      108
+#define MULTI_UNUSED_108                   108
 #define MULTI_BATTLE_TOWER_FEELINGS        109
 #define MULTI_WHERES_RAYQUAZA              110
 #define MULTI_SLATEPORT_TENT_RULES         111

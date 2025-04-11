@@ -2014,30 +2014,6 @@ MatchCall_BattlePyramidText14::
 	.string "You're an inspiration!\n"
 	.string "See you again!$"
 
-MatchCall_Text_Mom1::
-	.string "MOM: Your father and you…\n"
-	.string "Everyone is captivated by POKéMON.\p"
-	.string "What is the charm of POKéMON?\p"
-	.string "Me?\n"
-	.string "I adore POKéMON that help me with\l"
-	.string "my everyday chores.$"
-
-MatchCall_Text_Mom2::
-	.string "MOM: Hi, {PLAYER}!\n"
-	.string "Your father keeps himself locked\l"
-	.string "away in the PETALBURG GYM.\p"
-	.string "He comes home every so often.\n"
-	.string "But he goes back to the GYM when\l"
-	.string "he's eaten everything he can.\p"
-	.string "I'm guessing that losing to you\n"
-	.string "was a big blow to his pride!$"
-
-MatchCall_Text_Mom3::
-	.string "MOM: {PLAYER}…\n"
-	.string "Don't worry about me or the house.\p"
-	.string "Wear those RUNNING SHOES until\n"
-	.string "they fall apart, honey!$"
-
 MatchCall_Text_Roxanne1::
 	.string "ROXANNE: Oh, hello, {PLAYER}!\p"
 	.string "I've been hard at work retraining\n"

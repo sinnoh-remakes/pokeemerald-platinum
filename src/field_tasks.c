@@ -63,7 +63,6 @@ static const TaskFunc sPerStepCallbacks[] =
     [STEP_CB_FORTREE_BRIDGE]    = FortreeBridgePerStepCallback,
     [STEP_CB_PACIFIDLOG_BRIDGE] = PacifidlogBridgePerStepCallback,
     [STEP_CB_SOOTOPOLIS_ICE]    = SootopolisGymIcePerStepCallback,
-    [STEP_CB_TRUCK]             = EndTruckSequence,
     [STEP_CB_SECRET_BASE]       = SecretBasePerStepCallback,
     [STEP_CB_CRACKED_FLOOR]     = CrackedFloorPerStepCallback
 };

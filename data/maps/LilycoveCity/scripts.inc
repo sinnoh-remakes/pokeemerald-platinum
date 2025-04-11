@@ -361,8 +361,6 @@ LilycoveCity_EventScript_DefeatedBrendan::
 	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
 	call_if_eq VAR_RESULT, FALSE, LilycoveCity_EventScript_BrendanCollectBadges
 	call_if_eq VAR_RESULT, TRUE, LilycoveCity_EventScript_BrendanPokemonLeague
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
 	goto LilycoveCity_EventScript_RivalFlyAway
 	end
 
@@ -391,7 +389,6 @@ LilycoveCity_EventScript_RivalFlyAway::
 	waitfieldeffect FLDEFF_NPCFLY_OUT
 	savebgm MUS_DUMMY
 	fadedefaultbgm
-	setflag FLAG_MET_RIVAL_LILYCOVE
 	release
 	end
 

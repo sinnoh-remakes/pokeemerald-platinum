@@ -2362,16 +2362,6 @@
       "blockdata_filepath": "data/layouts/ContestHallCute/map.bin"
     },
     {
-      "id": "LAYOUT_INSIDE_OF_TRUCK",
-      "name": "InsideOfTruck_Layout",
-      "width": 5,
-      "height": 5,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideOfTruck",
-      "border_filepath": "data/layouts/InsideOfTruck/border.bin",
-      "blockdata_filepath": "data/layouts/InsideOfTruck/map.bin"
-    },
-    {
       "id": "LAYOUT_SAFARI_ZONE_NORTHWEST",
       "name": "SafariZone_Northwest_Layout",
       "width": 40,

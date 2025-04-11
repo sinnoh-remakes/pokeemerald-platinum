@@ -222,7 +222,6 @@ Route101_EventScript_BirchsBag::
 	lock
 	faceplayer
 	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
 	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
@@ -242,7 +241,6 @@ Route101_EventScript_BirchsBag::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
-	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
 	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
 	waitstate
 	release
@@ -250,10 +248,6 @@ Route101_EventScript_BirchsBag::
 
 Route101_EventScript_HideMayInBedroom::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
-	return
-
-Route101_EventScript_HideBrendanInBedroom::
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	return
 
 Route101_Movement_BirchApproachPlayer:

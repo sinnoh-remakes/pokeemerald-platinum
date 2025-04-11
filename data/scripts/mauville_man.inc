@@ -718,20 +718,6 @@ MauvilleCity_PokemonCenter_1F_Text_TVWatchedStory::
 	.string "{STR_VAR_1} times!\p"
 	.string "{STR_VAR_3} must love watching TV!$"
 
-MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle::
-	.string "The Time-Conscious TRAINER$"
-
-MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction::
-	.string "Checked the time$"
-
-MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory::
-	.string "This is a tale of a TRAINER\n"
-	.string "named {STR_VAR_3}.\p"
-	.string "This TRAINER checked the time\n"
-	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} must be a punctual TRAINER\n"
-	.string "who's conscious of the time.$"
-
 MauvilleCity_PokemonCenter_1F_Text_WonLotteryTitle::
 	.string "The POKéMON LOTTERY Wizard$"
 

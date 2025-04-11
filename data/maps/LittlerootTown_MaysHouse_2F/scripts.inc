@@ -8,7 +8,6 @@ LittlerootTown_MaysHouse_2F_MapScripts::
 LittlerootTown_MaysHouse_2F_OnTransition:
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
@@ -47,13 +46,6 @@ LittlerootTown_MaysHouse_2F_EventScript_CheckInitDecor::
 	goto_if_eq VAR_RESULT, FEMALE, SecretBase_EventScript_InitDecorations
 	end
 
-LittlerootTown_MaysHouse_2F_EventScript_RivalsPokeBall::
-	lockall
-	goto_if_eq VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_MeetMay
-	msgbox RivalsHouse_2F_Text_ItsRivalsPokeBall, MSGBOX_DEFAULT
-	releaseall
-	end
-
 LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 	delay 10
 	addobject LOCALID_RIVAL
@@ -71,7 +63,6 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_MaysHouse_2F_EventScript_MeetMayWest
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_MaysHouse_2F_EventScript_MeetMayEast
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	savebgm MUS_DUMMY
@@ -281,25 +272,8 @@ RivalsHouse_2F_EventScript_BrendanWhereShouldIGoNext::
 	msgbox RivalsHouse_2F_Text_BrendanWhereShouldIGoNext, MSGBOX_DEFAULT
 	return
 
-LittlerootTown_MaysHouse_2F_EventScript_PC::
-	lockall
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_CheckRivalsPC
-	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_CheckPlayersPC
-	end
-
 LittlerootTown_MaysHouse_2F_EventScript_CheckRivalsPC::
 	msgbox gText_PokemonTrainerSchoolEmail, MSGBOX_DEFAULT
-	releaseall
-	end
-
-LittlerootTown_MaysHouse_2F_EventScript_CheckPlayersPC::
-	setvar VAR_0x8004, PC_LOCATION_MAYS_HOUSE
-	special DoPCTurnOnEffect
-	playse SE_PC_ON
-	msgbox gText_PlayerHouseBootPC, MSGBOX_DEFAULT
-	special BedroomPC
-	waitstate
 	releaseall
 	end
 
@@ -361,10 +335,6 @@ RivalsHouse_2F_Text_BrendanWhoAreYou:
 RivalsHouse_2F_Text_BrendanGettingReady:
 	.string "POKéMON fully restored…\n"
 	.string "Items all packed, and…$"
-
-RivalsHouse_2F_Text_ItsRivalsPokeBall:
-	.string "It's {RIVAL}'s POKé BALL!\p"
-	.string "Better leave it right where it is.$"
 
 RivalsHouse_2F_Text_MayJustCheckingMyPokedex:
 	.string "MAY: {PLAYER}{KUN}!\p"

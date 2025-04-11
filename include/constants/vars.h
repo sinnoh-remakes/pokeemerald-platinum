@@ -147,7 +147,7 @@
 #define VAR_ROUTE132_STATE                               0x407F // Unused Var
 #define VAR_ROUTE133_STATE                               0x4080 // Unused Var
 #define VAR_ROUTE134_STATE                               0x4081 // Unused Var
-#define VAR_LITTLEROOT_HOUSES_STATE_MAY                  0x4082
+#define VAR_UNUSED_0x4082                                0x4082 // Unused Var
 #define VAR_UNUSED_0x4083                                0x4083 // Unused Var
 #define VAR_BIRCH_LAB_STATE                              0x4084
 #define VAR_PETALBURG_GYM_STATE                          0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
@@ -156,8 +156,8 @@
 #define VAR_CONTEST_TYPE                                 0x4088
 #define VAR_SECRET_BASE_INITIALIZED                      0x4089
 #define VAR_CONTEST_PRIZE_PICKUP                         0x408A
-#define VAR_UNUSED_0x408B                                0x408B // Unused Var
-#define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN              0x408C
+#define VAR_LITTLEROOT_HOUSES_STATE_RIVAL                0x408B
+#define VAR_LITTLEROOT_HOUSES_STATE_PLAYER               0x408C
 #define VAR_LITTLEROOT_RIVAL_STATE                       0x408D
 #define VAR_BOARD_BRINEY_BOAT_STATE                      0x408E
 #define VAR_DEVON_CORP_3F_STATE                          0x408F
