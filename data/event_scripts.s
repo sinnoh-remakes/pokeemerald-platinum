@@ -1,4 +1,6 @@
-#include "config.h"
+#include "config/general.h"
+#include "config/battle.h"
+#include "config/item.h"
 #include "constants/global.h"
 #include "constants/apprentice.h"
 #include "constants/battle.h"
@@ -18,6 +20,7 @@
 #include "constants/contest.h"
 #include "constants/daycare.h"
 #include "constants/decorations.h"
+#include "constants/difficulty.h"
 #include "constants/easy_chat.h"
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"
@@ -40,6 +43,7 @@
 #include "constants/metatile_labels.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
+#include "constants/pokedex.h"
 #include "constants/pokemon.h"
 #include "constants/roulette.h"
 #include "constants/script_menu.h"
@@ -61,6 +65,7 @@
 
 	.section script_data, "aw", %progbits
 
+	.set ALLOCATE_SCRIPT_CMD_TABLE, 1
 	.include "data/script_cmd_table.inc"
 
 gSpecialVars::
@@ -85,7 +90,7 @@ gSpecialVars::
 	.4byte gSpecialVar_MonBoxId
 	.4byte gSpecialVar_MonBoxPos
 	.4byte gSpecialVar_Unused_0x8014
-	.4byte gTrainerBattleOpponent_A
+	.4byte gTrainerBattleParameter + 2 // gTrainerBattleParameter.params.opponentA
 
 	.include "data/specials.inc"
 
@@ -166,7 +171,6 @@ gStdScripts_End::
 	.include "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc"
 	.include "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc"
 	.include "data/maps/OldaleTown_House1/scripts.inc"
-	.include "data/maps/OldaleTown_HelperHouse_1F/scripts.inc"
 	.include "data/maps/OldaleTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/OldaleTown_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/OldaleTown_Mart/scripts.inc"
@@ -563,8 +567,8 @@ gStdScripts_End::
 	.include "data/maps/Route110_TrickHousePuzzle6/scripts.inc"
 	.include "data/maps/Route110_TrickHousePuzzle7/scripts.inc"
 	.include "data/maps/Route110_TrickHousePuzzle8/scripts.inc"
-	.include "data/maps/Route110_SeasideCyclingRoadNorthEntrance/scripts.inc"
 	.include "data/maps/Route110_SeasideCyclingRoadSouthEntrance/scripts.inc"
+	.include "data/maps/Route110_SeasideCyclingRoadNorthEntrance/scripts.inc"
 	.include "data/maps/Route113_GlassWorkshop/scripts.inc"
 	.include "data/maps/Route123_BerryMastersHouse/scripts.inc"
 	.include "data/maps/Route119_WeatherInstitute_1F/scripts.inc"
@@ -576,6 +580,7 @@ gStdScripts_End::
 	.include "data/maps/LittlerootTown_OtherHouseB/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
+	.include "data/maps/OldaleTown_HelperHouse_1F/scripts.inc"
 	.include "data/maps/OldaleTown_HelperHouse_2F/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
@@ -583,9 +588,43 @@ gStdScripts_End::
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hall_of_fame.inc"
 
+	.include "data/scripts/config.inc"
+	.include "data/scripts/debug.inc"
+
 EventScript_WhiteOut::
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
 	goto EventScript_ResetMrBriney
+	end
+
+EventScript_AfterWhiteOutHeal::
+	lockall
+	msgbox gText_FirstShouldRestoreMonsHealth
+	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
+	call_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsgPreRoxanne
+	call_if_set FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsg
+	applymovement VAR_LAST_TALKED, Movement_PkmnCenterNurse_Bow
+	waitmovement 0
+	fadedefaultbgm
+	releaseall
+	end
+
+EventScript_AfterWhiteOutHealMsgPreRoxanne::
+	msgbox gText_MonsHealedShouldBuyPotions
+	return
+
+EventScript_AfterWhiteOutHealMsg::
+	msgbox gText_MonsHealed
+	return
+
+EventScript_AfterWhiteOutMomHeal::
+	lockall
+	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox gText_HadQuiteAnExperienceTakeRest
+	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox gText_MomExplainHPGetPotions
+	fadedefaultbgm
+	releaseall
 	end
 
 EventScript_ResetMrBriney::
@@ -694,6 +733,11 @@ EventScript_BackupMrBrineyLocation::
 	.include "data/scripts/rival_graphics.inc"
 	.include "data/scripts/set_gym_trainers.inc"
 
+EventScript_CancelMessageBox::
+	special UseBlankMessageToCancelPokemonPic
+	release
+	end
+
 Common_EventScript_ShowBagIsFull::
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
 	release
@@ -726,6 +770,7 @@ Common_EventScript_OutOfCenterPartyHeal::
 	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
+	callnative UpdateFollowingPokemon
 	fadescreen FADE_FROM_BLACK
 	return
 
@@ -887,6 +932,48 @@ gText_PlayerWhitedOut::
 	.string "{PLAYER} is out of usable\n"
 	.string "POKéMON!\p{PLAYER} whited out!$"
 
+gText_FirstShouldRestoreMonsHealth::
+	.string "First, you should restore your\n"
+	.string "POKéMON to full health.$"
+
+gText_MonsHealedShouldBuyPotions::
+	.string "Your POKéMON have been healed\n"
+	.string "to perfect health.\p"
+	.string "If your POKéMON's energy, HP,\n"
+	.string "is down, please come see us.\p"
+	.string "If you're planning to go far in the\n"
+	.string "field, you should buy some POTIONS\l"
+	.string "at the POKéMON MART.\p"
+	.string "We hope you excel!$"
+
+gText_MonsHealed::
+	.string "Your POKéMON have been healed\n"
+	.string "to perfect health.\p"
+	.string "We hope you excel!$"
+
+gText_HadQuiteAnExperienceTakeRest::
+	.string "MOM: {PLAYER}!\n"
+	.string "Welcome home.\p"
+	.string "It sounds like you had quite\n"
+	.string "an experience.\p"
+	.string "Maybe you should take a quick\n"
+	.string "rest.$"
+
+gText_MomExplainHPGetPotions::
+	.string "MOM: Oh, good! You and your\n"
+	.string "POKéMON are looking great.\p"
+	.string "I just heard from PROF. BIRCH.\p"
+	.string "He said that POKéMON's energy is\n"
+	.string "measured in HP.\p"
+	.string "If your POKéMON lose their HP,\n"
+	.string "you can restore them at any\l"
+	.string "POKéMON CENTER.\p"
+	.string "If you're going to travel far away,\n"
+	.string "the smart TRAINER stocks up on\l"
+	.string "POTIONS at the POKéMON MART.\p"
+	.string "Make me proud, honey!\p"
+	.string "Take care!$"
+
 gText_RegisteredTrainerinPokeNav::
 	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
 	.string "in the POKéNAV.$"
@@ -949,6 +1036,10 @@ gText_PlayerFoundOneTMHM::
 	.string "{PLAYER} found one {STR_VAR_1}\n"
 	.string "{STR_VAR_2}!$"
 
+gText_PlayerFoundTMHMs::
+	.string "{PLAYER} found {STR_VAR_3} {STR_VAR_1}\n"
+	.string "{STR_VAR_2}!$"
+
 gText_Sudowoodo_Attacked::
 	.string "The weird tree doesn't like the\n"
 	.string "WAILMER PAIL!\p"
@@ -1007,6 +1098,13 @@ Common_EventScript_LegendaryFlewAway::
 	release
 	end
 
+EventScript_VsSeekerChargingDone::
+	special VsSeekerFreezeObjectsAfterChargeComplete
+	waitstate
+	special VsSeekerResetObjectMovementAfterChargeComplete
+	releaseall
+	end
+
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
 	.include "data/scripts/abnormal_weather.inc"
@@ -1019,7 +1117,6 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/contest_strings.inc"
 	.include "data/text/contest_link.inc"
 	.include "data/text/contest_painting.inc"
-	.include "data/text/trick_house_mechadolls.inc"
 	.include "data/scripts/tv.inc"
 	.include "data/text/tv.inc"
 	.include "data/scripts/interview.inc"
@@ -1031,7 +1128,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/scripts/profile_man.inc"
 	.include "data/scripts/day_care.inc"
 	.include "data/scripts/flash.inc"
-	.include "data/scripts/berry_blender.inc"
+		.include "data/scripts/berry_blender.inc"
 	.include "data/text/mauville_man.inc"
 	.include "data/text/trainers.inc"
 	.include "data/scripts/repel.inc"
@@ -1058,6 +1155,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/scripts/move_tutors.inc"
 	.include "data/scripts/trainer_hill.inc"
 	.include "data/scripts/test_signpost.inc"
-	.include "data/text/frontier_brain.inc"
+	.include "data/scripts/follower.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+	.include "data/scripts/dexnav.inc"

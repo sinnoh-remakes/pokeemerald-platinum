@@ -217,23 +217,6 @@ static const struct MatchCallBirch sProfBirchMatchCallHeader =
     .name = COMPOUND_STRING("PROF. BIRCH")
 };
 
-static const match_call_text_data_t sMomTextScripts[] = {
-    { MatchCall_Text_Mom1, 0xFFFF,                      0xFFFF },
-    { MatchCall_Text_Mom2, FLAG_DEFEATED_PETALBURG_GYM, 0xFFFF },
-    { MatchCall_Text_Mom3, FLAG_SYS_GAME_CLEAR,         0xFFFF },
-    { NULL,                0xFFFF,                      0xFFFF }
-};
-
-static const struct MatchCallStructNPC sMomMatchCallHeader =
-{
-    .type = MC_TYPE_NPC,
-    .mapSec = MAPSEC_LITTLEROOT_TOWN,
-    .flag = FLAG_ENABLE_MOM_MATCH_CALL,
-    .desc = COMPOUND_STRING("CALM & KIND"),
-    .name = COMPOUND_STRING("MOM"),
-    .textData = sMomTextScripts
-};
-
 static const match_call_text_data_t sStevenTextScripts[] = {
     { MatchCall_Text_Steven1, 0xFFFF,                              0xFFFF },
     { MatchCall_Text_Steven2, FLAG_RUSTURF_TUNNEL_OPENED,          0xFFFF },

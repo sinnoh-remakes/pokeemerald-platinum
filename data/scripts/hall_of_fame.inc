@@ -18,7 +18,6 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	setflag FLAG_HIDE_LILYCOVE_CITY_RIVAL
 	special UpdateTrainerFanClubGameClear
 	call_if_unset FLAG_RECEIVED_BELDUM, EverGrandeCity_HallOfFame_EventScript_ShowStevensHouseBeldum
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_RIVAL
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
 	return
 

@@ -359,8 +359,6 @@ static void DebugAction_Util_CheckROMSpace(u8 taskId);
 static void DebugAction_Util_Weather(u8 taskId);
 static void DebugAction_Util_Weather_SelectId(u8 taskId);
 static void DebugAction_Util_FontTest(u8 taskId);
-static void DebugAction_Util_CheckWallClock(u8 taskId);
-static void DebugAction_Util_SetWallClock(u8 taskId);
 static void DebugAction_Util_WatchCredits(u8 taskId);
 static void DebugAction_Util_Player_Name(u8 taskId);
 static void DebugAction_Util_Player_Gender(u8 taskId);
@@ -746,8 +744,6 @@ static void (*const sDebugMenu_Actions_Utilities[])(u8) =
     [DEBUG_UTIL_MENU_ITEM_ROM_SPACE]       = DebugAction_Util_CheckROMSpace,
     [DEBUG_UTIL_MENU_ITEM_WEATHER]         = DebugAction_Util_Weather,
     [DEBUG_UTIL_MENU_ITEM_FONT_TEST]       = DebugAction_Util_FontTest,
-    [DEBUG_UTIL_MENU_ITEM_CHECKWALLCLOCK]  = DebugAction_Util_CheckWallClock,
-    [DEBUG_UTIL_MENU_ITEM_SETWALLCLOCK]    = DebugAction_Util_SetWallClock,
     [DEBUG_UTIL_MENU_ITEM_WATCHCREDITS]    = DebugAction_Util_WatchCredits,
     [DEBUG_UTIL_MENU_ITEM_PLAYER_NAME]     = DebugAction_Util_Player_Name,
     [DEBUG_UTIL_MENU_ITEM_PLAYER_GENDER]   = DebugAction_Util_Player_Gender,
@@ -2048,16 +2044,6 @@ static void DebugAction_Util_Weather_SelectId(u8 taskId)
 static void DebugAction_Util_FontTest(u8 taskId)
 {
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_FontTest);
-}
-
-static void DebugAction_Util_CheckWallClock(u8 taskId)
-{
-    Debug_DestroyMenu_Full_Script(taskId, PlayersHouse_2F_EventScript_CheckWallClock);
-}
-
-static void DebugAction_Util_SetWallClock(u8 taskId)
-{
-    Debug_DestroyMenu_Full_Script(taskId, PlayersHouse_2F_EventScript_SetWallClock);
 }
 
 static void DebugAction_Util_WatchCredits(u8 taskId)

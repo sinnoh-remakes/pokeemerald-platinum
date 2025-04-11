@@ -10,13 +10,8 @@ Debug_ShowFieldMessageStringVar4::
 
 Debug_CheatStart::
 	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_RESCUED_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 	setflag FLAG_ADVENTURE_STARTED
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
-	setvar VAR_ROUTE101_STATE, 3
 	givemon SPECIES_TREECKO, 20, ITEM_NONE
 	givemon SPECIES_TORCHIC, 20, ITEM_NONE
 	givemon SPECIES_MUDKIP, 20, ITEM_NONE
@@ -30,9 +25,6 @@ Debug_CheatStart::
 	setflag FLAG_SYS_B_DASH
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4 @ 4: Received Running Shoes
 	setvar VAR_LITTLEROOT_INTRO_STATE, 7 @ 7: Told to go meet rival
-	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2 @ 2: Met Rival's Mom (and is corresponding gender)
-	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2 @ 2: Met Rival's Mom (and is corresponding gender)
-	setvar VAR_LITTLEROOT_RIVAL_STATE, 4 @ 4: Received Pokedex
 	setflag FLAG_RECEIVED_BIKE
 	additem ITEM_ACRO_BIKE
 	setvar VAR_BRINEY_HOUSE_STATE, 1
