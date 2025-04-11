@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_PETALBURG_CITY",
-      "offset": -10,
-      "direction": "left"
+      "map": "MAP_OLDALE_TOWN",
+      "offset": -4,
+      "direction": "down"
     },
     {
-      "map": "MAP_OLDALE_TOWN",
-      "offset": 0,
-      "direction": "right"
+      "map": "MAP_SLATEPORT_CITY",
+      "offset": -38,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -143,8 +143,12 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
