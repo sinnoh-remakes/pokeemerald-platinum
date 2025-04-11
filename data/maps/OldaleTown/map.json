@@ -15,20 +15,20 @@
   "connections": [
     {
       "map": "MAP_ROUTE201",
-      "offset": 4,
+      "offset": 8,
       "direction": "left"
     },
     {
       "map": "MAP_ROUTE202",
-      "offset": 4,
+      "offset": 2,
       "direction": "up"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 11,
-      "y": 9,
+      "x": 8,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -40,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 11,
-      "y": 6,
+      "x": 8,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -53,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 11,
-      "y": 6,
+      "x": 8,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -66,8 +66,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 13,
-      "y": 18,
+      "x": 11,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -79,8 +79,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 26,
-      "y": 16,
+      "x": 24,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -92,8 +92,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 29,
-      "y": 19,
+      "x": 27,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -106,36 +106,36 @@
   ],
   "warp_events": [
     {
-      "x": 11,
-      "y": 6,
+      "x": 8,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
       "dest_warp_id": "0"
     },
     {
-      "x": 19,
-      "y": 6,
+      "x": 17,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 29,
-      "y": 6,
+      "x": 27,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 9,
-      "y": 18,
+      "x": 7,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_HOUSE1",
       "dest_warp_id": "0"
     },
     {
-      "x": 18,
-      "y": 18,
+      "x": 16,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_HELPER_HOUSE_1F",
       "dest_warp_id": "0"
@@ -144,8 +144,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 6,
-      "y": 7,
+      "x": 3,
+      "y": 11,
       "elevation": 0,
       "var": "VAR_OLDALE_TOWN_STATE",
       "var_value": "0",
@@ -153,8 +153,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 8,
+      "x": 3,
+      "y": 12,
       "elevation": 0,
       "var": "VAR_OLDALE_TOWN_STATE",
       "var_value": "0",
@@ -162,8 +162,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 9,
+      "x": 3,
+      "y": 13,
       "elevation": 0,
       "var": "VAR_OLDALE_TOWN_STATE",
       "var_value": "0",
@@ -171,8 +171,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 10,
+      "x": 3,
+      "y": 14,
       "elevation": 0,
       "var": "VAR_OLDALE_TOWN_STATE",
       "var_value": "0",
@@ -180,8 +180,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 11,
+      "x": 3,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_OLDALE_TOWN_STATE",
       "var_value": "0",
@@ -191,40 +191,40 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 24,
-      "y": 18,
+      "x": 22,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "OldaleTown_EventScript_TownSign"
     },
     {
       "type": "sign",
-      "x": 27,
-      "y": 6,
+      "x": 25,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
     },
     {
       "type": "sign",
-      "x": 22,
-      "y": 6,
+      "x": 20,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 7,
+      "x": 5,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "OldaleTown_EventScript_LabSign"
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 18,
+      "x": 14,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "OldaleTown_EventScript_RivalSign"

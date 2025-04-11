@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE201",
-      "offset": 2,
+      "offset": 0,
       "direction": "right"
     }
   ],
@@ -24,15 +24,15 @@
   ],
   "warp_events": [
     {
-      "x": 2,
-      "y": 4,
+      "x": 4,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_LAKE_VERITY",
       "dest_warp_id": "0"
     },
     {
-      "x": 3,
-      "y": 4,
+      "x": 5,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_LAKE_VERITY",
       "dest_warp_id": "1"
@@ -41,8 +41,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 2,
-      "y": 6,
+      "x": 4,
+      "y": 4,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
       "var_value": "3",
@@ -50,8 +50,8 @@
     },
     {
       "type": "trigger",
-      "x": 3,
-      "y": 6,
+      "x": 5,
+      "y": 4,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
       "var_value": "3",
@@ -61,8 +61,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 1,
-      "y": 8,
+      "x": 3,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LakefrontVerity_EventScript_RouteSign"

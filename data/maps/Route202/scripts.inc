@@ -79,6 +79,20 @@ Route202_EventScript_HelperTeach4::
 	releaseall
 	end
 
+Route202_EventScript_HelperTeach5::
+	call Route202_EventScript_HelperExclaim
+	applymovement LOCALID_HELPER, Route202_Movement_Helper5
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
+	applymovement OBJ_EVENT_ID_PLAYER, Route202_Movement_HelperBump
+	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn5
+	waitmovement 0
+	releaseall
+	end
+
 Route202_EventScript_HelperDecline::
 	goto_if_lt VAR_ALTERNATE_TEXT, 3, Route202_EventScript_HelperDeclineFirst
 	checkplayergender
@@ -161,6 +175,16 @@ Route202_Movement_Helper4:
 	walk_right
 	step_end
 
+Route202_Movement_Helper5:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
 Route202_Movement_HelperReturn1:
 	walk_left
 	walk_left
@@ -197,6 +221,17 @@ Route202_Movement_HelperReturn4:
 	walk_left
 	walk_left
 	walk_left
+	walk_up
+	walk_in_place_right
+	step_end
+
+Route202_Movement_HelperReturn5:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
 	walk_up
 	walk_in_place_right
 	step_end

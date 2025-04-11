@@ -1,0 +1,5 @@
+porytiles compile-primary -dual-layer -Wall -o ./data/tilesets/primary/outdoor ./tiles/outdoor ./include/constants/metatile_behaviors.h
+
+porytiles compile-secondary -dual-layer -Wall -o ./data/tilesets/secondary/twinleaf ./tiles/twinleaf ./tiles/outdoor ./include/constants/metatile_behaviors.h
+
+porytiles compile-secondary -dual-layer -Wall -o ./data/tilesets/secondary/route_pond ./tiles/route_pond ./tiles/outdoor ./include/constants/metatile_behaviors.h

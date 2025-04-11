@@ -487,6 +487,7 @@ OldaleTown_Movement_Helper_Guide1:
 	walk_right
 	walk_right
 	walk_right
+	walk_right
 	walk_in_place_up
 	step_end
 
@@ -522,6 +523,7 @@ OldaleTown_Movement_Helper_Guide3:
 
 OldaleTown_Movement_Player_Guide1:
 	walk_down
+	walk_right
 	walk_right
 	walk_right
 	walk_right

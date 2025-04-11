@@ -662,16 +662,26 @@ Route201_EventScript_FollowLeave::
 
 Route201_EventScript_FollowGrass::
 	lock
+	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
 	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	goto_if_eq VAR_FACING, DIR_NORTH, Route201_EventScript_FollowGrassSpecial
 	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 30
 	release
 	end
 
-Route201_EventScript_FollowGrassSpecial::
+Route201_EventScript_FollowGrass2::
+	lock
+	goto_if_eq VAR_FACING, DIR_EAST, Route201_EventScript_FollowGrass
+	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
 	applymovement LOCALID_RIVAL, Common_Movement_WalkDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
