@@ -141,7 +141,6 @@ Route103_EventScript_RivalExitFacingSouth::
 Route103_EventScript_RivalEnd::
 	removeobject LOCALID_RIVAL
 	setvar VAR_BIRCH_LAB_STATE, 4
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

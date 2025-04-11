@@ -107,7 +107,8 @@
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
-    "OldaleTown_House2",
+    "OldaleTown_HelperHouse_1F",
+    "OldaleTown_HelperHouse_2F",
     "OldaleTown_PokemonCenter_1F",
     "OldaleTown_PokemonCenter_2F",
     "OldaleTown_Mart"

@@ -101,7 +101,7 @@ CableClub_EventScript_OnLoadFromGameCorner::
 	end
 
 CableClub_OnFrame:
-	map_script_2 VAR_CABLE_CLUB_TUTORIAL_STATE, 1, CableClub_EventScript_Tutorial
+	map_script_2 VAR_CABLE_CLUB_TUTORIAL_STATE, 0, CableClub_EventScript_Tutorial
 	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, CableClub_EventScript_ExitLinkRoom
 	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, CableClub_EventScript_ExitLinkRoom
 	map_script_2 VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, CableClub_EventScript_ExitLinkRoom

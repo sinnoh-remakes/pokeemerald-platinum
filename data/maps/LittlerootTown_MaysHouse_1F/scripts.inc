@@ -67,4 +67,4 @@ LittlerootTown_MaysHouse_1F_MomMessage3:
 
 LittlerootTown_MaysHouse_1F_MomMessage4:
 	.string "{RIVAL}'s mom: Oh, you've\n"
-	.string "become friends with a Pokémon, too$"
+	.string "become friends with a Pokémon, too.$"

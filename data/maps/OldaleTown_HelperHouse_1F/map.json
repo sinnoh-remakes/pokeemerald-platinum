@@ -1,6 +1,6 @@
 {
-  "id": "MAP_OLDALE_TOWN_HOUSE2",
-  "name": "OldaleTown_House2",
+  "id": "MAP_OLDALE_TOWN_HELPER_HOUSE_1F",
+  "name": "OldaleTown_HelperHouse_1F",
   "layout": "LAYOUT_HOUSE2",
   "music": "MUS_OLDALE",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
@@ -12,51 +12,62 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 4,
-      "y": 4,
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 2,
+      "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House2_EventScript_Woman",
+      "script": "OldaleTown_HelperHouse_1F_EventScript_Man",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
-      "x": 7,
-      "y": 4,
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "x": 4,
+      "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House2_EventScript_Man",
+      "script": "OldaleTown_HelperHouse_1F_EventScript_Girl",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
+      "x": 5,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
-      "dest_warp_id": "1"
+      "dest_warp_id": "4"
     },
     {
-      "x": 4,
-      "y": 7,
+      "x": 6,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
-      "dest_warp_id": "1"
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN_HELPER_HOUSE_2F",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

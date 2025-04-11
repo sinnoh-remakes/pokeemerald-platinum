@@ -166,7 +166,7 @@ gStdScripts_End::
 	.include "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc"
 	.include "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc"
 	.include "data/maps/OldaleTown_House1/scripts.inc"
-	.include "data/maps/OldaleTown_House2/scripts.inc"
+	.include "data/maps/OldaleTown_HelperHouse_1F/scripts.inc"
 	.include "data/maps/OldaleTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/OldaleTown_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/OldaleTown_Mart/scripts.inc"
@@ -576,6 +576,7 @@ gStdScripts_End::
 	.include "data/maps/LittlerootTown_OtherHouseB/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
+	.include "data/maps/OldaleTown_HelperHouse_2F/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

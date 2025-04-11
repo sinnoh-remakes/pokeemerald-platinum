@@ -73,6 +73,11 @@ Route102_EventScript_Allen::
 	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
+	giveitem ITEM_POKE_BALL, 5
+	setvar VAR_RESULT, 0
+	return
+
 Route102_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"
 	.string "POKéMON hide in tall grass like this,\l"
