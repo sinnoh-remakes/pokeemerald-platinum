@@ -1,5 +1,4 @@
-.set LOCALID_BIRCH, 2
-.set LOCALID_ZIGZAGOON, 4
+.set LOCALID_RIVAL, 1
 
 Route101_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
@@ -7,204 +6,73 @@ Route101_MapScripts::
 	.byte 0
 
 Route101_OnTransition:
-	call ProfBirch_EventScript_UpdateLocation
 	end
 
 Route101_OnFrame:
 	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_HideMapNamePopup
 	.2byte 0
 
-Route101_EventScript_HideMapNamePopup::
-	setflag FLAG_HIDE_MAP_NAME_POPUP
+Route101_EventScript_RivalSee1::
+	setvar VAR_0x8004, 1
+	goto Route101_EventScript_RivalSee
+
+Route101_EventScript_RivalSee2::
+	setvar VAR_0x8004, 2
+	goto Route101_EventScript_RivalSee
+
+Route101_EventScript_RivalSee3::
+	setvar VAR_0x8004, 3
+	goto Route101_EventScript_RivalSee
+
+Route101_EventScript_RivalSee4::
+	setvar VAR_0x8004, 4
+	goto Route101_EventScript_RivalSee
+
+Route101_EventScript_RivalSee::
+	lock
+	setvar VAR_LITTLEROOT_TOWN_STATE, 2
 	setvar VAR_ROUTE101_STATE, 1
+	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	waitmovement 0
+	call_if_eq VAR_0x8004, 1, Route101_EventScript_RivalShift1
+	call_if_eq VAR_0x8004, 2, Route101_EventScript_RivalShift2
+	call_if_eq VAR_0x8004, 4, Route101_EventScript_RivalShift4
+	applymovement LOCALID_RIVAL, Common_Movement_WalkDown
+	waitmovement 0
+	msgbox Route101_Text_RivalMeet, MSGBOX_SIGN
+	loadword 0 Route101_EventScript_Rival
+	setfollower LOCALID_RIVAL 0x100
+	release
 	end
 
-Route101_EventScript_StartBirchRescue::
-	lockall
-	playbgm MUS_HELP, TRUE
-	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
-	closemessage
-	setobjectxy LOCALID_BIRCH, 0, 15
-	setobjectxy LOCALID_ZIGZAGOON, 0, 16
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_EnterScene
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunAway1
-	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
+Route101_EventScript_RivalShift1::
+	applymovement LOCALID_RIVAL, Route101_Movement_RivalLeft
 	waitmovement 0
-	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChaseInCircles
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunInCircles
+	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonFaceBirch
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchFaceZigzagoon
-	waitmovement 0
-	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_ROUTE101_STATE, 2
-	releaseall
-	end
+	return
 
-Route101_EventScript_PreventExitSouth::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitSouth
-	waitmovement 0
-	releaseall
-	end
-
-Route101_EventScript_PreventExitWest::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitWest
-	waitmovement 0
-	releaseall
-	end
-
-Route101_EventScript_PreventExitNorth::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitNorth
-	waitmovement 0
-	releaseall
-	end
-
-Route101_Movement_PreventExitSouth:
-	walk_up
-	step_end
-
-Route101_Movement_PreventExitWest:
-	walk_right
-	step_end
-
-Route101_Movement_PreventExitNorth:
-	walk_down
-	step_end
-
-Route101_Movement_ZigzagoonChaseInCircles:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	step_end
-
-Route101_Movement_ZigzagoonChase1:
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	step_end
-
-@ Leftover data? This command is unused.
-	step_end
-
-Route101_Movement_ZigzagoonFaceBirch:
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	step_end
-
-Route101_Movement_EnterScene:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_in_place_faster_left
-	step_end
-
-Route101_Movement_BirchRunInCircles:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	step_end
-
-Route101_Movement_BirchRunAway1:
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	walk_fast_up
-	step_end
-
-@ Leftover data? This command is unused.
-	step_end
-
-Route101_Movement_BirchFaceZigzagoon:
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	step_end
-
-Route101_Movement_Unused1:
-	walk_up
-	walk_up
-	step_end
-
-Route101_Movement_Unused2:
-	walk_up
+Route101_Movement_RivalLeft:
 	walk_left
-	walk_up
+	walk_left
 	step_end
+
+Route101_EventScript_RivalShift2::
+	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
+	waitmovement 0
+	return
+
+Route101_EventScript_RivalShift4::
+	applymovement LOCALID_RIVAL, Common_Movement_WalkRight
+	waitmovement 0
+	return
 
 Route101_EventScript_Youngster::
 	msgbox Route101_Text_TakeTiredPokemonToPokeCenter, MSGBOX_NPC
@@ -218,78 +86,152 @@ Route101_EventScript_RouteSign::
 	msgbox Route101_Text_RouteSign, MSGBOX_SIGN
 	end
 
-Route101_EventScript_BirchsBag::
-	lock
+Route101_EventScript_Rival::
 	faceplayer
-	setflag FLAG_SYS_POKEMON_GET
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_ZIGZAGOON
-	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	goto_if_eq VAR_FOLLOWER_TEXT, 0, Route101_EventScript_RivalTalk1
+	goto_if_eq VAR_FOLLOWER_TEXT, 1, Route101_EventScript_RivalTalk2
+	goto_if_eq VAR_FOLLOWER_TEXT, 2, Route101_EventScript_RivalTalk3
+	goto_if_eq VAR_FOLLOWER_TEXT, 3, Route101_EventScript_RivalTalk4
+	goto_if_eq VAR_FOLLOWER_TEXT, 4, Route101_EventScript_RivalTalk5
+	goto_if_eq VAR_FOLLOWER_TEXT, 5, Route101_EventScript_RivalTalk6
+
+Route101_EventScript_RivalTalk1::
+	setvar VAR_FOLLOWER_TEXT, 1
+	msgbox Route101_Text_RivalTalk1, MSGBOX_SIGN
+	end
+
+Route101_EventScript_RivalTalk2::
+	setvar VAR_FOLLOWER_TEXT, 2
+	msgbox Route101_Text_RivalTalk2, MSGBOX_SIGN
+	end
+
+Route101_EventScript_RivalTalk3::
+	setvar VAR_FOLLOWER_TEXT, 3
+	msgbox Route101_Text_RivalTalk3, MSGBOX_SIGN
+	end
+
+Route101_EventScript_RivalTalk4::
+	setvar VAR_FOLLOWER_TEXT, 4
+	msgbox Route101_Text_RivalTalk4, MSGBOX_SIGN
+	end
+
+Route101_EventScript_RivalTalk5::
+	setvar VAR_FOLLOWER_TEXT, 5
+	msgbox Route101_Text_RivalTalk5, MSGBOX_SIGN
+	end
+
+Route101_EventScript_RivalTalk6::
+	msgbox Route101_Text_RivalTalk6, MSGBOX_SIGN
+	end
+
+Route101_EventScript_FollowLeave::
+	lock
+	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
-	special ChooseStarter
-	waitstate
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchApproachPlayer
+	msgbox Route101_Text_FollowLeave, MSGBOX_SIGN
+	applymovement LOCALID_RIVAL, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
-	special HealPlayerParty
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
-	setvar VAR_BIRCH_LAB_STATE, 2
-	setvar VAR_ROUTE101_STATE, 3
-	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
-	waitstate
+	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	delay 30
 	release
 	end
 
-Route101_EventScript_HideMayInBedroom::
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_RIVAL
-	return
+Route101_EventScript_FollowGrass::
+	lock
+	msgbox Route101_Text_FollowGrass, MSGBOX_SIGN
+	goto_if_eq VAR_FACING, DIR_NORTH, Route101_EventScript_FollowGrassSpecial
+	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceRight
+	waitmovement 0
+	delay 30
+	release
+	end
 
-Route101_Movement_BirchApproachPlayer:
-	walk_right
-	step_end
-
-Route101_Text_HelpMe:
-	.string "H-help me!$"
-
-Route101_Text_PleaseHelp:
-	.string "Hello! You over there!\n"
-	.string "Please! Help!\p"
-	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
-
-Route101_Text_DontLeaveMe:
-	.string "Wh-Where are you going?!\n"
-	.string "Don't leave me like this!$"
-
-Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
-	.string "You saved me.\n"
-	.string "Thanks a lot!\p"
-	.string "Oh?\p"
-	.string "Hi, you're {PLAYER}{KUN}!\p"
-	.string "This is not the place to chat, so come\n"
-	.string "by my POKéMON LAB later, okay?$"
-
-Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
-
-Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
+Route101_EventScript_FollowGrassSpecial::
+	applymovement LOCALID_RIVAL, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceUp
+	waitmovement 0
+	delay 30
+	release
+	end
 
 Route101_Text_RouteSign:
-	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+	.string "{DOWN_ARROW} R.201\n"
+	.string "     Twinleaf Town$"
 
+@ TODO: Figure out how to add delimited quotes to string
+Route101_Text_RivalMeet:
+	.string "{RIVAL}: Hey you saw that news\n"
+	.string "report that was on TV, right?\p"
+	.string "You know, 'Search for the Red\n"
+	.string "GYARADOS! The mysterious appearance\l"
+	.string "of the furious Pokemon in a lake!'\p"
+	.string "That show got me to thinking.\p"
+	.string "I'll bet our local lake has a Pokemon\n"
+	.string "like that in it, too!\p"
+	.string "So that's what we're gonna do.\n"
+	.string "We'll go find a Pokemon like that!$"
+
+Route101_Text_RivalTalk1:
+	.string "{RIVAL}: Hey, if we run into a\n"
+	.string "Pokemon, I'm gonna catch it somehow.\p"
+	.string "Because I'm gonne be a Pokemon\n"
+	.string "Trainer.\p"
+	.string "You know what a Trainer does, right?\n"
+	.string "Makes Pokemon battle and all that?$"
+
+Route101_Text_RivalTalk2:
+	.string "{RIVAL}: Pokemon all have\n"
+	.string "different moves, huh?\p"
+	.string "A Trainer makes his Pokemon battle\n"
+	.string "by ordering them to use moves.\p"
+	.string "That's so awesomely cool.$"
+	
+Route101_Text_RivalTalk3:
+	.string "{RIVAL}: I want Pokemon of my\n"
+	.string "own, and not too soon, either.\p"
+	.string "I'd be able to go everywhere with my\n"
+	.string "Pokemon that way.$"
+	
+Route101_Text_RivalTalk4:
+	.string "{RIVAL}: That lake has a mirage\n"
+	.string "Pokemon living in it.\p"
+	.string "Everyone says nothing lives there,\n"
+	.string "but I know I'm right.$"
+	
+Route101_Text_RivalTalk5:
+	.string "{RIVAL}: I'm gonna become\n"
+	.string "a Pokemon Trainer for sure.\p"
+	.string "Not just any trainer either.\n"
+	.string "I'm going to be the greatest ever.\l"
+	.string "That's my dream.$"
+	
+Route101_Text_RivalTalk6:
+	.string "{RIVAL}: Hey, that's enough\n"
+	.string "talking already.\p"
+	.string "I'm itching to get going to the lake.\n"
+	.string "Come on, come on!$"
+
+Route101_Text_FollowLeave:
+	.string "{RIVAL}: Hey!\n"
+	.string "Where are you wandering off to?!\p"
+	.string "That mystery Pokemon on TV!\n"
+	.string "It's calling out to me!\p"
+	.string "Forget about going back home!$"
+
+@ TODO: Figure out how to add delimited quotes to string
+Route101_Text_FollowGrass:
+	.string "Remember what your mother said?\p"
+	.string "Mom: '{PLAYER}!\n"
+	.string "Don't go into the tall grass!\p"
+	.string "'Remember, wild Pokemon may attack\n"
+	.string "you if you're walking in the tall grass.\p"
+	.string "'It would be OK if you had your\n"
+	.string "own Pokemon, but...'$"

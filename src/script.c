@@ -638,10 +638,10 @@ void Script_RequestWriteVar_Internal(u32 varId)
     Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
 }
 
-// u8* ReadWord(u8 index)
-// {
-//     struct ScriptContext *ctx = &sScriptContext1;
+u8* ReadWord(u8 index)
+{
+    struct ScriptContext *ctx = &sGlobalScriptContext;
     
-//     return (T1_READ_PTR(&ctx->data[index]));
-// }
+    return (T1_READ_PTR(&ctx->data[index]));
+}
 

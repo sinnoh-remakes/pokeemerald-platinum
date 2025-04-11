@@ -30,8 +30,8 @@ LittlerootTown_EventScript_RivalMeet::
 	opendoor 3, 12
 	waitdooranim
 	addobject LOCALID_RIVAL
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_BumpRival
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_BumpPlayer
+	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalBump
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerBump
 	waitmovement 0
 	closedoor 3, 12
 	waitdooranim
@@ -43,15 +43,19 @@ LittlerootTown_EventScript_RivalMeet::
 	closemessage
 	msgbox LittlerootTown_Text_RivalBump, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RunRight
+	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalRight
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	@ TODO: Fix exclamation not showing
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RunLeft
+	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
@@ -62,7 +66,7 @@ LittlerootTown_EventScript_RivalMeet::
 	opendoor 3, 12
 	waitdooranim
 	waitmovement 0
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_LeaveRival
+	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalUp
 	waitmovement 0
 	closedoor 3, 12
 	removeobject LOCALID_RIVAL
@@ -70,23 +74,23 @@ LittlerootTown_EventScript_RivalMeet::
 	release
 	end
 
-LittlerootTown_Movement_BumpPlayer:
+LittlerootTown_Movement_PlayerBump:
 	walk_fast_down
 	face_up
 	step_end
 
-LittlerootTown_Movement_BumpRival:
+LittlerootTown_Movement_RivalBump:
 	walk_fast_down
 	step_end
 
-LittlerootTown_Movement_RunRight:
+LittlerootTown_Movement_RivalRight:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	step_end
 
-LittlerootTown_Movement_RunLeft:
+LittlerootTown_Movement_RivalLeft:
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
@@ -94,13 +98,13 @@ LittlerootTown_Movement_RunLeft:
 	face_down
 	step_end
 
-LittlerootTown_Movement_LeaveRival:
+LittlerootTown_Movement_RivalUp:
 	walk_fast_up
 	step_end
 
 LittlerootTown_EventScript_BlockBump::
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_BumpPlayer
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_BumpRival
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerBump
+	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RivalBump
 	waitmovement 0
 	delay 60
 	msgbox LittlerootTown_Text_Guitarist1, MSGBOX_DEFAULT
@@ -113,6 +117,8 @@ LittlerootTown_EventScript_BlockExclaim::
 	waitmovement 0
 	delay 10
 	applymovement LOCALID_BLOCK, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_BLOCK, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_BLOCK, Common_Movement_Delay48
 	waitmovement 0
@@ -183,6 +189,32 @@ LittlerootTown_EventScript_LeaveBlock5::
 	releaseall
 	end
 
+LittlerootTown_EventScript_LeaveBlock6::
+	lockall
+	call LittlerootTown_EventScript_BlockExclaim
+	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight6
+	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	waitmovement 0
+	call LittlerootTown_EventScript_BlockBump
+	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft6
+	waitmovement 0
+	delay 30
+	releaseall
+	end
+
+LittlerootTown_EventScript_LeaveBlock7::
+	lockall
+	call LittlerootTown_EventScript_BlockExclaim
+	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight7
+	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	waitmovement 0
+	call LittlerootTown_EventScript_BlockBump
+	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft7
+	waitmovement 0
+	delay 30
+	releaseall
+	end
+
 LittlerootTown_Movement_RunRight1:
 	walk_fast_up
 	walk_fast_up
@@ -216,6 +248,29 @@ LittlerootTown_Movement_RunRight4:
 LittlerootTown_Movement_RunRight5:
 	walk_fast_up
 	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+LittlerootTown_Movement_RunRight6:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+LittlerootTown_Movement_RunRight7:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
@@ -258,6 +313,27 @@ LittlerootTown_Movement_WalkLeft5:
 	walk_down
 	step_end
 
+LittlerootTown_Movement_WalkLeft6:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+LittlerootTown_Movement_WalkLeft7:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
 LittlerootTown_Text_Thud:
 	.string "Thud!!$"
 
@@ -271,7 +347,7 @@ LittlerootTown_Text_RivalBump:
 	.string "I'm fining you 1 million if you're late!$"
 
 LittlerootTown_Text_RivalForget:
-	.string "Barry: Oh, jeez!\n"
+	.string "{RIVAL}: Oh, jeez!\n"
 	.string "Forgot something!$"
 
 LittlerootTown_EventScript_TownSign::

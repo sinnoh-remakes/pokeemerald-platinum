@@ -60,7 +60,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
       "x": 3,
       "y": 12,
       "elevation": 0,
@@ -157,6 +157,24 @@
       "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "0",
       "script": "LittlerootTown_EventScript_LeaveBlock5"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "0",
+      "script": "LittlerootTown_EventScript_LeaveBlock6"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "0",
+      "script": "LittlerootTown_EventScript_LeaveBlock7"
     }
   ],
   "bg_events": [

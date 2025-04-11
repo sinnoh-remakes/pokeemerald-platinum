@@ -175,6 +175,6 @@ static inline void Script_CheckEffectInstrumentedCallNative(void (*func)(struct 
 }
 
 // NEW
-// u8* ReadWord(u8 index);
+u8* ReadWord(u8 index);
 
 #endif // GUARD_SCRIPT_H
