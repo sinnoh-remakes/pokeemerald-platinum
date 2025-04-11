@@ -435,6 +435,13 @@ $(OBJ_DIR)/sym_common.ld: sym_common.txt $(C_OBJS) $(wildcard common_syms/*.txt)
 $(OBJ_DIR)/sym_ewram.ld: sym_ewram.txt
 	$(RAMSCRGEN) ewram_data $< ENGLISH > $@
 
+MINING_DEPS := $(shell find graphics/mining_minigame/items/ -type f -name '*.4bpp') \
+               $(shell find graphics/mining_minigame/stones/ -type f -name '*.4bpp') 
+#               $(C_SUBDIR)/data/mining_minigame.h
+
+$(DATA_SRC_SUBDIR)/mining_minigame.h: $(MINING_DEPS)
+	python3 $(TOOLS_DIR)/mining_minigame/analyze_sprites.py
+
 MOVES_JSON_DIR := $(TOOLS_DIR)/learnset_helpers/porymoves_files
 TEACHABLE_DEPS := $(shell find data/ -type f -name '*.inc') $(INCLUDE_DIRS)/constants/tms_hms.h $(C_SUBDIR)/pokemon.c $(wildcard $(MOVES_JSON_DIR)/*.json)
 
