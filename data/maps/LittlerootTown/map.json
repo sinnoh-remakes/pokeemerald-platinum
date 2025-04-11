@@ -110,7 +110,7 @@
       "y": 13,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "3",
       "script": "LittlerootTown_EventScript_RivalMeet"
     },
     {

@@ -9,7 +9,7 @@ LittlerootTown_MaysHouse_2F_OnTransition:
 	end
 
 LittlerootTown_MaysHouse_2F_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_MeetRival
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 4, LittlerootTown_MaysHouse_2F_EventScript_MeetRival
 	.2byte 0
 
 LittlerootTown_MaysHouse_2F_EventScript_CheckRivalsPC::
@@ -30,7 +30,7 @@ LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC::
 
 LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	lock
-	setvar VAR_LITTLEROOT_INTRO_STATE, 4
+	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
@@ -81,12 +81,11 @@ LittlerootTown_MaysHouse_2F_Movement_BumpPlayer:
 	step_end
 
 LittlerootTown_MaysHouse_2F_TakeBag:
-	.string "...I'd better take my Bag and Journal,\n"
-	.string "too...$"
+	.string "{RIVAL}: ...I'd better take\n"
+	.string "my Bag and Journal, too...$"
 
 @ TODO: Add dollar sign ₽
 LittlerootTown_MaysHouse_2F_GoingLake:
 	.string "Oh hey! {PLAYER}!\p"
-	.string "We're going to the lake!\n"
-	.string "I'll be waiting on the road!\p"
+	.string "I'll be waiting on the road!\n"
 	.string "It's a 10 million fine if you're late!$"

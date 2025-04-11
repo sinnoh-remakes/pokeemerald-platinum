@@ -8,21 +8,21 @@ LittlerootTown_BrendansHouse_1F_MapScripts::
 	.byte 0
 
 LittlerootTown_BrendansHouse_1F_OnTransition:
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_MoveMom
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_MoveMom
 	end
 
 LittlerootTown_BrendansHouse_1F_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, LittlerootTown_BrendansHouse_1F_EventScript_MomMessage
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_LakeReturn
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 1, LittlerootTown_BrendansHouse_1F_EventScript_MomMessage
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_LakeReturn
 	.2byte 0
 
 LittlerootTown_BrendansHouse_1F_OnWarp:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_TurnPlayerNorth
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_TurnPlayerNorth
 	.2byte 0
 
 LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	lock
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setvar VAR_LITTLEROOT_INTRO_STATE, 2
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 10
@@ -36,7 +36,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_1
 	waitmovement 0
 	delay 10
-	msgbox LittlerootTown_BrendansHouse_1F_Text_Emergency, MSGBOX_DEFAULT
+	msgbox LittlerootTown_BrendansHouse_1F_Text_Hurry, MSGBOX_DEFAULT
 	closemessage
 	delay 60
 	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_2
@@ -65,7 +65,7 @@ LittlerootTown_BrendansHouse_1F_Movement_MomTalk_2:
 
 LittlerootTown_BrendansHouse_1F_Trigger_Exit::
 	lock
-	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 10
@@ -87,7 +87,7 @@ LittlerootTown_BrendansHouse_1F_TurnPlayerNorth::
 
 LittlerootTown_BrendansHouse_1F_EventScript_LakeReturn::
 	lock
-	setvar VAR_LITTLEROOT_INTRO_STATE, 6
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	delay 48
 	delay 48
 	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomKitchen
@@ -141,7 +141,7 @@ LittlerootTown_BrendansHouse_1F_Movement_PlayerKitchen:
 	step_end
 
 LittlerootTown_BrendansHouse_1F_EventScript_Mom::
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 1, LittlerootTown_BrendansHouse_1F_EventScript_Impatient
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_BrendansHouse_1F_EventScript_Impatient
 	goto_if_eq VAR_LITTLEROOT_TOWN_STATE, 0, LittlerootTown_BrendansHouse_1F_EventScript_MomAlternate
 	goto_if_eq VAR_LITTLEROOT_TOWN_STATE, 1, LittlerootTown_BrendansHouse_1F_EventScript_MomAlternate
 	goto_if_eq VAR_LITTLEROOT_TOWN_STATE, 2, LittlerootTown_BrendansHouse_1F_EventScript_RunningShoesManual
@@ -171,7 +171,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_RunningShoesManual::
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_MomByeCheck::
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, LittlerootTown_BrendansHouse_1F_EventScript_MomBye
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, LittlerootTown_BrendansHouse_1F_EventScript_MomBye
 	goto LittlerootTown_BrendansHouse_1F_EventScript_MomHealsParty
 	return
 
@@ -182,7 +182,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomHealsParty::
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
 	incrementgamestat GAME_STAT_RESTED_AT_HOME
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, LittlerootTown_BrendansHouse_1F_EventScript_MomAdventure
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, LittlerootTown_BrendansHouse_1F_EventScript_MomAdventure
 	release
 	end
 
@@ -232,7 +232,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomAdventure::
 	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_BrendansHouse_1F_EventScript_RivalMomNorthLeave
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_BrendansHouse_1F_EventScript_RivalMomWestSouthLeave
 	removeobject LOCALID_RIVALMOM
-	setvar VAR_LITTLEROOT_INTRO_STATE, 8
+	setvar VAR_LITTLEROOT_INTRO_STATE, 9
 	return
 
 LittlerootTown_BrendansHouse_1F_Movement_RivalMomEnter:
@@ -367,19 +367,21 @@ LittlerootTown_BrendansHouse_1F_EventScript_Fridge::
 	msgbox LittlerootTown_BrendansHouse_1F_Text_Fridge, MSGBOX_SIGN
 	end
 
-LittlerootTown_BrendansHouse_1F_Text_Emergency:
+LittlerootTown_BrendansHouse_1F_Text_Hurry:
 	.string "Mom: {PLAYER}!\p"
-	.string "{RIVAL} came calling for you a little\n"
+	.string "{RIVAL} already left.\n"
 	.string "while ago.\p"
-	.string "I don't know what it was about, but he\n"
-	.string "said it was an emergency.$"
+	.string "I don't know what it was about, but\n"
+	.string "he sure was in a hurry!$"
 
 LittlerootTown_BrendansHouse_1F_Text_TallGrass:
-	.string "Mom: Oh yes! {PLAYER}!\p"
+	.string "Mom: Oh yes!\n"
+	.string "{PLAYER}!\p"
 	.string "Don't go into the tall grass. Wild\n"
 	.string "Pokémon might attack you.\p"
 	.string "It would be OK if you had your own\n"
-	.string "Pokémon, but you don't so...$"
+	.string "Pokémon, but you don't so...\p"
+	.string "Well, take care, sweetie!$"
 
 LittlerootTown_BrendansHouse_1F_Text_Impatient:
 	.string "Mom: You know how impatient\n"
@@ -396,28 +398,28 @@ LittlerootTown_BrendansHouse_1F_Text_RivalWaiting:
 	.string "Isn't {RIVAL} waiting for you?$"
 
 LittlerootTown_BrendansHouse_1F_Text_Unharmed:
-	.string "Mom: What's up, dear?\p"
+	.string "Mom: What's the matter, dear?\p"
 	.string "...\p"
 	.string "Wow.\n"
-	.string "I can't believe that happened to you.\p"
-	.string "Am I ever glad that both you and\n"
-	.string "{RIVAL} are unharmed.\p"
-	.string "The professor you mentioned is\n"
-	.string "most likely Professor Rowan of\l"
-	.string "Sandgem Town.\p"
-	.string "I've heard that he is well known for\n"
-	.string "his studies on Pokémon.\p"
-	.string "I hear he's also quite intimidating...\p"
-	.string "{PLAYER}, I think you need to\n"
-	.string "visit him in Sandgem Town.\p"
-	.string "You need to properly explain why you\n"
-	.string "had no choice but to use his Pokémon.\p"
-	.string "Don't worry!\n"
-	.string "I'm sure he will understand.$"
+	.string "That's what happened to you?\p"
+	.string "You and {RIVAL} are lucky to have\n"
+	.string "met Prof. Rowan.\p"
+	.string "Imagine if you didn't...\p"
+	.string "I wouldn't like to think what the wild\n"
+	.string "Pokémon might have done to you two.\p"
+	.string "{PLAYER}, go see Prof. Rowan, and\n"
+	.string "thank him properly for your Pokémon.\p"
+	.string "His lab is in Sandgem Town, isn't it?\p"
+	.string "Now that you have your own Pokémon,\n"
+	.string "the tall grass won't be so threatening.$"
 
 LittlerootTown_BrendansHouse_1F_Text_PutOn:
 	.string "Oh, I know!\n"
 	.string "{PLAYER}, put these on.$"
+
+LittlerootTown_BrendansHouse_1F_Text_ReceivedShoes:
+	.string "{PLAYER} received a pair of\n"
+	.string "Running Shoes!$"
 
 LittlerootTown_BrendansHouse_1F_Text_GoingSandGem:
 	.string "Going to Sandgem Town is like an\n"
@@ -430,10 +432,6 @@ LittlerootTown_BrendansHouse_1F_Text_GoingSandGem:
 LittlerootTown_BrendansHouse_1F_Text_ReadInfo:
 	.string "Mom: I'll read you the instructions\n"
 	.string "for the Running Shoes...$"
-
-LittlerootTown_BrendansHouse_1F_Text_ReceivedShoes:
-	.string "{PLAYER} received a pair of\n"
-	.string "Running Shoes!$"
 
 LittlerootTown_BrendansHouse_1F_Text_ShoesManual:
 	.string "“Press the B Button and dash\n"

@@ -33,8 +33,8 @@ Route202_EventScript_HelperTeach1::
 	call Route202_EventScript_HelperExclaim
 	applymovement LOCALID_HELPER, Route202_Movement_Helper1
 	waitmovement 0
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperAccept
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, Route202_EventScript_HelperDecline
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement OBJ_EVENT_ID_PLAYER, Route202_Movement_HelperBump
 	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn1
 	waitmovement 0
@@ -45,8 +45,8 @@ Route202_EventScript_HelperTeach2::
 	call Route202_EventScript_HelperExclaim
 	applymovement LOCALID_HELPER, Route202_Movement_Helper2
 	waitmovement 0
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperAccept
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, Route202_EventScript_HelperDecline
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement OBJ_EVENT_ID_PLAYER, Route202_Movement_HelperBump
 	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn2
 	waitmovement 0
@@ -57,8 +57,8 @@ Route202_EventScript_HelperTeach3::
 	call Route202_EventScript_HelperExclaim
 	applymovement LOCALID_HELPER, Route202_Movement_Helper3
 	waitmovement 0
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperAccept
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, Route202_EventScript_HelperDecline
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement OBJ_EVENT_ID_PLAYER, Route202_Movement_HelperBump
 	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn3
 	waitmovement 0
@@ -71,8 +71,8 @@ Route202_EventScript_HelperTeach4::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperAccept
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, Route202_EventScript_HelperDecline
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement OBJ_EVENT_ID_PLAYER, Route202_Movement_HelperBump
 	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn4
 	waitmovement 0

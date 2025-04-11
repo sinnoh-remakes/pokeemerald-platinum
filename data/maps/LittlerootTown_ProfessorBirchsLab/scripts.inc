@@ -29,12 +29,15 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ShowStarter::
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_LetMeSee, MSGBOX_DEFAULT
-	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceDown
+  @ // FODO: Add animation of giving item
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 48
 	delay 48
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_SeemsHappy, MSGBOX_SIGN
+  @ // FODO: Add animation of taking item back
 	bufferleadmonspeciesname STR_VAR_1
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_SeemsHappy, MSGBOX_DEFAULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GiveGift, MSGBOX_DEFAULT
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GiveNickname, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
 	bufferleadmonspeciesname STR_VAR_1
@@ -101,7 +104,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	waitmovement 0
 	removeobject LOCALID_HELPER
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
-	setvar VAR_LITTLEROOT_INTRO_STATE, 7
+	setvar VAR_LITTLEROOT_INTRO_STATE, 8
 	releaseall
 	end
 	
@@ -265,46 +268,54 @@ LittlerootTown_ProfessorBirchsLab_EventScript_OtherAide::
 	end
 
 LittlerootTown_ProfessorBirchsLab_Text_LetMeSee:
-	.string "Professor: ...\p"
-	.string "Finally, you've come.\n"
+	.string "Professor: Well, well, look who's here.\p"
 	.string "{PLAYER}, was it?\p"
-	.string "Let me see your Pokémon again.$"
+	.string "Let's have a look at your Pokémon.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeemsHappy:
 	.string "...\p"
 	.string "Hmm...\n"
 	.string "I see...\p"
 	.string "This Pokémon seems to be rather\n"
-	.string "happy.\p"
-	.string "All righty then!\p"
-	.string "I'll give that {STR_VAR_1} to you as\n"
-	.string "a gift.$"
+	.string "happy.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_GiveGift:
+	.string "Hm!\p"
+	.string "Entrusting you with that {STR_VAR_1}\n"
+	.string "was no mistake, it seems!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_GiveNickname:
-	.string "Professor: Now that it's yours, would\n"
-	.string "you like to give it a nickname?$"
+	.string "Professor: Well, would you like to give\n"
+	.string "it a nickname?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HappyNickname:
 	.string "Professor: Hmm, OK, I see...\n"
 	.string "And you're happy with that nickname?$"
 	
 LittlerootTown_ProfessorBirchsLab_Text_EntrustYou:
-	.string "Professor: Your friend {RIVAL}\n"
-	.string "told me what happened at the lake.\p"
-	.string "I heard you battled very well,\n"
-	.string "despite it being your first time.\p"
-	.string "And, from what I can see, there is\n"
-	.string "a growing bond between you and that\l"
-	.string "Pokémon, though it is still young.\p"
-	.string "That's why I would like to entrust\n"
-	.string "you with {STR_VAR_1}.$"
+	.string "Professor: When I first saw you two\n"
+	.string "about to step into the tall grass\l"
+	.string "without Pokémon, I was shocked.\p"
+	.string "I was astounded by these foolhardy\n"
+	.string "children.\p"
+	.string "But now, you've astounded me in an\n"
+	.string "entirely different way.\p"
+	.string "Already, there is a bond growing\n"
+	.string "between you and that Pokémon.\p"
+	.string "I feel privileged to have met you.\p"
+	.string "I'm sure {STR_VAR_1} feels the same\n"
+	.string "way about you.\p"
+	.string "That's why I'll ask you to cherish that\n"
+	.string "{STR_VAR_1} of yours.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CollectData:
 	.string "Professor: Er-hem!\n"
 	.string "Let's move on to the main topic.\p"
-	.string "There is something I want you\n"
-	.string "to do for me.\p"
-	.string "My name is Rowan.\n"
+	.string "There is something I want you to do\n"
+	.string "for me.\p"
+	.string "Allow me to properly introduce myself\n"
+	.string "first.\p"
+	.string "My name, as you know, is Rowan.\n"
 	.string "I study Pokémon.\p"
 	.string "First of all, I want to know exactly\n"
 	.string "what kinds of Pokémon live in the\l"
@@ -377,22 +388,22 @@ LittlerootTown_ProfessorBirchsLab_Text_PiplupDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a PIPLUP!\p"
 	.string "If you would have chosen\n"
-	.string "a PIPLUP at the lake, we'd\l"
-	.string "have the same Pokémon now!$"
+	.string "a PIPLUP at the lake, we'd have the same\l"
+	.string "Pokémon now!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_TurtwigDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a TURTWIG!\p"
 	.string "If you would have chosen\n"
-	.string "a TURTWIG at the lake, we'd\l"
-	.string "have the same Pokémon now!$"
+	.string "a TURTWIG at the lake, we'd have the same\l"
+	.string "Pokémon now!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ChimcharDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a CHIMCHAR!\p"
 	.string "If you would have chosen\n"
-	.string "a CHIMCHAR at the lake, we'd\l"
-	.string "have the same Pokémon now!$"
+	.string "a CHIMCHAR at the lake, we'd have the same\l"
+	.string "Pokémon now!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_LikeYouDawn:
 	.string "Not that it matters, but...\p"
@@ -400,8 +411,8 @@ LittlerootTown_ProfessorBirchsLab_Text_LikeYouDawn:
 	.string "I also help the professor add pages\n"
 	.string "to the Pokédex.\p"
 	.string "So, in a sense, I'm just like you.\p"
-	.string "I just got a little head start on\n"
-	.string "you, that's all.\p"
+	.string "I just got a little head start on you,\n"
+	.string "that's all.\p"
 	.string "I'll be happy to teach you things.\n"
 	.string "Glad to meet you, {PLAYER}!$"
 
@@ -416,9 +427,8 @@ LittlerootTown_ProfessorBirchsLab_Text_GotOneLucas:
 	.string "Pokédex as you.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ComradesLucas:
-	.string "Lucas: The professor asked me to\n"
-	.string "help, so I'm going to go out and fill\l"
-	.string "the Pokédex pages, too.\p"
+	.string "Lucas: The professor asked me to help,\n"
+	.string "so I'm filling the Pokédex pages, too.\p"
 	.string "That makes us comrades working\n"
 	.string "toward the same goal.\p"
 	.string "I'll teach you stuff later, OK?$"

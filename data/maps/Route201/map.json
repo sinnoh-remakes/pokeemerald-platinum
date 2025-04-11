@@ -35,39 +35,39 @@
       "x": 14,
       "y": 13,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_ROUTE_201_RIVAL"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 6,
-      "y": 12,
-      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_ROUTE_201_PROF"
+      "script": "Route201_EventScript_RivalChoose",
+      "flag": "FLAG_HIDE_ROUTE_201_RIVAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_RowanChoose",
+      "flag": "FLAG_HIDE_EVENTOBJ"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 6,
-      "y": 13,
+      "x": 8,
+      "y": 12,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROUTE_201_PROF"
+      "flag": "FLAG_HIDE_EVENTOBJ"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
@@ -80,7 +80,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route201_EventScript_BoyTalk",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE_201_MAN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
@@ -120,6 +120,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route201_EventScript_SchoolKidTalk",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 14,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_PickStarter",
+      "flag": "FLAG_HIDE_EVENTOBJ"
     }
   ],
   "warp_events": [
@@ -131,8 +144,8 @@
       "x": 12,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_TOWN_STATE",
-      "var_value": "1",
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "0",
       "script": "Route201_EventScript_RivalSee1"
     },
     {
@@ -140,8 +153,8 @@
       "x": 13,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_TOWN_STATE",
-      "var_value": "1",
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "0",
       "script": "Route201_EventScript_RivalSee2"
     },
     {
@@ -149,8 +162,8 @@
       "x": 14,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_TOWN_STATE",
-      "var_value": "1",
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "0",
       "script": "Route201_EventScript_RivalSee3"
     },
     {
@@ -158,8 +171,8 @@
       "x": 15,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_TOWN_STATE",
-      "var_value": "1",
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "0",
       "script": "Route201_EventScript_RivalSee4"
     },
     {
@@ -168,7 +181,7 @@
       "y": 16,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "1",
+      "var_value": "3",
       "script": "Route201_EventScript_FollowLeave"
     },
     {
@@ -177,7 +190,7 @@
       "y": 16,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "1",
+      "var_value": "3",
       "script": "Route201_EventScript_FollowLeave"
     },
     {
@@ -186,7 +199,7 @@
       "y": 16,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "1",
+      "var_value": "3",
       "script": "Route201_EventScript_FollowLeave"
     },
     {
@@ -195,7 +208,7 @@
       "y": 16,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "1",
+      "var_value": "3",
       "script": "Route201_EventScript_FollowLeave"
     },
     {
@@ -204,7 +217,7 @@
       "y": 11,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "1",
+      "var_value": "3",
       "script": "Route201_EventScript_FollowGrass"
     },
     {
@@ -213,7 +226,7 @@
       "y": 12,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "1",
+      "var_value": "3",
       "script": "Route201_EventScript_FollowGrass"
     },
     {
@@ -222,26 +235,71 @@
       "y": 13,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "1",
+      "var_value": "3",
       "script": "Route201_EventScript_FollowGrass"
     },
     {
       "type": "trigger",
-      "x": 3,
-      "y": 12,
+      "x": 15,
+      "y": 14,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "3",
-      "script": "Route201_EventScript_ProfessorA"
+      "var_value": "1",
+      "script": "Route201_EventScript_PickLeaveDown"
     },
     {
       "type": "trigger",
-      "x": 3,
+      "x": 16,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "1",
+      "script": "Route201_EventScript_PickLeaveDown"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
       "y": 13,
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
-      "var_value": "3",
-      "script": "Route201_EventScript_ProfessorB"
+      "var_value": "1",
+      "script": "Route201_EventScript_PickLeaveRight"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "2",
+      "script": "Route201_EventScript_RivalSee1"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "2",
+      "script": "Route201_EventScript_RivalSee2"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "2",
+      "script": "Route201_EventScript_RivalSee3"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "2",
+      "script": "Route201_EventScript_RivalSee4"
     }
   ],
   "bg_events": [

@@ -1,5 +1,6 @@
 .set LOCALID_HELPER, 1
 .set LOCALID_RIVAL, 2
+.set LOCALID_PROF, 3
 
 OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
@@ -277,6 +278,7 @@ OldaleTown_EventScript_HelperToLab::
 	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_TurnRight
 	applymovement LOCALID_RIVAL, OldaleTown_Movement_RivalRun
 	waitmovement 0
+	removeobject LOCALID_RIVAL
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_AnywayDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_AnywayLucas
@@ -361,8 +363,40 @@ OldaleTown_EventScript_MoveHelper::
 
 OldaleTown_EventScript_HelperBuildings::
 	lock
-	special SpawnCameraObject
 	setvar VAR_OLDALE_TOWN_STATE, 2
+	opendoor 11, 6
+	waitdooranim
+	addobject LOCALID_PROF
+	msgbox OldaleTown_Text_Thud, MSGBOX_DEFAULT
+	delay 48
+	delay 48
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox OldaleTown_Text_Surprise, MSGBOX_SIGN
+	playse SE_PIN
+	applymovement LOCALID_HELPER, Common_Movement_ExclamationMark
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	delay 48
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	msgbox OldaleTown_Text_SomethingGood, MSGBOX_DEFAULT
+	giveitem ITEM_TM_RETURN
+	setflag FLAG_RECEIVED_TM_RETURN
+	@ goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox OldaleTown_Text_TechnicalMove, MSGBOX_SIGN
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	removeobject LOCALID_PROF
+	closedoor 11, 6
+	waitdooranim
+	special SpawnCameraObject
+	delay 48
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_ShockDawn
+	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_ShockLucas
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_HELPER, Common_Movement_WalkUp
 	waitmovement 0
 	checkplayergender
@@ -403,6 +437,10 @@ OldaleTown_EventScript_HelperBuildings::
 	release
 	end
 
+OldaleTown_EventScript_ShockDawn::
+	msgbox OldaleTown_Text_ShockDawn, MSGBOX_SIGN
+	return
+
 OldaleTown_EventScript_MentorDawn::
 	msgbox OldaleTown_Text_MentorDawn, MSGBOX_SIGN
 	return
@@ -417,6 +455,10 @@ OldaleTown_EventScript_MartDawn::
 
 OldaleTown_EventScript_FamilyDawn::
 	msgbox OldaleTown_Text_FamilyDawn, MSGBOX_SIGN
+	return
+
+OldaleTown_EventScript_ShockLucas::
+	msgbox OldaleTown_Text_ShockLucas, MSGBOX_SIGN
 	return
 
 OldaleTown_EventScript_MentorLucas::
@@ -564,18 +606,47 @@ OldaleTown_Text_AnywayLucas:
 	.string "Your friend always seems to be\n"
 	.string "in such a rush.\p"
 	.string "Anyway...\n"
-	.string "Let's go in.\p"
+	.string "Let's go in.$"
 
 @ TODO: THUD change to Thud? Also in LittlerootTown
 OldaleTown_Text_Thud:
 	.string "THUD!!$"
 
 OldaleTown_Text_Rival:
+	.string	"{RIVAL}: What the...\p"
 	.string "Oh, it's you, {PLAYER}!\p"
 	.string "That old guy... He's not scary so\n"
 	.string "much as he is totally out there!\p"
 	.string "Aww, it doesn't matter, {PLAYER}.\n"
 	.string "I'm out of here. See you later!$"
+
+OldaleTown_Text_Surprise:
+	.string "{PLAYER}!$"
+
+OldaleTown_Text_SomethingGood:
+	.string "Rowan: I have something good here.\n"
+	.string "You should take this as well.$"
+
+OldaleTown_Text_TechnicalMove:
+	.string "Rowan: That is a Technical Machine.\n"
+	.string "That one contains the move Return.\p"
+	.string "Using a Technical Machine, or TM for\n"
+	.string "short, teaches a move instantly to\l"
+	.string "a Pokémon.\p"
+	.string "Bear in mind, however, that a TM is\n"
+	.string "single-use only.\p"
+	.string "The move Return gains power the more\n"
+	.string "friendly your Pokémon is with you.\p"
+	.string "It's up to you, of course, if you want\n"
+	.string "to use that TM or not.\p"
+	.string "I'll send you off with the wish that\n"
+	.string "your journey will be fun.$"
+	
+OldaleTown_Text_ShockDawn:
+	.string "Dawn: Oh, wow.\n"
+	.string "I didn't know the professor had TMs.\p"
+	.string "Was he a Trainer when he was\n"
+	.string "young...?$"
 
 OldaleTown_Text_MentorDawn:
 	.string "Dawn: OK, {PLAYER}, I'll act as\n"
@@ -616,6 +687,12 @@ OldaleTown_Text_FamilyDawn:
 	.string "It will be a lot less scary that way.\n"
 	.string "OK, bye now!$"
 	
+OldaleTown_Text_ShockLucas:
+	.string "Lucas: Well, I'll be...\n"
+	.string "The professor had TMs...?\p"
+	.string "Next thing, he'll tell me he battled\n"
+	.string "when he was young.$"
+
 OldaleTown_Text_MentorLucas:
 	.string "Lucas: Hey, {PLAYER}!\n"
 	.string "I want to show you a few things.\l"
@@ -640,7 +717,7 @@ OldaleTown_Text_MartLucas:
 	.string "Don't worry about it, OK?$"
 
 OldaleTown_Text_FamilyLucas:
-	.string "Oh year, right!\n"
+	.string "Oh yeah, right!\n"
 	.string "{PLAYER}...\p"
 	.string "You should let your family know\n"
 	.string "you're helping Prof. Rowan put\l"
