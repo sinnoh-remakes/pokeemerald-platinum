@@ -19,4 +19,3 @@ OldaleTown_House1_Text_Boy:
 	.string "At first, you should heal your\n"
 	.string "Pokemon regularly at Poke Centers\l"
 	.string "while you're leveling them up.$"
-	

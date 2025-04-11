@@ -76,22 +76,22 @@ LakefrontVerity_Movement_WalkUpRight:
 
 LakefrontVerity_EventScript_Rival::
 	facefollower
-	goto_if_eq VAR_FOLLOWER_TEXT, 0, LakefrontVerity_EventScript_RivalTalk1
-	goto_if_eq VAR_FOLLOWER_TEXT, 1, LakefrontVerity_EventScript_RivalTalk2
-	goto_if_eq VAR_FOLLOWER_TEXT, 2, LakefrontVerity_EventScript_RivalTalk3
+	goto_if_eq VAR_FOLLOWER_TEXT, 0, LakefrontVerity_EventScript_NoChoice
+	goto_if_eq VAR_FOLLOWER_TEXT, 1, LakefrontVerity_EventScript_WishGrow
+	goto_if_eq VAR_FOLLOWER_TEXT, 2, LakefrontVerity_EventScript_LetsGo
 
-LakefrontVerity_EventScript_RivalTalk1::
+LakefrontVerity_EventScript_NoChoice::
 	setvar VAR_FOLLOWER_TEXT, 1
-	msgbox LakefrontVerity_Text_RivalTalk1, MSGBOX_SIGN
+	msgbox LakefrontVerity_Text_NoChoice, MSGBOX_SIGN
 	end
 
-LakefrontVerity_EventScript_RivalTalk2::
+LakefrontVerity_EventScript_WishGrow::
 	setvar VAR_FOLLOWER_TEXT, 2
-	msgbox LakefrontVerity_Text_RivalTalk2, MSGBOX_SIGN
+	msgbox LakefrontVerity_Text_WishGrow, MSGBOX_SIGN
 	end
 
-LakefrontVerity_EventScript_RivalTalk3::
-	msgbox LakefrontVerity_Text_RivalTalk3, MSGBOX_SIGN
+LakefrontVerity_EventScript_LetsGo::
+	msgbox LakefrontVerity_Text_LetsGo, MSGBOX_SIGN
 	end
 
 LakefrontVerity_Text_EnterLake:
@@ -115,7 +115,7 @@ LakefrontVerity_Text_RivalLeave:
 	.string "We have to go return these\n"
 	.string "Pokémon...$"
 
-LakefrontVerity_Text_RivalTalk1:
+LakefrontVerity_Text_NoChoice:
 	.string "{RIVAL}: We didn't have any\n"
 	.string "choice in using those people's\l"
 	.string "Pokémon, right?\p"
@@ -124,11 +124,11 @@ LakefrontVerity_Text_RivalTalk1:
 	.string "But this is the first Pokémon I've\n"
 	.string "ever battled with...$"
 
-LakefrontVerity_Text_RivalTalk2:
+LakefrontVerity_Text_WishGrow:
 	.string "{RIVAL}: I wish I could grow\n"
 	.string "tougher with this little guy...$"
 
-LakefrontVerity_Text_RivalTalk3:
+LakefrontVerity_Text_LetsGo:
 	.string "{RIVAL}: I don't feel like\n"
 	.string "talking... Let's go.\p"
 	.string "...Are we maybe walking slower than\n"

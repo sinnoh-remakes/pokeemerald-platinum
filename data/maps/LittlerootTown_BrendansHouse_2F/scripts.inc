@@ -29,9 +29,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC::
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_Controls::
-	lockall
-	msgbox LittlerootTown_BrendansHouse_2F_EventScript_Controls_Text_0
-	releaseall
+	msgbox LittlerootTown_BrendansHouse_2F_Text_Controls, MSGBOX_SIGN
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_Notebook::
@@ -43,10 +41,10 @@ LittlerootTown_BrendansHouse_2F_EventScript_TV::
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_GameCube::
-	msgbox LittlerootTown_BrendansHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
+	msgbox LittlerootTown_BrendansHouse_2F_Text_GameCube, MSGBOX_SIGN
 	end
 
-LittlerootTown_BrendansHouse_2F_EventScript_Controls_Text_0:
+LittlerootTown_BrendansHouse_2F_Text_Controls:
 	.string "The X button opens the menu!$"
 
 LittlerootTown_BrendansHouse_2F_Text_Notebook:
@@ -60,10 +58,10 @@ LittlerootTown_BrendansHouse_2F_Text_TV:
 	.string "The TV is showing the title screen\n"
 	.string "of a video game.$"
 
-LittlerootTown_BrendansHouse_2F_Text_ItsAGameCube:
+LittlerootTown_BrendansHouse_2F_Text_GameCube:
 	.string "It's a Nintendo GameCube!\p"
 	.string "It's controlled by a Gameboy Advance!$"
 
 Common_Text_LookCloserAtMap:
 	.string "{PLAYER} took a closer look at the\n"
-	.string "HOENN region map.$"
+	.string "SINNOH region map.$"

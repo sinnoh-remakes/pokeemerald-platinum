@@ -36,7 +36,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_RivalMessage1, MSGBOX_SIGN
+	msgbox LittlerootTown_MaysHouse_2F_TakeBag, MSGBOX_SIGN
 	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
 	waitmovement 0
 	playse SE_PIN
@@ -46,7 +46,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_RivalMessage2, MSGBOX_SIGN
+	msgbox LittlerootTown_MaysHouse_2F_GoingLake, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun1
 	waitmovement 0
@@ -80,12 +80,12 @@ LittlerootTown_MaysHouse_2F_Movement_BumpPlayer:
 	face_up
 	step_end
 
-LittlerootTown_MaysHouse_2F_RivalMessage1:
+LittlerootTown_MaysHouse_2F_TakeBag:
 	.string "...I'd better take my Bag and Journal,\n"
 	.string "too...$"
 
 @ TODO: Add dollar sign ₽
-LittlerootTown_MaysHouse_2F_RivalMessage2:
+LittlerootTown_MaysHouse_2F_GoingLake:
 	.string "Oh hey! {PLAYER}!\p"
 	.string "We're going to the lake!\n"
 	.string "I'll be waiting on the road!\p"
