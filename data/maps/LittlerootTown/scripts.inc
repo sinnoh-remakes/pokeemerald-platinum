@@ -454,19 +454,6 @@ LittlerootTown_EventScript_Guitarist_Talk4::
 	msgbox LittlerootTown_Text_Guitarist4, MSGBOX_NPC
 	end
 
-LittlerootTown_Text_Thud:
-	.string "THUD!!$"
-
-LittlerootTown_Text_RivalBump:
-	.string "{RIVAL}: What was that about?!\p"
-	.string "Oh hey! {PLAYER}!\p"
-	.string "Hey! I'm going to see Prof. Rowan!\n"
-	.string "You should come, too! And quickly!$"
-
-LittlerootTown_Text_RivalForget:
-	.string "{RIVAL}: Oh, jeez!\n"
-	.string "Forgot something!$"
-
 LittlerootTown_Text_FatMan:
 	.string "Technology just blows me away!\p"
 	.string "I mean, now you can play with people\n"

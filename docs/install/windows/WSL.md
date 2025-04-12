@@ -57,6 +57,13 @@ Some tips before proceeding:
     sudo apt install build-essential binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi git libpng-dev python3
     ```
 
+5. The python3 library tomli is needed to compile the mining minigame. Install by running the followin commands: 
+
+    ```bash
+    sudo apt install --reinstall python3-pip
+    pip3 install tomli
+    ```
+
 ## Choosing a location to store pokeemerald Expansion, WSL1
 WSL has its own file system that's not natively accessible from Windows, but Windows files *are* accessible from WSL. So you're going to want to store pokeemerald Expansion within Windows.
 

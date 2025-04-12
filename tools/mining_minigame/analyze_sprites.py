@@ -1,4 +1,4 @@
-import tomllib
+import tomli # Replaced tomlllib with tomli for Python 3.10
 import os
 
 xcoord_table = [
@@ -74,7 +74,7 @@ static const int SpriteTileTable[][16] = {
 
 
     with open(toml_path, "rb") as f:
-        toml_data = tomllib.load(f)
+        toml_data = tomli.load(f)
 
     # Items
     for filename in os.listdir(gfx_items):
