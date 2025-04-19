@@ -4434,8 +4434,8 @@
     {
       "id": "LAYOUT_LAKE_VERITY",
       "name": "LakeVerity_Layout",
-      "width": 20,
-      "height": 31,
+      "width": 22,
+      "height": 29,
       "primary_tileset": "gTileset_Outdoor",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/LakeVerity/border.bin",

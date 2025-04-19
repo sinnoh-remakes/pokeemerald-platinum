@@ -766,6 +766,11 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
 
+// gTileset_Twinleaf
+#define METATILE_Twinleaf_Door_BirchsLab   0x23C
+#define METATILE_Twinleaf_Door_House       0x229
+#define METATILE_Twinleaf_Door_Littleroot  0x234
+
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
