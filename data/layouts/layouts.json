@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/OldaleTown_HelperHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown_HelperHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GATE_JUBILIFE",
+      "name": "Gate_Jubilife_Layout",
+      "width": 16,
+      "height": 11,
+      "primary_tileset": "gTileset_Outdoor",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
     }
   ]
 }

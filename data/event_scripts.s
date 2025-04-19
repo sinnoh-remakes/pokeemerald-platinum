@@ -582,6 +582,7 @@ gStdScripts_End::
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/OldaleTown_HelperHouse_1F/scripts.inc"
 	.include "data/maps/OldaleTown_HelperHouse_2F/scripts.inc"
+	.include "data/maps/Gate_Jubilife/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
