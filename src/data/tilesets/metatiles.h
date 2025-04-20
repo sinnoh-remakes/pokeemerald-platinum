@@ -216,3 +216,6 @@ const u16 gMetatileAttributes_Twinleaf[] = INCBIN_U16("data/tilesets/secondary/t
 
 const u16 gMetatiles_Gatehouse[] = INCBIN_U16("data/tilesets/secondary/gatehouse/metatiles.bin");
 const u16 gMetatileAttributes_Gatehouse[] = INCBIN_U16("data/tilesets/secondary/gatehouse/metatile_attributes.bin");
+
+const u16 gMetatiles_DistortionWorld[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatiles.bin");
+const u16 gMetatileAttributes_DistortionWorld[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatile_attributes.bin");
