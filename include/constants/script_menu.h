@@ -166,6 +166,10 @@
 #define STDSTRING_BATTLE_PIKE      28
 #define STDSTRING_BATTLE_PYRAMID   29
 
+#define STDSTRING_MEDICINE         30
+#define STDSTRING_MAIL             31
+#define STDSTRING_BATTLEITEMS      32
+
 // Dynamic Multichoice Callbacks
 
 #define DYN_MULTICHOICE_CB_DEBUG      0
