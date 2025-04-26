@@ -249,7 +249,7 @@ s32 ComfyAnimEasing_EaseInOutCubic(s32 t /* Q_24_8 */)
 
 s32 ComfyAnimEasing_EaseInOutBack(s32 t /* Q_24_8 */)
 {
-    s32 c1 = 0x1B3; // Q_24_8 representation of 1.70158
+    // s32 c1 = 0x1B3; // Q_24_8 representation of 1.70158
     s32 c2 = 0x298; // Q_24_8 representation of 1.70158 * 1.525
 
     if (t < (Q_24_8(1) >> 1))
