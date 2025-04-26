@@ -4437,7 +4437,7 @@
       "width": 22,
       "height": 29,
       "primary_tileset": "gTileset_Outdoor",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_Lake",
       "border_filepath": "data/layouts/LakeVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
