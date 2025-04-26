@@ -94,7 +94,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 20,
+      "width": 22,
       "height": 32,
       "primary_tileset": "gTileset_Outdoor",
       "secondary_tileset": "gTileset_Twinleaf",
@@ -105,7 +105,7 @@
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
       "width": 30,
-      "height": 30,
+      "height": 34,
       "primary_tileset": "gTileset_Outdoor",
       "secondary_tileset": "gTileset_Twinleaf",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
@@ -167,17 +167,17 @@
       "width": 64,
       "height": 24,
       "primary_tileset": "gTileset_Outdoor",
-      "secondary_tileset": "gTileset_Twinleaf",
+      "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route201/border.bin",
       "blockdata_filepath": "data/layouts/Route201/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE202",
       "name": "Route202_Layout",
-      "width": 30,
+      "width": 32,
       "height": 36,
       "primary_tileset": "gTileset_Outdoor",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route202/border.bin",
       "blockdata_filepath": "data/layouts/Route202/map.bin"
     },
@@ -4427,7 +4427,7 @@
       "width": 20,
       "height": 16,
       "primary_tileset": "gTileset_Outdoor",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/LakefrontVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakefrontVerity/map.bin"
     },

@@ -15,14 +15,14 @@
   "connections": [
     {
       "map": "MAP_ROUTE201",
-      "offset": -6,
+      "offset": -4,
       "direction": "up"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 6,
+      "x": 8,
       "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -35,7 +35,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 16,
+      "x": 18,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -48,7 +48,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 6,
+      "x": 8,
       "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -61,7 +61,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 3,
+      "x": 5,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -75,28 +75,28 @@
   ],
   "warp_events": [
     {
-      "x": 14,
+      "x": 16,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 3,
+      "x": 5,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 4,
+      "x": 6,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_OTHER_HOUSE_A",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
+      "x": 16,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_GATE_JUBILIFE",
@@ -106,7 +106,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 3,
+      "x": 5,
       "y": 12,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_INTRO_STATE",
@@ -115,7 +115,7 @@
     },
     {
       "type": "trigger",
-      "x": 7,
+      "x": 9,
       "y": 3,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -124,7 +124,7 @@
     },
     {
       "type": "trigger",
-      "x": 8,
+      "x": 10,
       "y": 3,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -133,7 +133,7 @@
     },
     {
       "type": "trigger",
-      "x": 9,
+      "x": 11,
       "y": 3,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -142,7 +142,7 @@
     },
     {
       "type": "trigger",
-      "x": 10,
+      "x": 12,
       "y": 3,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -151,7 +151,7 @@
     },
     {
       "type": "trigger",
-      "x": 11,
+      "x": 13,
       "y": 3,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -160,7 +160,7 @@
     },
     {
       "type": "trigger",
-      "x": 12,
+      "x": 14,
       "y": 3,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -169,7 +169,7 @@
     },
     {
       "type": "trigger",
-      "x": 13,
+      "x": 15,
       "y": 3,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -180,7 +180,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 10,
+      "x": 12,
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -188,7 +188,7 @@
     },
     {
       "type": "sign",
-      "x": 12,
+      "x": 14,
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -196,7 +196,7 @@
     },
     {
       "type": "sign",
-      "x": 7,
+      "x": 9,
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
