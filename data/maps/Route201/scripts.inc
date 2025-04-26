@@ -713,12 +713,12 @@ Route201_EventScript_MartSample::
 	end
 
 Route201_EventScript_MartSample1::
-	lock
+	lockall
 	msgbox Route201_Text_MartSample1, MSGBOX_NPC
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Route201_EventScript_BagIsFull
 	setvar VAR_ROUTE201_STATE, 5
-	release
+	releaseall
 	end
 
 Route201_EventScript_MartSample2::
