@@ -869,3 +869,14 @@ const struct Tileset gTileset_DistortionWorld =
     .metatileAttributes = gMetatileAttributes_DistortionWorld,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route201 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route201,
+    .palettes = gTilesetPalettes_Route201,
+    .metatiles = gMetatiles_Route201,
+    .metatileAttributes = gMetatileAttributes_Route201,
+    .callback = NULL,
+};
