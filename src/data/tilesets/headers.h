@@ -826,14 +826,14 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Outdoor =
+const struct Tileset gTileset_OutdoorJubilife =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_Outdoor,
-    .palettes = gTilesetPalettes_Outdoor,
-    .metatiles = gMetatiles_Outdoor,
-    .metatileAttributes = gMetatileAttributes_Outdoor,
+    .tiles = gTilesetTiles_OutdoorJubilife,
+    .palettes = gTilesetPalettes_OutdoorJubilife,
+    .metatiles = gMetatiles_OutdoorJubilife,
+    .metatileAttributes = gMetatileAttributes_OutdoorJubilife,
     .callback = NULL,
 };
 

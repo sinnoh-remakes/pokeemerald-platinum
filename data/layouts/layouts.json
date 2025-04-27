@@ -96,7 +96,7 @@
       "name": "LittlerootTown_Layout",
       "width": 22,
       "height": 32,
-      "primary_tileset": "gTileset_Outdoor",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Twinleaf",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
@@ -106,7 +106,7 @@
       "name": "OldaleTown_Layout",
       "width": 30,
       "height": 34,
-      "primary_tileset": "gTileset_Outdoor",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Twinleaf",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
@@ -166,7 +166,7 @@
       "name": "Route201_Layout",
       "width": 64,
       "height": 24,
-      "primary_tileset": "gTileset_Outdoor",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route201/border.bin",
       "blockdata_filepath": "data/layouts/Route201/map.bin"
@@ -176,7 +176,7 @@
       "name": "Route202_Layout",
       "width": 32,
       "height": 36,
-      "primary_tileset": "gTileset_Outdoor",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route202/border.bin",
       "blockdata_filepath": "data/layouts/Route202/map.bin"
@@ -4426,7 +4426,7 @@
       "name": "LakefrontVerity_Layout",
       "width": 20,
       "height": 16,
-      "primary_tileset": "gTileset_Outdoor",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/LakefrontVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakefrontVerity/map.bin"
@@ -4436,7 +4436,7 @@
       "name": "LakeVerity_Layout",
       "width": 22,
       "height": 29,
-      "primary_tileset": "gTileset_Outdoor",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Lake",
       "border_filepath": "data/layouts/LakeVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
@@ -4456,7 +4456,7 @@
       "name": "Gate_Jubilife_Layout",
       "width": 16,
       "height": 11,
-      "primary_tileset": "gTileset_Outdoor",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Gatehouse",
       "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
       "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
