@@ -79,14 +79,14 @@
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     },
     {
       "x": 6,
@@ -99,7 +99,7 @@
       "x": 16,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_GATE_JUBILIFE",
+      "dest_map": "MAP_LITTLEROOT_TOWN_OTHER_HOUSE_B",
       "dest_warp_id": "0"
     }
   ],
