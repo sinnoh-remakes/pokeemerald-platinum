@@ -12,3 +12,5 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/lake ./tiles/lake
 echo "[SECONDARY] lake - compiled successfully"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/gatehouse ./tiles/gatehouse ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "[SECONDARY] gatehouse - compiled successfully"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+echo "[PRIMARY] indoor_twinleaf - compiled successfully"

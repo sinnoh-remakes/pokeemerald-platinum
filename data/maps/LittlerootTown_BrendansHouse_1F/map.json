@@ -43,13 +43,6 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 5,
       "y": 8,
       "elevation": 0,
@@ -68,15 +61,6 @@
     {
       "type": "trigger",
       "x": 5,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_LITTLEROOT_INTRO_STATE",
-      "var_value": "2",
-      "script": "LittlerootTown_BrendansHouse_1F_Trigger_Exit"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
       "y": 8,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_INTRO_STATE",
