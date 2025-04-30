@@ -14,3 +14,5 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/gatehouse ./tiles
 echo "[SECONDARY] gatehouse - compiled successfully"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "[PRIMARY] indoor_twinleaf - compiled successfully"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_player ./tiles/twinleaf_player ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+echo "[SECONDARY] twinleaf_player - compiled successfully"

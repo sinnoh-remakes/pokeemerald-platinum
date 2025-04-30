@@ -547,7 +547,7 @@
       "width": 10,
       "height": 12,
       "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "secondary_tileset": "gTileset_TwinleafPlayer",
       "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/map.bin"
     },
@@ -567,7 +567,7 @@
       "width": 10,
       "height": 12,
       "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "secondary_tileset": "gTileset_TwinleafPlayer",
       "border_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/map.bin"
     },

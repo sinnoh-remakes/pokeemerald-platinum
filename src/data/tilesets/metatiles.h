@@ -228,3 +228,6 @@ const u16 gMetatileAttributes_Lake[] = INCBIN_U16("data/tilesets/secondary/lake/
 
 const u16 gMetatiles_IndoorTwinleaf[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf/metatiles.bin");
 const u16 gMetatileAttributes_IndoorTwinleaf[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf/metatile_attributes.bin");
+
+const u16 gMetatiles_TwinleafPlayer[] = INCBIN_U16("data/tilesets/secondary/twinleaf_player/metatiles.bin");
+const u16 gMetatileAttributes_TwinleafPlayer[] = INCBIN_U16("data/tilesets/secondary/twinleaf_player/metatile_attributes.bin");
