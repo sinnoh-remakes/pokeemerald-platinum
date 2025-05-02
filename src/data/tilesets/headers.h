@@ -913,3 +913,36 @@ const struct Tileset gTileset_TwinleafPlayer =
     .metatileAttributes = gMetatileAttributes_TwinleafPlayer,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_TwinleafLiving =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_TwinleafLiving,
+    .palettes = gTilesetPalettes_TwinleafLiving,
+    .metatiles = gMetatiles_TwinleafLiving,
+    .metatileAttributes = gMetatileAttributes_TwinleafLiving,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_TwinleafRival =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_TwinleafRival,
+    .palettes = gTilesetPalettes_TwinleafRival,
+    .metatiles = gMetatiles_TwinleafRival,
+    .metatileAttributes = gMetatileAttributes_TwinleafRival,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_IndoorTwinleaf2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorTwinleaf2,
+    .palettes = gTilesetPalettes_IndoorTwinleaf2,
+    .metatiles = gMetatiles_IndoorTwinleaf2,
+    .metatileAttributes = gMetatileAttributes_IndoorTwinleaf2,
+    .callback = NULL,
+};
