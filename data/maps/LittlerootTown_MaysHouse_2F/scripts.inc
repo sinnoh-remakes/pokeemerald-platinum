@@ -60,19 +60,17 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	end
 
 LittlerootTown_MaysHouse_2F_Movement_RivalRun1:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
 	step_end
 	
 LittlerootTown_MaysHouse_2F_Movement_RivalRun2:
 	walk_fast_left
-	walk_fast_up
 	step_end
 
 LittlerootTown_MaysHouse_2F_Movement_BumpPlayer:
