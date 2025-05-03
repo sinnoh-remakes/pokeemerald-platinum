@@ -23,6 +23,9 @@ LittlerootTown_BrendansHouse_1F_OnWarp:
 LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	lock
 	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
@@ -34,6 +37,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_Delay48
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_1
 	waitmovement 0
 	delay 10
@@ -43,6 +47,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_2
 	waitmovement 0
 	delay 10
+	special RemoveCameraObject
 	release
 	return
 
