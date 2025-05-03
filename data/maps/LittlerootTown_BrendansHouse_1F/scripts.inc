@@ -24,6 +24,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	lock
 	setvar VAR_LITTLEROOT_INTRO_STATE, 2
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 10
 	playse SE_PIN
@@ -51,15 +52,18 @@ LittlerootTown_BrendansHouse_1F_Movement_MomTalk_1:
 	walk_right
 	walk_right
 	walk_up
+	walk_up
+	walk_up
 	step_end
 
 LittlerootTown_BrendansHouse_1F_Movement_MomTalk_2:
 	walk_down
+	walk_down
 	walk_left
 	walk_left
 	walk_left
 	walk_down
-	face_up
+	walk_down
 	walk_in_place_up
 	step_end
 
@@ -116,8 +120,9 @@ LittlerootTown_BrendansHouse_1F_Movement_MomKitchen:
 	walk_right
 	walk_right
 	walk_right
-	walk_right
 	walk_down
+	walk_down
+	walk_right
 	walk_right
 	walk_right
 	walk_down
@@ -136,6 +141,7 @@ LittlerootTown_BrendansHouse_1F_Movement_PlayerKitchen:
 	walk_right
 	walk_right
 	walk_right
+	walk_down
 	walk_down
 	walk_right
 	step_end

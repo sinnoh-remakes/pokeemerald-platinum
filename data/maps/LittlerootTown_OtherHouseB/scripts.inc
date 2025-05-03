@@ -7,6 +7,7 @@ LittlerootTown_OtherHouseB_EventScript_Man::
 	msgbox LittlerootTown_OtherHouseB_Text_Man, MSGBOX_DEFAULT
 	closemessage
 	release
+	end
 
 LittlerootTown_OtherHouseB_Text_Man:
 	.string "I went on an adventure with some\n"

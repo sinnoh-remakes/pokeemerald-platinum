@@ -7,6 +7,7 @@ LittlerootTown_OtherHouseA_EventScript_Elder::
 	msgbox LittlerootTown_OtherHouseA_Text_Elder, MSGBOX_DEFAULT
 	closemessage
 	release
+	end
 
 LittlerootTown_OtherHouseA_EventScript_Twin::
 	lock
@@ -14,6 +15,7 @@ LittlerootTown_OtherHouseA_EventScript_Twin::
 	msgbox LittlerootTown_OtherHouseA_Text_Twin, MSGBOX_DEFAULT
 	closemessage
 	release
+	end
 
 LittlerootTown_OtherHouseA_Text_Elder:
 	.string "Did you hear?\p"

@@ -10,6 +10,7 @@ LittlerootTown_BrendansHouse_2F_OnTransition:
 
 LittlerootTown_BrendansHouse_2F_Init::
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_RivalEnterUp::
@@ -102,7 +103,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_RivalEnterRight::
 
 LittlerootTown_BrendansHouse_2F_EventScript_RivalEnter::
 	addobject LOCALID_RIVAL
-	applymovement LOCALID_RIVAL, Common_Movement_WalkDown
+	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_RivalEnter
 	waitmovement 0
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
@@ -129,29 +130,35 @@ LittlerootTown_BrendansHouse_2F_EventScript_RivalPC::
 	msgbox LittlerootTown_BrendansHouse_2F_Text_WhereWas, MSGBOX_SIGN
 	return
 
+LittlerootTown_BrendansHouse_2F_Movement_RivalEnter:
+	walk_fast_left
+	step_end
+
 LittlerootTown_BrendansHouse_2F_Movement_PlayerLeft:
 	delay_16
 	delay_16
-	face_left
+	walk_in_place_left
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_PlayerRight:
 	delay_16
 	delay_16
-	face_right
+	walk_in_place_right
 	step_end
 	
 LittlerootTown_BrendansHouse_2F_Movement_MeetUp:
 	walk_fast_down
 	walk_fast_left
 	walk_fast_left
+	walk_fast_left
 	step_end
 	
 LittlerootTown_BrendansHouse_2F_Movement_MeetLeft:
-	walk_fast_left
-	walk_fast_left
 	walk_fast_down
 	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	walk_fast_left
 	step_end
 	
@@ -161,17 +168,18 @@ LittlerootTown_BrendansHouse_2F_Movement_MeetDown:
 	walk_fast_down
 	walk_fast_down
 	walk_fast_left
+	walk_fast_left
 	step_end
 	
 LittlerootTown_BrendansHouse_2F_Movement_MeetRight:
 	walk_fast_down
 	walk_fast_down
 	walk_fast_left
+	walk_fast_left
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_PCUp:
-	walk_fast_up
-	walk_fast_left
+	walk_fast_down
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
@@ -181,20 +189,14 @@ LittlerootTown_BrendansHouse_2F_Movement_PCUp:
 	
 LittlerootTown_BrendansHouse_2F_Movement_PCLeft:
 	walk_fast_up
-	walk_fast_up
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
-	walk_fast_left
-	walk_fast_up
+	walk_in_place_up
 	step_end
-
 
 LittlerootTown_BrendansHouse_2F_Movement_PCDown:
 	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_left
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
@@ -205,19 +207,14 @@ LittlerootTown_BrendansHouse_2F_Movement_PCDown:
 LittlerootTown_BrendansHouse_2F_Movement_PCRight:
 	walk_fast_up
 	walk_fast_left
-	walk_fast_up
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
-	walk_fast_left
-	walk_fast_up
+	walk_in_place_up
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_ReturnUp:
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
 	walk_fast_right
 	walk_fast_right
 	step_end
@@ -225,49 +222,43 @@ LittlerootTown_BrendansHouse_2F_Movement_ReturnUp:
 LittlerootTown_BrendansHouse_2F_Movement_ReturnLeft:
 	walk_fast_right
 	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_right
+	walk_in_place_right
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_ReturnDown:
 	walk_fast_right
 	walk_fast_down
 	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_right
 	walk_fast_right
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_ReturnRight:
 	walk_fast_right
 	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	step_end
 	
 LittlerootTown_BrendansHouse_2F_Movement_ExitUp:
+	walk_fast_down
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
 	walk_fast_up
 	walk_fast_right
 	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
 	step_end
 	
 LittlerootTown_BrendansHouse_2F_Movement_ExitLeft:
 	walk_fast_up
 	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	walk_fast_up
 	walk_fast_right
 	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
 	step_end
 	
 LittlerootTown_BrendansHouse_2F_Movement_ExitDown:
@@ -278,16 +269,16 @@ LittlerootTown_BrendansHouse_2F_Movement_ExitDown:
 	walk_fast_up
 	walk_fast_up
 	walk_fast_right
-	walk_fast_up
+	walk_fast_right
 	step_end
 	
 LittlerootTown_BrendansHouse_2F_Movement_ExitRight:
 	walk_fast_up
 	walk_fast_right
+	walk_fast_right
 	walk_fast_up
 	walk_fast_right
 	walk_fast_right
-	walk_fast_up
 	step_end
 
 LittlerootTown_BrendansHouse_2F_EventScript_PC::

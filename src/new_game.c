@@ -130,7 +130,8 @@ static void ClearFrontierRecord(void)
 
 static void WarpToSpawn(void)
 {
-    SetWarpDestination(MAP_GROUP(LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), MAP_NUM(LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), WARP_ID_NONE, 4, 8);
+    // FODO: Make player face upwards
+    SetWarpDestination(MAP_GROUP(LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), MAP_NUM(LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), WARP_ID_NONE, 3, 5);
     WarpIntoMap();
 }
 
