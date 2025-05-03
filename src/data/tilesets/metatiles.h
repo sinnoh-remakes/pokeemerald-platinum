@@ -240,3 +240,6 @@ const u16 gMetatileAttributes_TwinleafRival[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_IndoorTwinleaf2[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf_2/metatiles.bin");
 const u16 gMetatileAttributes_IndoorTwinleaf2[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf_2/metatile_attributes.bin");
+
+const u16 gMetatiles_TwinleafOther[] = INCBIN_U16("data/tilesets/secondary/twinleaf_other/metatiles.bin");
+const u16 gMetatileAttributes_TwinleafOther[] = INCBIN_U16("data/tilesets/secondary/twinleaf_other/metatile_attributes.bin");

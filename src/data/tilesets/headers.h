@@ -946,3 +946,14 @@ const struct Tileset gTileset_IndoorTwinleaf2 =
     .metatileAttributes = gMetatileAttributes_IndoorTwinleaf2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_TwinleafOther =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_TwinleafOther,
+    .palettes = gTilesetPalettes_TwinleafOther,
+    .metatiles = gMetatiles_TwinleafOther,
+    .metatileAttributes = gMetatileAttributes_TwinleafOther,
+    .callback = NULL,
+};

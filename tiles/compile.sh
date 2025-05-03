@@ -18,6 +18,8 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_player .
 echo "[SECONDARY] twinleaf_player - compiled successfully"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_living ./tiles/twinleaf_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "[SECONDARY] twinleaf_living - compiled successfully"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_other ./tiles/twinleaf_other ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+echo "[SECONDARY] twinleaf_other - compiled successfully"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf_2 ./tiles/indoor_twinleaf_2 ./include/constants/metatile_behaviors.h
 echo "[PRIMARY] indoor_twinleaf_2 - compiled successfully"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_rival ./tiles/twinleaf_rival ./tiles/indoor_twinleaf_2 ./include/constants/metatile_behaviors.h
