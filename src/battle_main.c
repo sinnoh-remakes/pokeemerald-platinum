@@ -25,6 +25,7 @@
 #include "event_data.h"
 #include "evolution_scene.h"
 #include "field_weather.h"
+#include "follower_npc.h"
 #include "graphics.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
@@ -423,8 +424,15 @@ void CB2_InitBattle(void)
     AllocateBattleSpritesData();
     AllocateMonSpritesGfx();
     RecordedBattle_ClearFrontierPassFlag();
-
-    if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
+#if OW_ENABLE_NPC_FOLLOWERS
+    if (gSaveBlock3Ptr->NPCfollower.battlePartner && OW_NPC_FOLLOWER_PARTY_PREVIEW == FALSE)
+    {
+        CB2_InitBattleInternal();
+        gBattleCommunication[MULTIUSE_STATE] = 0;
+    }
+    else 
+#endif
+    if (gBattleTypeFlags & BATTLE_TYPE_MULTI && gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
         if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
         {
@@ -5749,6 +5757,14 @@ static void ReturnFromBattleToOverworld(void)
 
     m4aSongNumStop(SE_LOW_HEALTH);
     SetMainCallback2(gMain.savedCallback);
+
+#if OW_ENABLE_NPC_FOLLOWERS
+    // if you experience the follower de-syncing with the player after battle, set OW_POST_BATTLE_NPC_FOLLOWER_FIX to TRUE in include/config/overworld.h
+    #if OW_POST_BATTLE_NPC_FOLLOWER_FIX
+        FollowerNPC_WarpSetEnd();
+        gObjectEvents[GetFollowerNPCObjectId()].invisible = TRUE;
+    #endif
+#endif
 }
 
 void RunBattleScriptCommands_PopCallbacksStack(void)

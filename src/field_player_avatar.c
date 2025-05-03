@@ -9,6 +9,7 @@
 #include "field_screen_effect.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
+#include "follower_npc.h"
 #include "menu.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
@@ -27,6 +28,7 @@
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
 #include "constants/items.h"
+#include "constants/metatile_behaviors.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/trainer_types.h"
@@ -45,7 +47,6 @@ static bool8 TryInterruptObjectEventSpecialAnim(struct ObjectEvent *, u8);
 static void npc_clear_strange_bits(struct ObjectEvent *);
 static void MovePlayerAvatarUsingKeypadInput(u8, u16, u16);
 static void PlayerAllowForcedMovementIfMovingSameDirection();
-static bool8 TryDoMetatileBehaviorForcedMovement();
 static u8 GetForcedMovementByMetatileBehavior();
 
 static bool8 ForcedMovement_None(void);
@@ -422,7 +423,7 @@ static void PlayerAllowForcedMovementIfMovingSameDirection(void)
         gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_CONTROLLABLE;
 }
 
-static bool8 TryDoMetatileBehaviorForcedMovement(void)
+bool8 TryDoMetatileBehaviorForcedMovement(void)
 {
     return sForcedMovementFuncs[GetForcedMovementByMetatileBehavior()]();
 }
@@ -499,6 +500,12 @@ static bool8 DoForcedMovement(u8 direction, void (*moveFunc)(u8))
     {
         playerAvatar->runningState = MOVING;
         moveFunc(direction);
+#if OW_ENABLE_NPC_FOLLOWERS
+        if (gSaveBlock3Ptr->NPCfollower.inProgress 
+         && gObjectEvents[GetFollowerNPCObjectId()].invisible == FALSE 
+         && FindTaskIdByFunc(Task_MoveNPCFollowerAfterForcedMovement) == TASK_NONE)
+            CreateTask(Task_MoveNPCFollowerAfterForcedMovement, 3);
+#endif
         return TRUE;
     }
 }
@@ -684,7 +691,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     }
 
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
-     && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
+     && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0 && !FollowerNPCComingThroughDoor())
     {
         if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
             PlayerRunSlow(direction);
@@ -775,7 +782,11 @@ static bool8 CanStopSurfing(s16 x, s16 y, u8 direction)
 {
     if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
      && MapGridGetElevationAt(x, y) == 3
-     && GetObjectEventIdByPosition(x, y, 3) == OBJECT_EVENTS_COUNT)
+     && (GetObjectEventIdByPosition(x, y, 3) == OBJECT_EVENTS_COUNT 
+#if OW_ENABLE_NPC_FOLLOWERS
+     || GetObjectEventIdByPosition(x, y, 3) == GetFollowerNPCObjectId()
+#endif
+     ))
     {
         CreateStopSurfingTask(direction);
         return TRUE;
@@ -1063,6 +1074,24 @@ void PlayerOnBikeCollide(u8 direction)
 {
     PlayCollisionSoundIfNotFacingWarp(direction);
     PlayerSetAnimId(GetWalkInPlaceNormalMovementAction(direction), COPY_MOVE_WALK);
+#if OW_ENABLE_NPC_FOLLOWERS
+    // Edge case: If the player stops at the top of a mud slide, but the NPC follower is still on a mud slide tile,
+    // move the follower into the player and hide them.
+    if (gSaveBlock3Ptr->NPCfollower.inProgress)
+    {
+        struct ObjectEvent *npcFollower = &gObjectEvents[GetFollowerNPCObjectId()];
+        struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+        if (npcFollower->invisible == FALSE 
+         && player->currentMetatileBehavior != MB_MUDDY_SLOPE 
+         && npcFollower->currentMetatileBehavior == MB_MUDDY_SLOPE)
+        {
+            gPlayerAvatar.preventStep = TRUE;
+            ObjectEventSetHeldMovement(npcFollower, MOVEMENT_ACTION_WALK_FAST_UP);
+            CreateTask(Task_HideNPCFollowerAfterMovementFinish, 2);
+        }
+    }
+#endif
 }
 
 void PlayerOnBikeCollideWithFarawayIslandMew(u8 direction)
@@ -1454,6 +1483,9 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     gPlayerAvatar.spriteId = objectEvent->spriteId;
     gPlayerAvatar.gender = gender;
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | PLAYER_AVATAR_FLAG_ON_FOOT);
+#if OW_ENABLE_NPC_FOLLOWERS
+    CreateFollowerNPCAvatar();
+#endif
 }
 
 void SetPlayerInvisibility(bool8 invisible)
@@ -1697,12 +1729,15 @@ static void CreateStopSurfingTask(u8 direction)
     LockPlayerFieldControls();
     Overworld_ClearSavedMusic();
     Overworld_ChangeMusicToDefault();
-    gPlayerAvatar.flags ^= PLAYER_AVATAR_FLAG_SURFING;
+    gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_SURFING;
     gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_ON_FOOT;
     gPlayerAvatar.preventStep = TRUE;
     taskId = CreateTask(Task_StopSurfingInit, 0xFF);
     gTasks[taskId].data[0] = direction;
     Task_StopSurfingInit(taskId);
+#if OW_ENABLE_NPC_FOLLOWERS
+    PrepareFollowerNPCDismountSurf();
+#endif
 }
 
 static void Task_StopSurfingInit(u8 taskId)

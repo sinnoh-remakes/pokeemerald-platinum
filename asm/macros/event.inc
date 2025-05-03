@@ -2422,12 +2422,6 @@
 	.2byte \dest
 	.endm
 
-	@ Hides any follower Pokémon if present, putting them into their Poké Ball; by default waits for their movement to finish.
-	.macro hidefollower wait=1
-	callnative ScrFunc_hidefollower
-	.2byte \wait
-	.endm
-
 	.macro increasedifficulty
 	callnative Script_IncreaseDifficulty, requests_effects=1
 	.endm
@@ -2510,3 +2504,70 @@
 	compare \a, \b
 	cant_see_if 5
 	.endm
+@ Follower NPCs
+
+	@ Sets an NPC up to follow the player.
+	@ If you want to specify a battle partner without specifying a custom script, you can set the script parameter to 0.
+    .macro setfollowernpc localId:req, flags:req, script=0, battlePartner=0
+	checkfollowernpc
+	goto_if_eq VAR_RESULT, TRUE, 1f
+	ballfollowingmon
+    callnative ScriptSetFollowerNPC
+	.if \script == 0
+		.set setScript, FALSE
+    .else
+		.set setScript, TRUE
+	.endif
+    .byte \localId
+    .2byte \flags
+	.byte setScript
+	.2byte \battlePartner
+	.4byte \script
+	updatefollowingmon
+	1:
+    .endm
+    
+    @ Removes the NPC follower (assumes there will only ever be one).
+    .macro destroyfollowernpc
+    callnative ScriptDestroyFollowerNPC
+    .endm
+    
+    @ Makes the player and NPC follower face one another.
+    .macro facefollowernpc
+    callnative ScriptFaceFollowerNPC
+    .endm
+
+    @ Makes the NPC follower walk into the player and get hidden.
+    @ Optionally, you can set the walk speed for the movement:
+    @ 0 = Slow
+    @ 1 = Normal (default)
+    @ 2 = Fast
+    @ 3 = Faster
+    .macro hidefollowernpc speed=1
+    callnative ScriptHideNPCFollower
+    .byte \speed
+    waitmovement OBJ_EVENT_ID_NPC_FOLLOWER
+    callnative HideNPCFollower
+    .endm
+    
+    @ Checks if you have an NPC follower. Returns the result to VAR_RESULT.
+    .macro checkfollowernpc
+    callnative ScriptCheckFollowerNPC
+    .endm
+
+	@ Updates Pokemon follower.
+	.macro updatefollowingmon
+    callnative ScriptUpdateFollowingMon
+    .endm
+
+	@ Returns Pokemon follower to ball.
+	.macro ballfollowingmon
+    callnative ScriptBallFollowingMon
+	delay 16
+	.endm
+
+    @ Changes the battle partner of the existing NPC follower.
+    .macro changefollowerbattler battlePartner:req
+    callnative ScriptChangeFollowerNPCBattlePartner
+    .2byte \battlePartner
+    .endm
