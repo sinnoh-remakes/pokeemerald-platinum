@@ -601,12 +601,12 @@ Route201_EventScript_RivalLake::
 	call_if_eq VAR_0x8004, 4, Route201_EventScript_RivalShift4
 	msgbox Route201_Text_NothingToFear, MSGBOX_SIGN
 	loadword 0 Route201_EventScript_Rival
-	setfollower LOCALID_RIVAL 0x100
+	setfollowernpc LOCALID_RIVAL 0x100
 	release
 	end
 
 Route201_EventScript_Rival::
-	facefollower
+	facefollowernpc
 	goto_if_eq VAR_FOLLOWER_TEXT, 0, Route201_EventScript_RivalTalk1
 	goto_if_eq VAR_FOLLOWER_TEXT, 1, Route201_EventScript_RivalTalk2
 	goto_if_eq VAR_FOLLOWER_TEXT, 2, Route201_EventScript_RivalTalk3
