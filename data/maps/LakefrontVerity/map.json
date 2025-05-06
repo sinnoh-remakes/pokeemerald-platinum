@@ -2,7 +2,7 @@
   "id": "MAP_LAKEFRONT_VERITY",
   "name": "LakefrontVerity",
   "layout": "LAYOUT_LAKEFRONT_VERITY",
-  "music": "MUS_ROUTE201",
+  "music": "MUS_DP_ROUTE201_DAY",
   "region_map_section": "MAPSEC_ROUTE_201",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

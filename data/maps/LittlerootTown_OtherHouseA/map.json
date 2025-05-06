@@ -2,7 +2,7 @@
   "id": "MAP_LITTLEROOT_TOWN_OTHER_HOUSE_A",
   "name": "LittlerootTown_OtherHouseA",
   "layout": "LAYOUT_LITTLEROOT_TOWN_OTHER_HOUSE_A",
-  "music": "MUS_LITTLEROOT",
+  "music": "MUS_DP_TWINLEAF_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
