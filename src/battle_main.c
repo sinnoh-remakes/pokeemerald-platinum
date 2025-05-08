@@ -22,6 +22,7 @@
 #include "decompress.h"
 #include "dexnav.h"
 #include "dma3.h"
+#include "dns.h"
 #include "event_data.h"
 #include "evolution_scene.h"
 #include "field_weather.h"
@@ -1734,6 +1735,7 @@ void BattleMainCB2(void)
     RunTextPrinters();
     UpdatePaletteFade();
     RunTasks();
+    DnsApplyFilters();
 
     if (JOY_HELD(B_BUTTON) && gBattleTypeFlags & BATTLE_TYPE_RECORDED && RecordedBattle_CanStopPlayback())
     {
