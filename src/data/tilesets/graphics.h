@@ -1862,3 +1862,22 @@ const u16 gTilesetPalettes_TwinleafOther[][16] =
 };
 
 const u32 gTilesetTiles_TwinleafOther[] = INCBIN_U32("data/tilesets/secondary/twinleaf_other/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Sandgem[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Sandgem[] = INCBIN_U32("data/tilesets/secondary/sandgem/tiles.4bpp.lz");

@@ -957,3 +957,14 @@ const struct Tileset gTileset_TwinleafOther =
     .metatileAttributes = gMetatileAttributes_TwinleafOther,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Sandgem =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sandgem,
+    .palettes = gTilesetPalettes_Sandgem,
+    .metatiles = gMetatiles_Sandgem,
+    .metatileAttributes = gMetatileAttributes_Sandgem,
+    .callback = NULL,
+};
