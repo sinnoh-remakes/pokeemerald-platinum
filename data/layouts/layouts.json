@@ -104,7 +104,7 @@
     {
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
-      "width": 30,
+      "width": 31,
       "height": 34,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Twinleaf",
@@ -164,7 +164,7 @@
     {
       "id": "LAYOUT_ROUTE201",
       "name": "Route201_Layout",
-      "width": 64,
+      "width": 63,
       "height": 24,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route201",
