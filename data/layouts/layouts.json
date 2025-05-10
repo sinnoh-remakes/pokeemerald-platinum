@@ -104,10 +104,10 @@
     {
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
-      "width": 31,
+      "width": 32,
       "height": 34,
       "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Twinleaf",
+      "secondary_tileset": "gTileset_Sandgem",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
     },
