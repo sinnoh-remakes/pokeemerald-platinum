@@ -576,8 +576,8 @@
       "name": "LittlerootTown_ProfessorBirchsLab_Layout",
       "width": 20,
       "height": 16,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Lab",
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_SandgemLab",
       "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/map.bin"
     },

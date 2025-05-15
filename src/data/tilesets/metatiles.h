@@ -246,3 +246,6 @@ const u16 gMetatileAttributes_TwinleafOther[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_Sandgem[] = INCBIN_U16("data/tilesets/secondary/sandgem/metatiles.bin");
 const u16 gMetatileAttributes_Sandgem[] = INCBIN_U16("data/tilesets/secondary/sandgem/metatile_attributes.bin");
+
+const u16 gMetatiles_SandgemLab[] = INCBIN_U16("data/tilesets/secondary/sandgem_lab/metatiles.bin");
+const u16 gMetatileAttributes_SandgemLab[] = INCBIN_U16("data/tilesets/secondary/sandgem_lab/metatile_attributes.bin");

@@ -160,7 +160,6 @@ LittlerootTown_ProfessorBirchsLab_Movement_Player1:
 	walk_up
 	walk_up
 	walk_up
-	walk_up
 	step_end
 
 LittlerootTown_ProfessorBirchsLab_Movement_Player2:
@@ -169,7 +168,6 @@ LittlerootTown_ProfessorBirchsLab_Movement_Player2:
 	step_end
 
 LittlerootTown_ProfessorBirchsLab_Movement_Helper1:
-	walk_up
 	walk_up
 	walk_up
 	walk_up
