@@ -46,4 +46,3 @@ tools/trainerproc/trainerproc
 *.smol
 *.fastSmol
 *.smolTM
-/tiles/*/assign.cache
