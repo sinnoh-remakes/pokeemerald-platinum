@@ -249,3 +249,6 @@ const u16 gMetatileAttributes_Sandgem[] = INCBIN_U16("data/tilesets/secondary/sa
 
 const u16 gMetatiles_SandgemLab[] = INCBIN_U16("data/tilesets/secondary/sandgem_lab/metatiles.bin");
 const u16 gMetatileAttributes_SandgemLab[] = INCBIN_U16("data/tilesets/secondary/sandgem_lab/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorSandgem[] = INCBIN_U16("data/tilesets/primary/indoor_sandgem/metatiles.bin");
+const u16 gMetatileAttributes_IndoorSandgem[] = INCBIN_U16("data/tilesets/primary/indoor_sandgem/metatile_attributes.bin");
