@@ -572,16 +572,6 @@
       "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
-      "name": "LittlerootTown_ProfessorBirchsLab_Layout",
-      "width": 20,
-      "height": 16,
-      "primary_tileset": "gTileset_IndoorSandgem",
-      "secondary_tileset": "gTileset_SandgemLab",
-      "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/map.bin"
-    },
-    {
       "id": "LAYOUT_HOUSE1",
       "name": "House1_Layout",
       "width": 9,
@@ -4302,14 +4292,14 @@
       "blockdata_filepath": "data/layouts/MeteorFalls_StevensCave/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE",
-      "name": "LittlerootTown_ProfessorBirchsLabWithTable_Layout",
+      "id": "LAYOUT_OLDALE_TOWN_PROFESSOR_ROWANS_LAB_WITH_TABLE",
+      "name": "OldaleTown_ProfessorRowansLabWithTable_Layout",
       "width": 13,
       "height": 13,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Lab",
-      "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLabWithTable/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLabWithTable/map.bin"
+      "border_filepath": "data/layouts/OldaleTown_ProfessorRowansLabWithTable/border.bin",
+      "blockdata_filepath": "data/layouts/OldaleTown_ProfessorRowansLabWithTable/map.bin"
     },
     {
       "id": "LAYOUT_SKY_PILLAR_1F_CLEAN",
@@ -4440,6 +4430,16 @@
       "secondary_tileset": "gTileset_Lake",
       "border_filepath": "data/layouts/LakeVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLDALE_TOWN_PROFESSOR_ROWANS_LAB",
+      "name": "OldaleTown_ProfessorRowansLab_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_IndoorSandgem",
+      "secondary_tileset": "gTileset_SandgemLab",
+      "border_filepath": "data/layouts/OldaleTown_ProfessorRowansLab/border.bin",
+      "blockdata_filepath": "data/layouts/OldaleTown_ProfessorRowansLab/map.bin"
     },
     {
       "id": "LAYOUT_OLDALE_TOWN_HELPER_HOUSE_2F",
