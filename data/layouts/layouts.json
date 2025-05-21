@@ -566,7 +566,7 @@
       "name": "LittlerootTown_MaysHouse_2F_Layout",
       "width": 10,
       "height": 10,
-      "primary_tileset": "gTileset_IndoorTwinleaf2",
+      "primary_tileset": "gTileset_IndoorTwinleafRival",
       "secondary_tileset": "gTileset_TwinleafRival",
       "border_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/map.bin"
@@ -4436,7 +4436,7 @@
       "name": "OldaleTown_ProfessorRowansLab_Layout",
       "width": 20,
       "height": 16,
-      "primary_tileset": "gTileset_IndoorSandgem",
+      "primary_tileset": "gTileset_IndoorSandgemLab",
       "secondary_tileset": "gTileset_SandgemLab",
       "border_filepath": "data/layouts/OldaleTown_ProfessorRowansLab/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown_ProfessorRowansLab/map.bin"

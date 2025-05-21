@@ -936,14 +936,14 @@ const struct Tileset gTileset_TwinleafRival =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_IndoorTwinleaf2 =
+const struct Tileset gTileset_IndoorTwinleafRival =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorTwinleaf2,
-    .palettes = gTilesetPalettes_IndoorTwinleaf2,
-    .metatiles = gMetatiles_IndoorTwinleaf2,
-    .metatileAttributes = gMetatileAttributes_IndoorTwinleaf2,
+    .tiles = gTilesetTiles_IndoorTwinleafRival,
+    .palettes = gTilesetPalettes_IndoorTwinleafRival,
+    .metatiles = gMetatiles_IndoorTwinleafRival,
+    .metatileAttributes = gMetatileAttributes_IndoorTwinleafRival,
     .callback = NULL,
 };
 
@@ -980,13 +980,13 @@ const struct Tileset gTileset_SandgemLab =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_IndoorSandgem =
+const struct Tileset gTileset_IndoorSandgemLab =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorSandgem,
-    .palettes = gTilesetPalettes_IndoorSandgem,
-    .metatiles = gMetatiles_IndoorSandgem,
-    .metatileAttributes = gMetatileAttributes_IndoorSandgem,
+    .tiles = gTilesetTiles_IndoorSandgemLab,
+    .palettes = gTilesetPalettes_IndoorSandgemLab,
+    .metatiles = gMetatiles_IndoorSandgemLab,
+    .metatileAttributes = gMetatileAttributes_IndoorSandgemLab,
     .callback = NULL,
 };
