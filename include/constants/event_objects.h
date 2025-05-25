@@ -241,15 +241,16 @@
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
 #define OBJ_EVENT_GFX_PROF_ROWAN                 239
+#define OBJ_EVENT_GFX_BARRY                      240
 
 // Begin pokemon event objects
-#define OBJ_EVENT_GFX_POKE_BALL                  240
-#define OBJ_EVENT_GFX_OW_MON                     241
+#define OBJ_EVENT_GFX_POKE_BALL                  241
+#define OBJ_EVENT_GFX_OW_MON                     242
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        242
+#define NUM_OBJ_EVENT_GFX                        243
 
 
 // These are dynamic object gfx ids.
@@ -365,26 +366,28 @@
 #define OBJ_EVENT_PAL_TAG_ZIGZAGOON               0x110F
 #define OBJ_EVENT_PAL_TAG_MAY                     0x1110
 #define OBJ_EVENT_PAL_TAG_MAY_REFLECTION          0x1111
-#define OBJ_EVENT_PAL_TAG_MOVING_BOX              0x1112
-#define OBJ_EVENT_PAL_TAG_CABLE_CAR               0x1113
-#define OBJ_EVENT_PAL_TAG_SSTIDAL                 0x1114
-#define OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER       0x1115
-#define OBJ_EVENT_PAL_TAG_KYOGRE                  0x1116
-#define OBJ_EVENT_PAL_TAG_KYOGRE_REFLECTION       0x1117
-#define OBJ_EVENT_PAL_TAG_GROUDON                 0x1118
-#define OBJ_EVENT_PAL_TAG_GROUDON_REFLECTION      0x1119
-#define OBJ_EVENT_PAL_TAG_UNUSED                  0x111A
-#define OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW        0x111B
-#define OBJ_EVENT_PAL_TAG_POOCHYENA               0x111C
-#define OBJ_EVENT_PAL_TAG_RED_LEAF                0x111D
-#define OBJ_EVENT_PAL_TAG_DEOXYS                  0x111E
-#define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE      0x111F
-#define OBJ_EVENT_PAL_TAG_HO_OH                   0x1120
-#define OBJ_EVENT_PAL_TAG_LUGIA                   0x1121
-#define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
-#define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
-#define OBJ_EVENT_PAL_PROF_ROWAN                  0x1124
-#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1125
+#define OBJ_EVENT_PAL_TAG_MOM                     0x1112
+#define OBJ_EVENT_PAL_TAG_MOVING_BOX              0x1113
+#define OBJ_EVENT_PAL_TAG_CABLE_CAR               0x1114
+#define OBJ_EVENT_PAL_TAG_SSTIDAL                 0x1115
+#define OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER       0x1116
+#define OBJ_EVENT_PAL_TAG_KYOGRE                  0x1117
+#define OBJ_EVENT_PAL_TAG_KYOGRE_REFLECTION       0x1118
+#define OBJ_EVENT_PAL_TAG_GROUDON                 0x1119
+#define OBJ_EVENT_PAL_TAG_GROUDON_REFLECTION      0x111A
+#define OBJ_EVENT_PAL_TAG_UNUSED                  0x111B
+#define OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW        0x111C
+#define OBJ_EVENT_PAL_TAG_POOCHYENA               0x111D
+#define OBJ_EVENT_PAL_TAG_RED_LEAF                0x111E
+#define OBJ_EVENT_PAL_TAG_DEOXYS                  0x111F
+#define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE      0x1120
+#define OBJ_EVENT_PAL_TAG_HO_OH                   0x1121
+#define OBJ_EVENT_PAL_TAG_LUGIA                   0x1122
+#define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1123
+#define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1124
+#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1125
+#define OBJ_EVENT_PAL_TAG_BARRY                   0x1126
+#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1127
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
