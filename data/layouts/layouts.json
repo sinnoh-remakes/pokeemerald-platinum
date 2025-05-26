@@ -14,10 +14,10 @@
     {
       "id": "LAYOUT_SLATEPORT_CITY",
       "name": "SlateportCity_Layout",
-      "width": 40,
-      "height": 60,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "width": 72,
+      "height": 64,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Sandgem",
       "border_filepath": "data/layouts/SlateportCity/border.bin",
       "blockdata_filepath": "data/layouts/SlateportCity/map.bin"
     },
@@ -175,7 +175,7 @@
       "id": "LAYOUT_ROUTE202",
       "name": "Route202_Layout",
       "width": 32,
-      "height": 36,
+      "height": 32,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route202/border.bin",
