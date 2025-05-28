@@ -16,7 +16,7 @@ LakefrontVerity_EventScript_EnterLake::
 	applymovement OBJ_EVENT_ID_FOLLOWER, LakefrontVerity_Movement_WalkUp
 	waitmovement 0
 	destroyfollowernpc
-	warp MAP_LAKE_VERITY, 0
+	warp MAP_LAKE_VERITY, 12, 23
 	waitstate
 	release
 	end

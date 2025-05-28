@@ -18,8 +18,6 @@ LakeVerity_EventScript_IntroScene::
 	setvar VAR_VERITY_STATE, 1
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE_201_RIVAL
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
-	waitmovent 0
 	msgbox LakeVerity_Text_WhatsGoing, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_CAMERA, LakeVerity_Movement_CameraPan1
 	waitmovement 0
