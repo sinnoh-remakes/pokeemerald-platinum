@@ -990,3 +990,14 @@ const struct Tileset gTileset_IndoorSandgemLab =
     .metatileAttributes = gMetatileAttributes_IndoorSandgemLab,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OutdoorSandgem =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorSandgem,
+    .palettes = gTilesetPalettes_OutdoorSandgem,
+    .metatiles = gMetatiles_OutdoorSandgem,
+    .metatileAttributes = gMetatileAttributes_OutdoorSandgem,
+    .callback = NULL,
+};
