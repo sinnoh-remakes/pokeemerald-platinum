@@ -255,3 +255,6 @@ const u16 gMetatileAttributes_IndoorSandgemLab[] = INCBIN_U16("data/tilesets/pri
 
 const u16 gMetatiles_OutdoorSandgem[] = INCBIN_U16("data/tilesets/primary/outdoor_sandgem/metatiles.bin");
 const u16 gMetatileAttributes_OutdoorSandgem[] = INCBIN_U16("data/tilesets/primary/outdoor_sandgem/metatile_attributes.bin");
+
+const u16 gMetatiles_OutdoorRoute201[] = INCBIN_U16("data/tilesets/primary/outdoor_route_201/metatiles.bin");
+const u16 gMetatileAttributes_OutdoorRoute201[] = INCBIN_U16("data/tilesets/primary/outdoor_route_201/metatile_attributes.bin");

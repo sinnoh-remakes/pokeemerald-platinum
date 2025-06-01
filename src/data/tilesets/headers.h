@@ -1001,3 +1001,14 @@ const struct Tileset gTileset_OutdoorSandgem =
     .metatileAttributes = gMetatileAttributes_OutdoorSandgem,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OutdoorRoute201 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorRoute201,
+    .palettes = gTilesetPalettes_OutdoorRoute201,
+    .metatiles = gMetatiles_OutdoorRoute201,
+    .metatileAttributes = gMetatileAttributes_OutdoorRoute201,
+    .callback = NULL,
+};
