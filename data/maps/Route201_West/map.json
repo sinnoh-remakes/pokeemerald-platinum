@@ -19,14 +19,14 @@
       "direction": "down"
     },
     {
-      "map": "MAP_OLDALE_TOWN",
-      "offset": -10,
-      "direction": "right"
-    },
-    {
       "map": "MAP_LAKEFRONT_VERITY",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE201_EAST",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [

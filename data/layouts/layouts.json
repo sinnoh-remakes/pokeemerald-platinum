@@ -174,8 +174,8 @@
     {
       "id": "LAYOUT_ROUTE201_EAST",
       "name": "Route201_East_Layout",
-      "width": 33,
-      "height": 20,
+      "width": 30,
+      "height": 22,
       "primary_tileset": "gTileset_OutdoorSandgem",
       "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route201_East/border.bin",
