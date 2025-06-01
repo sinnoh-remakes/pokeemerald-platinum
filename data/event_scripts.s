@@ -124,7 +124,8 @@ gStdScripts_End::
 	.include "data/maps/FallarborTown/scripts.inc"
 	.include "data/maps/VerdanturfTown/scripts.inc"
 	.include "data/maps/PacifidlogTown/scripts.inc"
-	.include "data/maps/Route201/scripts.inc"
+	.include "data/maps/Route201_West/scripts.inc"
+	.include "data/maps/Route201_East/scripts.inc"
 	.include "data/maps/Route202_North/scripts.inc"
 	.include "data/maps/Route202_South/scripts.inc"
 	.include "data/maps/Route103/scripts.inc"
@@ -1130,7 +1131,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/profile_man.inc"
 	.include "data/scripts/day_care.inc"
 	.include "data/scripts/flash.inc"
-		.include "data/scripts/berry_blender.inc"
+	.include "data/scripts/berry_blender.inc"
 	.include "data/text/mauville_man.inc"
 	.include "data/text/trainers.inc"
 	.include "data/scripts/repel.inc"
@@ -1161,4 +1162,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+
 

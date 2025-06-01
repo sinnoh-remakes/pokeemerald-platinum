@@ -162,14 +162,24 @@
       "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE201",
-      "name": "Route201_Layout",
+      "id": "LAYOUT_ROUTE201_WEST",
+      "name": "Route201_West_Layout",
       "width": 63,
       "height": 22,
       "primary_tileset": "gTileset_OutdoorSandgem",
       "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/Route201/border.bin",
-      "blockdata_filepath": "data/layouts/Route201/map.bin"
+      "border_filepath": "data/layouts/Route201_West/border.bin",
+      "blockdata_filepath": "data/layouts/Route201_West/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE201_EAST",
+      "name": "Route201_East_Layout",
+      "width": 33,
+      "height": 20,
+      "primary_tileset": "gTileset_OutdoorSandgem",
+      "secondary_tileset": "gTileset_Route201",
+      "border_filepath": "data/layouts/Route201_East/border.bin",
+      "blockdata_filepath": "data/layouts/Route201_East/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE202_NORTH",

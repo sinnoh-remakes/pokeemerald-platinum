@@ -3,7 +3,7 @@
 .set LOCALID_HELPER, 3
 .set LOCALID_BRIEFCASE, 8
 
-Route201_MapScripts::
+Route201_West_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route201_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route201_OnFrame
 	.byte 0
