@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_OLDALE_TOWN",
-      "offset": 0,
+      "offset": -2,
       "direction": "down"
     },
     {
-      "map": "MAP_SLATEPORT_CITY",
-      "offset": -40,
+      "map": "MAP_ROUTE202_NORTH",
+      "offset": 0,
       "direction": "up"
     }
   ],
@@ -28,7 +28,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 14,
-      "y": 27,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -41,7 +41,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 6,
-      "y": 13,
+      "y": 0,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -54,7 +54,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 21,
-      "y": 18,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -62,71 +62,6 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "Route202_EventScript_Natalie",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 2,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
-      "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_202_POTION"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 11,
-      "y": 3,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_202_ORAN",
-      "script": "BerryTreeScript",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 10,
-      "y": 3,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_202_PECHA",
-      "script": "BerryTreeScript",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 25,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "Route202_EventScript_Logan",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 9,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-      "movement_range_x": 1,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route202_EventScript_Boy",
       "flag": "0"
     }
   ],
@@ -137,7 +72,7 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 25,
+      "y": 13,
       "elevation": 0,
       "var": "VAR_ROUTE202_STATE",
       "var_value": "0",
@@ -146,7 +81,7 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 26,
+      "y": 14,
       "elevation": 0,
       "var": "VAR_ROUTE202_STATE",
       "var_value": "0",
@@ -155,7 +90,7 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 27,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_ROUTE202_STATE",
       "var_value": "0",
@@ -164,7 +99,7 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 28,
+      "y": 16,
       "elevation": 0,
       "var": "VAR_ROUTE202_STATE",
       "var_value": "0",
@@ -173,7 +108,7 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 29,
+      "y": 17,
       "elevation": 0,
       "var": "VAR_ROUTE202_STATE",
       "var_value": "0",
@@ -183,16 +118,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 16,
-      "y": 4,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route202_EventScript_RouteSignJubilife"
-    },
-    {
-      "type": "sign",
       "x": 23,
-      "y": 25,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_RouteSignSandgem"
@@ -200,7 +127,7 @@
     {
       "type": "sign",
       "x": 14,
-      "y": 16,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Route202_EventScript_TrainerTips"
