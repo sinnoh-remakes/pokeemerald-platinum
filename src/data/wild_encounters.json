@@ -146,7 +146,7 @@
           }
         },
         {
-          "map": "MAP_ROUTE202_SOUTH",
+          "map": "MAP_ROUTE202",
           "base_label": "gRoute202",
           "land_mons": {
             "encounter_rate": 20,

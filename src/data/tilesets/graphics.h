@@ -1919,22 +1919,3 @@ const u16 gTilesetPalettes_IndoorSandgemLab[][16] =
 };
 
 const u32 gTilesetTiles_IndoorSandgemLab[] = INCBIN_U32("data/tilesets/primary/indoor_sandgem_lab/tiles.4bpp.lz");
-
-const u16 gTilesetPalettes_OutdoorSandgem[][16] =
-{
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/00.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/01.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/02.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/03.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/04.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/05.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/06.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/07.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/08.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/09.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/10.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/11.gbapal"),
-    INCBIN_U16("data/tilesets/primary/outdoor_sandgem/palettes/12.gbapal"),
-};
-
-const u32 gTilesetTiles_OutdoorSandgem[] = INCBIN_U32("data/tilesets/primary/outdoor_sandgem/tiles.4bpp.lz");

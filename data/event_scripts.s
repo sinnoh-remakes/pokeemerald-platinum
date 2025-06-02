@@ -125,8 +125,7 @@ gStdScripts_End::
 	.include "data/maps/VerdanturfTown/scripts.inc"
 	.include "data/maps/PacifidlogTown/scripts.inc"
 	.include "data/maps/Route201/scripts.inc"
-	.include "data/maps/Route202_North/scripts.inc"
-	.include "data/maps/Route202_South/scripts.inc"
+	.include "data/maps/Route202/scripts.inc"
 	.include "data/maps/Route103/scripts.inc"
 	.include "data/maps/Route104/scripts.inc"
 	.include "data/maps/Route105/scripts.inc"
@@ -1161,4 +1160,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
-
