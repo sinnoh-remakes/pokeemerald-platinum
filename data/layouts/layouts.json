@@ -4,10 +4,10 @@
     {
       "id": "LAYOUT_PETALBURG_CITY",
       "name": "PetalburgCity_Layout",
-      "width": 25,
-      "height": 24,
+      "width": 30,
+      "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Gatehouse",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PetalburgCity/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgCity/map.bin"
     },
@@ -106,7 +106,7 @@
       "name": "OldaleTown_Layout",
       "width": 32,
       "height": 34,
-      "primary_tileset": "gTileset_OutdoorSandgem",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Sandgem",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
@@ -162,30 +162,20 @@
       "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE201_WEST",
-      "name": "Route201_West_Layout",
+      "id": "LAYOUT_ROUTE201",
+      "name": "Route201_Layout",
       "width": 63,
       "height": 22,
-      "primary_tileset": "gTileset_OutdoorSandgem",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/Route201_West/border.bin",
-      "blockdata_filepath": "data/layouts/Route201_West/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE201_EAST",
-      "name": "Route201_East_Layout",
-      "width": 30,
-      "height": 22,
-      "primary_tileset": "gTileset_OutdoorSandgem",
-      "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/Route201_East/border.bin",
-      "blockdata_filepath": "data/layouts/Route201_East/map.bin"
+      "border_filepath": "data/layouts/Route201/border.bin",
+      "blockdata_filepath": "data/layouts/Route201/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE202_NORTH",
       "name": "Route202_Layout",
       "width": 32,
-      "height": 10,
+      "height": 30,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route202_North/border.bin",
@@ -195,9 +185,9 @@
       "id": "LAYOUT_ROUTE202_SOUTH",
       "name": "Route202_South_Layout",
       "width": 32,
-      "height": 20,
-      "primary_tileset": "gTileset_OutdoorSandgem",
-      "secondary_tileset": "gTileset_Route201",
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route202_South/border.bin",
       "blockdata_filepath": "data/layouts/Route202_South/map.bin"
     },

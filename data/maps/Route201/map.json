@@ -1,11 +1,11 @@
 {
-  "id": "MAP_ROUTE201_WEST",
-  "name": "Route201_West",
-  "layout": "LAYOUT_ROUTE201_WEST",
+  "id": "MAP_ROUTE201",
+  "name": "Route201",
+  "layout": "LAYOUT_ROUTE201",
   "music": "MUS_DP_ROUTE201_DAY",
   "region_map_section": "MAPSEC_ROUTE_201",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -19,14 +19,14 @@
       "direction": "down"
     },
     {
+      "map": "MAP_OLDALE_TOWN",
+      "offset": -10,
+      "direction": "right"
+    },
+    {
       "map": "MAP_LAKEFRONT_VERITY",
       "offset": 0,
       "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE201_EAST",
-      "offset": 0,
-      "direction": "right"
     }
   ],
   "object_events": [

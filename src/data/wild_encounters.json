@@ -77,7 +77,7 @@
       ],
       "encounters": [
         {
-          "map": "MAP_ROUTE201_WEST",
+          "map": "MAP_ROUTE201",
           "base_label": "gRoute201",
           "land_mons": {
             "encounter_rate": 20,
