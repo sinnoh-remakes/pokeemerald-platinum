@@ -189,6 +189,7 @@ void NewGameInitData(void)
     DeactivateAllRoamers();
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
     ClearBag();
+    // AddBagItem(ITEM_VS_SEEKER, 1);
     NewGameInitPCItems();
     ClearPokeblocks();
     ClearDecorationInventories();
