@@ -1,0 +1,26 @@
+{
+  "id": "MAP_ROUTE219",
+  "name": "Route219",
+  "layout": "LAYOUT_ROUTE219",
+  "music": "MUS_ROUTE119",
+  "region_map_section": "MAPSEC_ROUTE_219",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_OLDALE_TOWN",
+      "offset": -2,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

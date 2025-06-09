@@ -3399,7 +3399,7 @@
           }
         },
         {
-          "map": "MAP_ROUTE119",
+          "map": "MAP_ROUTE219",
           "base_label": "gRoute119",
           "land_mons": {
             "encounter_rate": 15,
