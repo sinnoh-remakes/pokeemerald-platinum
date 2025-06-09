@@ -14,14 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE118",
-      "offset": -40,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_FORTREE_CITY",
-      "offset": 0,
-      "direction": "right"
+      "map": "MAP_OLDALE_TOWN",
+      "offset": -2,
+      "direction": "up"
     }
   ],
   "object_events": [
