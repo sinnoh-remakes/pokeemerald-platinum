@@ -9,6 +9,11 @@
 * Mining Minigame: [volromhacking](https://github.com/volromhacking/pokeemerald-expansion/tree/mining_minigame)
 
 ### Sprites
-VanillaSunshine (walking sprites)
-Mr. Gela (trainer card/battle sprites)
-Me/Zygoat: (everything else, I did not rip them, I just formatted them for RMXP)
+
+Dawn/Lucas DPPt Sprites
+* VanillaSunshine (walking sprites)
+* Mr. Gela (trainer card/battle sprites)
+* Me/Zygoat: "(everything else, I did not rip them, I just formatted them for RMXP)"
+
+Overworld sprites
+* PurpleZaffre (NPC sprites)
