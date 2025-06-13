@@ -17,7 +17,7 @@
       "width": 72,
       "height": 66,
       "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Sandgem",
+      "secondary_tileset": "gTileset_Jubilife",
       "border_filepath": "data/layouts/SlateportCity/border.bin",
       "blockdata_filepath": "data/layouts/SlateportCity/map.bin"
     },
@@ -186,7 +186,7 @@
       "name": "Route103_Layout",
       "width": 60,
       "height": 36,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin"
