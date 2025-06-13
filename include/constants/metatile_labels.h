@@ -782,12 +782,5 @@
 #define METATILE_RSMossdeepGym_RedArrow_Up     0x20D
 #define METATILE_RSMossdeepGym_Switch_Down     0x239
 #define METATILE_RSMossdeepGym_Switch_Up       0x238
-#define METATILE_UNUSED_0x208                  0x208
-#define METATILE_UNUSED_0x20D                  0x20D
-#define METATILE_UNUSED_0x210                  0x210
-#define METATILE_UNUSED_0x215                  0x215
-#define METATILE_UNUSED_0x218                  0x218
-#define METATILE_UNUSED_0x21D                  0x21D
-#define METATILE_Unused_0x293                  0x293
 
 #endif // GUARD_METATILE_LABELS_H

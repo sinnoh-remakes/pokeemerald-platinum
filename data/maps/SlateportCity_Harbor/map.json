@@ -54,6 +54,7 @@
       "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS"
     },
     {
+      "local_id": "LOCALID_SLATEPORT_HARBOR_SS_TIDAL",
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
       "x": 8,
       "y": 9,

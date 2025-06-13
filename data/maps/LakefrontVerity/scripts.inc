@@ -8,11 +8,11 @@ LakefrontVerity_OnFrame:
 LakefrontVerity_EventScript_EnterLake::
 	lock
 	setvar VAR_ROUTE201_STATE, 3
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox LakefrontVerity_Text_EnterLake, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, LakefrontVerity_Movement_WalkUp
+	applymovement LOCALID_PLAYER, LakefrontVerity_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, LakefrontVerity_Movement_WalkUp
 	waitmovement 0
 	destroyfollowernpc

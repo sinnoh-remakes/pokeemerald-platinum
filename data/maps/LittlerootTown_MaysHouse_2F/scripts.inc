@@ -1,5 +1,3 @@
-.set LOCALID_RIVAL, 1
-
 LittlerootTown_MaysHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_MaysHouse_2F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MaysHouse_2F_OnFrame
@@ -32,7 +30,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	lock
 	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox LittlerootTown_MaysHouse_2F_TakeBag, MSGBOX_SIGN
 	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
@@ -47,7 +45,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	msgbox LittlerootTown_MaysHouse_2F_GoingLake, MSGBOX_SIGN
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun1
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_BumpPlayer
+	applymovement LOCALID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_BumpPlayer
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun2
 	waitmovement 0
 	removeobject LOCALID_RIVAL

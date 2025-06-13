@@ -19,18 +19,18 @@ LakeVerity_EventScript_IntroScene::
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE_201_RIVAL
 	msgbox LakeVerity_Text_WhatsGoing, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_CAMERA, LakeVerity_Movement_CameraPan1
+	applymovement LOCALID_CAMERA, LakeVerity_Movement_CameraPan1
 	waitmovement 0
 	delay 48
 	msgbox LakeVerity_Text_TimeSpace, MSGBOX_SIGN
 	delay 48
 	delay 48
-	applymovement OBJ_EVENT_ID_CAMERA, LakeVerity_Movement_CameraPan2
+	applymovement LOCALID_CAMERA, LakeVerity_Movement_CameraPan2
 	applymovement LOCALID_CYRUS, LakeVerity_Movement_CyrusLeave1
 	waitmovement 0
 	delay 10
 	msgbox LakeVerity_Text_AllowPass, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_RIVAL, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
@@ -40,13 +40,13 @@ LakeVerity_EventScript_IntroScene::
 	playse SE_EXIT
 	removeobject LOCALID_CYRUS
 	delay 48
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox LakeVerity_Text_WhatsAbout, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
@@ -60,7 +60,7 @@ LakeVerity_EventScript_IntroScene::
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_RIVAL, LakeVerity_Movement_RunUp
 	waitmovement 0
 	delay 48
@@ -73,7 +73,7 @@ LakeVerity_EventScript_IntroScene::
 	delay 10
 	applymovement LOCALID_RIVAL, LakeVerity_Movement_RunDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
@@ -88,7 +88,7 @@ LakeVerity_EventScript_IntroScene::
 	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	msgbox LakeVerity_Text_NoBalls, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_RIVAL, LakeVerity_Movement_RivalLeave
 	waitmovement 0
 	playse SE_EXIT

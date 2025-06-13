@@ -23,14 +23,14 @@ OldaleTown_ProfessorRowansLab_EventScript_ShowStarter::
 	setvar VAR_BIRCH_LAB_STATE, 1
 	delay 48
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_ProfessorRowansLab_Movement_Player1
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_ProfessorRowansLab_Movement_Player1
+	applymovement LOCALID_PLAYER, OldaleTown_ProfessorRowansLab_Movement_Player1
+	applymovement LOCALID_CAMERA, OldaleTown_ProfessorRowansLab_Movement_Player1
 	applymovement LOCALID_HELPER, OldaleTown_ProfessorRowansLab_Movement_Helper1
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox OldaleTown_ProfessorRowansLab_Text_LetMeSee, MSGBOX_DEFAULT
   @ // FODO: Add animation of giving item
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 48
 	delay 48
@@ -44,7 +44,7 @@ OldaleTown_ProfessorRowansLab_EventScript_ShowStarter::
 	msgbox OldaleTown_ProfessorRowansLab_Text_EntrustYou, MSGBOX_SIGN
 	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_ProfessorRowansLab_EventScript_KindDawn
@@ -52,7 +52,7 @@ OldaleTown_ProfessorRowansLab_EventScript_ShowStarter::
 	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 16
@@ -94,12 +94,12 @@ OldaleTown_ProfessorRowansLab_EventScript_GivePokedex::
 	msgbox OldaleTown_ProfessorRowansLab_Text_SixtyYears, MSGBOX_SIGN
 	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_ProfessorRowansLab_EventScript_Helper_DawnMany
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_ProfessorRowansLab_EventScript_ComradesLucas
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_ProfessorRowansLab_Movement_Player2
+	applymovement LOCALID_PLAYER, OldaleTown_ProfessorRowansLab_Movement_Player2
 	applymovement LOCALID_HELPER, OldaleTown_ProfessorRowansLab_Movement_Helper2
 	waitmovement 0
 	removeobject LOCALID_HELPER

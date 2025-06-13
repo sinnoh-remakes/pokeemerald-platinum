@@ -24,10 +24,10 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	lock
 	setvar VAR_LITTLEROOT_INTRO_STATE, 2
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceUp
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 10
 	playse SE_PIN
@@ -37,7 +37,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_Delay48
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_1
 	waitmovement 0
 	delay 10
@@ -78,7 +78,7 @@ LittlerootTown_BrendansHouse_1F_Trigger_Exit::
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 10
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	delay 30
 	msgbox LittlerootTown_BrendansHouse_1F_Text_TallGrass, MSGBOX_DEFAULT
@@ -91,7 +91,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MoveMom::
 	return
 
 LittlerootTown_BrendansHouse_1F_TurnPlayerNorth::
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_LakeReturn::
@@ -100,7 +100,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_LakeReturn::
 	delay 48
 	delay 48
 	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomKitchen
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_1F_Movement_PlayerKitchen
+	applymovement LOCALID_PLAYER, LittlerootTown_BrendansHouse_1F_Movement_PlayerKitchen
 	waitmovement 0
 	delay 48
 	delay 48
@@ -208,7 +208,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomAdventure::
 	msgbox LittlerootTown_BrendansHouse_1F_Text_JustJoking, MSGBOX_SIGN
 	@ TODO: Play door open sound
 	addobject LOCALID_RIVALMOM
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	playse SE_PIN
@@ -252,7 +252,7 @@ LittlerootTown_BrendansHouse_1F_Movement_RivalMomEnter:
 	step_end
 
 LittlerootTown_BrendansHouse_1F_EventScript_PlayerTurnWest::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	return
 
@@ -268,37 +268,37 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomTurnNorth::
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomNorth::
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceUp
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomWest::
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceLeft
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomSouth::
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceDown
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomEast::
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceRight
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceRivalMomNorth::
 	applymovement LOCALID_RIVALMOM, Common_Movement_WalkInPlaceUp
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceRivalMomEast::
 	applymovement LOCALID_RIVALMOM, Common_Movement_WalkInPlaceRight
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	return
 
@@ -315,14 +315,14 @@ LittlerootTown_BrendansHouse_1F_EventScript_RivalMomRight2::
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_RivalMomNorthLeave::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomNorthLeave
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_RivalMomWestSouthLeave::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomWestSouthLeave
 	waitmovement 0
 	return

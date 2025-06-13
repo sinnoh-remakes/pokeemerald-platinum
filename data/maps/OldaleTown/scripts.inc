@@ -37,12 +37,12 @@ OldaleTown_EventScript_HelperLab1::
 	call OldaleTown_EventScript_HelperExclaim
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper1
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	call OldaleTown_EventScript_HelperTalk1
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper6
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Player1
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_Player1
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player1
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player1
 	waitmovement 0
 	goto OldaleTown_EventScript_HelperToLab
 
@@ -52,8 +52,8 @@ OldaleTown_EventScript_HelperLab2::
 	waitmovement 0
 	call OldaleTown_EventScript_HelperTalk1
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper7
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Player2
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_Player2
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player2
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player2
 	waitmovement 0
 	goto OldaleTown_EventScript_HelperToLab
 
@@ -63,8 +63,8 @@ OldaleTown_EventScript_HelperLab3::
 	waitmovement 0
 	call OldaleTown_EventScript_HelperTalk1
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper8
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Player3
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_Player3
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player3
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player3
 	waitmovement 0
 	goto OldaleTown_EventScript_HelperToLab
 
@@ -72,12 +72,12 @@ OldaleTown_EventScript_HelperLab4::
 	call OldaleTown_EventScript_HelperExclaim
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper4
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	call OldaleTown_EventScript_HelperTalk1
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper9
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Player4
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_Player4
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player4
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player4
 	waitmovement 0
 	goto OldaleTown_EventScript_HelperToLab
 
@@ -85,12 +85,12 @@ OldaleTown_EventScript_HelperLab5::
 	call OldaleTown_EventScript_HelperExclaim
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper5
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	call OldaleTown_EventScript_HelperTalk1
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper10
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Player5
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_Player5
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player5
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player5
 	waitmovement 0
 	goto OldaleTown_EventScript_HelperToLab
 
@@ -275,23 +275,23 @@ OldaleTown_EventScript_HelperToLab::
 	delay 48
 	msgbox OldaleTown_Text_Rival, MSGBOX_SIGN
 	applymovement LOCALID_HELPER, OldaleTown_Movement_TurnRight
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_TurnRight
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_TurnRight
 	applymovement LOCALID_RIVAL, OldaleTown_Movement_RivalRun
 	waitmovement 0
 	removeobject LOCALID_RIVAL
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_AnywayDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_AnywayLucas
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_TurnUp
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_TurnUp
 	applymovement LOCALID_HELPER, OldaleTown_Movement_HelperEnter
 	waitmovement 0
 	@ TODO: Cannot hide helper or will not show in next sandgem scene
 	setobjectxy LOCALID_HELPER 25, 5
 	delay 16
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_PlayerEnter
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_PlayerEnter
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerEnter
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_PlayerEnter
 	waitmovement 0
-	removeobject OBJ_EVENT_ID_PLAYER
+	removeobject LOCALID_PLAYER
 	closedoor 11, 6
 	waitdooranim
 	special RemoveCameraObject
@@ -375,11 +375,11 @@ OldaleTown_EventScript_HelperBuildings::
 	msgbox OldaleTown_Text_Surprise, MSGBOX_SIGN
 	playse SE_PIN
 	applymovement LOCALID_HELPER, Common_Movement_ExclamationMark
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
 	delay 48
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox OldaleTown_Text_SomethingGood, MSGBOX_DEFAULT
 	giveitem ITEM_TM_RETURN
@@ -396,28 +396,28 @@ OldaleTown_EventScript_HelperBuildings::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_ShockDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_ShockLucas
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_HELPER, Common_Movement_WalkUp
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_MentorDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_MentorLucas
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper_Guide1
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Player_Guide1
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_Player_Guide1
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player_Guide1
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player_Guide1
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_CenterDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_CenterLucas
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper_Guide2
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Helper_Guide2
-	applymovement OBJ_EVENT_ID_CAMERA, OldaleTown_Movement_Helper_Guide2
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Helper_Guide2
+	applymovement LOCALID_CAMERA, OldaleTown_Movement_Helper_Guide2
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_MartDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_MartLucas
 	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_HELPER, Common_Movement_ExclamationMark
@@ -426,7 +426,7 @@ OldaleTown_EventScript_HelperBuildings::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_FamilyDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_FamilyLucas
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_Player_Guide2
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player_Guide2
 	applymovement LOCALID_HELPER, OldaleTown_Movement_Helper_Guide3
 	waitmovement 0
 	removeobject LOCALID_HELPER

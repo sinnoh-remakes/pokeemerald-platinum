@@ -53,7 +53,7 @@ LittlerootTown_EventScript_RivalMeet::
 	waitdooranim
 	addobject LOCALID_RIVAL
 	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalBump
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerBump
+	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerBump
 	waitmovement 0
 	closedoor 3, 12
 	waitdooranim
@@ -64,7 +64,7 @@ LittlerootTown_EventScript_RivalMeet::
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	msgbox LittlerootTown_Text_RivalBump, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerFaceRight
+	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerFaceRight
 	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalRight
 	waitmovement 0
 	playse SE_PIN
@@ -72,7 +72,7 @@ LittlerootTown_EventScript_RivalMeet::
 	waitmovement 0
 	delay 48
 	delay 48
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerFaceUp
+	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerFaceUp
 	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalLeft
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
@@ -130,7 +130,7 @@ LittlerootTown_Movement_RivalUp:
 	step_end
 
 LittlerootTown_EventScript_BlockBump::
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerBump
+	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerBump
 	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RivalBump
 	waitmovement 0
 	delay 60

@@ -40,10 +40,6 @@
 #include "constants/songs.h"
 #include "constants/map_types.h"
 
-#if OW_ENABLE_NPC_FOLLOWERS
-#include "follower_npc.h"
-#endif
-
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
 EWRAM_DATA s32 gFieldEffectArguments[8] = {0};
@@ -2090,7 +2086,7 @@ static bool8 LavaridgeGymB1FWarpEffect_Init(struct Task *task, struct ObjectEven
     objectEvent->fixedPriority = 1;
     task->data[1] = 1;
     task->data[0]++;
-    if (objectEvent->localId == OBJ_EVENT_ID_PLAYER) // Hide follower before warping
+    if (objectEvent->localId == LOCALID_PLAYER) // Hide follower before warping
     {
         HideFollowerForFieldEffect();
 #if OW_ENABLE_NPC_FOLLOWERS
@@ -2299,7 +2295,7 @@ static bool8 LavaridgeGym1FWarpEffect_Init(struct Task *task, struct ObjectEvent
     gPlayerAvatar.preventStep = TRUE;
     objectEvent->fixedPriority = 1;
     task->data[0]++;
-    if (objectEvent->localId == OBJ_EVENT_ID_PLAYER) // Hide follower before warping
+    if (objectEvent->localId == LOCALID_PLAYER) // Hide follower before warping
     {
         HideFollowerForFieldEffect();
 #if OW_ENABLE_NPC_FOLLOWERS
@@ -2766,10 +2762,11 @@ static void TeleportWarpInFieldEffect_SpinGround(struct Task *task)
         task->data[1] = 8;
         if ((++task->data[2]) > 4 && task->data[14] == player->facingDirection)
         {
-#if OW_ENABLE_NPC_FOLLOWERS
-        FollowerNPCReappearAfterLeaveMap(follower, player);
-#endif
-            task->data[3] = 1;
+            FollowerNPCReappearAfterLeaveMap(follower, player);
+            UnlockPlayerFieldControls();
+            CameraObjectReset();
+            UnfreezeObjectEvents();
+            DestroyTask(FindTaskIdByFunc(Task_TeleportWarpIn));
         }
     }
     if (task->data[3] == 1)

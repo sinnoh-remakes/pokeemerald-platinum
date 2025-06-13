@@ -95,7 +95,7 @@ EventScript_SmashRock:: @ fallthrough
 	end
 
 EventScript_FollowerFieldMove:
-	getdirectiontoface VAR_0x8005, OBJ_EVENT_ID_FOLLOWER, OBJ_EVENT_ID_PLAYER
+	getdirectiontoface VAR_0x8005, OBJ_EVENT_ID_FOLLOWER, LOCALID_PLAYER
 	specialvar VAR_0x8006, GetPlayerFacingDirection
 	goto_if_eq VAR_0x8005, DIR_NONE, EventScript_FollowerFieldMoveEnd
 	@ Swap follower and player
@@ -118,30 +118,30 @@ EventScript_FollowerSwap:
 	return
 
 EventScript_FollowerMoveNorth:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkDown
+	applymovement LOCALID_PLAYER, Movement_WalkDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	return
 
 EventScript_FollowerMoveEast:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkLeft
+	applymovement LOCALID_PLAYER, Movement_WalkLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	return
 
 EventScript_FollowerMoveSouth:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkUp
+	applymovement LOCALID_PLAYER, Movement_WalkUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	return
 
 EventScript_FollowerMoveWest:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkRight
+	applymovement LOCALID_PLAYER, Movement_WalkRight
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	return
 
