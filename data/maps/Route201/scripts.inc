@@ -38,15 +38,15 @@ Route201_EventScript_RivalSee4::
 
 Route201_EventScript_RivalSee::
 	lock
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 10
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	goto_if_eq VAR_ROUTE201_STATE, 2, Route201_EventScript_RivalLake
 	setvar VAR_ROUTE201_STATE, 1
@@ -62,52 +62,52 @@ Route201_EventScript_RivalSee::
 	call_if_eq VAR_0x8004, 3, Route201_EventScript_RivalGrass3
 	call_if_eq VAR_0x8004, 4, Route201_EventScript_RivalGrass4
 	msgbox Route201_Text_DoNotGo, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_ScootOver, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Route201_Movement_RunWatch1
-	applymovement LOCALID_RIVAL, Route201_Movement_RunPrep
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RunPrep
 	waitmovement 0
 	msgbox Route201_Text_HereGoes, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Route201_Movement_RunWatch2
-	applymovement LOCALID_RIVAL, Route201_Movement_RunGrass
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RunGrass
 	waitmovement 0
 	msgbox Route201_Text_HoldIt, MSGBOX_SIGN
 	playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	goto Route201_EventScript_ProfessorMeet
 
 Route201_EventScript_RivalShift1::
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalShift1
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalShift1
 	waitmovement 0
 	return
 
 Route201_EventScript_RivalShift2::
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalShift2
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalShift2
 	waitmovement 0
 	return
 
 Route201_EventScript_RivalShift3::
-	applymovement LOCALID_RIVAL, Route201_Movement_RunDown
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RunDown
 	waitmovement 0
 	return
 
 Route201_EventScript_RivalShift4::
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalShift4
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalShift4
 	waitmovement 0
 	return
 
@@ -137,25 +137,25 @@ Route201_Movement_RivalShift4:
 
 Route201_EventScript_RivalGrass1::
 	applymovement LOCALID_PLAYER, Route201_Movement_PlayerGrass1
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalGrass1
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalGrass1
 	waitmovement 0
 	return
 
 Route201_EventScript_RivalGrass2::
 	applymovement LOCALID_PLAYER, Route201_Movement_PlayerGrass2
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalGrass2
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalGrass2
 	waitmovement 0
 	return
 
 Route201_EventScript_RivalGrass3::
 	applymovement LOCALID_PLAYER, Route201_Movement_PlayerGrass3
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalGrass3
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalGrass3
 	waitmovement 0
 	return
 
 Route201_EventScript_RivalGrass4::
 	applymovement LOCALID_PLAYER, Route201_Movement_PlayerGrass4
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalGrass4
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalGrass4
 	waitmovement 0
 	return
 
@@ -260,22 +260,22 @@ Route201_Movement_RunGrass:
 
 
 Route201_EventScript_ProfessorMeet::
-	addobject LOCALID_PROF
-	applymovement LOCALID_PROF, Route201_Movement_ProfessorEnter
+	addobject LOCALID_ROUTE201_PROF
+	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorEnter
 	waitmovement 0
 	msgbox Route201_Text_DoNotSeem, MSGBOX_DEFAULT
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_ThisOldGuy, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
-	applymovement LOCALID_PROF, Route201_Movement_ProfessorWalkAway
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkAway
 	waitmovement 0
 	msgbox Route201_Text_TheyTried, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_PROF, Route201_Movement_ProfessorWalkBack
+	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkBack
 	waitmovement 0
 	goto Route201_EventScript_TrulyLove
 
@@ -285,25 +285,25 @@ Route201_EventScript_TrulyLove::
 	goto Route201_EventScript_TrulyPass
 
 Route201_EventScript_TrulyFail::
-	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Route201_Text_HoldUp, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_DidNotCatch, MSGBOX_DEFAULT
 	goto Route201_EventScript_TrulyLove
 
 Route201_EventScript_TrulyPass::
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_MeToo, MSGBOX_DEFAULT
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	goto Route201_EventScript_HundredTimes
 
 Route201_EventScript_HundredTimes::
 	msgbox Route201_Text_HundredTimes, MSGBOX_DEFAULT
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -313,43 +313,43 @@ Route201_EventScript_HundredTimes::
 
 Route201_EventScript_HundredFail::
 	msgbox Route201_Text_OldJoke, MSGBOX_DEFAULT
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	goto Route201_EventScript_HundredTimes
 
 Route201_EventScript_HundredPass::
 	msgbox Route201_Text_RecklessKids, MSGBOX_DEFAULT
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_FriendHere, MSGBOX_SIGN
-	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	applymovement LOCALID_PROF, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	applymovement LOCALID_PROF, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_Delay48
 	waitmovement 0
-	addobject LOCALID_HELPER
-	applymovement LOCALID_HELPER, Route201_Movement_HelperEnter
+	addobject LOCALID_ROUTE201_HELPER
+	applymovement LOCALID_ROUTE201_HELPER, Route201_Movement_HelperEnter
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route201_EventScript_LeftBriefcaseDawn
 	call_if_eq VAR_RESULT, FEMALE, Route201_EventScript_LeftBriefcaseLucas
-	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	addobject LOCALID_BRIEFCASE
+	addobject LOCALID_ROUTE201_BRIEFCASE
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route201_EventScript_SomethingWrongDawn
 	call_if_eq VAR_RESULT, FEMALE, Route201_EventScript_SomethingWrongLucas
-	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox Route201_Text_ChooseYour, MSGBOX_DEFAULT
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_StraightFace, MSGBOX_DEFAULT
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_SomeClass, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_Delay48
@@ -367,14 +367,14 @@ Route201_EventScript_LeftBriefcaseLucas::
 	
 Route201_EventScript_SomethingWrongDawn::
 	msgbox Route201_Text_SomethingWrongDawn, MSGBOX_DEFAULT
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox Route201_Text_HardReplaceDawn, MSGBOX_SIGN
 	return
 	
 Route201_EventScript_SomethingWrongLucas::
 	msgbox Route201_Text_SomethingWrongLucas, MSGBOX_DEFAULT
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox Route201_Text_HardReplaceLucas, MSGBOX_SIGN
 	return
@@ -412,7 +412,7 @@ Route201_Movement_HelperEnter:
 
 Route201_EventScript_PickLeaveRight::
 	lock
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_WhatsUp, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
@@ -422,7 +422,7 @@ Route201_EventScript_PickLeaveRight::
 
 Route201_EventScript_PickLeaveDown::
 	lock
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_WhatsUp, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
@@ -446,10 +446,10 @@ Route201_EventScript_PickStarter::
 	lock
 	special ChooseStarter
 	delay 30
-	removeobject LOCALID_BRIEFCASE
+	removeobject LOCALID_ROUTE201_BRIEFCASE
 	setflag FLAG_SYS_POKEMON_GET
-	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
-	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceLeft
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	switch VAR_STARTER_MON
@@ -459,34 +459,34 @@ Route201_EventScript_PickStarter::
 
 Route201_EventScript_StarterPicked::
 	msgbox Route201_Text_ChosenGood, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_WalkUp
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
-	applymovement LOCALID_PROF, Common_Movement_WalkRight
+	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_PROF, Route201_Movement_ProfessorLeave
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorLeave
 	waitmovement 0
-	removeobject LOCALID_PROF
+	removeobject LOCALID_ROUTE201_PROF
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route201_EventScript_HelperWaitDawn
 	call_if_eq VAR_RESULT, FEMALE, Route201_EventScript_HelperWaitLucas
-	applymovement LOCALID_HELPER, Common_Movement_WalkRight
+	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_HELPER, Route201_Movement_ProfessorEnter
+	applymovement LOCALID_ROUTE201_HELPER, Route201_Movement_ProfessorEnter
 	waitmovement 0
-	removeobject LOCALID_HELPER
+	removeobject LOCALID_ROUTE201_HELPER
 	msgbox Route201_Text_ReallyNice, MSGBOX_SIGN
 	delay 48
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 48
-	applymovement LOCALID_RIVAL, Route201_Movement_RivalScurry
+	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RivalScurry
 	waitmovement 0
 	goto Route201_EventScript_RivalBattle
 
@@ -518,7 +518,7 @@ Route201_EventScript_RivalPickPiplup::
 Route201_EventScript_HelperWaitDawn::
 	msgbox Route201_Text_HelperWaitDawn, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
-	applymovement LOCALID_HELPER, Common_Movement_WalkRight
+	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkRight
 	waitmovement 0
 	msgbox Route201_Text_HelperPassDawn, MSGBOX_SIGN
 	return
@@ -526,7 +526,7 @@ Route201_EventScript_HelperWaitDawn::
 Route201_EventScript_HelperWaitLucas::
 	msgbox Route201_Text_HelperWaitLucas, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
-	applymovement LOCALID_HELPER, Common_Movement_WalkRight
+	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkRight
 	waitmovement 0
 	msgbox Route201_Text_HelperPassLucas, MSGBOX_SIGN
 	return
@@ -596,7 +596,7 @@ Route201_EventScript_RivalLake::
 	call_if_eq VAR_0x8004, 4, Route201_EventScript_RivalShift4
 	msgbox Route201_Text_NothingToFear, MSGBOX_SIGN
 	loadword 0 Route201_EventScript_Rival
-	setfollowernpc LOCALID_RIVAL 0x100
+	setfollowernpc LOCALID_ROUTE201_RIVAL 0x100
 	release
 	end
 
@@ -642,14 +642,14 @@ Route201_EventScript_RivalTalk6::
 
 Route201_EventScript_FollowLeave::
 	lock
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox Route201_Text_FollowLeave, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_WalkUp
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceDown
 	waitmovement 0
 	delay 30
 	release
@@ -657,14 +657,14 @@ Route201_EventScript_FollowLeave::
 
 Route201_EventScript_FollowGrass::
 	lock
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 30
 	release
@@ -673,14 +673,14 @@ Route201_EventScript_FollowGrass::
 Route201_EventScript_FollowGrass2::
 	lock
 	goto_if_eq VAR_FACING, DIR_EAST, Route201_EventScript_FollowGrass
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_WalkDown
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_FaceUp
+	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceUp
 	waitmovement 0
 	delay 30
 	release

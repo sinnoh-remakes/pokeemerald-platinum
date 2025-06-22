@@ -31,7 +31,7 @@
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_RIVAL",
+      "local_id": "LOCALID_ROUTE201_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_BARRY",
       "x": 16,
       "y": 15,
@@ -45,7 +45,7 @@
       "flag": "FLAG_HIDE_ROUTE_201_RIVAL"
     },
     {
-      "local_id": "LOCALID_PROF",
+      "local_id": "LOCALID_ROUTE201_PROF",
       "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
       "x": 10,
       "y": 13,
@@ -59,7 +59,7 @@
       "flag": "FLAG_HIDE_EVENTOBJ"
     },
     {
-      "local_id": "LOCALID_HELPER",
+      "local_id": "LOCALID_ROUTE201_HELPER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 10,
       "y": 13,
@@ -125,7 +125,7 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_BRIEFCASE",
+      "local_id": "LOCALID_ROUTE201_BRIEFCASE",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 16,
       "y": 14,

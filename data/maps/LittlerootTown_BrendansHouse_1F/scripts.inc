@@ -23,25 +23,25 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomMessage::
 	special SpawnCameraObject
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 10
 	playse SE_PIN
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_ExclamationMark
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_Delay48
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_Delay48
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_1
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_1
 	waitmovement 0
 	delay 10
 	msgbox LittlerootTown_BrendansHouse_1F_Text_Hurry, MSGBOX_DEFAULT
 	closemessage
 	delay 60
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_2
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomTalk_2
 	waitmovement 0
 	delay 10
 	special RemoveCameraObject
@@ -72,7 +72,7 @@ LittlerootTown_BrendansHouse_1F_Movement_MomTalk_2:
 LittlerootTown_BrendansHouse_1F_Trigger_Exit::
 	lock
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 10
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
@@ -83,8 +83,8 @@ LittlerootTown_BrendansHouse_1F_Trigger_Exit::
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_MoveMom::
-	setobjectxyperm LOCALID_TWINLEAF_PLAYER_1F_MOM, 1, 3
-	setobjectmovementtype LOCALID_TWINLEAF_PLAYER_1F_MOM, MOVEMENT_TYPE_FACE_UP
+	setobjectxyperm LOCALID_TWINLEAF_PLAYER1F_MOM, 1, 3
+	setobjectmovementtype LOCALID_TWINLEAF_PLAYER1F_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
 LittlerootTown_BrendansHouse_1F_TurnPlayerNorth::
@@ -96,7 +96,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_LakeReturn::
 	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	delay 48
 	delay 48
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomKitchen
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_MomKitchen
 	applymovement LOCALID_PLAYER, LittlerootTown_BrendansHouse_1F_Movement_PlayerKitchen
 	waitmovement 0
 	delay 48
@@ -204,22 +204,22 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomAdventure::
 	faceplayer
 	msgbox LittlerootTown_BrendansHouse_1F_Text_JustJoking, MSGBOX_SIGN
 	@ TODO: Play door open sound
-	addobject LOCALID_RIVALMOM
+	addobject LOCALID_TWINLEAF_PLAYER1F_RIVALMOM
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_ExclamationMark
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_Delay48
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_Delay48
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomEnter
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomEnter
 	waitmovement 0
 	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_BrendansHouse_1F_EventScript_PlayerTurnWest
 	msgbox LittlerootTown_BrendansHouse_1F_Text_MyLittle, MSGBOX_DEFAULT
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceDown
 	msgbox LittlerootTown_BrendansHouse_1F_Text_Headstrong, MSGBOX_DEFAULT
 	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_BrendansHouse_1F_EventScript_FaceMomSouth
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_BrendansHouse_1F_EventScript_FaceMomEast
@@ -239,7 +239,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MomAdventure::
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_BrendansHouse_1F_EventScript_RivalMomEastLeave
 	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_BrendansHouse_1F_EventScript_RivalMomNorthLeave
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_BrendansHouse_1F_EventScript_RivalMomWestSouthLeave
-	removeobject LOCALID_RIVALMOM
+	removeobject LOCALID_TWINLEAF_PLAYER1F_RIVALMOM
 	setvar VAR_LITTLEROOT_INTRO_STATE, 9
 	return
 
@@ -254,79 +254,79 @@ LittlerootTown_BrendansHouse_1F_EventScript_PlayerTurnWest::
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_MomTurnSouth::
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_MomTurnNorth::
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomNorth::
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomWest::
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomSouth::
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceMomEast::
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceRivalMomNorth::
-	applymovement LOCALID_RIVALMOM, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_FaceRivalMomEast::
-	applymovement LOCALID_RIVALMOM, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_RivalMomUp2::
-	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomUp2
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomUp2
 	waitmovement 0
 	call LittlerootTown_BrendansHouse_1F_EventScript_FaceRivalMomEast
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_RivalMomRight2::
-	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomLeft2
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomLeft2
 	waitmovement 0
 	call LittlerootTown_BrendansHouse_1F_EventScript_FaceRivalMomNorth
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_RivalMomNorthLeave::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomNorthLeave
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomNorthLeave
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_RivalMomWestSouthLeave::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomWestSouthLeave
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomWestSouthLeave
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_RivalMomEastLeave::
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomEastLeave
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomEastLeave
 	waitmovement 0
 	return
 

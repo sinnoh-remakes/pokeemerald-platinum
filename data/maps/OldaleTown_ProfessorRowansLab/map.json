@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_PROF",
+      "local_id": "LOCALID_SANDGEM_LAB_PROF",
       "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
       "x": 6,
       "y": 5,
@@ -29,7 +29,7 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_HELPER",
+      "local_id": "LOCALID_SANDGEM_LAB_HELPER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 6,
       "y": 13,

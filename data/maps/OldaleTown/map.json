@@ -31,7 +31,7 @@
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_HELPER",
+      "local_id": "LOCALID_SANDGEM_HELPER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 10,
       "y": 15,
@@ -45,7 +45,7 @@
       "flag": "FLAG_HIDE_OLDALE_HELPER"
     },
     {
-      "local_id": "LOCALID_RIVAL",
+      "local_id": "LOCALID_SANDGEM_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_BARRY",
       "x": 10,
       "y": 12,
@@ -59,7 +59,7 @@
       "flag": "FLAG_HIDE_EVENTOBJ"
     },
     {
-      "local_id": "LOCALID_PROF",
+      "local_id": "LOCALID_SANDGEM_PROF",
       "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
       "x": 10,
       "y": 12,

@@ -48,8 +48,8 @@ LittlerootTown_EventScript_RivalMeet::
 	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 	opendoor 3, 12
 	waitdooranim
-	addobject LOCALID_RIVAL
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalBump
+	addobject LOCALID_TWINLEAF_RIVAL
+	applymovement LOCALID_TWINLEAF_RIVAL, LittlerootTown_Movement_RivalBump
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerBump
 	waitmovement 0
 	closedoor 3, 12
@@ -58,32 +58,32 @@ LittlerootTown_EventScript_RivalMeet::
 	delay 48
 	delay 48
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	msgbox LittlerootTown_Text_RivalBump, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerFaceRight
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalRight
+	applymovement LOCALID_TWINLEAF_RIVAL, LittlerootTown_Movement_RivalRight
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
 	delay 48
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerFaceUp
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalLeft
+	applymovement LOCALID_TWINLEAF_RIVAL, LittlerootTown_Movement_RivalLeft
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 30
 	msgbox LittlerootTown_Text_RivalForget, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_FaceUp
+	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_FaceUp
 	opendoor 3, 12
 	waitdooranim
 	waitmovement 0
-	applymovement LOCALID_RIVAL, LittlerootTown_Movement_RivalUp
+	applymovement LOCALID_TWINLEAF_RIVAL, LittlerootTown_Movement_RivalUp
 	waitmovement 0
 	closedoor 3, 12
-	removeobject LOCALID_RIVAL
+	removeobject LOCALID_TWINLEAF_RIVAL
 	waitdooranim
 	release
 	end
@@ -128,7 +128,7 @@ LittlerootTown_Movement_RivalUp:
 
 LittlerootTown_EventScript_BlockBump::
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RivalBump
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RivalBump
 	waitmovement 0
 	delay 60
 	msgbox LittlerootTown_Text_Guitarist1, MSGBOX_DEFAULT
@@ -137,11 +137,11 @@ LittlerootTown_EventScript_BlockBump::
 	return
 
 LittlerootTown_EventScript_BlockExclaim::
-	applymovement LOCALID_BLOCK, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 10
 	playse SE_PIN
-	applymovement LOCALID_BLOCK, Common_Movement_ExclamationMark
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
 	delay 48
@@ -150,11 +150,11 @@ LittlerootTown_EventScript_BlockExclaim::
 LittlerootTown_EventScript_LeaveBlock1::
 	lockall
 	call LittlerootTown_EventScript_BlockExclaim
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight1
-	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RunRight1
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_FaceDown
 	waitmovement 0
 	call LittlerootTown_EventScript_BlockBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft1
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_WalkLeft1
 	waitmovement 0
 	delay 30
 	releaseall
@@ -163,11 +163,11 @@ LittlerootTown_EventScript_LeaveBlock1::
 LittlerootTown_EventScript_LeaveBlock2::
 	lockall
 	call LittlerootTown_EventScript_BlockExclaim
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight2
-	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RunRight2
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_FaceDown
 	waitmovement 0
 	call LittlerootTown_EventScript_BlockBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft2
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_WalkLeft2
 	waitmovement 0
 	delay 30
 	releaseall
@@ -176,11 +176,11 @@ LittlerootTown_EventScript_LeaveBlock2::
 LittlerootTown_EventScript_LeaveBlock3::
 	lockall
 	call LittlerootTown_EventScript_BlockExclaim
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight3
-	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RunRight3
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_FaceDown
 	waitmovement 0
 	call LittlerootTown_EventScript_BlockBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft3
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_WalkLeft3
 	waitmovement 0
 	delay 30
 	releaseall
@@ -189,11 +189,11 @@ LittlerootTown_EventScript_LeaveBlock3::
 LittlerootTown_EventScript_LeaveBlock4::
 	lockall
 	call LittlerootTown_EventScript_BlockExclaim
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight4
-	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RunRight4
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_FaceDown
 	waitmovement 0
 	call LittlerootTown_EventScript_BlockBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft4
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_WalkLeft4
 	waitmovement 0
 	delay 30
 	releaseall
@@ -202,11 +202,11 @@ LittlerootTown_EventScript_LeaveBlock4::
 LittlerootTown_EventScript_LeaveBlock5::
 	lockall
 	call LittlerootTown_EventScript_BlockExclaim
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight5
-	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RunRight5
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_FaceDown
 	waitmovement 0
 	call LittlerootTown_EventScript_BlockBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft5
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_WalkLeft5
 	waitmovement 0
 	delay 30
 	releaseall
@@ -215,11 +215,11 @@ LittlerootTown_EventScript_LeaveBlock5::
 LittlerootTown_EventScript_LeaveBlock6::
 	lockall
 	call LittlerootTown_EventScript_BlockExclaim
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight6
-	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RunRight6
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_FaceDown
 	waitmovement 0
 	call LittlerootTown_EventScript_BlockBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft6
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_WalkLeft6
 	waitmovement 0
 	delay 30
 	releaseall
@@ -228,11 +228,11 @@ LittlerootTown_EventScript_LeaveBlock6::
 LittlerootTown_EventScript_LeaveBlock7::
 	lockall
 	call LittlerootTown_EventScript_BlockExclaim
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_RunRight7
-	applymovement LOCALID_BLOCK, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_RunRight7
+	applymovement LOCALID_TWINLEAF_GUITARIST, Common_Movement_FaceDown
 	waitmovement 0
 	call LittlerootTown_EventScript_BlockBump
-	applymovement LOCALID_BLOCK, LittlerootTown_Movement_WalkLeft7
+	applymovement LOCALID_TWINLEAF_GUITARIST, LittlerootTown_Movement_WalkLeft7
 	waitmovement 0
 	delay 30
 	releaseall

@@ -15,78 +15,78 @@ Route202_OnFrame:
 
 Route202_EventScript_HelperExclaim::
 	lockall
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 10
 	playse SE_PIN
-	applymovement LOCALID_HELPER, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_HELPER, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_HELPER, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_Delay48
 	waitmovement 0
 	return
 
 Route202_EventScript_HelperTeach1::
 	call Route202_EventScript_HelperExclaim
-	applymovement LOCALID_HELPER, Route202_Movement_Helper1
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_Helper1
 	waitmovement 0
 	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement LOCALID_PLAYER, Route202_Movement_HelperBump
-	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn1
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_HelperReturn1
 	waitmovement 0
 	releaseall
 	end
 
 Route202_EventScript_HelperTeach2::
 	call Route202_EventScript_HelperExclaim
-	applymovement LOCALID_HELPER, Route202_Movement_Helper2
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_Helper2
 	waitmovement 0
 	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement LOCALID_PLAYER, Route202_Movement_HelperBump
-	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn2
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_HelperReturn2
 	waitmovement 0
 	releaseall
 	end
 
 Route202_EventScript_HelperTeach3::
 	call Route202_EventScript_HelperExclaim
-	applymovement LOCALID_HELPER, Route202_Movement_Helper3
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_Helper3
 	waitmovement 0
 	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement LOCALID_PLAYER, Route202_Movement_HelperBump
-	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn3
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_HelperReturn3
 	waitmovement 0
 	releaseall
 	end
 
 Route202_EventScript_HelperTeach4::
 	call Route202_EventScript_HelperExclaim
-	applymovement LOCALID_HELPER, Route202_Movement_Helper4
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_Helper4
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement LOCALID_PLAYER, Route202_Movement_HelperBump
-	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn4
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_HelperReturn4
 	waitmovement 0
 	releaseall
 	end
 
 Route202_EventScript_HelperTeach5::
 	call Route202_EventScript_HelperExclaim
-	applymovement LOCALID_HELPER, Route202_Movement_Helper5
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_Helper5
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 9, Route202_EventScript_HelperAccept
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 8, Route202_EventScript_HelperDecline
 	applymovement LOCALID_PLAYER, Route202_Movement_HelperBump
-	applymovement LOCALID_HELPER, Route202_Movement_HelperReturn5
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_HelperReturn5
 	waitmovement 0
 	releaseall
 	end
@@ -109,16 +109,16 @@ Route202_EventScript_HelperAccept::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route202_EventScript_DemonstrateA
 	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_DemonstrateB
-	applymovement LOCALID_HELPER, Common_Movement_WalkLeft
+	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_HELPER, Common_Movement_WalkLeft
+	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	delay 16
 	special StartWallyTutorialBattle
 	waitstate
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route202_EventScript_LoweredA
@@ -128,9 +128,9 @@ Route202_EventScript_HelperAccept::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route202_EventScript_FartherA
 	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_FartherB
-	applymovement LOCALID_HELPER, Route202_Movement_HelperLeave
+	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_HelperLeave
 	waitmovement 0
-	removeobject LOCALID_HELPER
+	removeobject LOCALID_ROUTE202_HELPER
 	setflag FLAG_HIDE_ROUTE_202_HELPER
 	setvar VAR_ROUTE202_STATE, 1
 	delay 48

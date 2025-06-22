@@ -16,7 +16,7 @@ LittlerootTown_MaysHouse_2F_EventScript_CheckRivalsPC::
 	end
 
 LittlerootTown_MaysHouse_2F_EventScript_Temp::
-	setobjectxyperm LOCALID_RIVAL, 5, 2
+	setobjectxyperm LOCALID_TWINLEAF_RIVAL2F_RIVAL, 5, 2
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC::
@@ -33,22 +33,22 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetRival::
 	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox LittlerootTown_MaysHouse_2F_TakeBag, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
+	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, Common_Movement_FaceLeft
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	msgbox LittlerootTown_MaysHouse_2F_GoingLake, MSGBOX_SIGN
-	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun1
+	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun1
 	waitmovement 0
 	applymovement LOCALID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_BumpPlayer
-	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun2
+	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_RivalRun2
 	waitmovement 0
-	removeobject LOCALID_RIVAL
+	removeobject LOCALID_TWINLEAF_RIVAL2F_RIVAL
 	release
 	end
 

@@ -621,7 +621,7 @@ EventScript_AfterWhiteOutHealMsg::
 
 EventScript_AfterWhiteOutMomHeal::
 	lockall
-	applymovement LOCALID_TWINLEAF_PLAYER_1F_MOM, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
 	call Common_EventScript_OutOfCenterPartyHeal

@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_HELPER",
+      "local_id": "LOCALID_ROUTE202_HELPER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 14,
       "y": 25,

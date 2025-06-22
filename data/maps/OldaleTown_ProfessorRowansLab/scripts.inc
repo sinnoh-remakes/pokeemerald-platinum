@@ -21,7 +21,7 @@ OldaleTown_ProfessorRowansLab_EventScript_ShowStarter::
 	special SpawnCameraObject
 	applymovement LOCALID_PLAYER, OldaleTown_ProfessorRowansLab_Movement_Player1
 	applymovement LOCALID_CAMERA, OldaleTown_ProfessorRowansLab_Movement_Player1
-	applymovement LOCALID_HELPER, OldaleTown_ProfessorRowansLab_Movement_Helper1
+	applymovement LOCALID_SANDGEM_LAB_HELPER, OldaleTown_ProfessorRowansLab_Movement_Helper1
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox OldaleTown_ProfessorRowansLab_Text_LetMeSee, MSGBOX_DEFAULT
@@ -38,18 +38,18 @@ OldaleTown_ProfessorRowansLab_EventScript_ShowStarter::
 	call_if_eq VAR_RESULT, YES, OldaleTown_ProfessorRowansLab_EventScript_NicknameStarter
 	bufferleadmonspeciesname STR_VAR_1
 	msgbox OldaleTown_ProfessorRowansLab_Text_EntrustYou, MSGBOX_SIGN
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_SANDGEM_LAB_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_ProfessorRowansLab_EventScript_KindDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_ProfessorRowansLab_EventScript_KindLucas
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_SANDGEM_LAB_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
-	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_SANDGEM_LAB_PROF, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 16
 	msgbox OldaleTown_ProfessorRowansLab_Text_CollectData, MSGBOX_DEFAULT
@@ -81,14 +81,14 @@ OldaleTown_ProfessorRowansLab_EventScript_GivePokedex::
 	setflag FLAG_ADVENTURE_STARTED
 	special SetUnlockedPokedexFlags
 	msgbox OldaleTown_ProfessorRowansLab_Text_ExplainPokedex, MSGBOX_DEFAULT
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_SANDGEM_LAB_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 16
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, OldaleTown_ProfessorRowansLab_EventScript_GotOneDawn
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_ProfessorRowansLab_EventScript_GotOneLucas
 	msgbox OldaleTown_ProfessorRowansLab_Text_SixtyYears, MSGBOX_SIGN
-	applymovement LOCALID_HELPER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_SANDGEM_LAB_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
@@ -96,9 +96,9 @@ OldaleTown_ProfessorRowansLab_EventScript_GivePokedex::
 	call_if_eq VAR_RESULT, MALE, OldaleTown_ProfessorRowansLab_EventScript_Helper_DawnMany
 	call_if_eq VAR_RESULT, FEMALE, OldaleTown_ProfessorRowansLab_EventScript_ComradesLucas
 	applymovement LOCALID_PLAYER, OldaleTown_ProfessorRowansLab_Movement_Player2
-	applymovement LOCALID_HELPER, OldaleTown_ProfessorRowansLab_Movement_Helper2
+	applymovement LOCALID_SANDGEM_LAB_HELPER, OldaleTown_ProfessorRowansLab_Movement_Helper2
 	waitmovement 0
-	removeobject LOCALID_HELPER
+	removeobject LOCALID_SANDGEM_LAB_HELPER
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	setvar VAR_LITTLEROOT_INTRO_STATE, 8
 	releaseall
