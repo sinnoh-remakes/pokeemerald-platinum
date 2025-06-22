@@ -356,7 +356,7 @@ Route202_EventScript_Logan::
 	msgbox Route202_Text_LoganPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-OldaleTown_ProfessorRowansLab_EventScript_MayGivePokeBalls::
+SandgemTown_ProfessorRowansLab_EventScript_MayGivePokeBalls::
 	giveitem ITEM_POKE_BALL, 5
 	setvar VAR_RESULT, 0
 	return

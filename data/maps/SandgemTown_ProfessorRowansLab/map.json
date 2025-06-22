@@ -1,7 +1,7 @@
 {
-  "id": "MAP_OLDALE_TOWN_PROFESSOR_ROWANS_LAB",
-  "name": "OldaleTown_ProfessorRowansLab",
-  "layout": "LAYOUT_OLDALE_TOWN_PROFESSOR_ROWANS_LAB",
+  "id": "MAP_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB",
+  "name": "SandgemTown_ProfessorRowansLab",
+  "layout": "LAYOUT_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB",
   "music": "MUS_DP_ROWAN_LAB",
   "region_map_section": "MAPSEC_TWINLEAF_TOWN",
   "requires_flash": false,
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_Birch",
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_Birch",
       "flag": "0"
     },
     {
@@ -52,7 +52,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_DawnsFather",
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_DawnsFather",
       "flag": "0"
     },
     {
@@ -65,7 +65,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_OtherAide",
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_OtherAide",
       "flag": "0"
     }
   ],
@@ -74,7 +74,7 @@
       "x": 6,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_SANDGEM_TOWN",
       "dest_warp_id": "0"
     }
   ],
@@ -86,7 +86,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_Bookshelf1"
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_Bookshelf1"
     },
     {
       "type": "sign",
@@ -94,7 +94,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_Bookshelf2"
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_Bookshelf2"
     },
     {
       "type": "sign",
@@ -102,7 +102,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_Bookshelf3"
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_Bookshelf3"
     },
     {
       "type": "sign",
@@ -110,7 +110,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_Bookshelf4"
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_Bookshelf4"
     },
     {
       "type": "sign",
@@ -118,7 +118,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_PC"
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_PC"
     },
     {
       "type": "sign",
@@ -126,7 +126,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_PC"
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_PC"
     },
     {
       "type": "sign",
@@ -134,7 +134,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OldaleTown_ProfessorRowansLab_EventScript_Fridge"
+      "script": "SandgemTown_ProfessorRowansLab_EventScript_Fridge"
     }
   ]
 }

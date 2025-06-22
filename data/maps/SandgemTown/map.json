@@ -1,9 +1,9 @@
 {
-  "id": "MAP_OLDALE_TOWN",
-  "name": "OldaleTown",
-  "layout": "LAYOUT_OLDALE_TOWN",
+  "id": "MAP_SANDGEM_TOWN",
+  "name": "SandgemTown",
+  "layout": "LAYOUT_SANDGEM_TOWN",
   "music": "MUS_DP_SANDGEM_DAY",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
@@ -82,7 +82,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_EventScript_Boy",
+      "script": "SandgemTown_EventScript_Boy",
       "flag": "0"
     },
     {
@@ -95,7 +95,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_EventScript_Lady",
+      "script": "SandgemTown_EventScript_Lady",
       "flag": "0"
     },
     {
@@ -108,7 +108,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_EventScript_Youngster",
+      "script": "SandgemTown_EventScript_Youngster",
       "flag": "0"
     }
   ],
@@ -117,35 +117,35 @@
       "x": 10,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_PROFESSOR_ROWANS_LAB",
+      "dest_map": "MAP_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB",
       "dest_warp_id": "0"
     },
     {
       "x": 19,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
+      "dest_map": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 29,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_MART",
+      "dest_map": "MAP_SANDGEM_TOWN_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_HOUSE1",
+      "dest_map": "MAP_SANDGEM_TOWN_HOUSE1",
       "dest_warp_id": "0"
     },
     {
       "x": 18,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_HELPER_HOUSE_1F",
+      "dest_map": "MAP_SANDGEM_TOWN_HELPER_HOUSE_1F",
       "dest_warp_id": "0"
     }
   ],
@@ -155,45 +155,45 @@
       "x": 5,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_OLDALE_TOWN_STATE",
+      "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "OldaleTown_EventScript_HelperLab1"
+      "script": "SandgemTown_EventScript_HelperLab1"
     },
     {
       "type": "trigger",
       "x": 5,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_OLDALE_TOWN_STATE",
+      "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "OldaleTown_EventScript_HelperLab2"
+      "script": "SandgemTown_EventScript_HelperLab2"
     },
     {
       "type": "trigger",
       "x": 5,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_OLDALE_TOWN_STATE",
+      "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "OldaleTown_EventScript_HelperLab3"
+      "script": "SandgemTown_EventScript_HelperLab3"
     },
     {
       "type": "trigger",
       "x": 5,
       "y": 16,
       "elevation": 0,
-      "var": "VAR_OLDALE_TOWN_STATE",
+      "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "OldaleTown_EventScript_HelperLab4"
+      "script": "SandgemTown_EventScript_HelperLab4"
     },
     {
       "type": "trigger",
       "x": 5,
       "y": 17,
       "elevation": 0,
-      "var": "VAR_OLDALE_TOWN_STATE",
+      "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "OldaleTown_EventScript_HelperLab5"
+      "script": "SandgemTown_EventScript_HelperLab5"
     }
   ],
   "bg_events": [
@@ -203,7 +203,7 @@
       "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OldaleTown_EventScript_TownSign"
+      "script": "SandgemTown_EventScript_TownSign"
     },
     {
       "type": "sign",
@@ -227,7 +227,7 @@
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "OldaleTown_EventScript_LabSign"
+      "script": "SandgemTown_EventScript_LabSign"
     },
     {
       "type": "sign",
@@ -235,7 +235,7 @@
       "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "OldaleTown_EventScript_RivalSign"
+      "script": "SandgemTown_EventScript_RivalSign"
     }
   ]
 }

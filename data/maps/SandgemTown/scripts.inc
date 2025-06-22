@@ -1,26 +1,26 @@
-OldaleTown_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_OnFrame
+SandgemTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SandgemTown_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SandgemTown_OnFrame
 	.byte 0
 
-	@ State descriptions for VAR_OLDALE_TOWN_STATE
+	@ State descriptions for VAR_SANDGEM_TOWN_STATE
 	@ 1: Entered initial lab scene
 	@ 2: Entered second helper scene
 
-OldaleTown_OnTransition:
-	call_if_eq VAR_OLDALE_TOWN_STATE, 1, OldaleTown_EventScript_MoveHelper
+SandgemTown_OnTransition:
+	call_if_eq VAR_SANDGEM_TOWN_STATE, 1, SandgemTown_EventScript_MoveHelper
   @ TODO: Rename SetupRivalGfxId to SetupHelperGfxId
 	call Common_EventScript_SetupRivalGfxId
-	setflag FLAG_VISITED_OLDALE_TOWN
+	setflag FLAG_VISITED_SANDGEM_TOWN
 	end
 
-OldaleTown_OnFrame:
-	map_script_2 VAR_OLDALE_TOWN_STATE, 1, OldaleTown_EventScript_HelperBuildings
+SandgemTown_OnFrame:
+	map_script_2 VAR_SANDGEM_TOWN_STATE, 1, SandgemTown_EventScript_HelperBuildings
 	.2byte 0
 
-OldaleTown_EventScript_HelperExclaim::
+SandgemTown_EventScript_HelperExclaim::
 	lock
-	setvar VAR_OLDALE_TOWN_STATE, 1
+	setvar VAR_SANDGEM_TOWN_STATE, 1
 	special SpawnCameraObject
 	playse SE_PIN
 	applymovement LOCALID_SANDGEM_HELPER, Common_Movement_ExclamationMark
@@ -29,68 +29,68 @@ OldaleTown_EventScript_HelperExclaim::
 	delay 48
 	return
 
-OldaleTown_EventScript_HelperLab1::
-	call OldaleTown_EventScript_HelperExclaim
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper1
+SandgemTown_EventScript_HelperLab1::
+	call SandgemTown_EventScript_HelperExclaim
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper1
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-	call OldaleTown_EventScript_HelperTalk1
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper6
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player1
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player1
+	call SandgemTown_EventScript_HelperTalk1
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper6
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player1
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_Player1
 	waitmovement 0
-	goto OldaleTown_EventScript_HelperToLab
+	goto SandgemTown_EventScript_HelperToLab
 
-OldaleTown_EventScript_HelperLab2::
-	call OldaleTown_EventScript_HelperExclaim
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper2
+SandgemTown_EventScript_HelperLab2::
+	call SandgemTown_EventScript_HelperExclaim
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper2
 	waitmovement 0
-	call OldaleTown_EventScript_HelperTalk1
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper7
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player2
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player2
+	call SandgemTown_EventScript_HelperTalk1
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper7
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player2
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_Player2
 	waitmovement 0
-	goto OldaleTown_EventScript_HelperToLab
+	goto SandgemTown_EventScript_HelperToLab
 
-OldaleTown_EventScript_HelperLab3::
-	call OldaleTown_EventScript_HelperExclaim
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper3
+SandgemTown_EventScript_HelperLab3::
+	call SandgemTown_EventScript_HelperExclaim
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper3
 	waitmovement 0
-	call OldaleTown_EventScript_HelperTalk1
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper8
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player3
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player3
+	call SandgemTown_EventScript_HelperTalk1
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper8
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player3
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_Player3
 	waitmovement 0
-	goto OldaleTown_EventScript_HelperToLab
+	goto SandgemTown_EventScript_HelperToLab
 
-OldaleTown_EventScript_HelperLab4::
-	call OldaleTown_EventScript_HelperExclaim
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper4
+SandgemTown_EventScript_HelperLab4::
+	call SandgemTown_EventScript_HelperExclaim
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper4
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	call OldaleTown_EventScript_HelperTalk1
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper9
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player4
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player4
+	call SandgemTown_EventScript_HelperTalk1
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper9
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player4
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_Player4
 	waitmovement 0
-	goto OldaleTown_EventScript_HelperToLab
+	goto SandgemTown_EventScript_HelperToLab
 
-OldaleTown_EventScript_HelperLab5::
-	call OldaleTown_EventScript_HelperExclaim
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper5
+SandgemTown_EventScript_HelperLab5::
+	call SandgemTown_EventScript_HelperExclaim
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper5
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	call OldaleTown_EventScript_HelperTalk1
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper10
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player5
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player5
+	call SandgemTown_EventScript_HelperTalk1
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper10
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player5
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_Player5
 	waitmovement 0
-	goto OldaleTown_EventScript_HelperToLab
+	goto SandgemTown_EventScript_HelperToLab
 
-OldaleTown_Movement_Helper1:
+SandgemTown_Movement_Helper1:
 	walk_left
 	walk_left
 	walk_left
@@ -100,7 +100,7 @@ OldaleTown_Movement_Helper1:
 	face_up
 	step_end
 
-OldaleTown_Movement_Helper2:
+SandgemTown_Movement_Helper2:
 	walk_left
 	walk_left
 	walk_left
@@ -108,14 +108,14 @@ OldaleTown_Movement_Helper2:
 	walk_left
 	step_end
 
-OldaleTown_Movement_Helper3:
+SandgemTown_Movement_Helper3:
 	walk_left
 	walk_left
 	walk_left
 	walk_left
 	step_end
 
-OldaleTown_Movement_Helper4:
+SandgemTown_Movement_Helper4:
 	walk_left
 	walk_left
 	walk_left
@@ -124,7 +124,7 @@ OldaleTown_Movement_Helper4:
 	face_down
 	step_end
 
-OldaleTown_Movement_Helper5:
+SandgemTown_Movement_Helper5:
 	walk_left
 	walk_left
 	walk_left
@@ -134,7 +134,7 @@ OldaleTown_Movement_Helper5:
 	face_down
 	step_end
 
-OldaleTown_Movement_Helper6:
+SandgemTown_Movement_Helper6:
 	walk_right
 	walk_right
 	walk_right
@@ -144,7 +144,7 @@ OldaleTown_Movement_Helper6:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Helper7:
+SandgemTown_Movement_Helper7:
 	walk_right
 	walk_right
 	walk_right
@@ -153,7 +153,7 @@ OldaleTown_Movement_Helper7:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Helper8:
+SandgemTown_Movement_Helper8:
 	walk_up
 	walk_right
 	walk_right
@@ -163,7 +163,7 @@ OldaleTown_Movement_Helper8:
 	walk_in_place_up
 	step_end
 	
-OldaleTown_Movement_Helper9:
+SandgemTown_Movement_Helper9:
 	walk_right
 	walk_right
 	walk_up
@@ -174,7 +174,7 @@ OldaleTown_Movement_Helper9:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Helper10:
+SandgemTown_Movement_Helper10:
 	walk_up
 	walk_up
 	walk_right
@@ -186,7 +186,7 @@ OldaleTown_Movement_Helper10:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Player1:
+SandgemTown_Movement_Player1:
 	walk_down
 	walk_right
 	walk_right
@@ -196,7 +196,7 @@ OldaleTown_Movement_Player1:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Player2:
+SandgemTown_Movement_Player2:
 	walk_right
 	walk_right
 	walk_right
@@ -205,7 +205,7 @@ OldaleTown_Movement_Player2:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Player3:
+SandgemTown_Movement_Player3:
 	walk_right
 	walk_up
 	walk_right
@@ -215,7 +215,7 @@ OldaleTown_Movement_Player3:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Player4:
+SandgemTown_Movement_Player4:
 	walk_up
 	walk_right
 	walk_right
@@ -226,7 +226,7 @@ OldaleTown_Movement_Player4:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Player5:
+SandgemTown_Movement_Player5:
 	walk_up
 	walk_up
 	walk_up
@@ -238,30 +238,30 @@ OldaleTown_Movement_Player5:
 	walk_in_place_up
 	step_end
 
-OldaleTown_EventScript_HelperTalk1::
+SandgemTown_EventScript_HelperTalk1::
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_WaitingDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_WaitingLucas
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_WaitingDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_WaitingLucas
 	return
 
-OldaleTown_EventScript_WaitingDawn::
-	msgbox OldaleTown_Text_WaitingDawn, MSGBOX_SIGN
+SandgemTown_EventScript_WaitingDawn::
+	msgbox SandgemTown_Text_WaitingDawn, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_WaitingLucas::
-	msgbox OldaleTown_Text_WaitingLucas, MSGBOX_SIGN
+SandgemTown_EventScript_WaitingLucas::
+	msgbox SandgemTown_Text_WaitingLucas, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_HelperToLab::
+SandgemTown_EventScript_HelperToLab::
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_OurLabDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_OurLabLucas
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_OurLabDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_OurLabLucas
 	opendoor 11, 6
 	waitdooranim
 	addobject LOCALID_SANDGEM_RIVAL
-	applymovement LOCALID_SANDGEM_RIVAL, OldaleTown_Movement_RivalBump
+	applymovement LOCALID_SANDGEM_RIVAL, SandgemTown_Movement_RivalBump
 	waitmovement 0
-	msgbox OldaleTown_Text_Thud, MSGBOX_DEFAULT
+	msgbox SandgemTown_Text_Thud, MSGBOX_DEFAULT
 	delay 48
 	delay 48
 	playse SE_PIN
@@ -269,38 +269,38 @@ OldaleTown_EventScript_HelperToLab::
 	waitmovement 0
 	delay 48
 	delay 48
-	msgbox OldaleTown_Text_Rival, MSGBOX_SIGN
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_TurnRight
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_TurnRight
-	applymovement LOCALID_SANDGEM_RIVAL, OldaleTown_Movement_RivalRun
+	msgbox SandgemTown_Text_Rival, MSGBOX_SIGN
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_TurnRight
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_TurnRight
+	applymovement LOCALID_SANDGEM_RIVAL, SandgemTown_Movement_RivalRun
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_RIVAL
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_AnywayDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_AnywayLucas
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_TurnUp
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_HelperEnter
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_AnywayDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_AnywayLucas
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_TurnUp
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_HelperEnter
 	waitmovement 0
 	@ TODO: Cannot hide helper or will not show in next sandgem scene
 	setobjectxy LOCALID_SANDGEM_HELPER 25, 5
 	delay 16
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerEnter
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_PlayerEnter
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_PlayerEnter
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_PlayerEnter
 	waitmovement 0
 	removeobject LOCALID_PLAYER
 	closedoor 11, 6
 	waitdooranim
 	special RemoveCameraObject
-	warp MAP_OLDALE_TOWN_PROFESSOR_ROWANS_LAB, 0
+	warp MAP_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB, 0
 	waitstate
 	release
 	end
 
-OldaleTown_Movement_RivalBump:
+SandgemTown_Movement_RivalBump:
 	walk_fast_down
 	step_end
 
-OldaleTown_Movement_RivalRun:
+SandgemTown_Movement_RivalRun:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_down
@@ -314,61 +314,61 @@ OldaleTown_Movement_RivalRun:
 	walk_fast_right
 	step_end
 
-OldaleTown_Movement_HelperEnter:
+SandgemTown_Movement_HelperEnter:
 	walk_up
 	walk_left
 	walk_up
 	step_end
 
-OldaleTown_Movement_PlayerEnter:
+SandgemTown_Movement_PlayerEnter:
 	walk_up
 	walk_up
 	step_end
 
-OldaleTown_Movement_TurnRight:
+SandgemTown_Movement_TurnRight:
 	delay_16
 	walk_in_place_right
 	step_end
 
-OldaleTown_Movement_TurnUp:
+SandgemTown_Movement_TurnUp:
 	delay_16
 	walk_in_place_up
 	step_end
 
-OldaleTown_EventScript_OurLabDawn::
-	msgbox OldaleTown_Text_OurLabDawn, MSGBOX_DEFAULT
+SandgemTown_EventScript_OurLabDawn::
+	msgbox SandgemTown_Text_OurLabDawn, MSGBOX_DEFAULT
 	return
 
-OldaleTown_EventScript_OurLabLucas::
-	msgbox OldaleTown_Text_OurLabLucas, MSGBOX_DEFAULT
+SandgemTown_EventScript_OurLabLucas::
+	msgbox SandgemTown_Text_OurLabLucas, MSGBOX_DEFAULT
 	return
 
-OldaleTown_EventScript_AnywayDawn::
-	msgbox OldaleTown_Text_AnywayDawn, MSGBOX_SIGN
+SandgemTown_EventScript_AnywayDawn::
+	msgbox SandgemTown_Text_AnywayDawn, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_AnywayLucas::
-	msgbox OldaleTown_Text_AnywayLucas, MSGBOX_SIGN
+SandgemTown_EventScript_AnywayLucas::
+	msgbox SandgemTown_Text_AnywayLucas, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_MoveHelper::
+SandgemTown_EventScript_MoveHelper::
 	addobject LOCALID_SANDGEM_HELPER
 	setobjectxy LOCALID_SANDGEM_HELPER, 11, 8
 	setobjectmovementtype LOCALID_SANDGEM_HELPER, MOVEMENT_TYPE_FACE_UP
 	return
 
-OldaleTown_EventScript_HelperBuildings::
+SandgemTown_EventScript_HelperBuildings::
 	lock
-	setvar VAR_OLDALE_TOWN_STATE, 2
+	setvar VAR_SANDGEM_TOWN_STATE, 2
 	opendoor 11, 6
 	waitdooranim
 	addobject LOCALID_SANDGEM_PROF
-	msgbox OldaleTown_Text_Thud, MSGBOX_DEFAULT
+	msgbox SandgemTown_Text_Thud, MSGBOX_DEFAULT
 	delay 48
 	delay 48
 	applymovement LOCALID_SANDGEM_PROF, Common_Movement_WalkInPlaceDown
 	waitmovement 0
-	msgbox OldaleTown_Text_Surprise, MSGBOX_SIGN
+	msgbox SandgemTown_Text_Surprise, MSGBOX_SIGN
 	playse SE_PIN
 	applymovement LOCALID_SANDGEM_HELPER, Common_Movement_ExclamationMark
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
@@ -377,11 +377,11 @@ OldaleTown_EventScript_HelperBuildings::
 	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
-	msgbox OldaleTown_Text_SomethingGood, MSGBOX_DEFAULT
+	msgbox SandgemTown_Text_SomethingGood, MSGBOX_DEFAULT
 	giveitem ITEM_TM_RETURN
 	setflag FLAG_RECEIVED_TM_RETURN
 	@ goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox OldaleTown_Text_TechnicalMove, MSGBOX_SIGN
+	msgbox SandgemTown_Text_TechnicalMove, MSGBOX_SIGN
 	applymovement LOCALID_SANDGEM_PROF, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_PROF
@@ -390,28 +390,28 @@ OldaleTown_EventScript_HelperBuildings::
 	special SpawnCameraObject
 	delay 48
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_ShockDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_ShockLucas
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_ShockDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_ShockLucas
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_SANDGEM_HELPER, Common_Movement_WalkUp
 	waitmovement 0
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_MentorDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_MentorLucas
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper_Guide1
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player_Guide1
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_Player_Guide1
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_MentorDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_MentorLucas
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper_Guide1
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player_Guide1
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_Player_Guide1
 	waitmovement 0
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_CenterDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_CenterLucas
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper_Guide2
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Helper_Guide2
-	applymovement LOCALID_CAMERA, OldaleTown_Movement_Helper_Guide2
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_CenterDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_CenterLucas
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper_Guide2
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Helper_Guide2
+	applymovement LOCALID_CAMERA, SandgemTown_Movement_Helper_Guide2
 	waitmovement 0
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_MartDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_MartLucas
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_MartDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_MartLucas
 	applymovement LOCALID_SANDGEM_HELPER, Common_Movement_WalkInPlaceLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
@@ -420,10 +420,10 @@ OldaleTown_EventScript_HelperBuildings::
 	waitmovement 0
 	delay 48
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_FamilyDawn
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_FamilyLucas
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_Player_Guide2
-	applymovement LOCALID_SANDGEM_HELPER, OldaleTown_Movement_Helper_Guide3
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_FamilyDawn
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_FamilyLucas
+	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player_Guide2
+	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper_Guide3
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_HELPER
 	setflag FLAG_HIDE_OLDALE_HELPER
@@ -433,47 +433,47 @@ OldaleTown_EventScript_HelperBuildings::
 	release
 	end
 
-OldaleTown_EventScript_ShockDawn::
-	msgbox OldaleTown_Text_ShockDawn, MSGBOX_SIGN
+SandgemTown_EventScript_ShockDawn::
+	msgbox SandgemTown_Text_ShockDawn, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_MentorDawn::
-	msgbox OldaleTown_Text_MentorDawn, MSGBOX_SIGN
+SandgemTown_EventScript_MentorDawn::
+	msgbox SandgemTown_Text_MentorDawn, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_CenterDawn::
-	msgbox OldaleTown_Text_CenterDawn, MSGBOX_SIGN
+SandgemTown_EventScript_CenterDawn::
+	msgbox SandgemTown_Text_CenterDawn, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_MartDawn::
-	msgbox OldaleTown_Text_MartDawn, MSGBOX_SIGN
+SandgemTown_EventScript_MartDawn::
+	msgbox SandgemTown_Text_MartDawn, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_FamilyDawn::
-	msgbox OldaleTown_Text_FamilyDawn, MSGBOX_SIGN
+SandgemTown_EventScript_FamilyDawn::
+	msgbox SandgemTown_Text_FamilyDawn, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_ShockLucas::
-	msgbox OldaleTown_Text_ShockLucas, MSGBOX_SIGN
+SandgemTown_EventScript_ShockLucas::
+	msgbox SandgemTown_Text_ShockLucas, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_MentorLucas::
-	msgbox OldaleTown_Text_MentorLucas, MSGBOX_SIGN
+SandgemTown_EventScript_MentorLucas::
+	msgbox SandgemTown_Text_MentorLucas, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_CenterLucas::
-	msgbox OldaleTown_Text_CenterLucas, MSGBOX_SIGN
+SandgemTown_EventScript_CenterLucas::
+	msgbox SandgemTown_Text_CenterLucas, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_MartLucas::
-	msgbox OldaleTown_Text_MartLucas, MSGBOX_SIGN
+SandgemTown_EventScript_MartLucas::
+	msgbox SandgemTown_Text_MartLucas, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_FamilyLucas::
-	msgbox OldaleTown_Text_FamilyLucas, MSGBOX_SIGN
+SandgemTown_EventScript_FamilyLucas::
+	msgbox SandgemTown_Text_FamilyLucas, MSGBOX_SIGN
 	return
 
-OldaleTown_Movement_Helper_Guide1:
+SandgemTown_Movement_Helper_Guide1:
 	walk_right
 	walk_right
 	walk_right
@@ -487,7 +487,7 @@ OldaleTown_Movement_Helper_Guide1:
 	walk_in_place_up
 	step_end
 
-OldaleTown_Movement_Helper_Guide2:
+SandgemTown_Movement_Helper_Guide2:
 	walk_right
 	walk_right
 	walk_right
@@ -501,7 +501,7 @@ OldaleTown_Movement_Helper_Guide2:
 	walk_in_place_up
 	step_end
 	
-OldaleTown_Movement_Helper_Guide3:
+SandgemTown_Movement_Helper_Guide3:
 	walk_down
 	walk_left
 	walk_left
@@ -517,7 +517,7 @@ OldaleTown_Movement_Helper_Guide3:
 	walk_up
 	step_end
 
-OldaleTown_Movement_Player_Guide1:
+SandgemTown_Movement_Player_Guide1:
 	walk_down
 	walk_right
 	walk_right
@@ -531,75 +531,75 @@ OldaleTown_Movement_Player_Guide1:
 	walk_in_place_up
 	step_end
 	
-OldaleTown_Movement_Player_Guide2:
+SandgemTown_Movement_Player_Guide2:
 	delay_16
 	walk_in_place_down
 	delay_16
 	walk_in_place_left
 	step_end
 
-OldaleTown_EventScript_TownSign::
-	msgbox OldaleTown_Text_TownSign, MSGBOX_SIGN
+SandgemTown_EventScript_TownSign::
+	msgbox SandgemTown_Text_TownSign, MSGBOX_SIGN
 	end
 
-OldaleTown_EventScript_LabSign::
-	msgbox OldaleTown_Text_LabSign, MSGBOX_SIGN
+SandgemTown_EventScript_LabSign::
+	msgbox SandgemTown_Text_LabSign, MSGBOX_SIGN
 	end
 
-OldaleTown_EventScript_RivalSign::
+SandgemTown_EventScript_RivalSign::
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_DawnSign
-	call_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_LucasSign
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_DawnSign
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_LucasSign
 	end
 
-OldaleTown_EventScript_DawnSign::
-	msgbox OldaleTown_Text_DawnSign, MSGBOX_SIGN
+SandgemTown_EventScript_DawnSign::
+	msgbox SandgemTown_Text_DawnSign, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_LucasSign::
-	msgbox OldaleTown_Text_LucasSign, MSGBOX_SIGN
+SandgemTown_EventScript_LucasSign::
+	msgbox SandgemTown_Text_LucasSign, MSGBOX_SIGN
 	return
 
-OldaleTown_EventScript_Boy::
-	msgbox OldaleTown_Text_Boy, MSGBOX_NPC
+SandgemTown_EventScript_Boy::
+	msgbox SandgemTown_Text_Boy, MSGBOX_NPC
 	end
 
-OldaleTown_EventScript_Lady::
-	msgbox OldaleTown_Text_Lady, MSGBOX_NPC
+SandgemTown_EventScript_Lady::
+	msgbox SandgemTown_Text_Lady, MSGBOX_NPC
 	end
 
-OldaleTown_EventScript_Youngster::
-	msgbox OldaleTown_Text_Youngster, MSGBOX_NPC
+SandgemTown_EventScript_Youngster::
+	msgbox SandgemTown_Text_Youngster, MSGBOX_NPC
 	end
 
-OldaleTown_Text_WaitingDawn:
+SandgemTown_Text_WaitingDawn:
 	.string "Dawn: Oh! There you are!\n"
 	.string "Please, come with me!\l"
 	.string "The professor is waiting!$"
 
-OldaleTown_Text_OurLabDawn:
+SandgemTown_Text_OurLabDawn:
 	.string "This is it!\n"
 	.string "Our Pokémon Research Lab!\p"
 	.string "Lets go...$"
 
-OldaleTown_Text_AnywayDawn:
+SandgemTown_Text_AnywayDawn:
 	.string "Dawn: Wow, what was that?\p"
 	.string "Your friend sure seems to be really\n"
 	.string "impatient.\p"
 	.string "Well, anyway...\n"
 	.string "Let's go inside.$"
 
-OldaleTown_Text_WaitingLucas:
+SandgemTown_Text_WaitingLucas:
 	.string "Lucas: Hi! I've been waiting for you!\n"
 	.string "Please, come with me.\l"
 	.string "The prof's waiting to see you.$"
 
-OldaleTown_Text_OurLabLucas:
+SandgemTown_Text_OurLabLucas:
 	.string "See? This is our Pokémon Research\n"
 	.string "Lab.\p"
 	.string "We'll just go ahead and...$"
 
-OldaleTown_Text_AnywayLucas:
+SandgemTown_Text_AnywayLucas:
 	.string "Lucas: What was that?!\p"
 	.string "Your friend always seems to be\n"
 	.string "in such a rush.\p"
@@ -607,10 +607,10 @@ OldaleTown_Text_AnywayLucas:
 	.string "Let's go in.$"
 
 @ TODO: THUD change to Thud? Also in Twinleaf Town
-OldaleTown_Text_Thud:
+SandgemTown_Text_Thud:
 	.string "THUD!!$"
 
-OldaleTown_Text_Rival:
+SandgemTown_Text_Rival:
 	.string	"{RIVAL}: What the...\p"
 	.string "Oh, it's you, {PLAYER}!\p"
 	.string "That old guy... He's not scary so\n"
@@ -618,14 +618,14 @@ OldaleTown_Text_Rival:
 	.string "Aww, it doesn't matter, {PLAYER}.\n"
 	.string "I'm out of here. See you later!$"
 
-OldaleTown_Text_Surprise:
+SandgemTown_Text_Surprise:
 	.string "{PLAYER}!$"
 
-OldaleTown_Text_SomethingGood:
+SandgemTown_Text_SomethingGood:
 	.string "Rowan: I have something good here.\n"
 	.string "You should take this as well.$"
 
-OldaleTown_Text_TechnicalMove:
+SandgemTown_Text_TechnicalMove:
 	.string "Rowan: That is a Technical Machine.\n"
 	.string "That one contains the move Return.\p"
 	.string "Using a Technical Machine, or TM for\n"
@@ -640,13 +640,13 @@ OldaleTown_Text_TechnicalMove:
 	.string "I'll send you off with the wish that\n"
 	.string "your journey will be fun.$"
 	
-OldaleTown_Text_ShockDawn:
+SandgemTown_Text_ShockDawn:
 	.string "Dawn: Oh, wow.\n"
 	.string "I didn't know the professor had TMs.\p"
 	.string "Was he a Trainer when he was\n"
 	.string "young...?$"
 
-OldaleTown_Text_MentorDawn:
+SandgemTown_Text_MentorDawn:
 	.string "Dawn: OK, {PLAYER}, I'll act as\n"
 	.string "your mentor.\p"
 	.string "I've got a bit more experience than\n"
@@ -654,7 +654,7 @@ OldaleTown_Text_MentorDawn:
 	.string "professor's assistant.\p"
 	.string "OK, follow me!$"
 	
-OldaleTown_Text_CenterDawn:
+SandgemTown_Text_CenterDawn:
 	.string "This building with the red roof is\n"
 	.string "the Pokémon Center.\p"
 	.string "It's the place that heals Pokémon\n"
@@ -662,7 +662,7 @@ OldaleTown_Text_CenterDawn:
 	.string "You can find a Pokémon Center in\n"
 	.string "most towns.$"
 
-OldaleTown_Text_MartDawn:
+SandgemTown_Text_MartDawn:
 	.string "The building with the blue roof over\n"
 	.string "here is the Poké Mart.\p"
 	.string "It's a shop where you can buy and\n"
@@ -672,7 +672,7 @@ OldaleTown_Text_MartDawn:
 	.string "many kinds of merchandise.\p"
 	.string "Don't let it bother you!$"
 	
-OldaleTown_Text_FamilyDawn:
+SandgemTown_Text_FamilyDawn:
 	.string "Oh, that's right!\n"
 	.string "{PLAYER}...\p"
 	.string "Don't you need to let your family\n"
@@ -685,18 +685,18 @@ OldaleTown_Text_FamilyDawn:
 	.string "It will be a lot less scary that way.\n"
 	.string "OK, bye now!$"
 	
-OldaleTown_Text_ShockLucas:
+SandgemTown_Text_ShockLucas:
 	.string "Lucas: Well, I'll be...\n"
 	.string "The professor had TMs...?\p"
 	.string "Next thing, he'll tell me he battled\n"
 	.string "when he was young.$"
 
-OldaleTown_Text_MentorLucas:
+SandgemTown_Text_MentorLucas:
 	.string "Lucas: Hey, {PLAYER}!\n"
 	.string "I want to show you a few things.\l"
 	.string "So, follow me!$"
 
-OldaleTown_Text_CenterLucas:
+SandgemTown_Text_CenterLucas:
 	.string "This building with the red roof is\n"
 	.string "the Pokémon Center.\p"
 	.string "You can get your Pokémon healed if\n"
@@ -704,7 +704,7 @@ OldaleTown_Text_CenterLucas:
 	.string "You'll find a Pokémon Center in most\n"
 	.string "towns.$"
 
-OldaleTown_Text_MartLucas:
+SandgemTown_Text_MartLucas:
 	.string "Over here, the building with the blue\n"
 	.string "roof is the Poké Mart.\p"
 	.string "It's a shop where you can buy and\n"
@@ -714,7 +714,7 @@ OldaleTown_Text_MartLucas:
 	.string "very much stuff.\p"
 	.string "Don't worry about it, OK?$"
 
-OldaleTown_Text_FamilyLucas:
+SandgemTown_Text_FamilyLucas:
 	.string "Oh yeah, right!\n"
 	.string "{PLAYER}...\p"
 	.string "You should let your family know\n"
@@ -727,32 +727,32 @@ OldaleTown_Text_FamilyLucas:
 	.string "You'll be safe then.\n"
 	.string "OK, be seeing you!$"
 
-OldaleTown_Text_TownSign:
+SandgemTown_Text_TownSign:
 	.string "Sandgem Town\n"
 	.string "Town of Sand!$"
 
-OldaleTown_Text_LabSign:
+SandgemTown_Text_LabSign:
 	.string "Pokémon Research Lab$"
 
-OldaleTown_Text_DawnSign:
+SandgemTown_Text_DawnSign:
 	.string "Dawn's House$"
 
-OldaleTown_Text_LucasSign:
+SandgemTown_Text_LucasSign:
 	.string "Lucas's House$"
 
-OldaleTown_Text_Boy:
+SandgemTown_Text_Boy:
 	.string "The thing you have!\p"
 	.string "It's a Pokédex, isn't it?!\p"
 	.string "You're off to see all kinds of\n"
 	.string "Pokémon now! Lucky you!$"
 
-OldaleTown_Text_Lady:
+SandgemTown_Text_Lady:
 	.string "So I don't forget what's happened,\n"
 	.string "till now, I'd better save this...\p"
 	.string "There!\n"
 	.string "Now I can take a break.$"
 
-OldaleTown_Text_Youngster:
+SandgemTown_Text_Youngster:
 	.string "Oh, wow!\n"
 	.string "Pokémon are so cool!\p"
 	.string "You can make yours battle and make\n"

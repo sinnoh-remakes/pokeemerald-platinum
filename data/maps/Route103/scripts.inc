@@ -138,7 +138,7 @@ Route103_EventScript_RivalExitFacingSouth::
 
 Route103_EventScript_RivalEnd::
 	removeobject LOCALID_ROUTE103_RIVAL
-	setvar VAR_BIRCH_LAB_STATE, 4
+	setvar VAR_ROWAN_LAB_STATE, 4
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

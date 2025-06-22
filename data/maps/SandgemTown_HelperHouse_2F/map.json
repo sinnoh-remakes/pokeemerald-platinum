@@ -1,9 +1,9 @@
 {
-  "id": "MAP_OLDALE_TOWN_HELPER_HOUSE_2F",
-  "name": "OldaleTown_HelperHouse_2F",
-  "layout": "LAYOUT_OLDALE_TOWN_HELPER_HOUSE_2F",
+  "id": "MAP_SANDGEM_TOWN_HELPER_HOUSE_2F",
+  "name": "SandgemTown_HelperHouse_2F",
+  "layout": "LAYOUT_SANDGEM_TOWN_HELPER_HOUSE_2F",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -21,7 +21,7 @@
       "x": 6,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_HELPER_HOUSE_1F",
+      "dest_map": "MAP_SANDGEM_TOWN_HELPER_HOUSE_1F",
       "dest_warp_id": "2"
     }
   ],

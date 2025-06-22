@@ -1,15 +1,15 @@
-OldaleTown_HelperHouse_1F_MapScripts::
+SandgemTown_HelperHouse_1F_MapScripts::
 	.byte 0
 
-OldaleTown_HelperHouse_1F_EventScript_Girl::
-	msgbox OldaleTown_HelperHouse_1F_Text_Girl, MSGBOX_NPC
+SandgemTown_HelperHouse_1F_EventScript_Girl::
+	msgbox SandgemTown_HelperHouse_1F_Text_Girl, MSGBOX_NPC
 	end
 
-OldaleTown_HelperHouse_1F_EventScript_Man::
-	msgbox OldaleTown_HelperHouse_1F_Text_Man, MSGBOX_NPC
+SandgemTown_HelperHouse_1F_EventScript_Man::
+	msgbox SandgemTown_HelperHouse_1F_Text_Man, MSGBOX_NPC
 	end
 
-OldaleTown_HelperHouse_1F_Text_Girl:
+SandgemTown_HelperHouse_1F_Text_Girl:
 	.string "Who are you?\p"
 	.string "...\p"
 	.string "Oh...\n"
@@ -19,7 +19,7 @@ OldaleTown_HelperHouse_1F_Text_Girl:
 	.string "Wow! That's the same as my big\n"
 	.string "brother! Go for it!$"
 
-OldaleTown_HelperHouse_1F_Text_Man:
+SandgemTown_HelperHouse_1F_Text_Man:
 	.string "Ah, so that Rowan fellow is back?\n"
 	.string "He's quite the remarkable man.\p"
 	.string "He's been studying Pokémon since way,\n"

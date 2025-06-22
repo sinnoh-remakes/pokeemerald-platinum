@@ -1,9 +1,9 @@
 {
-  "id": "MAP_OLDALE_TOWN_MART",
-  "name": "OldaleTown_Mart",
+  "id": "MAP_SANDGEM_TOWN_MART",
+  "name": "SandgemTown_Mart",
   "layout": "LAYOUT_MART",
   "music": "MUS_DP_POKE_MART",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_Mart_EventScript_Clerk",
+      "script": "SandgemTown_Mart_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -38,7 +38,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_Mart_EventScript_Woman",
+      "script": "SandgemTown_Mart_EventScript_Woman",
       "flag": "0"
     },
     {
@@ -51,7 +51,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_Mart_EventScript_Boy",
+      "script": "SandgemTown_Mart_EventScript_Boy",
       "flag": "0"
     }
   ],
@@ -60,14 +60,14 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_SANDGEM_TOWN",
       "dest_warp_id": "2"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_SANDGEM_TOWN",
       "dest_warp_id": "2"
     }
   ],

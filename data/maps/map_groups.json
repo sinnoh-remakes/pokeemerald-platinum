@@ -2,7 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorTwinleaf",
-    "gMapGroup_IndoorOldale",
+    "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
     "gMapGroup_IndoorFallarbor",
@@ -47,7 +47,7 @@
     "SootopolisCity",
     "EverGrandeCity",
     "TwinleafTown",
-    "OldaleTown",
+    "SandgemTown",
     "DewfordTown",
     "LavaridgeTown",
     "FallarborTown",
@@ -105,14 +105,14 @@
     "TwinleafTown_OtherHouseA",
     "TwinleafTown_OtherHouseB"
   ],
-  "gMapGroup_IndoorOldale": [
-    "OldaleTown_ProfessorRowansLab",
-    "OldaleTown_House1",
-    "OldaleTown_HelperHouse_1F",
-    "OldaleTown_HelperHouse_2F",
-    "OldaleTown_PokemonCenter_1F",
-    "OldaleTown_PokemonCenter_2F",
-    "OldaleTown_Mart"
+  "gMapGroup_IndoorSandgem": [
+    "SandgemTown_ProfessorRowansLab",
+    "SandgemTown_House1",
+    "SandgemTown_HelperHouse_1F",
+    "SandgemTown_HelperHouse_2F",
+    "SandgemTown_PokemonCenter_1F",
+    "SandgemTown_PokemonCenter_2F",
+    "SandgemTown_Mart"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",

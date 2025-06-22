@@ -6,7 +6,7 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Twinleaf_0,
     },
     {
-        .mapSecId = MAPSEC_OLDALE_TOWN,
+        .mapSecId = MAPSEC_SANDGEM_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Oldale_0,
     },

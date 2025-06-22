@@ -1,9 +1,9 @@
 {
-  "id": "MAP_OLDALE_TOWN_HOUSE1",
-  "name": "OldaleTown_House1",
+  "id": "MAP_SANDGEM_TOWN_HOUSE1",
+  "name": "SandgemTown_House1",
   "layout": "LAYOUT_HOUSE1",
   "music": "MUS_OLDALE",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House1_EventScript_Aroma",
+      "script": "SandgemTown_House1_EventScript_Aroma",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House1_EventScript_Boy",
+      "script": "SandgemTown_House1_EventScript_Boy",
       "flag": "0"
     }
   ],
@@ -46,14 +46,14 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_SANDGEM_TOWN",
       "dest_warp_id": "3"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_SANDGEM_TOWN",
       "dest_warp_id": "3"
     }
   ],

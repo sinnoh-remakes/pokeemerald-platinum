@@ -102,14 +102,14 @@
       "blockdata_filepath": "data/layouts/TwinleafTown/map.bin"
     },
     {
-      "id": "LAYOUT_OLDALE_TOWN",
-      "name": "OldaleTown_Layout",
+      "id": "LAYOUT_SANDGEM_TOWN",
+      "name": "SandgemTown_Layout",
       "width": 34,
       "height": 34,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Sandgem",
-      "border_filepath": "data/layouts/OldaleTown/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
+      "border_filepath": "data/layouts/SandgemTown/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTown/map.bin"
     },
     {
       "id": "LAYOUT_DEWFORD_TOWN",
@@ -4292,16 +4292,6 @@
       "blockdata_filepath": "data/layouts/MeteorFalls_StevensCave/map.bin"
     },
     {
-      "id": "LAYOUT_OLDALE_TOWN_PROFESSOR_ROWANS_LAB_WITH_TABLE",
-      "name": "OldaleTown_ProfessorRowansLabWithTable_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Lab",
-      "border_filepath": "data/layouts/OldaleTown_ProfessorRowansLabWithTable/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown_ProfessorRowansLabWithTable/map.bin"
-    },
-    {
       "id": "LAYOUT_SKY_PILLAR_1F_CLEAN",
       "name": "SkyPillar_1F_Clean_Layout",
       "width": 14,
@@ -4432,24 +4422,24 @@
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
     {
-      "id": "LAYOUT_OLDALE_TOWN_PROFESSOR_ROWANS_LAB",
-      "name": "OldaleTown_ProfessorRowansLab_Layout",
+      "id": "LAYOUT_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB",
+      "name": "SandgemTown_ProfessorRowansLab_Layout",
       "width": 20,
       "height": 16,
       "primary_tileset": "gTileset_IndoorSandgemLab",
       "secondary_tileset": "gTileset_SandgemLab",
-      "border_filepath": "data/layouts/OldaleTown_ProfessorRowansLab/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown_ProfessorRowansLab/map.bin"
+      "border_filepath": "data/layouts/SandgemTown_ProfessorRowansLab/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTown_ProfessorRowansLab/map.bin"
     },
     {
-      "id": "LAYOUT_OLDALE_TOWN_HELPER_HOUSE_2F",
-      "name": "OldaleTown_HelperHouse_2F_Layout",
+      "id": "LAYOUT_SANDGEM_TOWN_HELPER_HOUSE_2F",
+      "name": "SandgemTown_HelperHouse_2F_Layout",
       "width": 10,
       "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/OldaleTown_HelperHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown_HelperHouse_2F/map.bin"
+      "border_filepath": "data/layouts/SandgemTown_HelperHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTown_HelperHouse_2F/map.bin"
     },
     {
       "id": "LAYOUT_GATE_JUBILIFE",

@@ -98,7 +98,7 @@
 #define VAR_UNUSED_0x404E                                0x404E // Unused Var
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_TWINLEAF_TOWN_STATE                        0x4050
-#define VAR_OLDALE_TOWN_STATE                            0x4051
+#define VAR_SANDGEM_TOWN_STATE                            0x4051
 #define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
@@ -149,7 +149,7 @@
 #define VAR_ROUTE134_STATE                               0x4081 // Unused Var
 #define VAR_VERITY_STATE                                 0x4082
 #define VAR_UNUSED_0x4083                                0x4083 // Unused Var
-#define VAR_BIRCH_LAB_STATE                              0x4084
+#define VAR_ROWAN_LAB_STATE                              0x4084
 #define VAR_PETALBURG_GYM_STATE                          0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
 #define VAR_CONTEST_HALL_STATE                           0x4086
 #define VAR_CABLE_CLUB_STATE                             0x4087
