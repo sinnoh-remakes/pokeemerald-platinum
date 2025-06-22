@@ -24,6 +24,12 @@
 #define P_HISUIAN_FORMS                  TRUE
 #undef P_PALDEAN_FORMS
 #define P_PALDEAN_FORMS                  TRUE
+#undef P_PIKACHU_EXTRA_FORMS
+#define P_PIKACHU_EXTRA_FORMS            TRUE
+#undef P_COSPLAY_PIKACHU_FORMS
+#define P_COSPLAY_PIKACHU_FORMS          TRUE
+#undef P_CAP_PIKACHU_FORMS
+#define P_CAP_PIKACHU_FORMS              TRUE
 #undef P_GEN_2_CROSS_EVOS
 #define P_GEN_2_CROSS_EVOS               TRUE
 #undef P_GEN_3_CROSS_EVOS
@@ -1132,5 +1138,8 @@
 #define B_FLAG_SLEEP_CLAUSE              TESTING_FLAG_SLEEP_CLAUSE
 #undef B_FLAG_INVERSE_BATTLE
 #define B_FLAG_INVERSE_BATTLE            TESTING_FLAG_INVERSE_BATTLE
+
+//  Move animation testing
+#define T_SHOULD_RUN_MOVE_ANIM  FALSE       //  If TRUE, enables the move animation tests, these are very computationally heavy and takes a long time to run.
 
 #endif // GUARD_CONFIG_TEST_H

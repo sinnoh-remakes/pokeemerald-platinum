@@ -1,6 +1,3 @@
-.set LOCALID_RIVAL, 4
-.set LOCALID_BLOCK, 3
-
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_OnFrame

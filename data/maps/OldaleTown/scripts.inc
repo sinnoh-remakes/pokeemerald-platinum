@@ -1,7 +1,3 @@
-.set LOCALID_HELPER, 1
-.set LOCALID_RIVAL, 2
-.set LOCALID_PROF, 3
-
 OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_OnFrame

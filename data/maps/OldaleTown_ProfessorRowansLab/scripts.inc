@@ -1,7 +1,3 @@
-.set LOCALID_PROF, 1
-.set LOCALID_HELPER, 2
-.set LOCALID_AIDE, 3
-
 OldaleTown_ProfessorRowansLab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_ProfessorRowansLab_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_ProfessorRowansLab_OnFrame

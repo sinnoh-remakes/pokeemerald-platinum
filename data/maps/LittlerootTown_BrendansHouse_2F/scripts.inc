@@ -1,11 +1,15 @@
-.set LOCALID_RIVAL, 1
-
 LittlerootTown_BrendansHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_2F_OnTransition
 	.byte 0
 
 LittlerootTown_BrendansHouse_2F_OnTransition:
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 0, LittlerootTown_BrendansHouse_2F_Init
+	end
+
+PlayersHouse_2F_EventScript_CheckWallClock::
+	end
+
+PlayersHouse_2F_EventScript_SetWallClock::
 	end
 
 LittlerootTown_BrendansHouse_2F_Init::

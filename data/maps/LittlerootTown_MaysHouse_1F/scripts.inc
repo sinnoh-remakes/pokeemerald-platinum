@@ -1,6 +1,3 @@
-.set LOCALID_MOM, 1
-.set LOCALID_RIVAL, 7
-
 LittlerootTown_MaysHouse_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_MaysHouse_1F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MaysHouse_1F_OnFrame

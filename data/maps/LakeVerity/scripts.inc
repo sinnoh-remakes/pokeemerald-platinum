@@ -1,6 +1,3 @@
-.set LOCALID_RIVAL, 1
-.set LOCALID_CYRUS, 2
-
 LakeVerity_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeVerity_OnFrame
 	.byte 0

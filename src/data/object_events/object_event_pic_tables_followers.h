@@ -205,6 +205,53 @@ static const struct SpriteFrameImage sPicTable_PikachuF[] = {
     overworld_ascending_frames(gObjectEventPic_PikachuF, 4, 4),
 };
 #endif //P_GENDER_DIFFERENCES
+#if P_COSPLAY_PIKACHU_FORMS
+/*static const struct SpriteFrameImage sPicTable_PikachuCosplay[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuCosplay, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuRockStar[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuRockStar, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuBelle[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuBelle, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuPopStar[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuPopStar, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuPhD[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuPhD, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuLibre[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuLibre, 4, 4),
+};*/
+#endif //P_COSPLAY_PIKACHU_FORMS
+
+#if P_CAP_PIKACHU_FORMS
+/*static const struct SpriteFrameImage sPicTable_PikachuOriginal[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuOriginal, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuHoenn[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuHoenn, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuSinnoh[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuSinnoh, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuUnova[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuUnova, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuKalos[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuKalos, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuAlola[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuAlola, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuPartner[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuPartner, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PikachuWorld[] = {
+    overworld_ascending_frames(gObjectEventPic_PikachuWorld, 4, 4),
+};*/
+#endif //P_CAP_PIKACHU_FORMS
 
 #if P_GIGANTAMAX_FORMS
 /*static const struct SpriteFrameImage sPicTable_PikachuGmax[] = {

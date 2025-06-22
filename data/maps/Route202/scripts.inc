@@ -1,5 +1,3 @@
-.set LOCALID_HELPER, 1
-
 Route202_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route202_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route202_OnFrame
