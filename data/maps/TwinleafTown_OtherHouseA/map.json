@@ -1,9 +1,9 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_OTHER_HOUSE_A",
-  "name": "LittlerootTown_OtherHouseA",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_OTHER_HOUSE_A",
+  "id": "MAP_TWINLEAF_TOWN_OTHER_HOUSE_A",
+  "name": "TwinleafTown_OtherHouseA",
+  "layout": "LAYOUT_TWINLEAF_TOWN_OTHER_HOUSE_A",
   "music": "MUS_DP_TWINLEAF_DAY",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_TWINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_OtherHouseA_EventScript_Elder",
+      "script": "TwinleafTown_OtherHouseA_EventScript_Elder",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_OtherHouseA_EventScript_Twin",
+      "script": "TwinleafTown_OtherHouseA_EventScript_Twin",
       "flag": "0"
     }
   ],
@@ -46,7 +46,7 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_map": "MAP_TWINLEAF_TOWN",
       "dest_warp_id": "2"
     }
   ],

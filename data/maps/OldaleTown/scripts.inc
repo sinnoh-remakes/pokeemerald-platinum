@@ -606,7 +606,7 @@ OldaleTown_Text_AnywayLucas:
 	.string "Anyway...\n"
 	.string "Let's go in.$"
 
-@ TODO: THUD change to Thud? Also in LittlerootTown
+@ TODO: THUD change to Thud? Also in Twinleaf Town
 OldaleTown_Text_Thud:
 	.string "THUD!!$"
 

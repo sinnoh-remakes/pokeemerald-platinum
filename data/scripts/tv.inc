@@ -29,7 +29,7 @@ EventScript_MomDadMightLikeThis1::
 	end
 
 EventScript_PlayersHouseMovie::
-	msgbox LittlerootTown_BrendansHouse_1F_Text_MovieOnTV, MSGBOX_DEFAULT
+	msgbox TwinleafTown_PlayersHouse_1F_Text_MovieOnTV, MSGBOX_DEFAULT
 	releaseall
 	end
 

@@ -569,11 +569,11 @@ Route201_EventScript_RivalBattlePiplup::
 Route201_EventScript_PostRivalBattle::
 	msgbox Route201_Text_GoHome, MSGBOX_SIGN
 	setvar VAR_ROUTE201_STATE, 2
-	setvar VAR_LITTLEROOT_TOWN_STATE, 2
-	setvar VAR_LITTLEROOT_INTRO_STATE, 6
+	setvar VAR_TWINLEAF_TOWN_STATE, 2
+	setvar VAR_TWINLEAF_INTRO_STATE, 6
 	clearflag FLAG_HIDE_ROUTE_201_MAN
 	delay 48
-	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 1, 5
+	warp MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F, 1, 5
 	fadedefaultbgm
 	fadescreen FADE_TO_BLACK
 	release

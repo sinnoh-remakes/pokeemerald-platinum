@@ -3330,18 +3330,18 @@ u32 GetPlayerIDAsU32(void)
 u8 CheckForPlayersHouseNews(void)
 {
     // Check if not in Littleroot house map group
-    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F))
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F))
         return PLAYERS_HOUSE_TV_NONE;
 
     // Check if not in player's house (dependent on gender)
     if (gSaveBlock2Ptr->playerGender == MALE)
     {
-        if (gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F))
+        if (gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F))
             return PLAYERS_HOUSE_TV_NONE;
     }
     else
     {
-        if (gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F))
+        if (gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_TWINLEAF_TOWN_RIVALS_HOUSE_1F))
             return PLAYERS_HOUSE_TV_NONE;
     }
 
@@ -3357,11 +3357,11 @@ u8 CheckForPlayersHouseNews(void)
 void GetMomOrDadStringForTVMessage(void)
 {
     // If the player is checking the TV in their house it will only refer to their Mom.
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F))
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F))
     {
         if (gSaveBlock2Ptr->playerGender == MALE)
         {
-            if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F))
+            if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F))
             {
                 StringCopy(gStringVar1, gText_Mom);
                 VarSet(VAR_TEMP_3, 1);
@@ -3369,7 +3369,7 @@ void GetMomOrDadStringForTVMessage(void)
         }
         else
         {
-            if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F))
+            if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_TWINLEAF_TOWN_RIVALS_HOUSE_1F))
             {
                 StringCopy(gStringVar1, gText_Mom);
                 VarSet(VAR_TEMP_3, 1);

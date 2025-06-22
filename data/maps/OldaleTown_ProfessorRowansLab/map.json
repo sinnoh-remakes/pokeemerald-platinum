@@ -3,7 +3,7 @@
   "name": "OldaleTown_ProfessorRowansLab",
   "layout": "LAYOUT_OLDALE_TOWN_PROFESSOR_ROWANS_LAB",
   "music": "MUS_DP_ROWAN_LAB",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_TWINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -40,7 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_HELPER"
+      "flag": "FLAG_HIDE_TWINLEAF_TOWN_BIRCHS_LAB_HELPER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",

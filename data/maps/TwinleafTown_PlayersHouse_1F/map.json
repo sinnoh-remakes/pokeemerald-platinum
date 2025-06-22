@@ -1,9 +1,9 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
-  "name": "LittlerootTown_BrendansHouse_1F",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+  "id": "MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
+  "name": "TwinleafTown_PlayersHouse_1F",
+  "layout": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
   "music": "MUS_DP_TWINLEAF_DAY",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_TWINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -25,8 +25,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_BrendansHouse_1F_EventScript_Mom",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_MOM"
+      "script": "TwinleafTown_PlayersHouse_1F_EventScript_Mom",
+      "flag": "FLAG_HIDE_TWINLEAF_TOWN_PLAYERS_HOUSE_MOM"
     },
     {
       "local_id": "LOCALID_TWINLEAF_PLAYER1F_RIVALMOM",
@@ -48,14 +48,14 @@
       "x": 5,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_map": "MAP_TWINLEAF_TOWN",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
+      "dest_map": "MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
       "dest_warp_id": "0"
     }
   ],
@@ -65,9 +65,9 @@
       "x": 5,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var": "VAR_TWINLEAF_INTRO_STATE",
       "var_value": "2",
-      "script": "LittlerootTown_BrendansHouse_1F_Trigger_Exit"
+      "script": "TwinleafTown_PlayersHouse_1F_Trigger_Exit"
     }
   ],
   "bg_events": [
@@ -77,7 +77,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_1F_EventScript_Kitchen"
+      "script": "TwinleafTown_PlayersHouse_1F_EventScript_Kitchen"
     },
     {
       "type": "sign",
@@ -85,7 +85,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_1F_EventScript_Kitchen"
+      "script": "TwinleafTown_PlayersHouse_1F_EventScript_Kitchen"
     },
     {
       "type": "sign",
@@ -93,7 +93,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_1F_EventScript_Counter"
+      "script": "TwinleafTown_PlayersHouse_1F_EventScript_Counter"
     },
     {
       "type": "sign",
@@ -101,7 +101,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_1F_EventScript_Counter"
+      "script": "TwinleafTown_PlayersHouse_1F_EventScript_Counter"
     },
     {
       "type": "sign",
@@ -109,7 +109,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_1F_EventScript_Counter"
+      "script": "TwinleafTown_PlayersHouse_1F_EventScript_Counter"
     },
     {
       "type": "sign",
@@ -117,7 +117,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "LittlerootTown_BrendansHouse_1F_EventScript_Fridge"
+      "script": "TwinleafTown_PlayersHouse_1F_EventScript_Fridge"
     }
   ]
 }

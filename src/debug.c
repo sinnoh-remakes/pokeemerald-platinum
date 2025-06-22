@@ -1331,7 +1331,7 @@ static void DebugAction_DestroyExtraWindow(u8 taskId)
 
 static const u16 sLocationFlags[] =
 {
-    FLAG_VISITED_LITTLEROOT_TOWN,
+    FLAG_VISITED_TWINLEAF_TOWN,
     FLAG_VISITED_OLDALE_TOWN,
     FLAG_VISITED_DEWFORD_TOWN,
     FLAG_VISITED_LAVARIDGE_TOWN,

@@ -1,7 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
-    "gMapGroup_IndoorLittleroot",
+    "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
@@ -46,7 +46,7 @@
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
-    "LittlerootTown",
+    "TwinleafTown",
     "OldaleTown",
     "DewfordTown",
     "LavaridgeTown",
@@ -97,13 +97,13 @@
     "LakefrontVerity",
     "LakeVerity"
   ],
-  "gMapGroup_IndoorLittleroot": [
-    "LittlerootTown_BrendansHouse_1F",
-    "LittlerootTown_BrendansHouse_2F",
-    "LittlerootTown_MaysHouse_1F",
-    "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_OtherHouseA",
-    "LittlerootTown_OtherHouseB"
+  "gMapGroup_IndoorTwinleaf": [
+    "TwinleafTown_PlayersHouse_1F",
+    "TwinleafTown_PlayersHouse_2F",
+    "TwinleafTown_RivalsHouse_1F",
+    "TwinleafTown_RivalsHouse_2F",
+    "TwinleafTown_OtherHouseA",
+    "TwinleafTown_OtherHouseB"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_ProfessorRowansLab",

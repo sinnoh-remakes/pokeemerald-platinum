@@ -92,14 +92,14 @@
       "blockdata_filepath": "data/layouts/EverGrandeCity/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN",
-      "name": "LittlerootTown_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN",
+      "name": "TwinleafTown_Layout",
       "width": 22,
       "height": 34,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Twinleaf",
-      "border_filepath": "data/layouts/LittlerootTown/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown/map.bin"
     },
     {
       "id": "LAYOUT_OLDALE_TOWN",
@@ -532,44 +532,44 @@
       "blockdata_filepath": "data/layouts/Underwater_Route128/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
-      "name": "LittlerootTown_BrendansHouse_1F_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
+      "name": "TwinleafTown_PlayersHouse_1F_Layout",
       "width": 11,
       "height": 11,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_TwinleafLiving",
-      "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-      "name": "LittlerootTown_BrendansHouse_2F_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
+      "name": "TwinleafTown_PlayersHouse_2F_Layout",
       "width": 10,
       "height": 10,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_TwinleafPlayer",
-      "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
-      "name": "LittlerootTown_MaysHouse_1F_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN_RIVALS_HOUSE_1F",
+      "name": "TwinleafTown_RivalsHouse_1F_Layout",
       "width": 11,
       "height": 11,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_TwinleafLiving",
-      "border_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
-      "name": "LittlerootTown_MaysHouse_2F_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN_RIVALS_HOUSE_2F",
+      "name": "TwinleafTown_RivalsHouse_2F_Layout",
       "width": 10,
       "height": 10,
       "primary_tileset": "gTileset_IndoorTwinleafRival",
       "secondary_tileset": "gTileset_TwinleafRival",
-      "border_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/map.bin"
     },
     {
       "id": "LAYOUT_HOUSE1",
@@ -4392,24 +4392,24 @@
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_OTHER_HOUSE_A",
-      "name": "LittlerootTown_OtherHouseA_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN_OTHER_HOUSE_A",
+      "name": "TwinleafTown_OtherHouseA_Layout",
       "width": 9,
       "height": 9,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_TwinleafOther",
-      "border_filepath": "data/layouts/LittlerootTown_OtherHouseA/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_OtherHouseA/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown_OtherHouseA/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_OtherHouseA/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_OTHER_HOUSE_B",
-      "name": "LittlerootTown_OtherHouseB_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN_OTHER_HOUSE_B",
+      "name": "TwinleafTown_OtherHouseB_Layout",
       "width": 9,
       "height": 9,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_TwinleafOther",
-      "border_filepath": "data/layouts/LittlerootTown_OtherHouseB/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_OtherHouseB/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown_OtherHouseB/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_OtherHouseB/map.bin"
     },
     {
       "id": "LAYOUT_LAKEFRONT_VERITY",

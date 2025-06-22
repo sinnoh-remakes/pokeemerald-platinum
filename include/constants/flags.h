@@ -775,7 +775,7 @@
 #define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
-#define FLAG_HIDE_LITTLEROOT_RIVAL_2F                               0x2D9
+#define FLAG_HIDE_TWINLEAF_RIVAL_2F                               0x2D9
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
 #define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0x2DC
@@ -792,7 +792,7 @@
 #define FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN                       0x2E7
 #define FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT                          0x2E8
 #define FLAG_UNUSED_0x2E9                                           0x2E9
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY                    0x2EA
+#define FLAG_HIDE_TWINLEAF_TOWN_RIVALS_HOUSE_MAY                    0x2EA
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION                  0x2EB
 #define FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER                0x2EC
 #define FLAG_HIDE_SLATEPORT_CITY_SCOTT                              0x2ED
@@ -804,8 +804,8 @@
 #define FLAG_UNUSED_0x2F3                                           0x2F3
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA          0x2F4
 #define FLAG_UNUSED_0x2F5                                           0x2F5
-#define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_MOM                 0x2F6
-#define FLAG_HIDE_LITTLEROOT_TOWN_RIVALS_HOUSE_MOM                  0x2F7
+#define FLAG_HIDE_TWINLEAF_TOWN_PLAYERS_HOUSE_MOM                 0x2F6
+#define FLAG_HIDE_TWINLEAF_TOWN_RIVALS_HOUSE_MOM                  0x2F7
 #define FLAG_UNUSED_0x2F8                                           0x2F8
 #define FLAG_UNUSED_0x2F9                                           0x2F9
 #define FLAG_UNUSED_0x2FA                                           0x2FA
@@ -895,7 +895,7 @@
 #define FLAG_UNUSED_0x34E                                           0x34E
 #define FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD                           0x34F
 #define FLAG_UNUSED_0x350                                           0x350
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL          0x351
+#define FLAG_HIDE_TWINLEAF_TOWN_RIVALS_HOUSE_2F_PICHU_DOLL          0x351
 #define FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON_ASLEEP                   0x352
 #define FLAG_HIDE_ROUTE_119_RIVAL                                   0x353
 #define FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS                         0x354
@@ -935,14 +935,14 @@
 #define FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_ARCHIE           0x376
 #define FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_CAPTAIN_STERN    0x377
 #define FLAG_HIDE_BATTLE_TOWER_OPPONENT                             0x378
-#define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_HELPER                 0x379
+#define FLAG_HIDE_TWINLEAF_TOWN_BIRCHS_LAB_HELPER                 0x379
 #define FLAG_HIDE_ROUTE_119_TEAM_AQUA                               0x37A
 #define FLAG_HIDE_ROUTE_116_MR_BRINEY                               0x37B
 #define FLAG_HIDE_WEATHER_INSTITUTE_1F_WORKERS                      0x37C
 #define FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS                      0x37D
 #define FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND                        0x37E
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_CONTEST_ATTENDANT_2         0x37F
-#define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_UNKNOWN_0x380          0x380
+#define FLAG_HIDE_TWINLEAF_TOWN_BIRCHS_LAB_UNKNOWN_0x380          0x380
 #define FLAG_HIDE_ROUTE_202_HELPER                                  0x381
 #define FLAG_UNUSED_0x382                                           0x382
 #define FLAG_HIDE_TRICK_HOUSE_END_MAN                               0x383
@@ -1365,7 +1365,7 @@
 #define NUM_BADGES                                   (1 + FLAG_BADGE08_GET - FLAG_BADGE01_GET)
 
 // Towns and Cities
-#define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF)
+#define FLAG_VISITED_TWINLEAF_TOWN                (SYSTEM_FLAGS + 0xF)
 #define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)

@@ -99,8 +99,8 @@ OldaleTown_ProfessorRowansLab_EventScript_GivePokedex::
 	applymovement LOCALID_SANDGEM_LAB_HELPER, OldaleTown_ProfessorRowansLab_Movement_Helper2
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_LAB_HELPER
-	setvar VAR_LITTLEROOT_TOWN_STATE, 4
-	setvar VAR_LITTLEROOT_INTRO_STATE, 8
+	setvar VAR_TWINLEAF_TOWN_STATE, 4
+	setvar VAR_TWINLEAF_INTRO_STATE, 8
 	releaseall
 	end
 	
@@ -209,7 +209,7 @@ OldaleTown_ProfessorRowansLab_EventScript_Birch::
 
 @ OldaleTown_ProfessorRowansLab_EventScript_TryRatePokedexOrRegister::
 @ 	@ TODO: Check var below
-@ 	goto_if_unset FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_UNKNOWN_0x380, ProfBirch_EventScript_RatePokedexOrRegister
+@ 	goto_if_unset FLAG_HIDE_TWINLEAF_TOWN_BIRCHS_LAB_UNKNOWN_0x380, ProfBirch_EventScript_RatePokedexOrRegister
 @ 	release
 @ 	end
 

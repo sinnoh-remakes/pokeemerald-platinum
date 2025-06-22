@@ -1,14 +1,14 @@
 {
   "heal_locations": [
     {
-      "id": "HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-      "map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
+      "id": "HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
+      "map": "MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
       "x": 4,
       "y": 2
     },
     {
-      "id": "HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
-      "map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
+      "id": "HEAL_LOCATION_TWINLEAF_TOWN_RIVALS_HOUSE_2F",
+      "map": "MAP_TWINLEAF_TOWN_RIVALS_HOUSE_2F",
       "x": 4,
       "y": 2
     },
@@ -67,14 +67,14 @@
       "y": 49
     },
     {
-      "id": "HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE",
-      "map": "MAP_LITTLEROOT_TOWN",
+      "id": "HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE",
+      "map": "MAP_TWINLEAF_TOWN",
       "x": 5,
       "y": 9
     },
     {
-      "id": "HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE",
-      "map": "MAP_LITTLEROOT_TOWN",
+      "id": "HEAL_LOCATION_TWINLEAF_TOWN_RIVALS_HOUSE",
+      "map": "MAP_TWINLEAF_TOWN",
       "x": 14,
       "y": 9
     },

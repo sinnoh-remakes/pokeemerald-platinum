@@ -4,15 +4,15 @@
 
 
 static const struct HealLocation sHealLocations[NUM_HEAL_LOCATIONS - 1] = {
-    [HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F - 1] = {
-        .mapGroup = MAP_GROUP(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F),
-        .mapNum = MAP_NUM(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F),
+    [HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE_2F - 1] = {
+        .mapGroup = MAP_GROUP(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F),
+        .mapNum = MAP_NUM(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F),
         .x = 4,
         .y = 2,
     },
-    [HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F - 1] = {
-        .mapGroup = MAP_GROUP(MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F),
-        .mapNum = MAP_NUM(MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F),
+    [HEAL_LOCATION_TWINLEAF_TOWN_RIVALS_HOUSE_2F - 1] = {
+        .mapGroup = MAP_GROUP(MAP_TWINLEAF_TOWN_RIVALS_HOUSE_2F),
+        .mapNum = MAP_NUM(MAP_TWINLEAF_TOWN_RIVALS_HOUSE_2F),
         .x = 4,
         .y = 2,
     },
@@ -70,15 +70,15 @@ static const struct HealLocation sHealLocations[NUM_HEAL_LOCATIONS - 1] = {
         .x = 27,
         .y = 49,
     },
-    [HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE - 1] = {
-        .mapGroup = MAP_GROUP(MAP_LITTLEROOT_TOWN),
-        .mapNum = MAP_NUM(MAP_LITTLEROOT_TOWN),
+    [HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE - 1] = {
+        .mapGroup = MAP_GROUP(MAP_TWINLEAF_TOWN),
+        .mapNum = MAP_NUM(MAP_TWINLEAF_TOWN),
         .x = 5,
         .y = 9,
     },
-    [HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE - 1] = {
-        .mapGroup = MAP_GROUP(MAP_LITTLEROOT_TOWN),
-        .mapNum = MAP_NUM(MAP_LITTLEROOT_TOWN),
+    [HEAL_LOCATION_TWINLEAF_TOWN_RIVALS_HOUSE - 1] = {
+        .mapGroup = MAP_GROUP(MAP_TWINLEAF_TOWN),
+        .mapNum = MAP_NUM(MAP_TWINLEAF_TOWN),
         .x = 14,
         .y = 9,
     },

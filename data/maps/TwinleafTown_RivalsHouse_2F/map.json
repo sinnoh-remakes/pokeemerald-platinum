@@ -1,9 +1,9 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
-  "name": "LittlerootTown_MaysHouse_2F",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
+  "id": "MAP_TWINLEAF_TOWN_RIVALS_HOUSE_2F",
+  "name": "TwinleafTown_RivalsHouse_2F",
+  "layout": "LAYOUT_TWINLEAF_TOWN_RIVALS_HOUSE_2F",
   "music": "MUS_DP_TWINLEAF_DAY",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_TWINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -25,8 +25,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_MaysHouse_2F_EventScript_MeetRival",
-      "flag": "FLAG_HIDE_LITTLEROOT_RIVAL_2F"
+      "script": "TwinleafTown_RivalsHouse_2F_EventScript_MeetRival",
+      "flag": "FLAG_HIDE_TWINLEAF_RIVAL_2F"
     }
   ],
   "warp_events": [
@@ -34,7 +34,7 @@
       "x": 2,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
+      "dest_map": "MAP_TWINLEAF_TOWN_RIVALS_HOUSE_1F",
       "dest_warp_id": "1"
     }
   ],
@@ -46,7 +46,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_2F_EventScript_GameCube"
+      "script": "TwinleafTown_PlayersHouse_2F_EventScript_GameCube"
     },
     {
       "type": "sign",
@@ -54,7 +54,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_2F_EventScript_Notebook"
+      "script": "TwinleafTown_PlayersHouse_2F_EventScript_Notebook"
     },
     {
       "type": "sign",
@@ -62,7 +62,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_2F_EventScript_CheckRivalsPC"
+      "script": "TwinleafTown_RivalsHouse_2F_EventScript_CheckRivalsPC"
     }
   ]
 }
