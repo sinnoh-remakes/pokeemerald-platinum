@@ -19,8 +19,8 @@
       "direction": "down"
     },
     {
-      "map": "MAP_SLATEPORT_CITY",
-      "offset": -8,
+      "map": "MAP_JUBILIFE_CITY",
+      "offset": -40,
       "direction": "up"
     }
   ],

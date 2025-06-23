@@ -14,8 +14,8 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_SLATEPORT_CITY",
-      "offset": -2,
+      "map": "MAP_JUBILIFE_CITY",
+      "offset": 0,
       "direction": "left"
     }
   ],
@@ -278,9 +278,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

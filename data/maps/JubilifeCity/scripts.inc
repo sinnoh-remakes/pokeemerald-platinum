@@ -4,7 +4,7 @@ JubilifeCity_MapScripts::
 	.byte 0
 
 JubilifeCity_OnTransition:
-	setflag FLAG_VISITED_Jubilife_CITY
+	setflag FLAG_VISITED_JUBILIFE_CITY
 	@ setvar VAR_CONTEST_HALL_STATE, 0
 	end
 
