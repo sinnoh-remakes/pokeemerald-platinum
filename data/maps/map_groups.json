@@ -1,8 +1,14 @@
 {
   "group_order": [
-    "gMapGroup_TownsAndRoutes",
+    "gMapGroup_Towns",
+    "gMapGroup_Routes",
+    "gMapGroup_Lakes",
+    "gMapGroup_Gates",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
+    "gMapGroup_TownsAndRoutes",
+    "gMapGroup_IndoorLittleroot",
+    "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
     "gMapGroup_IndoorFallarbor",
@@ -17,7 +23,6 @@
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
-    "gMapGroup_Gatehouses",
     "gMapGroup_IndoorRoute104",
     "gMapGroup_IndoorRoute111",
     "gMapGroup_IndoorRoute112",
@@ -36,6 +41,39 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124"
   ],
+  "gMapGroup_Towns": [
+    "TwinleafTown",
+    "SandgemTown"
+  ],
+  "gMapGroup_Routes": [
+    "Route201",
+    "Route202",
+    "Route219",
+    "LakefrontVerity"
+  ],
+  "gMapGroup_Lakes": [
+    "LakeVerity"
+  ],
+  "gMapGroup_Gates": [
+    "Gate_Jubilife"
+  ],
+  "gMapGroup_IndoorTwinleaf": [
+    "TwinleafTown_PlayersHouse_1F",
+    "TwinleafTown_PlayersHouse_2F",
+    "TwinleafTown_RivalsHouse_1F",
+    "TwinleafTown_RivalsHouse_2F",
+    "TwinleafTown_OtherHouseA",
+    "TwinleafTown_OtherHouseB"
+  ],
+  "gMapGroup_IndoorSandgem": [
+    "SandgemTown_ProfessorRowansLab",
+    "SandgemTown_House1",
+    "SandgemTown_HelperHouse_1F",
+    "SandgemTown_HelperHouse_2F",
+    "SandgemTown_PokemonCenter_1F",
+    "SandgemTown_PokemonCenter_2F",
+    "SandgemTown_Mart"
+  ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
     "SlateportCity",
@@ -46,16 +84,15 @@
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
-    "TwinleafTown",
-    "SandgemTown",
+    "LittlerootTown",
+    "OldaleTown",
     "DewfordTown",
     "LavaridgeTown",
     "FallarborTown",
     "VerdanturfTown",
     "PacifidlogTown",
-    "Route201",
-    "Route202",
-    "Route219",
+    "Route101",
+    "Route102",
     "Route103",
     "Route104",
     "Route105",
@@ -72,6 +109,7 @@
     "Route116",
     "Route117",
     "Route118",
+    "Route119",
     "Route120",
     "Route121",
     "Route122",
@@ -93,26 +131,21 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125",
-    "LakefrontVerity",
-    "LakeVerity"
+    "Underwater_Route125"
   ],
-  "gMapGroup_IndoorTwinleaf": [
-    "TwinleafTown_PlayersHouse_1F",
-    "TwinleafTown_PlayersHouse_2F",
-    "TwinleafTown_RivalsHouse_1F",
-    "TwinleafTown_RivalsHouse_2F",
-    "TwinleafTown_OtherHouseA",
-    "TwinleafTown_OtherHouseB"
+  "gMapGroup_IndoorLittleroot": [
+    "LittlerootTown_BrendansHouse_1F",
+    "LittlerootTown_BrendansHouse_2F",
+    "LittlerootTown_MaysHouse_1F",
+    "LittlerootTown_MaysHouse_2F",
+    "LittlerootTown_ProfessorBirchsLab"
   ],
-  "gMapGroup_IndoorSandgem": [
-    "SandgemTown_ProfessorRowansLab",
-    "SandgemTown_House1",
-    "SandgemTown_HelperHouse_1F",
-    "SandgemTown_HelperHouse_2F",
-    "SandgemTown_PokemonCenter_1F",
-    "SandgemTown_PokemonCenter_2F",
-    "SandgemTown_Mart"
+  "gMapGroup_IndoorOldale": [
+    "OldaleTown_House1",
+    "OldaleTown_House2",
+    "OldaleTown_PokemonCenter_1F",
+    "OldaleTown_PokemonCenter_2F",
+    "OldaleTown_Mart"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",
@@ -301,9 +334,6 @@
     "EverGrandeCity_PokemonCenter_2F",
     "EverGrandeCity_PokemonLeague_2F"
   ],
-  "gMapGroup_Gatehouses": [
-    "Gate_Jubilife"
-  ],
   "gMapGroup_IndoorRoute104": [
     "Route104_MrBrineysHouse",
     "Route104_PrettyPetalFlowerShop"
@@ -481,6 +511,7 @@
     "ContestHallCool",
     "ContestHallSmart",
     "ContestHallCute",
+    "InsideOfTruck",
     "SSTidalCorridor",
     "SSTidalLowerDeck",
     "SSTidalRooms",

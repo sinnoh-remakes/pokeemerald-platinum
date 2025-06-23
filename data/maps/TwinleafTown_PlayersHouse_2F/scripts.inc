@@ -6,14 +6,8 @@ TwinleafTown_PlayersHouse_2F_OnTransition:
 	call_if_eq VAR_TWINLEAF_INTRO_STATE, 0, TwinleafTown_PlayersHouse_2F_Init
 	end
 
-PlayersHouse_2F_EventScript_CheckWallClock::
-	end
-
-PlayersHouse_2F_EventScript_SetWallClock::
-	end
-
 TwinleafTown_PlayersHouse_2F_Init::
-	setrespawn HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE_2F
+	setrespawn HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	end
 
@@ -287,7 +281,7 @@ TwinleafTown_PlayersHouse_2F_Movement_ExitRight:
 
 TwinleafTown_PlayersHouse_2F_EventScript_PC::
 	lockall
-	setvar VAR_0x8004, PC_LOCATION_PLAYERS_HOUSE
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
 	msgbox gText_PlayerHouseBootPC, MSGBOX_DEFAULT
@@ -297,7 +291,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_PC::
 	end
 
 TwinleafTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC::
-	setvar VAR_0x8004, PC_LOCATION_PLAYERS_HOUSE
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	playse SE_PC_OFF
 	special DoPCTurnOffEffect
 	releaseall
@@ -365,7 +359,3 @@ TwinleafTown_PlayersHouse_2F_Text_TV:
 TwinleafTown_PlayersHouse_2F_Text_GameCube:
 	.string "It's a Nintendo GameCube!\p"
 	.string "It's controlled by a Gameboy Advance!$"
-
-Common_Text_LookCloserAtMap:
-	.string "{PLAYER} took a closer look at the\n"
-	.string "SINNOH region map.$"

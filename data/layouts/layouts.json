@@ -14,10 +14,10 @@
     {
       "id": "LAYOUT_SLATEPORT_CITY",
       "name": "SlateportCity_Layout",
-      "width": 72,
-      "height": 66,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Jubilife",
+      "width": 40,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/SlateportCity/border.bin",
       "blockdata_filepath": "data/layouts/SlateportCity/map.bin"
     },
@@ -92,24 +92,24 @@
       "blockdata_filepath": "data/layouts/EverGrandeCity/map.bin"
     },
     {
-      "id": "LAYOUT_TWINLEAF_TOWN",
-      "name": "TwinleafTown_Layout",
-      "width": 22,
-      "height": 34,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Twinleaf",
-      "border_filepath": "data/layouts/TwinleafTown/border.bin",
-      "blockdata_filepath": "data/layouts/TwinleafTown/map.bin"
+      "id": "LAYOUT_LITTLEROOT_TOWN",
+      "name": "LittlerootTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LittlerootTown/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
     },
     {
-      "id": "LAYOUT_SANDGEM_TOWN",
-      "name": "SandgemTown_Layout",
-      "width": 34,
-      "height": 34,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Sandgem",
-      "border_filepath": "data/layouts/SandgemTown/border.bin",
-      "blockdata_filepath": "data/layouts/SandgemTown/map.bin"
+      "id": "LAYOUT_OLDALE_TOWN",
+      "name": "OldaleTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/OldaleTown/border.bin",
+      "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
     },
     {
       "id": "LAYOUT_DEWFORD_TOWN",
@@ -162,31 +162,31 @@
       "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE201",
-      "name": "Route201_Layout",
-      "width": 62,
-      "height": 22,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/Route201/border.bin",
-      "blockdata_filepath": "data/layouts/Route201/map.bin"
+      "id": "LAYOUT_ROUTE101",
+      "name": "Route101_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route101/border.bin",
+      "blockdata_filepath": "data/layouts/Route101/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE202",
-      "name": "Route202_Layout",
-      "width": 32,
-      "height": 28,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/Route202/border.bin",
-      "blockdata_filepath": "data/layouts/Route202/map.bin"
+      "id": "LAYOUT_ROUTE102",
+      "name": "Route102_Layout",
+      "width": 50,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route102/border.bin",
+      "blockdata_filepath": "data/layouts/Route102/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
-      "width": 60,
-      "height": 36,
-      "primary_tileset": "gTileset_OutdoorJubilife",
+      "width": 80,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin"
@@ -342,14 +342,14 @@
       "blockdata_filepath": "data/layouts/Route118/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE219",
-      "name": "Route219_Layout",
-      "width": 36,
-      "height": 16,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/Route219/border.bin",
-      "blockdata_filepath": "data/layouts/Route219/map.bin"
+      "id": "LAYOUT_ROUTE119",
+      "name": "Route119_Layout",
+      "width": 40,
+      "height": 140,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route119/border.bin",
+      "blockdata_filepath": "data/layouts/Route119/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE120",
@@ -532,50 +532,60 @@
       "blockdata_filepath": "data/layouts/Underwater_Route128/map.bin"
     },
     {
-      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
-      "name": "TwinleafTown_PlayersHouse_1F_Layout",
+      "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+      "name": "LittlerootTown_BrendansHouse_1F_Layout",
       "width": 11,
-      "height": 11,
-      "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_TwinleafLiving",
-      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/map.bin"
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/map.bin"
     },
     {
-      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
-      "name": "TwinleafTown_PlayersHouse_2F_Layout",
-      "width": 10,
-      "height": 10,
-      "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_TwinleafPlayer",
-      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/map.bin"
+      "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
+      "name": "LittlerootTown_BrendansHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/map.bin"
     },
     {
-      "id": "LAYOUT_TWINLEAF_TOWN_RIVALS_HOUSE_1F",
-      "name": "TwinleafTown_RivalsHouse_1F_Layout",
+      "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
+      "name": "LittlerootTown_MaysHouse_1F_Layout",
       "width": 11,
-      "height": 11,
-      "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_TwinleafLiving",
-      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/map.bin"
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/map.bin"
     },
     {
-      "id": "LAYOUT_TWINLEAF_TOWN_RIVALS_HOUSE_2F",
-      "name": "TwinleafTown_RivalsHouse_2F_Layout",
-      "width": 10,
-      "height": 10,
-      "primary_tileset": "gTileset_IndoorTwinleafRival",
-      "secondary_tileset": "gTileset_TwinleafRival",
-      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/map.bin"
+      "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
+      "name": "LittlerootTown_MaysHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
+      "name": "LittlerootTown_ProfessorBirchsLab_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/map.bin"
     },
     {
       "id": "LAYOUT_HOUSE1",
       "name": "House1_Layout",
-      "width": 9,
-      "height": 8,
+      "width": 10,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/House1/border.bin",
@@ -585,9 +595,9 @@
       "id": "LAYOUT_HOUSE2",
       "name": "House2_Layout",
       "width": 11,
-      "height": 9,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/House2/border.bin",
       "blockdata_filepath": "data/layouts/House2/map.bin"
     },
@@ -2350,6 +2360,16 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/ContestHallCute/border.bin",
       "blockdata_filepath": "data/layouts/ContestHallCute/map.bin"
+    },
+    {
+      "id": "LAYOUT_INSIDE_OF_TRUCK",
+      "name": "InsideOfTruck_Layout",
+      "width": 5,
+      "height": 5,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideOfTruck",
+      "border_filepath": "data/layouts/InsideOfTruck/border.bin",
+      "blockdata_filepath": "data/layouts/InsideOfTruck/map.bin"
     },
     {
       "id": "LAYOUT_SAFARI_ZONE_NORTHWEST",
@@ -4292,6 +4312,16 @@
       "blockdata_filepath": "data/layouts/MeteorFalls_StevensCave/map.bin"
     },
     {
+      "id": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE",
+      "name": "LittlerootTown_ProfessorBirchsLabWithTable_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLabWithTable/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLabWithTable/map.bin"
+    },
+    {
       "id": "LAYOUT_SKY_PILLAR_1F_CLEAN",
       "name": "SkyPillar_1F_Clean_Layout",
       "width": 14,
@@ -4382,6 +4412,56 @@
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
     },
     {
+      "id": "LAYOUT_TWINLEAF_TOWN",
+      "name": "TwinleafTown_Layout",
+      "width": 22,
+      "height": 34,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Twinleaf",
+      "border_filepath": "data/layouts/TwinleafTown/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
+      "name": "TwinleafTown_PlayersHouse_1F_Layout",
+      "width": 11,
+      "height": 11,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_TwinleafLiving",
+      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
+      "name": "TwinleafTown_PlayersHouse_2F_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_TwinleafPlayer",
+      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_RIVALS_HOUSE_1F",
+      "name": "TwinleafTown_RivalsHouse_1F_Layout",
+      "width": 11,
+      "height": 11,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_TwinleafLiving",
+      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_RIVALS_HOUSE_2F",
+      "name": "TwinleafTown_RivalsHouse_2F_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_IndoorTwinleafRival",
+      "secondary_tileset": "gTileset_TwinleafRival",
+      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/map.bin"
+    },
+    {
       "id": "LAYOUT_TWINLEAF_TOWN_OTHER_HOUSE_A",
       "name": "TwinleafTown_OtherHouseA_Layout",
       "width": 9,
@@ -4402,24 +4482,14 @@
       "blockdata_filepath": "data/layouts/TwinleafTown_OtherHouseB/map.bin"
     },
     {
-      "id": "LAYOUT_LAKEFRONT_VERITY",
-      "name": "LakefrontVerity_Layout",
-      "width": 20,
-      "height": 16,
+      "id": "LAYOUT_SANDGEM_TOWN",
+      "name": "SandgemTown_Layout",
+      "width": 34,
+      "height": 34,
       "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/LakefrontVerity/border.bin",
-      "blockdata_filepath": "data/layouts/LakefrontVerity/map.bin"
-    },
-    {
-      "id": "LAYOUT_LAKE_VERITY",
-      "name": "LakeVerity_Layout",
-      "width": 22,
-      "height": 29,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Lake",
-      "border_filepath": "data/layouts/LakeVerity/border.bin",
-      "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
+      "secondary_tileset": "gTileset_Sandgem",
+      "border_filepath": "data/layouts/SandgemTown/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTown/map.bin"
     },
     {
       "id": "LAYOUT_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB",
@@ -4442,6 +4512,26 @@
       "blockdata_filepath": "data/layouts/SandgemTown_HelperHouse_2F/map.bin"
     },
     {
+      "id": "LAYOUT_LAKEFRONT_VERITY",
+      "name": "LakefrontVerity_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route201",
+      "border_filepath": "data/layouts/LakefrontVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakefrontVerity/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VERITY",
+      "name": "LakeVerity_Layout",
+      "width": 22,
+      "height": 29,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Lake",
+      "border_filepath": "data/layouts/LakeVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
+    },
+    {
       "id": "LAYOUT_GATE_JUBILIFE",
       "name": "Gate_Jubilife_Layout",
       "width": 16,
@@ -4450,6 +4540,36 @@
       "secondary_tileset": "gTileset_Gatehouse",
       "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
       "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE201",
+      "name": "Route201_Layout",
+      "width": 62,
+      "height": 22,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route201",
+      "border_filepath": "data/layouts/Route201/border.bin",
+      "blockdata_filepath": "data/layouts/Route201/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE202",
+      "name": "Route202_Layout",
+      "width": 32,
+      "height": 28,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route201",
+      "border_filepath": "data/layouts/Route202/border.bin",
+      "blockdata_filepath": "data/layouts/Route202/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE219",
+      "name": "Route219_Layout",
+      "width": 36,
+      "height": 16,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route201",
+      "border_filepath": "data/layouts/Route219/border.bin",
+      "blockdata_filepath": "data/layouts/Route219/map.bin"
     }
   ]
 }

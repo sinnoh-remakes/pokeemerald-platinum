@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_SLATEPORT_CITY",
-      "offset": -40,
+      "offset": -8,
       "direction": "up"
     }
   ],
@@ -87,7 +87,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_202_ORAN",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_102_ORAN",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -100,7 +100,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_202_PECHA",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_102_PECHA",
       "script": "BerryTreeScript",
       "flag": "0"
     },

@@ -20,7 +20,7 @@ TwinleafTown_RivalsHouse_2F_EventScript_Temp::
 	return
 
 TwinleafTown_RivalsHouse_2F_EventScript_TurnOffPlayerPC::
-	setvar VAR_0x8004, PC_LOCATION_RIVALS_HOUSE
+	setvar VAR_0x8004, PC_LOCATION_MAYS_HOUSE
 	playse SE_PC_OFF
 	special DoPCTurnOffEffect
 	releaseall

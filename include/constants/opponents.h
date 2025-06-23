@@ -321,7 +321,7 @@
 #define TRAINER_SHELBY_3                    315
 #define TRAINER_SHELBY_4                    316
 #define TRAINER_SHELBY_5                    317
-#define TRAINER_TRISTAN_1                   318
+#define TRAINER_CALVIN_1                    318
 #define TRAINER_BILLY                       319
 #define TRAINER_JOSH                        320
 #define TRAINER_TOMMY                       321
@@ -331,12 +331,12 @@
 #define TRAINER_KATELYNN                    325
 #define TRAINER_JAYLEN                      326
 #define TRAINER_DILLON                      327
-#define TRAINER_TRISTAN_2                   328
-#define TRAINER_TRISTAN_3                   329
-#define TRAINER_TRISTAN_4                   330
-#define TRAINER_TRISTAN_5                   331
+#define TRAINER_CALVIN_2                    328
+#define TRAINER_CALVIN_3                    329
+#define TRAINER_CALVIN_4                    330
+#define TRAINER_CALVIN_5                    331
 #define TRAINER_EDDIE                       332
-#define TRAINER_LOGAN                       333
+#define TRAINER_ALLEN                       333
 #define TRAINER_TIMMY                       334
 #define TRAINER_WALLACE                     335
 #define TRAINER_ANDREW                      336
@@ -532,13 +532,13 @@
 #define TRAINER_BRENDAN_ROUTE_103_TORCHIC   526
 #define TRAINER_BRENDAN_ROUTE_110_TORCHIC   527
 #define TRAINER_BRENDAN_ROUTE_119_TORCHIC   528
-#define TRAINER_RIVAL_ROUTE_201_PIPLUP      529
+#define TRAINER_MAY_ROUTE_103_MUDKIP        529
 #define TRAINER_MAY_ROUTE_110_MUDKIP        530
 #define TRAINER_MAY_ROUTE_119_MUDKIP        531
-#define TRAINER_RIVAL_ROUTE_201_TURTWIG     532
+#define TRAINER_MAY_ROUTE_103_TREECKO       532
 #define TRAINER_MAY_ROUTE_110_TREECKO       533
 #define TRAINER_MAY_ROUTE_119_TREECKO       534
-#define TRAINER_RIVAL_ROUTE_201_CHIMCHAR    535
+#define TRAINER_MAY_ROUTE_103_TORCHIC       535
 #define TRAINER_MAY_ROUTE_110_TORCHIC       536
 #define TRAINER_MAY_ROUTE_119_TORCHIC       537
 #define TRAINER_ISAAC_1                     538
@@ -606,7 +606,7 @@
 #define TRAINER_MAY_RUSTBORO_MUDKIP         600
 #define TRAINER_MAXIE_MAGMA_HIDEOUT         601
 #define TRAINER_MAXIE_MT_CHIMNEY            602
-#define TRAINER_NATALIE                     603
+#define TRAINER_TIANA                       603
 #define TRAINER_HALEY_1                     604
 #define TRAINER_JANICE                      605
 #define TRAINER_VIVI                        606
@@ -618,7 +618,7 @@
 #define TRAINER_ROBIN                       612
 #define TRAINER_ANDREA                      613
 #define TRAINER_CRISSY                      614
-#define TRAINER_RICK                        615 // Unused
+#define TRAINER_RICK                        615
 #define TRAINER_LYLE                        616
 #define TRAINER_JOSE                        617
 #define TRAINER_DOUG                        618
@@ -856,14 +856,22 @@
 #define TRAINER_EVERETT                     850
 #define TRAINER_RED                         851
 #define TRAINER_LEAF                        852
-#define TRAINER_BRENDAN_PLACEHOLDER         853
-#define TRAINER_MAY_PLACEHOLDER             854
+#define TRAINER_RIVAL_ROUTE_201_PIPLUP      853
+#define TRAINER_RIVAL_ROUTE_201_TURTWIG     854
+#define TRAINER_RIVAL_ROUTE_201_CHIMCHAR    855
+#define TRAINER_TRISTAN_1                   856
+#define TRAINER_TRISTAN_2                   857
+#define TRAINER_TRISTAN_3                   858
+#define TRAINER_TRISTAN_4                   859
+#define TRAINER_TRISTAN_5                   860
+#define TRAINER_LOGAN                       861
+#define TRAINER_NATALIE                     862
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      855
+#define TRAINERS_COUNT                      863
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
