@@ -541,28 +541,28 @@ Route201_EventScript_BattleDecline::
 	goto Route201_EventScript_RivalBattle
 
 Route201_EventScript_BattleAccept::
-	msgbox Route201_Text_AlwaysWanted, MSGBOX_SIGN
-	switch VAR_STARTER_MON
 	@ // FODO: Prevent wiping out from resetting event
 	@ // Remove 201 state call here and in Route201_EventScript_PostRivalBattle
 	setvar VAR_ROUTE201_STATE, 0
+	msgbox Route201_Text_AlwaysWanted, MSGBOX_SIGN
+	switch VAR_STARTER_MON
 	case 0, Route201_EventScript_RivalBattleTurtwig
 	case 1, Route201_EventScript_RivalBattleChimchar
 	case 2, Route201_EventScript_RivalBattlePiplup
 	end
 
 Route201_EventScript_RivalBattleTurtwig::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_TURTWIG, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route201_Text_RivalDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
 Route201_EventScript_RivalBattleChimchar::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_CHIMCHAR, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route201_Text_RivalDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
 Route201_EventScript_RivalBattlePiplup::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_PIPLUP, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route201_Text_RivalDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
