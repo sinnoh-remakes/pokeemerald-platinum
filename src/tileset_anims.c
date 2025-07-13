@@ -1186,3 +1186,35 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
             sSecondaryTilesetAnimCallback = NULL;
     }
 }
+
+const u16 gTilesetAnims_Twinleaf_Pond_Frame0[] = INCBIN_U16("data/tilesets/secondary/twinleaf/anim/pond_water/00.4bpp");
+const u16 gTilesetAnims_Twinleaf_Pond_Frame1[] = INCBIN_U16("data/tilesets/secondary/twinleaf/anim/pond_water/01.4bpp");
+const u16 gTilesetAnims_Twinleaf_Pond_Frame2[] = INCBIN_U16("data/tilesets/secondary/twinleaf/anim/pond_water/02.4bpp");
+const u16 gTilesetAnims_Twinleaf_Pond_Frame3[] = INCBIN_U16("data/tilesets/secondary/twinleaf/anim/pond_water/03.4bpp");
+
+const u16 *const gTilesetAnims_Twinleaf_Pond[] = {
+    gTilesetAnims_Twinleaf_Pond_Frame0,
+    gTilesetAnims_Twinleaf_Pond_Frame1,
+    gTilesetAnims_Twinleaf_Pond_Frame2,
+    gTilesetAnims_Twinleaf_Pond_Frame3
+};
+
+static void QueueAnimTiles_Twinleaf(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Twinleaf_Pond);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Twinleaf_Pond[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 14 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_Twinleaf(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_Twinleaf(timer / 16);
+    }
+}
+
+void InitTilesetAnim_Twinleaf(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_Twinleaf;
+}

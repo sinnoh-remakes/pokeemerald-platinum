@@ -850,7 +850,7 @@ const struct Tileset gTileset_Twinleaf =
     .palettes = gTilesetPalettes_Twinleaf,
     .metatiles = gMetatiles_Twinleaf,
     .metatileAttributes = gMetatileAttributes_Twinleaf,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Twinleaf,
 };
 
 const struct Tileset gTileset_Gatehouse =
