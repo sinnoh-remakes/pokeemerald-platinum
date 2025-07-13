@@ -42124,7 +42124,7 @@ F_TRAINER_FEMALE |
 #line 16855
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 16856
-        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerPic = TRAINER_PIC_MAY,
         .encounterMusic_gender =
 #line 16858
             TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -42156,7 +42156,7 @@ F_TRAINER_FEMALE |
 #line 16868
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 16869
-        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerPic = TRAINER_PIC_MAY,
         .encounterMusic_gender =
 #line 16871
             TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -42188,7 +42188,7 @@ F_TRAINER_FEMALE |
 #line 16881
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 16882
-        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerPic = TRAINER_PIC_MAY,
         .encounterMusic_gender =
 #line 16884
             TRAINER_ENCOUNTER_MUSIC_MALE,
