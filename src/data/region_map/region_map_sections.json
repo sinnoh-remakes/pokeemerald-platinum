@@ -1,6 +1,6 @@
 {
   "map_sections": [
-    {
+{
       "id": "MAPSEC_TWINLEAF_TOWN",
       "name": "TWINLEAF TOWN",
       "x": 4,
@@ -176,7 +176,7 @@
       "width": 1,
       "height": 2
     },
-    {
+        {
       "id": "MAPSEC_ROUTE_101",
       "name": "ROUTE 101",
       "x": 4,
@@ -1750,9 +1750,6 @@
       "y": 4,
       "width": 1,
       "height": 1
-    },
-    {
-      "id": "MAPSEC_JUBILIFE_CITY"
     }
   ]
 }
