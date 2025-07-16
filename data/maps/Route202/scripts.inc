@@ -94,21 +94,21 @@ Route202_EventScript_HelperTeach5::
 Route202_EventScript_HelperDecline::
 	goto_if_lt VAR_ALTERNATE_TEXT, 3, Route202_EventScript_HelperDeclineFirst
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route202_EventScript_TellFamilyA
-	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_TellFamilyB
+	call_if_eq VAR_RESULT, MALE, Route202_EventScript_TellFamilyDawn
+	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_TellFamilyLucas
 	return
 
 Route202_EventScript_HelperDeclineFirst::
 	setvar VAR_ALTERNATE_TEXT, 3
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route202_EventScript_ReallyEagerA
-	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_ReallyEagerB
+	call_if_eq VAR_RESULT, MALE, Route202_EventScript_ReallyEagerDawn
+	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_ReallyEagerLucas
 	return
 
 Route202_EventScript_HelperAccept::
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route202_EventScript_DemonstrateA
-	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_DemonstrateB
+	call_if_eq VAR_RESULT, MALE, Route202_EventScript_DemonstrateDawn
+	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_DemonstrateLucas
 	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
@@ -121,13 +121,13 @@ Route202_EventScript_HelperAccept::
 	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route202_EventScript_LoweredA
-	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_LoweredB
+	call_if_eq VAR_RESULT, MALE, Route202_EventScript_LoweredDawn
+	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_LoweredLucas
 	giveitem ITEM_POKE_BALL, 5
 	setvar VAR_RESULT, 0
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route202_EventScript_FartherA
-	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_FartherB
+	call_if_eq VAR_RESULT, MALE, Route202_EventScript_FartherDawn
+	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_FartherLucas
 	applymovement LOCALID_ROUTE202_HELPER, Route202_Movement_HelperLeave
 	waitmovement 0
 	removeobject LOCALID_ROUTE202_HELPER
@@ -249,44 +249,44 @@ Route202_Movement_HelperLeave:
 	walk_left
 	step_end
 
-Route202_EventScript_ReallyEagerA::
-	msgbox Route202_Text_ReallyEagerA, MSGBOX_SIGN
+Route202_EventScript_ReallyEagerDawn::
+	msgbox Route202_Text_ReallyEagerDawn, MSGBOX_SIGN
 	return
 
-Route202_EventScript_ReallyEagerB::
-	msgbox Route202_Text_ReallyEagerB, MSGBOX_SIGN
+Route202_EventScript_ReallyEagerLucas::
+	msgbox Route202_Text_ReallyEagerLucas, MSGBOX_SIGN
 	return
 
-Route202_EventScript_TellFamilyA::
-	msgbox Route202_Text_TellFamilyA, MSGBOX_SIGN
+Route202_EventScript_TellFamilyDawn::
+	msgbox Route202_Text_TellFamilyDawn, MSGBOX_SIGN
 	return
 
-Route202_EventScript_TellFamilyB::
-	msgbox Route202_Text_TellFamilyB, MSGBOX_SIGN
+Route202_EventScript_TellFamilyLucas::
+	msgbox Route202_Text_TellFamilyLucas, MSGBOX_SIGN
 	return
 
-Route202_EventScript_DemonstrateA::
-	msgbox Route202_Text_DemonstrateA, MSGBOX_SIGN
+Route202_EventScript_DemonstrateDawn::
+	msgbox Route202_Text_DemonstrateDawn, MSGBOX_SIGN
 	return
 
-Route202_EventScript_DemonstrateB::
-	msgbox Route202_Text_DemonstrateB, MSGBOX_SIGN
+Route202_EventScript_DemonstrateLucas::
+	msgbox Route202_Text_DemonstrateLucas, MSGBOX_SIGN
 	return
 
-Route202_EventScript_LoweredA::
-	msgbox Route202_Text_LoweredA, MSGBOX_DEFAULT
+Route202_EventScript_LoweredDawn::
+	msgbox Route202_Text_LoweredDawn, MSGBOX_DEFAULT
 	return
 
-Route202_EventScript_LoweredB::
-	msgbox Route202_Text_LoweredB, MSGBOX_DEFAULT
+Route202_EventScript_LoweredLucas::
+	msgbox Route202_Text_LoweredLucas, MSGBOX_DEFAULT
 	return
 
-Route202_EventScript_FartherA::
-	msgbox Route202_Text_FartherA, MSGBOX_SIGN
+Route202_EventScript_FartherDawn::
+	msgbox Route202_Text_FartherDawn, MSGBOX_SIGN
 	return
 
-Route202_EventScript_FartherB::
-	msgbox Route202_Text_FartherB, MSGBOX_SIGN
+Route202_EventScript_FartherLucas::
+	msgbox Route202_Text_FartherLucas, MSGBOX_SIGN
 	return
 
 Route202_EventScript_RouteSignSandgem::
@@ -361,7 +361,7 @@ SandgemTown_ProfessorRowansLab_EventScript_MayGivePokeBalls::
 	setvar VAR_RESULT, 0
 	return
 
-Route202_Text_ReallyEagerA:
+Route202_Text_ReallyEagerDawn:
 	.string "Dawn: {PLAYER}?!\p"
 	.string "Did you tell your family that you're\n"
 	.string "helping the professor?\p"
@@ -371,13 +371,8 @@ Route202_Text_ReallyEagerA:
 	.string "But you shouldn't make your mom\n"
 	.string "worry that you've disappeared.$"
 
-Route202_Text_TellFamilyA:
-	.string "Dawn: You should go tell your family\n"
-	.string "that you're helping the professor.\p"
-	.string "The faster the better, too$"
-
-Route202_Text_ReallyEagerB:
-	.string "Dawn: {PLAYER}?!\p"
+Route202_Text_ReallyEagerLucas:
+	.string "Lucas: {PLAYER}?!\p"
 	.string "Did you tell your family that you're\n"
 	.string "helping the professor?\p"
 	.string "...I bet you didn't, did you?\p"
@@ -386,40 +381,31 @@ Route202_Text_ReallyEagerB:
 	.string "But you shouldn't make your mom\n"
 	.string "worry that you've upped and left.$"
 
-Route202_Text_TellFamilyB:
+Route202_Text_TellFamilyDawn:
+	.string "Dawn: You should go tell your family\n"
+	.string "that you're helping the professor.\p"
+	.string "The faster the better, too$"
+
+Route202_Text_TellFamilyLucas:
 	.string "Lucas: Why don't you go tell your\n"
 	.string "family that the professor asked for\l"
 	.string "your help?\p"
 	.string "You should do it right away.$"
 
-Route202_Text_DemonstrateA:
+Route202_Text_DemonstrateDawn:
 	.string "Dawn: Oh, that's right!\p"
 	.string "{PLAYER}, I haven't shown you\n"
 	.string "how to catch a Pokémon.\p"
 	.string "I'll demonstrate how to catch\n"
 	.string "one, so just watch me, OK?$"
 
-Route202_Text_DemonstrateB:
+Route202_Text_DemonstrateLucas:
 	.string "Lucas: {PLAYER}, do you know\n"
 	.string "how to catch a Pokémon?\p"
 	.string "I'll demonstrate how to catch\n"
 	.string "one, so just watch, OK?$"
 
-Route202_Text_LoweredA:
-	.string "Lucas: And that's how it's done.\p"
-	.string "Actually, I should have lowered the\n"
-	.string "target's HP some more.\p"
-	.string "Yup, the important thing is to lower\n"
-	.string "the Pokémon's HP as much as possible.\p"
-	.string "See, a healthy Pokémon isn't easy to\n"
-	.string "catch.\p"
-	.string "Oh, yeah. They also get easier to\n"
-	.string "catch if you make one of your\l"
-	.string "Pokémon put them to sleep or such.\p"
-	.string "Here, {PLAYER}, I'll give you\n"
-	.string "five Poké Balls to get you started.$"
-
-Route202_Text_LoweredB:
+Route202_Text_LoweredDawn:
 	.string "Dawn: Giggle...\n"
 	.string "See? Isn't it neat?\p"
 	.string "Actually, it's better to lower your\n"
@@ -435,7 +421,21 @@ Route202_Text_LoweredB:
 	.string "started, I'll give you five\l"
 	.string "Poké Balls!$"
 
-Route202_Text_FartherA:
+Route202_Text_LoweredLucas:
+	.string "Lucas: And that's how it's done.\p"
+	.string "Actually, I should have lowered the\n"
+	.string "target's HP some more.\p"
+	.string "Yup, the important thing is to lower\n"
+	.string "the Pokémon's HP as much as possible.\p"
+	.string "See, a healthy Pokémon isn't easy to\n"
+	.string "catch.\p"
+	.string "Oh, yeah. They also get easier to\n"
+	.string "catch if you make one of your\l"
+	.string "Pokémon put them to sleep or such.\p"
+	.string "Here, {PLAYER}, I'll give you\n"
+	.string "five Poké Balls to get you started.$"
+
+Route202_Text_FartherDawn:
 	.string "If you have lots of Pokémon with you,\n"
 	.string "it will be safer on long trips.\p"
 	.string "Plus, it will be alot more fun\n"
@@ -443,7 +443,7 @@ Route202_Text_FartherA:
 	.string "OK, I need to get going.\n"
 	.string "Bye, now!$"
 
-Route202_Text_FartherB:
+Route202_Text_FartherLucas:
 	.string "If you have lots of Pokémon with you,\n"
 	.string "you'll be able to travel farther.\p"
 	.string "That way, you'll have a better shot\n"

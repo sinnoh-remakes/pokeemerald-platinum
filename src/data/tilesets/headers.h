@@ -850,7 +850,7 @@ const struct Tileset gTileset_Twinleaf =
     .palettes = gTilesetPalettes_Twinleaf,
     .metatiles = gMetatiles_Twinleaf,
     .metatileAttributes = gMetatileAttributes_Twinleaf,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Twinleaf,
 };
 
 const struct Tileset gTileset_Gatehouse =
@@ -894,7 +894,7 @@ const struct Tileset gTileset_Lake =
     .palettes = gTilesetPalettes_Lake,
     .metatiles = gMetatiles_Lake,
     .metatileAttributes = gMetatileAttributes_Lake,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Lake,
 };
 
 const struct Tileset gTileset_IndoorTwinleaf =

@@ -1,5 +1,53 @@
 {
   "map_sections": [
+{
+      "id": "MAPSEC_TWINLEAF_TOWN",
+      "name": "TWINLEAF TOWN",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SANDGEM_TOWN",
+      "name": "SANDGEM TOWN",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_JUBILIFE_CITY",
+      "name": "JUBILIFE CITY",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_201",
+      "name": "ROUTE 201",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_202",
+      "name": "ROUTE 202",
+      "x": 4,
+      "y": 11,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_219",
+      "name": "ROUTE 119",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 6
+    },
     {
       "id": "MAPSEC_LITTLEROOT_TOWN",
       "name": "LITTLEROOT TOWN",
@@ -128,7 +176,7 @@
       "width": 1,
       "height": 2
     },
-    {
+        {
       "id": "MAPSEC_ROUTE_101",
       "name": "ROUTE 101",
       "x": 4,
@@ -431,46 +479,6 @@
       "y": 9,
       "width": 4,
       "height": 1
-    },
-    {
-      "id": "MAPSEC_TWINLEAF_TOWN",
-      "name": "TWINLEAF TOWN",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_SANDGEM_TOWN",
-      "name": "OLDALE TOWN",
-      "x": 4,
-      "y": 9,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_201",
-      "name": "ROUTE 201",
-      "x": 4,
-      "y": 10,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_202",
-      "name": "ROUTE 202",
-      "x": 2,
-      "y": 9,
-      "width": 2,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_219",
-      "name": "ROUTE 119",
-      "x": 11,
-      "y": 0,
-      "width": 1,
-      "height": 6
     },
     {
       "id": "MAPSEC_UNDERWATER_SOOTOPOLIS",
@@ -1742,9 +1750,6 @@
       "y": 4,
       "width": 1,
       "height": 1
-    },
-    {
-      "id": "MAPSEC_JUBILIFE_CITY"
     }
   ]
 }

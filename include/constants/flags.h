@@ -663,7 +663,7 @@
 #define FLAG_HIDE_VERITY_INTRO                 0x268
 #define FLAG_HIDE_ROUTE_201_RIVAL              0x269
 #define FLAG_HIDE_ROUTE_201_MAN                0x26A
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
+#define FLAG_HIDE_SANDGEM_LAB_HELPER           0x26B
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag

@@ -99,6 +99,7 @@ SandgemTown_ProfessorRowansLab_EventScript_GivePokedex::
 	applymovement LOCALID_SANDGEM_LAB_HELPER, SandgemTown_ProfessorRowansLab_Movement_Helper2
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_LAB_HELPER
+	setflag FLAG_HIDE_SANDGEM_LAB_HELPER
 	setvar VAR_TWINLEAF_TOWN_STATE, 4
 	setvar VAR_TWINLEAF_INTRO_STATE, 8
 	releaseall
