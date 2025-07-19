@@ -24,7 +24,7 @@
     {
       "id": "LAYOUT_JUBILIFE_CITY",
       "name": "JubilifeCity_Layout",
-      "width": 72,
+      "width": 74,
       "height": 66,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Jubilife",
@@ -4580,6 +4580,16 @@
       "secondary_tileset": "gTileset_Gatehouse",
       "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
       "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE203",
+      "name": "Route203_Layout",
+      "width": 48,
+      "height": 42,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route201",
+      "border_filepath": "data/layouts/Route203/border.bin",
+      "blockdata_filepath": "data/layouts/Route203/map.bin"
     }
   ]
 }
