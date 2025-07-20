@@ -1015,5 +1015,5 @@ const struct Tileset gTileset_Route203 =
     .palettes = gTilesetPalettes_Route203,
     .metatiles = gMetatiles_Route203,
     .metatileAttributes = gMetatileAttributes_Route203,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Route203,
 };

@@ -1219,6 +1219,20 @@ void InitTilesetAnim_Twinleaf(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_Twinleaf;
 }
 
+static void TilesetAnim_Route203(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_Twinleaf_Pond(timer / 16);
+    }
+}
+
+void InitTilesetAnim_Route203(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Route203;
+}
+
 const u16 gTilesetAnims_Lake_Water_Frame0[] = INCBIN_U16("data/tilesets/secondary/lake/anim/sea_water/00.4bpp");
 const u16 gTilesetAnims_Lake_Water_Frame1[] = INCBIN_U16("data/tilesets/secondary/lake/anim/sea_water/01.4bpp");
 const u16 gTilesetAnims_Lake_Water_Frame2[] = INCBIN_U16("data/tilesets/secondary/lake/anim/sea_water/02.4bpp");
