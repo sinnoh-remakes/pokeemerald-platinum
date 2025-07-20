@@ -1006,3 +1006,14 @@ const struct Tileset gTileset_Jubilife =
     .metatileAttributes = gMetatileAttributes_Jubilife,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route203 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route203,
+    .palettes = gTilesetPalettes_Route203,
+    .metatiles = gMetatiles_Route203,
+    .metatileAttributes = gMetatileAttributes_Route203,
+    .callback = NULL,
+};

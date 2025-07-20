@@ -4587,7 +4587,7 @@
       "width": 64,
       "height": 40,
       "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route201",
+      "secondary_tileset": "gTileset_Route203",
       "border_filepath": "data/layouts/Route203/border.bin",
       "blockdata_filepath": "data/layouts/Route203/map.bin"
     }
