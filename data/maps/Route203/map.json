@@ -24,7 +24,7 @@
       "local_id": "LOCALID_ROUTE203_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_BARRY",
       "x": 8,
-      "y": 24,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
