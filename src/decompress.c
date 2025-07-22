@@ -7,6 +7,8 @@
 #include "text.h"
 #include "menu.h"
 
+EWRAM_DATA ALIGNED(4) u8 gDecompressionBuffer[0x4000] = {0};
+
 void LZDecompressWram(const u32 *src, void *dest)
 {
     LZ77UnCompWram(src, dest);
@@ -62,6 +64,36 @@ u32 LoadCompressedSpriteSheetOverrideBuffer(const struct CompressedSpriteSheet *
 {
     LZDecompressWram(src->data, buffer);
     return DoLoadCompressedSpriteSheet(src, buffer);
+}
+
+void LoadCompressedSpritePalette(const struct CompressedSpritePalette *src)
+{
+    struct SpritePalette dest;
+
+    LZ77UnCompWram(src->data, gDecompressionBuffer);
+    dest.data = (void *) gDecompressionBuffer;
+    dest.tag = src->tag;
+    LoadSpritePalette(&dest);
+}
+
+void LoadCompressedSpritePaletteWithTag(const u32 *pal, u16 tag)
+{
+    struct SpritePalette dest;
+
+    LZ77UnCompWram(pal, gDecompressionBuffer);
+    dest.data = (void *) gDecompressionBuffer;
+    dest.tag = tag;
+    LoadSpritePalette(&dest);
+}
+
+void LoadCompressedSpritePaletteOverrideBuffer(const struct CompressedSpritePalette *src, void *buffer)
+{
+    struct SpritePalette dest;
+
+    LZ77UnCompWram(src->data, buffer);
+    dest.data = buffer;
+    dest.tag = src->tag;
+    LoadSpritePalette(&dest);
 }
 
 // This can be used for either compressed or uncompressed sprite sheets

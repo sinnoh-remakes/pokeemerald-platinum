@@ -691,7 +691,7 @@ void DecompressTrainerFrontPic(u16 frontPicId, u8 battler)
     u8 position = GetBattlerPosition(battler);
     DecompressPicFromTable(&gTrainerSprites[frontPicId].frontPic,
                            gMonSpritesGfxPtr->spritesGfx[position]);
-    LoadSpritePalette(&gTrainerSprites[frontPicId].palette);
+    LoadCompressedSpritePalette(&gTrainerSprites[frontPicId].palette);
 }
 
 void DecompressTrainerBackPic(u16 backPicId, u8 battler)

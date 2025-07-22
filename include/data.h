@@ -33,7 +33,7 @@ struct TrainerSprite
 {
     u8 y_offset;
     struct CompressedSpriteSheet frontPic;
-    struct SpritePalette palette;
+    struct CompressedSpritePalette palette;
     const union AnimCmd *const *const animation;
     const struct Coords16 mugshotCoords;
     s16 mugshotRotation;
@@ -43,7 +43,7 @@ struct TrainerBacksprite
 {
     struct MonCoords coordinates;
     struct CompressedSpriteSheet backPic;
-    struct SpritePalette palette;
+    struct CompressedSpritePalette palette;
     const union AnimCmd *const *const animation;
 };
 
