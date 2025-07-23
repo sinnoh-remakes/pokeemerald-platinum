@@ -103,3 +103,18 @@
             },
         },
     },
+#line 41
+    [DIFFICULTY_NORMAL][PARTNER_NONE] =
+    {
+#line 43
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+#line 44
+        .trainerPic = TRAINER_BACK_PIC_LUCAS,
+        .encounterMusic_gender =
+#line 46
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 0,
+        .party = (const struct TrainerMon[])
+        {
+        },
+    },
