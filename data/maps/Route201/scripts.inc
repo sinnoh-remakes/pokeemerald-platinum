@@ -541,9 +541,7 @@ Route201_EventScript_BattleDecline::
 	goto Route201_EventScript_RivalBattle
 
 Route201_EventScript_BattleAccept::
-	@ // FODO: Prevent wiping out from resetting event
-	@ // Remove 201 state call here and in Route201_EventScript_PostRivalBattle
-	setvar VAR_ROUTE201_STATE, 0
+	setvar B_FLAG_NO_WHITEOUT
 	msgbox Route201_Text_AlwaysWanted, MSGBOX_SIGN
 	switch VAR_STARTER_MON
 	case 0, Route201_EventScript_RivalBattleTurtwig
@@ -572,6 +570,7 @@ Route201_EventScript_PostRivalBattle::
 	setvar VAR_TWINLEAF_TOWN_STATE, 2
 	setvar VAR_TWINLEAF_INTRO_STATE, 6
 	clearflag FLAG_HIDE_ROUTE_201_MAN
+	clearflag B_FLAG_NO_WHITEOUT
 	delay 48
 	warp MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F, 1, 5
 	fadedefaultbgm
