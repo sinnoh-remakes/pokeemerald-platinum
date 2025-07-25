@@ -41,6 +41,22 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_ROUTE_203",
+      "name": "ROUTE 203",
+      "x": 4,
+      "y": 11,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_204",
+      "name": "ROUTE 204",
+      "x": 4,
+      "y": 11,
+      "width": 2,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_ROUTE_219",
       "name": "ROUTE 119",
       "x": 4,

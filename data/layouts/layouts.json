@@ -4580,6 +4580,26 @@
       "secondary_tileset": "gTileset_Gatehouse",
       "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
       "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE203",
+      "name": "Route203_Layout",
+      "width": 64,
+      "height": 40,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route203",
+      "border_filepath": "data/layouts/Route203/border.bin",
+      "blockdata_filepath": "data/layouts/Route203/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE204",
+      "name": "Route204_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route203",
+      "border_filepath": "data/layouts/Route204/border.bin",
+      "blockdata_filepath": "data/layouts/Route204/map.bin"
     }
   ]
 }
