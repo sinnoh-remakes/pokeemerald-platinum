@@ -89,6 +89,7 @@ TwinleafTown_EventScript_RivalMeet::
 	end
 
 TwinleafTown_Movement_PlayerBump:
+	face_up
 	lock_facing_direction
 	walk_fast_down
 	unlock_facing_direction
