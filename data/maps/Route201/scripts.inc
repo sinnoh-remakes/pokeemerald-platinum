@@ -541,7 +541,7 @@ Route201_EventScript_BattleDecline::
 	goto Route201_EventScript_RivalBattle
 
 Route201_EventScript_BattleAccept::
-	setvar B_FLAG_NO_WHITEOUT
+	setflag B_FLAG_NO_WHITEOUT
 	msgbox Route201_Text_AlwaysWanted, MSGBOX_SIGN
 	switch VAR_STARTER_MON
 	case 0, Route201_EventScript_RivalBattleTurtwig
