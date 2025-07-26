@@ -574,7 +574,7 @@ Route201_EventScript_PostRivalBattle::
 	delay 48
 	warp MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F, 1, 5
 	fadedefaultbgm
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	release
 	end
 
