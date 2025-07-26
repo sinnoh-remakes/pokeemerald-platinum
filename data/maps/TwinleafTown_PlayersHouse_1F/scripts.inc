@@ -26,7 +26,6 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomMessage::
 	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
 	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceUp
 	waitmovement 0
-	delay 10
 	playse SE_PIN
 	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_ExclamationMark
 	waitmovement 0
