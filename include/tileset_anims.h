@@ -34,5 +34,6 @@ void InitTilesetAnim_BattlePyramid(void);
 void InitTilesetAnim_Twinleaf(void);
 void InitTilesetAnim_Lake(void);
 void InitTilesetAnim_Route203(void);
+void InitTilesetAnim_Route204(void);
 
 #endif // GUARD_TILESET_ANIMS_H
