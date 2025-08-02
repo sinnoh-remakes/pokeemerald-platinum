@@ -1,4 +1,3 @@
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -237,13 +236,17 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphir
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Barry;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight;
+
+// Sinnoh event objects
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Barry;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -255,7 +258,6 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
-    [OBJ_EVENT_GFX_LUCAS_NORMAL] =             &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
     [OBJ_EVENT_GFX_BRENDAN_SURFING] =          &gObjectEventGraphicsInfo_BrendanSurfing,
@@ -499,6 +501,26 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
+    [OBJ_EVENT_GFX_LUCAS_NORMAL] =             &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_BIKE] =               &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_FIELD_MOVE] =         &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_FISHING] =            &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_HEAL] =               &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_POKETCH] =            &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_SAVE] =               &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_SURF] =               &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_SEEKER] =             &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_WATERING] =           &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_DAWN_NORMAL] =              &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_BIKE] =                &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_FIELD_MOVE] =          &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_FISHING] =             &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_HEAL] =                &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_POKETCH] =             &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_SAVE] =                &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_SURF] =                &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_SEEKER] =              &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_WATERING] =            &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_PROF_ROWAN] =               &gObjectEventGraphicsInfo_ProfRowan,
     [OBJ_EVENT_GFX_BARRY] =                    &gObjectEventGraphicsInfo_Barry,
 };
