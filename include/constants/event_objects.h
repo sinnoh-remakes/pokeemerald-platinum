@@ -4,7 +4,7 @@
 #include "constants/global.h"
 #include "constants/map_event_ids.h"
 
-#define OBJ_EVENT_GFX_BRENDAN_NORMAL               0
+#define OBJ_EVENT_GFX_LUCAS_NORMAL                 0
 #define OBJ_EVENT_GFX_BRENDAN_MACH_BIKE            1
 #define OBJ_EVENT_GFX_BRENDAN_SURFING              2
 #define OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE           3
@@ -243,14 +243,16 @@
 #define OBJ_EVENT_GFX_LINK_RS_MAY                236
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
-#define OBJ_EVENT_GFX_POKE_BALL                  239
-#define OBJ_EVENT_GFX_OW_MON                     240
-#define OBJ_EVENT_GFX_LIGHT_SPRITE               241
+#define OBJ_EVENT_GFX_BRENDAN_NORMAL             239
 
-// Sinnoh Event Objects
-#define OBJ_EVENT_GFX_PROF_ROWAN                 242
-#define OBJ_EVENT_GFX_BARRY                      243
-#define OBJ_EVENT_GFX_JOHANNA                    244
+// Begin pokemon event objects
+#define OBJ_EVENT_GFX_POKE_BALL                  240
+#define OBJ_EVENT_GFX_OW_MON                     241
+#define OBJ_EVENT_GFX_LIGHT_SPRITE               242
+
+// Sinnoh event objects
+#define OBJ_EVENT_GFX_PROF_ROWAN                 243
+#define OBJ_EVENT_GFX_BARRY                      244
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
@@ -348,7 +350,7 @@
 #define OBJ_EVENT_ID_PLAYER LOCALID_PLAYER
 
 // Moved from src/event_object_movement.c so that they're accesible from other files.
-#define OBJ_EVENT_PAL_TAG_BRENDAN                 0x1100
+#define OBJ_EVENT_PAL_TAG_LUCAS                   0x1100
 #define OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION      0x1101
 #define OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION       0x1102
 #define OBJ_EVENT_PAL_TAG_NPC_1                   0x1103
@@ -385,11 +387,12 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_BRENDAN                 0x1125
 
-// Sinnoh Event Objects
-#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1125
-#define OBJ_EVENT_PAL_TAG_BARRY                   0x1126
-#define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1127
+// Sinnoh event palettes
+#define OBJ_EVENT_PAL_TAG_LUCAS                   0x1126
+#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1127
+#define OBJ_EVENT_PAL_TAG_BARRY                   0x1128
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
