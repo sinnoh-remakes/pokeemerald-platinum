@@ -1,6 +1,7 @@
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Barry;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Johanna;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
@@ -259,6 +260,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_PROF_ROWAN] =               &gObjectEventGraphicsInfo_ProfRowan,
     [OBJ_EVENT_GFX_BARRY] =                    &gObjectEventGraphicsInfo_Barry,
     [OBJ_EVENT_GFX_JOHANNA] =                  &gObjectEventGraphicsInfo_Johanna,
+    [OBJ_EVENT_GFX_LUCAS_NORMAL] =             &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
     [OBJ_EVENT_GFX_BRENDAN_SURFING] =          &gObjectEventGraphicsInfo_BrendanSurfing,
