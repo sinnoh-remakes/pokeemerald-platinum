@@ -1,3 +1,7 @@
+static const struct SpriteFrameImage sPicTable_LucasNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_LucasNormalRunning, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
 };
