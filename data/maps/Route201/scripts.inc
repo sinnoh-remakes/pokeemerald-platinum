@@ -8,7 +8,6 @@ Route201_MapScripts::
 	@ 2: Met the professor
 	@ 3: Entered lake event
 	@ 4: Finished lake event
-	@ 5: Received Potion sample
 	
 	@ State descriptions for VAR_FOLLOWER_TEXT
 	@ 1-6: Visit lake with Rival
@@ -701,27 +700,18 @@ Route201_EventScript_LassTalk::
 	end
 
 Route201_EventScript_MartSample::
-	lockall
-	goto_if_eq VAR_ROUTE201_STATE, 4, Route201_EventScript_MartSample1
-	goto Route201_EventScript_MartSample2
-	end
-
-Route201_EventScript_MartSample1::
-	msgbox Route201_Text_MartSample1, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_ROUTE201_RECEIVED_POTION, Route201_EventScript_MartSample2
+	msgbox Route201_Text_MartSample1, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
-	goto_if_eq VAR_RESULT, FALSE, Route201_EventScript_BagIsFull
-	setvar VAR_ROUTE201_STATE, 5
-	releaseall
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_ROUTE201_RECEIVED_POTION
+	release
 	end
 
 Route201_EventScript_MartSample2::
 	msgbox Route201_Text_MartSample2, MSGBOX_NPC
-	releaseall
-	end
-
-Route201_EventScript_BagIsFull::
-	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
-	releaseall
 	end
 
 Route201_EventScript_SchoolKidTalk::
