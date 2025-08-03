@@ -496,7 +496,7 @@ TwinleafTown_Text_Guitarist3:
 
 TwinleafTown_Text_Guitarist4:
 	.string "Everyone goes off on adventures,\n"
-	.string "and then they gradually group up...$"
+	.string "and then they gradually grow up...$"
 
 TwinleafTown_Text_TownSign:
 	.string "Twinleaf Town\n"
