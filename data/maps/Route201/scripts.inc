@@ -594,8 +594,7 @@ Route201_EventScript_RivalLake::
 	call_if_eq VAR_0x8004, 3, Route201_EventScript_RivalShift3
 	call_if_eq VAR_0x8004, 4, Route201_EventScript_RivalShift4
 	msgbox Route201_Text_NothingToFear, MSGBOX_SIGN
-	loadword 0 Route201_EventScript_Rival
-	setfollowernpc LOCALID_ROUTE201_RIVAL 0x100
+	setfollowernpc LOCALID_ROUTE201_RIVAL 0 Route201_EventScript_Rival
 	release
 	end
 
@@ -641,14 +640,14 @@ Route201_EventScript_RivalTalk6::
 
 Route201_EventScript_FollowLeave::
 	lock
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox Route201_Text_FollowLeave, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 30
 	release
@@ -656,14 +655,14 @@ Route201_EventScript_FollowLeave::
 
 Route201_EventScript_FollowGrass::
 	lock
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 30
 	release
@@ -672,14 +671,14 @@ Route201_EventScript_FollowGrass::
 Route201_EventScript_FollowGrass2::
 	lock
 	goto_if_eq VAR_FACING, DIR_EAST, Route201_EventScript_FollowGrass
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceUp
 	waitmovement 0
 	delay 30
 	release
@@ -702,12 +701,12 @@ Route201_EventScript_LassTalk::
 	end
 
 Route201_EventScript_MartSample::
+	lockall
 	goto_if_eq VAR_ROUTE201_STATE, 4, Route201_EventScript_MartSample1
 	goto Route201_EventScript_MartSample2
 	end
 
 Route201_EventScript_MartSample1::
-	lockall
 	msgbox Route201_Text_MartSample1, MSGBOX_NPC
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Route201_EventScript_BagIsFull
@@ -717,11 +716,12 @@ Route201_EventScript_MartSample1::
 
 Route201_EventScript_MartSample2::
 	msgbox Route201_Text_MartSample2, MSGBOX_NPC
+	releaseall
 	end
 
 Route201_EventScript_BagIsFull::
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
-	release
+	releaseall
 	end
 
 Route201_EventScript_SchoolKidTalk::
