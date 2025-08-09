@@ -53,10 +53,8 @@ LakeVerity_EventScript_IntroScene::
 	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_RIVAL, LakeVerity_Movement_RunUp
 	waitmovement 0
@@ -80,10 +78,8 @@ LakeVerity_EventScript_IntroScene::
 	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	msgbox LakeVerity_Text_NoBalls, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_RIVAL, LakeVerity_Movement_RivalLeave

@@ -43,10 +43,8 @@ Route201_EventScript_RivalSee::
 	playse SE_PIN
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	goto_if_eq VAR_ROUTE201_STATE, 2, Route201_EventScript_RivalLake
 	setvar VAR_ROUTE201_STATE, 1
 	msgbox Route201_Text_TooSlow, MSGBOX_SIGN
@@ -71,8 +69,7 @@ Route201_EventScript_RivalSee::
 	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RunPrep
 	waitmovement 0
 	msgbox Route201_Text_HereGoes, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	applymovement LOCALID_PLAYER, Route201_Movement_RunWatch2
 	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RunGrass
 	waitmovement 0
@@ -81,10 +78,8 @@ Route201_EventScript_RivalSee::
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
@@ -270,10 +265,8 @@ Route201_EventScript_ProfessorMeet::
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkAway
 	waitmovement 0
 	msgbox Route201_Text_TheyTried, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkBack
 	waitmovement 0
 	goto Route201_EventScript_TrulyLove
@@ -324,12 +317,10 @@ Route201_EventScript_HundredPass::
 	msgbox Route201_Text_FriendHere, MSGBOX_SIGN
 	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_PROF, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_PROF, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	addobject LOCALID_ROUTE201_HELPER
 	applymovement LOCALID_ROUTE201_HELPER, Route201_Movement_HelperEnter
 	waitmovement 0
@@ -351,8 +342,7 @@ Route201_EventScript_HundredPass::
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_SomeClass, MSGBOX_SIGN
-	applymovement LOCALID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	release
 	end
 
