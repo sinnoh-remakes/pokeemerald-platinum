@@ -4590,6 +4590,26 @@
       "secondary_tileset": "gTileset_Route201",
       "border_filepath": "data/layouts/Route203/border.bin",
       "blockdata_filepath": "data/layouts/Route203/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE204",
+      "name": "Route204_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route204",
+      "border_filepath": "data/layouts/Route204/border.bin",
+      "blockdata_filepath": "data/layouts/Route204/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE",
+      "name": "OreburghGate_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_TwinleafPlayer",
+      "border_filepath": "data/layouts/OreburghGate/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
     }
   ]
 }

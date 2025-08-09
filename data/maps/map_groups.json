@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_Towns",
     "gMapGroup_Routes",
+    "gMapGroup_Caves",
     "gMapGroup_Lakes",
     "gMapGroup_Gates",
     "gMapGroup_IndoorTwinleaf",
@@ -52,6 +53,9 @@
     "Route219",
     "LakefrontVerity",
     "Route203"
+  ],
+  "gMapGroup_Caves": [
+    "OreburghGate"
   ],
   "gMapGroup_Lakes": [
     "LakeVerity"

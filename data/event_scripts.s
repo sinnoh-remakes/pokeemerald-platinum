@@ -1182,3 +1182,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 
 	.include "data/maps/Route203/scripts.inc"
+
+	.include "data/maps/Route204/scripts.inc"
+
+	.include "data/maps/OreburghGate/scripts.inc"
