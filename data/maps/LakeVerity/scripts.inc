@@ -1,13 +1,22 @@
 LakeVerity_MapScripts::
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LakeVerity_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeVerity_OnFrame
 	.byte 0
 
 	@ State descriptions for VAR_VERITY_STATE
 	@ 1: After First Lake Scene
 
+LakeVerity_OnWarp:
+	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_TurnPlayerNorth
+	.2byte 0
+
 LakeVerity_OnFrame:
 	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_EventScript_IntroScene
 	.2byte 0
+
+LakeVerity_TurnPlayerNorth::
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	end
 
 LakeVerity_EventScript_IntroScene::
 	lock
