@@ -1,13 +1,22 @@
 LakeVerity_MapScripts::
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LakeVerity_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeVerity_OnFrame
 	.byte 0
 
 	@ State descriptions for VAR_VERITY_STATE
 	@ 1: After First Lake Scene
 
+LakeVerity_OnWarp:
+	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_TurnPlayerNorth
+	.2byte 0
+
 LakeVerity_OnFrame:
 	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_EventScript_IntroScene
 	.2byte 0
+
+LakeVerity_TurnPlayerNorth::
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	end
 
 LakeVerity_EventScript_IntroScene::
 	lock
@@ -53,10 +62,8 @@ LakeVerity_EventScript_IntroScene::
 	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_RIVAL, LakeVerity_Movement_RunUp
 	waitmovement 0
@@ -80,10 +87,8 @@ LakeVerity_EventScript_IntroScene::
 	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	msgbox LakeVerity_Text_NoBalls, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_RIVAL, LakeVerity_Movement_RivalLeave

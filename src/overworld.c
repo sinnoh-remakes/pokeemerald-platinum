@@ -415,7 +415,7 @@ void Overworld_ResetStateAfterDigEscRope(void)
     FlagClear(FLAG_SYS_USE_FLASH);
 }
 
-#if B_RESET_FLAGS_VARS_AFTER_WHITEOUT  == TRUE
+#if B_RESET_FLAGS_VARS_AFTER_WHITEOUT == TRUE
 void Overworld_ResetBattleFlagsAndVars(void)
 {
     #if B_VAR_STARTING_STATUS != 0
@@ -441,7 +441,6 @@ void Overworld_ResetBattleFlagsAndVars(void)
     FlagClear(B_FLAG_NO_RUNNING);
     FlagClear(B_FLAG_DYNAMAX_BATTLE);
     FlagClear(B_FLAG_SKY_BATTLE);
-    FlagClear(B_FLAG_NO_WHITEOUT);
 }
 #endif
 
@@ -453,8 +452,10 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+#if B_RESET_FLAGS_VARS_AFTER_WHITEOUT == TRUE
     if (B_RESET_FLAGS_VARS_AFTER_WHITEOUT == TRUE)
         Overworld_ResetBattleFlagsAndVars();
+#endif
     // If you were defeated by Kyogre/Groudon and the step counter has
     // maxed out, end the abnormal weather.
     if (VarGet(VAR_SHOULD_END_ABNORMAL_WEATHER) == 1)
