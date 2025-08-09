@@ -593,7 +593,7 @@ Route201_EventScript_RivalLake::
 	call_if_eq VAR_0x8004, 3, Route201_EventScript_RivalShift3
 	call_if_eq VAR_0x8004, 4, Route201_EventScript_RivalShift4
 	msgbox Route201_Text_NothingToFear, MSGBOX_SIGN
-	setfollowernpc LOCALID_ROUTE201_RIVAL 0 Route201_EventScript_Rival
+	setfollowernpc LOCALID_ROUTE201_RIVAL, FNPC_NONE, Route201_EventScript_Rival
 	release
 	end
 
