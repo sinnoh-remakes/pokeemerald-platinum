@@ -4606,7 +4606,7 @@
       "name": "OreburghGate_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "primary_tileset": "gTileset_CaveCoronet",
       "secondary_tileset": "gTileset_TwinleafPlayer",
       "border_filepath": "data/layouts/OreburghGate/border.bin",
       "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
