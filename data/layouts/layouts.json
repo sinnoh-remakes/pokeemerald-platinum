@@ -4607,7 +4607,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_CaveCoronet",
-      "secondary_tileset": "gTileset_TwinleafPlayer",
+      "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/OreburghGate/border.bin",
       "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
     }
