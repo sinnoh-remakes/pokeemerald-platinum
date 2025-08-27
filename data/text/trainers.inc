@@ -4780,6 +4780,8 @@ Route134_Text_HudsonPostBattle:
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
 
+@ Sinnoh Texts Below
+
 VSSeeker_Text_BatteryNotChargedNeedXSteps::
 	.string "The battery isn't charged enough.\p"
 	.string "No. of steps required to fully\n"
@@ -4856,3 +4858,23 @@ Route202_Text_NatalieDefeated:
 Route202_Text_NataliePostBattle:
 	.string "My Pokémon are all tuckered out!\n"
 	.string "I need to go to a Poké Center!$"
+
+Route202_Text_MichaelIntro:
+	.string "I get my get-up-and-go from my\n"
+	.string "Pokémon!\p"
+	.string "Here we go!\n"
+	.string "KRICKETOT! ZUBAT!$"
+
+Route202_Text_MichaelDefeated:
+	.string "Ack! My Pokémon...$"
+
+Route202_Text_MichaelPostBattle:
+	.string "Keep out of the grass or dodge the\n"
+	.string "eyes of Trainers...?\p"
+	.string "I always have a tough time choosing.$"
+
+Route202_Text_FavoriteParty:
+	.string "Your favorite Pokémon should be placed\n"
+	.string "at the top left of your party list.\p"
+	.string "That way, it will be the first to go out\n"
+	.string "in a battle.$"
