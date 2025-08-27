@@ -135,8 +135,8 @@
     {
       "id": "HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE",
       "map": "MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
-      "x": 4,
-      "y": 2
+      "x": 5,
+      "y": 7
     },
     {
       "id": "HEAL_LOCATION_SANDGEM_TOWN",

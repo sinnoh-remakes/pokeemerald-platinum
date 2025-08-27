@@ -601,6 +601,8 @@ gStdScripts_End::
 	.include "data/maps/Gate_Jubilife/scripts.inc"
 	.include "data/maps/Route201/scripts.inc"
 	.include "data/maps/Route202/scripts.inc"
+	.include "data/maps/Route203/scripts.inc"
+	.include "data/maps/Route204/scripts.inc"
 	.include "data/maps/Route219/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
@@ -1180,7 +1182,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
-
-	.include "data/maps/Route203/scripts.inc"
-
-	.include "data/maps/Route204/scripts.inc"

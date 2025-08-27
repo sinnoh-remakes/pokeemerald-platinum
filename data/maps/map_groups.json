@@ -49,10 +49,10 @@
   "gMapGroup_Routes": [
     "Route201",
     "Route202",
-    "Route203",
-    "Route204",
     "Route219",
-    "LakefrontVerity"
+    "LakefrontVerity",
+    "Route203",
+    "Route204"
   ],
   "gMapGroup_Lakes": [
     "LakeVerity"
