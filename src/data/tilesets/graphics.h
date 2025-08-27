@@ -1957,3 +1957,22 @@ const u16 gTilesetPalettes_Route203[][16] =
 };
 
 const u32 gTilesetTiles_Route203[] = INCBIN_U32("data/tilesets/secondary/route_203/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Route204[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_204/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Route204[] = INCBIN_U32("data/tilesets/secondary/route_204/tiles.4bpp.lz");
