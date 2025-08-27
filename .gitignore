@@ -42,6 +42,7 @@ prefabs.json
 /pokeemerald_modern-*.png
 src/data/map_group_count.h
 tools/trainerproc/trainerproc
+venv/
 *.Identifier
 *.smol
 *.fastSmol
