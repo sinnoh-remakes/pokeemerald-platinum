@@ -6956,7 +6956,7 @@ F_TRAINER_FEMALE |
 #line 2834
         .trainerClass = TRAINER_CLASS_SWIMMER_M,
 #line 2835
-        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerPic = TRAINER_PIC_DP_BARRY,
         .encounterMusic_gender =
 #line 2837
             TRAINER_ENCOUNTER_MUSIC_SWIMMER,

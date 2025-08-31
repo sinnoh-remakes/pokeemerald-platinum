@@ -9,3 +9,27 @@ Route203_EventScript_Michael::
 Route203_EventScript_Lass1::
 	msgbox Route202_Text_FavoriteParty, MSGBOX_NPC
 	end
+
+Route203_EventScript_Dallas::
+	end
+
+Route203_EventScript_Kaitlin::
+	end
+
+Route203_EventScript_Madeline::
+	end
+
+Route203_EventScript_Sebastian::
+	end
+
+Route203_EventScript_RouteSignJubilife::
+	end
+
+Route203_EventScript_RouteSignOreburgh::
+	end
+
+Route203_EventScript_Sign1::
+	end
+
+Route203_EventScript_Sign2::
+	end

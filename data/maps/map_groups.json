@@ -50,9 +50,10 @@
   "gMapGroup_Routes": [
     "Route201",
     "Route202",
+    "Route203",
+    "Route204",
     "Route219",
-    "LakefrontVerity",
-    "Route203"
+    "LakefrontVerity"
   ],
   "gMapGroup_Caves": [
     "OreburghGate"
