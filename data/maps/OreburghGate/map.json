@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 10,
+      "x": 9,
       "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -147,13 +147,6 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_GATE",
       "dest_warp_id": "4"
-    },
-    {
-      "x": 8,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_OREBURGH_GATE",
-      "dest_warp_id": "3"
     }
   ],
   "coord_events": [],
