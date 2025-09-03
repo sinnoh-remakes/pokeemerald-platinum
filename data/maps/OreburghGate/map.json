@@ -30,7 +30,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 17,
-      "y": 11,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -119,7 +119,22 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 18,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_GATE",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
