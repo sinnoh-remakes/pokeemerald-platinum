@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_JUBILIFE_CITY",
-      "offset": 0,
+      "offset": 2,
       "direction": "left"
     }
   ],
