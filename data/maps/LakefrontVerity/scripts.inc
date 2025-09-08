@@ -18,9 +18,9 @@ LakefrontVerity_EventScript_EnterLake::
 	hideobjectat LOCALID_PLAYER, MAP_LAKEFRONT_VERITY
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER , Common_Movement_WalkUp
 	waitmovement 0
-	destroyfollowernpc
 	warp MAP_LAKE_VERITY, 12, 23
 	waitstate
+	destroyfollowernpc
 	release
 	end
 

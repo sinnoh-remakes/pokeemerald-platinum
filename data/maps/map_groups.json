@@ -53,7 +53,9 @@
     "Route203",
     "Route204",
     "Route219",
-    "LakefrontVerity"
+    "LakefrontVerity",
+    "Route203",
+    "Route204"
   ],
   "gMapGroup_Caves": [
     "OreburghGate"
