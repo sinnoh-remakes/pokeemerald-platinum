@@ -25,7 +25,7 @@
       "id": "LAYOUT_JUBILIFE_CITY",
       "name": "JubilifeCity_Layout",
       "width": 74,
-      "height": 64,
+      "height": 66,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Jubilife",
       "border_filepath": "data/layouts/JubilifeCity/border.bin",
@@ -4595,11 +4595,21 @@
       "id": "LAYOUT_ROUTE204",
       "name": "Route204_Layout",
       "width": 32,
-      "height": 64,
+      "height": 66,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route204",
       "border_filepath": "data/layouts/Route204/border.bin",
       "blockdata_filepath": "data/layouts/Route204/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE",
+      "name": "OreburghGate_Layout",
+      "width": 28,
+      "height": 32,
+      "primary_tileset": "gTileset_CaveCoronet",
+      "secondary_tileset": "gTileset_TwinleafOther",
+      "border_filepath": "data/layouts/OreburghGate/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
     }
   ]
 }
