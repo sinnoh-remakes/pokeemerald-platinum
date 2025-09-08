@@ -605,6 +605,7 @@ gStdScripts_End::
 	.include "data/maps/Route204/scripts.inc"
 	.include "data/maps/Route219/scripts.inc"
 	.include "data/maps/OreburghGate/scripts.inc"
+	.include "data/maps/OreburghCity/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

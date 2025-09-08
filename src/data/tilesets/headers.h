@@ -1039,3 +1039,14 @@ const struct Tileset gTileset_CaveCoronet =
     .metatileAttributes = gMetatileAttributes_CaveCoronet,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OutdoorOreburgh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorOreburgh,
+    .palettes = gTilesetPalettes_OutdoorOreburgh,
+    .metatiles = gMetatiles_OutdoorOreburgh,
+    .metatileAttributes = gMetatileAttributes_OutdoorOreburgh,
+    .callback = NULL,
+};

@@ -4610,6 +4610,16 @@
       "secondary_tileset": "gTileset_TwinleafOther",
       "border_filepath": "data/layouts/OreburghGate/border.bin",
       "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY",
+      "name": "OreburghCity_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_OutdoorOreburgh",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/OreburghCity/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCity/map.bin"
     }
   ]
 }
