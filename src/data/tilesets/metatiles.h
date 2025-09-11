@@ -267,3 +267,6 @@ const u16 gMetatileAttributes_CaveCoronet[] = INCBIN_U16("data/tilesets/primary/
 
 const u16 gMetatiles_OutdoorOreburgh[] = INCBIN_U16("data/tilesets/primary/outdoor_oreburgh/metatiles.bin");
 const u16 gMetatileAttributes_OutdoorOreburgh[] = INCBIN_U16("data/tilesets/primary/outdoor_oreburgh/metatile_attributes.bin");
+
+const u16 gMetatiles_Oreburgh[] = INCBIN_U16("data/tilesets/secondary/oreburgh/metatiles.bin");
+const u16 gMetatileAttributes_Oreburgh[] = INCBIN_U16("data/tilesets/secondary/oreburgh/metatile_attributes.bin");
