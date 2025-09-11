@@ -4614,10 +4614,10 @@
     {
       "id": "LAYOUT_OREBURGH_CITY",
       "name": "OreburghCity_Layout",
-      "width": 64,
-      "height": 32,
+      "width": 72,
+      "height": 72,
       "primary_tileset": "gTileset_OutdoorOreburgh",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Oreburgh",
       "border_filepath": "data/layouts/OreburghCity/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity/map.bin"
     }
