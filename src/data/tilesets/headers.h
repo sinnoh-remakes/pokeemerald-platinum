@@ -1061,3 +1061,25 @@ const struct Tileset gTileset_Oreburgh =
     .metatileAttributes = gMetatileAttributes_Oreburgh,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_CityTest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CityTest,
+    .palettes = gTilesetPalettes_CityTest,
+    .metatiles = gMetatiles_CityTest,
+    .metatileAttributes = gMetatileAttributes_CityTest,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_OutdoorTest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorTest,
+    .palettes = gTilesetPalettes_OutdoorTest,
+    .metatiles = gMetatiles_OutdoorTest,
+    .metatileAttributes = gMetatileAttributes_OutdoorTest,
+    .callback = NULL,
+};
