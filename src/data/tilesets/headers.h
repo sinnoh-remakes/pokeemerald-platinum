@@ -1051,12 +1051,12 @@ const struct Tileset gTileset_OutdoorOreburgh =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Oreburgh =
+const struct Tileset gTileset_OreburghNorth =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
     .tiles = gTilesetTiles_Oreburgh,
-    .palettes = gTilesetPalettes_Oreburgh,
+    .palettes = gTilesetPalettes_OreburghNorth,
     .metatiles = gMetatiles_Oreburgh,
     .metatileAttributes = gMetatileAttributes_Oreburgh,
     .callback = NULL,

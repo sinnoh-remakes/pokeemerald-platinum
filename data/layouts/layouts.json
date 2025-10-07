@@ -4617,9 +4617,9 @@
       "width": 72,
       "height": 72,
       "primary_tileset": "gTileset_OutdoorOreburgh",
-      "secondary_tileset": "gTileset_Oreburgh",
-      "border_filepath": "data/layouts/OreburghCity/border.bin",
-      "blockdata_filepath": "data/layouts/OreburghCity/map.bin"
+      "secondary_tileset": "gTileset_OreburghNorth",
+      "border_filepath": "data/layouts/OreburghCityNorth/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityNorth/map.bin"
     }
   ]
 }
