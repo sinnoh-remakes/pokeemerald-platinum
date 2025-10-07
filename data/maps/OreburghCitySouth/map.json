@@ -1,22 +1,22 @@
 {
-  "id": "MAP_OREBURGH_CITY_NORTH",
-  "name": "OreburghCityNorth",
-  "layout": "LAYOUT_OREBURGH_CITY",
-  "music": "MUS_DP_OREBURGH_DAY",
-  "region_map_section": "MAPSEC_ROUTE_201",
+  "id": "MAP_OREBURGH_CITY_SOUTH",
+  "name": "OreburghCitySouth",
+  "layout": "LAYOUT_OREBURGH_CITY_SOUTH",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
-  "allow_cycling": true,
+  "allow_cycling": false,
   "allow_escaping": false,
-  "allow_running": true,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_OREBURGH_CITY_SOUTH",
+      "map": "MAP_OREBURGH_CITY_NORTH",
       "offset": 0,
-      "direction": "down"
+      "direction": "up"
     }
   ],
   "object_events": [],

@@ -4615,11 +4615,21 @@
       "id": "LAYOUT_OREBURGH_CITY",
       "name": "OreburghCity_Layout",
       "width": 72,
-      "height": 72,
+      "height": 28,
       "primary_tileset": "gTileset_OutdoorOreburgh",
       "secondary_tileset": "gTileset_OreburghNorth",
       "border_filepath": "data/layouts/OreburghCityNorth/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCityNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_SOUTH",
+      "name": "OreburghCitySouth_Layout",
+      "width": 72,
+      "height": 44,
+      "primary_tileset": "gTileset_OutdoorOreburgh",
+      "secondary_tileset": "gTileset_OreburghNorth",
+      "border_filepath": "data/layouts/OreburghCitySouth/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCitySouth/map.bin"
     }
   ]
 }
