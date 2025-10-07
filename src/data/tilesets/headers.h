@@ -1055,10 +1055,10 @@ const struct Tileset gTileset_OreburghNorth =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Oreburgh,
+    .tiles = gTilesetTiles_OreburghNorth,
     .palettes = gTilesetPalettes_OreburghNorth,
-    .metatiles = gMetatiles_Oreburgh,
-    .metatileAttributes = gMetatileAttributes_Oreburgh,
+    .metatiles = gMetatiles_OreburghNorth,
+    .metatileAttributes = gMetatileAttributes_OreburghNorth,
     .callback = NULL,
 };
 

@@ -48,3 +48,4 @@ venv/
 *.fastSmol
 *.smolTM
 __pycache__
+/tiles/*.pdn
