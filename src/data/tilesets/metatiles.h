@@ -276,3 +276,6 @@ const u16 gMetatileAttributes_CityTest[] = INCBIN_U16("data/tilesets/secondary/c
 
 const u16 gMetatiles_OutdoorTest[] = INCBIN_U16("data/tilesets/primary/outdoor_test/metatiles.bin");
 const u16 gMetatileAttributes_OutdoorTest[] = INCBIN_U16("data/tilesets/primary/outdoor_test/metatile_attributes.bin");
+
+const u16 gMetatiles_OreburghSouth[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/metatiles.bin");
+const u16 gMetatileAttributes_OreburghSouth[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/metatile_attributes.bin");
