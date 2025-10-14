@@ -4624,7 +4624,7 @@
     {
       "id": "LAYOUT_OREBURGH_CITY_SOUTH",
       "name": "OreburghCitySouth_Layout",
-      "width": 72,
+      "width": 58,
       "height": 44,
       "primary_tileset": "gTileset_OutdoorOreburgh",
       "secondary_tileset": "gTileset_OreburghSouth",

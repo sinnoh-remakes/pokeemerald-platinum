@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_OREBURGH_CITY",
-      "offset": 0,
+      "offset": -14,
       "direction": "up"
     }
   ],
