@@ -39,10 +39,10 @@ PetalburgCity_EventScript_WallyTutorial::
 	msgbox Route202_Text_WatchMeCatchPokemon, MSGBOX_DEFAULT
 	special StartWallyTutorialBattle
 	waitstate
-	@ msgbox Route102_Text_WallyIDidIt, MSGBOX_DEFAULT
+	msgbox Route102_Text_WallyIDidIt, MSGBOX_DEFAULT
 	applymovement LOCALID_PETALBURG_WALLY, Common_Movement_WalkInPlaceFasterLeft, MAP_PETALBURG_CITY
 	waitmovement LOCALID_PETALBURG_WALLY, MAP_PETALBURG_CITY
-	@ msgbox Route102_Text_LetsGoBack, MSGBOX_DEFAULT
+	msgbox Route102_Text_LetsGoBack, MSGBOX_DEFAULT
 	closemessage
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_PETALBURG_CITY_STATE, 3
