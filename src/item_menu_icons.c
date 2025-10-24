@@ -70,9 +70,9 @@ static const union AnimCmd sSpriteAnim_Bag_Items[] =
     ANIMCMD_END
 };
 
-static const union AnimCmd sSpriteAnim_Bag_Medicine[] =
+static const union AnimCmd sSpriteAnim_Bag_KeyItems[] =
 {
-    ANIMCMD_FRAME(192, 4),
+    ANIMCMD_FRAME(128, 4),
     ANIMCMD_END
 };
 
@@ -106,9 +106,9 @@ static const union AnimCmd sSpriteAnim_Bag_BattleItems[] =
     ANIMCMD_END
 };
 
-static const union AnimCmd sSpriteAnim_Bag_KeyItems[] =
+static const union AnimCmd sSpriteAnim_Bag_Medicine[] =
 {
-    ANIMCMD_FRAME(128, 4),
+    ANIMCMD_FRAME(192, 4),
     ANIMCMD_END
 };
 

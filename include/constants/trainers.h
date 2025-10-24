@@ -108,7 +108,7 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
-//Platinum
+// Sinnoh Trainers
 #define TRAINER_PIC_DP_ACE_TRAINER_DT     93
 #define TRAINER_PIC_DP_ACE_TRAINER_F      94
 #define TRAINER_PIC_DP_ACE_TRAINER_M      95
@@ -207,16 +207,16 @@
 #define TRAINER_PIC_COUNT                 187
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
-#define TRAINER_BACK_PIC_LUCAS                0
-#define TRAINER_BACK_PIC_DAWN                    1
+#define TRAINER_BACK_PIC_LUCAS                  0
+#define TRAINER_BACK_PIC_DAWN                   1
 #define TRAINER_BACK_PIC_RED                    2
 #define TRAINER_BACK_PIC_LEAF                   3
 #define TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN  4
 #define TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY      5
 #define TRAINER_BACK_PIC_WALLY                  6
 #define TRAINER_BACK_PIC_STEVEN                 7
-#define TRAINER_BACK_PIC_BRENDAN                  8
-#define TRAINER_BACK_PIC_MAY                   9
+#define TRAINER_BACK_PIC_BRENDAN                8
+#define TRAINER_BACK_PIC_MAY                    9
 
 #define FACILITY_CLASS_HIKER                 0x0
 #define FACILITY_CLASS_AQUA_GRUNT_M          0x1

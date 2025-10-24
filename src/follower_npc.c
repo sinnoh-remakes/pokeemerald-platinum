@@ -625,6 +625,7 @@ static void Task_FollowerNPCHandleEscalatorFinish(u8 taskId)
         ObjectEventSetHeldMovement(follower, GetFaceDirectionMovementAction(DIR_EAST));
         if (task->tMetatileBehavior == 0x6b)
             task->tState = SHOW_FOLLOWER_UP;
+
         break;
     case SHOW_FOLLOWER_DOWN:
         follower->invisible = FALSE;

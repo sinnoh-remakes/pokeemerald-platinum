@@ -292,6 +292,7 @@ extern const u8 gText_Birch_YourePlayer[];
 extern const u8 gText_Birch_AreYouReady[];
 
 extern const u8 gText_BirchInTrouble[];
+extern const u8 gText_SelectStarter[];
 extern const u8 gText_ConfirmStarterChoice[];
 
 // mystery event menu text
@@ -1857,6 +1858,9 @@ extern const u8 MatchCall_Text_Norman6[];
 extern const u8 MatchCall_Text_Norman7[];
 extern const u8 MatchCall_Text_Norman8[];
 extern const u8 MatchCall_Text_Norman9[];
+extern const u8 MatchCall_Text_Mom1[];
+extern const u8 MatchCall_Text_Mom2[];
+extern const u8 MatchCall_Text_Mom3[];
 extern const u8 MatchCall_Text_Steven1[];
 extern const u8 MatchCall_Text_Steven2[];
 extern const u8 MatchCall_Text_Steven3[];

@@ -4,25 +4,25 @@
 #include "constants/battle_partner.h"
 
 #define TRAINER_NONE                          0
-#define TRAINER_HOENN_TEMP                    1
-#define TRAINER_RIVAL_ROUTE_201_PIPLUP        2
-#define TRAINER_RIVAL_ROUTE_201_TURTWIG       3
-#define TRAINER_RIVAL_ROUTE_201_CHIMCHAR      4
-#define TRAINER_TRISTAN_1                     5
-#define TRAINER_TRISTAN_2                     6
-#define TRAINER_TRISTAN_3                     7
-#define TRAINER_TRISTAN_4                     8
-#define TRAINER_TRISTAN_5                     9
-#define TRAINER_LOGAN                        10
-#define TRAINER_NATALIE                      11
-#define TRAINER_RIVAL_ROUTE_203_PIPLUP       12
-#define TRAINER_RIVAL_ROUTE_203_TURTWIG      13
-#define TRAINER_RIVAL_ROUTE_203_CHIMCHAR     14
-#define TRAINER_MICHAEL                      15
-#define TRAINER_UNUSED_16                    16
-#define TRAINER_UNUSED_17                    17
-#define TRAINER_UNUSED_18                    18
-#define TRAINER_GRUNT_PETALBURG_WOODS    19
+#define TRAINER_SAWYER_1                      1
+#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
+#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
+#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
+#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
+#define TRAINER_GABRIELLE_1                   9
+#define TRAINER_GRUNT_PETALBURG_WOODS        10
+#define TRAINER_MARCEL                       11
+#define TRAINER_ALBERTO                      12
+#define TRAINER_ED                           13
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
+#define TRAINER_DECLAN                       15
+#define TRAINER_GRUNT_RUSTURF_TUNNEL         16
+#define TRAINER_GRUNT_WEATHER_INST_1         17
+#define TRAINER_GRUNT_WEATHER_INST_2         18
+#define TRAINER_GRUNT_WEATHER_INST_3         19
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
@@ -856,24 +856,31 @@
 #define TRAINER_EVERETT                     850
 #define TRAINER_RED                         851
 #define TRAINER_LEAF                        852
-#define TRAINER_SAWYER_1                    853
-#define TRAINER_GABRIELLE_1                 854
-#define TRAINER_UNUSED_855                  855
-#define TRAINER_UNUSED_856                  856
-#define TRAINER_UNUSED_857                  857
-#define TRAINER_UNUSED_858                  858
-#define TRAINER_UNUSED_859                  859
-#define TRAINER_UNUSED_860                  860
-#define TRAINER_UNUSED_861                  861
-#define TRAINER_UNUSED_862                  862
-#define TRAINER_UNUSED_863                  863
+#define TRAINER_BRENDAN_PLACEHOLDER         853
+#define TRAINER_MAY_PLACEHOLDER             854
+
+// Sinnoh Trainers
+#define TRAINER_RIVAL_ROUTE_201_PIPLUP      855
+#define TRAINER_RIVAL_ROUTE_201_TURTWIG     856    
+#define TRAINER_RIVAL_ROUTE_201_CHIMCHAR    857
+#define TRAINER_TRISTAN_1                   858
+#define TRAINER_TRISTAN_2                   859
+#define TRAINER_TRISTAN_3                   860
+#define TRAINER_TRISTAN_4                   861
+#define TRAINER_TRISTAN_5                   862
+#define TRAINER_LOGAN                       863
+#define TRAINER_NATALIE                     864
+#define TRAINER_RIVAL_ROUTE_203_PIPLUP      865
+#define TRAINER_RIVAL_ROUTE_203_TURTWIG     866
+#define TRAINER_RIVAL_ROUTE_203_CHIMCHAR    867
+#define TRAINER_MICHAEL                     868
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      863
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT                      869
+#define MAX_TRAINERS_COUNT                  870
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

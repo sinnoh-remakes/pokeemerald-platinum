@@ -827,9 +827,9 @@ void UpdateTVScreensOnMap(int width, int height)
     FlagSet(FLAG_SYS_TV_WATCH);
     switch (CheckForPlayersHouseNews())
     {
-    // case PLAYERS_HOUSE_TV_LATI:
-    //     SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
-    //     break;
+    case PLAYERS_HOUSE_TV_LATI:
+        SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
+        break;
     case PLAYERS_HOUSE_TV_MOVIE:
         // Don't flash TV for movie text in player's house
         break;
@@ -3344,11 +3344,11 @@ u8 CheckForPlayersHouseNews(void)
             return PLAYERS_HOUSE_TV_NONE;
     }
 
-    // if (FlagGet(FLAG_SYS_TV_LATIAS_LATIOS) == TRUE)
-    //     return PLAYERS_HOUSE_TV_LATI;
+    if (FlagGet(FLAG_SYS_TV_LATIAS_LATIOS) == TRUE)
+        return PLAYERS_HOUSE_TV_LATI;
 
-    // if (FlagGet(FLAG_SYS_TV_HOME) == TRUE)
-    //     return PLAYERS_HOUSE_TV_MOVIE;
+    if (FlagGet(FLAG_SYS_TV_HOME) == TRUE)
+        return PLAYERS_HOUSE_TV_MOVIE;
 
     return PLAYERS_HOUSE_TV_LATI;
 }

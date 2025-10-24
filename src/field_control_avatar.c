@@ -287,7 +287,6 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
 
     // Don't play interaction sound for certain scripts.
     if (script != TwinleafTown_PlayersHouse_2F_EventScript_PC
-    //  && script != TwinleafTown_RivalsHouse_2F_EventScript_PC
      && script != SecretBase_EventScript_PC
      && script != SecretBase_EventScript_RecordMixingPC
      && script != SecretBase_EventScript_DollInteract
@@ -482,6 +481,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return Route110_TrickHousePuzzle_EventScript_Door;
     if (MetatileBehavior_IsRegionMap(metatileBehavior) == TRUE)
         return EventScript_RegionMap;
+    if (MetatileBehavior_IsRunningShoesManual(metatileBehavior) == TRUE)
+        return EventScript_RunningShoesManual;
     if (MetatileBehavior_IsPictureBookShelf(metatileBehavior) == TRUE)
         return EventScript_PictureBookShelf;
     if (MetatileBehavior_IsBookShelf(metatileBehavior) == TRUE)
@@ -704,13 +705,13 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         }
         if (ShouldDoScottFortreeCall() == TRUE)
         {
-            // ScriptContext_SetupScript(Route119_EventScript_ScottWonAtFortreeGymCall);
-            return FALSE;
+            ScriptContext_SetupScript(Route119_EventScript_ScottWonAtFortreeGymCall);
+            return TRUE;
         }
         if (ShouldDoScottBattleFrontierCall() == TRUE)
         {
-            // ScriptContext_SetupScript(TwinleafTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall);
-            return FALSE;
+            ScriptContext_SetupScript(LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall);
+            return TRUE;
         }
         if (ShouldDoRoxanneCall() == TRUE)
         {

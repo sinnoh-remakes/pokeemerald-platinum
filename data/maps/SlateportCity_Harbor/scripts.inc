@@ -282,7 +282,6 @@ SlateportCity_Harbor_EventScript_FatMan::
 	msgbox SlateportCity_Harbor_Text_SubTooSmallForMe, MSGBOX_NPC
 	end
 
-@ TODO: Unused
 SlateportCity_Harbor_EventScript_CaptStern::
 	lock
 	faceplayer

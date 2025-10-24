@@ -558,7 +558,6 @@ Route201_EventScript_PostRivalBattle::
 	setvar VAR_ROUTE201_STATE, 2
 	setvar VAR_TWINLEAF_TOWN_STATE, 2
 	setvar VAR_TWINLEAF_INTRO_STATE, 6
-	clearflag FLAG_HIDE_ROUTE_201_MAN
 	clearflag B_FLAG_NO_WHITEOUT
 	delay 48
 	warp MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F, 1, 5

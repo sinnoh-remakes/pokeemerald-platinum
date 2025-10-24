@@ -954,7 +954,7 @@ static const u16 sLocationFlags[] =
     FLAG_VISITED_SOOTOPOLIS_CITY,
     FLAG_VISITED_EVER_GRANDE_CITY,
     FLAG_LANDMARK_POKEMON_LEAGUE,
-    FLAG_LANDMARK_BATTLE_FRONTIER
+    FLAG_LANDMARK_BATTLE_FRONTIER,
 };
 
 static u8 Debug_CheckToggleFlags(u8 id)
@@ -3454,6 +3454,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_MT_CHIMNEY)               \
     X(MUS_ENCOUNTER_FEMALE)         \
     X(MUS_LILYCOVE)                 \
+    X(MUS_DESERT)                   \
     X(MUS_HELP)                     \
     X(MUS_UNDERWATER)               \
     X(MUS_VICTORY_TRAINER)          \
