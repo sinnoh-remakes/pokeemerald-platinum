@@ -1145,7 +1145,6 @@
 	.macro trywish failInstr:req
 	.byte 0xd4
 	.4byte \failInstr
-	.4byte \blockedInstr
 	.endm
 
 	.macro settoxicspikes failInstr:req
@@ -1388,10 +1387,6 @@
 	.macro itemstatchangeeffects battler:req
 	callnative BS_RunStatChangeItems
 	.byte \battler
-	.endm
-
-	.macro tryintimidatejectpack
-	callnative BS_TryIntimidatEjectpack
 	.endm
 
 	.macro allyswitchswapbattlers

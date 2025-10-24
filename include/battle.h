@@ -795,17 +795,6 @@ struct AiBattleData
     u8 padding:6;
 };
 
-struct AiBattleData
-{
-    s32 finalScore[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT][MAX_MON_MOVES]; // AI, target, moves to make debugging easier
-    u8 playerStallMons[PARTY_SIZE];
-    u8 chosenMoveIndex[MAX_BATTLERS_COUNT];
-    u8 chosenTarget[MAX_BATTLERS_COUNT];
-    u8 actionFlee:1;
-    u8 choiceWatch:1;
-    u8 padding:6;
-};
-
 // The palaceFlags member of struct BattleStruct contains 1 flag per move to indicate which moves the AI should consider,
 // and 1 flag per battler to indicate whether the battler is awake and at <= 50% HP (which affects move choice).
 // The assert below is to ensure palaceFlags is large enough to store these flags without overlap.

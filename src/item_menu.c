@@ -64,7 +64,7 @@
                             max(BAG_ITEMS_COUNT,             \
                             max(BAG_KEYITEMS_COUNT,          \
                             max(BAG_MEDICINE_COUNT,          \
-                            max(MAIL_COUNT,              \
+                            max(MAIL_COUNT,                  \
                             max(BAG_BATTLEITEMS_COUNT,       \
                                 BAG_POKEBALLS_COUNT)))))))) + 1)
 
@@ -120,7 +120,7 @@ struct ListBuffer2 {
 };
 
 struct TempWallyBag {
-    struct ItemSlot bagPocket_Medicine[BAG_MEDICINE_COUNT];
+    struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
     struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
     u16 cursorPosition[POCKETS_COUNT];
     u16 scrollPosition[POCKETS_COUNT];
@@ -780,10 +780,6 @@ static bool8 SetupBagMenu(void)
     case 13:
         PrintPocketNames(gPocketNamesStringsTable[gBagPosition.pocket], 0);
         CopyPocketNameToWindow(0);
-        DrawPocketIndicatorSquare(0, FALSE);
-        DrawPocketIndicatorSquare(5, FALSE);
-        DrawPocketIndicatorSquare(6, FALSE);
-        DrawPocketIndicatorSquare(7, FALSE);
         DrawPocketIndicatorSquare(gBagPosition.pocket, TRUE);
         gMain.state++;
         break;
@@ -1492,9 +1488,9 @@ static void DrawItemListBgRow(u8 y)
 static void DrawPocketIndicatorSquare(u8 x, bool8 isCurrentPocket)
 {
     if (!isCurrentPocket)
-        FillBgTilemapBufferRect_Palette0(2, 0x1017, x + 4, 3, 1, 1);
+        FillBgTilemapBufferRect_Palette0(2, 0x1017, x + 5, 3, 1, 1);
     else
-        FillBgTilemapBufferRect_Palette0(2, 0x102B, x + 4, 3, 1, 1);
+        FillBgTilemapBufferRect_Palette0(2, 0x102B, x + 5, 3, 1, 1);
     ScheduleBgCopyTilemapToVram(2);
 }
 
@@ -1721,18 +1717,6 @@ static void OpenContextMenu(u8 taskId)
             case POCKET_BERRIES:
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BerriesPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerriesPocket);
-                break;
-            case MEDICINE_POCKET:
-                gBagMenu->contextMenuItemsPtr = sContextMenuItems_ItemsPocket;
-                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
-                break;
-            case MAIL_POCKET:
-                gBagMenu->contextMenuItemsPtr = sContextMenuItems_ItemsPocket;
-                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
-                break;
-            case BATTLEITEMS_POCKET:
-                gBagMenu->contextMenuItemsPtr = sContextMenuItems_ItemsPocket;
-                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
                 break;
             }
         }

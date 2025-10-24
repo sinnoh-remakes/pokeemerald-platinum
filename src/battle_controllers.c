@@ -903,8 +903,8 @@ void BtlController_EmitPrintString(u32 battler, u32 bufferId, enum StringID stri
 
     gBattleResources->transferBuffer[0] = CONTROLLER_PRINTSTRING;
     gBattleResources->transferBuffer[1] = gBattleOutcome;
-    gBattleResources->transferBuffer[2] = stringId;
-    gBattleResources->transferBuffer[3] = (stringId & 0xFF00) >> 8;
+    gBattleResources->transferBuffer[2] = stringID;
+    gBattleResources->transferBuffer[3] = (stringID & 0xFF00) >> 8;
 
     stringInfo = (struct BattleMsgData *)(&gBattleResources->transferBuffer[4]);
     stringInfo->currentMove = gCurrentMove;
@@ -935,8 +935,8 @@ void BtlController_EmitPrintSelectionString(u32 battler, u32 bufferId, enum Stri
 
     gBattleResources->transferBuffer[0] = CONTROLLER_PRINTSTRINGPLAYERONLY;
     gBattleResources->transferBuffer[1] = CONTROLLER_PRINTSTRINGPLAYERONLY;
-    gBattleResources->transferBuffer[2] = stringId;
-    gBattleResources->transferBuffer[3] = (stringId & 0xFF00) >> 8;
+    gBattleResources->transferBuffer[2] = stringID;
+    gBattleResources->transferBuffer[3] = (stringID & 0xFF00) >> 8;
 
     stringInfo = (struct BattleMsgData *)(&gBattleResources->transferBuffer[4]);
     stringInfo->currentMove = gCurrentMove;

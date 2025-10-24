@@ -508,7 +508,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_EnemyZigzagoon,        OBJ_EVENT_PAL_TAG_ZIGZAGOON},
     {gObjectEventPal_May,                   OBJ_EVENT_PAL_TAG_MAY},
     {gObjectEventPal_MayReflection,         OBJ_EVENT_PAL_TAG_MAY_REFLECTION},
-    {gObjectEventPal_Mom,                   OBJ_EVENT_PAL_TAG_MOM},
     {gObjectEventPal_MovingBox,             OBJ_EVENT_PAL_TAG_MOVING_BOX},
     {gObjectEventPal_CableCar,              OBJ_EVENT_PAL_TAG_CABLE_CAR},
     {gObjectEventPal_SSTidal,               OBJ_EVENT_PAL_TAG_SSTIDAL},
@@ -525,8 +524,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
-    {gObjectEventPal_ProfRowan,             OBJ_EVENT_PAL_TAG_PROF_ROWAN},
-    {gObjectEventPal_Barry,                 OBJ_EVENT_PAL_TAG_BARRY},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -1844,7 +1841,7 @@ static void UNUSED MakeSpriteTemplateFromObjectEventTemplate(const struct Object
 // also can write palette tag to the template
 static u32 LoadDynamicFollowerPaletteFromGraphicsId(u16 graphicsId, struct SpriteTemplate *template)
 {
-    u32 species = graphicsId & OBJ_EVENT_MON_SPECIES_MASK;
+    u16 species = graphicsId & OBJ_EVENT_MON_SPECIES_MASK;
     bool32 shiny = graphicsId & OBJ_EVENT_MON_SHINY;
     bool32 female = graphicsId & OBJ_EVENT_MON_FEMALE;
     u8 paletteNum = LoadDynamicFollowerPalette(species, shiny, female);
@@ -2265,15 +2262,6 @@ void UpdateFollowingPokemon(void)
         objEvent->invisible = TRUE;
     }
     sprite->data[6] = 0; // set animation data
-}
-
-void ReturnFollowingMonToBall(void)
-{
-    struct ObjectEvent *objectEvent = GetFollowerObject();
-    struct Sprite *sprite = &gSprites[objectEvent->spriteId];
-
-    ClearObjectEventMovement(objectEvent, sprite);
-    ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_ENTER_POKEBALL);
 }
 
 // Remove follower object. Idempotent.
@@ -10289,7 +10277,7 @@ static void DoGroundEffects_OnSpawn(struct ObjectEvent *objEvent, struct Sprite 
     u32 flags;
 
 #ifdef BUGFIX
-    if (objEvent->triggerGroundEffectsOnMove && objEvent->localId != LOCALID_CAMERA)
+    if (objEvent->triggerGroundEffectsOnMove && objEvent->localId != OBJ_EVENT_ID_CAMERA)
 #else
     if (objEvent->triggerGroundEffectsOnMove)
 #endif
@@ -10311,7 +10299,7 @@ static void DoGroundEffects_OnBeginStep(struct ObjectEvent *objEvent, struct Spr
     u32 flags;
 
 #ifdef BUGFIX
-    if (objEvent->triggerGroundEffectsOnMove && objEvent->localId != LOCALID_CAMERA)
+    if (objEvent->triggerGroundEffectsOnMove && objEvent->localId != OBJ_EVENT_ID_CAMERA)
 #else
     if (objEvent->triggerGroundEffectsOnMove)
 #endif
@@ -10334,7 +10322,7 @@ static void DoGroundEffects_OnFinishStep(struct ObjectEvent *objEvent, struct Sp
     u32 flags;
 
 #ifdef BUGFIX
-    if (objEvent->triggerGroundEffectsOnStop && objEvent->localId != LOCALID_CAMERA)
+    if (objEvent->triggerGroundEffectsOnStop && objEvent->localId != OBJ_EVENT_ID_CAMERA)
 #else
     if (objEvent->triggerGroundEffectsOnStop)
 #endif
@@ -11294,10 +11282,6 @@ void GetDaycareGraphics(struct ScriptContext *ctx)
     gSpecialVar_Result = i;
 }
 
-
-
-
-
 // running slow
 static void StartSlowRunningAnim(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 direction)
 {
@@ -11345,32 +11329,6 @@ bool8 MovementActionFunc_RunSlow_Step1(struct ObjectEvent *objectEvent, struct S
     return FALSE;
 }
 
-static void InitMovementSurfStill(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 direction, u8 speed)
-{
-    u8 (*functions[ARRAY_COUNT(sDirectionAnimFuncsBySpeed)])(u8);
-
-    memcpy(functions, sDirectionAnimFuncsBySpeed, sizeof sDirectionAnimFuncsBySpeed);
-    InitNpcForMovement(objectEvent, sprite, direction, speed);
-    ObjectEventTurn(objectEvent, direction);
-}
-
-bool8 MovementAction_SurfStillDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    InitMovementSurfStill(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FAST_1);
-    sprite->animPaused = TRUE;
-    return MovementAction_SurfStillDown_Step1(objectEvent, sprite);
-}
-
-bool8 MovementAction_SurfStillDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    if (UpdateMovementNormal(objectEvent, sprite))
-    {
-        sprite->sActionFuncId = 2;
-        return TRUE;
-    }
-    return FALSE;
-}
-
 static bool8 UpdateWalkSlowStairs(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     if (UpdateWalkSlowStairsAnim(sprite))
@@ -11378,23 +11336,6 @@ static bool8 UpdateWalkSlowStairs(struct ObjectEvent *objectEvent, struct Sprite
         ShiftStillObjectEventCoords(objectEvent);
         objectEvent->triggerGroundEffectsOnStop = TRUE;
         sprite->animPaused = TRUE;
-                return TRUE;
-    }
-    return FALSE;
-}
-
-bool8 MovementAction_SurfStillUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    InitMovementSurfStill(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FAST_1);
-    sprite->animPaused = TRUE;
-    return MovementAction_SurfStillUp_Step1(objectEvent, sprite);
-}
-
-bool8 MovementAction_SurfStillUp_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    if (UpdateMovementNormal(objectEvent, sprite))
-    {
-        sprite->sActionFuncId = 2;
         return TRUE;
     }
     return FALSE;
@@ -11481,23 +11422,6 @@ bool8 MovementAction_WalkSlowStairsLeft_Step1(struct ObjectEvent *objectEvent, s
     if (UpdateWalkSlowStairs(objectEvent, sprite))
     {
         sprite->data[2] = 2;
-                return TRUE;
-    }
-    return FALSE;
-}
-
-bool8 MovementAction_SurfStillLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    InitMovementSurfStill(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FAST_1);
-    sprite->animPaused = TRUE;
-    return MovementAction_SurfStillLeft_Step1(objectEvent, sprite);
-}
-
-bool8 MovementAction_SurfStillLeft_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    if (UpdateMovementNormal(objectEvent, sprite))
-    {
-        sprite->sActionFuncId = 2;
         return TRUE;
     }
     return FALSE;
@@ -11517,23 +11441,6 @@ bool8 MovementAction_WalkSlowStairsRight_Step1(struct ObjectEvent *objectEvent, 
     if (UpdateWalkSlowStairs(objectEvent, sprite))
     {
         sprite->data[2] = 2;
-                return TRUE;
-    }
-    return FALSE;
-}
-
-bool8 MovementAction_SurfStillRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    InitMovementSurfStill(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FAST_1);
-    sprite->animPaused = TRUE;
-    return MovementAction_SurfStillRight_Step1(objectEvent, sprite);
-}
-
-bool8 MovementAction_SurfStillRight_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    if (UpdateMovementNormal(objectEvent, sprite))
-    {
-        sprite->sActionFuncId = 2;
         return TRUE;
     }
     return FALSE;

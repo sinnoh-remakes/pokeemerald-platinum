@@ -1,4 +1,4 @@
-`# GBA rom header
+# GBA rom header
 TITLE       := POKEMON EMER
 GAME_CODE   := BPEE
 MAKER_CODE  := 01

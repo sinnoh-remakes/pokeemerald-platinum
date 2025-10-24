@@ -4389,14 +4389,6 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     effect++;
                 }
                 break;
-            case ABILITY_POWER_CONSTRUCT:
-                if (TryBattleFormChange(battler, FORM_CHANGE_BATTLE_HP_PERCENT))
-                {
-                    gBattlerAttacker = battler;
-                    BattleScriptPushCursorAndCallback(BattleScript_PowerConstruct);
-                    effect++;
-                }
-                break;
             case ABILITY_BALL_FETCH:
                 if (gBattleMons[battler].item == ITEM_NONE
                     && gBattleResults.catchAttempts[gLastUsedBall - ITEM_ULTRA_BALL] >= 1
@@ -6110,28 +6102,6 @@ static enum ItemEffect ConsumeBerserkGene(u32 battler, enum ItemCaseId caseID)
     return ITEM_STATS_CHANGE;
 }
 
-static enum ItemEffect ConsumeBerserkGene(u32 battler, enum ItemCaseId caseID)
-{
-    if (CanBeInfinitelyConfused(battler))
-        gStatuses4[battler] |= STATUS4_INFINITE_CONFUSION;
-
-    BufferStatChange(battler, STAT_ATK, STRINGID_STATROSE);
-    gBattlerAttacker = gEffectBattler = battler;
-    SET_STATCHANGER(STAT_ATK, 2, FALSE);
-    gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_ATK;
-    gBattleScripting.animArg2 = 0;
-    if (caseID == ITEMEFFECT_ON_SWITCH_IN_FIRST_TURN || caseID == ITEMEFFECT_NORMAL)
-    {
-        BattleScriptExecute(BattleScript_BerserkGeneRetEnd2);
-    }
-    else
-    {
-        BattleScriptPushCursor();
-        gBattlescriptCurrInstr = BattleScript_BerserkGeneRet;
-    }
-    return ITEM_STATS_CHANGE;
-}
-
 static u32 ItemRestorePp(u32 battler, u32 itemId, enum ItemCaseId caseID)
 {
     struct Pokemon *mon = GetBattlerMon(battler);
@@ -6789,8 +6759,6 @@ u32 ItemBattleEffects(enum ItemCaseId caseID, u32 battler)
                 break;
             default:
                 break;
-            default:
-                break;
             }
             if (effect != 0)
             {
@@ -6973,8 +6941,6 @@ u32 ItemBattleEffects(enum ItemCaseId caseID, u32 battler)
                 break;
             case HOLD_EFFECT_MIRROR_HERB:
                 effect = TryConsumeMirrorHerb(battler, caseID);
-                break;
-            default:
                 break;
             default:
                 break;
@@ -7656,12 +7622,6 @@ bool32 IsMoveMakingContact(u32 battlerAtk, u32 battlerDef, u32 abilityAtk, enum 
         return FALSE;
     }
     return TRUE;
-}
-
-static inline bool32 IsSideProtected(u32 battler, enum ProtectMethod method)
-{
-    return gProtectStructs[battler].protected == method
-        || gProtectStructs[BATTLE_PARTNER(battler)].protected == method;
 }
 
 static inline bool32 IsSideProtected(u32 battler, enum ProtectMethod method)
@@ -9444,38 +9404,8 @@ static inline s32 DoMoveDamageCalcVars(struct DamageContext *ctx)
 
     dmg = ApplyModifiersAfterDmgRoll(ctx, dmg);
 
-    return dmg;
-}
-
-static inline s32 DoFixedDamageMoveCalc(struct DamageCalculationData *damageCalcData)
-{
-    s32 dmg = 0;
-    s32 randDamage;
-
-    switch (GetMoveEffect(damageCalcData->move))
-    {
-    case EFFECT_LEVEL_DAMAGE:
-        dmg = gBattleMons[damageCalcData->battlerAtk].level;
-        break;
-    case EFFECT_PSYWAVE:
-        randDamage = B_PSYWAVE_DMG >= GEN_6 ? (Random() % 101) : ((Random() % 11) * 10);
-        dmg = gBattleMons[damageCalcData->battlerAtk].level * (randDamage + 50) / 100;
-        break;
-    case EFFECT_FIXED_DAMAGE_ARG:
-        dmg = GetMoveFixedDamage(damageCalcData->move);
-        break;
-    case EFFECT_SUPER_FANG:
-        dmg = GetNonDynamaxHP(damageCalcData->battlerDef) / 2;
-        break;
-    default:
-        return INT32_MAX;
-    }
-
-    gBattleStruct->moveResultFlags[damageCalcData->battlerDef] &= ~(MOVE_RESULT_NOT_VERY_EFFECTIVE | MOVE_RESULT_SUPER_EFFECTIVE);
-
     if (dmg == 0)
         dmg = 1;
-
     return dmg;
 }
 

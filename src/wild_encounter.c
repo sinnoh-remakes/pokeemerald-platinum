@@ -565,10 +565,6 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum 
     case WILD_AREA_FISHING:
     case WILD_AREA_HIDDEN:
         break;
-    default:
-    case WILD_AREA_FISHING:
-    case WILD_AREA_HIDDEN:
-        break;
     }
 
     level = ChooseWildMonLevel(wildMonInfo->wildPokemon, wildMonIndex, area);

@@ -276,7 +276,7 @@ static bool32 ShouldSwitchIfHasBadOdds(u32 battler)
             if (!IsBattleMoveStatus(aiMove) && !AI_DoesChoiceEffectBlockMove(battler, aiMove))
             {
                 // Check if mon has a super effective move
-                if (AI_GetMoveEffectiveness(aiMove, battler, opposingBattler) >= UQ_4_12(2.0) && !AI_DoesChoiceItemBlockMove(battler, aiMove))
+                if (AI_GetMoveEffectiveness(aiMove, battler, opposingBattler) >= UQ_4_12(2.0) && !AI_DoesChoiceEffectBlockMove(battler, aiMove))
                     hasSuperEffectiveMove = TRUE;
 
                 // Get maximum damage mon can deal

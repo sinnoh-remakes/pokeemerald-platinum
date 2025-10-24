@@ -1443,7 +1443,7 @@ u32 NoOfHitsForTargetToFaintBattlerWithMod(u32 battlerDef, u32 battlerAtk, s32 h
     if (hpCheck > gBattleMons[battlerAtk].maxHP)
         hpCheck = gBattleMons[battlerAtk].maxHP;
 
-    for (moveIndex = 0; moveIndex < MAX_MON_MOVES; moveIndex++)
+    for (i = 0; i < MAX_MON_MOVES; i++)
     {
         damageDealt = AI_GetDamage(battlerDef, battlerAtk, i, AI_DEFENDING, gAiLogicData);
         if (damageDealt == 0)
@@ -3755,7 +3755,7 @@ bool32 ShouldAbsorb(u32 battlerAtk, u32 battlerDef, u32 move, s32 damage)
     return FALSE;
 }
 
-bool32 ShouldRecover(u32 battlerAtk, u32 battlerDef, u32 move, u32 healPercent, enum DamageCalcContext calcContext)
+bool32 ShouldRecover(u32 battlerAtk, u32 battlerDef, u32 move, u32 healPercent)
 {
     u32 maxHP = gBattleMons[battlerAtk].maxHP;
     u32 healAmount = (healPercent * maxHP) / 100;
@@ -4171,7 +4171,7 @@ bool32 ShouldUseWishAromatherapy(u32 battlerAtk, u32 battlerDef, u32 move)
         switch (GetMoveEffect(move))
         {
         case EFFECT_WISH:
-            return ShouldRecover(battlerAtk, battlerDef, move, 50, AI_DEFENDING); // Switch recovery isn't good idea in doubles
+            return ShouldRecover(battlerAtk, battlerDef, move, 50); // Switch recovery isn't good idea in doubles
         case EFFECT_HEAL_BELL:
             if (hasStatus)
                 return TRUE;

@@ -2994,7 +2994,6 @@ void SetMoveEffect(u32 battler, u32 effectBattler, bool32 primary, bool32 certai
     case MOVE_EFFECT_STEALTH_ROCK:
     case MOVE_EFFECT_PAYDAY:
     case MOVE_EFFECT_BUG_BITE:
-    case MOVE_EFFECT_STEAL_ITEM:
         activateAfterFaint = TRUE;
         break;
     }
@@ -15255,8 +15254,6 @@ void BS_SetTerrain(void)
     case EFFECT_HIT_SET_TERRAIN:
         statusFlag = GetMoveTerrainFlag(gCurrentMove);
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_SET_PSYCHIC;
-        break;
-    default:
         break;
     default:
         break;

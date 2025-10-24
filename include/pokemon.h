@@ -395,14 +395,6 @@ struct EvolutionParam
     u16 arg3;
 };
 
-struct EvolutionParam
-{
-    u16 condition;
-    u16 arg1;
-    u16 arg2;
-    u16 arg3;
-};
-
 struct Evolution
 {
     u16 method;

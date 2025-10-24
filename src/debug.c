@@ -155,20 +155,6 @@ enum DebugBattleEnvironment
     DEBUG_BATTLE_2_MENU_ITEM_ENVIRONMENT_9,
 };
 
-enum PlayerDebugMenu
-{
-    DEBUG_PLAYER_MENU_ITEM_PLAYER_NAME,
-    DEBUG_PLAYER_MENU_ITEM_PLAYER_GENDER,
-    DEBUG_PLAYER_MENU_ITEM_PLAYER_ID,
-};
-
-enum ROMInfoDebugMenu
-{
-    DEBUG_ROM_INFO_MENU_ITEM_SAVEBLOCK,
-    DEBUG_ROM_INFO_MENU_ITEM_ROM_SPACE,
-    DEBUG_ROM_INFO_MENU_ITEM_EXPANSION_VER,
-};
-
 // *******************************
 // Constants
 #define DEBUG_MENU_FONT FONT_NORMAL
@@ -684,49 +670,6 @@ static const struct DebugMenuOption sDebugMenu_Actions_Main[] =
     { NULL }
 };
 
-static void (*const sDebugMenu_Actions_TimeMenu[])(u8) =
-{
-    [DEBUG_TIME_MENU_ITEM_PRINTTIME] = DebugAction_TimeMenu_PrintTime,
-    [DEBUG_TIME_MENU_ITEM_PRINTTIMEOFDAY] = DebugAction_TimeMenu_PrintTimeOfDay,
-    [DEBUG_TIME_MENU_ITEM_TIMESOFDAY] = DebugAction_TimeMenu_TimesOfDay,
-    [DEBUG_TIME_MENU_ITEM_WEEKDAYS] = DebugAction_TimeMenu_Weekdays,
-    [DEBUG_TIME_MENU_ITEM_CHECKWALLCLOCK]  = DebugAction_TimeMenu_CheckWallClock,
-    [DEBUG_TIME_MENU_ITEM_SETWALLCLOCK]    = DebugAction_TimeMenu_SetWallClock,
-};
-
-static void (*const sDebugMenu_Actions_TimeMenu_TimesOfDay[])(u8) =
-{
-    [DEBUG_TIME_MENU_ITEM_MORNING] = DebugAction_TimeMenu_ChangeTimeOfDay,
-    [DEBUG_TIME_MENU_ITEM_DAY] = DebugAction_TimeMenu_ChangeTimeOfDay,
-    [DEBUG_TIME_MENU_ITEM_EVENING] = DebugAction_TimeMenu_ChangeTimeOfDay,
-    [DEBUG_TIME_MENU_ITEM_NIGHT] = DebugAction_TimeMenu_ChangeTimeOfDay,
-};
-
-static void (*const sDebugMenu_Actions_TimeMenu_Weekdays[])(u8) =
-{
-    [DEBUG_TIME_MENU_ITEM_SUNDAY] = DebugAction_TimeMenu_ChangeWeekdays,
-    [DEBUG_TIME_MENU_ITEM_MONDAY] = DebugAction_TimeMenu_ChangeWeekdays,
-    [DEBUG_TIME_MENU_ITEM_TUESDAY] = DebugAction_TimeMenu_ChangeWeekdays,
-    [DEBUG_TIME_MENU_ITEM_WEDNESDAY] = DebugAction_TimeMenu_ChangeWeekdays,
-    [DEBUG_TIME_MENU_ITEM_THURSDAY] = DebugAction_TimeMenu_ChangeWeekdays,
-    [DEBUG_TIME_MENU_ITEM_FRIDAY] = DebugAction_TimeMenu_ChangeWeekdays,
-    [DEBUG_TIME_MENU_ITEM_SATURDAY] = DebugAction_TimeMenu_ChangeWeekdays,
-};
-
-static void (*const sDebugMenu_Actions_Player[])(u8) =
-{
-    [DEBUG_PLAYER_MENU_ITEM_PLAYER_NAME]   = DebugAction_Player_Name,
-    [DEBUG_PLAYER_MENU_ITEM_PLAYER_GENDER] = DebugAction_Player_Gender,
-    [DEBUG_PLAYER_MENU_ITEM_PLAYER_ID]     = DebugAction_Player_Id,
-};
-
-static void (*const sDebugMenu_Actions_ROMInfo[])(u8) =
-{
-    [DEBUG_ROM_INFO_MENU_ITEM_SAVEBLOCK]     = DebugAction_ROMInfo_CheckSaveBlock,
-    [DEBUG_ROM_INFO_MENU_ITEM_ROM_SPACE]     = DebugAction_ROMInfo_CheckROMSpace,
-    [DEBUG_ROM_INFO_MENU_ITEM_EXPANSION_VER] = DebugAction_ROMInfo_ExpansionVersion,
-};
-
 // *******************************
 // Windows
 static const struct WindowTemplate sDebugMenuWindowTemplateMain =
@@ -774,41 +717,6 @@ static const struct WindowTemplate sDebugMenuWindowTemplateSound =
 };
 
 static bool32 Debug_SaveCallbackMenu(struct DebugMenuOption *callbackItems);
-
-static const struct ListMenuTemplate sDebugMenu_ListTemplate_TimeMenu =
-{
-    .items = sDebugMenu_Items_TimeMenu,
-    .moveCursorFunc = ListMenuDefaultCursorMoveFunc,
-    .totalItems = ARRAY_COUNT(sDebugMenu_Items_TimeMenu),
-};
-
-static const struct ListMenuTemplate sDebugMenu_ListTemplate_TimeMenu_TimesOfDay =
-{
-    .items = sDebugMenu_Items_TimeMenu_TimesOfDay,
-    .moveCursorFunc = ListMenuDefaultCursorMoveFunc,
-    .totalItems = ARRAY_COUNT(sDebugMenu_Items_TimeMenu_TimesOfDay),
-};
-
-static const struct ListMenuTemplate sDebugMenu_ListTemplate_TimeMenu_Weekdays =
-{
-    .items = sDebugMenu_Items_TimeMenu_Weekdays,
-    .moveCursorFunc = ListMenuDefaultCursorMoveFunc,
-    .totalItems = ARRAY_COUNT(sDebugMenu_Items_TimeMenu_Weekdays),
-};
-
-static const struct ListMenuTemplate sDebugMenu_ListTemplate_Player =
-{
-    .items = sDebugMenu_Items_Player,
-    .moveCursorFunc = ListMenuDefaultCursorMoveFunc,
-    .totalItems = ARRAY_COUNT(sDebugMenu_Items_Player),
-};
-
-static const struct ListMenuTemplate sDebugMenu_ListTemplate_ROMInfo =
-{
-    .items = sDebugMenu_Items_ROMInfo,
-    .moveCursorFunc = ListMenuDefaultCursorMoveFunc,
-    .totalItems = ARRAY_COUNT(sDebugMenu_Items_ROMInfo),
-};
 
 // *******************************
 // Functions universal
@@ -1028,6 +936,7 @@ static const u16 sLocationFlags[] =
     FLAG_VISITED_TWINLEAF_TOWN,
     FLAG_VISITED_SANDGEM_TOWN,
     FLAG_VISITED_JUBILIFE_CITY,
+    FLAG_VISITED_OREBURGH_CITY,
     FLAG_VISITED_LITTLEROOT_TOWN,
     FLAG_VISITED_OLDALE_TOWN,
     FLAG_VISITED_DEWFORD_TOWN,
@@ -1294,50 +1203,6 @@ static void DebugAction_OpenSubMenuCreateFollowerNPC(u8 taskId, const struct Deb
     {
         Debug_DestroyMenu_Full_Script(taskId, Debug_Follower_NPC_Not_Enabled);
     }
-}
-
-static void DebugAction_Util_OpenTimeMenu(u8 taskId)
-{
-    Debug_DestroyMenu(taskId);
-    Debug_ShowMenu(DebugTask_HandleMenuInput_TimeMenu, sDebugMenu_ListTemplate_TimeMenu);
-}
-
-static void DebugAction_TimeMenu_TimesOfDay(u8 taskId)
-{
-    if (!OW_USE_FAKE_RTC)
-    {
-        Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_FakeRTCNotEnabled);
-    }
-    else
-    {
-        Debug_DestroyMenu_Full(taskId);
-        Debug_ShowMenu(DebugTask_HandleMenuInput_TimeMenu_TimesOfDay, sDebugMenu_ListTemplate_TimeMenu_TimesOfDay);
-    }
-}
-
-static void DebugAction_TimeMenu_Weekdays(u8 taskId)
-{
-    if (!OW_USE_FAKE_RTC)
-    {
-        Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_FakeRTCNotEnabled);
-    }
-    else
-    {
-        Debug_DestroyMenu_Full(taskId);
-        Debug_ShowMenu(DebugTask_HandleMenuInput_TimeMenu_Weekdays, sDebugMenu_ListTemplate_TimeMenu_Weekdays);
-    }
-}
-
-static void DebugAction_OpenPlayerMenu(u8 taskId)
-{
-    Debug_DestroyMenu(taskId);
-    Debug_ShowMenu(DebugTask_HandleMenuInput_Player, sDebugMenu_ListTemplate_Player);
-}
-
-static void DebugAction_OpenROMInfoMenu(u8 taskId)
-{
-    Debug_DestroyMenu(taskId);
-    Debug_ShowMenu(DebugTask_HandleMenuInput_ROMInfo, sDebugMenu_ListTemplate_ROMInfo);
 }
 
 // *******************************
@@ -3434,7 +3299,7 @@ static void DebugAction_Sound_MUS(u8 taskId)
 
     // Display initial song
     StringCopy(gStringVar2, gText_DigitIndicator[0]);
-    ConvertIntToDecimalStringN(gStringVar3, SONGS_START, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
+    ConvertIntToDecimalStringN(gStringVar3, START_MUS, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
     StringCopyPadded(gStringVar1, sBGMNames[0], CHAR_SPACE, 35);
     StringExpandPlaceholders(gStringVar4, sDebugText_Sound_Music_ID);
     AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
@@ -3443,7 +3308,7 @@ static void DebugAction_Sound_MUS(u8 taskId)
 
     gTasks[taskId].func = DebugAction_Sound_MUS_SelectId;
     gTasks[taskId].tSubWindowId = windowId;
-    gTasks[taskId].tInput = SONGS_START;
+    gTasks[taskId].tInput = START_MUS;
     gTasks[taskId].tDigit = 0;
     gTasks[taskId].tCurrentSong = gTasks[taskId].tInput;
 }
@@ -3589,7 +3454,6 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_MT_CHIMNEY)               \
     X(MUS_ENCOUNTER_FEMALE)         \
     X(MUS_LILYCOVE)                 \
-    X(MUS_DESERT)                   \
     X(MUS_HELP)                     \
     X(MUS_UNDERWATER)               \
     X(MUS_VICTORY_TRAINER)          \

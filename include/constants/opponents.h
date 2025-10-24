@@ -22,7 +22,7 @@
 #define TRAINER_UNUSED_16                    16
 #define TRAINER_UNUSED_17                    17
 #define TRAINER_UNUSED_18                    18
-#define TRAINER_UNUSED_19                    19
+#define TRAINER_GRUNT_PETALBURG_WOODS    19
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
@@ -856,8 +856,8 @@
 #define TRAINER_EVERETT                     850
 #define TRAINER_RED                         851
 #define TRAINER_LEAF                        852
-#define TRAINER_UNUSED_853                  853
-#define TRAINER_UNUSED_854                  854
+#define TRAINER_SAWYER_1                    853
+#define TRAINER_GABRIELLE_1                 854
 #define TRAINER_UNUSED_855                  855
 #define TRAINER_UNUSED_856                  856
 #define TRAINER_UNUSED_857                  857
