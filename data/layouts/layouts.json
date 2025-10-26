@@ -4612,8 +4612,8 @@
       "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
     },
     {
-      "id": "LAYOUT_OREBURGH_CITY",
-      "name": "OreburghCity_Layout",
+      "id": "LAYOUT_OREBURGH_CITY_NORTH",
+      "name": "OreburghCityNorth_Layout",
       "width": 72,
       "height": 32,
       "primary_tileset": "gTileset_OutdoorOreburgh",

@@ -1,9 +1,9 @@
 {
   "id": "MAP_OREBURGH_CITY",
   "name": "OreburghCityNorth",
-  "layout": "LAYOUT_OREBURGH_CITY",
+  "layout": "LAYOUT_OREBURGH_CITY_NORTH",
   "music": "MUS_DP_OREBURGH_DAY",
-  "region_map_section": "MAPSEC_ROUTE_201",
+  "region_map_section": "MAPSEC_OREBURGH_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
