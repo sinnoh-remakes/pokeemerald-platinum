@@ -2,7 +2,7 @@
 
 	.equ	se_m_waterfall_grp, voicegroup_rs_sfx_2
 	.equ	se_m_waterfall_pri, 4
-	.equ	se_m_waterfall_rev, 0
+	.equ	se_m_waterfall_rev, reverb_set+50
 	.equ	se_m_waterfall_mvl, 127
 	.equ	se_m_waterfall_key, 0
 	.equ	se_m_waterfall_tbs, 1

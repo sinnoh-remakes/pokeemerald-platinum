@@ -2,7 +2,7 @@
 
 	.equ	se_m_sky_uppercut_grp, voicegroup_rs_sfx_2
 	.equ	se_m_sky_uppercut_pri, 4
-	.equ	se_m_sky_uppercut_rev, 0
+	.equ	se_m_sky_uppercut_rev, reverb_set+50
 	.equ	se_m_sky_uppercut_mvl, 127
 	.equ	se_m_sky_uppercut_key, 0
 	.equ	se_m_sky_uppercut_tbs, 1

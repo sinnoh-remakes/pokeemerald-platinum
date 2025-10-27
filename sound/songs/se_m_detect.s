@@ -2,7 +2,7 @@
 
 	.equ	se_m_detect_grp, voicegroup_rs_sfx_2
 	.equ	se_m_detect_pri, 4
-	.equ	se_m_detect_rev, 0
+	.equ	se_m_detect_rev, reverb_set+50
 	.equ	se_m_detect_mvl, 127
 	.equ	se_m_detect_key, 0
 	.equ	se_m_detect_tbs, 1
