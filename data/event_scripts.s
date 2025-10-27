@@ -607,6 +607,7 @@ gStdScripts_End::
 	.include "data/maps/Route219/scripts.inc"
 	.include "data/maps/OreburghGate/scripts.inc"
 	.include "data/maps/OreburghCityNorth/scripts.inc"
+	.include "data/maps/OreburghCitySouth/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
@@ -1185,5 +1186,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
-
-	.include "data/maps/OreburghCitySouth/scripts.inc"

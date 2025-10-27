@@ -1994,7 +1994,7 @@ const u16 gTilesetPalettes_CaveCoronet[][16] =
     INCBIN_U16("data/tilesets/primary/cave_coronet/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_CaveCoronet[] = INCBIN_U32("data/tilesets/primary/cave_coronet/tiles.4bpp.lz");
+const u32 gTilesetTiles_CaveCoronet[] = INCBIN_U32("data/tilesets/primary/cave_coronet/tiles.4bpp.fastSmol");
 
 const u16 gTilesetPalettes_OutdoorOreburgh[][16] =
 {
@@ -2013,7 +2013,7 @@ const u16 gTilesetPalettes_OutdoorOreburgh[][16] =
     INCBIN_U16("data/tilesets/primary/outdoor_oreburgh/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_OutdoorOreburgh[] = INCBIN_U32("data/tilesets/primary/outdoor_oreburgh/tiles.4bpp.lz");
+const u32 gTilesetTiles_OutdoorOreburgh[] = INCBIN_U32("data/tilesets/primary/outdoor_oreburgh/tiles.4bpp.fastSmol");
 
 const u16 gTilesetPalettes_OreburghNorth[][16] =
 {
@@ -2032,7 +2032,7 @@ const u16 gTilesetPalettes_OreburghNorth[][16] =
     INCBIN_U16("data/tilesets/secondary/oreburgh_north/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_OreburghNorth[] = INCBIN_U32("data/tilesets/secondary/oreburgh_north/tiles.4bpp.lz");
+const u32 gTilesetTiles_OreburghNorth[] = INCBIN_U32("data/tilesets/secondary/oreburgh_north/tiles.4bpp.fastSmol");
 
 const u16 gTilesetPalettes_OreburghSouth[][16] =
 {
@@ -2051,4 +2051,4 @@ const u16 gTilesetPalettes_OreburghSouth[][16] =
     INCBIN_U16("data/tilesets/secondary/oreburgh_south/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_OreburghSouth[] = INCBIN_U32("data/tilesets/secondary/oreburgh_south/tiles.4bpp.lz");
+const u32 gTilesetTiles_OreburghSouth[] = INCBIN_U32("data/tilesets/secondary/oreburgh_south/tiles.4bpp.fastSmol");
