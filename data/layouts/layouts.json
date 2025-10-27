@@ -62,6 +62,66 @@
       "blockdata_filepath": "data/layouts/Route219/map.bin"
     },
     {
+      "id": "LAYOUT_LAKEFRONT_VERITY",
+      "name": "LakefrontVerity_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route201",
+      "border_filepath": "data/layouts/LakefrontVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakefrontVerity/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VERITY",
+      "name": "LakeVerity_Layout",
+      "width": 22,
+      "height": 29,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Lake",
+      "border_filepath": "data/layouts/LakeVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
+    },
+    {
+      "id": "LAYOUT_GATE_JUBILIFE",
+      "name": "Gate_Jubilife_Layout",
+      "width": 16,
+      "height": 11,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE203",
+      "name": "Route203_Layout",
+      "width": 64,
+      "height": 40,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route203",
+      "border_filepath": "data/layouts/Route203/border.bin",
+      "blockdata_filepath": "data/layouts/Route203/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE204",
+      "name": "Route204_Layout",
+      "width": 32,
+      "height": 66,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route204",
+      "border_filepath": "data/layouts/Route204/border.bin",
+      "blockdata_filepath": "data/layouts/Route204/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE",
+      "name": "OreburghGate_Layout",
+      "width": 28,
+      "height": 32,
+      "primary_tileset": "gTileset_CaveCoronet",
+      "secondary_tileset": "gTileset_TwinleafOther",
+      "border_filepath": "data/layouts/OreburghGate/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
+    },
+    {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
       "name": "TwinleafTown_PlayersHouse_1F_Layout",
       "width": 11,
@@ -140,66 +200,6 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/SandgemTown_HelperHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTown_HelperHouse_2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_LAKEFRONT_VERITY",
-      "name": "LakefrontVerity_Layout",
-      "width": 20,
-      "height": 16,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route201",
-      "border_filepath": "data/layouts/LakefrontVerity/border.bin",
-      "blockdata_filepath": "data/layouts/LakefrontVerity/map.bin"
-    },
-    {
-      "id": "LAYOUT_LAKE_VERITY",
-      "name": "LakeVerity_Layout",
-      "width": 22,
-      "height": 29,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Lake",
-      "border_filepath": "data/layouts/LakeVerity/border.bin",
-      "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
-    },
-    {
-      "id": "LAYOUT_GATE_JUBILIFE",
-      "name": "Gate_Jubilife_Layout",
-      "width": 16,
-      "height": 11,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Gatehouse",
-      "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
-      "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE203",
-      "name": "Route203_Layout",
-      "width": 64,
-      "height": 40,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route203",
-      "border_filepath": "data/layouts/Route203/border.bin",
-      "blockdata_filepath": "data/layouts/Route203/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE204",
-      "name": "Route204_Layout",
-      "width": 32,
-      "height": 66,
-      "primary_tileset": "gTileset_OutdoorJubilife",
-      "secondary_tileset": "gTileset_Route204",
-      "border_filepath": "data/layouts/Route204/border.bin",
-      "blockdata_filepath": "data/layouts/Route204/map.bin"
-    },
-    {
-      "id": "LAYOUT_OREBURGH_GATE",
-      "name": "OreburghGate_Layout",
-      "width": 28,
-      "height": 32,
-      "primary_tileset": "gTileset_CaveCoronet",
-      "secondary_tileset": "gTileset_TwinleafOther",
-      "border_filepath": "data/layouts/OreburghGate/border.bin",
-      "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
     },
     {
       "id": "LAYOUT_PETALBURG_CITY",
