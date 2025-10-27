@@ -57,3 +57,6 @@ tools/compresSmol/compresSmolTilemap
 *.fastSmol
 *.smolTM
 __pycache__
+
+tiles/*.pdn
+venv
