@@ -277,7 +277,7 @@ OldaleTown_EventScript_RivalFinish::
 	waitmovement 0
 	removeobject LOCALID_OLDALE_RIVAL
 	setvar VAR_OLDALE_RIVAL_STATE, 2
-	setflag FLAG_HIDE_SANDGEM_TOWN_RIVAL
+	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
 	releaseall
 	end
 
