@@ -81,205 +81,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 
-=== TRAINER_RIVAL_ROUTE_201_PIPLUP ===
-Name: BARRY
-Class: Rival
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Piplup
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_RIVAL_ROUTE_201_TURTWIG ===
-Name: BARRY
-Class: Rival
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Turtwig
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_RIVAL_ROUTE_201_CHIMCHAR ===
-Name: BARRY
-Class: Rival
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Chimchar
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_TRISTAN_1 ===
-Name: TRISTAN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Starly
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_TRISTAN_2 ===
-Name: TRISTAN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Staravia
-Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_TRISTAN_3 ===
-Name: TRISTAN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Staraptor
-Level: 35
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_TRISTAN_4 ===
-Name: TRISTAN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Staraptor
-Level: 45
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_TRISTAN_5 ===
-Name: TRISTAN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Staraptor
-Level: 45
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_NATALIE ===
-Name: NATALIE
-Class: Lass
-Pic: Lass
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Bidoof
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_LOGAN ===
-Name: LOGAN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Burmy
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_RIVAL_ROUTE_203_PIPLUP ===
-Name: BARRY
-Class: Rival
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Starly
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Piplup
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_RIVAL_ROUTE_203_TURTWIG ===
-Name: BARRY
-Class: Rival
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Starly
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Turtwig
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_RIVAL_ROUTE_203_CHIMCHAR ===
-Name: BARRY
-Class: Rival
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Starly
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Chimchar
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MICHAEL ===
-Name: MICHAEL
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Kricketot
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Zubat
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_HOENN_TEMP ===
+=== TRAINER_SAWYER_1 ===
 Name: SAWYER
 Class: Hiker
 Pic: Hiker
@@ -290,6 +92,293 @@ AI: Basic Trainer
 
 Geodude
 Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Zubat
+Level: 31
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 31
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Zubat
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Carvanha
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_1 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Carvanha
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_3 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Zubat
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GABRIELLE_1 ===
+Name: GABRIELLE
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Skitty
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Poochyena
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zigzagoon
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lotad
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Seedot
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Taillow
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_PETALBURG_WOODS ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MARCEL ===
+Name: MARCEL
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Manectric
+Level: 29
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Shiftry
+Level: 29
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_ALBERTO ===
+Name: ALBERTO
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Check Bad Move
+
+Pelipper
+Level: 30
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Xatu
+Level: 30
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ED ===
+Name: ED
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+Zangoose
+Level: 30
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Seviper
+Level: 30
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Carvanha
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DECLAN ===
+Name: DECLAN
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Check Bad Move
+
+Gyarados
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_WEATHER_INST_1 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Zubat
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Poochyena
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_WEATHER_INST_2 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_WEATHER_INST_3 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zubat
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MUSEUM_1 ===
@@ -16759,4 +16848,226 @@ Double Battle: No
 
 Bulbasaur
 Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BRENDAN_PLACEHOLDER ===
+Name: BRENDAN
+Class: RS Protag
+Pic: RS Brendan
+Gender: Male
+Music: Male
+Double Battle: No
+
+Groudon
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MAY_PLACEHOLDER ===
+Name: MAY
+Class: RS Protag
+Pic: RS May
+Gender: Female
+Music: Male
+Double Battle: No
+
+Kyogre
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RIVAL_ROUTE_201_PIPLUP ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Piplup
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RIVAL_ROUTE_201_TURTWIG ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Turtwig
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RIVAL_ROUTE_201_CHIMCHAR ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Chimchar
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_TRISTAN_1 ===
+Name: TRISTAN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Starly
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_TRISTAN_2 ===
+Name: TRISTAN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staravia
+Level: 24
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_TRISTAN_3 ===
+Name: TRISTAN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staraptor
+Level: 35
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+=== TRAINER_TRISTAN_4 ===
+Name: TRISTAN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staraptor
+Level: 45
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_TRISTAN_5 ===
+Name: TRISTAN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staraptor
+Level: 45
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+=== TRAINER_NATALIE ===
+Name: NATALIE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Bidoof
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_LOGAN ===
+Name: LOGAN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Burmy
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RIVAL_ROUTE_203_PIPLUP ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Starly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Piplup
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RIVAL_ROUTE_203_TURTWIG ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Starly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Turtwig
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RIVAL_ROUTE_203_CHIMCHAR ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Starly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Chimchar
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MICHAEL ===
+Name: MICHAEL
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Kricketot
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zubat
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

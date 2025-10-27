@@ -4780,8 +4780,6 @@ Route134_Text_HudsonPostBattle:
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
 
-@ Sinnoh Texts Below
-
 VSSeeker_Text_BatteryNotChargedNeedXSteps::
 	.string "The battery isn't charged enough.\p"
 	.string "No. of steps required to fully\n"
@@ -4796,6 +4794,8 @@ VSSeeker_Text_TrainersNotReady::
 	.string "The other Trainers don't appear\n"
 	.string "to be ready for battle.\p"
 	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
+
+@ Sinnoh Texts Below
 
 Route202_Text_TristanIntro:
 	.string "You're a Pokémon Trainer!\n"

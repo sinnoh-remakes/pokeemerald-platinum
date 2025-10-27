@@ -9,7 +9,7 @@
 @ split table label will be offset 10 bytes before the actual key split data
 @ begins. Therefore, the notes naturally map to the key split table without
 @ any extra offset calculation.
-
+	
 .set KeySplitTable1, . - 36
 	.byte 0  @ 36
 	.byte 0  @ 37
@@ -4161,3 +4161,27 @@
 	.byte 1 @ 125
 	.byte 1 @ 126
 	.byte 1 @ 127
+
+keysplit piano, 36
+	split 0, 55
+	split 1, 70
+	split 2, 91
+	split 3, 108
+
+keysplit strings, 36
+	split 0, 69
+	split 1, 81
+	split 2, 108
+
+keysplit trumpet, 36
+	split 0, 66
+	split 1, 84
+	split 2, 108
+
+keysplit tuba, 24
+	split 0, 42
+	split 1, 108
+
+keysplit french_horn, 36
+	split 0, 66
+	split 1, 108

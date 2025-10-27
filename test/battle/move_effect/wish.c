@@ -60,4 +60,5 @@ SINGLE_BATTLE_TEST("Wish is blocked by Heal Block")
         NOT HP_BAR(player);
     }
 }
+
 TO_DO_BATTLE_TEST("TODO: Write Wish (Move Effect) test titles")

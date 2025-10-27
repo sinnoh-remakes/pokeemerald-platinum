@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_psybeam_grp, voicegroup128
+	.equ	se_m_psybeam_grp, voicegroup_rs_sfx_2
 	.equ	se_m_psybeam_pri, 4
-	.equ	se_m_psybeam_rev, 0
+	.equ	se_m_psybeam_rev, reverb_set+50
 	.equ	se_m_psybeam_mvl, 127
 	.equ	se_m_psybeam_key, 0
 	.equ	se_m_psybeam_tbs, 1
