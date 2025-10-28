@@ -261,3 +261,6 @@ const u16 gMetatileAttributes_Route203[] = INCBIN_U16("data/tilesets/secondary/r
 
 const u16 gMetatiles_Route204[] = INCBIN_U16("data/tilesets/secondary/route_204/metatiles.bin");
 const u16 gMetatileAttributes_Route204[] = INCBIN_U16("data/tilesets/secondary/route_204/metatile_attributes.bin");
+
+const u16 gMetatiles_CaveCoronet[] = INCBIN_U16("data/tilesets/primary/cave_coronet/metatiles.bin");
+const u16 gMetatileAttributes_CaveCoronet[] = INCBIN_U16("data/tilesets/primary/cave_coronet/metatile_attributes.bin");

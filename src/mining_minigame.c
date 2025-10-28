@@ -1902,7 +1902,7 @@ static bool8 Mining_LoadBgGraphics(void)
         case 1:
             if (FreeTempTileDataBuffersIfPossible() != TRUE) 
             {
-                //LZDecompressWram(sCollapseScreenUiTilemap, sBg1TilemapBuffer);
+                // DecompressDataWithHeaderWram(sCollapseScreenUiTilemap, sBg1TilemapBuffer);
                 for (i = 0; i<32; i++) 
                 {
                     for (j = 0; j<32; j++) 
@@ -1911,8 +1911,8 @@ static bool8 Mining_LoadBgGraphics(void)
                     }
                 }
 
-                LZDecompressWram(gCracksAndTerrainTilemap, sBg2TilemapBuffer);
-                LZDecompressWram(sUiTilemap, sBg3TilemapBuffer);
+                DecompressDataWithHeaderWram(gCracksAndTerrainTilemap, sBg2TilemapBuffer);
+                DecompressDataWithHeaderWram(sUiTilemap, sBg3TilemapBuffer);
                 sMiningUiState->loadGameState++;
             }
             break;

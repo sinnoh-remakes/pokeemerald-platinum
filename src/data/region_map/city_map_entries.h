@@ -110,19 +110,4 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .index = 1,
         .tilemap = gPokenavCityMap_EverGrande_1,
     },
-    // {
-    //     .mapSecId = MAPSEC_TWINLEAF_TOWN,
-    //     .index = 0,
-    //     .tilemap = gPokenavCityMap_Twinleaf_0,
-    // },
-    // {
-    //     .mapSecId = MAPSEC_SANDGEM_TOWN,
-    //     .index = 0,
-    //     .tilemap = gPokenavCityMap_Sandgem_0,
-    // },
-    // {
-    //     .mapSecId = MAPSEC_JUBILIFE_TOWN,
-    //     .index = 0,
-    //     .tilemap = gPokenavCityMap_Jubilife_0,
-    // },
 };

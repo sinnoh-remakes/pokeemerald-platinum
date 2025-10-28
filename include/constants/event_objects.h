@@ -272,11 +272,12 @@
 #define OBJ_EVENT_GFX_DAWN_WATERING              261
 #define OBJ_EVENT_GFX_PROF_ROWAN                 262
 #define OBJ_EVENT_GFX_BARRY                      263
+#define OBJ_EVENT_GFX_JOHANNA                    264
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        264
+#define NUM_OBJ_EVENT_GFX                        265
 
 
 // These are dynamic object gfx ids.
@@ -357,11 +358,14 @@
 #define LOCALID_NONE                         0
 #define LOCALID_CAMERA                     127
 #define LOCALID_BERRY_BLENDER_PLAYER_END   240 // This will use 5 (MAX_RFU_PLAYERS) IDs ending at 240, i.e. 236-240
+#define LOCALID_FOLLOWING_POKEMON          254
 #define LOCALID_PLAYER                     255
-#define OBJ_EVENT_ID_FOLLOWER 0xFE
-#define OBJ_EVENT_ID_NPC_FOLLOWER 0xFD
+#define OBJ_EVENT_ID_FOLLOWER              0xFE
+#define OBJ_EVENT_ID_NPC_FOLLOWER          0xFD
 
 // Aliases for old names. "object event id" normally refers to an index into gObjectEvents, which these are not.
+// Used for link player OWs in CreateLinkPlayerSprite
+#define OBJ_EVENT_ID_DYNAMIC_BASE 0xF0
 #define OBJ_EVENT_ID_CAMERA LOCALID_CAMERA
 #define OBJ_EVENT_ID_PLAYER LOCALID_PLAYER
 
@@ -411,6 +415,7 @@
 #define OBJ_EVENT_PAL_TAG_DAWN_REFLECTION         0x1128
 #define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1129
 #define OBJ_EVENT_PAL_TAG_BARRY                   0x1130
+#define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1131
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

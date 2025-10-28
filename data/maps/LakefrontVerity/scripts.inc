@@ -9,15 +9,18 @@ LakefrontVerity_EventScript_EnterLake::
 	lock
 	setvar VAR_ROUTE201_STATE, 3
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkInPlaceUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER , Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox LakefrontVerity_Text_EnterLake, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, LakefrontVerity_Movement_WalkUp
-	applymovement OBJ_EVENT_ID_FOLLOWER, LakefrontVerity_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER , LakefrontVerity_Movement_WalkUp
 	waitmovement 0
-	destroyfollowernpc
+	hideobjectat LOCALID_PLAYER, MAP_LAKEFRONT_VERITY
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER , Common_Movement_WalkUp
+	waitmovement 0
 	warp MAP_LAKE_VERITY, 12, 23
 	waitstate
+	destroyfollowernpc
 	release
 	end
 

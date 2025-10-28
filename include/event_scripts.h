@@ -573,6 +573,7 @@ extern const u8 EventScript_UseWaterfall[];
 extern const u8 EventScript_CannotUseWaterfall[];
 extern const u8 EventScript_UseDive[];
 extern const u8 EventScript_UseDiveUnderwater[];
+extern const u8 EventScript_UseRockClimb[];
 extern const u8 EventScript_FallDownHole[];
 extern const u8 EventScript_FieldPoison[];
 extern const u8 EventScript_EggHatch[];
@@ -684,26 +685,6 @@ extern const u8 EventScript_PokemonGotAway[];
 extern const u8 EventScript_LostSignal[];
 extern const u8 EventScript_TooDark[];
 extern const u8 EventScript_MovedTooFast[];
-extern const u8 Common_Movement_WalkFasterUpHide[];
-extern const u8 Common_Movement_WalkFasterDownHide[];
-extern const u8 Common_Movement_WalkFasterRightHide[];
-extern const u8 Common_Movement_WalkFasterLeftHide[];
-extern const u8 Common_Movement_WalkUpHideSlow[];
-extern const u8 Common_Movement_WalkDownHideSlow[];
-extern const u8 Common_Movement_WalkRightHideSlow[];
-extern const u8 Common_Movement_WalkLeftHideSlow[];
-extern const u8 Common_Movement_WalkUpHide[];
-extern const u8 Common_Movement_WalkDownHide[];
-extern const u8 Common_Movement_WalkRightHide[];
-extern const u8 Common_Movement_WalkLeftHide[];
-extern const u8 Common_Movement_WalkUpHideFast[];
-extern const u8 Common_Movement_WalkDownHideFast[];
-extern const u8 Common_Movement_WalkRightHideFast[];
-extern const u8 Common_Movement_WalkLeftHideFast[];
-extern const u8 Common_Movement_WalkUpHideFaster[];
-extern const u8 Common_Movement_WalkDownHideFaster[];
-extern const u8 Common_Movement_WalkRightHideFaster[];
-extern const u8 Common_Movement_WalkLeftHideFaster[];
 
 
 #endif // GUARD_EVENT_SCRIPTS_H

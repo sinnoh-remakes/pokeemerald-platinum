@@ -89,8 +89,10 @@ TwinleafTown_EventScript_RivalMeet::
 	end
 
 TwinleafTown_Movement_PlayerBump:
-	walk_fast_down
 	face_up
+	lock_facing_direction
+	walk_fast_down
+	unlock_facing_direction
 	step_end
 
 TwinleafTown_Movement_PlayerFaceRight:
@@ -494,7 +496,7 @@ TwinleafTown_Text_Guitarist3:
 
 TwinleafTown_Text_Guitarist4:
 	.string "Everyone goes off on adventures,\n"
-	.string "and then they gradually group up...$"
+	.string "and then they gradually grow up...$"
 
 TwinleafTown_Text_TownSign:
 	.string "Twinleaf Town\n"

@@ -369,7 +369,7 @@ static const u8 sSwapArrowTextColors[] = {TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRA
 void NewGameInitPCItems(void)
 {
     u8 i = 0;
-    ClearItemSlots(gSaveBlock1Ptr->pcItems, PC_ITEMS_COUNT);
+    CpuFastFill(0, gSaveBlock1Ptr->pcItems, sizeof(gSaveBlock1Ptr->pcItems));
 
     while (TRUE)
     {
@@ -505,8 +505,10 @@ static void PlayerPC_TurnOff(u8 taskId)
     if (sTopMenuNumOptions == NUM_BEDROOM_PC_OPTIONS) // Flimsy way to determine if Bedroom PC is in use
     {
         if (gSaveBlock2Ptr->playerGender == MALE)
+            // ScriptContext_SetupScript(LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC);
             ScriptContext_SetupScript(TwinleafTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC);
         else
+            // ScriptContext_SetupScript(LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC);
             ScriptContext_SetupScript(TwinleafTown_RivalsHouse_2F_EventScript_TurnOffPlayerPC);
     }
     else
@@ -1284,7 +1286,7 @@ static void ItemStorage_ExitItemList(u8 taskId)
 static void ItemStorage_StartItemSwap(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    ListMenuSetUnkIndicatorsStructField(tListTaskId, 16, 1);
+    ListMenuSetTemplateField(tListTaskId, LISTFIELD_CURSORKIND, CURSOR_INVISIBLE);
     sItemStorageMenu->toSwapPos = gPlayerPCItemPageInfo.itemsAbove + gPlayerPCItemPageInfo.cursorPos;
     ItemStorage_SetSwapArrow(tListTaskId, 0, 0);
     ItemStorage_UpdateSwapLinePos(sItemStorageMenu->toSwapPos);
@@ -1334,7 +1336,7 @@ static void ItemStorage_FinishItemSwap(u8 taskId, bool8 canceled)
 
     if (!canceled && sItemStorageMenu->toSwapPos != newPos && sItemStorageMenu->toSwapPos != newPos - 1)
     {
-        MoveItemSlotInList(gSaveBlock1Ptr->pcItems, sItemStorageMenu->toSwapPos, newPos);
+        MoveItemSlotInPC(gSaveBlock1Ptr->pcItems, sItemStorageMenu->toSwapPos, newPos);
         ItemStorage_RefreshListMenu();
     }
     if (sItemStorageMenu->toSwapPos < newPos)

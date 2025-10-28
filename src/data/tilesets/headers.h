@@ -1028,3 +1028,14 @@ const struct Tileset gTileset_Route204 =
     .metatileAttributes = gMetatileAttributes_Route204,
     .callback = InitTilesetAnim_Route204,
 };
+
+const struct Tileset gTileset_CaveCoronet =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_CaveCoronet,
+    .palettes = gTilesetPalettes_CaveCoronet,
+    .metatiles = gMetatiles_CaveCoronet,
+    .metatileAttributes = gMetatileAttributes_CaveCoronet,
+    .callback = NULL,
+};

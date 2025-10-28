@@ -12,6 +12,8 @@
 #include "fieldmap.h"
 #include "field_control_avatar.h"
 #include "field_message_box.h"
+#include "field_move.h"
+#include "field_effect.h"
 #include "field_player_avatar.h"
 #include "field_poison.h"
 #include "field_screen_effect.h"
@@ -36,7 +38,6 @@
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
 #include "constants/field_poison.h"
-#include "constants/map_types.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
@@ -286,7 +287,6 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
 
     // Don't play interaction sound for certain scripts.
     if (script != TwinleafTown_PlayersHouse_2F_EventScript_PC
-    //  && script != TwinleafTown_RivalsHouse_2F_EventScript_PC
      && script != SecretBase_EventScript_PC
      && script != SecretBase_EventScript_RecordMixingPC
      && script != SecretBase_EventScript_DollInteract
@@ -481,6 +481,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return Route110_TrickHousePuzzle_EventScript_Door;
     if (MetatileBehavior_IsRegionMap(metatileBehavior) == TRUE)
         return EventScript_RegionMap;
+    if (MetatileBehavior_IsRunningShoesManual(metatileBehavior) == TRUE)
+        return EventScript_RunningShoesManual;
     if (MetatileBehavior_IsPictureBookShelf(metatileBehavior) == TRUE)
         return EventScript_PictureBookShelf;
     if (MetatileBehavior_IsBookShelf(metatileBehavior) == TRUE)
@@ -517,6 +519,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         SetMsgSignPostAndVarFacing(direction);
         return Common_EventScript_ShowPokemonCenterSign;
     }
+    if (MetatileBehavior_IsRockClimbable(metatileBehavior) == TRUE && !IsRockClimbActive())
+        return EventScript_UseRockClimb;
 
     elevation = position->elevation;
     if (elevation == MapGridGetElevationAt(position->x, position->y))
@@ -556,7 +560,7 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
 
 static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBehavior, u8 direction)
 {
-    if (FlagGet(FLAG_BADGE05_GET) == TRUE && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE
+    if (IsFieldMoveUnlocked(FIELD_MOVE_SURF) && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE
      && CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_SURF)
      )
         return EventScript_UseSurf;
@@ -565,7 +569,7 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
      && CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_WATERFALL)
      )
     {
-        if (FlagGet(FLAG_BADGE08_GET) == TRUE && IsPlayerSurfingNorth() == TRUE)
+        if (IsFieldMoveUnlocked(FIELD_MOVE_WATERFALL) && IsPlayerSurfingNorth() == TRUE)
             return EventScript_UseWaterfall;
         else
             return EventScript_CannotUseWaterfall;
@@ -578,7 +582,7 @@ static bool32 TrySetupDiveDownScript(void)
     if (!CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_DIVE))
         return FALSE;
 
-    if (FlagGet(FLAG_BADGE07_GET) && TrySetDiveWarp() == 2)
+    if (IsFieldMoveUnlocked(FIELD_MOVE_DIVE) && TrySetDiveWarp() == 2)
     {
         ScriptContext_SetupScript(EventScript_UseDive);
         return TRUE;
@@ -591,7 +595,7 @@ static bool32 TrySetupDiveEmergeScript(void)
     if (!CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_DIVE))
         return FALSE;
 
-    if (FlagGet(FLAG_BADGE07_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
+    if (IsFieldMoveUnlocked(FIELD_MOVE_DIVE) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
     {
         ScriptContext_SetupScript(EventScript_UseDiveUnderwater);
         return TRUE;
@@ -701,13 +705,13 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         }
         if (ShouldDoScottFortreeCall() == TRUE)
         {
-            // ScriptContext_SetupScript(Route119_EventScript_ScottWonAtFortreeGymCall);
-            return FALSE;
+            ScriptContext_SetupScript(Route119_EventScript_ScottWonAtFortreeGymCall);
+            return TRUE;
         }
         if (ShouldDoScottBattleFrontierCall() == TRUE)
         {
-            // ScriptContext_SetupScript(TwinleafTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall);
-            return FALSE;
+            ScriptContext_SetupScript(LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall);
+            return TRUE;
         }
         if (ShouldDoRoxanneCall() == TRUE)
         {

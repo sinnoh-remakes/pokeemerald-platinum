@@ -4797,6 +4797,8 @@ VSSeeker_Text_TrainersNotReady::
 	.string "to be ready for battle.\p"
 	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
 
+@ Sinnoh Texts Below
+
 Route202_Text_TristanIntro:
 	.string "You're a Pokémon Trainer!\n"
 	.string "I happen to be a Pokémon Trainer!\p"

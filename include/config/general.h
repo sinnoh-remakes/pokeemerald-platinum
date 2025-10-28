@@ -64,15 +64,14 @@
 #define GEN_8 7
 #define GEN_9 8
 // Changing GEN_LATEST's value to a different Generation will change every default setting that uses it at once.
-#define GEN_LATEST GEN_4
+#define GEN_LATEST GEN_9
 
 // General settings
 #define EXPANSION_INTRO              FALSE   // If TRUE, a custom RHH intro will play after the vanilla copyright screen.
-#define SUMMARY_SCREEN_NATURE_COLORS FALSE   // If TRUE, nature-based stat boosts and reductions will be red and blue in the summary screen.
 #define HQ_RANDOM                    TRUE    // If TRUE, replaces the default RNG with an implementation of SFC32 RNG. May break code that relies on RNG.
-#define COMPETITIVE_PARTY_SYNTAX     TRUE    // If TRUE, parties are defined in "competitive syntax".
 #define AUTO_SCROLL_TEXT             FALSE   // If TRUE, text will automatically scroll to the next line after NUM_FRAMES_AUTO_SCROLL_DELAY. Players can still press A_BUTTON or B_BUTTON to scroll on their own.
 #define NUM_FRAMES_AUTO_SCROLL_DELAY 49
+#define PHONEMES_SHARED              TRUE   // If TRUE, bard phonemes all reference the same sound (sound/direct_sound_samples/phonemes/shared.bin) to save ROM space.
 
 // Measurement system constants to be used for UNITS
 #define UNITS_IMPERIAL               0       // Inches, feet, pounds
@@ -82,7 +81,7 @@
 #define CHAR_DEC_SEPARATOR           CHAR_PERIOD // CHAR_PERIOD is used as a decimal separator only in the UK and the US. The rest of the world uses CHAR_COMMA.
 
 // Naming Screen
-#define AUTO_LOWERCASE_KEYBOARD      GEN_4  // Starting in GEN_6, after entering the first uppercase character, the keyboard switches to lowercase letters.
+#define AUTO_LOWERCASE_KEYBOARD      GEN_4   // Starting in GEN_6, after entering the first uppercase character, the keyboard switches to lowercase letters.
 
-#define SAVE_TYPE_ERROR_SCREEN       FALSE  // When enabled, this shows an error message when the game is loaded on a cart without a flash chip or on an emulator with the wrong save type setting instead of crashing.
+#define SAVE_TYPE_ERROR_SCREEN       FALSE   // When enabled, this shows an error message when the game is loaded on a cart without a flash chip or on an emulator with the wrong save type setting instead of crashing.
 #endif // GUARD_CONFIG_GENERAL_H

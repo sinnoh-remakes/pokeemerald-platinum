@@ -22,11 +22,6 @@
       "map": "MAP_OLDALE_TOWN",
       "offset": 0,
       "direction": "right"
-    },
-    {
-      "map": "MAP_PETALBURG_CITY",
-      "offset": -10,
-      "direction": "left"
     }
   ],
   "object_events": [

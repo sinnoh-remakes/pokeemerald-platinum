@@ -23,17 +23,14 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomMessage::
 	special SpawnCameraObject
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceUp
 	waitmovement 0
-	delay 10
 	playse SE_PIN
 	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, TwinleafTown_PlayersHouse_1F_Movement_MomTalk_1
 	waitmovement 0

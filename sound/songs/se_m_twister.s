@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_twister_grp, voicegroup128
+	.equ	se_m_twister_grp, voicegroup_rs_sfx_2
 	.equ	se_m_twister_pri, 4
-	.equ	se_m_twister_rev, 0
+	.equ	se_m_twister_rev, reverb_set+50
 	.equ	se_m_twister_mvl, 127
 	.equ	se_m_twister_key, 0
 	.equ	se_m_twister_tbs, 1

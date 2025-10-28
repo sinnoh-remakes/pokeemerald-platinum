@@ -10,8 +10,13 @@ Debug_ShowFieldMessageStringVar4::
 
 Debug_CheatStart::
 	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_RESCUED_BIRCH
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 	setflag FLAG_ADVENTURE_STARTED
-	setvar VAR_ROWAN_LAB_STATE, 2
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setvar VAR_BIRCH_LAB_STATE, 2
+	setvar VAR_ROUTE101_STATE, 3
 	givemon SPECIES_TREECKO, 20, ITEM_NONE
 	givemon SPECIES_TORCHIC, 20, ITEM_NONE
 	givemon SPECIES_MUDKIP, 20, ITEM_NONE
@@ -23,8 +28,11 @@ Debug_CheatStart::
 	special EnableNationalPokedex
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
-	setvar VAR_TWINLEAF_TOWN_STATE, 4 @ 4: Received Running Shoes
-	setvar VAR_TWINLEAF_INTRO_STATE, 7 @ 7: Told to go meet rival
+	setvar VAR_LITTLEROOT_TOWN_STATE, 4 @ 4: Received Running Shoes
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7 @ 7: Told to go meet rival
+	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2 @ 2: Met Rival's Mom (and is corresponding gender)
+	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2 @ 2: Met Rival's Mom (and is corresponding gender)
+	setvar VAR_LITTLEROOT_RIVAL_STATE, 4 @ 4: Received Pokedex
 	setflag FLAG_RECEIVED_BIKE
 	additem ITEM_ACRO_BIKE
 	setvar VAR_BRINEY_HOUSE_STATE, 1
@@ -38,8 +46,8 @@ Debug_CheatStart::
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
 	setflag FLAG_BADGE08_GET
-	setflag FLAG_VISITED_TWINLEAF_TOWN
-	setflag FLAG_VISITED_SANDGEM_TOWN
+	setflag FLAG_VISITED_LITTLEROOT_TOWN
+	setflag FLAG_VISITED_OLDALE_TOWN
 	setflag FLAG_VISITED_DEWFORD_TOWN
 	setflag FLAG_VISITED_LAVARIDGE_TOWN
 	setflag FLAG_VISITED_FALLARBOR_TOWN
@@ -262,6 +270,24 @@ Debug_ShowExpansionVersion::
 Debug_ExpansionVersion:
 	.string "pokeemerald-expansion {STR_VAR_1}$"
 
+Debug_Follower_NPC_Not_Enabled::
+	msgbox Debug_Enable_To_Use_Follower_NPCs, MSGBOX_DEFAULT
+	release
+	end
+
+Debug_Enable_To_Use_Follower_NPCs:
+	.string "Feature unavailable.\nSet FNPC_ENABLE_NPC_FOLLOWERS to\lTRUE in 'include/config/follower_npc.h'.$"
+
+Debug_Follower_NPC_Event_Script::
+	lock
+	facefollowernpc
+	msgbox Debug_Follower_NPC_Test_Message, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Debug_Follower_NPC_Test_Message:
+	.string "This is a Follower NPC test.$"
+
 Debug_EventScript_Steven_Multi::
 	call MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
 	release
@@ -324,6 +350,44 @@ Debug_EventScript_InflictStatus1_Single:
 	case 5, Debug_EventScript_InflictStatus1_Single_Frostbite
 	case 6, Debug_EventScript_InflictStatus1_Close
 	case MULTI_B_PRESSED, Debug_EventScript_InflictStatus1_Close
+	releaseall
+	end
+
+Debug_EventScript_SetHiddenNature::
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Debug_EventScript_InflictStatus1_Close
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_EGG, Debug_EventScript_InflictStatus1_Close
+	dynmultipush Debug_EventScript_ChangeNature_Text_Hardy, 0
+	dynmultipush Debug_EventScript_ChangeNature_Text_Lonely, 1
+	dynmultipush Debug_EventScript_ChangeNature_Text_Brave, 2
+	dynmultipush Debug_EventScript_ChangeNature_Text_Adamant, 3
+	dynmultipush Debug_EventScript_ChangeNature_Text_Naughty, 4
+	dynmultipush Debug_EventScript_ChangeNature_Text_Bold, 5
+	dynmultipush Debug_EventScript_ChangeNature_Text_Docile, 6
+	dynmultipush Debug_EventScript_ChangeNature_Text_Relaxed, 7
+	dynmultipush Debug_EventScript_ChangeNature_Text_Impish, 8
+	dynmultipush Debug_EventScript_ChangeNature_Text_Lax, 9
+	dynmultipush Debug_EventScript_ChangeNature_Text_Timid, 10
+	dynmultipush Debug_EventScript_ChangeNature_Text_Hasty, 11
+	dynmultipush Debug_EventScript_ChangeNature_Text_Serious, 12
+	dynmultipush Debug_EventScript_ChangeNature_Text_Jolly, 13
+	dynmultipush Debug_EventScript_ChangeNature_Text_Naive, 14
+	dynmultipush Debug_EventScript_ChangeNature_Text_Modest, 15
+	dynmultipush Debug_EventScript_ChangeNature_Text_Mild, 16
+	dynmultipush Debug_EventScript_ChangeNature_Text_Quiet, 17
+	dynmultipush Debug_EventScript_ChangeNature_Text_Bashful, 18
+	dynmultipush Debug_EventScript_ChangeNature_Text_Rash, 19
+	dynmultipush Debug_EventScript_ChangeNature_Text_Calm, 20
+	dynmultipush Debug_EventScript_ChangeNature_Text_Gentle, 21
+	dynmultipush Debug_EventScript_ChangeNature_Text_Sassy, 22
+	dynmultipush Debug_EventScript_ChangeNature_Text_Careful, 23
+	dynmultipush Debug_EventScript_ChangeNature_Text_Quirky, 24
+	dynmultistack 0, 0, TRUE, 7, FALSE, 0, NULL
+	switch VAR_RESULT
+	case MULTI_B_PRESSED, Debug_EventScript_InflictStatus1_Close
+    special SetHiddenNature
 	releaseall
 	end
 
@@ -434,6 +498,57 @@ Debug_EventScript_InflictStatus1_Text_Freeze:
 
 Debug_EventScript_InflictStatus1_Text_Frostbite:
 	.string "Frostbite$"
+
+Debug_EventScript_ChangeNature_Text_Hardy:
+	.string "Hardy$"
+Debug_EventScript_ChangeNature_Text_Lonely:
+	.string "Lonely$"
+Debug_EventScript_ChangeNature_Text_Brave:
+	.string "Brave$"
+Debug_EventScript_ChangeNature_Text_Adamant:
+	.string "Adamant$"
+Debug_EventScript_ChangeNature_Text_Naughty:
+	.string "Naughty$"
+Debug_EventScript_ChangeNature_Text_Bold:
+	.string "Bold$"
+Debug_EventScript_ChangeNature_Text_Docile:
+	.string "Docile$"
+Debug_EventScript_ChangeNature_Text_Relaxed:
+	.string "Relaxed$"
+Debug_EventScript_ChangeNature_Text_Impish:
+	.string "Impish$"
+Debug_EventScript_ChangeNature_Text_Lax:
+	.string "Lax$"
+Debug_EventScript_ChangeNature_Text_Timid:
+	.string "Timid$"
+Debug_EventScript_ChangeNature_Text_Hasty:
+	.string "Hasty$"
+Debug_EventScript_ChangeNature_Text_Serious:
+	.string "Serious$"
+Debug_EventScript_ChangeNature_Text_Jolly:
+	.string "Jolly$"
+Debug_EventScript_ChangeNature_Text_Naive:
+	.string "Naive$"
+Debug_EventScript_ChangeNature_Text_Modest:
+	.string "Modest$"
+Debug_EventScript_ChangeNature_Text_Mild:
+	.string "Mild$"
+Debug_EventScript_ChangeNature_Text_Quiet:
+	.string "Quiet$"
+Debug_EventScript_ChangeNature_Text_Bashful:
+	.string "Bashful$"
+Debug_EventScript_ChangeNature_Text_Rash:
+	.string "Rash$"
+Debug_EventScript_ChangeNature_Text_Calm:
+	.string "Calm$"
+Debug_EventScript_ChangeNature_Text_Gentle:
+	.string "Gentle$"
+Debug_EventScript_ChangeNature_Text_Sassy:
+	.string "Sassy$"
+Debug_EventScript_ChangeNature_Text_Careful:
+	.string "Careful$"
+Debug_EventScript_ChangeNature_Text_Quirky:
+	.string "Quirky$"
 
 Debug_EventScript_EWRAMCounters::
 	callnative CheckEWRAMCounters

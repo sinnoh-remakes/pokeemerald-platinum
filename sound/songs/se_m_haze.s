@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_haze_grp, voicegroup128
+	.equ	se_m_haze_grp, voicegroup_rs_sfx_2
 	.equ	se_m_haze_pri, 4
-	.equ	se_m_haze_rev, 0
+	.equ	se_m_haze_rev, reverb_set+50
 	.equ	se_m_haze_mvl, 127
 	.equ	se_m_haze_key, 0
 	.equ	se_m_haze_tbs, 1

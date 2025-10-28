@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_stat_decrease_grp, voicegroup128
+	.equ	se_m_stat_decrease_grp, voicegroup_rs_sfx_2
 	.equ	se_m_stat_decrease_pri, 4
-	.equ	se_m_stat_decrease_rev, 0
+	.equ	se_m_stat_decrease_rev, reverb_set+50
 	.equ	se_m_stat_decrease_mvl, 127
 	.equ	se_m_stat_decrease_key, 0
 	.equ	se_m_stat_decrease_tbs, 1

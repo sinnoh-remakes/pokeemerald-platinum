@@ -241,7 +241,6 @@
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFeeRight"
     }
   ],
-  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

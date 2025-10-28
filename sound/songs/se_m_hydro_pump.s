@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_hydro_pump_grp, voicegroup128
+	.equ	se_m_hydro_pump_grp, voicegroup_rs_sfx_2
 	.equ	se_m_hydro_pump_pri, 4
-	.equ	se_m_hydro_pump_rev, 0
+	.equ	se_m_hydro_pump_rev, reverb_set+50
 	.equ	se_m_hydro_pump_mvl, 127
 	.equ	se_m_hydro_pump_key, 0
 	.equ	se_m_hydro_pump_tbs, 1

@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_encore_grp, voicegroup128
+	.equ	se_m_encore_grp, voicegroup_rs_sfx_2
 	.equ	se_m_encore_pri, 4
-	.equ	se_m_encore_rev, 0
+	.equ	se_m_encore_rev, reverb_set+50
 	.equ	se_m_encore_mvl, 127
 	.equ	se_m_encore_key, 0
 	.equ	se_m_encore_tbs, 1
