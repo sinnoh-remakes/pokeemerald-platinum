@@ -173,6 +173,5 @@ static inline void Script_CheckEffectInstrumentedCallNative(void (*func)(struct 
     if (Script_IsAnalyzingEffects() && (((uintptr_t)func) & 0xE000000) != 0xA000000)
         Script_GotoBreak_Internal();
 }
-u8* ReadWord(u8 index);
 
 #endif // GUARD_SCRIPT_H

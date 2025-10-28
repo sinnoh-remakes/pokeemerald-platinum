@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_attract2_grp, voicegroup128
+	.equ	se_m_attract2_grp, voicegroup_rs_sfx_2
 	.equ	se_m_attract2_pri, 4
-	.equ	se_m_attract2_rev, 0
+	.equ	se_m_attract2_rev, reverb_set+50
 	.equ	se_m_attract2_mvl, 127
 	.equ	se_m_attract2_key, 0
 	.equ	se_m_attract2_tbs, 1

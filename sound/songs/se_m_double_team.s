@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_double_team_grp, voicegroup128
+	.equ	se_m_double_team_grp, voicegroup_rs_sfx_2
 	.equ	se_m_double_team_pri, 4
-	.equ	se_m_double_team_rev, 0
+	.equ	se_m_double_team_rev, reverb_set+50
 	.equ	se_m_double_team_mvl, 127
 	.equ	se_m_double_team_key, 0
 	.equ	se_m_double_team_tbs, 1

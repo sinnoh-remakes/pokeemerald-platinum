@@ -37,6 +37,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_CheckMoneyForFee::
 	removemoney 50
 	updatemoneybox
 	msgbox SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself, MSGBOX_DEFAULT
+	setvar VAR_SLATEPORT_MUSEUM_1F_STATE, 1
 	hidemoneybox
 	releaseall
 	end
@@ -53,6 +54,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_NotEnoughMoney::
 
 SlateportCity_OceanicMuseum_1F_EventScript_AllowEntranceAnyway::
 	msgbox SlateportCity_OceanicMuseum_1F_Text_CatchUpWithYourGroup, MSGBOX_DEFAULT
+	setvar VAR_SLATEPORT_MUSEUM_1F_STATE, 1
 	hidemoneybox
 	releaseall
 	end

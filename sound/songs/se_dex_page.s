@@ -1,8 +1,8 @@
 	.include "MPlayDef.s"
 
-	.equ	se_dex_page_grp, voicegroup127
+	.equ	se_dex_page_grp, voicegroup_rs_sfx_1
 	.equ	se_dex_page_pri, 5
-	.equ	se_dex_page_rev, 0
+	.equ	se_dex_page_rev, reverb_set+50
 	.equ	se_dex_page_mvl, 127
 	.equ	se_dex_page_key, 0
 	.equ	se_dex_page_tbs, 1

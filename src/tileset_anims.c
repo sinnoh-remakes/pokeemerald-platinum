@@ -1199,7 +1199,7 @@ const u16 *const gTilesetAnims_Twinleaf_Pond[] = {
     gTilesetAnims_Twinleaf_Pond_Frame3
 };
 
-static void QueueAnimTiles_Twinleaf(u16 timer)
+static void QueueAnimTiles_Twinleaf_Pond(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Twinleaf_Pond);
     AppendTilesetAnimToBuffer(gTilesetAnims_Twinleaf_Pond[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 14 * TILE_SIZE_4BPP);
@@ -1208,15 +1208,79 @@ static void QueueAnimTiles_Twinleaf(u16 timer)
 static void TilesetAnim_Twinleaf(u16 timer)
 {
     if (timer % 16 == 0) {
-        QueueAnimTiles_Twinleaf(timer / 16);
+        QueueAnimTiles_Twinleaf_Pond(timer / 16);
     }
 }
 
 void InitTilesetAnim_Twinleaf(void)
 {
-    sPrimaryTilesetAnimCounter = 0;
-    sPrimaryTilesetAnimCounterMax = 256;
-    sPrimaryTilesetAnimCallback = TilesetAnim_Twinleaf;
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Twinleaf;
+}
+
+const u16 gTilesetAnims_Route203_Pond_Frame0[] = INCBIN_U16("data/tilesets/secondary/route_203/anim/pond_water/00.4bpp");
+const u16 gTilesetAnims_Route203_Pond_Frame1[] = INCBIN_U16("data/tilesets/secondary/route_203/anim/pond_water/01.4bpp");
+const u16 gTilesetAnims_Route203_Pond_Frame2[] = INCBIN_U16("data/tilesets/secondary/route_203/anim/pond_water/02.4bpp");
+const u16 gTilesetAnims_Route203_Pond_Frame3[] = INCBIN_U16("data/tilesets/secondary/route_203/anim/pond_water/03.4bpp");
+
+const u16 *const gTilesetAnims_Route203_Pond[] = {
+    gTilesetAnims_Route203_Pond_Frame0,
+    gTilesetAnims_Route203_Pond_Frame1,
+    gTilesetAnims_Route203_Pond_Frame2,
+    gTilesetAnims_Route203_Pond_Frame3
+};
+
+static void QueueAnimTiles_Route203_Pond(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Route203_Pond);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Route203_Pond[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 14 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_Route203(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_Route203_Pond(timer / 16);
+    }
+}
+
+void InitTilesetAnim_Route203(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Route203;
+}
+
+const u16 gTilesetAnims_Route204_Pond_Frame0[] = INCBIN_U16("data/tilesets/secondary/route_204/anim/pond_water/00.4bpp");
+const u16 gTilesetAnims_Route204_Pond_Frame1[] = INCBIN_U16("data/tilesets/secondary/route_204/anim/pond_water/01.4bpp");
+const u16 gTilesetAnims_Route204_Pond_Frame2[] = INCBIN_U16("data/tilesets/secondary/route_204/anim/pond_water/02.4bpp");
+const u16 gTilesetAnims_Route204_Pond_Frame3[] = INCBIN_U16("data/tilesets/secondary/route_204/anim/pond_water/03.4bpp");
+
+const u16 *const gTilesetAnims_Route204_Pond[] = {
+    gTilesetAnims_Route204_Pond_Frame0,
+    gTilesetAnims_Route204_Pond_Frame1,
+    gTilesetAnims_Route204_Pond_Frame2,
+    gTilesetAnims_Route204_Pond_Frame3
+};
+
+static void QueueAnimTiles_Route204_Pond(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Route204_Pond);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Route204_Pond[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 15 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_Route204(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_Route204_Pond(timer / 16);
+    }
+}
+
+void InitTilesetAnim_Route204(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Route204;
 }
 
 const u16 gTilesetAnims_Lake_Water_Frame0[] = INCBIN_U16("data/tilesets/secondary/lake/anim/sea_water/00.4bpp");
@@ -1254,7 +1318,7 @@ static void TilesetAnim_Lake(u16 timer)
 
 void InitTilesetAnim_Lake(void)
 {
-    sPrimaryTilesetAnimCounter = 0;
-    sPrimaryTilesetAnimCounterMax = 256;
-    sPrimaryTilesetAnimCallback = TilesetAnim_Lake;
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Lake;
 }

@@ -856,23 +856,31 @@
 #define TRAINER_EVERETT                     850
 #define TRAINER_RED                         851
 #define TRAINER_LEAF                        852
-#define TRAINER_RIVAL_ROUTE_201_PIPLUP      853
-#define TRAINER_RIVAL_ROUTE_201_TURTWIG     854
-#define TRAINER_RIVAL_ROUTE_201_CHIMCHAR    855
-#define TRAINER_TRISTAN_1                   856
-#define TRAINER_TRISTAN_2                   857
-#define TRAINER_TRISTAN_3                   858
-#define TRAINER_TRISTAN_4                   859
-#define TRAINER_TRISTAN_5                   860
-#define TRAINER_LOGAN                       861
-#define TRAINER_NATALIE                     862
+#define TRAINER_BRENDAN_PLACEHOLDER         853
+#define TRAINER_MAY_PLACEHOLDER             854
+
+// Sinnoh Trainers
+#define TRAINER_RIVAL_ROUTE_201_PIPLUP      855
+#define TRAINER_RIVAL_ROUTE_201_TURTWIG     856    
+#define TRAINER_RIVAL_ROUTE_201_CHIMCHAR    857
+#define TRAINER_TRISTAN_1                   858
+#define TRAINER_TRISTAN_2                   859
+#define TRAINER_TRISTAN_3                   860
+#define TRAINER_TRISTAN_4                   861
+#define TRAINER_TRISTAN_5                   862
+#define TRAINER_LOGAN                       863
+#define TRAINER_NATALIE                     864
+#define TRAINER_RIVAL_ROUTE_203_PIPLUP      865
+#define TRAINER_RIVAL_ROUTE_203_TURTWIG     866
+#define TRAINER_RIVAL_ROUTE_203_CHIMCHAR    867
+#define TRAINER_MICHAEL                     868
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      863
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT                      869
+#define MAX_TRAINERS_COUNT                  870
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

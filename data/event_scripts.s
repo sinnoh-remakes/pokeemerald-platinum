@@ -25,6 +25,7 @@
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
+#include "constants/field_move.h"
 #include "constants/field_poison.h"
 #include "constants/field_specials.h"
 #include "constants/field_tasks.h"
@@ -601,7 +602,10 @@ gStdScripts_End::
 	.include "data/maps/Gate_Jubilife/scripts.inc"
 	.include "data/maps/Route201/scripts.inc"
 	.include "data/maps/Route202/scripts.inc"
+	.include "data/maps/Route203/scripts.inc"
+	.include "data/maps/Route204/scripts.inc"
 	.include "data/maps/Route219/scripts.inc"
+	.include "data/maps/OreburghGate/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

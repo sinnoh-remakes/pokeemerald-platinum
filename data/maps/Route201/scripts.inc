@@ -8,7 +8,6 @@ Route201_MapScripts::
 	@ 2: Met the professor
 	@ 3: Entered lake event
 	@ 4: Finished lake event
-	@ 5: Received Potion sample
 	
 	@ State descriptions for VAR_FOLLOWER_TEXT
 	@ 1-6: Visit lake with Rival
@@ -44,10 +43,8 @@ Route201_EventScript_RivalSee::
 	playse SE_PIN
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	goto_if_eq VAR_ROUTE201_STATE, 2, Route201_EventScript_RivalLake
 	setvar VAR_ROUTE201_STATE, 1
 	msgbox Route201_Text_TooSlow, MSGBOX_SIGN
@@ -72,8 +69,7 @@ Route201_EventScript_RivalSee::
 	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RunPrep
 	waitmovement 0
 	msgbox Route201_Text_HereGoes, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	applymovement LOCALID_PLAYER, Route201_Movement_RunWatch2
 	applymovement LOCALID_ROUTE201_RIVAL, Route201_Movement_RunGrass
 	waitmovement 0
@@ -82,10 +78,8 @@ Route201_EventScript_RivalSee::
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
@@ -271,10 +265,8 @@ Route201_EventScript_ProfessorMeet::
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkAway
 	waitmovement 0
 	msgbox Route201_Text_TheyTried, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
+	delay 48
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkBack
 	waitmovement 0
 	goto Route201_EventScript_TrulyLove
@@ -325,12 +317,10 @@ Route201_EventScript_HundredPass::
 	msgbox Route201_Text_FriendHere, MSGBOX_SIGN
 	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_PROF, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_PROF, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	addobject LOCALID_ROUTE201_HELPER
 	applymovement LOCALID_ROUTE201_HELPER, Route201_Movement_HelperEnter
 	waitmovement 0
@@ -352,8 +342,7 @@ Route201_EventScript_HundredPass::
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_SomeClass, MSGBOX_SIGN
-	applymovement LOCALID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
+	delay 48
 	release
 	end
 
@@ -541,9 +530,7 @@ Route201_EventScript_BattleDecline::
 	goto Route201_EventScript_RivalBattle
 
 Route201_EventScript_BattleAccept::
-	@ // FODO: Prevent wiping out from resetting event
-	@ // Remove 201 state call here and in Route201_EventScript_PostRivalBattle
-	setvar VAR_ROUTE201_STATE, 0
+	setflag B_FLAG_NO_WHITEOUT
 	msgbox Route201_Text_AlwaysWanted, MSGBOX_SIGN
 	switch VAR_STARTER_MON
 	case 0, Route201_EventScript_RivalBattleTurtwig
@@ -571,11 +558,11 @@ Route201_EventScript_PostRivalBattle::
 	setvar VAR_ROUTE201_STATE, 2
 	setvar VAR_TWINLEAF_TOWN_STATE, 2
 	setvar VAR_TWINLEAF_INTRO_STATE, 6
-	clearflag FLAG_HIDE_ROUTE_201_MAN
+	clearflag B_FLAG_NO_WHITEOUT
 	delay 48
 	warp MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F, 1, 5
 	fadedefaultbgm
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	release
 	end
 
@@ -595,8 +582,7 @@ Route201_EventScript_RivalLake::
 	call_if_eq VAR_0x8004, 3, Route201_EventScript_RivalShift3
 	call_if_eq VAR_0x8004, 4, Route201_EventScript_RivalShift4
 	msgbox Route201_Text_NothingToFear, MSGBOX_SIGN
-	loadword 0 Route201_EventScript_Rival
-	setfollowernpc LOCALID_ROUTE201_RIVAL 0x100
+	setfollowernpc LOCALID_ROUTE201_RIVAL, 0, Route201_EventScript_Rival
 	release
 	end
 
@@ -642,14 +628,14 @@ Route201_EventScript_RivalTalk6::
 
 Route201_EventScript_FollowLeave::
 	lock
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox Route201_Text_FollowLeave, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 30
 	release
@@ -657,14 +643,14 @@ Route201_EventScript_FollowLeave::
 
 Route201_EventScript_FollowGrass::
 	lock
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceRight
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 30
 	release
@@ -673,14 +659,14 @@ Route201_EventScript_FollowGrass::
 Route201_EventScript_FollowGrass2::
 	lock
 	goto_if_eq VAR_FACING, DIR_EAST, Route201_EventScript_FollowGrass
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceUp
 	waitmovement 0
 	delay 30
 	release
@@ -703,26 +689,18 @@ Route201_EventScript_LassTalk::
 	end
 
 Route201_EventScript_MartSample::
-	goto_if_eq VAR_ROUTE201_STATE, 4, Route201_EventScript_MartSample1
-	goto Route201_EventScript_MartSample2
-	end
-
-Route201_EventScript_MartSample1::
-	lockall
-	msgbox Route201_Text_MartSample1, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_ROUTE201_RECEIVED_POTION, Route201_EventScript_MartSample2
+	msgbox Route201_Text_MartSample1, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
-	goto_if_eq VAR_RESULT, FALSE, Route201_EventScript_BagIsFull
-	setvar VAR_ROUTE201_STATE, 5
-	releaseall
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_ROUTE201_RECEIVED_POTION
+	release
 	end
 
 Route201_EventScript_MartSample2::
 	msgbox Route201_Text_MartSample2, MSGBOX_NPC
-	end
-
-Route201_EventScript_BagIsFull::
-	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
-	release
 	end
 
 Route201_EventScript_SchoolKidTalk::
