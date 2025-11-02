@@ -1,7 +1,3 @@
-const u32 gObjectEventPic_LucasNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/lucas/walking.4bpp", "graphics/object_events/pics/people/lucas/running.4bpp");
-const u16 gObjectEventPal_Lucas[] = INCBIN_U16("graphics/object_events/palettes/lucas.gbapal");
-const u32 gObjectEventPic_DawnNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/dawn/walking.4bpp", "graphics/object_events/pics/people/dawn/running.4bpp");
-const u16 gObjectEventPal_Dawn[] = INCBIN_U16("graphics/object_events/palettes/dawn.gbapal");
 const u32 gObjectEventPic_BrendanNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/brendan/walking.4bpp", "graphics/object_events/pics/people/brendan/running.4bpp");
 const u16 gObjectEventPal_Brendan[] = INCBIN_U16("graphics/object_events/palettes/brendan.gbapal");
 const u32 gObjectEventPic_RubySapphireBrendanNormal[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/walking.4bpp");
@@ -396,6 +392,12 @@ const u16 gObjectEventPal_Substitute[] = INCBIN_U16("graphics/object_events/pics
 const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
 const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/palettes/neon_light.gbapal");
 
+const u32 gObjectEventPic_LucasNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/lucas/walking.4bpp", "graphics/object_events/pics/people/lucas/running.4bpp");
+const u16 gObjectEventPal_Lucas[] = INCBIN_U16("graphics/object_events/palettes/lucas.gbapal");
+const u16 gObjectEventPal_LucasReflection[] = INCBIN_U16("graphics/object_events/palettes/lucas_reflection.gbapal");
+const u32 gObjectEventPic_DawnNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/dawn/walking.4bpp", "graphics/object_events/pics/people/dawn/running.4bpp");
+const u16 gObjectEventPal_Dawn[] = INCBIN_U16("graphics/object_events/palettes/dawn.gbapal");
+const u16 gObjectEventPal_DawnReflection[] = INCBIN_U16("graphics/object_events/palettes/dawn_reflection.gbapal");
 const u32 gObjectEventPic_ProfRowan[] = INCBIN_U32("graphics/object_events/pics/people/prof_rowan.4bpp");
 const u16 gObjectEventPal_ProfRowan[] = INCBIN_U16("graphics/object_events/palettes/prof_rowan.gbapal");
 const u32 gObjectEventPic_Barry[] = INCBIN_U32("graphics/object_events/pics/people/barry.4bpp");

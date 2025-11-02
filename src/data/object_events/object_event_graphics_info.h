@@ -1,41 +1,3 @@
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_LUCAS,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION,
-    .size = 512,
-    .width = 32,
-    .height = 32,
-    .paletteSlot = PALSLOT_PLAYER,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
-    .compressed = FALSE,
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_32x32,
-    .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_BrendanMayNormal,
-    .images = sPicTable_LucasNormal,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
-
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_DAWN,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION,
-    .size = 512,
-    .width = 32,
-    .height = 32,
-    .paletteSlot = PALSLOT_PLAYER,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
-    .compressed = FALSE,
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_32x32,
-    .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_BrendanMayNormal,
-    .images = sPicTable_DawnNormal,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_BRENDAN,
@@ -4729,6 +4691,43 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LUCAS,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_BrendanMayNormal,
+    .images = sPicTable_LucasNormal,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_DAWN,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_DAWN_REFLECTION,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_BrendanMayNormal,
+    .images = sPicTable_DawnNormal,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan = {
     .tileTag = TAG_NONE,

@@ -525,7 +525,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
     {gObjectEventPal_Lucas,                 OBJ_EVENT_PAL_TAG_LUCAS},
+    {gObjectEventPal_LucasReflection,       OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION},
     {gObjectEventPal_Dawn,                  OBJ_EVENT_PAL_TAG_DAWN},
+    {gObjectEventPal_DawnReflection,        OBJ_EVENT_PAL_TAG_DAWN_REFLECTION},
     {gObjectEventPal_ProfRowan,             OBJ_EVENT_PAL_TAG_PROF_ROWAN},
     {gObjectEventPal_Barry,                 OBJ_EVENT_PAL_TAG_BARRY},
     {gObjectEventPal_Johanna,               OBJ_EVENT_PAL_TAG_JOHANNA},
@@ -588,6 +590,20 @@ static const u16 sReflectionPaletteTags_May[] = {
     OBJ_EVENT_PAL_TAG_MAY_REFLECTION,
 };
 
+static const u16 sReflectionPaletteTags_Lucas[] = {
+    OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
+    OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
+    OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
+    OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
+};
+
+static const u16 sReflectionPaletteTags_Dawn[] = {
+    OBJ_EVENT_PAL_TAG_DAWN_REFLECTION,
+    OBJ_EVENT_PAL_TAG_DAWN_REFLECTION,
+    OBJ_EVENT_PAL_TAG_DAWN_REFLECTION,
+    OBJ_EVENT_PAL_TAG_DAWN_REFLECTION,
+};
+
 static const u16 sReflectionPaletteTags_PlayerUnderwater[] = {
     OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER,
     OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER,
@@ -596,8 +612,8 @@ static const u16 sReflectionPaletteTags_PlayerUnderwater[] = {
 };
 
 static const struct PairedPalettes sPlayerReflectionPaletteSets[] = {
-    {OBJ_EVENT_PAL_TAG_LUCAS,             sReflectionPaletteTags_Brendan},
-    {OBJ_EVENT_PAL_TAG_DAWN,              sReflectionPaletteTags_May},
+    {OBJ_EVENT_PAL_TAG_LUCAS,             sReflectionPaletteTags_Lucas},
+    {OBJ_EVENT_PAL_TAG_DAWN,              sReflectionPaletteTags_Dawn},
     {OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER, sReflectionPaletteTags_PlayerUnderwater},
     {OBJ_EVENT_PAL_TAG_NONE,              NULL},
 };
@@ -680,8 +696,8 @@ static const u16 sReflectionPaletteTags_RedLeaf[] = {
 };
 
 static const struct PairedPalettes sSpecialObjectReflectionPaletteSets[] = {
-    {OBJ_EVENT_PAL_TAG_LUCAS,            sReflectionPaletteTags_Brendan},
-    {OBJ_EVENT_PAL_TAG_DAWN,             sReflectionPaletteTags_May},
+    {OBJ_EVENT_PAL_TAG_LUCAS,            sReflectionPaletteTags_Lucas},
+    {OBJ_EVENT_PAL_TAG_DAWN,             sReflectionPaletteTags_Dawn},
     {OBJ_EVENT_PAL_TAG_QUINTY_PLUMP,     sReflectionPaletteTags_QuintyPlump},
     {OBJ_EVENT_PAL_TAG_TRUCK,            sReflectionPaletteTags_Truck},
     {OBJ_EVENT_PAL_TAG_VIGOROTH,         sReflectionPaletteTags_VigorothMover},
@@ -698,7 +714,7 @@ static const struct PairedPalettes sSpecialObjectReflectionPaletteSets[] = {
 
 static const u16 sObjectPaletteTags0[] = {
     [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_LUCAS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION,
+    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
     [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1,
     [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2,
     [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3,
@@ -711,7 +727,7 @@ static const u16 sObjectPaletteTags0[] = {
 
 static const u16 sObjectPaletteTags1[] = {
     [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_LUCAS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION,
+    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
     [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1,
     [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2,
     [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3,
@@ -724,7 +740,7 @@ static const u16 sObjectPaletteTags1[] = {
 
 static const u16 sObjectPaletteTags2[] = {
     [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_LUCAS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION,
+    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
     [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1,
     [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2,
     [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3,
@@ -737,7 +753,7 @@ static const u16 sObjectPaletteTags2[] = {
 
 static const u16 sObjectPaletteTags3[] = {
     [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_LUCAS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION,
+    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION,
     [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1,
     [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2,
     [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3,
