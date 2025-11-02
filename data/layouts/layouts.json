@@ -122,6 +122,26 @@
       "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
     },
     {
+      "id": "LAYOUT_OREBURGH_CITY_NORTH",
+      "name": "OreburghCityNorth_Layout",
+      "width": 72,
+      "height": 32,
+      "primary_tileset": "gTileset_OutdoorOreburgh",
+      "secondary_tileset": "gTileset_OreburghNorth",
+      "border_filepath": "data/layouts/OreburghCityNorth/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_SOUTH",
+      "name": "OreburghCitySouth_Layout",
+      "width": 58,
+      "height": 44,
+      "primary_tileset": "gTileset_OutdoorOreburgh",
+      "secondary_tileset": "gTileset_OreburghSouth",
+      "border_filepath": "data/layouts/OreburghCitySouth/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCitySouth/map.bin"
+    },
+    {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
       "name": "TwinleafTown_PlayersHouse_1F_Layout",
       "width": 11,

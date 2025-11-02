@@ -45,7 +45,9 @@
   "gMapGroup_Towns": [
     "TwinleafTown",
     "SandgemTown",
-    "JubilifeCity"
+    "JubilifeCity",
+    "OreburghCityNorth",
+    "OreburghCitySouth"
   ],
   "gMapGroup_Routes": [
     "Route201",
