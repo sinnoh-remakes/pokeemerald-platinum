@@ -1,0 +1,26 @@
+{
+  "id": "MAP_OREBURGH_CITY_SOUTH",
+  "name": "OreburghCitySouth",
+  "layout": "LAYOUT_OREBURGH_CITY_SOUTH",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_OREBURGH_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_OREBURGH_CITY",
+      "offset": -14,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

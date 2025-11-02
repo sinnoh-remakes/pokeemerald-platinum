@@ -1039,3 +1039,36 @@ const struct Tileset gTileset_CaveCoronet =
     .metatileAttributes = gMetatileAttributes_CaveCoronet,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OutdoorOreburgh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorOreburgh,
+    .palettes = gTilesetPalettes_OutdoorOreburgh,
+    .metatiles = gMetatiles_OutdoorOreburgh,
+    .metatileAttributes = gMetatileAttributes_OutdoorOreburgh,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_OreburghNorth =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OreburghNorth,
+    .palettes = gTilesetPalettes_OreburghNorth,
+    .metatiles = gMetatiles_OreburghNorth,
+    .metatileAttributes = gMetatileAttributes_OreburghNorth,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_OreburghSouth =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OreburghSouth,
+    .palettes = gTilesetPalettes_OreburghSouth,
+    .metatiles = gMetatiles_OreburghSouth,
+    .metatileAttributes = gMetatileAttributes_OreburghSouth,
+    .callback = InitTilesetAnim_Oreburgh,
+};

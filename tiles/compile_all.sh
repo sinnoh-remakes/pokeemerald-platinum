@@ -17,6 +17,13 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_203 ./tiles
 echo "Compiling [secondary] route_204"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_204 ./tiles/route_204 ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 
+echo "Compiling [PRIMARY] outdoor_oreburgh"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_oreburgh ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] oreburgh_north"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_north ./tiles/oreburgh_north ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] oreburgh_south"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_south ./tiles/oreburgh_south ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+
 echo "Compiling [PRIMARY] indoor_twinleaf"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_player"
