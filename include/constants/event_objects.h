@@ -258,7 +258,7 @@
 #define OBJ_EVENT_GFX_LUCAS_POKETCH              247
 #define OBJ_EVENT_GFX_LUCAS_SAVE                 248
 #define OBJ_EVENT_GFX_LUCAS_SURF                 249
-#define OBJ_EVENT_GFX_LUCAS_SEEKER               250
+#define OBJ_EVENT_GFX_LUCAS_VSSEEKER             250
 #define OBJ_EVENT_GFX_LUCAS_WATERING             251
 #define OBJ_EVENT_GFX_DAWN_NORMAL                252
 #define OBJ_EVENT_GFX_DAWN_BIKE                  253
@@ -268,7 +268,7 @@
 #define OBJ_EVENT_GFX_DAWN_POKETCH               257
 #define OBJ_EVENT_GFX_DAWN_SAVE                  258
 #define OBJ_EVENT_GFX_DAWN_SURF                  259
-#define OBJ_EVENT_GFX_DAWN_SEEKER                260
+#define OBJ_EVENT_GFX_DAWN_VSSEEKER              260
 #define OBJ_EVENT_GFX_DAWN_WATERING              261
 #define OBJ_EVENT_GFX_PROF_ROWAN                 262
 #define OBJ_EVENT_GFX_BARRY                      263
