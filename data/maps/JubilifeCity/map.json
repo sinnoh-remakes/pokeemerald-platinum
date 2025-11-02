@@ -72,6 +72,34 @@
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 60,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Jubilife_EventScript_RowanHelperEncounter_Left"
+    },
+    {
+      "type": "trigger",
+      "x": 54,
+      "y": 60,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Jubilife_EventScript_RowanHelperEncounter_Center"
+    },
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 60,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Jubilife_EventScript_RowanHelperEncounter_Right"
+    }
+  ],
   "bg_events": []
 }
