@@ -184,8 +184,8 @@
       "x": 26,
       "y": 25,
       "elevation": 0,
-      "dest_map": "MAP_OREBURGH_GATE",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_OREBURGH_CITY",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
