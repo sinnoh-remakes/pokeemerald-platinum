@@ -1375,6 +1375,32 @@ static void QueueAnimTiles_Coal_Slope_Shallow(u16 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_Coal_Slope_Shallow[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(520)), 14 * TILE_SIZE_4BPP);
 }
 
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame0[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/00.4bpp");
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame1[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/01.4bpp");
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame2[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/02.4bpp");
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame3[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/03.4bpp");
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame4[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/04.4bpp");
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame5[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/05.4bpp");
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame6[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/06.4bpp");
+const u16 gTilesetAnims_Coal_Slope_Steep_Frame7[] = INCBIN_U16("data/tilesets/secondary/oreburgh_south/anim/coal_slope_steep/07.4bpp");
+
+const u16 *const gTilesetAnims_Coal_Slope_Steep[] = {
+    gTilesetAnims_Coal_Slope_Steep_Frame0,
+    gTilesetAnims_Coal_Slope_Steep_Frame1,
+    gTilesetAnims_Coal_Slope_Steep_Frame2,
+    gTilesetAnims_Coal_Slope_Steep_Frame3,
+    gTilesetAnims_Coal_Slope_Steep_Frame4,
+    gTilesetAnims_Coal_Slope_Steep_Frame5,
+    gTilesetAnims_Coal_Slope_Steep_Frame6,
+    gTilesetAnims_Coal_Slope_Steep_Frame7
+};
+
+static void QueueAnimTiles_Coal_Slope_Steep(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Coal_Slope_Steep);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Coal_Slope_Steep[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(534)), 10 * TILE_SIZE_4BPP);
+}
+
 static void TilesetAnim_Oreburgh(u16 timer)
 {
     if (timer % 16 == 0) {
@@ -1382,6 +1408,9 @@ static void TilesetAnim_Oreburgh(u16 timer)
     }
     if (timer % 16 == 1) {
         QueueAnimTiles_Coal_Slope_Shallow(timer / 16);
+    }
+    if (timer % 16 == 1) {
+        QueueAnimTiles_Coal_Slope_Steep(timer / 16);
     }
 }
 
