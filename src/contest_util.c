@@ -2481,9 +2481,9 @@ void SetLinkContestPlayerGfx(void)
             if (version == VERSION_RUBY || version == VERSION_SAPPHIRE)
             {
                 if (gLinkPlayers[i].gender == MALE)
-                    gContestMons[i].trainerGfxId = OBJ_EVENT_GFX_LUCAS_NORMAL;
+                    gContestMons[i].trainerGfxId = OBJ_EVENT_GFX_LINK_RS_BRENDAN;
                 else
-                    gContestMons[i].trainerGfxId = OBJ_EVENT_GFX_DAWN_NORMAL;
+                    gContestMons[i].trainerGfxId = OBJ_EVENT_GFX_LINK_RS_MAY;
             }
         }
 
@@ -2526,9 +2526,9 @@ void LoadLinkContestPlayerPalettes(void)
             else
             {
                 if (gLinkPlayers[i].gender == MALE)
-                    sprite->oam.paletteNum = LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_LUCAS);
+                    sprite->oam.paletteNum = LoadObjectEventPalette(OBJ_EVENT_GFX_LINK_RS_BRENDAN);
                 else
-                    sprite->oam.paletteNum = LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_DAWN);
+                    sprite->oam.paletteNum = LoadObjectEventPalette(OBJ_EVENT_GFX_LINK_RS_MAY);
             }
         }
     }
