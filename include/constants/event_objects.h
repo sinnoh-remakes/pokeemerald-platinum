@@ -251,34 +251,34 @@
 #define OBJ_EVENT_GFX_APRICORN_TREE              242
 
 // Sinnoh event objects
-#define OBJ_EVENT_GFX_LUCAS_NORMAL               243
-#define OBJ_EVENT_GFX_LUCAS_BIKE                 244
-#define OBJ_EVENT_GFX_LUCAS_FIELD_MOVE           245
-#define OBJ_EVENT_GFX_LUCAS_FISHING              246
-#define OBJ_EVENT_GFX_LUCAS_HEAL                 247
-#define OBJ_EVENT_GFX_LUCAS_POKETCH              248
-#define OBJ_EVENT_GFX_LUCAS_SAVE                 249
-#define OBJ_EVENT_GFX_LUCAS_SURF                 240
-#define OBJ_EVENT_GFX_LUCAS_SEEKER               251
-#define OBJ_EVENT_GFX_LUCAS_WATERING             252
-#define OBJ_EVENT_GFX_DAWN_NORMAL                253
-#define OBJ_EVENT_GFX_DAWN_BIKE                  254
-#define OBJ_EVENT_GFX_DAWN_FIELD_MOVE            255
-#define OBJ_EVENT_GFX_DAWN_FISHING               256
-#define OBJ_EVENT_GFX_DAWN_HEAL                  257
-#define OBJ_EVENT_GFX_DAWN_POKETCH               258
-#define OBJ_EVENT_GFX_DAWN_SAVE                  259
-#define OBJ_EVENT_GFX_DAWN_SURF                  250
-#define OBJ_EVENT_GFX_DAWN_SEEKER                261
-#define OBJ_EVENT_GFX_DAWN_WATERING              262
-#define OBJ_EVENT_GFX_PROF_ROWAN                 263
-#define OBJ_EVENT_GFX_BARRY                      264
-#define OBJ_EVENT_GFX_JOHANNA                    265
+#define OBJ_EVENT_GFX_LUCAS_NORMAL               242
+#define OBJ_EVENT_GFX_LUCAS_BIKE                 243
+#define OBJ_EVENT_GFX_LUCAS_FIELD_MOVE           244
+#define OBJ_EVENT_GFX_LUCAS_FISHING              245
+#define OBJ_EVENT_GFX_LUCAS_HEAL                 246
+#define OBJ_EVENT_GFX_LUCAS_POKETCH              247
+#define OBJ_EVENT_GFX_LUCAS_SAVE                 248
+#define OBJ_EVENT_GFX_LUCAS_SURF                 249
+#define OBJ_EVENT_GFX_LUCAS_VSSEEKER             250
+#define OBJ_EVENT_GFX_LUCAS_WATERING             251
+#define OBJ_EVENT_GFX_DAWN_NORMAL                252
+#define OBJ_EVENT_GFX_DAWN_BIKE                  253
+#define OBJ_EVENT_GFX_DAWN_FIELD_MOVE            254
+#define OBJ_EVENT_GFX_DAWN_FISHING               255
+#define OBJ_EVENT_GFX_DAWN_HEAL                  256
+#define OBJ_EVENT_GFX_DAWN_POKETCH               257
+#define OBJ_EVENT_GFX_DAWN_SAVE                  258
+#define OBJ_EVENT_GFX_DAWN_SURF                  259
+#define OBJ_EVENT_GFX_DAWN_VSSEEKER              260
+#define OBJ_EVENT_GFX_DAWN_WATERING              261
+#define OBJ_EVENT_GFX_PROF_ROWAN                 262
+#define OBJ_EVENT_GFX_BARRY                      263
+#define OBJ_EVENT_GFX_JOHANNA                    264
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        266
+#define NUM_OBJ_EVENT_GFX                        265
 
 
 // These are dynamic object gfx ids.
