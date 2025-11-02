@@ -12,7 +12,7 @@ JubilifeCity_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	end
 
-Jubilife_EventScript_RowanHelperEncounter_Left::
+Jubilife_EventScript_HelperEncounter_Left::
     lockall
     applymovement 1, Common_Movement_WalkLeft
     waitmovement 0
@@ -22,9 +22,9 @@ Jubilife_EventScript_RowanHelperEncounter_Left::
     applymovement 1, Common_Movement_ExclamationMark
     waitmovement 0
     applymovement 1, Common_Movement_WalkDown3
-    goto Jubilife_EventScript_RowanHelper_Main
+    goto Jubilife_EventScript_Helper_Main
 
-Jubilife_EventScript_RowanHelperEncounter_Center::
+Jubilife_EventScript_HelperEncounter_Center::
     lockall
     applymovement 1, Common_Movement_WalkDown4
     waitmovement 0
@@ -32,9 +32,9 @@ Jubilife_EventScript_RowanHelperEncounter_Center::
     applymovement 1, Common_Movement_ExclamationMark
     waitmovement 0
     applymovement 1, Common_Movement_WalkDown3
-    goto Jubilife_EventScript_RowanHelper_Main
+    goto Jubilife_EventScript_Helper_Main
 
-Jubilife_EventScript_RowanHelperEncounter_Right::
+Jubilife_EventScript_HelperEncounter_Right::
     lockall
     applymovement 1, Common_Movement_WalkRight
     waitmovement 0
@@ -44,9 +44,9 @@ Jubilife_EventScript_RowanHelperEncounter_Right::
     applymovement 1, Common_Movement_ExclamationMark
     waitmovement 0
     applymovement 1, Common_Movement_WalkDown3
-    goto Jubilife_EventScript_RowanHelper_Main
+    goto Jubilife_EventScript_Helper_Main
 
-Jubilife_EventScript_RowanHelper_Main::
+Jubilife_EventScript_Helper_Main::
     checkplayergender
 	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_Dawn
 	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_Lucas
