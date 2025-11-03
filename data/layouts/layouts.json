@@ -112,6 +112,16 @@
       "blockdata_filepath": "data/layouts/Route204/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE207",
+      "name": "Route207_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_OutdoorOreburgh",
+      "secondary_tileset": "gTileset_Route207",
+      "border_filepath": "data/layouts/Route207/border.bin",
+      "blockdata_filepath": "data/layouts/Route207/map.bin"
+    },
+    {
       "id": "LAYOUT_OREBURGH_GATE",
       "name": "OreburghGate_Layout",
       "width": 28,
@@ -4630,16 +4640,6 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE207",
-      "name": "Route207_Layout",
-      "width": 32,
-      "height": 32,
-      "primary_tileset": "gTileset_OutdoorOreburgh",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route207/border.bin",
-      "blockdata_filepath": "data/layouts/Route207/map.bin"
     }
   ]
 }
