@@ -114,7 +114,7 @@
     {
       "id": "LAYOUT_ROUTE207",
       "name": "Route207_Layout",
-      "width": 32,
+      "width": 28,
       "height": 32,
       "primary_tileset": "gTileset_OutdoorOreburgh",
       "secondary_tileset": "gTileset_Route207",
