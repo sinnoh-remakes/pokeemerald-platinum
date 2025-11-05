@@ -92,6 +92,16 @@
       "blockdata_filepath": "data/layouts/Route204/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE207",
+      "name": "Route207_Layout",
+      "width": 28,
+      "height": 28,
+      "primary_tileset": "gTileset_OutdoorOreburgh",
+      "secondary_tileset": "gTileset_Route207",
+      "border_filepath": "data/layouts/Route207/border.bin",
+      "blockdata_filepath": "data/layouts/Route207/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE219",
       "name": "Route219_Layout",
       "width": 36,
