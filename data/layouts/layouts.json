@@ -124,10 +124,10 @@
     {
       "id": "LAYOUT_RAVAGED_PATH",
       "name": "RavagedPath_Layout",
-      "width": 32,
-      "height": 32,
+      "width": 24,
+      "height": 20,
       "primary_tileset": "gTileset_CaveCoronet",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_RavagedPath",
       "border_filepath": "data/layouts/RavagedPath/border.bin",
       "blockdata_filepath": "data/layouts/RavagedPath/map.bin"
     },
