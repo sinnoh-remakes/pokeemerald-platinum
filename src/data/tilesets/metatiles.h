@@ -282,3 +282,6 @@ const u16 gMetatileAttributes_RavagedPath[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_SandgemLiving[] = INCBIN_U16("data/tilesets/secondary/sandgem_living/metatiles.bin");
 const u16 gMetatileAttributes_SandgemLiving[] = INCBIN_U16("data/tilesets/secondary/sandgem_living/metatile_attributes.bin");
+
+const u16 gMetatiles_SandgemHelper[] = INCBIN_U16("data/tilesets/secondary/sandgem_helper/metatiles.bin");
+const u16 gMetatileAttributes_SandgemHelper[] = INCBIN_U16("data/tilesets/secondary/sandgem_helper/metatile_attributes.bin");
