@@ -1,9 +1,9 @@
 {
-  "id": "MAP_TWINLEAF_TOWN_OTHER_HOUSE_A",
-  "name": "TwinleafTown_OtherHouseA",
-  "layout": "LAYOUT_TWINLEAF_TOWN_OTHER_HOUSE_A",
-  "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_TWINLEAF_TOWN",
+  "id": "MAP_SANDGEM_TOWN_HOUSEA",
+  "name": "SandgemTown_HouseA",
+  "layout": "LAYOUT_TWINLEAF_TOWN_GENERIC_HOUSE",
+  "music": "MUS_OLDALE",
+  "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -12,32 +12,32 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
-      "x": 4,
-      "y": 4,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 7,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwinleafTown_OtherHouseA_EventScript_Elder",
+      "script": "SandgemTown_HouseA_EventScript_Aroma",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 7,
-      "y": 5,
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 4,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwinleafTown_OtherHouseA_EventScript_Twin",
+      "script": "SandgemTown_HouseA_EventScript_Boy",
       "flag": "0"
     }
   ],
@@ -46,14 +46,10 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_TWINLEAF_TOWN",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_SANDGEM_TOWN",
+      "dest_warp_id": "3"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }
