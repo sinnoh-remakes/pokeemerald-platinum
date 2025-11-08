@@ -1,7 +1,7 @@
 {
   "id": "MAP_SANDGEM_TOWN_HOUSE1",
   "name": "SandgemTown_House1",
-  "layout": "LAYOUT_HOUSE1",
+  "layout": "LAYOUT_TWINLEAF_TOWN_GENERIC_HOUSE",
   "music": "MUS_OLDALE",
   "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
@@ -12,12 +12,12 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 7,
-      "y": 2,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -43,13 +43,6 @@
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_SANDGEM_TOWN",
-      "dest_warp_id": "3"
-    },
-    {
       "x": 4,
       "y": 7,
       "elevation": 0,
@@ -57,10 +50,6 @@
       "dest_warp_id": "3"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }
