@@ -279,3 +279,6 @@ const u16 gMetatileAttributes_OreburghSouth[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_RavagedPath[] = INCBIN_U16("data/tilesets/secondary/ravaged_path/metatiles.bin");
 const u16 gMetatileAttributes_RavagedPath[] = INCBIN_U16("data/tilesets/secondary/ravaged_path/metatile_attributes.bin");
+
+const u16 gMetatiles_SandgemLiving[] = INCBIN_U16("data/tilesets/secondary/sandgem_living/metatiles.bin");
+const u16 gMetatileAttributes_SandgemLiving[] = INCBIN_U16("data/tilesets/secondary/sandgem_living/metatile_attributes.bin");

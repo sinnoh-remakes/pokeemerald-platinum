@@ -2090,3 +2090,22 @@ const u16 gTilesetPalettes_RavagedPath[][16] =
 };
 
 const u32 gTilesetTiles_RavagedPath[] = INCBIN_U32("data/tilesets/secondary/ravaged_path/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_SandgemLiving[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sandgem_living/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_SandgemLiving[] = INCBIN_U32("data/tilesets/secondary/sandgem_living/tiles.4bpp.lz");

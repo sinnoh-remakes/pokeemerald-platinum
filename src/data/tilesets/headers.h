@@ -1094,3 +1094,14 @@ const struct Tileset gTileset_RavagedPath =
     .metatileAttributes = gMetatileAttributes_RavagedPath,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SandgemLiving =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SandgemLiving,
+    .palettes = gTilesetPalettes_SandgemLiving,
+    .metatiles = gMetatiles_SandgemLiving,
+    .metatileAttributes = gMetatileAttributes_SandgemLiving,
+    .callback = NULL,
+};
