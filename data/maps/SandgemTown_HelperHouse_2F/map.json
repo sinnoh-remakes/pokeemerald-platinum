@@ -12,23 +12,17 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
-  "object_events": [
-
-  ],
+  "connections": null,
+  "object_events": [],
   "warp_events": [
     {
-      "x": 6,
+      "x": 5,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_HELPER_HOUSE_1F",
-      "dest_warp_id": "2"
+      "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

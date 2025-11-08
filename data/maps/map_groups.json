@@ -73,12 +73,12 @@
     "TwinleafTown_PlayersHouse_2F",
     "TwinleafTown_RivalsHouse_1F",
     "TwinleafTown_RivalsHouse_2F",
-    "TwinleafTown_OtherHouseA",
-    "TwinleafTown_OtherHouseB"
+    "TwinleafTown_HouseA",
+    "TwinleafTown_HouseB"
   ],
   "gMapGroup_IndoorSandgem": [
     "SandgemTown_ProfessorRowansLab",
-    "SandgemTown_House1",
+    "SandgemTown_HouseA",
     "SandgemTown_HelperHouse_1F",
     "SandgemTown_HelperHouse_2F",
     "SandgemTown_PokemonCenter_1F",

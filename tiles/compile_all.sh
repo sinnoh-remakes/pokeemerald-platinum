@@ -32,8 +32,12 @@ echo "Compiling [secondary] twinleaf_player"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_player ./tiles/twinleaf_player ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_living"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_living ./tiles/twinleaf_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] twinleaf_other"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_other ./tiles/twinleaf_other ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] twinleaf_house"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_house ./tiles/twinleaf_house ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] sandgem_living"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_living ./tiles/sandgem_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] sandgem_helper"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_helper ./tiles/sandgem_helper ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_twinleaf_rival"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf_rival ./tiles/indoor_twinleaf_rival ./include/constants/metatile_behaviors.h
@@ -47,3 +51,5 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_lab ./til
 
 echo "Compiling [PRIMARY] cave_coronet"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/cave_coronet ./tiles/cave_coronet ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] ravaged_path"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/ravaged_path ./tiles/ravaged_path ./tiles/cave_coronet ./include/constants/metatile_behaviors.h

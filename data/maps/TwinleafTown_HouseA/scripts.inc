@@ -1,23 +1,23 @@
-TwinleafTown_OtherHouseA_MapScripts::
+TwinleafTown_HouseA_MapScripts::
 	.byte 0
 
-TwinleafTown_OtherHouseA_EventScript_Elder::
+TwinleafTown_HouseA_EventScript_Elder::
 	lock
 	faceplayer
-	msgbox TwinleafTown_OtherHouseA_Text_Elder, MSGBOX_DEFAULT
+	msgbox TwinleafTown_HouseA_Text_Elder, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-TwinleafTown_OtherHouseA_EventScript_Twin::
+TwinleafTown_HouseA_EventScript_Twin::
 	lock
 	faceplayer
-	msgbox TwinleafTown_OtherHouseA_Text_Twin, MSGBOX_DEFAULT
+	msgbox TwinleafTown_HouseA_Text_Twin, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-TwinleafTown_OtherHouseA_Text_Elder:
+TwinleafTown_HouseA_Text_Elder:
 	.string "Did you hear?\p"
 	.string "The Pokémon Professor returned\n"
 	.string "to the next town over.\p"
@@ -26,6 +26,6 @@ TwinleafTown_OtherHouseA_Text_Elder:
 	.string "I wonder if he found some amazing\n"
 	.string "Pokémon while he was gone?$"
 
-TwinleafTown_OtherHouseA_Text_Twin:
+TwinleafTown_HouseA_Text_Twin:
 	.string "Listen, listen {PLAYER}.\n"
 	.string "I want a cute Pokémon!$"
