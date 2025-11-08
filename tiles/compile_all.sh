@@ -32,8 +32,8 @@ echo "Compiling [secondary] twinleaf_player"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_player ./tiles/twinleaf_player ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_living"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_living ./tiles/twinleaf_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] twinleaf_other"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_other ./tiles/twinleaf_other ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] twinleaf_house"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_house ./tiles/twinleaf_house ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] sandgem_living"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_living ./tiles/sandgem_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] sandgem_helper"

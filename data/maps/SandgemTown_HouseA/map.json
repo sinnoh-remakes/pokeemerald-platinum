@@ -1,6 +1,6 @@
 {
-  "id": "MAP_SANDGEM_TOWN_HOUSE1",
-  "name": "SandgemTown_House1",
+  "id": "MAP_SANDGEM_TOWN_HOUSEA",
+  "name": "SandgemTown_HouseA",
   "layout": "LAYOUT_TWINLEAF_TOWN_GENERIC_HOUSE",
   "music": "MUS_OLDALE",
   "region_map_section": "MAPSEC_SANDGEM_TOWN",
@@ -24,7 +24,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SandgemTown_House1_EventScript_Aroma",
+      "script": "SandgemTown_HouseA_EventScript_Aroma",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SandgemTown_House1_EventScript_Boy",
+      "script": "SandgemTown_HouseA_EventScript_Boy",
       "flag": "0"
     }
   ],
