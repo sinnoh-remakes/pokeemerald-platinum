@@ -235,9 +235,9 @@
       "id": "LAYOUT_SANDGEM_TOWN_HELPER_HOUSE_2F",
       "name": "SandgemTown_HelperHouse_2F_Layout",
       "width": 10,
-      "height": 10,
+      "height": 9,
       "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_TwinleafPlayer",
+      "secondary_tileset": "gTileset_SandgemHelper",
       "border_filepath": "data/layouts/SandgemTown_HelperHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTown_HelperHouse_2F/map.bin"
     },
