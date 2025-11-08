@@ -1083,3 +1083,14 @@ const struct Tileset gTileset_OreburghSouth =
     .metatileAttributes = gMetatileAttributes_OreburghSouth,
     .callback = InitTilesetAnim_Oreburgh,
 };
+
+const struct Tileset gTileset_RavagedPath =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_RavagedPath,
+    .palettes = gTilesetPalettes_RavagedPath,
+    .metatiles = gMetatiles_RavagedPath,
+    .metatileAttributes = gMetatileAttributes_RavagedPath,
+    .callback = NULL,
+};
