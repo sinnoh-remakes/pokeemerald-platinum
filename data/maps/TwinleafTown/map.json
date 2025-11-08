@@ -94,14 +94,14 @@
       "x": 6,
       "y": 23,
       "elevation": 0,
-      "dest_map": "MAP_TWINLEAF_TOWN_OTHER_HOUSE_A",
+      "dest_map": "MAP_TWINLEAF_TOWN_HOUSE_A",
       "dest_warp_id": "0"
     },
     {
       "x": 16,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_TWINLEAF_TOWN_OTHER_HOUSE_B",
+      "dest_map": "MAP_TWINLEAF_TOWN_HOUSE_B",
       "dest_warp_id": "0"
     }
   ],

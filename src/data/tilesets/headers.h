@@ -952,14 +952,14 @@ const struct Tileset gTileset_IndoorTwinleafRival =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_TwinleafOther =
+const struct Tileset gTileset_TwinleafHouse =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TwinleafOther,
-    .palettes = gTilesetPalettes_TwinleafOther,
-    .metatiles = gMetatiles_TwinleafOther,
-    .metatileAttributes = gMetatileAttributes_TwinleafOther,
+    .tiles = gTilesetTiles_TwinleafHouse,
+    .palettes = gTilesetPalettes_TwinleafHouse,
+    .metatiles = gMetatiles_TwinleafHouse,
+    .metatileAttributes = gMetatileAttributes_TwinleafHouse,
     .callback = NULL,
 };
 

@@ -1844,24 +1844,24 @@ const u16 gTilesetPalettes_IndoorTwinleafRival[][16] =
 
 const u32 gTilesetTiles_IndoorTwinleafRival[] = INCBIN_U32("data/tilesets/primary/indoor_twinleaf_rival/tiles.4bpp.fastSmol");
 
-const u16 gTilesetPalettes_TwinleafOther[][16] =
+const u16 gTilesetPalettes_TwinleafHouse[][16] =
 {
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/00.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/01.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/02.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/03.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/04.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/05.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/06.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/07.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/08.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/09.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/10.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/11.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/twinleaf_other/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/twinleaf_house/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_TwinleafOther[] = INCBIN_U32("data/tilesets/secondary/twinleaf_other/tiles.4bpp.fastSmol");
+const u32 gTilesetTiles_TwinleafHouse[] = INCBIN_U32("data/tilesets/secondary/twinleaf_house/tiles.4bpp.fastSmol");
 
 const u16 gTilesetPalettes_Sandgem[][16] =
 {
