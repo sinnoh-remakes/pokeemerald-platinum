@@ -1366,7 +1366,7 @@ static const struct SpriteFrameImage sPicTable_DawnNormal[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_ProfRowan[] = {
-    overworld_ascending_frames(gObjectEventPic_ProfRowan, 2, 4),
+    overworld_ascending_frames(gObjectEventPic_ProfRowan, 4, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Barry[] = {
