@@ -49,6 +49,11 @@ porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_sandgem_lab ./
 echo "Compiling [secondary] sandgem_lab"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_lab ./tiles/sandgem_lab ./tiles/indoor_sandgem_lab ./include/constants/metatile_behaviors.h
 
+echo "Compiling [PRIMARY] indoor_center"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_center ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] common_center"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_center ./tiles/common_center ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+
 echo "Compiling [PRIMARY] cave_coronet"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/cave_coronet ./tiles/cave_coronet ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] ravaged_path"

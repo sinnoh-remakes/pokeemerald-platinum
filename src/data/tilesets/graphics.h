@@ -2128,3 +2128,22 @@ const u16 gTilesetPalettes_SandgemHelper[][16] =
 };
 
 const u32 gTilesetTiles_SandgemHelper[] = INCBIN_U32("data/tilesets/secondary/sandgem_helper/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_IndoorCenter[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_center/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_IndoorCenter[] = INCBIN_U32("data/tilesets/primary/indoor_center/tiles.4bpp.lz");

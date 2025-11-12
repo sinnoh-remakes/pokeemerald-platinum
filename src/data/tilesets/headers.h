@@ -1116,3 +1116,14 @@ const struct Tileset gTileset_SandgemHelper =
     .metatileAttributes = gMetatileAttributes_SandgemHelper,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_IndoorCenter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorCenter,
+    .palettes = gTilesetPalettes_IndoorCenter,
+    .metatiles = gMetatiles_IndoorCenter,
+    .metatileAttributes = gMetatileAttributes_IndoorCenter,
+    .callback = NULL,
+};
