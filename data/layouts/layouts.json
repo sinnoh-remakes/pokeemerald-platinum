@@ -867,7 +867,7 @@
       "width": 10,
       "height": 12,
       "primary_tileset": "gTileset_IndoorMart",
-      "secondary_tileset": "gTileset_Shop",
+      "secondary_tileset": "gTileset_CommonMart",
       "border_filepath": "data/layouts/Mart/border.bin",
       "blockdata_filepath": "data/layouts/Mart/map.bin"
     },
