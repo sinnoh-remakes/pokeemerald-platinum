@@ -847,7 +847,7 @@
       "width": 15,
       "height": 16,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CenterMain",
+      "secondary_tileset": "gTileset_CommonCenter",
       "border_filepath": "data/layouts/PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F/map.bin"
     },
