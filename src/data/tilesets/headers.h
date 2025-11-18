@@ -1138,3 +1138,14 @@ const struct Tileset gTileset_CenterMain =
     .metatileAttributes = gMetatileAttributes_CenterMain,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_IndoorMart =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorMart,
+    .palettes = gTilesetPalettes_IndoorMart,
+    .metatiles = gMetatiles_IndoorMart,
+    .metatileAttributes = gMetatileAttributes_IndoorMart,
+    .callback = NULL,
+};

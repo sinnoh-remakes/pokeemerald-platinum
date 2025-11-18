@@ -291,3 +291,6 @@ const u16 gMetatileAttributes_IndoorCenter[] = INCBIN_U16("data/tilesets/primary
 
 const u16 gMetatiles_CenterMain[] = INCBIN_U16("data/tilesets/secondary/center_main/metatiles.bin");
 const u16 gMetatileAttributes_CenterMain[] = INCBIN_U16("data/tilesets/secondary/center_main/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorMart[] = INCBIN_U16("data/tilesets/primary/indoor_mart/metatiles.bin");
+const u16 gMetatileAttributes_IndoorMart[] = INCBIN_U16("data/tilesets/primary/indoor_mart/metatile_attributes.bin");
