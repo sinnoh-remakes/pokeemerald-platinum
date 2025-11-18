@@ -2185,3 +2185,22 @@ const u16 gTilesetPalettes_IndoorMart[][16] =
 };
 
 const u32 gTilesetTiles_IndoorMart[] = INCBIN_U32("data/tilesets/primary/indoor_mart/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_CommonMart[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/common_mart/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_CommonMart[] = INCBIN_U32("data/tilesets/secondary/common_mart/tiles.4bpp.lz");
