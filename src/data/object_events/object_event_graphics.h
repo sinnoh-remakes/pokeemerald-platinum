@@ -1,3 +1,10 @@
+const u32 gObjectEventPic_ProfRowan[] = INCBIN_U32("graphics/object_events/pics/people/prof_rowan.4bpp");
+const u16 gObjectEventPal_ProfRowan[] = INCBIN_U16("graphics/object_events/palettes/prof_rowan.gbapal");
+const u32 gObjectEventPic_Barry[] = INCBIN_U32("graphics/object_events/pics/people/barry.4bpp");
+const u16 gObjectEventPal_Barry[] = INCBIN_U16("graphics/object_events/palettes/barry.gbapal");
+const u32 gObjectEventPic_Johanna[] = INCBIN_U32("graphics/object_events/pics/people/johanna.4bpp");
+const u16 gObjectEventPal_Johanna[] = INCBIN_U16("graphics/object_events/palettes/johanna.gbapal");
+
 const u32 gObjectEventPic_BrendanNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/brendan/walking.4bpp", "graphics/object_events/pics/people/brendan/running.4bpp");
 const u16 gObjectEventPal_Brendan[] = INCBIN_U16("graphics/object_events/palettes/brendan.gbapal");
 const u32 gObjectEventPic_RubySapphireBrendanNormal[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/walking.4bpp");
@@ -392,13 +399,6 @@ const u16 gObjectEventPal_Substitute[] = INCBIN_U16("graphics/object_events/pics
 const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
 const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/palettes/neon_light.gbapal");
 
-const u32 gObjectEventPic_ProfRowan[] = INCBIN_U32("graphics/object_events/pics/people/prof_rowan.4bpp");
-const u16 gObjectEventPal_ProfRowan[] = INCBIN_U16("graphics/object_events/palettes/prof_rowan.gbapal");
-const u32 gObjectEventPic_Barry[] = INCBIN_U32("graphics/object_events/pics/people/barry.4bpp");
-const u16 gObjectEventPal_Barry[] = INCBIN_U16("graphics/object_events/palettes/barry.gbapal");
-const u32 gObjectEventPic_Johanna[] = INCBIN_U32("graphics/object_events/pics/people/johanna.4bpp");
-const u16 gObjectEventPal_Johanna[] = INCBIN_U16("graphics/object_events/palettes/johanna.gbapal");
-
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");
 const u32 gObjectEventPic_UltraBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_ultra.4bpp");
@@ -472,3 +472,5 @@ const u16 gObjectEventPal_StrangeBall[] = INCBIN_U16("graphics/object_events/pic
 
 const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
+
+const u32 gObjectEventPic_ApricornTree[] = INCBIN_U32("graphics/object_events/pics/misc/apricorn_tree.4bpp");

@@ -1,4 +1,4 @@
-voice_group victory_wild
+voice_group rg_victory_wild
 	voice_keysplit_all voicegroup_rs_drumset
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
