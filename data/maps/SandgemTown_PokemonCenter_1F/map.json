@@ -1,7 +1,7 @@
 {
   "id": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F",
   "name": "SandgemTown_PokemonCenter_1F",
-  "layout": "LAYOUT_POKEMON_CENTER_1F",
+  "layout": "LAYOUT_SINNOH_CENTER_1F",
   "music": "MUS_DP_POKE_CENTER_DAY",
   "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
