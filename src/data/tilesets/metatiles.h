@@ -285,3 +285,15 @@ const u16 gMetatileAttributes_SandgemLiving[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_SandgemHelper[] = INCBIN_U16("data/tilesets/secondary/sandgem_helper/metatiles.bin");
 const u16 gMetatileAttributes_SandgemHelper[] = INCBIN_U16("data/tilesets/secondary/sandgem_helper/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorCenter[] = INCBIN_U16("data/tilesets/primary/indoor_center/metatiles.bin");
+const u16 gMetatileAttributes_IndoorCenter[] = INCBIN_U16("data/tilesets/primary/indoor_center/metatile_attributes.bin");
+
+const u16 gMetatiles_CommonCenter[] = INCBIN_U16("data/tilesets/secondary/common_center/metatiles.bin");
+const u16 gMetatileAttributes_CommonCenter[] = INCBIN_U16("data/tilesets/secondary/common_center/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorMart[] = INCBIN_U16("data/tilesets/primary/indoor_mart/metatiles.bin");
+const u16 gMetatileAttributes_IndoorMart[] = INCBIN_U16("data/tilesets/primary/indoor_mart/metatile_attributes.bin");
+
+const u16 gMetatiles_CommonMart[] = INCBIN_U16("data/tilesets/secondary/common_mart/metatiles.bin");
+const u16 gMetatileAttributes_CommonMart[] = INCBIN_U16("data/tilesets/secondary/common_mart/metatile_attributes.bin");

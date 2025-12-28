@@ -1116,3 +1116,47 @@ const struct Tileset gTileset_SandgemHelper =
     .metatileAttributes = gMetatileAttributes_SandgemHelper,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_IndoorCenter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorCenter,
+    .palettes = gTilesetPalettes_IndoorCenter,
+    .metatiles = gMetatiles_IndoorCenter,
+    .metatileAttributes = gMetatileAttributes_IndoorCenter,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_CommonCenter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CommonCenter,
+    .palettes = gTilesetPalettes_CommonCenter,
+    .metatiles = gMetatiles_CommonCenter,
+    .metatileAttributes = gMetatileAttributes_CommonCenter,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_IndoorMart =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorMart,
+    .palettes = gTilesetPalettes_IndoorMart,
+    .metatiles = gMetatiles_IndoorMart,
+    .metatileAttributes = gMetatileAttributes_IndoorMart,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_CommonMart =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CommonMart,
+    .palettes = gTilesetPalettes_CommonMart,
+    .metatiles = gMetatiles_CommonMart,
+    .metatileAttributes = gMetatileAttributes_CommonMart,
+    .callback = NULL,
+};

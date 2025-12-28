@@ -162,6 +162,36 @@
       "blockdata_filepath": "data/layouts/OreburghCitySouth/map.bin"
     },
     {
+      "id": "LAYOUT_SINNOH_CENTER_1F",
+      "name": "SinnohCenter_1F_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_IndoorCenter",
+      "secondary_tileset": "gTileset_CommonCenter",
+      "border_filepath": "data/layouts/SinnohCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SinnohCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINNOH_CENTER_2F",
+      "name": "SinnohCenter_2F_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_IndoorCenter",
+      "secondary_tileset": "gTileset_CommonCenter",
+      "border_filepath": "data/layouts/SinnohCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SinnohCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINNOH_MART",
+      "name": "Mart_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorMart",
+      "secondary_tileset": "gTileset_CommonMart",
+      "border_filepath": "data/layouts/SinnohMart/border.bin",
+      "blockdata_filepath": "data/layouts/SinnohMart/map.bin"
+    },
+    {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
       "name": "TwinleafTown_PlayersHouse_1F_Layout",
       "width": 11,
@@ -844,10 +874,10 @@
     {
       "id": "LAYOUT_POKEMON_CENTER_1F",
       "name": "PokemonCenter_1F_Layout",
-      "width": 14,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_IndoorCenter",
+      "secondary_tileset": "gTileset_CommonCenter",
       "border_filepath": "data/layouts/PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F/map.bin"
     },
@@ -864,10 +894,10 @@
     {
       "id": "LAYOUT_MART",
       "name": "Mart_Layout",
-      "width": 11,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Shop",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorMart",
+      "secondary_tileset": "gTileset_CommonMart",
       "border_filepath": "data/layouts/Mart/border.bin",
       "blockdata_filepath": "data/layouts/Mart/map.bin"
     },
