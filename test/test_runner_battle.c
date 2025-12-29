@@ -2571,6 +2571,17 @@ void Move(u32 sourceLine, struct BattlePokemon *battler, struct MoveContext ctx)
         }
     }
 
+    u32 shellSideArmCount = 0;
+    for (u32 i = 0; i < STATE->battlersCount; i++)
+    {
+        if (DATA.battleRecordTurns[DATA.turns][i].rng.tag == RNG_SHELL_SIDE_ARM)
+        {
+            shellSideArmCount++;
+            if (shellSideArmCount > 1)
+                Test_ExitWithResult(TEST_RESULT_ERROR, SourceLine(0), ":L Tried to use fixed RNG for multiple Shell Side Arm moves in the same turn");
+        }
+    }
+
     if (!(DATA.actionBattlers & (1 << battlerId)))
     {
         PushBattlerAction(sourceLine, battlerId, RECORDED_ACTION_TYPE, B_ACTION_USE_MOVE);

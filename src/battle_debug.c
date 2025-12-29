@@ -777,12 +777,6 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("Switching to "));
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74 + 68, 79, sTextColorTable[COLORID_RED], 0, gSpeciesInfo[switchMon].speciesName);
     }
-    else
-    {
-        u32 chosenMoveIndex = gAiBattleData->chosenMoveIndex[data->aiBattlerId];
-        AddTextPrinterParameterized(data->aiMovesWindowId, FONT_NORMAL, COMPOUND_STRING("Chosen move: "), 74, 64, 0, NULL);
-        AddTextPrinterParameterized(data->aiMovesWindowId, FONT_NORMAL, GetMoveName(gBattleMons[data->aiBattlerId].moves[chosenMoveIndex]), 74 + 68, 64, 0, NULL);
-    }
 
     CopyWindowToVram(data->aiMovesWindowId, COPYWIN_FULL);
     Free(text);

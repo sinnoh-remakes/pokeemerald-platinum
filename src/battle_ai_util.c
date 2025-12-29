@@ -4874,43 +4874,7 @@ static enum AIScore IncreaseStatUpScoreInternal(u32 battlerAtk, u32 battlerDef, 
         tempScore += WEAK_EFFECT;
     }
 
-    // Don't increase stats if opposing battler has used Haze effect or AI effect
-    if (!RandomPercentage(RNG_AI_BOOST_INTO_HAZE, BOOST_INTO_HAZE_CHANCE)
-      && HasBattlerSideUsedMoveWithEffect(battlerDef, EFFECT_HAZE))
-        return NO_INCREASE;
-
-    // Don't increase if AI is at +1 and opponent has Haze effect
-    if (gBattleMons[battlerAtk].statStages[statId] >= MAX_STAT_STAGE - 5
-      && HasBattlerSideMoveWithAIEffect(battlerDef, AI_EFFECT_RESET_STATS))
-        return NO_INCREASE;
-
-    // Don't increase stats if AI could KO target through Sturdy effect, as otherwise it always 2HKOs
-    if (CanBattlerKOTargetIgnoringSturdy(battlerAtk, battlerDef))
-        return NO_INCREASE;
-
-    // Don't increase stats if player has a move that can change the KO threshold
-    if (HasMoveThatChangesKOThreshold(battlerDef, noOfHitsToFaint, aiIsFaster))
-        return NO_INCREASE;
-
-    // Predicting switch
-    if (IsBattlerPredictedToSwitch(battlerDef))
-    {
-        struct Pokemon *playerParty = GetBattlerParty(battlerDef);
-        // If expected switchin outspeeds and has Encore, don't increase
-        for (i = 0; i < MAX_MON_MOVES; i++)
-        {
-            if (GetMoveEffect(GetMonData(&playerParty[gAiLogicData->mostSuitableMonId[battlerDef]], MON_DATA_MOVE1 + i, NULL)) == EFFECT_ENCORE
-                && GetMonData(&playerParty[gAiLogicData->mostSuitableMonId[battlerDef]], MON_DATA_PP1 + i, NULL) > 0);
-            {
-                if (GetMonData(&playerParty[gAiLogicData->mostSuitableMonId[battlerDef]], MON_DATA_SPEED, NULL) > gBattleMons[battlerAtk].speed)
-                    return NO_INCREASE;
-            }
-        }
-        // Otherwise if predicting switch, stat increases are great momentum
-        tempScore += WEAK_EFFECT;
-    }
-
-    switch (statChange)
+    switch (statId)
     {
     case STAT_ATK:
         if (HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL) && shouldSetUp)
