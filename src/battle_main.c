@@ -3879,8 +3879,6 @@ static void TryDoEventsBeforeFirstTurn(void)
                 return;
             if (AbilityBattleEffects(ABILITYEFFECT_ON_SWITCHIN_IMMUNITIES, battler, 0, 0, 0) != 0)
                 return;
-            if (TryClearIllusion(i, ABILITYEFFECT_ON_SWITCHIN))
-                return;
         }
         gBattleStruct->switchInBattlerCounter = 0;
         gBattleStruct->eventState.beforeFristTurn++;
@@ -3928,11 +3926,6 @@ static void TryDoEventsBeforeFirstTurn(void)
     case FIRST_TURN_EVENTS_EJECT_PACK:
         gBattleStruct->eventState.beforeFristTurn++;
         if (TrySwitchInEjectPack(FIRST_TURN))
-            return;
-        break;
-    case FIRST_TURN_EVENTS_EJECT_PACK:
-        gBattleStruct->eventsBeforeFirstTurnState++;
-        if (TrySwitchInEjectPack(ITEMEFFECT_ON_SWITCH_IN_FIRST_TURN))
             return;
         break;
     case FIRST_TURN_EVENTS_END:
@@ -4450,14 +4443,6 @@ static void HandleTurnActionSelectionState(void)
                     gSelectionBattleScripts[battler] = BattleScript_QuestionForfeitBattle;
                     gBattleCommunication[battler] = STATE_SELECTION_SCRIPT_MAY_RUN;
                     gBattleStruct->battlerState[battler].selectionScriptFinished = FALSE;
-                    gBattleStruct->stateIdAfterSelScript[battler] = STATE_BEFORE_ACTION_CHOSEN;
-                    return;
-                }
-                else if (CanPlayerForfeitNormalTrainerBattle() && gBattleResources->bufferB[battler][1] == B_ACTION_RUN)
-                {
-                    gSelectionBattleScripts[battler] = BattleScript_QuestionForfeitBattle;
-                    gBattleCommunication[battler] = STATE_SELECTION_SCRIPT_MAY_RUN;
-                    gBattleStruct->selectionScriptFinished[battler] = FALSE;
                     gBattleStruct->stateIdAfterSelScript[battler] = STATE_BEFORE_ACTION_CHOSEN;
                     return;
                 }

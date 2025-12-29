@@ -7925,102 +7925,6 @@ void TryHazardsOnSwitchIn(u32 battler, u32 side, enum Hazards hazardType)
     }
 }
 
-static void SetDmgHazardsBattlescript(u8 battler, u8 multistringId)
-{
-    gBattleMons[battler].volatiles.destinyBond = FALSE;
-    gHitMarker &= ~HITMARKER_DESTINYBOND;
-    gBattleScripting.battler = battler;
-    gBattleCommunication[MULTISTRING_CHOOSER] = multistringId;
-
-    if (gBattlescriptCurrInstr[1] == BS_TARGET)
-        BattleScriptCall(BattleScript_DmgHazardsOnTarget);
-    else if (gBattlescriptCurrInstr[1] == BS_ATTACKER)
-        BattleScriptCall(BattleScript_DmgHazardsOnAttacker);
-    else if (gBattlescriptCurrInstr[1] == BS_SCRIPTING)
-        BattleScriptCall(BattleScript_DmgHazardsOnBattlerScripting);
-    else
-        BattleScriptCall(BattleScript_DmgHazardsOnFaintedBattler);
-}
-
-void TryHazardsOnSwitchIn(u32 battler, u32 side, enum Hazards hazardType)
-{
-    switch (hazardType)
-    {
-    case HAZARDS_NONE:
-        break;
-    case HAZARDS_SPIKES:
-        if (GetBattlerAbility(battler) != ABILITY_MAGIC_GUARD
-         && IsBattlerAffectedByHazards(battler, FALSE)
-         && IsBattlerGrounded(battler))
-        {
-            u8 spikesDmg = (5 - gSideTimers[side].spikesAmount) * 2;
-            gBattleStruct->moveDamage[battler] = GetNonDynamaxMaxHP(battler) / (spikesDmg);
-            if (gBattleStruct->moveDamage[battler] == 0)
-                gBattleStruct->moveDamage[battler] = 1;
-            SetDmgHazardsBattlescript(battler, B_MSG_PKMNHURTBYSPIKES);
-        }
-        break;
-    case HAZARDS_STICKY_WEB:
-        if (IsBattlerAffectedByHazards(battler, FALSE) && IsBattlerGrounded(battler))
-        {
-            gBattleScripting.battler = battler;
-            SET_STATCHANGER(STAT_SPEED, 1, TRUE);
-            BattleScriptCall(BattleScript_StickyWebOnSwitchIn);
-        }
-        break;
-    case HAZARDS_TOXIC_SPIKES:
-        if (!IsBattlerGrounded(battler))
-            break;
-
-        if (IS_BATTLER_OF_TYPE(battler, TYPE_POISON)) // Absorb the toxic spikes.
-        {
-            gBattleStruct->hazardsCounter--; // reduce counter so the next hazard can be applied
-            gSideTimers[GetBattlerSide(battler)].toxicSpikesAmount = 0;
-            RemoveHazardFromField(side, HAZARDS_TOXIC_SPIKES);
-            gEffectBattler = battler;
-            BattleScriptCall(BattleScript_ToxicSpikesAbsorbed);
-        }
-        else if (IsBattlerAffectedByHazards(battler, TRUE)
-              && CanBePoisoned(battler, battler, GetBattlerAbility(battler), GetBattlerAbility(battler)))
-        {
-            gBattleScripting.battler = battler;
-            BattleScriptPushCursor();
-            if (gSideTimers[GetBattlerSide(battler)].toxicSpikesAmount >= 2)
-            {
-                gBattlescriptCurrInstr = BattleScript_ToxicSpikesBadlyPoisoned;
-                gBattleMons[battler].status1 |= STATUS1_TOXIC_POISON;
-            }
-            else
-            {
-                gBattlescriptCurrInstr = BattleScript_ToxicSpikesPoisoned;
-                gBattleMons[battler].status1 |= STATUS1_POISON;
-            }
-
-            BtlController_EmitSetMonData(battler, B_COMM_TO_CONTROLLER, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[battler].status1), &gBattleMons[battler].status1);
-            MarkBattlerForControllerExec(battler);
-        }
-        break;
-    case HAZARDS_STEALTH_ROCK:
-        if (IsBattlerAffectedByHazards(battler, FALSE) && GetBattlerAbility(battler) != ABILITY_MAGIC_GUARD)
-        {
-            gBattleStruct->moveDamage[battler] = GetStealthHazardDamage(TYPE_SIDE_HAZARD_POINTED_STONES, battler);
-            if (gBattleStruct->moveDamage[battler] != 0)
-                SetDmgHazardsBattlescript(battler, B_MSG_STEALTHROCKDMG);
-        }
-        break;
-    case HAZARDS_STEELSURGE:
-        if (IsBattlerAffectedByHazards(battler, FALSE) && GetBattlerAbility(battler) != ABILITY_MAGIC_GUARD)
-        {
-            gBattleStruct->moveDamage[battler] = GetStealthHazardDamage(TYPE_SIDE_HAZARD_SHARP_STEEL, battler);
-            if (gBattleStruct->moveDamage[battler] != 0)
-                SetDmgHazardsBattlescript(battler, B_MSG_SHARPSTEELDMG);
-        }
-        break;
-    case HAZARDS_MAX_COUNT:
-        break;
-    }
-}
-
 static bool32 DoSwitchInEffectsForBattler(u32 battler)
 {
     u32 i = 0;
@@ -10505,8 +10409,6 @@ static u32 ChangeStatBuffs(u32 battler, s8 statValue, enum Stat statId, union St
 
         gBattleCommunication[MULTISTRING_CHOOSER] = (gBattlerTarget == battler); // B_MSG_ATTACKER_STAT_CHANGED or B_MSG_DEFENDER_STAT_CHANGED
 
-        gBattleCommunication[MULTISTRING_CHOOSER] = (gBattlerTarget == battler); // B_MSG_ATTACKER_STAT_ROSE or B_MSG_DEFENDER_STAT_ROSE
-
         if (gBattleMons[battler].statStages[statId] == MAX_STAT_STAGE)
         {
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STAT_WONT_CHANGE;
@@ -12464,39 +12366,6 @@ static void Cmd_recoverbasedonsunlight(void)
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
             else // not sunny weather
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 8;
-
-        }
-        else // B_TIME_OF_DAY_HEALING_MOVES == GEN_2
-        {
-            u32 healingModifier = 1;
-            u32 time = GetTimeOfDay();
-
-            switch (GetMoveEffect(gCurrentMove))
-            {
-            case EFFECT_MOONLIGHT:
-                if (time == TIME_NIGHT || time == TIME_EVENING)
-                    healingModifier = 2;
-                break;
-            case EFFECT_MORNING_SUN:
-                if ((OW_TIMES_OF_DAY == GEN_3 && time == TIME_DAY) // Gen 3 doesn't have morning
-                  || (OW_TIMES_OF_DAY != GEN_3 && time == TIME_MORNING))
-                    healingModifier = 2;
-                break;
-            case EFFECT_SYNTHESIS:
-                if (time == TIME_DAY)
-                    healingModifier = 2;
-                break;
-            default:
-                healingModifier = 1;
-                break;
-            }
-
-            if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_UTILITY_UMBRELLA)
-                gBattleStruct->moveDamage[gBattlerAttacker] = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 4;
-            else if (gBattleWeather & B_WEATHER_SUN)
-                gBattleStruct->moveDamage[gBattlerAttacker] = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
-            else // not sunny weather
-                gBattleStruct->moveDamage[gBattlerAttacker] = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 8;
 
         }
 

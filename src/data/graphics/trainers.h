@@ -286,10 +286,6 @@ const u16 gTrainerPalette_DP_Young_Couple[] = INCBIN_U16("graphics/trainers/fron
 const u32 gTrainerFrontPic_DP_Youngster[] = INCBIN_U32("graphics/trainers/front_pics/dp_youngster.4bpp.smol");
 const u16 gTrainerPalette_DP_Youngster[] = INCBIN_U16("graphics/trainers/front_pics/dp_youngster.gbapal");
 
-//Mugshots
-const u32 gTrainerFrontPic_DP_Cynthia_Mugshot[] = INCBIN_U32("graphics/trainers/front_pics/dp_cynthia_mugshot.4bpp.smol");
-const u16 gTrainerPalette_DP_Cynthia_Mugshot[] = INCBIN_U16("graphics/trainers/front_pics/dp_cynthia_mugshot.gbapal");
-
 const u32 gTrainerFrontPic_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.4bpp.smol");
 const u16 gTrainerPalette_Hiker[] = INCBIN_U16("graphics/trainers/front_pics/hiker.gbapal");
 

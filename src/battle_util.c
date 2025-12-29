@@ -4643,21 +4643,6 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
                     effect++;
                 }
                 break;
-            case ABILITY_ICE_BODY:
-                if (IsBattlerWeatherAffected(battler, B_WEATHER_HAIL | B_WEATHER_SNOW)
-                 && !IsBattlerAtMaxHp(battler)
-                 && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERGROUND
-                 && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERWATER
-                 && !gBattleMons[battler].volatiles.healBlock)
-                {
-                    BattleScriptPushCursorAndCallback(BattleScript_IceBodyHeal);
-                    gBattleStruct->moveDamage[battler] = GetNonDynamaxMaxHP(battler) / 16;
-                    if (gBattleStruct->moveDamage[battler] == 0)
-                        gBattleStruct->moveDamage[battler] = 1;
-                    gBattleStruct->moveDamage[battler] *= -1;
-                    effect++;
-                }
-                break;
             case ABILITY_DRY_SKIN:
                 if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
                     goto SOLAR_POWER_HP_DROP;
@@ -4896,16 +4881,6 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, u32 battler, enum Ability ab
     case ABILITYEFFECT_MOVE_END: // Think contact abilities.
         switch (gLastUsedAbility)
         {
-        case ABILITY_STICKY_HOLD:
-            if (gBattleStruct->battlerState[gBattlerTarget].itemCanBeKnockedOff && IsBattlerAlive(gBattlerTarget))
-            {
-                gBattleStruct->battlerState[gBattlerTarget].itemCanBeKnockedOff = FALSE;
-                gBattlerAbility = gBattlerTarget;
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_StickyHoldActivates;
-                effect++;
-            }
-            break;
         case ABILITY_JUSTIFIED:
             if (IsBattlerTurnDamaged(battler)
              && IsBattlerAlive(battler)
