@@ -7,6 +7,7 @@
     "gMapGroup_Gates",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
+    "gMapGroup_IndoorJubilife",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -84,6 +85,9 @@
     "SandgemTown_PokemonCenter_1F",
     "SandgemTown_PokemonCenter_2F",
     "SandgemTown_Mart"
+  ],
+  "gMapGroup_IndoorJubilife": [
+    "JubilifeCity_TowerA"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

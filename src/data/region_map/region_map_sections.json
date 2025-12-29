@@ -1230,6 +1230,12 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_SANDGEM_TOWN"
+    },
+    {
+      "id": "MAPSEC_JUBILIFE_CITY"
     }
   ]
 }

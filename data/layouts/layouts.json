@@ -4680,6 +4680,16 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TOWER_A",
+      "name": "JubilifeCity_TowerA_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_IndoorCenter",
+      "secondary_tileset": "gTileset_CommonCenter",
+      "border_filepath": "data/layouts/JubilifeCity_TowerA/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_TowerA/map.bin"
     }
   ]
 }
