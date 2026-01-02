@@ -1386,8 +1386,8 @@
 #define FLAG_VISITED_TWINLEAF_TOWN                  (SYSTEM_FLAGS + 0x1F)
 #define FLAG_VISITED_SANDGEM_TOWN                   (SYSTEM_FLAGS + 0x20)
 #define FLAG_VISITED_JUBILIFE_CITY                  (SYSTEM_FLAGS + 0x21)
+#define FLAG_VISITED_OREBURGH_CITY                  (SYSTEM_FLAGS + 0x22)
 
-#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
 #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag

@@ -1,6 +1,26 @@
 static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
 {
     {
+        .mapSecId = MAPSEC_TWINLEAF_TOWN,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Littleroot_0,
+    },
+    {
+        .mapSecId = MAPSEC_SANDGEM_TOWN,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Littleroot_0,
+    },
+    {
+        .mapSecId = MAPSEC_JUBILIFE_CITY,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Littleroot_0,
+    },
+    {
+        .mapSecId = MAPSEC_OREBURGH_CITY,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Littleroot_0,
+    },
+    {
         .mapSecId = MAPSEC_LITTLEROOT_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Littleroot_0,

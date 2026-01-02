@@ -133,7 +133,7 @@
     },
     {
       "id": "LAYOUT_SINNOH_MART",
-      "name": "Mart_Layout",
+      "name": "Sinnoh_Mart_Layout",
       "width": 10,
       "height": 12,
       "primary_tileset": "gTileset_IndoorMart",

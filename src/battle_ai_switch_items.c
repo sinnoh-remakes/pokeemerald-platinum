@@ -376,6 +376,9 @@ static u32 FindMonWithMoveOfEffectiveness(u32 battler, u32 opposingBattler, uq4_
     // Find a Pokémon in the party that has a super effective move.
     for (i = firstId; i < lastId; i++)
     {
+    //}
+    // if (RandomPercentage(RNG_AI_SWITCH_WONDER_GUARD, GetSwitchChance(SHOULD_SWITCH_WONDER_GUARD)))
+    //{
         if (!IsValidForBattle(&party[i]))
             continue;
         if (i == gBattlerPartyIndexes[battler])

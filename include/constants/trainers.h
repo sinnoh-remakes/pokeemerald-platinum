@@ -200,11 +200,10 @@
 #define TRAINER_PIC_DP_WORKER             181
 #define TRAINER_PIC_DP_YOUNG_COUPLE       182
 #define TRAINER_PIC_DP_YOUNGSTER          183
-#define TRAINER_PIC_DP_CYNTHIA_MUGSHOT    184
-#define TRAINER_PIC_DAWN                  185
-#define TRAINER_PIC_LUCAS                 186
+#define TRAINER_PIC_DAWN                  184
+#define TRAINER_PIC_LUCAS                 185
 
-#define TRAINER_PIC_COUNT                 187
+#define TRAINER_PIC_COUNT                 186
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_LUCAS                0
