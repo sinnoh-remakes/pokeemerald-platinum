@@ -775,8 +775,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_DP_WAITER, gTrainerFrontPic_DP_Waiter, gTrainerPalette_DP_Waiter),
     TRAINER_SPRITE(TRAINER_PIC_DP_WAITRESS, gTrainerFrontPic_DP_Waitress, gTrainerPalette_DP_Waitress),
     TRAINER_SPRITE(TRAINER_PIC_DP_WORKER, gTrainerFrontPic_DP_Worker, gTrainerPalette_DP_Worker),
-    TRAINER_SPRITE(TRAINER_PIC_DP_YOUNGSTER, gTrainerFrontPic_DP_Youngster, gTrainerPalette_DP_Youngster),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CYNTHIA_MUGSHOT, gTrainerFrontPic_DP_Cynthia_Mugshot, gTrainerPalette_DP_Cynthia_Mugshot),
+    TRAINER_SPRITE(TRAINER_PIC_DP_YOUNGSTER, gTrainerFrontPic_DP_Youngster, gTrainerPalette_DP_Youngster)
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

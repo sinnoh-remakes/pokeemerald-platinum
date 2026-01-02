@@ -26,8 +26,8 @@ voicegroup192:: @
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
-	voice_keysplit voicegroup227, KeySplitTable25    @ music box (platinum only)
-	voice_keysplit voicegroup228, KeySplitTable34    @ banjo
+	@ voice_keysplit voicegroup227, KeySplitTable25    @ music box (platinum only)
+	@ voice_keysplit voicegroup228, KeySplitTable34    @ banjo
 	voice_directsound 60, 64, DirectSoundWaveData_dp_sne1_roop, 255, 255, 191, 32
 	voice_directsound 60, 64, DirectSoundWaveData_dp_handclup1, 255, 0, 227, 32
 	voice_directsound 60, 64, DirectSoundWaveData_dp_sne2_loop, 255, 255, 191, 32
