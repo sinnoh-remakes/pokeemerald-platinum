@@ -369,8 +369,16 @@ static u32 FindMonWithMoveOfEffectiveness(u32 battler, u32 opposingBattler, uq4_
     s32 lastId; // + 1
     struct Pokemon *party = NULL;
 
-    if (RandomPercentage(RNG_AI_SWITCH_WONDER_GUARD, GetSwitchChance(SHOULD_SWITCH_WONDER_GUARD)))
+    // Get party information
+    GetAIPartyIndexes(battler, &firstId, &lastId);
+    party = GetBattlerParty(battler);
+
+    // Find a Pokemon in the party that has a super effective move.
+    for (i = firstId; i < lastId; i++)
     {
+    //}
+    // if (RandomPercentage(RNG_AI_SWITCH_WONDER_GUARD, GetSwitchChance(SHOULD_SWITCH_WONDER_GUARD)))
+    //{
         if (!IsValidForBattle(&party[i]))
             continue;
         if (i == gBattlerPartyIndexes[battler])
@@ -2317,11 +2325,6 @@ static u32 GetBestMonIntegrated(struct Pokemon *party, int firstId, int lastId, 
     if (aceMonId != PARTY_SIZE && CountUsablePartyMons(battler) <= aceMonCount)
         return aceMonId;
 
-    // Fallback
-    u32 bestMonId = GetFirstNonIvalidMon(firstId, lastId, invalidMons, battlerIn1, battlerIn2);
-    if (bestMonId != PARTY_SIZE)
-        return bestMonId;
-
     return PARTY_SIZE;
 }
 
@@ -2447,11 +2450,6 @@ u32 GetMostSuitableMonToSwitchInto(u32 battler, enum SwitchType switchType)
 
         if (aceMonId != PARTY_SIZE && CountUsablePartyMons(battler) <= aceMonCount)
             return aceMonId;
-
-        // Fallback
-        bestMonId = GetFirstNonIvalidMon(firstId, lastId, invalidMons, battlerIn1, battlerIn2);
-        if (bestMonId != PARTY_SIZE)
-            return bestMonId;
 
         return PARTY_SIZE;
     }
