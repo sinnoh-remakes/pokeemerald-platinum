@@ -1827,9 +1827,6 @@ bool32 BattleArenaTurnEnd(void)
         BattleScriptExecute(BattleScript_ArenaDoJudgment);
         return TRUE;
     }
-
-    gHitMarker &= ~(HITMARKER_GRUDGE | HITMARKER_IGNORE_BIDE);
-
     return FALSE;
 }
 

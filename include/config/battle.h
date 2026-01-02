@@ -321,11 +321,6 @@
 #define NUM_BEEPS_GEN_LATEST            4                    // Loops 4 times
 #define NUM_BEEPS_GEN_3                 -1                   // Loops infinitely
 #define NUM_BEEPS_OFF                   0                    // Doesn't play at all
-#define B_NUM_LOW_HEALTH_BEEPS          NUM_BEEPS_GEN_LATEST // This controls the number of times the "low health" beep will loop. Setting this value to NUM_BEEPS_OFF will disable the beep, while NUM_BEEPS_GEN_3 will loop infinitely. You can set this to any number you want, the defines listed are just for ease of use.
-
-#define NUM_BEEPS_GEN_LATEST            4                    // Loops 4 times
-#define NUM_BEEPS_GEN_3                 -1                   // Loops infinitely
-#define NUM_BEEPS_OFF                   0                    // Doesn't play at all
 #define B_NUM_LOW_HEALTH_BEEPS          NUM_BEEPS_GEN_3      // This controls the number of times the "low health" beep will loop. Setting this value to NUM_BEEPS_OFF will disable the beep, while NUM_BEEPS_GEN_3 will loop infinitely. You can set this to any number you want, the defines listed are just for ease of use.
 
 // Animation Settings
