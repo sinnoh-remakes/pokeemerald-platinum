@@ -71,7 +71,29 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 48,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_TOWER_A_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_TOWER_B_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 61,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_TOWER_C_1F",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",

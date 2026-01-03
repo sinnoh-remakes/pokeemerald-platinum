@@ -297,3 +297,9 @@ const u16 gMetatileAttributes_IndoorMart[] = INCBIN_U16("data/tilesets/primary/i
 
 const u16 gMetatiles_CommonMart[] = INCBIN_U16("data/tilesets/secondary/common_mart/metatiles.bin");
 const u16 gMetatileAttributes_CommonMart[] = INCBIN_U16("data/tilesets/secondary/common_mart/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorJubilife[] = INCBIN_U16("data/tilesets/primary/indoor_jubilife/metatiles.bin");
+const u16 gMetatileAttributes_IndoorJubilife[] = INCBIN_U16("data/tilesets/primary/indoor_jubilife/metatile_attributes.bin");
+
+const u16 gMetatiles_JubilifeTower[] = INCBIN_U16("data/tilesets/secondary/jubilife_tower/metatiles.bin");
+const u16 gMetatileAttributes_JubilifeTower[] = INCBIN_U16("data/tilesets/secondary/jubilife_tower/metatile_attributes.bin");
