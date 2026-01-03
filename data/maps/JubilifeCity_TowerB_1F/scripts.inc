@@ -1,2 +1,2 @@
-JubilifeCityTowerB_1F_MapScripts::
+JubilifeCity_TowerB_1F_MapScripts::
 	.byte 0
