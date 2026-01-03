@@ -88,7 +88,11 @@
   ],
   "gMapGroup_IndoorJubilife": [
     "JubilifeCity_TowerA_1F",
-    "JubilifeCity_TowerA_2F"
+    "JubilifeCity_TowerA_2F",
+    "JubilifeCity_TowerB_1F",
+    "JubilifeCity_TowerB_2F",
+    "JubilifeCity_TowerC_1F",
+    "JubilifeCity_TowerC_2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

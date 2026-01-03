@@ -4700,6 +4700,26 @@
       "secondary_tileset": "gTileset_JubilifeTower",
       "border_filepath": "data/layouts/JubilifeCity_Tower_2F/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCity_Tower_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TOWER_C_1F",
+      "name": "JubilifeCity_TowerC_1F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/JubilifeCity_TowerC_1F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_TowerC_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TOWER_C_2F",
+      "name": "JubilifeCity_TowerC_2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/JubilifeCity_TowerC_2F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_TowerC_2F/map.bin"
     }
   ]
 }
