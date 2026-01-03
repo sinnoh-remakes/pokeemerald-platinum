@@ -49,6 +49,9 @@ porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_sandgem_lab ./
 echo "Compiling [secondary] sandgem_lab"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_lab ./tiles/sandgem_lab ./tiles/indoor_sandgem_lab ./include/constants/metatile_behaviors.h
 
+echo "Compiling [PRIMARY] indoor_jubilife"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_jubilife ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
+
 echo "Compiling [PRIMARY] indoor_center"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_center ./tiles/indoor_center ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] common_center"

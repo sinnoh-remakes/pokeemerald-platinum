@@ -2204,3 +2204,41 @@ const u16 gTilesetPalettes_CommonMart[][16] =
 };
 
 const u32 gTilesetTiles_CommonMart[] = INCBIN_U32("data/tilesets/secondary/common_mart/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_IndoorJubilife[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/indoor_jubilife/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_IndoorJubilife[] = INCBIN_U32("data/tilesets/primary/indoor_jubilife/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_JubilifeTower[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_tower/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_JubilifeTower[] = INCBIN_U32("data/tilesets/secondary/jubilife_tower/tiles.4bpp.lz");
