@@ -1171,3 +1171,14 @@ const struct Tileset gTileset_IndoorJubilife =
     .metatileAttributes = gMetatileAttributes_IndoorJubilife,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_JubilifeTower =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_JubilifeTower,
+    .palettes = gTilesetPalettes_JubilifeTower,
+    .metatiles = gMetatiles_JubilifeTower,
+    .metatileAttributes = gMetatileAttributes_JubilifeTower,
+    .callback = NULL,
+};

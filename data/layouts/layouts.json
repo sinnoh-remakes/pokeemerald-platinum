@@ -4687,7 +4687,7 @@
       "width": 16,
       "height": 13,
       "primary_tileset": "gTileset_IndoorJubilife",
-      "secondary_tileset": "gTileset_Jubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
       "border_filepath": "data/layouts/JubilifeCity_TowerA/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCity_TowerA/map.bin"
     }
