@@ -1,3 +1,7 @@
+const u32 gObjectEventPic_ProfRowan[] = INCBIN_U32("graphics/object_events/pics/people/prof_rowan.4bpp");
+const u16 gObjectEventPal_ProfRowan[] = INCBIN_U16("graphics/object_events/palettes/prof_rowan.gbapal");
+const u32 gObjectEventPic_Barry[] = INCBIN_U32("graphics/object_events/pics/people/barry.4bpp");
+const u16 gObjectEventPal_Barry[] = INCBIN_U16("graphics/object_events/palettes/barry.gbapal");
 const u32 gObjectEventPic_BrendanNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/brendan/walking.4bpp", "graphics/object_events/pics/people/brendan/running.4bpp");
 const u16 gObjectEventPal_Brendan[] = INCBIN_U16("graphics/object_events/palettes/brendan.gbapal");
 const u32 gObjectEventPic_RubySapphireBrendanNormal[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/walking.4bpp");
@@ -164,6 +168,7 @@ const u32 gObjectEventPic_Regi[] = INCBIN_U32("graphics/object_events/pics/pokem
 const u32 gObjectEventPic_RayquazaStill[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/rayquaza_still.4bpp");
 const u32 gObjectEventPic_TuberMSwimming[] = INCBIN_U32("graphics/object_events/pics/people/tuber_m_swimming.4bpp");
 const u32 gObjectEventPic_Mom[] = INCBIN_U32("graphics/object_events/pics/people/mom.4bpp");
+const u16 gObjectEventPal_Mom[] = INCBIN_U16("graphics/object_events/palettes/mom.gbapal");
 const u16 gObjectEventPal_Kyogre[] = INCBIN_U16("graphics/object_events/palettes/kyogre.gbapal");
 const u16 gObjectEventPal_KyogreReflection[] = INCBIN_U16("graphics/object_events/palettes/kyogre_reflection.gbapal");
 const u16 gObjectEventPal_Groudon[] = INCBIN_U16("graphics/object_events/palettes/groudon.gbapal");

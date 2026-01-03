@@ -207,3 +207,51 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+const u16 gMetatiles_OutdoorJubilife[] = INCBIN_U16("data/tilesets/primary/outdoor_jubilife/metatiles.bin");
+const u16 gMetatileAttributes_OutdoorJubilife[] = INCBIN_U16("data/tilesets/primary/outdoor_jubilife/metatile_attributes.bin");
+
+const u16 gMetatiles_Twinleaf[] = INCBIN_U16("data/tilesets/secondary/twinleaf/metatiles.bin");
+const u16 gMetatileAttributes_Twinleaf[] = INCBIN_U16("data/tilesets/secondary/twinleaf/metatile_attributes.bin");
+
+const u16 gMetatiles_Gatehouse[] = INCBIN_U16("data/tilesets/secondary/gatehouse/metatiles.bin");
+const u16 gMetatileAttributes_Gatehouse[] = INCBIN_U16("data/tilesets/secondary/gatehouse/metatile_attributes.bin");
+
+const u16 gMetatiles_DistortionWorld[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatiles.bin");
+const u16 gMetatileAttributes_DistortionWorld[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatile_attributes.bin");
+
+const u16 gMetatiles_Route201[] = INCBIN_U16("data/tilesets/secondary/route_201/metatiles.bin");
+const u16 gMetatileAttributes_Route201[] = INCBIN_U16("data/tilesets/secondary/route_201/metatile_attributes.bin");
+
+const u16 gMetatiles_Lake[] = INCBIN_U16("data/tilesets/secondary/lake/metatiles.bin");
+const u16 gMetatileAttributes_Lake[] = INCBIN_U16("data/tilesets/secondary/lake/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorTwinleaf[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf/metatiles.bin");
+const u16 gMetatileAttributes_IndoorTwinleaf[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf/metatile_attributes.bin");
+
+const u16 gMetatiles_TwinleafPlayer[] = INCBIN_U16("data/tilesets/secondary/twinleaf_player/metatiles.bin");
+const u16 gMetatileAttributes_TwinleafPlayer[] = INCBIN_U16("data/tilesets/secondary/twinleaf_player/metatile_attributes.bin");
+
+const u16 gMetatiles_TwinleafLiving[] = INCBIN_U16("data/tilesets/secondary/twinleaf_living/metatiles.bin");
+const u16 gMetatileAttributes_TwinleafLiving[] = INCBIN_U16("data/tilesets/secondary/twinleaf_living/metatile_attributes.bin");
+
+const u16 gMetatiles_TwinleafRival[] = INCBIN_U16("data/tilesets/secondary/twinleaf_rival/metatiles.bin");
+const u16 gMetatileAttributes_TwinleafRival[] = INCBIN_U16("data/tilesets/secondary/twinleaf_rival/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorTwinleafRival[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf_rival/metatiles.bin");
+const u16 gMetatileAttributes_IndoorTwinleafRival[] = INCBIN_U16("data/tilesets/primary/indoor_twinleaf_rival/metatile_attributes.bin");
+
+const u16 gMetatiles_TwinleafOther[] = INCBIN_U16("data/tilesets/secondary/twinleaf_other/metatiles.bin");
+const u16 gMetatileAttributes_TwinleafOther[] = INCBIN_U16("data/tilesets/secondary/twinleaf_other/metatile_attributes.bin");
+
+const u16 gMetatiles_Sandgem[] = INCBIN_U16("data/tilesets/secondary/sandgem/metatiles.bin");
+const u16 gMetatileAttributes_Sandgem[] = INCBIN_U16("data/tilesets/secondary/sandgem/metatile_attributes.bin");
+
+const u16 gMetatiles_SandgemLab[] = INCBIN_U16("data/tilesets/secondary/sandgem_lab/metatiles.bin");
+const u16 gMetatileAttributes_SandgemLab[] = INCBIN_U16("data/tilesets/secondary/sandgem_lab/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorSandgemLab[] = INCBIN_U16("data/tilesets/primary/indoor_sandgem_lab/metatiles.bin");
+const u16 gMetatileAttributes_IndoorSandgemLab[] = INCBIN_U16("data/tilesets/primary/indoor_sandgem_lab/metatile_attributes.bin");
+
+const u16 gMetatiles_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatiles.bin");
+const u16 gMetatileAttributes_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatile_attributes.bin");

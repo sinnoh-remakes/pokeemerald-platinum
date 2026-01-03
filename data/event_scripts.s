@@ -583,6 +583,28 @@ gStdScripts_End::
 	.include "data/maps/Route119_WeatherInstitute_2F/scripts.inc"
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
+	.include "data/maps/TwinleafTown/scripts.inc"
+	.include "data/maps/TwinleafTown_PlayersHouse_1F/scripts.inc"
+	.include "data/maps/TwinleafTown_PlayersHouse_2F/scripts.inc"
+	.include "data/maps/TwinleafTown_RivalsHouse_1F/scripts.inc"
+	.include "data/maps/TwinleafTown_RivalsHouse_2F/scripts.inc"
+	.include "data/maps/TwinleafTown_OtherHouseA/scripts.inc"
+	.include "data/maps/TwinleafTown_OtherHouseB/scripts.inc"
+	.include "data/maps/SandgemTown/scripts.inc"
+	.include "data/maps/SandgemTown_ProfessorRowansLab/scripts.inc"
+	.include "data/maps/SandgemTown_HelperHouse_1F/scripts.inc"
+	.include "data/maps/SandgemTown_HelperHouse_2F/scripts.inc"
+	.include "data/maps/SandgemTown_House1/scripts.inc"
+	.include "data/maps/SandgemTown_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/SandgemTown_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/SandgemTown_Mart/scripts.inc"
+	.include "data/maps/JubilifeCity/scripts.inc"
+	.include "data/maps/LakefrontVerity/scripts.inc"
+	.include "data/maps/LakeVerity/scripts.inc"
+	.include "data/maps/Gate_Jubilife/scripts.inc"
+	.include "data/maps/Route201/scripts.inc"
+	.include "data/maps/Route202/scripts.inc"
+	.include "data/maps/Route219/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
@@ -619,7 +641,7 @@ EventScript_AfterWhiteOutHealMsg::
 
 EventScript_AfterWhiteOutMomHeal::
 	lockall
-	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
 	call Common_EventScript_OutOfCenterPartyHeal
@@ -888,12 +910,12 @@ Common_EventScript_PlayerHandedOverTheItem::
 
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
-	.string "“Selected items for your convenience!”\n"
-	.string "POKéMON MART$"
+	.string "All Your Item Needs Fulfilled!\n"
+	.string "Pokémon Mart$"
 
 gText_PokemonCenterSign::
-	.string "“Rejuvenate your tired partners!”\n"
-	.string "POKéMON CENTER$"
+	.string "Heal Your Pokémon!\n"
+	.string "Pokémon Center$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"
@@ -1162,3 +1184,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+	

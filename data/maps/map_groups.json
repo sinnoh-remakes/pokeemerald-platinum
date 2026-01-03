@@ -1,5 +1,11 @@
 {
   "group_order": [
+    "gMapGroup_Towns",
+    "gMapGroup_Routes",
+    "gMapGroup_Lakes",
+    "gMapGroup_Gates",
+    "gMapGroup_IndoorTwinleaf",
+    "gMapGroup_IndoorSandgem",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -34,6 +40,40 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124"
+  ],
+  "gMapGroup_Towns": [
+    "TwinleafTown",
+    "SandgemTown",
+    "JubilifeCity"
+  ],
+  "gMapGroup_Routes": [
+    "Route201",
+    "Route202",
+    "Route219",
+    "LakefrontVerity"
+  ],
+  "gMapGroup_Lakes": [
+    "LakeVerity"
+  ],
+  "gMapGroup_Gates": [
+    "Gate_Jubilife"
+  ],
+  "gMapGroup_IndoorTwinleaf": [
+    "TwinleafTown_PlayersHouse_1F",
+    "TwinleafTown_PlayersHouse_2F",
+    "TwinleafTown_RivalsHouse_1F",
+    "TwinleafTown_RivalsHouse_2F",
+    "TwinleafTown_OtherHouseA",
+    "TwinleafTown_OtherHouseB"
+  ],
+  "gMapGroup_IndoorSandgem": [
+    "SandgemTown_ProfessorRowansLab",
+    "SandgemTown_House1",
+    "SandgemTown_HelperHouse_1F",
+    "SandgemTown_HelperHouse_2F",
+    "SandgemTown_PokemonCenter_1F",
+    "SandgemTown_PokemonCenter_2F",
+    "SandgemTown_Mart"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

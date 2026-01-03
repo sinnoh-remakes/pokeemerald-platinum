@@ -1,0 +1,69 @@
+{
+  "id": "MAP_LAKEFRONT_VERITY",
+  "name": "LakefrontVerity",
+  "layout": "LAYOUT_LAKEFRONT_VERITY",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ROUTE_201",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE201",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_VERITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_VERITY",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "3",
+      "script": "LakefrontVerity_EventScript_EnterLake"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "3",
+      "script": "LakefrontVerity_EventScript_EnterLake"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LakefrontVerity_EventScript_RouteSign"
+    }
+  ]
+}

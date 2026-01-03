@@ -186,6 +186,18 @@
       "y": 52,
       "respawn_map": "MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_FRONTIER_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE",
+      "map": "MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "id": "HEAL_LOCATION_SANDGEM_TOWN",
+      "map": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F",
+      "x": 7,
+      "y": 3
     }
   ]
 }
