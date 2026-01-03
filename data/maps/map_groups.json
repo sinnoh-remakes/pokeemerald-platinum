@@ -87,7 +87,8 @@
     "SandgemTown_Mart"
   ],
   "gMapGroup_IndoorJubilife": [
-    "JubilifeCity_TowerA_1F"
+    "JubilifeCity_TowerA_1F",
+    "JubilifeCity_TowerA_2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

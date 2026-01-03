@@ -601,6 +601,7 @@ gStdScripts_End::
 	.include "data/maps/SandgemTown_Mart/scripts.inc"
 	.include "data/maps/JubilifeCity/scripts.inc"
 	.include "data/maps/JubilifeCity_TowerA_1F/scripts.inc"
+	.include "data/maps/JubilifeCity_TowerA_2F/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/Gate_Jubilife/scripts.inc"
