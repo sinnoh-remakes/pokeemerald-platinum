@@ -303,3 +303,6 @@ const u16 gMetatileAttributes_IndoorJubilife[] = INCBIN_U16("data/tilesets/prima
 
 const u16 gMetatiles_JubilifeTower[] = INCBIN_U16("data/tilesets/secondary/jubilife_tower/metatiles.bin");
 const u16 gMetatileAttributes_JubilifeTower[] = INCBIN_U16("data/tilesets/secondary/jubilife_tower/metatile_attributes.bin");
+
+const u16 gMetatiles_JubilifeSchool[] = INCBIN_U16("data/tilesets/secondary/jubilife_school/metatiles.bin");
+const u16 gMetatileAttributes_JubilifeSchool[] = INCBIN_U16("data/tilesets/secondary/jubilife_school/metatile_attributes.bin");
