@@ -4720,6 +4720,16 @@
       "secondary_tileset": "gTileset_JubilifeTower",
       "border_filepath": "data/layouts/JubilifeCity_TowerC_2F/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCity_TowerC_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TRAINER_SCHOOL",
+      "name": "JubilifeCity_TrainerSchool_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeSchool",
+      "border_filepath": "data/layouts/JubilifeCity_TrainerSchool/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_TrainerSchool/map.bin"
     }
   ]
 }

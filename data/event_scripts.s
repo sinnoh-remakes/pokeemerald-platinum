@@ -605,6 +605,7 @@ gStdScripts_End::
 	.include "data/maps/JubilifeCity_TowerB_2F/scripts.inc"
 	.include "data/maps/JubilifeCity_TowerC_1F/scripts.inc"
 	.include "data/maps/JubilifeCity_TowerC_2F/scripts.inc"
+	.include "data/maps/JubilifeCity_TrainerSchool/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/Gate_Jubilife/scripts.inc"
