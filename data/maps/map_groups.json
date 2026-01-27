@@ -93,7 +93,10 @@
     "JubilifeCity_TowerB_2F",
     "JubilifeCity_TowerC_1F",
     "JubilifeCity_TowerC_2F",
-    "JubilifeCity_TrainerSchool"
+    "JubilifeCity_TrainerSchool",
+    "JubilifeCity_PokemonCenter_2F",
+    "JubilifeCity_PokemonCenter_3F",
+    "JubilifeCity_Mart"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
