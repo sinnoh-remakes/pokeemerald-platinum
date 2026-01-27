@@ -112,16 +112,6 @@
       "blockdata_filepath": "data/layouts/Route219/map.bin"
     },
     {
-      "id": "LAYOUT_SINNOH_CENTER_1F",
-      "name": "SinnohCenter_1F_Layout",
-      "width": 15,
-      "height": 16,
-      "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter",
-      "border_filepath": "data/layouts/SinnohCenter_1F/border.bin",
-      "blockdata_filepath": "data/layouts/SinnohCenter_1F/map.bin"
-    },
-    {
       "id": "LAYOUT_SINNOH_CENTER_2F",
       "name": "SinnohCenter_2F_Layout",
       "width": 15,
@@ -130,6 +120,16 @@
       "secondary_tileset": "gTileset_CommonCenter",
       "border_filepath": "data/layouts/SinnohCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/SinnohCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINNOH_CENTER_3F",
+      "name": "SinnohCenter_3F_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_IndoorCenter",
+      "secondary_tileset": "gTileset_CommonCenter",
+      "border_filepath": "data/layouts/SinnohCenter_3F/border.bin",
+      "blockdata_filepath": "data/layouts/SinnohCenter_3F/map.bin"
     },
     {
       "id": "LAYOUT_SINNOH_MART",
