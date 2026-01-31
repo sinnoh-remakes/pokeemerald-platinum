@@ -124,7 +124,7 @@
     {
       "id": "LAYOUT_SINNOH_CENTER_3F",
       "name": "SinnohCenter_3F_Layout",
-      "width": 15,
+      "width": 16,
       "height": 12,
       "primary_tileset": "gTileset_IndoorCenter",
       "secondary_tileset": "gTileset_CommonCenter3F",
