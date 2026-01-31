@@ -127,7 +127,7 @@
       "width": 15,
       "height": 16,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter2F",
+      "secondary_tileset": "gTileset_CommonCenter3F",
       "border_filepath": "data/layouts/SinnohCenter_3F/border.bin",
       "blockdata_filepath": "data/layouts/SinnohCenter_3F/map.bin"
     },
