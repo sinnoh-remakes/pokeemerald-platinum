@@ -1193,3 +1193,14 @@ const struct Tileset gTileset_JubilifeSchool =
     .metatileAttributes = gMetatileAttributes_JubilifeSchool,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_CommonCenter3F =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CommonCenter3F,
+    .palettes = gTilesetPalettes_CommonCenter3F,
+    .metatiles = gMetatiles_CommonCenter3F,
+    .metatileAttributes = gMetatileAttributes_CommonCenter3F,
+    .callback = NULL,
+};
