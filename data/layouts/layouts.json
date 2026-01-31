@@ -125,7 +125,7 @@
       "id": "LAYOUT_SINNOH_CENTER_3F",
       "name": "SinnohCenter_3F_Layout",
       "width": 15,
-      "height": 16,
+      "height": 12,
       "primary_tileset": "gTileset_IndoorCenter",
       "secondary_tileset": "gTileset_CommonCenter3F",
       "border_filepath": "data/layouts/SinnohCenter_3F/border.bin",
