@@ -1,5 +1,5 @@
 {
-  "id": "MAP_JUBILIFE_CITY_POKEMON_CENTER_2F",
+  "id": "MAP_JUBILIFE_CITY_POKEMON_CENTER_3F",
   "name": "JubilifeCity_PokemonCenter_2F",
   "layout": "LAYOUT_SINNOH_CENTER_2F",
   "music": "MUS_DUMMY",
@@ -16,24 +16,10 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 7,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "3"
-    },
-    {
       "x": 2,
-      "y": 12,
+      "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_3F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 12,
-      "y": 12,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_2F",
+      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
     }
   ],

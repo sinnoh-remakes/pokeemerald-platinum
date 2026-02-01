@@ -289,8 +289,8 @@ const u16 gMetatileAttributes_SandgemHelper[] = INCBIN_U16("data/tilesets/second
 const u16 gMetatiles_IndoorCenter[] = INCBIN_U16("data/tilesets/primary/indoor_center/metatiles.bin");
 const u16 gMetatileAttributes_IndoorCenter[] = INCBIN_U16("data/tilesets/primary/indoor_center/metatile_attributes.bin");
 
-const u16 gMetatiles_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatiles.bin");
-const u16 gMetatileAttributes_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatile_attributes.bin");
+const u16 gMetatiles_CommonCenter1F[] = INCBIN_U16("data/tilesets/secondary/common_center_1f/metatiles.bin");
+const u16 gMetatileAttributes_CommonCenter1F[] = INCBIN_U16("data/tilesets/secondary/common_center_1f/metatile_attributes.bin");
 
 const u16 gMetatiles_IndoorMart[] = INCBIN_U16("data/tilesets/primary/indoor_mart/metatiles.bin");
 const u16 gMetatileAttributes_IndoorMart[] = INCBIN_U16("data/tilesets/primary/indoor_mart/metatile_attributes.bin");
@@ -307,5 +307,5 @@ const u16 gMetatileAttributes_JubilifeTower[] = INCBIN_U16("data/tilesets/second
 const u16 gMetatiles_JubilifeSchool[] = INCBIN_U16("data/tilesets/secondary/jubilife_school/metatiles.bin");
 const u16 gMetatileAttributes_JubilifeSchool[] = INCBIN_U16("data/tilesets/secondary/jubilife_school/metatile_attributes.bin");
 
-const u16 gMetatiles_CommonCenter3F[] = INCBIN_U16("data/tilesets/secondary/common_center_3f/metatiles.bin");
-const u16 gMetatileAttributes_CommonCenter3F[] = INCBIN_U16("data/tilesets/secondary/common_center_3f/metatile_attributes.bin");
+const u16 gMetatiles_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatiles.bin");
+const u16 gMetatileAttributes_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatile_attributes.bin");
