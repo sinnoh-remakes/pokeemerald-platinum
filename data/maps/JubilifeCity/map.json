@@ -106,6 +106,13 @@
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_TRAINER_SCHOOL",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
