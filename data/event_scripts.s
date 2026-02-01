@@ -606,6 +606,9 @@ gStdScripts_End::
 	.include "data/maps/JubilifeCity_TowerC_1F/scripts.inc"
 	.include "data/maps/JubilifeCity_TowerC_2F/scripts.inc"
 	.include "data/maps/JubilifeCity_TrainerSchool/scripts.inc"
+	.include "data/maps/JubilifeCity_PokemonCenter_3F/scripts.inc"
+	.include "data/maps/JubilifeCity_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/JubilifeCity_Mart/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/Gate_Jubilife/scripts.inc"
@@ -1198,10 +1201,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
-	
-
-	.include "data/maps/JubilifeCity_PokemonCenter_3F/scripts.inc"
-
-	.include "data/maps/JubilifeCity_PokemonCenter_2F/scripts.inc"
-
-	.include "data/maps/JubilifeCity_Mart/scripts.inc"
