@@ -117,17 +117,17 @@
       "width": 15,
       "height": 16,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter",
+      "secondary_tileset": "gTileset_CommonCenter1F",
       "border_filepath": "data/layouts/SinnohCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/SinnohCenter_1F/map.bin"
     },
     {
       "id": "LAYOUT_SINNOH_CENTER_2F",
       "name": "SinnohCenter_2F_Layout",
-      "width": 15,
-      "height": 16,
+      "width": 16,
+      "height": 12,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter",
+      "secondary_tileset": "gTileset_CommonCenter2F",
       "border_filepath": "data/layouts/SinnohCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/SinnohCenter_2F/map.bin"
     },
@@ -877,7 +877,7 @@
       "width": 15,
       "height": 16,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter",
+      "secondary_tileset": "gTileset_CommonCenter1F",
       "border_filepath": "data/layouts/PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F/map.bin"
     },
