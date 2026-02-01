@@ -11,22 +11,22 @@ JubilifeCity_PokemonCenter_1F_EventScript_Nurse::
 	end
 
 JubilifeCity_PokemonCenter_1F_EventScript_Schoolkid::
-	msgbox JubilifeCity_PokemonCenter_1F_Text_UnionRoom, MSGBOX_DEFAULT
+	msgbox JubilifeCity_PokemonCenter_1F_Text_UnionRoom, MSGBOX_NPC
 	release
 	end
 
 JubilifeCity_PokemonCenter_1F_EventScript_Twin::
-	msgbox JubilifeCity_PokemonCenter_1F_Text_AllTypes, MSGBOX_DEFAULT
+	msgbox JubilifeCity_PokemonCenter_1F_Text_AllTypes, MSGBOX_NPC
 	release
 	end
 
 JubilifeCity_PokemonCenter_1F_EventScript_AceTrainerF::
-	msgbox JubilifeCity_PokemonCenter_1F_Text_SixTraveling, MSGBOX_DEFAULT
+	msgbox JubilifeCity_PokemonCenter_1F_Text_SixTraveling, MSGBOX_NPC
 	release
 	end
 
 JubilifeCity_PokemonCenter_1F_EventScript_Attendant::
-	msgbox JubilifeCity_PokemonCenter_1F_Text_WorkingUnderground, MSGBOX_DEFAULT
+	msgbox JubilifeCity_PokemonCenter_1F_Text_WorkingUnderground, MSGBOX_NPC
 	release
 	end
 

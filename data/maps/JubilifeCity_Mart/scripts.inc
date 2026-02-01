@@ -36,17 +36,17 @@ JubilifeCity_Mart_Pokemart_Secondary:
 	pokemartlistend
 
 JubilifeCity_Mart_EventScript_Woman::
-	msgbox JubilifeCity_Mart_Text_PackPotions, MSGBOX_DEFAULT
+	msgbox JubilifeCity_Mart_Text_PackPotions, MSGBOX_NPC
 	release
 	end
 
 JubilifeCity_Mart_EventScript_Guitarist::
-	msgbox JubilifeCity_Mart_Text_WastedMoney, MSGBOX_DEFAULT
+	msgbox JubilifeCity_Mart_Text_WastedMoney, MSGBOX_NPC
 	release
 	end
 
 JubilifeCity_Mart_EventScript_Beauty::
-	msgbox JubilifeCity_Mart_Text_AvoidBattles, MSGBOX_DEFAULT
+	msgbox JubilifeCity_Mart_Text_AvoidBattles, MSGBOX_NPC
 	release
 	end
 
