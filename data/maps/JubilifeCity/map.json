@@ -92,20 +92,6 @@
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY_TOWER_C_1F",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 61,
-      "y": 40,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 60,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_MART",
-      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
