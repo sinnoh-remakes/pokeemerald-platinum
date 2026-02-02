@@ -404,49 +404,52 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+
+#if OW_FOLLOWERS_POKEBALLS
+// Vanilla
+#define OBJ_EVENT_PAL_TAG_BALL_MASTER             0x1150
+#define OBJ_EVENT_PAL_TAG_BALL_ULTRA              0x1151
+#define OBJ_EVENT_PAL_TAG_BALL_GREAT              0x1152
+#define OBJ_EVENT_PAL_TAG_BALL_SAFARI             0x1153
+#define OBJ_EVENT_PAL_TAG_BALL_NET                0x1154
+#define OBJ_EVENT_PAL_TAG_BALL_DIVE               0x1155
+#define OBJ_EVENT_PAL_TAG_BALL_NEST               0x1156
+#define OBJ_EVENT_PAL_TAG_BALL_REPEAT             0x1157
+#define OBJ_EVENT_PAL_TAG_BALL_TIMER              0x1158
+#define OBJ_EVENT_PAL_TAG_BALL_LUXURY             0x1159
+#define OBJ_EVENT_PAL_TAG_BALL_PREMIER            0x115A
+// Gen IV/Sinnoh
+#define OBJ_EVENT_PAL_TAG_BALL_DUSK               0x115B
+#define OBJ_EVENT_PAL_TAG_BALL_HEAL               0x115C
+#define OBJ_EVENT_PAL_TAG_BALL_QUICK              0x115D
+#define OBJ_EVENT_PAL_TAG_BALL_CHERISH            0x115E
+#define OBJ_EVENT_PAL_TAG_BALL_PARK               0x115F
+// Gen II/Johto Apricorns
+#define OBJ_EVENT_PAL_TAG_BALL_FAST               0x1160
+#define OBJ_EVENT_PAL_TAG_BALL_LEVEL              0x1161
+#define OBJ_EVENT_PAL_TAG_BALL_LURE               0x1162
+#define OBJ_EVENT_PAL_TAG_BALL_HEAVY              0x1163
+#define OBJ_EVENT_PAL_TAG_BALL_LOVE               0x1164
+#define OBJ_EVENT_PAL_TAG_BALL_FRIEND             0x1165
+#define OBJ_EVENT_PAL_TAG_BALL_MOON               0x1166
+#define OBJ_EVENT_PAL_TAG_BALL_SPORT              0x1167
+// Gen V
+#define OBJ_EVENT_PAL_TAG_BALL_DREAM              0x1168
+// Gen VII
+#define OBJ_EVENT_PAL_TAG_BALL_BEAST              0x1169
+// Gen VIII
+#define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
+#endif //OW_FOLLOWERS_POKEBALLS
+
+// Sinnoh event objects
 #define OBJ_EVENT_PAL_TAG_LUCAS                   0x1125
 #define OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION        0x1126
 #define OBJ_EVENT_PAL_TAG_DAWN                    0x1127
 #define OBJ_EVENT_PAL_TAG_DAWN_REFLECTION         0x1128
-#define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1129
-#define OBJ_EVENT_PAL_TAG_BARRY                   0x1130
+#define OBJ_EVENT_PAL_TAG_BARRY                   0x1129
+#define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1130
 #define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1131
 
-#if OW_FOLLOWERS_POKEBALLS
-// Vanilla
-#define OBJ_EVENT_PAL_TAG_BALL_MASTER             0x1200
-#define OBJ_EVENT_PAL_TAG_BALL_ULTRA              0x1201
-#define OBJ_EVENT_PAL_TAG_BALL_GREAT              0x1202
-#define OBJ_EVENT_PAL_TAG_BALL_SAFARI             0x1203
-#define OBJ_EVENT_PAL_TAG_BALL_NET                0x1204
-#define OBJ_EVENT_PAL_TAG_BALL_DIVE               0x1205
-#define OBJ_EVENT_PAL_TAG_BALL_NEST               0x1206
-#define OBJ_EVENT_PAL_TAG_BALL_REPEAT             0x1207
-#define OBJ_EVENT_PAL_TAG_BALL_TIMER              0x1208
-#define OBJ_EVENT_PAL_TAG_BALL_LUXURY             0x1209
-#define OBJ_EVENT_PAL_TAG_BALL_PREMIER            0x120A
-// Gen IV/Sinnoh
-#define OBJ_EVENT_PAL_TAG_BALL_DUSK               0x120B
-#define OBJ_EVENT_PAL_TAG_BALL_HEAL               0x120C
-#define OBJ_EVENT_PAL_TAG_BALL_QUICK              0x120D
-#define OBJ_EVENT_PAL_TAG_BALL_CHERISH            0x120E
-#define OBJ_EVENT_PAL_TAG_BALL_PARK               0x120F
-// Gen II/Johto Apricorns
-#define OBJ_EVENT_PAL_TAG_BALL_FAST               0x1210
-#define OBJ_EVENT_PAL_TAG_BALL_LEVEL              0x1211
-#define OBJ_EVENT_PAL_TAG_BALL_LURE               0x1212
-#define OBJ_EVENT_PAL_TAG_BALL_HEAVY              0x1213
-#define OBJ_EVENT_PAL_TAG_BALL_LOVE               0x1214
-#define OBJ_EVENT_PAL_TAG_BALL_FRIEND             0x1215
-#define OBJ_EVENT_PAL_TAG_BALL_MOON               0x1216
-#define OBJ_EVENT_PAL_TAG_BALL_SPORT              0x1217
-// Gen V
-#define OBJ_EVENT_PAL_TAG_BALL_DREAM              0x1218
-// Gen VII
-#define OBJ_EVENT_PAL_TAG_BALL_BEAST              0x1219
-// Gen VIII
-#define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x121A
-#endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001
