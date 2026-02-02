@@ -245,9 +245,9 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight;
 // Sinnoh event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Barry;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Johanna;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -522,9 +522,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DAWN_SURF] =                &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_SEEKER] =              &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_WATERING] =            &gObjectEventGraphicsInfo_DawnNormal,
-    [OBJ_EVENT_GFX_PROF_ROWAN] =               &gObjectEventGraphicsInfo_ProfRowan,
     [OBJ_EVENT_GFX_BARRY] =                    &gObjectEventGraphicsInfo_Barry,
     [OBJ_EVENT_GFX_JOHANNA] =                  &gObjectEventGraphicsInfo_Johanna,
+    [OBJ_EVENT_GFX_PROF_ROWAN] =               &gObjectEventGraphicsInfo_ProfRowan,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

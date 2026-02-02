@@ -267,9 +267,9 @@
 #define OBJ_EVENT_GFX_DAWN_SURF                  260
 #define OBJ_EVENT_GFX_DAWN_SEEKER                261
 #define OBJ_EVENT_GFX_DAWN_WATERING              262
-#define OBJ_EVENT_GFX_PROF_ROWAN                 263
-#define OBJ_EVENT_GFX_BARRY                      264
-#define OBJ_EVENT_GFX_JOHANNA                    265
+#define OBJ_EVENT_GFX_BARRY                      263
+#define OBJ_EVENT_GFX_JOHANNA                    264
+#define OBJ_EVENT_GFX_PROF_ROWAN                 265
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
@@ -408,9 +408,9 @@
 #define OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION        0x1126
 #define OBJ_EVENT_PAL_TAG_DAWN                    0x1127
 #define OBJ_EVENT_PAL_TAG_DAWN_REFLECTION         0x1128
-#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1129
+#define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1129
 #define OBJ_EVENT_PAL_TAG_BARRY                   0x1130
-#define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1131
+#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1131
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
