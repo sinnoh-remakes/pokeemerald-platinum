@@ -247,13 +247,34 @@
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               241
 #define OBJ_EVENT_GFX_APRICORN_TREE              242
-#define OBJ_EVENT_GFX_PROF_ROWAN                 243
-#define OBJ_EVENT_GFX_BARRY                      244
+#define OBJ_EVENT_GFX_LUCAS_NORMAL               243
+#define OBJ_EVENT_GFX_LUCAS_BIKE                 244
+#define OBJ_EVENT_GFX_LUCAS_FIELD_MOVE           245
+#define OBJ_EVENT_GFX_LUCAS_FISHING              246
+#define OBJ_EVENT_GFX_LUCAS_HEAL                 247
+#define OBJ_EVENT_GFX_LUCAS_POKETCH              248
+#define OBJ_EVENT_GFX_LUCAS_SAVE                 249
+#define OBJ_EVENT_GFX_LUCAS_SURF                 250
+#define OBJ_EVENT_GFX_LUCAS_SEEKER               251
+#define OBJ_EVENT_GFX_LUCAS_WATERING             252
+#define OBJ_EVENT_GFX_DAWN_NORMAL                253
+#define OBJ_EVENT_GFX_DAWN_BIKE                  254
+#define OBJ_EVENT_GFX_DAWN_FIELD_MOVE            255
+#define OBJ_EVENT_GFX_DAWN_FISHING               256
+#define OBJ_EVENT_GFX_DAWN_HEAL                  257
+#define OBJ_EVENT_GFX_DAWN_POKETCH               258
+#define OBJ_EVENT_GFX_DAWN_SAVE                  259
+#define OBJ_EVENT_GFX_DAWN_SURF                  260
+#define OBJ_EVENT_GFX_DAWN_SEEKER                261
+#define OBJ_EVENT_GFX_DAWN_WATERING              262
+#define OBJ_EVENT_GFX_BARRY                      263
+#define OBJ_EVENT_GFX_JOHANNA                    264
+#define OBJ_EVENT_GFX_PROF_ROWAN                 265
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        245
+#define NUM_OBJ_EVENT_GFX                        266
 
 
 // These are dynamic object gfx ids.
@@ -383,9 +404,6 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
-#define OBJ_EVENT_PAL_TAG_MOM                     0x1125
-#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1126
-#define OBJ_EVENT_PAL_TAG_BARRY                   0x1127
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
@@ -422,6 +440,16 @@
 // Gen VIII
 #define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
 #endif //OW_FOLLOWERS_POKEBALLS
+
+// Sinnoh event objects
+#define OBJ_EVENT_PAL_TAG_LUCAS                   0x1125
+#define OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION        0x1126
+#define OBJ_EVENT_PAL_TAG_DAWN                    0x1127
+#define OBJ_EVENT_PAL_TAG_DAWN_REFLECTION         0x1128
+#define OBJ_EVENT_PAL_TAG_BARRY                   0x1129
+#define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1130
+#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1131
+
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001

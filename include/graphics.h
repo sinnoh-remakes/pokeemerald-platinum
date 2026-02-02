@@ -3352,6 +3352,8 @@ extern const u16 gFrontierFactoryMenu_Tilemap[];
 extern const u16 gFrontierFactoryMenu_Pal[];
 
 // Object event pals
+extern const u16 gObjectEventPal_Lucas[];
+extern const u16 gObjectEventPal_Dawn[];
 extern const u16 gObjectEventPal_Brendan[];
 extern const u16 gObjectEventPal_May[];
 extern const u16 gObjectEventPal_RubySapphireBrendan[];

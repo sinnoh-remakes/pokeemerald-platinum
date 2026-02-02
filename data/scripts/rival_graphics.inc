@@ -5,11 +5,11 @@ Common_EventScript_SetupRivalGfxId::
 	end
 
 EventScript_SetupRivalGfxIdFemale::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_DAWN_NORMAL
 	return
 
 EventScript_SetupRivalGfxIdMale::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LUCAS_NORMAL
 	return
 
 Common_EventScript_SetupRivalOnBikeGfxId::

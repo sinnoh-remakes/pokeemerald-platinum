@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_TWINLEAF_PLAYER1F_MOM",
-      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "graphics_id": "OBJ_EVENT_GFX_JOHANNA",
       "x": 6,
       "y": 7,
       "elevation": 3,
