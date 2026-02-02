@@ -222,6 +222,56 @@
       "blockdata_filepath": "data/layouts/SandgemTown_HelperHouse_2F/map.bin"
     },
     {
+      "id": "LAYOUT_JUBILIFE_CITY_TOWER_1F",
+      "name": "JubilifeCity_Tower_1F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/JubilifeCity_Tower_1F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_Tower_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TOWER_2F",
+      "name": "JubilifeCity_Tower_2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/JubilifeCity_Tower_2F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_Tower_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TOWER_C_1F",
+      "name": "JubilifeCity_TowerC_1F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/JubilifeCity_TowerC_1F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_TowerC_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TOWER_C_2F",
+      "name": "JubilifeCity_TowerC_2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/JubilifeCity_TowerC_2F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_TowerC_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_TRAINER_SCHOOL",
+      "name": "JubilifeCity_TrainerSchool_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeSchool",
+      "border_filepath": "data/layouts/JubilifeCity_TrainerSchool/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity_TrainerSchool/map.bin"
+    },
+    {
       "id": "LAYOUT_LAKEFRONT_VERITY",
       "name": "LakefrontVerity_Layout",
       "width": 20,
@@ -874,10 +924,10 @@
     {
       "id": "LAYOUT_POKEMON_CENTER_1F",
       "name": "PokemonCenter_1F_Layout",
-      "width": 15,
-      "height": 16,
-      "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter1F",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F/map.bin"
     },
