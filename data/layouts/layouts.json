@@ -117,17 +117,17 @@
       "width": 15,
       "height": 16,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter",
+      "secondary_tileset": "gTileset_CommonCenter1F",
       "border_filepath": "data/layouts/SinnohCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/SinnohCenter_1F/map.bin"
     },
     {
       "id": "LAYOUT_SINNOH_CENTER_2F",
       "name": "SinnohCenter_2F_Layout",
-      "width": 15,
-      "height": 16,
+      "width": 16,
+      "height": 12,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter",
+      "secondary_tileset": "gTileset_CommonCenter2F",
       "border_filepath": "data/layouts/SinnohCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/SinnohCenter_2F/map.bin"
     },
@@ -272,76 +272,6 @@
       "blockdata_filepath": "data/layouts/RavagedPath/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN",
-      "name": "LittlerootTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/LittlerootTown/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
-    },
-    {
-      "id": "LAYOUT_OLDALE_TOWN",
-      "name": "OldaleTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/OldaleTown/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
-    },
-    {
-      "id": "LAYOUT_DEWFORD_TOWN",
-      "name": "DewfordTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/DewfordTown/border.bin",
-      "blockdata_filepath": "data/layouts/DewfordTown/map.bin"
-    },
-    {
-      "id": "LAYOUT_LAVARIDGE_TOWN",
-      "name": "LavaridgeTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
-      "border_filepath": "data/layouts/LavaridgeTown/border.bin",
-      "blockdata_filepath": "data/layouts/LavaridgeTown/map.bin"
-    },
-    {
-      "id": "LAYOUT_FALLARBOR_TOWN",
-      "name": "FallarborTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fallarbor",
-      "border_filepath": "data/layouts/FallarborTown/border.bin",
-      "blockdata_filepath": "data/layouts/FallarborTown/map.bin"
-    },
-    {
-      "id": "LAYOUT_VERDANTURF_TOWN",
-      "name": "VerdanturfTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/VerdanturfTown/border.bin",
-      "blockdata_filepath": "data/layouts/VerdanturfTown/map.bin"
-    },
-    {
-      "id": "LAYOUT_PACIFIDLOG_TOWN",
-      "name": "PacifidlogTown_Layout",
-      "width": 20,
-      "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Pacifidlog",
-      "border_filepath": "data/layouts/PacifidlogTown/border.bin",
-      "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin"
-    },
-    {
       "id": "LAYOUT_PETALBURG_CITY",
       "name": "PetalburgCity_Layout",
       "width": 30,
@@ -430,6 +360,76 @@
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/EverGrandeCity/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN",
+      "name": "LittlerootTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LittlerootTown/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLDALE_TOWN",
+      "name": "OldaleTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/OldaleTown/border.bin",
+      "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_DEWFORD_TOWN",
+      "name": "DewfordTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/DewfordTown/border.bin",
+      "blockdata_filepath": "data/layouts/DewfordTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVARIDGE_TOWN",
+      "name": "LavaridgeTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/LavaridgeTown/border.bin",
+      "blockdata_filepath": "data/layouts/LavaridgeTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_FALLARBOR_TOWN",
+      "name": "FallarborTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/FallarborTown/border.bin",
+      "blockdata_filepath": "data/layouts/FallarborTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERDANTURF_TOWN",
+      "name": "VerdanturfTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/VerdanturfTown/border.bin",
+      "blockdata_filepath": "data/layouts/VerdanturfTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_PACIFIDLOG_TOWN",
+      "name": "PacifidlogTown_Layout",
+      "width": 20,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/PacifidlogTown/border.bin",
+      "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE101",
@@ -854,10 +854,10 @@
     {
       "id": "LAYOUT_HOUSE1",
       "name": "House1_Layout",
-      "width": 9,
-      "height": 8,
-      "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_TwinleafHouse",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/House1/border.bin",
       "blockdata_filepath": "data/layouts/House1/map.bin"
     },
@@ -865,9 +865,9 @@
       "id": "LAYOUT_HOUSE2",
       "name": "House2_Layout",
       "width": 11,
-      "height": 10,
-      "primary_tileset": "gTileset_IndoorTwinleaf",
-      "secondary_tileset": "gTileset_SandgemLiving",
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/House2/border.bin",
       "blockdata_filepath": "data/layouts/House2/map.bin"
     },
@@ -877,7 +877,7 @@
       "width": 15,
       "height": 16,
       "primary_tileset": "gTileset_IndoorCenter",
-      "secondary_tileset": "gTileset_CommonCenter",
+      "secondary_tileset": "gTileset_CommonCenter1F",
       "border_filepath": "data/layouts/PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F/map.bin"
     },
@@ -894,10 +894,10 @@
     {
       "id": "LAYOUT_MART",
       "name": "Mart_Layout",
-      "width": 10,
-      "height": 12,
-      "primary_tileset": "gTileset_IndoorMart",
-      "secondary_tileset": "gTileset_CommonMart",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Mart/border.bin",
       "blockdata_filepath": "data/layouts/Mart/map.bin"
     },
@@ -4680,56 +4680,6 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
-    },
-    {
-      "id": "LAYOUT_JUBILIFE_CITY_TOWER_1F",
-      "name": "JubilifeCity_Tower_1F_Layout",
-      "width": 16,
-      "height": 13,
-      "primary_tileset": "gTileset_IndoorJubilife",
-      "secondary_tileset": "gTileset_JubilifeTower",
-      "border_filepath": "data/layouts/JubilifeCity_Tower_1F/border.bin",
-      "blockdata_filepath": "data/layouts/JubilifeCity_Tower_1F/map.bin"
-    },
-    {
-      "id": "LAYOUT_JUBILIFE_CITY_TOWER_2F",
-      "name": "JubilifeCity_Tower_2F_Layout",
-      "width": 16,
-      "height": 12,
-      "primary_tileset": "gTileset_IndoorJubilife",
-      "secondary_tileset": "gTileset_JubilifeTower",
-      "border_filepath": "data/layouts/JubilifeCity_Tower_2F/border.bin",
-      "blockdata_filepath": "data/layouts/JubilifeCity_Tower_2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_JUBILIFE_CITY_TOWER_C_1F",
-      "name": "JubilifeCity_TowerC_1F_Layout",
-      "width": 16,
-      "height": 13,
-      "primary_tileset": "gTileset_IndoorJubilife",
-      "secondary_tileset": "gTileset_JubilifeTower",
-      "border_filepath": "data/layouts/JubilifeCity_TowerC_1F/border.bin",
-      "blockdata_filepath": "data/layouts/JubilifeCity_TowerC_1F/map.bin"
-    },
-    {
-      "id": "LAYOUT_JUBILIFE_CITY_TOWER_C_2F",
-      "name": "JubilifeCity_TowerC_2F_Layout",
-      "width": 16,
-      "height": 12,
-      "primary_tileset": "gTileset_IndoorJubilife",
-      "secondary_tileset": "gTileset_JubilifeTower",
-      "border_filepath": "data/layouts/JubilifeCity_TowerC_2F/border.bin",
-      "blockdata_filepath": "data/layouts/JubilifeCity_TowerC_2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_JUBILIFE_CITY_TRAINER_SCHOOL",
-      "name": "JubilifeCity_TrainerSchool_Layout",
-      "width": 15,
-      "height": 11,
-      "primary_tileset": "gTileset_IndoorJubilife",
-      "secondary_tileset": "gTileset_JubilifeSchool",
-      "border_filepath": "data/layouts/JubilifeCity_TrainerSchool/border.bin",
-      "blockdata_filepath": "data/layouts/JubilifeCity_TrainerSchool/map.bin"
     }
   ]
 }
