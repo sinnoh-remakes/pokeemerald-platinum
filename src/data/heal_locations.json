@@ -198,6 +198,12 @@
       "map": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F",
       "x": 7,
       "y": 8
+    },
+    {
+      "id": "HEAL_LOCATION_JUBILIFE_CITY_POKEMON_CENTER_1F",
+      "map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
+      "x": 7,
+      "y": 8
     }
   ]
 }
