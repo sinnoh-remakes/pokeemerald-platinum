@@ -17,45 +17,47 @@ SandgemTown_PokemonCenter_1F_EventScript_Nurse::
 	end
 
 SandgemTown_PokemonCenter_1F_EventScript_Gentleman::
-	msgbox SandgemTown_PokemonCenter_1F_Text_TrainersCanUsePC, MSGBOX_NPC
+	msgbox SandgemTown_PokemonCenter_1F_Text_FancyBlueOne, MSGBOX_NPC
 	end
 
 SandgemTown_PokemonCenter_1F_EventScript_Boy::
-	msgbox SandgemTown_PokemonCenter_1F_Text_PokemonCentersAreGreat, MSGBOX_NPC
+	msgbox SandgemTown_PokemonCenter_1F_Text_NiceLady, MSGBOX_NPC
 	end
 
 SandgemTown_PokemonCenter_1F_EventScript_Girl::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_POKEDEX_GET, SandgemTown_PokemonCenter_1F_EventScript_WirelessClubAvailable
-	msgbox SandgemTown_PokemonCenter_1F_Text_WirelessClubNotAvailable, MSGBOX_DEFAULT
+	msgbox SandgemTown_PokemonCenter_1F_Text_TopFloor, MSGBOX_DEFAULT
 	release
 	end
 
-SandgemTown_PokemonCenter_1F_EventScript_WirelessClubAvailable::
-	msgbox SandgemTown_PokemonCenter_1F_Text_TradedInWirelessClub, MSGBOX_DEFAULT
+SandgemTown_PokemonCenter_1F_EventScript_Lady::
+	lock
+	faceplayer
+	msgbox SandgemTown_PokemonCenter_1F_Text_WorkingUnderground, MSGBOX_DEFAULT
 	release
 	end
 
-SandgemTown_PokemonCenter_1F_Text_TrainersCanUsePC:
-	.string "That PC in the corner there is\n"
-	.string "for any POKéMON TRAINER to use.\p"
-	.string "Naturally, that means you're welcome\n"
-	.string "to use it, too.$"
+SandgemTown_PokemonCenter_1F_Text_FancyBlueOne:
+	.string "Do you see that PC over there?\n"
+	.string "That fancy blue one?.\p"
+	.string "If you've got Pokémon with you,\n"
+	.string "it's free to use.$"
 
-SandgemTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
-	.string "POKéMON CENTERS are great!\p"
-	.string "You can use their services as much\n"
-	.string "as you like, and it's all for free.\l"
-	.string "You never have to worry!$"
+SandgemTown_PokemonCenter_1F_Text_NiceLady:
+	.string "Talk to that nice lady at the counter\n"
+	.string "and hand her your Pokémon.\p"
+	.string "She'll heal your Pokémon to perfect\n"
+	.string "health in no time at all!$"
 
-SandgemTown_PokemonCenter_1F_Text_WirelessClubNotAvailable:
-	.string "The POKéMON WIRELESS CLUB on\n"
-	.string "the second floor was built recently.\p"
-	.string "But they say they're still making\n"
-	.string "adjustments.$"
+SandgemTown_PokemonCenter_1F_Text_TopFloor:
+	.string "The top floor of any Pokémon Center\n"
+	.string "is the Pokémon Communication Club.\p"
+	.string "There, you can have all sorts of fun\n"
+	.string "with your friends.$"
 
-SandgemTown_PokemonCenter_1F_Text_TradedInWirelessClub:
-	.string "The POKéMON WIRELESS CLUB on\n"
-	.string "the second floor was built recently.\p"
-	.string "I traded POKéMON right away.$"
+SandgemTown_PokemonCenter_1F_Text_WorkingUnderground:
+	.string "I'm very sorry\p"
+	.string "We are working underground right now.\n"
+	.string "It's off-limits to the public.\p"
+	.string "Please try later on.$"
