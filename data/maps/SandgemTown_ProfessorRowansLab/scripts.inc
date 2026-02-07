@@ -358,22 +358,22 @@ SandgemTown_ProfessorRowansLab_Text_PiplupDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a PIPLUP!\p"
 	.string "If you would have chosen\n"
-	.string "a PIPLUP at the lake, we'd have the same\l"
-	.string "Pokémon now!$"
+	.string "a PIPLUP at the lake, we'd have the\l"
+	.string "same Pokémon now!$"
 
 SandgemTown_ProfessorRowansLab_Text_TurtwigDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a TURTWIG!\p"
 	.string "If you would have chosen\n"
-	.string "a TURTWIG at the lake, we'd have the same\l"
-	.string "Pokémon now!$"
+	.string "a TURTWIG at the lake, we'd have the\l"
+	.string "same Pokémon now!$"
 
 SandgemTown_ProfessorRowansLab_Text_ChimcharDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a CHIMCHAR!\p"
 	.string "If you would have chosen\n"
-	.string "a CHIMCHAR at the lake, we'd have the same\l"
-	.string "Pokémon now!$"
+	.string "a CHIMCHAR at the lake, we'd have the\l"
+	.string "same Pokémon now!$"
 
 SandgemTown_ProfessorRowansLab_Text_LikeYouDawn:
 	.string "Not that it matters, but...\p"
