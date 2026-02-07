@@ -9,7 +9,7 @@ SandgemTown_PokemonCenter_1F_OnTransition:
 	end
 
 SandgemTown_PokemonCenter_1F_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_OLDALE_NURSE
+	setvar VAR_0x800B, LOCALID_SANDGEM_NURSE
 	call Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress
