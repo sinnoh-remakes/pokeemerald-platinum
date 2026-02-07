@@ -123,6 +123,27 @@ EventScript_PkmnCenterNurse_GoldCardHealPkmn::
 	goto EventScript_PkmnCenterNurse_HealPkmn
 	end
 
+EventScript_PkmnCenterNurse_TrainerCard::
+	lock
+	msgbox gText_TrainerCard, MSGBOX_YESNO
+	message gText_PleaseDoVisitAgain
+	release
+	end
+
+EventScript_PkmnCenterNurse_UnionRoom:
+	lock
+	msgbox gText_ClubUnionRoom, MSGBOX_YESNO
+	message gText_PleaseDoVisitAgain
+	release
+	end
+
+EventScript_PkmnCenterNurse_Colosseum::
+	lock
+	msgbox gText_ClubColosseum, MSGBOX_YESNO
+	message gText_PleaseDoVisitAgain
+	release
+	end
+
 Movement_PkmnCenterNurse_Bow:
 	nurse_joy_bow
 	delay_4

@@ -197,7 +197,17 @@
       "id": "HEAL_LOCATION_SANDGEM_TOWN",
       "map": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F",
       "x": 7,
-      "y": 3
+      "y": 8,
+      "respawn_map": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_SANDGEM_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_JUBILIFE_CITY_POKEMON_CENTER_1F",
+      "map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
+      "x": 7,
+      "y": 8,
+      "respawn_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_JUBILIFE_NURSE"
     }
   ]
 }

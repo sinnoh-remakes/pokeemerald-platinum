@@ -1,18 +1,18 @@
 gText_WouldYouLikeToRestYourPkmn::
 	.string "Hello, and welcome to\n"
-	.string "the POKéMON CENTER.\p"
-	.string "We restore your tired POKéMON\n"
+	.string "the Pokémon CENTER.\p"
+	.string "We restore your tired Pokémon\n"
 	.string "to full health.\p"
-	.string "Would you like to rest your POKéMON?$"
+	.string "Would you like to rest your Pokémon?$"
 
 gText_IllTakeYourPkmn::
-	.string "Okay, I'll take your POKéMON\n"
-	.string "for a few seconds.$"
+	.string "Okay, I'll take your Pokémon for a few\n"
+	.string "seconds.$"
 
 gText_RestoredPkmnToFullHealth::
 	.string "Thank you for waiting.\p"
-	.string "We've restored your POKéMON\n"
-	.string "to full health.$"
+	.string "We've restored your Pokémon to full\n"
+	.string "health.$"
 
 gText_WeHopeToSeeYouAgain::
 	.string "We hope to see you again!$"
@@ -49,3 +49,27 @@ gText_ThankYouForWaiting::
 
 gText_WeHopeToSeeYouAgain2::
 	.string "We hope to see you again!$"
+
+gText_TrainerCard::
+	.string "You may sign the back of your\n"
+	.string "Trainer Card here.\p"
+	.string "Would you like to sign your\n"
+	.string "Trainer Card?$"
+	
+gText_ClubUnionRoom::
+	.string "Welcome to the Pokemon Wireless\n"
+	.string "Club Union Room.\p"
+	.string "You may interact directly with\n"
+	.string "many Trainers here.\p"
+	.string "Would you like to enter the room?$"
+
+gText_ClubColosseum::
+	.string "Welcome to the Pokemon Communication\n"
+	.string "Club Colosseum.\p"
+	.string "You may battle with your friends\n"
+	.string "here.\p"
+	.string "Which Battle Mode would you like\n"
+	.string "to play?$"
+
+gText_PleaseDoVisitAgain::
+	.string "Please do visit again.$"
