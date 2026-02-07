@@ -339,7 +339,7 @@ TwinleafTown_PlayersHouse_2F_Text_RightRight:
 	.string "Prof. Rowan to get some Pokémon.\p"
 	.string "I'll be waiting outside.\p"
 	.string "OK, {PLAYER}? If' you're late, I'm\n"
-	.string "fining you ¥10 million!$"
+	.string "fining you ₽10 million!$"
 
 TwinleafTown_PlayersHouse_2F_Text_Controls:
 	.string "The X button opens the menu!$"

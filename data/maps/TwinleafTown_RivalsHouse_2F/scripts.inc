@@ -78,4 +78,4 @@ TwinleafTown_RivalsHouse_2F_TakeBag:
 TwinleafTown_RivalsHouse_2F_GoingLake:
 	.string "Oh hey! {PLAYER}!\p"
 	.string "I'll be waiting on the road!\n"
-	.string "It's a ¥10 million fine if you're late!$"
+	.string "It's a ₽10 million fine if you're late!$"
