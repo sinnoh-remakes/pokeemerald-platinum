@@ -49,3 +49,27 @@ gText_ThankYouForWaiting::
 
 gText_WeHopeToSeeYouAgain2::
 	.string "We hope to see you again!$"
+
+gText_TrainerCard::
+	.string "You may sign the back of your\n"
+	.string "Trainer Card here.\p"
+	.string "Would you like to sign your\n"
+	.string "Trainer Card?$"
+	
+gText_ClubUnionRoom::
+	.string "Welcome to the Pokemon Wireless\n"
+	.string "Club Union Room.\p"
+	.string "You may interact directly with\n"
+	.string "many Trainers here.\p"
+	.string "Would you like to enter the room?$"
+
+gText_ClubColosseum::
+	.string "Welcome to the Pokemon Communication\n"
+	.string "Club Colosseum.\p"
+	.string "You may battle with your friends\n"
+	.string "here.\p"
+	.string "Which Battle Mode would you like\n"
+	.string "to play?$"
+
+gText_PleaseDoVisitAgain::
+	.string "Please do visit again.$"
