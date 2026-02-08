@@ -166,17 +166,16 @@ JubilifeCity_EventScript_HelperWalkUp::
 	waitmovement 0
 	closemessage
 	delay 48
-	delay 48
 	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_SIGN
 	delay 48
-	delay 48
-	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperSeeSchool
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerSeeSchool
+	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperSeeSchool
 	waitmovement 0
 	msgbox JubilifeCity_Text_HereItIs, MSGBOX_SIGN
 	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperLeaveSchool
 	waitmovement 0
 	msgbox JubilifeCity_Text_SawYourFriend, MSGBOX_SIGN
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerWatchHelper
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown6
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_LOOKER
@@ -227,6 +226,7 @@ JubilifeCity_Movement_LookerScurry3:
 	walk_fast_right
 	walk_in_place_left
 	delay_16
+	delay_16
 	walk_up
 	walk_fast_up
 	walk_fast_up
@@ -268,7 +268,7 @@ JubilifeCity_Movement_HelperWatchLooker:
 
 JubilifeCity_Movement_PlayerSeeSchool:
 	delay_16
-	walk_in_place_right
+	walk_in_place_left
 	step_end
 
 JubilifeCity_Movement_HelperSeeSchool:
@@ -281,6 +281,11 @@ JubilifeCity_Movement_HelperLeaveSchool:
 	walk_up
 	walk_right
 	walk_right
+	step_end
+
+JubilifeCity_Movement_PlayerWatchHelper:
+	delay_16
+	walk_in_place_down
 	step_end
 
 JubilifeCity_Text_AreYouCatching:
@@ -430,7 +435,7 @@ JubilifeCity_Text_HaveRequest:
 	.string "You must inform me of any happenings!$"
 
 JubilifeCity_Text_WorkingInternational:
-	.string "Dawn: ...Working for the International\p"
+	.string "Dawn: ...Working for the International\n"
 	.string "Police must be hard.$"
 
 JubilifeCity_Text_HereItIs:
