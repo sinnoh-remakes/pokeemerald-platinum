@@ -201,3 +201,12 @@ Common_Movement_WalkDown3:
 		walk_down
 		walk_down
 		step_end
+
+Common_Movement_WalkDown6:
+		walk_down
+		walk_down
+		walk_down
+		walk_down
+		walk_down
+		walk_down
+		step_end

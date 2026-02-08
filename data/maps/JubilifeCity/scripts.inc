@@ -165,9 +165,25 @@ JubilifeCity_EventScript_HelperWalkUp::
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry3
 	waitmovement 0
 	closemessage
-	special RemoveCameraObject
+	delay 48
+	delay 48
+	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_SIGN
+	delay 48
+	delay 48
+	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperSeeSchool
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerSeeSchool
+	waitmovement 0
+	msgbox JubilifeCity_Text_HereItIs, MSGBOX_SIGN
+	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperLeaveSchool
+	waitmovement 0
+	msgbox JubilifeCity_Text_SawYourFriend, MSGBOX_SIGN
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown6
+	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_LOOKER
+	setflag FLAG_HIDE_JUBILIFE_HELPER
 	removeobject LOCALID_JUBILIFE_LOOKER
+	removeobject LOCALID_JUBILIFE_HELPER
+	special RemoveCameraObject
 	end
 
 JubilifeCity_EventScript_LookerYes::
@@ -248,6 +264,23 @@ JubilifeCity_Movement_HelperWatchLooker:
 	delay_16
 	delay_16
 	walk_in_place_up
+	step_end
+
+JubilifeCity_Movement_PlayerSeeSchool:
+	delay_16
+	walk_in_place_right
+	step_end
+
+JubilifeCity_Movement_HelperSeeSchool:
+	walk_down
+	walk_left
+	walk_left
+	step_end
+
+JubilifeCity_Movement_HelperLeaveSchool:
+	walk_up
+	walk_right
+	walk_right
 	step_end
 
 JubilifeCity_Text_AreYouCatching:
@@ -395,3 +428,18 @@ JubilifeCity_Text_HaveRequest:
 	.string "Not because I am lonely, no no!\n"
 	.string "You must inform me of bad guys!\l"
 	.string "You must inform me of any happenings!$"
+
+JubilifeCity_Text_WorkingInternational:
+	.string "Dawn: ...Working for the International\p"
+	.string "Police must be hard.$"
+
+JubilifeCity_Text_HereItIs:
+	.string "{PLAYER}, here it is.\n"
+	.string "It's the Trainers' School.\l"
+	.string "The name says it all!$"
+
+JubilifeCity_Text_SawYourFriend:
+	.string "I saw your friend {RIVAL} go in\n"
+	.string "earlier.\p"
+	.string "He could still be in there studying.\n"
+	.string "OK, bye now!$"
