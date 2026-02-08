@@ -33,8 +33,8 @@
     {
       "local_id": "LOCALID_JUBILIFE_HELPER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 54,
-      "y": 52,
+      "x": 55,
+      "y": 54,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -118,21 +118,12 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 53,
-      "y": 60,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_Left"
-    },
-    {
-      "type": "trigger",
       "x": 54,
       "y": 60,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_Center"
+      "script": "Jubilife_EventScript_HelperEncounter_1"
     },
     {
       "type": "trigger",
@@ -141,7 +132,16 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_Right"
+      "script": "Jubilife_EventScript_HelperEncounter_2"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 60,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Jubilife_EventScript_HelperEncounter_3"
     }
   ],
   "bg_events": []

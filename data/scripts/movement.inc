@@ -214,14 +214,12 @@ Common_Movement_WalkUp19:
 		walk_up
 		step_end
 
-Common_Movement_WalkDown3:
-		walk_down
+Common_Movement_WalkDown2:
 		walk_down
 		walk_down
 		step_end
 
-Common_Movement_WalkDown4:
-		walk_down
+Common_Movement_WalkDown3:
 		walk_down
 		walk_down
 		walk_down
