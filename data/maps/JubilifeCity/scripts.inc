@@ -16,6 +16,18 @@ JubilifeCity_EventScript_HelperEncounter_1::
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	setobjectxy LOCALID_JUBILIFE_HELPER, 54, 54
 	call JubilifeCity_EventScript_HelperWalkDown
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkRight
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkUp
+	applymovement LOCALID_CAMERA, Common_Movement_WalkRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
+	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
+	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
+	waitmovement 0
 	end
 
 JubilifeCity_EventScript_HelperEncounter_2::
@@ -23,15 +35,34 @@ JubilifeCity_EventScript_HelperEncounter_2::
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	call JubilifeCity_EventScript_HelperWalkDown
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkUp
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
+	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
+	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
+	waitmovement 0
 	end
-
 
 JubilifeCity_EventScript_HelperEncounter_3::
 	lockall
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
-	setobjectxy LOCALID_JUBILIFE_HELPER, 56, 64
+	setobjectxy LOCALID_JUBILIFE_HELPER, 56, 54
 	call JubilifeCity_EventScript_HelperWalkDown
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkLeft
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkUp
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
+	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
+	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
+	waitmovement 0
 	end
 
 JubilifeCity_EventScript_HelperWalkDown::
