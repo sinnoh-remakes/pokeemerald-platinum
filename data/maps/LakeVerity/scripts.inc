@@ -37,9 +37,9 @@ LakeVerity_EventScript_IntroScene::
 	delay 10
 	msgbox LakeVerity_Text_AllowPass, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_RIVAL, Common_Movement_WalkRight
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_FaceLeft
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_CYRUS, LakeVerity_Movement_CyrusLeave2
 	waitmovement 0
@@ -47,56 +47,57 @@ LakeVerity_EventScript_IntroScene::
 	removeobject LOCALID_CYRUS
 	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_RIVAL, Common_Movement_WalkLeft
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox LakeVerity_Text_WhatsAbout, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
 	msgbox LakeVerity_Text_LetsCatch, MSGBOX_DEFAULT
 	@ FODO: Play mesprit sound
 	msgbox LakeVerity_Text_Kyaun, MSGBOX_SIGN
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
 	delay 48
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
-	applymovement LOCALID_RIVAL, LakeVerity_Movement_RunUp
+	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_RunUp
 	waitmovement 0
 	delay 48
 	delay 48
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 10
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 10
-	applymovement LOCALID_RIVAL, LakeVerity_Movement_RunDown
+	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_RunDown
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
-	applymovement LOCALID_RIVAL, LakeVerity_Movement_Scurry
+	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_Scurry
 	waitmovement 0
 	msgbox LakeVerity_Text_HearThat, MSGBOX_SIGN
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
 	delay 48
 	msgbox LakeVerity_Text_NoBalls, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_RIVAL, LakeVerity_Movement_RivalLeave
+	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_RivalLeave
 	waitmovement 0
 	playse SE_EXIT
 	destroyfollowernpc
+	removeobject
 	special RemoveCameraObject
-	setflag FLAG_HIDE_VERITY_INTRO
+	setflag FLAG_LAKE_VERITY_INTRO_EVENT
 	release
 	end
 

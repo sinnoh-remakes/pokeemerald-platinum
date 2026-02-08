@@ -9,7 +9,7 @@ SandgemTown_MapScripts::
 
 SandgemTown_OnTransition:
 	call_if_eq VAR_SANDGEM_TOWN_STATE, 1, SandgemTown_EventScript_MoveHelper
-  @ TODO: Rename SetupRivalGfxId to SetupHelperGfxId
+  @ FODO: Make separate SetupHelperGfxId instead of SetupRivalGfxId
 	call Common_EventScript_SetupRivalGfxId
 	setflag FLAG_VISITED_SANDGEM_TOWN
 	end
@@ -426,7 +426,7 @@ SandgemTown_EventScript_HelperBuildings::
 	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper_Guide3
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_HELPER
-	setflag FLAG_HIDE_OLDALE_HELPER
+	setflag FLAG_HIDE_SANDGEM_TOWN_HELPER
 	special RemoveCameraObject
 	delay 48
 	delay 48

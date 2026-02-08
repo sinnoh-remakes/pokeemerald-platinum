@@ -49,6 +49,7 @@ TwinleafTown_RivalsHouse_2F_EventScript_MeetRival::
 	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, TwinleafTown_RivalsHouse_2F_Movement_RivalRun2
 	waitmovement 0
 	removeobject LOCALID_TWINLEAF_RIVAL2F_RIVAL
+	setflag FLAG_HIDE_RIVAL_HOUSE_RIVAL
 	release
 	end
 

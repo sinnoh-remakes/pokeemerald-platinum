@@ -43,7 +43,7 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
+#define FLAG_ROUTE201_RECEIVED_POTION    0x20
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
 #define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
@@ -98,7 +98,7 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_ROUTE201_RECEIVED_POTION        0x54
+#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
@@ -445,6 +445,7 @@
 #define FLAG_REGISTERED_TRENT                (TRAINER_REGISTERED_FLAGS_START + REMATCH_TRENT)
 #define FLAG_REGISTERED_SAWYER               (TRAINER_REGISTERED_FLAGS_START + REMATCH_SAWYER)
 #define FLAG_REGISTERED_KIRA_AND_DAN         (TRAINER_REGISTERED_FLAGS_START + REMATCH_KIRA_AND_DAN)
+#define FLAG_REGISTERED_TRISTAN              (TRAINER_REGISTERED_FLAGS_START + REMATCH_TRISTAN)
 #define FLAG_REGISTERED_WALLY                (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLY)
 #define FLAG_REGISTERED_ROXANNE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_ROXANNE)
 #define FLAG_REGISTERED_BRAWLY               (TRAINER_REGISTERED_FLAGS_START + REMATCH_BRAWLY)
@@ -459,7 +460,6 @@
 #define FLAG_REGISTERED_GLACIA               (TRAINER_REGISTERED_FLAGS_START + REMATCH_GLACIA)
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
-#define FLAG_REGISTERED_TRISTAN              (TRAINER_REGISTERED_FLAGS_START + REMATCH_TRISTAN)
 
 #define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
 
@@ -656,19 +656,19 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_HIDE_EVENTOBJ                     0x264
-#define FLAG_HIDE_OLDALE_HELPER                0x265
-#define FLAG_HIDE_TWINLEAF_RIVAL_2F            0x266
-#define FLAG_HIDE_ROUTE_202_HELPER             0x267
-#define FLAG_HIDE_VERITY_INTRO                 0x268
-#define FLAG_HIDE_ROUTE_201_RIVAL              0x269
-#define FLAG_HIDE_ROUTE_201_MAN                0x26A
-#define FLAG_HIDE_SANDGEM_LAB_HELPER           0x26B
+#define FLAG_HIDE_PLAYER_HOUSE_RIVAL           0x264
+#define FLAG_HIDE_TWINLEAF_RIVAL               0x265
+#define FLAG_HIDE_RIVAL_HOUSE_RIVAL            0x266
+#define FLAG_HIDE_ROUTE_201_RIVAL              0x267
+#define FLAG_HIDE_ROUTE_201_STARTER_EVENT      0x268
+#define FLAG_HIDE_ROUTE_201_MAN                0x269
+#define FLAG_LAKE_VERITY_INTRO_EVENT           0x26A
+#define FLAG_HIDE_SANDGEM_TOWN_HELPER          0x26B
 #define FLAG_HIDE_SANDGEM_TOWN_RIVAL           0x26C
-#define FLAG_HIDE_ROUTE_201_BOY                0x26D
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
+#define FLAG_HIDE_SANDGEM_LAB_HELPER           0x26D
+#define FLAG_HIDE_SANDGEM_TOWN_PROFESSOR       0x26E
+#define FLAG_HIDE_PLAYER_HOUSE_RIVAL_MOM       0x26F
+#define FLAG_HIDE_ROUTE_202_HELPER             0x270
 #define FLAG_UNUSED_0x271  0x271 // Unused Flag
 #define FLAG_UNUSED_0x272  0x272 // Unused Flag
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
@@ -1383,26 +1383,27 @@
 #define FLAG_VISITED_MOSSDEEP_CITY                  (SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1D)
 #define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E)
-#define FLAG_VISITED_TWINLEAF_TOWN                  (SYSTEM_FLAGS + 0x1F)
-#define FLAG_VISITED_SANDGEM_TOWN                   (SYSTEM_FLAGS + 0x20)
-#define FLAG_VISITED_JUBILIFE_CITY                  (SYSTEM_FLAGS + 0x21)
-#define FLAG_VISITED_OREBURGH_CITY                  (SYSTEM_FLAGS + 0x22)
 
-#define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
+#define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
+#define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
+
+#define FLAG_VISITED_TWINLEAF_TOWN                  (SYSTEM_FLAGS + 0x21)
+#define FLAG_VISITED_SANDGEM_TOWN                   (SYSTEM_FLAGS + 0x22)
+#define FLAG_VISITED_JUBILIFE_CITY                  (SYSTEM_FLAGS + 0x23)
+#define FLAG_VISITED_OREBURGH_CITY                  (SYSTEM_FLAGS + 0x24)
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
+#define FLAG_UNUSED_0x888                           (SYSTEM_FLAGS + 0x28) // Unused Flag
+#define FLAG_UNUSED_0x889                           (SYSTEM_FLAGS + 0x29) // Unused Flag
 
-#define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
-#define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
-#define FLAG_SYS_WEATHER_CTRL                       (SYSTEM_FLAGS + 0x2A)
-#define FLAG_SYS_CYCLING_ROAD                       (SYSTEM_FLAGS + 0x2B)
-#define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
-#define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
-
-#define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x2E) // Seems to be related to linking.
-#define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x2F) // Unused Flag
+#define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x2A)
+#define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x2B)
+// Sets abnormal weather on maps that check for it
+#define FLAG_SYS_WEATHER_CTRL                       (SYSTEM_FLAGS + 0x2C)
+#define FLAG_SYS_CYCLING_ROAD                       (SYSTEM_FLAGS + 0x2D)
+#define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2E)
+#define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2F)
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
 #define FLAG_SYS_TV_WATCH                           (SYSTEM_FLAGS + 0x31)
