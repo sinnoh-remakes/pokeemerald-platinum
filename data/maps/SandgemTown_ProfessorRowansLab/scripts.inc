@@ -3,7 +3,7 @@ SandgemTown_ProfessorRowansLab_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SandgemTown_ProfessorRowansLab_OnFrame
 	.byte 0
 
-	@ State descriptions for VAR_ROWAN_LAB_STATE
+	@ State descriptions for VAR_SANDGEM_LAB_STATE
 	@ 1: Received pokedex
 
 SandgemTown_ProfessorRowansLab_OnTransition:
@@ -11,12 +11,12 @@ SandgemTown_ProfessorRowansLab_OnTransition:
 	end
 
 SandgemTown_ProfessorRowansLab_OnFrame:
-	map_script_2 VAR_ROWAN_LAB_STATE, 0, SandgemTown_ProfessorRowansLab_EventScript_ShowStarter
+	map_script_2 VAR_SANDGEM_LAB_STATE, 0, SandgemTown_ProfessorRowansLab_EventScript_ShowStarter
 	.2byte 0
 
 SandgemTown_ProfessorRowansLab_EventScript_ShowStarter::
 	lockall
-	setvar VAR_ROWAN_LAB_STATE, 1
+	setvar VAR_SANDGEM_LAB_STATE, 1
 	delay 48
 	special SpawnCameraObject
 	applymovement LOCALID_PLAYER, SandgemTown_ProfessorRowansLab_Movement_Player1

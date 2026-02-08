@@ -2,7 +2,7 @@ JubilifeCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, JubilifeCity_OnTransition
 	.byte 0
 
-@ State descriptions For VAR_JUBILIFE_STATE
+@ State descriptions For VAR_JUBILIFE_CITY_STATE
 @ 1: Encounter Helper
 @ 2: Encounter Looker
 @ 3: Recieve a Poketch
