@@ -121,7 +121,7 @@
       "x": 54,
       "y": 60,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "0",
       "script": "JubilifeCity_EventScript_HelperEncounter_1"
     },
@@ -130,7 +130,7 @@
       "x": 55,
       "y": 60,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "0",
       "script": "JubilifeCity_EventScript_HelperEncounter_2"
     },
@@ -139,7 +139,7 @@
       "x": 56,
       "y": 60,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "0",
       "script": "JubilifeCity_EventScript_HelperEncounter_3"
     }

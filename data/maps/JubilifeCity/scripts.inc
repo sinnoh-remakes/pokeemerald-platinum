@@ -3,7 +3,7 @@ JubilifeCity_MapScripts::
 	.byte 0
 
 @ State descriptions For VAR_JUBILIFE_CITY_STATE
-@ 1: Encounter Helper
+@ 1: Encountered helper
 
 JubilifeCity_OnTransition:
 	setflag FLAG_VISITED_JUBILIFE_CITY
@@ -13,6 +13,7 @@ JubilifeCity_OnTransition:
 JubilifeCity_EventScript_HelperEncounter_1::
 	lockall
 	special SpawnCameraObject
+	setvar VAR_JUBILIFE_CITY_STATE, 1
 	setobjectxy LOCALID_JUBILIFE_HELPER, 54, 54
 	call JubilifeCity_EventScript_HelperWalkDown
 	end
@@ -20,6 +21,7 @@ JubilifeCity_EventScript_HelperEncounter_1::
 JubilifeCity_EventScript_HelperEncounter_2::
 	lockall
 	special SpawnCameraObject
+	setvar VAR_JUBILIFE_CITY_STATE, 1
 	call JubilifeCity_EventScript_HelperWalkDown
 	end
 
@@ -27,6 +29,7 @@ JubilifeCity_EventScript_HelperEncounter_2::
 JubilifeCity_EventScript_HelperEncounter_3::
 	lockall
 	special SpawnCameraObject
+	setvar VAR_JUBILIFE_CITY_STATE, 1
 	setobjectxy LOCALID_JUBILIFE_HELPER, 56, 64
 	call JubilifeCity_EventScript_HelperWalkDown
 	end
