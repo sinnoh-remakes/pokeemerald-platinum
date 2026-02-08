@@ -140,9 +140,43 @@ JubilifeCity_EventScript_HelperWalkUp::
 	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PlayerMeetLooker
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerMeetLooker
 	waitmovement 0
+	msgbox JubilifeCity_Text_Um, MSGBOX_DEFAULT
+	applymovement LOCALID_JUBILIFE_LOOKER, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_LOOKER, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_SIGN
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	msgbox JubilifeCity_Text_BegYourPardon, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, JubilifeCity_EventScript_LookerYes
+	call_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_LookerNo
+	msgbox JubilifeCity_Text_DoNotHeed, MSGBOX_DEFAULT
+	@ FODO: Implement and give Vs. Recorder item
+	giveitem ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox JubilifeCity_Text_NiftyDevice, MSGBOX_SIGN
+	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookAround
+	waitmovement 0
+	msgbox JubilifeCity_Text_HaveRequest, MSGBOX_SIGN
+	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperWatchLooker
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerWatchLooker
+	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry3
+	waitmovement 0
+	closemessage
 	special RemoveCameraObject
 	setflag FLAG_HIDE_JUBILIFE_LOOKER
+	removeobject LOCALID_JUBILIFE_LOOKER
 	end
+
+JubilifeCity_EventScript_LookerYes::
+	msgbox JubilifeCity_Text_ThatIsCorrect, MSGBOX_DEFAULT
+	return
+
+JubilifeCity_EventScript_LookerNo::
+	msgbox JubilifeCity_Text_ClaimNotKnow, MSGBOX_DEFAULT
+	return
 	
 JubilifeCity_Movement_LookerScurry1:
 	walk_in_place_left
@@ -171,11 +205,49 @@ JubilifeCity_Movement_LookerScurry2:
 	walk_fast_right
 	step_end
 
+JubilifeCity_Movement_LookerScurry3:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_in_place_left
+	delay_16
+	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+JubilifeCity_Movement_LookAround:
+	walk_in_place_left
+	delay_16
+	walk_in_place_right
+	delay_16
+	delay_16
+	walk_in_place_down
+	step_end
+
 JubilifeCity_Movement_PlayerMeetLooker:
 	walk_up
 	walk_up
 	walk_right
 	walk_up
+	step_end
+
+JubilifeCity_Movement_PlayerWatchLooker:
+	delay_16
+	walk_in_place_right
+	delay_16
+	delay_16
+	walk_in_place_up
+	step_end
+
+JubilifeCity_Movement_HelperWatchLooker:
+	walk_in_place_right
+	delay_16
+	delay_16
+	delay_16
+	walk_in_place_up
 	step_end
 
 JubilifeCity_Text_AreYouCatching:
@@ -250,3 +322,76 @@ JubilifeCity_Text_LucasKnowMore:
 JubilifeCity_Text_ThatMan:
 	.string "Dawn: That man...\n"
 	.string "What is he doing?$"
+
+JubilifeCity_Text_Um:
+	.string "Dawn: Um...$"
+
+JubilifeCity_Text_HowDidYouKnow:
+	.string "WHAAAT?!\p"
+	.string "Mysterious man: ...How did you know?\p"
+	.string "How did you unmask me as a member of\n"
+	.string "the International Police?!$"
+
+JubilifeCity_Text_BegYourPardon:
+	.string "Dawn: Huh? What? I beg your pardon?\n"
+	.string "I was just making conversation...\p"
+	.string "Shady man: ...Heh. You claim you were\n"
+	.string "only making conversation, do you?\p"
+	.string "But I know better not to believe that.\n"
+	.string "No, no, no.\p"
+	.string "You recognized right away that I was\n"
+	.string "someone extraordinary.\p"
+	.string "That is why you spoke to me, is it not?\n"
+	.string "Your power of observation is fearsome!\p"
+	.string "Quite admirable, you are!\p"
+	.string "Now that my cover has been blown, let\n"
+	.string "me introduce myself.\p"
+	.string "I am a globe-trotting elote of the\n"
+	.string "International Police.\p"
+	.string "My name... Ah, no, I shall inform you\n"
+	.string "only of my code name.\p"
+	.string "My code name, it is Looker.\n"
+	.string "It is what they all call me.\p"
+	.string "Incidentally, is the saying, “Don't be\n"
+	.string "a thief!” familar to you?$"
+
+JubilifeCity_Text_ThatIsCorrect:
+	.string "Looker: Yes, that is correct.\n"
+	.string "aking what belongs to others is wrong.$"
+
+JubilifeCity_Text_ClaimNotKnow:
+	.string "Looker: No? You claim to not know it?\n"
+	.string "How could that be?\p"
+	.string "Perhaps your mama has said it, but you\n"
+	.string "have forgotten it, like usual?\p"
+	.string "Now listen my friends. It is wrong to\n"
+	.string "take what belongs to others.$"
+
+JubilifeCity_Text_DoNotHeed:
+	.string "Unfortunately, there are apparently\n"
+	.string "those who do not heed those words.\p"
+	.string "In Sinnoh, in fact, there are criminals\n"
+	.string "stealing the Pokemon of others.\p"
+	.string "I have, therefore, been on the lookout\n"
+	.string "for characters arousing my suspicion.\p"
+	.string "Incidentally, you are Trainers, yes?\n"
+	.string "Perhaps you can make use of this?$"
+
+JubilifeCity_Text_NiftyDevice:
+	.string "That Vs. Recorder, it is a nifty device\n"
+	.string "for recording a match.\p"
+	.string "I obtained it because it is quite popular\n"
+	.string "these days.\p"
+	.string "But myself, I do not do Pokemon\n"
+	.string "battling very often.\p"
+	.string "It will be in better hands with you.$"
+
+JubilifeCity_Text_HaveRequest:
+	.string "Looker: Also, I have a request.\p"
+	.string "If you were to see me again, I ask that\n"
+	.string "you not talk to me, for I am on duty.\p"
+	.string "...Actually, yes, yes, you may speak to\n"
+	.string "me. You must.\p"
+	.string "Not because I am lonely, no no!\n"
+	.string "You must inform me of bad guys!\l"
+	.string "You must inform me of any happenings!$"
