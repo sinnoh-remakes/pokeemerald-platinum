@@ -123,7 +123,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_1"
+      "script": "JubilifeCity_EventScript_HelperEncounter_1"
     },
     {
       "type": "trigger",
@@ -132,7 +132,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_2"
+      "script": "JubilifeCity_EventScript_HelperEncounter_2"
     },
     {
       "type": "trigger",
@@ -141,7 +141,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_3"
+      "script": "JubilifeCity_EventScript_HelperEncounter_3"
     }
   ],
   "bg_events": []
