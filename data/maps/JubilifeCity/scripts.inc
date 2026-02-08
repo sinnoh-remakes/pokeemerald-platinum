@@ -24,10 +24,7 @@ JubilifeCity_EventScript_HelperEncounter_1::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
-	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
-	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
-	waitmovement 0
+	goto JubilifeCity_EventScript_HelperWalkUp
 	end
 
 JubilifeCity_EventScript_HelperEncounter_2::
@@ -39,10 +36,7 @@ JubilifeCity_EventScript_HelperEncounter_2::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
-	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
-	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
-	waitmovement 0
+	goto JubilifeCity_EventScript_HelperWalkUp
 	end
 
 JubilifeCity_EventScript_HelperEncounter_3::
@@ -59,10 +53,7 @@ JubilifeCity_EventScript_HelperEncounter_3::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
-	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
-	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
-	waitmovement 0
+	goto JubilifeCity_EventScript_HelperWalkUp
 	end
 
 JubilifeCity_EventScript_HelperWalkDown::
@@ -136,6 +127,57 @@ JubilifeCity_EventScript_Lucas6::
 	msgbox JubilifeCity_Text_AlreadyHave6, MSGBOX_DEFAULT
 	return
 
+JubilifeCity_EventScript_HelperWalkUp::
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
+	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
+	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
+	waitmovement 0
+	msgbox JubilifeCity_Text_ThatMan, MSGBOX_SIGN
+	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry1
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry2
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkUp2
+	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PlayerMeetLooker
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerMeetLooker
+	waitmovement 0
+	special RemoveCameraObject
+	setflag FLAG_HIDE_JUBILIFE_LOOKER
+	end
+	
+JubilifeCity_Movement_LookerScurry1:
+	walk_in_place_left
+	delay_16
+	delay_16
+	walk_in_place_down
+	delay_16
+	delay_16
+	walk_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_in_place_right
+	delay_16
+	delay_16
+	walk_in_place_up
+	delay_16
+	delay_16
+	step_end
+
+JubilifeCity_Movement_LookerScurry2:
+	walk_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+JubilifeCity_Movement_PlayerMeetLooker:
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	step_end
+
 JubilifeCity_Text_AreYouCatching:
 	.string "Dawn: Hi, {PLAYER}!\n"
 	.string "Are you catching Pokemon?$"
@@ -204,3 +246,7 @@ JubilifeCity_Text_LucasKnowMore:
 	.string "There's this great place for that.\p"
 	.string "Come on! It's all right.\n"
 	.string "Follow me.$"
+
+JubilifeCity_Text_ThatMan:
+	.string "Dawn: That man...\n"
+	.string "What is he doing?$"
