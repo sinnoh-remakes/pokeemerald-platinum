@@ -12,23 +12,27 @@ JubilifeCity_OnTransition:
 
 JubilifeCity_EventScript_HelperEncounter_1::
 	lockall
+	special SpawnCameraObject
 	setobjectxy LOCALID_JUBILIFE_HELPER, 54, 54
 	call JubilifeCity_EventScript_HelperWalkDown
 	end
 
 JubilifeCity_EventScript_HelperEncounter_2::
 	lockall
+	special SpawnCameraObject
 	call JubilifeCity_EventScript_HelperWalkDown
 	end
 
 
 JubilifeCity_EventScript_HelperEncounter_3::
 	lockall
+	special SpawnCameraObject
 	setobjectxy LOCALID_JUBILIFE_HELPER, 56, 64
 	call JubilifeCity_EventScript_HelperWalkDown
 	end
 
 JubilifeCity_EventScript_HelperWalkDown::
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown2
 	waitmovement 0
 	playse SE_PIN
@@ -36,7 +40,9 @@ JubilifeCity_EventScript_HelperWalkDown::
 	waitmovement 0
 	delay 48
 	delay 48
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown3
+	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_DawnCountParty
 	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_LucasCountParty
