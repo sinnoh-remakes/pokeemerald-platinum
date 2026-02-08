@@ -268,6 +268,7 @@ Route201_EventScript_ProfessorMeet::
 	delay 48
 	delay 48
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkBack
+	setobjectmovementtype LOCALID_ROUTE201_RIVAL, MOVEMENT_TYPE_FACE_DOWN
 	waitmovement 0
 	goto Route201_EventScript_TrulyLove
 

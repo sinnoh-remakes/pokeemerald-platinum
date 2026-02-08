@@ -42,7 +42,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_OLDALE_HELPER"
+      "flag": "FLAG_HIDE_SANDGEM_TOWN_HELPER"
     },
     {
       "local_id": "LOCALID_SANDGEM_RIVAL",
@@ -56,7 +56,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_EVENTOBJ"
+      "flag": "FLAG_HIDE_SANDGEM_TOWN_RIVAL"
     },
     {
       "local_id": "LOCALID_SANDGEM_PROF",
@@ -70,7 +70,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_EVENTOBJ"
+      "flag": "FLAG_HIDE_SANDGEM_TOWN_PROFESSOR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",

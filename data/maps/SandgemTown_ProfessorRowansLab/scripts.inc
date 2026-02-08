@@ -440,15 +440,3 @@ SandgemTown_ProfessorRowansLab_Text_OtherAide:
 	.string "Professor Rowan invented a new\n"
 	.string "Pokédex while working alongside a\l"
 	.string "professor from the Kanto region!$"
-
-@ SandgemTown_ProfessorRowansLab_EventScript_CheckReadyForJohtoStarter::
-@ 	specialvar VAR_RESULT, HasAllHoennMons
-@ 	goto_if_eq VAR_RESULT, TRUE, SandgemTown_ProfessorRowansLab_EventScript_SetReadyForJohtoStarter
-@ 	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
-@ 	setobjectxyperm LOCALID_RIVAL, 5, 10
-@ 	end
-
-@ SandgemTown_ProfessorRowansLab_EventScript_SetAfterJohtoStarterLayout::
-@ 	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
-@ 	setobjectxyperm LOCALID_RIVAL, 5, 10
-@ 	end

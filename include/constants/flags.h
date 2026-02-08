@@ -656,19 +656,19 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_HIDE_EVENTOBJ                     0x264
-#define FLAG_HIDE_OLDALE_HELPER                0x265
-#define FLAG_HIDE_TWINLEAF_RIVAL_2F            0x266
-#define FLAG_HIDE_ROUTE_202_HELPER             0x267
-#define FLAG_HIDE_VERITY_INTRO                 0x268
-#define FLAG_HIDE_ROUTE_201_RIVAL              0x269
-#define FLAG_HIDE_ROUTE_201_MAN                0x26A
-#define FLAG_HIDE_SANDGEM_LAB_HELPER           0x26B
+#define FLAG_HIDE_PLAYER_HOUSE_RIVAL           0x264
+#define FLAG_HIDE_TWINLEAF_RIVAL               0x265
+#define FLAG_HIDE_RIVAL_HOUSE_RIVAL            0x266
+#define FLAG_HIDE_ROUTE_201_RIVAL              0x267
+#define FLAG_HIDE_ROUTE_201_STARTER_EVENT      0x268
+#define FLAG_HIDE_ROUTE_201_MAN                0x269
+#define FLAG_LAKE_VERITY_INTRO_EVENT           0x26A
+#define FLAG_HIDE_SANDGEM_TOWN_HELPER          0x26B
 #define FLAG_HIDE_SANDGEM_TOWN_RIVAL           0x26C
-#define FLAG_HIDE_ROUTE_201_BOY                0x26D
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
+#define FLAG_HIDE_SANDGEM_LAB_HELPER           0x26D
+#define FLAG_HIDE_SANDGEM_TOWN_PROFESSOR       0x26E
+#define FLAG_HIDE_PLAYER_HOUSE_RIVAL_MOM       0x26F
+#define FLAG_HIDE_ROUTE_202_HELPER             0x270
 #define FLAG_UNUSED_0x271  0x271 // Unused Flag
 #define FLAG_UNUSED_0x272  0x272 // Unused Flag
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
