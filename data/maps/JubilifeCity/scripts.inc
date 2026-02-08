@@ -56,6 +56,7 @@ JubilifeCity_EventScript_DawnCountParty::
 	call_if_eq VAR_RESULT, 5, JubilifeCity_EventScript_Dawn5
 	call_if_eq VAR_RESULT, 6, JubilifeCity_EventScript_Dawn6
 	msgbox JubilifeCity_Text_DawnKnowMore, MSGBOX_DEFAULT
+	closemessage
 	return
 
 JubilifeCity_EventScript_LucasCountParty::
@@ -66,6 +67,7 @@ JubilifeCity_EventScript_LucasCountParty::
 	call_if_eq VAR_RESULT, 5, JubilifeCity_EventScript_Lucas5
 	call_if_eq VAR_RESULT, 6, JubilifeCity_EventScript_Lucas6
 	msgbox JubilifeCity_Text_LucasKnowMore, MSGBOX_DEFAULT
+	closemessage
 	return
 
 JubilifeCity_EventScript_DawnFew::
@@ -101,70 +103,70 @@ JubilifeCity_EventScript_Lucas6::
 	return
 
 JubilifeCity_Text_AreYouCatching:
-	.string "Dawn: Hi, {PLAYER}!\p"
+	.string "Dawn: Hi, {PLAYER}!\n"
 	.string "Are you catching Pokemon?$"
 
 JubilifeCity_Text_HowManyCaught:
-	.string "Lucas: Hey, {PLAYER}!\p"
-	.string "How many Pokemon have you caught?"
+	.string "Lucas: Hey, {PLAYER}!\n"
+	.string "How many Pokemon have you caught?$"
 	
 JubilifeCity_Text_FeelSafer:
-	.string "...Um...\n"
-	.string "I think you'd feel a lot safer if you\p"
-	.string "were to catch some more.\n"
-	.string "You know, like when you need to travel\p"
+	.string "...Um...\p"
+	.string "I think you'd feel a lot safer if you\n"
+	.string "were to catch some more.\p"
+	.string "You know, like when you need to travel\n"
 	.string "to faraway places.$"
 
 JubilifeCity_Text_CatchMore:
-	.string "Huh?\p"
-	.string "I think you should catch some more.\n"
-	.string "it might be more of a challenge\p"
-	.string "raising a lot of Pokemon...\n"
-	.string "But it's worth it. The more Pokemon\p"
+	.string "Huh?\n"
+	.string "I think you should catch some more.\p"
+	.string "It might be more of a challenge\n"
+	.string "raising a lot of Pokemon...\p"
+	.string "But it's worth it. The more Pokemon\n"
 	.string "you have, the happier you'll be.$"
 
 JubilifeCity_Text_AlreadyGot4:
-	.string "Wow! You've already got 4 Pokemon\p"
-	.string "with you!\n"
-	.string "At that pace, your Pokedex should\p"
+	.string "Wow! You've already got 4 Pokemon\n"
+	.string "with you!\p"
+	.string "At that pace, your Pokedex should\n"
 	.string "be full in non time at all!$"
 
 JubilifeCity_Text_AlreadyGot5:
-	.string "Wow! You've already got 5 Pokemon\p"
-	.string "with you!\n"
-	.string "At that pace, your Pokedex should\p"
+	.string "Wow! You've already got 5 Pokemon\n"
+	.string "with you!\p"
+	.string "At that pace, your Pokedex should\n"
 	.string "be full in non time at all!$"
 
 JubilifeCity_Text_AlreadyGot6:
-	.string "Wow! You've already got 6 Pokemon\p"
-	.string "with you!\n"
-	.string "At that pace, your Pokedex should\p"
+	.string "Wow! You've already got 6 Pokemon\n"
+	.string "with you!\p"
+	.string "At that pace, your Pokedex should\n"
 	.string "be full in non time at all!$"
 
 JubilifeCity_Text_AlreadyHave4:
-	.string "Whoa! You already have 4 Pokemon\p"
+	.string "Whoa! You already have 4 Pokemon\n"
 	.string "with you!$"
 
 JubilifeCity_Text_AlreadyHave5:
-	.string "Whoa! You already have 5 Pokemon\p"
+	.string "Whoa! You already have 5 Pokemon\n"
 	.string "with you!$"
 
 JubilifeCity_Text_AlreadyHave6:
-	.string "Whoa! You already have 6 Pokemon\p"
+	.string "Whoa! You already have 6 Pokemon\n"
 	.string "with you!$"
 
 JubilifeCity_Text_DawnKnowMore:
-	.string "Oh, I know! Don't you think it's\p"
-	.string "better to know more about Pokemon?\n"
-	.string "Sure it is!\p"
-	.string "I know just the place.\n"
-	.string "Come on!\p"
+	.string "Oh, I know! Don't you think it's\n"
+	.string "better to know more about Pokemon?\p"
+	.string "Sure it is!\n"
+	.string "I know just the place.\p"
+	.string "Come on!\n"
 	.string "Don't be shy. Follow me!$"
 
 JubilifeCity_Text_LucasKnowMore:
-	.string "Hey, that's right! Don't you think it's\p"
-	.string "better to know more about Pokemon?\n"
-	.string "Sure it is!\p"
-	.string "There's this great place for that.\n"
-	.string "Come on! It's all right.\p"
+	.string "Hey, that's right! Don't you think it's\n"
+	.string "better to know more about Pokemon?\p"
+	.string "Sure it is!\n"
+	.string "There's this great place for that.\p"
+	.string "Come on! It's all right.\n"
 	.string "Follow me.$"
