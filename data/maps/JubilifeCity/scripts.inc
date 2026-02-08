@@ -50,22 +50,22 @@ JubilifeCity_EventScript_HelperWalkDown::
 
 JubilifeCity_EventScript_DawnCountParty::
 	msgbox JubilifeCity_Text_AreYouCatching, MSGBOX_DEFAULT
-	specialvar VAR_RESULT, CalculatePlayerPartyCount
-	call_if_le VAR_RESULT, 3, JubilifeCity_EventScript_DawnFew
-	call_if_eq VAR_RESULT, 4, JubilifeCity_EventScript_Dawn4
-	call_if_eq VAR_RESULT, 5, JubilifeCity_EventScript_Dawn5
-	call_if_eq VAR_RESULT, 6, JubilifeCity_EventScript_Dawn6
+	specialvar VAR_0x8004, CalculatePlayerPartyCount
+	call_if_le VAR_0x8004, 3, JubilifeCity_EventScript_DawnFew
+	call_if_eq VAR_0x8004, 4, JubilifeCity_EventScript_Dawn4
+	call_if_eq VAR_0x8004, 5, JubilifeCity_EventScript_Dawn5
+	call_if_eq VAR_0x8004, 6, JubilifeCity_EventScript_Dawn6
 	msgbox JubilifeCity_Text_DawnKnowMore, MSGBOX_DEFAULT
 	closemessage
 	return
 
 JubilifeCity_EventScript_LucasCountParty::
 	msgbox JubilifeCity_Text_HowManyCaught, MSGBOX_DEFAULT
-	specialvar VAR_RESULT, CalculatePlayerPartyCount
-	call_if_le VAR_RESULT, 3, JubilifeCity_EventScript_LucasFew
-	call_if_eq VAR_RESULT, 4, JubilifeCity_EventScript_Lucas4
-	call_if_eq VAR_RESULT, 5, JubilifeCity_EventScript_Lucas5
-	call_if_eq VAR_RESULT, 6, JubilifeCity_EventScript_Lucas6
+	specialvar VAR_0x8004, CalculatePlayerPartyCount
+	call_if_le VAR_0x8004, 3, JubilifeCity_EventScript_LucasFew
+	call_if_eq VAR_0x8004, 4, JubilifeCity_EventScript_Lucas4
+	call_if_eq VAR_0x8004, 5, JubilifeCity_EventScript_Lucas5
+	call_if_eq VAR_0x8004, 6, JubilifeCity_EventScript_Lucas6
 	msgbox JubilifeCity_Text_LucasKnowMore, MSGBOX_DEFAULT
 	closemessage
 	return
