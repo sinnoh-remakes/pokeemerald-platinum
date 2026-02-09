@@ -98,11 +98,12 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_TERMINAL_GUARD",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 35,
       "y": 43,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -299,6 +300,42 @@
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "0",
       "script": "JubilifeCity_EventScript_HelperEncounter_3"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 44,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard1"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 45,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard2"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 46,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard3"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 47,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard4"
     }
   ],
   "bg_events": []

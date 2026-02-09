@@ -291,6 +291,124 @@ JubilifeCity_Movement_PlayerWatchHelper:
 	walk_in_place_down
 	step_end
 
+JubilifeCity_EventScript_TerminalGuard1::
+	lock
+	call JubilifeCity_EventScript_TerminalGuardExclaim
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Enter1
+	waitmovement 0
+	msgbox JubilifeCity_Text_GlobalTerminalClosed, MSGBOX_SIGN
+	call JubilifeCity_EventScript_TerminalGuardPush
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Leave1
+	waitmovement 0
+	delay 48
+	release
+	end
+
+JubilifeCity_EventScript_TerminalGuard2::
+	lock
+	call JubilifeCity_EventScript_TerminalGuardExclaim
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Enter2
+	waitmovement 0
+	msgbox JubilifeCity_Text_GlobalTerminalClosed, MSGBOX_SIGN
+	call JubilifeCity_EventScript_TerminalGuardPush
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Leave2
+	waitmovement 0
+	delay 48
+	release
+	end
+
+JubilifeCity_EventScript_TerminalGuard3::
+	lock
+	call JubilifeCity_EventScript_TerminalGuardExclaim
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Enter3
+	waitmovement 0
+	msgbox JubilifeCity_Text_GlobalTerminalClosed, MSGBOX_SIGN
+	call JubilifeCity_EventScript_TerminalGuardPush
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Leave3
+	waitmovement 0
+	delay 48
+	release
+	end
+
+JubilifeCity_EventScript_TerminalGuard4::
+	lock
+	call JubilifeCity_EventScript_TerminalGuardExclaim
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Enter4
+	waitmovement 0
+	msgbox JubilifeCity_Text_GlobalTerminalClosed, MSGBOX_SIGN
+	call JubilifeCity_EventScript_TerminalGuardPush
+	applymovement LOCALID_TERMINAL_GUARD, JubilifeCity_Movement_TerminalGuard_Leave4
+	waitmovement 0
+	delay 48
+	release
+	end
+	
+JubilifeCity_EventScript_TerminalGuardExclaim::
+	applymovement LOCALID_TERMINAL_GUARD, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	delay 48
+	return
+
+JubilifeCity_EventScript_TerminalGuardPush::
+	applymovement LOCALID_TERMINAL_GUARD, Common_Movement_WalkRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	delay 48
+	return
+
+JubilifeCity_Movement_TerminalGuard_Enter1:
+	walk_down
+	walk_in_place_right
+	step_end
+	
+JubilifeCity_Movement_TerminalGuard_Enter2:
+	walk_down
+	walk_down
+	walk_in_place_right
+	step_end
+	
+JubilifeCity_Movement_TerminalGuard_Enter3:
+	walk_down
+	walk_down
+	walk_down
+	walk_in_place_right
+	step_end
+	
+JubilifeCity_Movement_TerminalGuard_Enter4:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_in_place_right
+	step_end
+
+JubilifeCity_Movement_TerminalGuard_Leave1:
+	walk_up
+	walk_in_place_down
+	step_end
+	
+JubilifeCity_Movement_TerminalGuard_Leave2:
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+	
+JubilifeCity_Movement_TerminalGuard_Leave3:
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+	
+JubilifeCity_Movement_TerminalGuard_Leave4:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+
 JubilifeCity_EventScript_BoyTradingLeft::
 	msgbox JubilifeCity_Text_TradingWithBuddy, MSGBOX_NPC
 	end
