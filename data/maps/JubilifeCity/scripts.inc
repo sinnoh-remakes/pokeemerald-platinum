@@ -4,6 +4,9 @@ JubilifeCity_MapScripts::
 
 @ State descriptions For VAR_JUBILIFE_CITY_STATE
 @ 1: Encountered helper
+@ 2: Received Town Map
+@ 3: Received Poketch
+@ 4: Received Coal Badge
 
 JubilifeCity_OnTransition:
 	setflag FLAG_VISITED_JUBILIFE_CITY
@@ -290,11 +293,11 @@ JubilifeCity_Movement_PlayerWatchHelper:
 
 JubilifeCity_Text_AreYouCatching:
 	.string "Dawn: Hi, {PLAYER}!\n"
-	.string "Are you catching Pokemon?$"
+	.string "Are you catching Pokémon?$"
 
 JubilifeCity_Text_HowManyCaught:
 	.string "Lucas: Hey, {PLAYER}!\n"
-	.string "How many Pokemon have you caught?$"
+	.string "How many Pokémon have you caught?$"
 	
 JubilifeCity_Text_FeelSafer:
 	.string "...Um...\p"
@@ -307,43 +310,43 @@ JubilifeCity_Text_CatchMore:
 	.string "Huh?\n"
 	.string "I think you should catch some more.\p"
 	.string "It might be more of a challenge\n"
-	.string "raising a lot of Pokemon...\p"
-	.string "But it's worth it. The more Pokemon\n"
+	.string "raising a lot of Pokémon...\p"
+	.string "But it's worth it. The more Pokémon\n"
 	.string "you have, the happier you'll be.$"
 
 JubilifeCity_Text_AlreadyGot4:
-	.string "Wow! You've already got 4 Pokemon\n"
+	.string "Wow! You've already got 4 Pokémon\n"
 	.string "with you!\p"
-	.string "At that pace, your Pokedex should\n"
+	.string "At that pace, your Pokédex should\n"
 	.string "be full in non time at all!$"
 
 JubilifeCity_Text_AlreadyGot5:
-	.string "Wow! You've already got 5 Pokemon\n"
+	.string "Wow! You've already got 5 Pokémon\n"
 	.string "with you!\p"
-	.string "At that pace, your Pokedex should\n"
+	.string "At that pace, your Pokédex should\n"
 	.string "be full in non time at all!$"
 
 JubilifeCity_Text_AlreadyGot6:
-	.string "Wow! You've already got 6 Pokemon\n"
+	.string "Wow! You've already got 6 Pokémon\n"
 	.string "with you!\p"
-	.string "At that pace, your Pokedex should\n"
+	.string "At that pace, your Pokédex should\n"
 	.string "be full in non time at all!$"
 
 JubilifeCity_Text_AlreadyHave4:
-	.string "Whoa! You already have 4 Pokemon\n"
+	.string "Whoa! You already have 4 Pokémon\n"
 	.string "with you!$"
 
 JubilifeCity_Text_AlreadyHave5:
-	.string "Whoa! You already have 5 Pokemon\n"
+	.string "Whoa! You already have 5 Pokémon\n"
 	.string "with you!$"
 
 JubilifeCity_Text_AlreadyHave6:
-	.string "Whoa! You already have 6 Pokemon\n"
+	.string "Whoa! You already have 6 Pokémon\n"
 	.string "with you!$"
 
 JubilifeCity_Text_DawnKnowMore:
 	.string "Oh, I know! Don't you think it's\n"
-	.string "better to know more about Pokemon?\p"
+	.string "better to know more about Pokémon?\p"
 	.string "Sure it is!\n"
 	.string "I know just the place.\p"
 	.string "Come on!\n"
@@ -351,7 +354,7 @@ JubilifeCity_Text_DawnKnowMore:
 
 JubilifeCity_Text_LucasKnowMore:
 	.string "Hey, that's right! Don't you think it's\n"
-	.string "better to know more about Pokemon?\p"
+	.string "better to know more about Pokémon?\p"
 	.string "Sure it is!\n"
 	.string "There's this great place for that.\p"
 	.string "Come on! It's all right.\n"
@@ -409,7 +412,7 @@ JubilifeCity_Text_DoNotHeed:
 	.string "Unfortunately, there are apparently\n"
 	.string "those who do not heed those words.\p"
 	.string "In Sinnoh, in fact, there are criminals\n"
-	.string "stealing the Pokemon of others.\p"
+	.string "stealing the Pokémon of others.\p"
 	.string "I have, therefore, been on the lookout\n"
 	.string "for characters arousing my suspicion.\p"
 	.string "Incidentally, you are Trainers, yes?\n"
@@ -420,7 +423,7 @@ JubilifeCity_Text_NiftyDevice:
 	.string "for recording a match.\p"
 	.string "I obtained it because it is quite popular\n"
 	.string "these days.\p"
-	.string "But myself, I do not do Pokemon\n"
+	.string "But myself, I do not do Pokémon\n"
 	.string "battling very often.\p"
 	.string "It will be in better hands with you.$"
 
