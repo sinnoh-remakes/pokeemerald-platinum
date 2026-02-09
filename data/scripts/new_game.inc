@@ -279,5 +279,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SANDGEM_TOWN_RIVAL
 	setflag FLAG_HIDE_SANDGEM_TOWN_PROFESSOR
 	setflag FLAG_HIDE_PLAYER_HOUSE_RIVAL_MOM
+	setflag FLAG_HIDE_JUBILIFE_CLOWNS
 	call EventScript_ResetAllBerries
 	end

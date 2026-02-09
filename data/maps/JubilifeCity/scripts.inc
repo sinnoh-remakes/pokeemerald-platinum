@@ -413,6 +413,49 @@ JubilifeCity_Movement_TerminalGuard_Leave4:
 	walk_in_place_down
 	step_end
 
+JubilifeCity_EventScript_WrongAnswer::
+	msgbox JubilifeCity_Text_WrongAnswer, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_ClownGrow::
+	lock
+	faceplayer
+	msgbox JubilifeCity_Text_ClownGrowQuestion, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_WrongAnswer
+	@ FODO: Play correct answer sound
+	msgbox JubilifeCity_Text_ClownGrowExplain, MSGBOX_SIGN
+	@ FODO: Implement Poketch ticket system
+	giveitem ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	release
+	end
+
+JubilifeCity_EventScript_ClownItem::
+	lock
+	faceplayer
+	msgbox JubilifeCity_Text_ClownItemQuestion, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_WrongAnswer
+	@ FODO: Play correct answer sound
+	msgbox JubilifeCity_Text_ClownItemExplain, MSGBOX_SIGN
+	@ FODO: Implement Poketch ticket system
+	giveitem ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	release
+	end
+
+JubilifeCity_EventScript_ClownType::
+	lock
+	faceplayer
+	msgbox JubilifeCity_Text_ClownTypeQuestion, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_WrongAnswer
+	@ FODO: Play correct answer sound
+	msgbox JubilifeCity_Text_ClownTypeExplain, MSGBOX_SIGN
+	@ FODO: Implement Poketch ticket system
+	giveitem ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	release
+	end
+
 JubilifeCity_EventScript_BoyTradingLeft::
 	msgbox JubilifeCity_Text_TradingWithBuddy, MSGBOX_NPC
 	end
@@ -451,7 +494,7 @@ JubilifeCity_EventScript_AceTrainer1::
 
 @ FODO: Make 3 item group menu with text selection
 @ Determine how groups should work with game engine
-JubilifeCity_EventScript_AceTrainerGroup:
+JubilifeCity_EventScript_AceTrainerGroup::
 	lock
 	faceplayer
 	msgbox JubilifeCity_Text_JoinGroup, MSGBOX_YESNO
@@ -650,6 +693,58 @@ JubilifeCity_Text_GlobalTerminalOpen:
 	.string "Trading Pokémon means connecting\n"
 	.string "with friends, both old and new.\p"
 	.string "That’s awesome!$"
+
+JubilifeCity_Text_WrongAnswer:
+	.string "Bzzzzt!\n"
+	.string "That’s the wrong answer...$"
+
+JubilifeCity_Text_ClownGrowQuestion:
+	.string "Hi! I’m a Pokétch campaign clown!\n"
+	.string "Let’s roll out my question!\p"
+	.string "Does a Pokémon grow by defeating\n"
+	.string "others and gaining Exp. Points?$"
+
+JubilifeCity_Text_ClownGrowExplain:
+	.string "Ding-ding!\n"
+	.string "You’re absolutely correct!\p"
+	.string "Pokémon grow stronger by defeating\n"
+	.string "other Pokémon in battle.\p"
+	.string "Some Pokémon even grow into an\n"
+	.string "entirely different form in a process\l"
+	.string "known as evolution.\p"
+	.string "Here you go!\n"
+	.string "Your Pokétch Coupon!$"
+
+JubilifeCity_Text_ClownItemQuestion:
+	.string "Hi! I’m a Pokétch campaign clown!\n"
+	.string "Let’s roll out my question!\p"
+	.string "Can a Pokémon hold an item?$"
+
+JubilifeCity_Text_ClownItemExplain:
+	.string "Ding-ding!\n"
+	.string "You’re absolutely correct!\p"
+	.string "A Pokémon may hold a single item.\p"
+	.string "Some items become effective as soon\n"
+	.string "as they are held by Pokémon.\p"
+	.string "Berries are eaten by Pokémon as\n"
+	.string "necessary during battle.\p"
+	.string "Here you go!\n"
+	.string "Your Pokétch Coupon!$"
+
+JubilifeCity_Text_ClownTypeQuestion:
+	.string "Hi! I’m a Pokétch campaign clown!\n"
+	.string "Let’s roll out my question!\p"
+	.string "Just like Pokémon types, the moves\n"
+	.string "of Pokémon also have types?$"
+
+JubilifeCity_Text_ClownTypeExplain:
+	.string "Ding-ding!\n"
+	.string "You’re absolutely correct!\p"
+	.string "If the Pokémon’s type matches its\n"
+	.string "move’s type, that move is made much\l"
+	.string "more powerful!\p"
+	.string "Here you go!\n"
+	.string "Your Pokétch Coupon!$"
 
 JubilifeCity_Text_TradingWithBuddy:
 	.string "I’m trading Pokémon with my buddy!$"
