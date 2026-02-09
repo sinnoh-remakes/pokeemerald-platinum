@@ -291,6 +291,68 @@ JubilifeCity_Movement_PlayerWatchHelper:
 	walk_in_place_down
 	step_end
 
+JubilifeCity_EventScript_BoyTradingLeft::
+	msgbox JubilifeCity_Text_TradingWithBuddy, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_BoyTradingRight::
+	msgbox JubilifeCity_Text_HoldAnItem, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_OldManSchool::
+	lock
+	faceplayer
+	msgbox JubilifeCity_Text_HelloTrainer, MSGBOX_DEFAULT
+	call_if_eq VAR_RESULT, YES, JubilifeCity_EventScript_OldManSchoolYes
+	call_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_OldManSchoolNo
+	end
+
+JubilifeCity_EventScript_OldManSchoolYes::
+	msgbox JubilifeCity_Text_YouAreKnowledgeable, MSGBOX_SIGN
+	return
+
+JubilifeCity_EventScript_OldManSchoolNo::
+	msgbox JubilifeCity_Text_NotToWorry, MSGBOX_SIGN
+	return
+
+JubilifeCity_EventScript_SchoolKid::
+	msgbox JubilifeCity_Text_SixBalls, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_OldManFountain::
+	msgbox JubilifeCity_Text_CarvedOfMountain, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_AceTrainer1::
+	msgbox JubilifeCity_Text_WhereComeFrom, MSGBOX_NPC
+	end
+
+@ FODO: Make 3 item group menu with text selection
+@ Determine how groups should work with game engine
+JubilifeCity_EventScript_AceTrainerGroup:
+	lock
+	faceplayer
+	msgbox JubilifeCity_Text_JoinGroup, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, JubilifeCity_EventScript_JoinGroupYes
+	call_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_JoinGroupNo
+	end
+
+JubilifeCity_EventScript_JoinGroupYes::
+	msgbox JubilifeCity_Text_NameYourGroup, MSGBOX_SIGN
+	return
+
+JubilifeCity_EventScript_JoinGroupNo::
+	msgbox JubilifeCity_Text_ThatsTooBad, MSGBOX_SIGN
+	return
+
+JubilifeCity_EventScript_Twin::
+	msgbox JubilifeCity_Text_SeeMeOnTV, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_AceTrainer2::
+	msgbox JubilifeCity_Text_WalkWithPokemon, MSGBOX_NPC
+	end
+
 JubilifeCity_Text_AreYouCatching:
 	.string "Dawn: Hi, {PLAYER}!\n"
 	.string "Are you catching Pokémon?$"
@@ -451,3 +513,94 @@ JubilifeCity_Text_SawYourFriend:
 	.string "earlier.\p"
 	.string "He could still be in there studying.\n"
 	.string "OK, bye now!$"
+
+JubilifeCity_Text_TradingWithBuddy:
+	.string "I’m trading Pokémon with my buddy!$"
+
+JubilifeCity_Text_HoldAnItem:
+	.string "I made my Pokémon hold an item before\n"
+	.string "trading it.\p"
+	.string "That will make the other Trainer\n"
+	.string "double happy!$"
+
+JubilifeCity_Text_HelloTrainer:
+	.string "Hello, Trainer!\n"
+	.string "Do you know much about Pokémon?$"
+
+JubilifeCity_Text_YouAreKnowledgeable:
+	.string "Ah, I see!\n"
+	.string "You are knowledgeable!\p"
+	.string "I imagine you wouldn’t see the need\n"
+	.string "to visit the Trainers’ School, then.\p"
+	.string "But do visit if you have the time.\n"
+	.string "You may discover something new!$"
+
+JubilifeCity_Text_NotToWorry:
+	.string "Oh, you’re not knowledgeable...\n"
+	.string "But not to worry!\l"
+	.string "There’s the Trainers’ School.\p"
+	.string "The school will teach you the\n"
+	.string "basics of Pokémon.$"
+
+JubilifeCity_Text_GlobalTerminalClosed:
+	.string "Past here is the Global Terminal, your\n"
+	.string "gateway to the world!\p"
+	.string "Oh, I’m sorry, you don’t have\n"
+	.string "any Gym Badges.\p"
+	.string "The Global Terminal is off-limits if you\n"
+	.string "don’t have a Gym Badge. Sorry!$"
+
+@ JubilifeCity_Text_GlobalTerminalOpen:
+@ 	.string "Past here is the Global Terminal.\n"
+@ 	.string "It lets you trade with the whole world!\p"
+@ 	.string "Trading Pokémon means connecting\n"
+@ 	.string "with friends, both old and new.\p"
+@ 	.string "That’s awesome!$"
+
+JubilifeCity_Text_SixBalls:
+	.string "OK, set six Poké Balls in my\n"
+	.string "belt...\p"
+	.string "Yeah, that’ll do it. At most, you\n"
+	.string "can have six Pokémon with you.$"
+
+JubilifeCity_Text_CarvedOfMountain:
+	.string "Jubilife City’s built on land they\n"
+	.string "carved out of a mountain.\p"
+	.string "The people and Pokémon of Oreburgh\n"
+	.string "City helped out with that undertaking.$"
+
+JubilifeCity_Text_WhereComeFrom:
+	.string "Hiya, where’d you come from?\p"
+	.string "...\p"
+	.string "Twinleaf Town, huh...\n"
+	.string "It’s a nice place. Quiet and all.\p"
+	.string "Jubilife City is a big place, so it\n"
+	.string "might be a bit of a shock to you.$"
+
+JubilifeCity_Text_JoinGroup:
+	.string "Hi, I know it's a little sudden, but\n"
+	.string "would you like to join a group?\p"
+	.string "If you join a group, you can compete\n"
+	.string "or cooperate with fellow members.\p"
+	.string "It's a lot of fun.\n"
+	.string "Want to join?$"
+
+JubilifeCity_Text_NameYourGroup:
+	.string "Yay, cool! What do you want to name\n"
+	.string "your group?"
+	.string "The Untitled group, huh?\n"
+	.string "That's a great name!\p"
+	.string "The leader is {RIVAL}\n"
+	.string "I hope the group gets more members.$"
+
+JubilifeCity_Text_ThatsTooBad:
+	.string "Oh.\n"
+	.string "That's too bad.$"
+
+JubilifeCity_Text_SeeMeOnTV:
+	.string "Did you see me on TV?\n"
+	.string "I was in an interview!$"
+
+JubilifeCity_Text_WalkWithPokemon:
+	.string "When you walk with your Pokémon,\n"
+	.string "they gradually grow friendlier.$"
