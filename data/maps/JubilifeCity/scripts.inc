@@ -420,7 +420,7 @@ JubilifeCity_EventScript_BoyTradingRight::
 JubilifeCity_EventScript_OldManSchool::
 	lock
 	faceplayer
-	msgbox JubilifeCity_Text_HelloTrainer, MSGBOX_DEFAULT
+	msgbox JubilifeCity_Text_HelloTrainer, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, JubilifeCity_EventScript_OldManSchoolYes
 	call_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_OldManSchoolNo
 	end
@@ -567,7 +567,7 @@ JubilifeCity_Text_BegYourPardon:
 	.string "Quite admirable, you are!\p"
 	.string "Now that my cover has been blown, let\n"
 	.string "me introduce myself.\p"
-	.string "I am a globe-trotting elote of the\n"
+	.string "I am a globe-trotting elite of the\n"
 	.string "International Police.\p"
 	.string "My name... Ah, no, I shall inform you\n"
 	.string "only of my code name.\p"
@@ -578,7 +578,7 @@ JubilifeCity_Text_BegYourPardon:
 
 JubilifeCity_Text_ThatIsCorrect:
 	.string "Looker: Yes, that is correct.\n"
-	.string "aking what belongs to others is wrong.$"
+	.string "taking what belongs to others is wrong.$"
 
 JubilifeCity_Text_ClaimNotKnow:
 	.string "Looker: No? You claim to not know it?\n"
@@ -705,10 +705,10 @@ JubilifeCity_Text_JoinGroup:
 
 JubilifeCity_Text_NameYourGroup:
 	.string "Yay, cool! What do you want to name\n"
-	.string "your group?"
+	.string "your group?\p"
 	.string "The Untitled group, huh?\n"
 	.string "That's a great name!\p"
-	.string "The leader is {RIVAL}\n"
+	.string "The leader is {RIVAL}.\n"
 	.string "I hope the group gets more members.$"
 
 JubilifeCity_Text_ThatsTooBad:
