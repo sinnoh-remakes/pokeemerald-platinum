@@ -357,6 +357,10 @@ JubilifeCity_EventScript_TerminalGuardPush::
 	delay 48
 	return
 
+JubilifeCity_EventScript_TerminalGuardOpen::
+	msgbox JubilifeCity_Text_GlobalTerminalOpen, MSGBOX_NPC
+	end
+
 JubilifeCity_Movement_TerminalGuard_Enter1:
 	walk_down
 	walk_in_place_right
@@ -632,6 +636,21 @@ JubilifeCity_Text_SawYourFriend:
 	.string "He could still be in there studying.\n"
 	.string "OK, bye now!$"
 
+JubilifeCity_Text_GlobalTerminalClosed:
+	.string "Past here is the Global Terminal, your\n"
+	.string "gateway to the world!\p"
+	.string "Oh, I’m sorry, you don’t have\n"
+	.string "any Gym Badges.\p"
+	.string "The Global Terminal is off-limits if you\n"
+	.string "don’t have a Gym Badge. Sorry!$"
+
+JubilifeCity_Text_GlobalTerminalOpen:
+	.string "Past here is the Global Terminal.\n"
+	.string "It lets you trade with the whole world!\p"
+	.string "Trading Pokémon means connecting\n"
+	.string "with friends, both old and new.\p"
+	.string "That’s awesome!$"
+
 JubilifeCity_Text_TradingWithBuddy:
 	.string "I’m trading Pokémon with my buddy!$"
 
@@ -659,21 +678,6 @@ JubilifeCity_Text_NotToWorry:
 	.string "There’s the Trainers’ School.\p"
 	.string "The school will teach you the\n"
 	.string "basics of Pokémon.$"
-
-JubilifeCity_Text_GlobalTerminalClosed:
-	.string "Past here is the Global Terminal, your\n"
-	.string "gateway to the world!\p"
-	.string "Oh, I’m sorry, you don’t have\n"
-	.string "any Gym Badges.\p"
-	.string "The Global Terminal is off-limits if you\n"
-	.string "don’t have a Gym Badge. Sorry!$"
-
-@ JubilifeCity_Text_GlobalTerminalOpen:
-@ 	.string "Past here is the Global Terminal.\n"
-@ 	.string "It lets you trade with the whole world!\p"
-@ 	.string "Trading Pokémon means connecting\n"
-@ 	.string "with friends, both old and new.\p"
-@ 	.string "That’s awesome!$"
 
 JubilifeCity_Text_SixBalls:
 	.string "OK, set six Poké Balls in my\n"
