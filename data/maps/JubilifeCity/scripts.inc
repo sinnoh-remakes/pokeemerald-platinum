@@ -420,39 +420,63 @@ JubilifeCity_EventScript_WrongAnswer::
 JubilifeCity_EventScript_ClownGrow::
 	lock
 	faceplayer
+	goto_if_set FLAG_JUBILIFE_CLOWN_GROW, JubilifeCity_EventScript_ClownGrowDone
 	msgbox JubilifeCity_Text_ClownGrowQuestion, MSGBOX_YESNO
+	@ FODO: Play incorrect answer sound
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_WrongAnswer
 	@ FODO: Play correct answer sound
-	msgbox JubilifeCity_Text_ClownGrowExplain, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_ClownGrowExplain, MSGBOX_DEFAULT
 	@ FODO: Implement Poketch ticket system
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_JUBILIFE_CLOWN_GROW
+	release
+	end
+
+JubilifeCity_EventScript_ClownGrowDone::
+	msgbox JubilifeCity_Text_ClownGrowDone, MSGBOX_DEFAULT
 	release
 	end
 
 JubilifeCity_EventScript_ClownItem::
 	lock
 	faceplayer
+	goto_if_set FLAG_JUBILIFE_CLOWN_ITEM, JubilifeCity_EventScript_ClownItemDone
 	msgbox JubilifeCity_Text_ClownItemQuestion, MSGBOX_YESNO
+	@ FODO: Play incorrect answer sound
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_WrongAnswer
 	@ FODO: Play correct answer sound
-	msgbox JubilifeCity_Text_ClownItemExplain, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_ClownItemExplain, MSGBOX_DEFAULT
 	@ FODO: Implement Poketch ticket system
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_JUBILIFE_CLOWN_ITEM
+	release
+	end
+
+JubilifeCity_EventScript_ClownItemDone::
+	msgbox JubilifeCity_Text_ClownItemDone, MSGBOX_DEFAULT
 	release
 	end
 
 JubilifeCity_EventScript_ClownType::
 	lock
 	faceplayer
+	goto_if_set FLAG_JUBILIFE_CLOWN_TYPE, JubilifeCity_EventScript_ClownTypeDone
 	msgbox JubilifeCity_Text_ClownTypeQuestion, MSGBOX_YESNO
+	@ FODO: Play incorrect answer sound
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_WrongAnswer
 	@ FODO: Play correct answer sound
-	msgbox JubilifeCity_Text_ClownTypeExplain, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_ClownTypeExplain, MSGBOX_DEFAULT
 	@ FODO: Implement Poketch ticket system
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_JUBILIFE_CLOWN_TYPE
+	release
+	end
+
+JubilifeCity_EventScript_ClownTypeDone::
+	msgbox JubilifeCity_Text_ClownTypeDone, MSGBOX_DEFAULT
 	release
 	end
 
@@ -715,6 +739,13 @@ JubilifeCity_Text_ClownGrowExplain:
 	.string "Here you go!\n"
 	.string "Your Pokétch Coupon!$"
 
+JubilifeCity_Text_ClownGrowDone:
+	.string "Pokémon grow stronger by defeating\n"
+	.string "other Pokémon in battle.\p"
+	.string "Some Pokémon even grow into an\n"
+	.string "entirely different form in a process\l"
+	.string "known as evolution.$"
+
 JubilifeCity_Text_ClownItemQuestion:
 	.string "Hi! I’m a Pokétch campaign clown!\n"
 	.string "Let’s roll out my question!\p"
@@ -731,6 +762,14 @@ JubilifeCity_Text_ClownItemExplain:
 	.string "Here you go!\n"
 	.string "Your Pokétch Coupon!$"
 
+JubilifeCity_Text_ClownItemDone:
+	.string "You’re absolutely correct!\p"
+	.string "A Pokémon may hold a single item.\p"
+	.string "Some items become effective as soon\n"
+	.string "as they are held by Pokémon.\p"
+	.string "Berries are eaten by Pokémon as\n"
+	.string "necessary during battle.$"
+
 JubilifeCity_Text_ClownTypeQuestion:
 	.string "Hi! I’m a Pokétch campaign clown!\n"
 	.string "Let’s roll out my question!\p"
@@ -745,6 +784,11 @@ JubilifeCity_Text_ClownTypeExplain:
 	.string "more powerful!\p"
 	.string "Here you go!\n"
 	.string "Your Pokétch Coupon!$"
+
+JubilifeCity_Text_ClownTypeDone:
+	.string "If the Pokémon’s type matches its\n"
+	.string "move’s type, that move is made much\l"
+	.string "more powerful!$"
 
 JubilifeCity_Text_TradingWithBuddy:
 	.string "I’m trading Pokémon with my buddy!$"

@@ -702,7 +702,8 @@ Route201_EventScript_MartSample::
 	end
 
 Route201_EventScript_MartSample2::
-	msgbox Route201_Text_MartSample2, MSGBOX_NPC
+	msgbox Route201_Text_MartSample2, MSGBOX_DEFAULT
+	release
 	end
 
 Route201_EventScript_SchoolKidTalk::
