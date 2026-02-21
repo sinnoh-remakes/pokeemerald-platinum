@@ -358,7 +358,7 @@
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "2",
-      "script": "NULL"
+      "script": "JubilifeCity_EventScript_PoketchMeet1"
     },
     {
       "type": "trigger",
@@ -367,7 +367,7 @@
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "2",
-      "script": "NULL"
+      "script": "JubilifeCity_EventScript_PoketchMeet2"
     },
     {
       "type": "trigger",
@@ -376,7 +376,7 @@
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "2",
-      "script": "NULL"
+      "script": "JubilifeCity_EventScript_PoketchMeet3"
     },
     {
       "type": "trigger",
@@ -385,7 +385,7 @@
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "2",
-      "script": "NULL"
+      "script": "JubilifeCity_EventScript_PoketchMeet4"
     },
     {
       "type": "trigger",
@@ -394,7 +394,7 @@
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "2",
-      "script": "NULL"
+      "script": "JubilifeCity_EventScript_PoketchMeet5"
     }
   ],
   "bg_events": []
