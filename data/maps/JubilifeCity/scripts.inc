@@ -498,14 +498,28 @@ JubilifeCity_EventScript_PoketchPromote::
 	end
 
 JubilifeCity_EventScript_PoketchExplain::
+	goto_if_set FLAG_JUBILIFE_CLOWN_GROW, JubilifeCity_EventScript_PoketchCheck1
 	msgbox JubilifeCity_Text_Poketch_Explain, MSGBOX_NPC
-	@ FODO: Add coupon count check
+	end
+
+JubilifeCity_EventScript_PoketchCheck1::
+	goto_if_set FLAG_JUBILIFE_CLOWN_ITEM, JubilifeCity_EventScript_PoketchCheck2
+	msgbox JubilifeCity_Text_Poketch_Explain, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_PoketchCheck2::
+	goto_if_set FLAG_JUBILIFE_CLOWN_TYPE, JubilifeCity_EventScript_PoketchCheck3
+	msgbox JubilifeCity_Text_Poketch_Explain, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_PoketchCheck3::
 	msgbox JubilifeCity_Text_Poketch_Count, MSGBOX_NPC
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox JubilifeCity_Text_Poketch_Leave, MSGBOX_NPC
 	@ FODO: Add position specific leave code
-	@ applymovement LOCALID_POKETCH_NPC, Common_Movement_ExclamationMark
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up17
+	waitmovement 0
 	end
 
 JubilifeCity_EventScript_PoketchMeet1::
