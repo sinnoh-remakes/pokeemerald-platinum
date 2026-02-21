@@ -480,6 +480,110 @@ JubilifeCity_EventScript_ClownTypeDone::
 	release
 	end
 
+JubilifeCity_EventScript_PoketchGreet::
+	lock
+	faceplayer
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	delay 48
+	return
+
+JubilifeCity_EventScript_PoketchPromote::
+	msgbox JubilifeCity_Text_Poketch_Promotion, MSGBOX_DEFAULT
+	release
+	end
+
+JubilifeCity_EventScript_PoketchExplain::
+	msgbox JubilifeCity_Text_Poketch_Explain, MSGBOX_NPC
+	@ FODO: Add coupon count check
+	msgbox JubilifeCity_Text_Poketch_Count, MSGBOX_NPC
+	giveitem ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox JubilifeCity_Text_Poketch_Leave, MSGBOX_NPC
+	@ FODO: Add position specific leave code
+	@ applymovement LOCALID_POKETCH_NPC, Common_Movement_ExclamationMark
+	end
+
+JubilifeCity_EventScript_PoketchMeet1::
+	call JubilifeCity_EventScript_PoketchGreet
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch1
+	waitmovement 0
+	call JubilifeCity_EventScript_PoketchPromote
+	end
+
+JubilifeCity_EventScript_PoketchMeet2::
+	call JubilifeCity_EventScript_PoketchGreet
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch2
+	waitmovement 0
+	call JubilifeCity_EventScript_PoketchPromote
+	end
+
+JubilifeCity_EventScript_PoketchMeet3::
+	call JubilifeCity_EventScript_PoketchGreet
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch3
+	waitmovement 0
+	call JubilifeCity_EventScript_PoketchPromote
+	end
+
+JubilifeCity_EventScript_PoketchMeet4::
+	call JubilifeCity_EventScript_PoketchGreet
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch4
+	waitmovement 0
+	call JubilifeCity_EventScript_PoketchPromote
+	end
+
+JubilifeCity_EventScript_PoketchMeet5::
+	call JubilifeCity_EventScript_PoketchGreet
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch5
+	waitmovement 0
+	call JubilifeCity_EventScript_PoketchPromote
+	end
+
+JubilifeCity_Movement_Poketch1:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+JubilifeCity_Movement_Poketch2:
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+JubilifeCity_Movement_Poketch3:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+JubilifeCity_Movement_Poketch4:
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+JubilifeCity_Movement_Poketch5:
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
 JubilifeCity_EventScript_BoyTradingLeft::
 	msgbox JubilifeCity_Text_TradingWithBuddy, MSGBOX_NPC
 	end
@@ -789,6 +893,51 @@ JubilifeCity_Text_ClownTypeDone:
 	.string "If the Pokémon’s type matches its\n"
 	.string "move’s type, that move is made much\l"
 	.string "more powerful!$"
+
+JubilifeCity_Text_Poketch_Promotion:
+	.string "Oh, oh, oh?\p"
+	.string "You call yourself a Pokémon Trainer?\n"
+	.string "And yet you have no Pokétch?\p"
+	.string "That is, Pokémon Watch, or Pokétch\n"
+	.string "for short!\p"
+	.string "Oh my, you are a rare case\n"
+	.string "indeed!\p"
+	.string "You see, I invented, and now\n"
+	.string "manufacture, Pokétches.\p"
+	.string "Not only that, I’m now conducting\n"
+	.string "the Pokétch promotional campaign!\p"
+	.string "All you have to do is find three\n"
+	.string "clowns in Jubilife City.\p"
+	.string "If you can find them...\n"
+	.string "I will gift you with a Pokétch!$"
+
+JubilifeCity_Text_Poketch_Explain:
+	.string "The three clowns will each ask you\n"
+	.string "a skill-testing question.\p"
+	.string "The questions will all have to do\n"
+	.string "with Pokémon.\p"
+	.string "After all, a Pokétch is a tool for\n"
+	.string "Pokémon Trainers.\p"
+	.string "Collect a Coupon from each clown,\n"
+	.string "then come see me, OK?$"
+
+JubilifeCity_Text_Poketch_Count:
+	.string "OK, let me count your Coupons!\n"
+	.string "I’ll use the Pokétch here...\p"
+	.string "One, two, three!\n"
+	.string "Bravo! I say, bravo!\p"
+	.string "In return for these Coupons,\n"
+	.string "I present you this Pokémon Watch,\l"
+	.string "or Pokétch for short!$"
+
+JubilifeCity_Text_Poketch_Receive:
+	.string "{PLAYER} received a Pokétch!$"
+
+JubilifeCity_Text_Poketch_Leave:
+	.string "You can add apps to your Pokétch\n"
+	.string "to make it even more versatile!\p"
+	.string "Touch the Pokétch screen and find the\n"
+	.string "apps that are right for you!$"
 
 JubilifeCity_Text_TradingWithBuddy:
 	.string "I’m trading Pokémon with my buddy!$"

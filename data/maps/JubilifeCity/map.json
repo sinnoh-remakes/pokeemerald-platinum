@@ -85,6 +85,20 @@
       "flag": "FLAG_HIDE_JUBILIFE_LOOKER"
     },
     {
+      "local_id": "LOCALID_POKETCH_NPC",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 55,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_PoketchExplain",
+      "flag": "FLAG_JUBILIFE_POKETCH_PROMOTE"
+    },
+    {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 53,
       "y": 44,
@@ -336,6 +350,51 @@
       "var": "FLAG_GLOBAL_TERMINAL_OPEN",
       "var_value": "0",
       "script": "JubilifeCity_EventScript_TerminalGuard4"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 54,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 57,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "NULL"
     }
   ],
   "bg_events": []
