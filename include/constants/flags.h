@@ -44,12 +44,11 @@
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
 #define FLAG_ROUTE201_RECEIVED_POTION    0x20
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_GLOBAL_TERMINAL_OPEN        0x21
+#define FLAG_JUBILIFE_CLOWN_GROW         0x22
+#define FLAG_JUBILIFE_CLOWN_ITEM         0x23
+#define FLAG_JUBILIFE_CLOWN_TYPE         0x24
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
@@ -669,10 +668,10 @@
 #define FLAG_HIDE_SANDGEM_TOWN_PROFESSOR       0x26E
 #define FLAG_HIDE_PLAYER_HOUSE_RIVAL_MOM       0x26F
 #define FLAG_HIDE_ROUTE_202_HELPER             0x270
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
+#define FLAG_HIDE_JUBILIFE_LOOKER              0x271
+#define FLAG_HIDE_JUBILIFE_HELPER              0x272
+#define FLAG_HIDE_JUBILIFE_CLOWNS              0x273
+#define FLAG_HIDE_JUBILIFE_POKETCH             0x274
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag

@@ -265,16 +265,17 @@
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
 #define VAR_TWINLEAF_TOWN_STATE                          0x40F7
-#define VAR_SANDGEM_TOWN_STATE                           0x40F8
-#define VAR_ROUTE201_STATE                               0x40F9
-#define VAR_ROUTE202_STATE                               0x40FA
-#define VAR_VERITY_STATE                                 0x40FB
-#define VAR_ROWAN_LAB_STATE                              0x40FC
-#define VAR_ALTERNATE_TEXT                               0x40FD
-#define VAR_FOLLOWER_TEXT                                0x40FE
-#define VAR_TWINLEAF_INTRO_STATE                         0x40FF
+#define VAR_TWINLEAF_INTRO_STATE                         0x40F8
+#define VAR_SANDGEM_TOWN_STATE                           0x40F9
+#define VAR_SANDGEM_LAB_STATE                            0x40FA
+#define VAR_JUBILIFE_CITY_STATE                          0x40FB
+#define VAR_ROUTE201_STATE                               0x40FC
+#define VAR_ROUTE202_STATE                               0x40FD
+#define VAR_VERITY_STATE                                 0x40FE
+#define VAR_ALTERNATE_TEXT                               0x40FF
+#define VAR_FOLLOWER_TEXT                                0x4100
 
-#define VARS_END                                         0x40FF
+#define VARS_END                                         0x4100
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000

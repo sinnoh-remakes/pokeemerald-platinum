@@ -33,8 +33,8 @@
     {
       "local_id": "LOCALID_JUBILIFE_HELPER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 54,
-      "y": 52,
+      "x": 55,
+      "y": 54,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -42,11 +42,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_JUBILIFE_HELPER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
-      "x": 60,
+      "x": 61,
       "y": 46,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -54,12 +54,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "JubilifeCity_EventScript_BoyTradingLeft",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
-      "x": 62,
+      "x": 63,
       "y": 46,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -67,7 +67,179 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_BoyTradingRight",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_JUBILIFE_LOOKER",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 58,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
+      "flag": "FLAG_HIDE_JUBILIFE_LOOKER"
+    },
+    {
+      "local_id": "LOCALID_POKETCH_NPC",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 55,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_PoketchExplain",
+      "flag": "FLAG_HIDE_JUBILIFE_POKETCH"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 53,
+      "y": 44,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_OldManSchool",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_TERMINAL_GUARD",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 35,
+      "y": 43,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuardOpen",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 60,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_SchoolKid",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 64,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_ClownGrow",
+      "flag": "FLAG_HIDE_JUBILIFE_CLOWNS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 50,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_OldManFountain",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 55,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_AceTrainer1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 45,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_ClownItem",
+      "flag": "FLAG_HIDE_JUBILIFE_CLOWNS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 45,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_AceTrainerGroup",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 42,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_Twin",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 24,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_ClownType",
+      "flag": "FLAG_HIDE_JUBILIFE_CLOWNS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 26,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_AceTrainer2",
       "flag": "0"
     }
   ],
@@ -118,30 +290,111 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 53,
-      "y": 60,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_Left"
-    },
-    {
-      "type": "trigger",
       "x": 54,
       "y": 60,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_Center"
+      "script": "JubilifeCity_EventScript_HelperEncounter_1"
     },
     {
       "type": "trigger",
       "x": 55,
       "y": 60,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "0",
-      "script": "Jubilife_EventScript_HelperEncounter_Right"
+      "script": "JubilifeCity_EventScript_HelperEncounter_2"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 60,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_HelperEncounter_3"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 44,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard1"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 45,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard2"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 46,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard3"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 47,
+      "elevation": 0,
+      "var": "FLAG_GLOBAL_TERMINAL_OPEN",
+      "var_value": "0",
+      "script": "JubilifeCity_EventScript_TerminalGuard4"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "JubilifeCity_EventScript_PoketchMeet1"
+    },
+    {
+      "type": "trigger",
+      "x": 54,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "JubilifeCity_EventScript_PoketchMeet2"
+    },
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "JubilifeCity_EventScript_PoketchMeet3"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "JubilifeCity_EventScript_PoketchMeet4"
+    },
+    {
+      "type": "trigger",
+      "x": 57,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "JubilifeCity_EventScript_PoketchMeet5"
     }
   ],
   "bg_events": []
