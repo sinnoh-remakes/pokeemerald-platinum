@@ -500,6 +500,7 @@ JubilifeCity_EventScript_PoketchGreet::
 JubilifeCity_EventScript_PoketchPromote::
 	msgbox JubilifeCity_Text_Poketch_Promotion, MSGBOX_DEFAULT
 	release
+	special RemoveCameraObject
 	end
 
 JubilifeCity_EventScript_PoketchMeet1::
@@ -558,13 +559,16 @@ JubilifeCity_EventScript_PoketchCheck2::
 	end
 
 JubilifeCity_EventScript_PoketchCheck3::
-	msgbox JubilifeCity_Text_Poketch_Count, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox JubilifeCity_Text_Poketch_Count, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox JubilifeCity_Text_Poketch_Leave, MSGBOX_NPC
+	msgbox JubilifeCity_Text_Poketch_Leave, MSGBOX_DEFAULT
 	@ FODO: Add position specific leave code
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up17
 	waitmovement 0
+	release
 	end
 
 JubilifeCity_Movement_PoketchCameraPanUp:
