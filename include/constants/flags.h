@@ -45,10 +45,9 @@
 
 #define FLAG_ROUTE201_RECEIVED_POTION    0x20
 #define FLAG_GLOBAL_TERMINAL_OPEN        0x21
-#define FLAG_JUBILIFE_POKETCH_PROMOTE    0x22
-#define FLAG_JUBILIFE_CLOWN_GROW         0x23
-#define FLAG_JUBILIFE_CLOWN_ITEM         0x24
-#define FLAG_JUBILIFE_CLOWN_TYPE         0x25
+#define FLAG_JUBILIFE_CLOWN_GROW         0x22
+#define FLAG_JUBILIFE_CLOWN_ITEM         0x23
+#define FLAG_JUBILIFE_CLOWN_TYPE         0x24
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
@@ -672,7 +671,7 @@
 #define FLAG_HIDE_JUBILIFE_LOOKER              0x271
 #define FLAG_HIDE_JUBILIFE_HELPER              0x272
 #define FLAG_HIDE_JUBILIFE_CLOWNS              0x273
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
+#define FLAG_HIDE_JUBILIFE_POKETCH             0x274
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag

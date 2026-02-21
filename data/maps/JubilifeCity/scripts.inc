@@ -568,6 +568,7 @@ JubilifeCity_EventScript_PoketchCheck3::
 	@ FODO: Add position specific leave code
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up17
 	waitmovement 0
+	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	release
 	end
 
