@@ -486,7 +486,7 @@ JubilifeCity_EventScript_PoketchGreet::
 	faceplayer
 	setvar VAR_JUBILIFE_CITY_STATE, 3
 	special SpawnCameraObject
-	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PoketchCameraPanUp
+	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up2
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_WalkInPlaceDown
@@ -505,7 +505,7 @@ JubilifeCity_EventScript_PoketchPromote::
 
 JubilifeCity_EventScript_PoketchMeet1::
 	call JubilifeCity_EventScript_PoketchGreet
-	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PoketchCameraPanDown
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
 	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch1
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
@@ -513,7 +513,7 @@ JubilifeCity_EventScript_PoketchMeet1::
 
 JubilifeCity_EventScript_PoketchMeet2::
 	call JubilifeCity_EventScript_PoketchGreet
-	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PoketchCameraPanDown
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
 	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch2
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
@@ -521,7 +521,7 @@ JubilifeCity_EventScript_PoketchMeet2::
 
 JubilifeCity_EventScript_PoketchMeet3::
 	call JubilifeCity_EventScript_PoketchGreet
-	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PoketchCameraPanDown
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
 	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch3
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
@@ -529,7 +529,7 @@ JubilifeCity_EventScript_PoketchMeet3::
 
 JubilifeCity_EventScript_PoketchMeet4::
 	call JubilifeCity_EventScript_PoketchGreet
-	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PoketchCameraPanDown
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
 	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch4
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
@@ -537,7 +537,7 @@ JubilifeCity_EventScript_PoketchMeet4::
 
 JubilifeCity_EventScript_PoketchMeet5::
 	call JubilifeCity_EventScript_PoketchGreet
-	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PoketchCameraPanDown
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
 	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch5
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
@@ -571,16 +571,6 @@ JubilifeCity_EventScript_PoketchCheck3::
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	release
 	end
-
-JubilifeCity_Movement_PoketchCameraPanUp:
-	walk_up
-	walk_up
-	step_end
-
-JubilifeCity_Movement_PoketchCameraPanDown:
-	walk_down
-	walk_down
-	step_end
 
 JubilifeCity_Movement_Poketch1:
 	walk_down
