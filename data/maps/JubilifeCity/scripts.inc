@@ -5,6 +5,7 @@ JubilifeCity_MapScripts::
 @ State descriptions For VAR_JUBILIFE_CITY_STATE
 @ 1: Encountered helper
 @ 2: Received Town Map
+@ 3: Talked to Poketch Man
 @ 3: Received Poketch
 @ 4: Received Coal Badge
 
@@ -483,6 +484,7 @@ JubilifeCity_EventScript_ClownTypeDone::
 JubilifeCity_EventScript_PoketchGreet::
 	lock
 	faceplayer
+	setvar VAR_JUBILIFE_CITY_STATE, 3
 	special SpawnCameraObject
 	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PoketchCameraPanUp
 	waitmovement 0
