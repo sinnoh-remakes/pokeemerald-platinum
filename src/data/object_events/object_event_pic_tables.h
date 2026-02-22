@@ -18,6 +18,434 @@ static const struct SpriteFrameImage sPicTable_ProfRowan[] = {
     overworld_ascending_frames(gObjectEventPic_ProfRowan, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_BugCatcherPt[] = {
+    overworld_ascending_frames(gObjectEventPic_BugCatcherPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AceTrainerMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_AceTrainerMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RoughneckPt[] = {
+    overworld_ascending_frames(gObjectEventPic_RoughneckPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RuinManiacPt[] = {
+    overworld_ascending_frames(gObjectEventPic_RuinManiacPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BlackBeltPt[] = {
+    overworld_ascending_frames(gObjectEventPic_BlackBeltPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaidPt[] = {
+    overworld_ascending_frames(gObjectEventPic_MaidPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RichBoyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_RichBoyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PsychicPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PsychicPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_LassPt[] = {
+    overworld_ascending_frames(gObjectEventPic_LassPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BattleGirlPt[] = {
+    overworld_ascending_frames(gObjectEventPic_BattleGirlPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BeautyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_BeautyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AceTrainerFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_AceTrainerFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_IdolPt[] = {
+    overworld_ascending_frames(gObjectEventPic_IdolPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SocialitePt[] = {
+    overworld_ascending_frames(gObjectEventPic_SocialitePt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CowgirlPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CowgirlPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_LadyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_LadyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AceTrainerColdFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_AceTrainerColdFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AceTrainerColdMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_AceTrainerColdMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AromaLadyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_AromaLadyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ArtistPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ArtistPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BabyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_BabyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CameramanPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CameramanPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CamperPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CamperPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ClownPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ClownPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CollectorPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CollectorPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CyclistFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CyclistFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CyclistMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CyclistMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_FishermanPt[] = {
+    overworld_ascending_frames(gObjectEventPic_FishermanPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GalacticCyrusPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GalacticCyrusPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GalacticGruntFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GalacticGruntFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GalacticGruntMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GalacticGruntMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GalacticJupiterPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GalacticJupiterPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GalacticMarsPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GalacticMarsPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GalacticSaturnPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GalacticSaturnPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GentlemanPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GentlemanPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GuitaristPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GuitaristPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GymGuyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GymGuyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_HikerPt[] = {
+    overworld_ascending_frames(gObjectEventPic_HikerPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_JoggerMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_JoggerMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_LookerPt[] = {
+    overworld_ascending_frames(gObjectEventPic_LookerPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_NDSKidPt[] = {
+    overworld_ascending_frames(gObjectEventPic_NDSKidPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_NinjaBoyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_NinjaBoyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_NurseJoyPt[] = {
+    overworld_ascending_frames(gObjectEventPic_NurseJoyPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PicnickerPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PicnickerPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PokemonBreederMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PokemonBreederMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PolicemanPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PolicemanPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ProfOakPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ProfOakPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RancherPt[] = {
+    overworld_ascending_frames(gObjectEventPic_RancherPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ReporterPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ReporterPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PokefanFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PokefanFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SailorPt[] = {
+    overworld_ascending_frames(gObjectEventPic_SailorPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ScientistFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ScientistFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ScientistMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ScientistMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SkierFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_SkierFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SkierMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_SkierMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SwimmerFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_SwimmerFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SwimmerMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_SwimmerMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TealaPt[] = {
+    overworld_ascending_frames(gObjectEventPic_TealaPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TuberFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_TuberFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TuberMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_TuberMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TwinsPt[] = {
+    overworld_ascending_frames(gObjectEventPic_TwinsPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_VeteranPt[] = {
+    overworld_ascending_frames(gObjectEventPic_VeteranPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_WaiterPt[] = {
+    overworld_ascending_frames(gObjectEventPic_WaiterPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_WaitressPt[] = {
+    overworld_ascending_frames(gObjectEventPic_WaitressPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_WorkerPt[] = {
+    overworld_ascending_frames(gObjectEventPic_WorkerPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_YoungsterPt[] = {
+    overworld_ascending_frames(gObjectEventPic_YoungsterPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_OldWomanPt[] = {
+    overworld_ascending_frames(gObjectEventPic_OldWomanPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_WomanSnowPt[] = {
+    overworld_ascending_frames(gObjectEventPic_WomanSnowPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_OldManPt[] = {
+    overworld_ascending_frames(gObjectEventPic_OldManPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ManSnowPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ManSnowPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_WomanMiddleAgedPt[] = {
+    overworld_ascending_frames(gObjectEventPic_WomanMiddleAgedPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ManMiddleAgedPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ManMiddleAgedPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ReceptionistPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ReceptionistPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_FrontierSinglesPt[] = {
+    overworld_ascending_frames(gObjectEventPic_FrontierSinglesPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_FrontierMultiPt[] = {
+    overworld_ascending_frames(gObjectEventPic_FrontierMultiPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_FrontierBoothPt[] = {
+    overworld_ascending_frames(gObjectEventPic_FrontierBoothPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PalmerPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PalmerPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SchoolKidFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_SchoolKidFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SchoolKidMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_SchoolKidMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PlazaAttendantFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PlazaAttendantFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PlazaAttendantMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PlazaAttendantMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ExpertFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ExpertFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_JasminePt[] = {
+    overworld_ascending_frames(gObjectEventPic_JasminePt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CashierFPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CashierFPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CashierMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CashierMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PokefanMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_PokefanMPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RoarkPt[] = {
+    overworld_ascending_frames(gObjectEventPic_RoarkPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GardeniaPt[] = {
+    overworld_ascending_frames(gObjectEventPic_GardeniaPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaylenePt[] = {
+    overworld_ascending_frames(gObjectEventPic_MaylenePt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CrasherWakePt[] = {
+    overworld_ascending_frames(gObjectEventPic_CrasherWakePt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_FantinaPt[] = {
+    overworld_ascending_frames(gObjectEventPic_FantinaPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ByronPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ByronPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CandicePt[] = {
+    overworld_ascending_frames(gObjectEventPic_CandicePt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_VolknerPt[] = {
+    overworld_ascending_frames(gObjectEventPic_VolknerPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AaronPt[] = {
+    overworld_ascending_frames(gObjectEventPic_AaronPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BerthaPt[] = {
+    overworld_ascending_frames(gObjectEventPic_BerthaPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_FlintPt[] = {
+    overworld_ascending_frames(gObjectEventPic_FlintPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_LucianPt[] = {
+    overworld_ascending_frames(gObjectEventPic_LucianPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CynthiaPt[] = {
+    overworld_ascending_frames(gObjectEventPic_CynthiaPt, 4, 4),
+};
+
+// static const struct SpriteFrameImage sPicTable_GalacticCharonPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_GalacticCharonPt, 4, 4),
+// };
+
+// static const struct SpriteFrameImage sPicTable_RileyPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_RileyPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_CherylPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_CherylPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_ParasolLadyPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_ParasolLadyPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_BuckPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_BuckPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_MarleyPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_MarleyPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_MiraPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_MiraPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_Pt[] = {
+    // overworld_ascending_frames(gObjectEventPic_Pt, 4, 4),
+// };
+
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
 };
