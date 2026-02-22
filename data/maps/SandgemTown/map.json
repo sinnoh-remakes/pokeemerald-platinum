@@ -73,7 +73,7 @@
       "flag": "FLAG_HIDE_SANDGEM_TOWN_PROFESSOR"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "graphics_id": "OBJ_EVENT_GFX_POKEMON_BREEDER_M_PT",
       "x": 13,
       "y": 24,
       "elevation": 0,
@@ -86,7 +86,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY_PT",
       "x": 26,
       "y": 22,
       "elevation": 0,
@@ -99,7 +99,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_PT",
       "x": 29,
       "y": 25,
       "elevation": 0,
