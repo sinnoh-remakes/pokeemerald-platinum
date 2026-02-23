@@ -211,6 +211,32 @@ Burmy
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_HARRISON_PT ===
+Name: HARRISON
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Starly
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CHRISTINE ===
+Name: CHRISTINE
+Class: School Kid
+Pic: School Kid F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Bidoof
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_RIVAL_ROUTE_203_PIPLUP ===
 Name: BARRY
 Class: Rival
