@@ -123,6 +123,51 @@ JubilifeCity_TrainerSchool_EventScript_Notebook::
 	msgbox JubilifeCity_TrainerSchool_Text_NotebookWithWriting, MSGBOX_SIGN
 	end
 
+JubilifeCity_TrainerSchool_EventScript_PictureBooks::
+	msgbox JubilifeCity_TrainerSchool_Text_PictureBooks, MSGBOX_SIGN
+	end
+
+JubilifeCity_TrainerSchool_EventScript_PokemonBooks::
+	msgbox JubilifeCity_TrainerSchool_Text_PokemonBooks, MSGBOX_SIGN
+	end
+
+JubilifeCity_TrainerSchool_EventScript_Blackboard::
+	msgbox JubilifeCity_TrainerSchool_Text_ListStatusChanges, MSGBOX_DEFAULT
+	multichoice 20, 6, MULTI_TRAINER_SCHOOL_BLACKBOARD, FALSE
+	switch VAR_RESULT
+	case 0, JubilifeCity_TrainerSchool_EventScript_BlackboardPoison
+	case 1, JubilifeCity_TrainerSchool_EventScript_BlackboardParalyze
+	case 2, JubilifeCity_TrainerSchool_EventScript_BlackboardSleep
+	case 3, JubilifeCity_TrainerSchool_EventScript_BlackboardBurn
+	case 4, JubilifeCity_TrainerSchool_EventScript_BlackboardFrozen
+	closemessage
+	end
+
+JubilifeCity_TrainerSchool_EventScript_BlackboardPoison::
+	msgbox JubilifeCity_TrainerSchool_Text_BlackboardPoison
+	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	end
+
+JubilifeCity_TrainerSchool_EventScript_BlackboardParalyze::
+	msgbox JubilifeCity_TrainerSchool_Text_BlackboardParalyze
+	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	end
+
+JubilifeCity_TrainerSchool_EventScript_BlackboardSleep::
+	msgbox JubilifeCity_TrainerSchool_Text_BlackboardSleep
+	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	end
+
+JubilifeCity_TrainerSchool_EventScript_BlackboardBurn::
+	msgbox JubilifeCity_TrainerSchool_Text_BlackboardBurn
+	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	end
+
+JubilifeCity_TrainerSchool_EventScript_BlackboardFrozen::
+	msgbox JubilifeCity_TrainerSchool_Text_BlackboardFrozen
+	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	end
+
 JubilifeCity_TrainerSchool_Text_ComeToStudy:
 	.string "{RIVAL}: Hey, {PLAYER}!\n"
 	.string "Did you come to study, too?\p"
@@ -223,3 +268,54 @@ JubilifeCity_TrainerSchool_Text_NotebookWithWriting:
 	.string "A Trainer’s mission is to defeat the\n"
 	.string "strong Trainers who await challengers\l"
 	.string "in Pokémon Gyms.$"
+
+JubilifeCity_TrainerSchool_Text_PictureBooks:
+	.string "It's lined with Pokemon picture books.$"
+
+JubilifeCity_TrainerSchool_Text_PokemonBooks:
+	.string "It's chock-full of Pokemon books and\n"
+	.string "photo collections.$"
+
+JubilifeCity_TrainerSchool_Text_ListStatusChanges:
+	.string "The blackboard lists status changes\n"
+	.string "that may affect Pokémon in battle.\l"
+	.string "Which would you like to read about?$"
+
+JubilifeCity_TrainerSchool_Text_BlackboardPoison:
+	.string "If a Pokémon is poisoned, it will\n"
+	.string "steadily lose HP.\p"
+	.string "The effects of poison remain after\n"
+	.string "a battle.\p"
+	.string "A poisoned Pokémon’s HP will drop\n"
+	.string "while it is traveling.\p"
+	.string "Heal a poisoning using an Antidote.$"
+
+JubilifeCity_TrainerSchool_Text_BlackboardParalyze:
+	.string "If a Pokémon becomes paralyzed,\n"
+	.string "its Speed stat drops.\p"
+	.string "In addition, it may not be able to\n"
+	.string "move while it is in battle.\p"
+	.string "Paralysis remains after battle.\n"
+	.string "Cure it using a Parlyz Heal.$"
+
+JubilifeCity_TrainerSchool_Text_BlackboardSleep:
+	.string "If a Pokémon falls asleep, it will be\n"
+	.string "unable to attack.\p"
+	.string "The Pokémon may wake up on its own,\n"
+	.string "but if a battle ends while it is\l"
+	.string "sleeping, it will stay asleep.\p"
+	.string "Wake it up using an Awakening.$"
+
+JubilifeCity_TrainerSchool_Text_BlackboardBurn:
+	.string "A burn reduces the Attack stat and\n"
+	.string "steadily reduces the victim’s HP.\p"
+	.string "A burn lingers after battle.\n"
+	.string "Cure a burn using a Burn Heal.$"
+
+JubilifeCity_TrainerSchool_Text_BlackboardFrozen:
+	.string "If a Pokémon is frozen, it becomes\n"
+	.string "completely helpless.\p"
+	.string "The Pokémon may thaw out on its own,\n"
+	.string "but if a battle ends while it is\l"
+	.string "frozen, it will stay frozen."
+	.string "Thaw it out using an Ice Heal.$"
