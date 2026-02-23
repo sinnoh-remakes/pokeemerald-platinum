@@ -147,8 +147,10 @@ JubilifeCity_EventScript_HelperWalkUp::
 	msgbox JubilifeCity_Text_Um, MSGBOX_DEFAULT
 	applymovement LOCALID_JUBILIFE_LOOKER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_JUBILIFE_LOOKER, Common_Movement_ExclamationMark
 	waitmovement 0
+	delay 48
 	delay 48
 	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_SIGN
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkInPlaceUp
@@ -345,6 +347,7 @@ JubilifeCity_EventScript_TerminalGuard4::
 	end
 	
 JubilifeCity_EventScript_TerminalGuardExclaim::
+	playse SE_PIN
 	applymovement LOCALID_TERMINAL_GUARD, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
@@ -500,6 +503,7 @@ JubilifeCity_EventScript_PoketchGreet::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_WalkInPlaceDown
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
