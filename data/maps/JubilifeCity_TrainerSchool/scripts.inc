@@ -138,6 +138,26 @@ JubilifeCity_TrainerSchool_EventScript_ChristineDecline::
 	msgbox JubilifeCity_TrainerSchool_Text_SenseOfAdventure, MSGBOX_AUTOCLOSE
 	end
 
+JubilifeCity_TrainerSchool_EventScript_AceTrainerF::
+	msgbox JubilifeCity_TrainerSchool_Text_PerfectlyFine, MSGBOX_NPC
+	end
+
+JubilifeCity_TrainerSchool_EventScript_Lass::
+	msgbox JubilifeCity_TrainerSchool_Text_SmartEnough, MSGBOX_NPC
+	end
+
+JubilifeCity_TrainerSchool_EventScript_Youngster1::
+	msgbox JubilifeCity_TrainerSchool_Text_WroteAnEssay, MSGBOX_NPC
+	end
+
+JubilifeCity_TrainerSchool_EventScript_Youngster2::
+	msgbox JubilifeCity_TrainerSchool_Text_LearnedAboutTypes, MSGBOX_NPC
+	end
+
+JubilifeCity_TrainerSchool_EventScript_Notebook::
+	msgbox JubilifeCity_TrainerSchool_Text_NotebookWithWriting, MSGBOX_SIGN
+	end
+
 JubilifeCity_TrainerSchool_Text_DoingIt:
 	.string "Doing it is the best way to learn!\n"
 	.string "Can we get a battle with you?$"
@@ -165,3 +185,41 @@ JubilifeCity_TrainerSchool_Text_SenseOfAdventure:
 	.string "Where’s your sense of adventure?\p"
 	.string "Don’t be shy about talking to people\n"
 	.string "and getting into battles!$"
+
+JubilifeCity_TrainerSchool_Text_PerfectlyFine:
+	.string "It’s perfectly fine for Trainers and\n"
+	.string "Pokémon to develop at their own pace.\p"
+	.string "If there is anything you’re not familiar\n"
+	.string "with, you can look it up here.$"
+
+JubilifeCity_TrainerSchool_Text_SmartEnough:
+	.string "Pokémon are smart enough to use\n"
+	.string "items they’re holding.\p"
+	.string "But they won’t know what to do with\n"
+	.string "man-made items like Potions and\l"
+	.string "Antidotes.$"
+
+JubilifeCity_TrainerSchool_Text_WroteAnEssay:
+	.string "I wrote an essay in my notebook on \n"
+	.string "what makes a true Pokémon Trainer.$"
+
+JubilifeCity_TrainerSchool_Text_LearnedAboutTypes:
+	.string "We learned about Pokémon types\n"
+	.string "today. Umm...\p"
+	.string "Grass is weak to Fire,\p"
+	.string "Fire is weak to Water,\p"
+	.string "and Water is weak to Grass!$"
+
+JubilifeCity_TrainerSchool_Text_NotebookWithWriting:
+	.string "It’s a notebook filled with writing.\n"
+	.string "Let’s see...\p"
+	.string "Pokémon are to be caught using\n"
+	.string "Poké Balls.\p"
+	.string "Up to six Pokémon can accompany\n"
+	.string "a Trainer.\p"
+	.string "A Trainer is someone who catches\n"
+	.string "Pokémon, raises them, and battles\l"
+	.string "with them.\p"
+	.string "A Trainer’s mission is to defeat the\n"
+	.string "strong Trainers who await challengers\l"
+	.string "in Pokémon Gyms.$"
