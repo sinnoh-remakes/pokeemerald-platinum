@@ -54,41 +54,6 @@ JubilifeCity_TrainerSchool_Movement_BarryLeaveAlternate:
 	walk_fast_down
 	step_end
 
-JubilifeCity_TrainerSchool_Text_ComeToStudy:
-	.string "{RIVAL}: Hey, {PLAYER}!\n"
-	.string "Did you come to study, too?\p"
-	.string "I went ahead and memorized everything\n"
-	.string "that was up on the blackboard.\p"
-	.string "After all, it’s the Trainer’s job to\n"
-	.string "avoid having their precious Pokémon\l"
-	.string "hurt in battle, right?\p"
-	.string "So, {PLAYER}, what brings you?\n"
-	.string "Huh?\l"
-	.string "You’ve got something for me?$"
-
-JubilifeCity_TrainerSchool_Text_DeliveredTheParcel:
-	.string "{PLAYER} delivered the Parcel.$"
-
-JubilifeCity_TrainerSchool_Text_WhatIsThis:
-	.string "{RIVAL}: So, what is this...?\p"
-	.string "Score!\n"
-	.string "It’s a Town Map!\p"
-	.string "Huh?!\n"
-	.string "Why are there two in here?\p"
-	.string "I like it a lot, but I don’t need two.\n"
-	.string "Here, {PLAYER}, you take one!$"
-
-JubilifeCity_TrainerSchool_Text_AccordingToTownMap:
-	.string "{RIVAL}: Hmm...\p"
-	.string "Well, according to the Town Map,\n"
-	.string "I guess Oreburgh City is where\l"
-	.string "I should be going next.\p"
-	.string "There’s a Gym, so it’d be perfect for\n"
-	.string "raising the Pokémon I just caught.\p"
-	.string "Well, I’m on the road to becoming\n"
-	.string "the greatest Trainer of all time!\p"
-	.string "See you around!$"
-
 JubilifeCity_TrainerSchool_EventScript_Harrison::
 	goto_if_set FLAG_TRAINER_SCHOOL_RECEIVED_POTION, JubilifeCity_TrainerSchool_EventScript_HarrisonDefeated
 	goto_if_set FLAG_DEFEATED_HARRISON_TRAINER_SCHOOL, JubilifeCity_TrainerSchool_EventScript_HarrisonCheckChristine
@@ -157,6 +122,41 @@ JubilifeCity_TrainerSchool_EventScript_Youngster2::
 JubilifeCity_TrainerSchool_EventScript_Notebook::
 	msgbox JubilifeCity_TrainerSchool_Text_NotebookWithWriting, MSGBOX_SIGN
 	end
+
+JubilifeCity_TrainerSchool_Text_ComeToStudy:
+	.string "{RIVAL}: Hey, {PLAYER}!\n"
+	.string "Did you come to study, too?\p"
+	.string "I went ahead and memorized everything\n"
+	.string "that was up on the blackboard.\p"
+	.string "After all, it’s the Trainer’s job to\n"
+	.string "avoid having their precious Pokémon\l"
+	.string "hurt in battle, right?\p"
+	.string "So, {PLAYER}, what brings you?\n"
+	.string "Huh?\l"
+	.string "You’ve got something for me?$"
+
+JubilifeCity_TrainerSchool_Text_DeliveredTheParcel:
+	.string "{PLAYER} delivered the Parcel.$"
+
+JubilifeCity_TrainerSchool_Text_WhatIsThis:
+	.string "{RIVAL}: So, what is this...?\p"
+	.string "Score!\n"
+	.string "It’s a Town Map!\p"
+	.string "Huh?!\n"
+	.string "Why are there two in here?\p"
+	.string "I like it a lot, but I don’t need two.\n"
+	.string "Here, {PLAYER}, you take one!$"
+
+JubilifeCity_TrainerSchool_Text_AccordingToTownMap:
+	.string "{RIVAL}: Hmm...\p"
+	.string "Well, according to the Town Map,\n"
+	.string "I guess Oreburgh City is where\l"
+	.string "I should be going next.\p"
+	.string "There’s a Gym, so it’d be perfect for\n"
+	.string "raising the Pokémon I just caught.\p"
+	.string "Well, I’m on the road to becoming\n"
+	.string "the greatest Trainer of all time!\p"
+	.string "See you around!$"
 
 JubilifeCity_TrainerSchool_Text_DoingIt:
 	.string "Doing it is the best way to learn!\n"
