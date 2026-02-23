@@ -48,9 +48,9 @@
 #define FLAG_JUBILIFE_CLOWN_GROW               0x22
 #define FLAG_JUBILIFE_CLOWN_ITEM               0x23
 #define FLAG_JUBILIFE_CLOWN_TYPE               0x24
-#define FLAG_DEFEATED_HARRISON_TRAINER_SCHOOL  0x25
-#define FLAG_DEFEATED_CHRISTINE_TRAINER_SCHOOL 0x26
-#define FLAG_TRAINER_SCHOOL_RECEIVED_POTION    0x27
+#define FLAG_TRAINER_SCHOOL_RECEIVED_POTION    0x25
+#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
