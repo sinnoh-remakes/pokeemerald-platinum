@@ -4833,17 +4833,6 @@ Route202_Text_TristanRematchPostBattle:
 	.string "If you're going to get stronger,\n"
 	.string "I'll get stronger, too.$"
 
-Route202_Text_LoganIntro:
-	.string "Let's have a Pokémon battle!\n"
-	.string "Humph! But I'm gonna win!$"
-
-Route202_Text_LoganDefeated:
-	.string "You're, like, wow!$"
-
-Route202_Text_LoganPostBattle:
-	.string "It's fun to battle others!\n"
-	.string "I'm gonna battle all sorts of people!$"
-
 Route202_Text_NatalieIntro:
 	.string "I spy, with my little eye...\n"
 	.string "A Trainer!\p"
@@ -4856,6 +4845,58 @@ Route202_Text_NatalieDefeated:
 Route202_Text_NataliePostBattle:
 	.string "My Pokémon are all tuckered out!\n"
 	.string "I need to go to a Poké Center!$"
+
+Route202_Text_LoganIntro:
+	.string "Let's have a Pokémon battle!\n"
+	.string "Humph! But I'm gonna win!$"
+
+Route202_Text_LoganDefeated:
+	.string "You're, like, wow!$"
+
+Route202_Text_LoganPostBattle:
+	.string "It's fun to battle others!\n"
+	.string "I'm gonna battle all sorts of people!$"
+
+JubilifeCity_TrainerSchool_Text_HarrisonIntro:
+	.string "Go!\n"
+	.string "My Pokémon, go!$"
+
+JubilifeCity_TrainerSchool_Text_HarrisonDefeated:
+	.string "Ugh...\n"
+	.string "I didn't use items effectively.$"
+
+JubilifeCity_TrainerSchool_Text_HarrisonPostBattle:
+	.string "It’s hard to win if you don’t have\n"
+	.string "some Pokémon to choose from.$"
+
+JubilifeCity_TrainerSchool_Text_HarrisonEventText:
+	.string "Whew! You’re really good!\p"
+	.string "We’ve been studying every day, but\n"
+	.string "we were no match for you at all!\p"
+	.string "You’d be able to use this Potion\n"
+	.string "properly. Here you go!$"
+
+JubilifeCity_TrainerSchool_Text_ChristineIntro:
+	.string "I need to try the things I learned\n"
+	.string "before I forget them!$"
+
+JubilifeCity_TrainerSchool_Text_ChristineDefeated:
+	.string "I like to study a lot...\n"
+	.string "I thought I could win.$"
+
+JubilifeCity_TrainerSchool_Text_ChristinePostBattle:
+	.string "I wonder if we could have done better\n"
+	.string "against you?\p"
+	.string "Like if I used Potions right when we\n"
+	.string "needed to.$"
+
+JubilifeCity_TrainerSchool_Text_ChristineEventText:
+	.string "We were actually confident that we\n"
+	.string "would do pretty good.\p"
+	.string "But I’m completely impressed by how\n"
+	.string "tough you are.\p"
+	.string "If you’d like, talk to my friend and\n"
+	.string "get a nice item from him.$"
 
 Route202_Text_MichaelIntro:
 	.string "I get my get-up-and-go from my\n"
@@ -4870,9 +4911,3 @@ Route202_Text_MichaelPostBattle:
 	.string "Keep out of the grass or dodge the\n"
 	.string "eyes of Trainers...?\p"
 	.string "I always have a tough time choosing.$"
-
-Route202_Text_FavoriteParty:
-	.string "Your favorite Pokémon should be placed\n"
-	.string "at the top left of your party list.\p"
-	.string "That way, it will be the first to go out\n"
-	.string "in a battle.$"

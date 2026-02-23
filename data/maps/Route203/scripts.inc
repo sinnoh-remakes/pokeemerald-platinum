@@ -33,3 +33,9 @@ Route203_EventScript_Sign1::
 
 Route203_EventScript_Sign2::
 	end
+
+Route202_Text_FavoriteParty:
+	.string "Your favorite Pokémon should be placed\n"
+	.string "at the top left of your party list.\p"
+	.string "That way, it will be the first to go out\n"
+	.string "in a battle.$"
