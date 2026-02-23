@@ -4881,7 +4881,7 @@ JubilifeCity_TrainerSchool_Text_ChristineIntro:
 	.string "before I forget them!$"
 
 JubilifeCity_TrainerSchool_Text_ChristineDefeated:
-	.string "I like to study a lot..."
+	.string "I like to study a lot...\n"
 	.string "I thought I could win.$"
 
 JubilifeCity_TrainerSchool_Text_ChristinePostBattle:

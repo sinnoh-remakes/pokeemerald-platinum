@@ -132,8 +132,14 @@ JubilifeCity_TrainerSchool_EventScript_PokemonBooks::
 	end
 
 JubilifeCity_TrainerSchool_EventScript_Blackboard::
+	lock
 	msgbox JubilifeCity_TrainerSchool_Text_ListStatusChanges, MSGBOX_DEFAULT
-	multichoice 20, 6, MULTI_TRAINER_SCHOOL_BLACKBOARD, FALSE
+	goto JubilifeCity_TrainerSchool_EventScript_BlackboardList
+	end
+
+JubilifeCity_TrainerSchool_EventScript_BlackboardList:
+	msgbox JubilifeCity_TrainerSchool_Text_ReadAbout, MSGBOX_DEFAULT
+	multichoice 20, 0, MULTI_TRAINER_SCHOOL_BLACKBOARD, FALSE
 	switch VAR_RESULT
 	case 0, JubilifeCity_TrainerSchool_EventScript_BlackboardPoison
 	case 1, JubilifeCity_TrainerSchool_EventScript_BlackboardParalyze
@@ -141,31 +147,32 @@ JubilifeCity_TrainerSchool_EventScript_Blackboard::
 	case 3, JubilifeCity_TrainerSchool_EventScript_BlackboardBurn
 	case 4, JubilifeCity_TrainerSchool_EventScript_BlackboardFrozen
 	closemessage
+	release
 	end
 
 JubilifeCity_TrainerSchool_EventScript_BlackboardPoison::
 	msgbox JubilifeCity_TrainerSchool_Text_BlackboardPoison
-	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	goto JubilifeCity_TrainerSchool_EventScript_BlackboardList
 	end
 
 JubilifeCity_TrainerSchool_EventScript_BlackboardParalyze::
 	msgbox JubilifeCity_TrainerSchool_Text_BlackboardParalyze
-	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	goto JubilifeCity_TrainerSchool_EventScript_BlackboardList
 	end
 
 JubilifeCity_TrainerSchool_EventScript_BlackboardSleep::
 	msgbox JubilifeCity_TrainerSchool_Text_BlackboardSleep
-	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	goto JubilifeCity_TrainerSchool_EventScript_BlackboardList
 	end
 
 JubilifeCity_TrainerSchool_EventScript_BlackboardBurn::
 	msgbox JubilifeCity_TrainerSchool_Text_BlackboardBurn
-	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	goto JubilifeCity_TrainerSchool_EventScript_BlackboardList
 	end
 
 JubilifeCity_TrainerSchool_EventScript_BlackboardFrozen::
 	msgbox JubilifeCity_TrainerSchool_Text_BlackboardFrozen
-	goto JubilifeCity_TrainerSchool_EventScript_Blackboard
+	goto JubilifeCity_TrainerSchool_EventScript_BlackboardList
 	end
 
 JubilifeCity_TrainerSchool_Text_ComeToStudy:
@@ -278,7 +285,10 @@ JubilifeCity_TrainerSchool_Text_PokemonBooks:
 
 JubilifeCity_TrainerSchool_Text_ListStatusChanges:
 	.string "The blackboard lists status changes\n"
-	.string "that may affect Pokémon in battle.\l"
+	.string "that may affect Pokémon in battle.$"
+	.string "Which would you like to read about?$"
+
+JubilifeCity_TrainerSchool_Text_ReadAbout:
 	.string "Which would you like to read about?$"
 
 JubilifeCity_TrainerSchool_Text_BlackboardPoison:
