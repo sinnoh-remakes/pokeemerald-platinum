@@ -277,10 +277,10 @@ JubilifeCity_TrainerSchool_Text_NotebookWithWriting:
 	.string "in Pokémon Gyms.$"
 
 JubilifeCity_TrainerSchool_Text_PictureBooks:
-	.string "It's lined with Pokemon picture books.$"
+	.string "It's lined with Pokémon picture books.$"
 
 JubilifeCity_TrainerSchool_Text_PokemonBooks:
-	.string "It's chock-full of Pokemon books and\n"
+	.string "It's chock-full of Pokémon books and\n"
 	.string "photo collections.$"
 
 JubilifeCity_TrainerSchool_Text_ListStatusChanges:
