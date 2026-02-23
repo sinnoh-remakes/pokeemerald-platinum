@@ -4833,17 +4833,6 @@ Route202_Text_TristanRematchPostBattle:
 	.string "If you're going to get stronger,\n"
 	.string "I'll get stronger, too.$"
 
-Route202_Text_LoganIntro:
-	.string "Let's have a Pokémon battle!\n"
-	.string "Humph! But I'm gonna win!$"
-
-Route202_Text_LoganDefeated:
-	.string "You're, like, wow!$"
-
-Route202_Text_LoganPostBattle:
-	.string "It's fun to battle others!\n"
-	.string "I'm gonna battle all sorts of people!$"
-
 Route202_Text_NatalieIntro:
 	.string "I spy, with my little eye...\n"
 	.string "A Trainer!\p"
@@ -4856,6 +4845,17 @@ Route202_Text_NatalieDefeated:
 Route202_Text_NataliePostBattle:
 	.string "My Pokémon are all tuckered out!\n"
 	.string "I need to go to a Poké Center!$"
+
+Route202_Text_LoganIntro:
+	.string "Let's have a Pokémon battle!\n"
+	.string "Humph! But I'm gonna win!$"
+
+Route202_Text_LoganDefeated:
+	.string "You're, like, wow!$"
+
+Route202_Text_LoganPostBattle:
+	.string "It's fun to battle others!\n"
+	.string "I'm gonna battle all sorts of people!$"
 
 Route202_Text_MichaelIntro:
 	.string "I get my get-up-and-go from my\n"
@@ -4870,9 +4870,3 @@ Route202_Text_MichaelPostBattle:
 	.string "Keep out of the grass or dodge the\n"
 	.string "eyes of Trainers...?\p"
 	.string "I always have a tough time choosing.$"
-
-Route202_Text_FavoriteParty:
-	.string "Your favorite Pokémon should be placed\n"
-	.string "at the top left of your party list.\p"
-	.string "That way, it will be the first to go out\n"
-	.string "in a battle.$"
