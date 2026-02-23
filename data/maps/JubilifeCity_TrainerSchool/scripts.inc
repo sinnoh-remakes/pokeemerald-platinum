@@ -19,6 +19,7 @@ JubilifeCity_TrainerSchool_EventScript_Barry::
 	waitmovement 0
 	removeobject LOCALID_TRAINER_SCHOOL_BARRY
 	setflag FLAG_HIDE_TRAINER_SCHOOL_RIVAL
+	clearflag FLAG_HIDE_JUBILIFE_POKETCH
 	setvar VAR_JUBILIFE_CITY_STATE, 2
 	release
 	end
@@ -28,6 +29,7 @@ JubilifeCity_TrainerSchool_EventScript_BarryLeaveAlternate::
 	waitmovement 0
 	removeobject LOCALID_TRAINER_SCHOOL_BARRY
 	setflag FLAG_HIDE_TRAINER_SCHOOL_RIVAL
+	clearflag FLAG_HIDE_JUBILIFE_POKETCH
 	setvar VAR_JUBILIFE_CITY_STATE, 2
 	release
 	end
