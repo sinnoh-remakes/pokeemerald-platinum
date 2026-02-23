@@ -1,6 +1,94 @@
 JubilifeCity_TrainerSchool_MapScripts::
 	.byte 0
 
+JubilifeCity_TrainerSchool_EventScript_Barry::
+	lock
+	faceplayer
+	msgbox JubilifeCity_TrainerSchool_Text_ComeToStudy, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message JubilifeCity_TrainerSchool_Text_DeliveredTheParcel
+	waitmessage
+	waitfanfare
+	msgbox JubilifeCity_TrainerSchool_Text_WhatIsThis, MSGBOX_DEFAULT
+	giveitem ITEM_TOWN_MAP
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox JubilifeCity_TrainerSchool_Text_AccordingToTownMap, MSGBOX_DEFAULT
+	closemessage
+	goto_if_eq VAR_FACING, DIR_NORTH, JubilifeCity_TrainerSchool_EventScript_BarryLeaveAlternate
+	applymovement LOCALID_TRAINER_SCHOOL_BARRY, JubilifeCity_TrainerSchool_Movement_BarryLeave
+	waitmovement 0
+	removeobject LOCALID_TRAINER_SCHOOL_BARRY
+	setflag FLAG_HIDE_TRAINER_SCHOOL_RIVAL
+	setvar VAR_JUBILIFE_CITY_STATE, 2
+	release
+	end
+
+JubilifeCity_TrainerSchool_EventScript_BarryLeaveAlternate::
+	applymovement LOCALID_TRAINER_SCHOOL_BARRY, JubilifeCity_TrainerSchool_Movement_BarryLeaveAlternate
+	waitmovement 0
+	removeobject LOCALID_TRAINER_SCHOOL_BARRY
+	setflag FLAG_HIDE_TRAINER_SCHOOL_RIVAL
+	setvar VAR_JUBILIFE_CITY_STATE, 2
+	release
+	end
+
+JubilifeCity_TrainerSchool_Movement_BarryLeave:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+JubilifeCity_TrainerSchool_Movement_BarryLeaveAlternate:
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+JubilifeCity_TrainerSchool_Text_ComeToStudy:
+	.string "{RIVAL}: Hey, {PLAYER}!\n"
+	.string "Did you come to study, too?\p"
+	.string "I went ahead and memorized everything\n"
+	.string "that was up on the blackboard.\p"
+	.string "After all, it’s the Trainer’s job to\n"
+	.string "avoid having their precious Pokémon\l"
+	.string "hurt in battle, right?\p"
+	.string "So, {PLAYER}, what brings you?\n"
+	.string "Huh?\l"
+	.string "You’ve got something for me?$"
+
+JubilifeCity_TrainerSchool_Text_DeliveredTheParcel:
+	.string "{PLAYER} delivered the Parcel.$"
+
+JubilifeCity_TrainerSchool_Text_WhatIsThis:
+	.string "{RIVAL}: So, what is this...?\p"
+	.string "Score!\n"
+	.string "It’s a Town Map!\p"
+	.string "Huh?!\n"
+	.string "Why are there two in here?\p"
+	.string "I like it a lot, but I don’t need two.\n"
+	.string "Here, {PLAYER}, you take one!$"
+
+JubilifeCity_TrainerSchool_Text_AccordingToTownMap:
+	.string "{RIVAL}: Hmm...\p"
+	.string "Well, according to the Town Map,\n"
+	.string "I guess Oreburgh City is where\l"
+	.string "I should be going next.\p"
+	.string "There’s a Gym, so it’d be perfect for\n"
+	.string "raising the Pokémon I just caught.\p"
+	.string "Well, I’m on the road to becoming\n"
+	.string "the greatest Trainer of all time!\p"
+	.string "See you around!$"
+
 JubilifeCity_TrainerSchool_EventScript_Harrison::
 	goto_if_set FLAG_TRAINER_SCHOOL_RECEIVED_POTION, JubilifeCity_TrainerSchool_EventScript_HarrisonDefeated
 	goto_if_set FLAG_DEFEATED_HARRISON_TRAINER_SCHOOL, JubilifeCity_TrainerSchool_EventScript_HarrisonCheckChristine

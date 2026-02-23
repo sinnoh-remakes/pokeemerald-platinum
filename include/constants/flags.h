@@ -673,7 +673,7 @@
 #define FLAG_HIDE_JUBILIFE_HELPER              0x272
 #define FLAG_HIDE_JUBILIFE_CLOWNS              0x273
 #define FLAG_HIDE_JUBILIFE_POKETCH             0x274
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
+#define FLAG_HIDE_TRAINER_SCHOOL_RIVAL         0x275
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
