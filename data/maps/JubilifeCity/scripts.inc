@@ -574,10 +574,31 @@ JubilifeCity_EventScript_PoketchCheck3::
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox JubilifeCity_Text_Poketch_Leave, MSGBOX_DEFAULT
-	@ FODO: Add position specific leave code
-	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up17
+	closemessage
+	goto_if_eq VAR_FACING, DIR_NORTH, JubilifeCity_EventScript_PoketchLeaveNorth
+	goto_if_eq VAR_FACING, DIR_SOUTH, JubilifeCity_EventScript_PoketchLeaveSouth
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_Player_WatchPoketchMan
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up6
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	removeobject LOCALID_POKETCH_NPC
+	release
+	end
+
+JubilifeCity_EventScript_PoketchLeaveNorth::
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up5
+	waitmovement 0
+	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	removeobject LOCALID_POKETCH_NPC
+	release
+	end
+
+JubilifeCity_EventScript_PoketchLeaveSouth::
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_Player_WatchPoketchMan2
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_LeaveSouth
+	waitmovement 0
+	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	removeobject LOCALID_POKETCH_NPC
 	release
 	end
 
@@ -620,6 +641,29 @@ JubilifeCity_Movement_PoketchMan_Approach5:
 	walk_right
 	walk_down
 	walk_down
+	step_end
+
+JubilifeCity_Movement_PoketchMan_LeaveSouth:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+JubilifeCity_Movement_Player_WatchPoketchMan:
+	delay_16
+	walk_in_place_up
+	step_end
+
+JubilifeCity_Movement_Player_WatchPoketchMan2:
+	delay_16
+	walk_in_place_left
+	delay_16
+	walk_in_place_up
 	step_end
 
 JubilifeCity_EventScript_BoyTradingLeft::
