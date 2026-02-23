@@ -241,6 +241,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "JubilifeCity_EventScript_AceTrainer2",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_JUBILIFE_LOOKER_2",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 67,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_Looker",
+      "flag": "FLAG_HIDE_JUBILIFE_LOOKER_2"
     }
   ],
   "warp_events": [
@@ -395,6 +409,78 @@
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "2",
       "script": "JubilifeCity_EventScript_PoketchMeet5"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "1",
+      "script": "JubilifeCity_EventScript_LookerBlockSchool1"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "1",
+      "script": "JubilifeCity_EventScript_LookerBlockSchool2"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "1",
+      "script": "JubilifeCity_EventScript_LookerBlockSchool3"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "1",
+      "script": "JubilifeCity_EventScript_LookerBlockSchool4"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "3",
+      "script": "JubilifeCity_EventScript_LookerBlockPoketch1"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "3",
+      "script": "JubilifeCity_EventScript_LookerBlockPoketch2"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "3",
+      "script": "JubilifeCity_EventScript_LookerBlockPoketch3"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "3",
+      "script": "JubilifeCity_EventScript_LookerBlockPoketch4"
     }
   ],
   "bg_events": []

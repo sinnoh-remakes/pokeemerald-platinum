@@ -294,6 +294,189 @@ JubilifeCity_Movement_PlayerWatchHelper:
 	walk_in_place_down
 	step_end
 
+JubilifeCity_EventScript_Looker::
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 2, JubilifeCity_EventScript_Looker2
+	msgbox JubilifeCity_Text_HaveNoFearSchool, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Looker2::
+	msgbox JubilifeCity_Text_HaveNoFearPoketch, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_LookerBlockApproach::
+	playse SE_PIN
+	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	delay 48
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	return
+
+JubilifeCity_EventScript_LookerBlockExplainSchool::
+	msgbox JubilifeCity_Text_HelloMyFriend, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
+JubilifeCity_EventScript_LookerBlockExplainPoketch::
+	msgbox JubilifeCity_Text_TellMe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
+JubilifeCity_EventScript_LookerBlockSchool1::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach1
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn1
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockSchool2::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach2
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn2
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockSchool3::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach3
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn3
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockSchool4::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach4
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn4
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch1::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach1
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn1
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch2::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach2
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn2
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch3::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach3
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn3
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch4::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach4
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn4
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_Movement_LookerWalkBack:
+	lock_facing_direction
+	walk_left
+	unlock_facing_direction
+	step_end
+
+JubilifeCity_Movement_LookerApproach1:
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerApproach2:
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerApproach3:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerApproach4:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerReturn1:
+	walk_up
+	walk_in_place_down
+	step_end
+
+JubilifeCity_Movement_LookerReturn2:
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+
+JubilifeCity_Movement_LookerReturn3:
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+
+JubilifeCity_Movement_LookerReturn4:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+
 JubilifeCity_EventScript_TerminalGuard1::
 	lock
 	call JubilifeCity_EventScript_TerminalGuardExclaim
@@ -585,6 +768,7 @@ JubilifeCity_EventScript_PoketchCheck3::
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up6
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
 	removeobject LOCALID_POKETCH_NPC
 	release
 	end
@@ -593,6 +777,7 @@ JubilifeCity_EventScript_PoketchLeaveNorth::
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up5
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
 	removeobject LOCALID_POKETCH_NPC
 	release
 	end
@@ -602,6 +787,7 @@ JubilifeCity_EventScript_PoketchLeaveSouth::
 	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_LeaveSouth
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
 	removeobject LOCALID_POKETCH_NPC
 	release
 	end
@@ -892,6 +1078,34 @@ JubilifeCity_Text_SawYourFriend:
 	.string "earlier.\p"
 	.string "He could still be in there studying.\n"
 	.string "OK, bye now!$"
+
+JubilifeCity_Text_HaveNoFearSchool:
+	.string "Ah, it is you! Have no fear.\n"
+	.string "There are no shady characters about.\p"
+	.string "Incidentally, have you visited the\n"
+	.string "Trainers’ School?\p"
+	.string "Did your friend not guide you there\n"
+	.string "earlier?$"
+
+JubilifeCity_Text_HelloMyFriend:
+	.string "Looker: Hello, my friend.\n"
+	.string "Have you visited the Trainers’ School?\p"
+	.string "Did your friend not guide you there\n"
+	.string "earlier?$"
+
+JubilifeCity_Text_HaveNoFearPoketch:
+	.string "Ah, it is you! Have no fear.\n"
+	.string "There are no shady characters about.\p"
+	.string "Incidentally, have you not obtained\n"
+	.string "a Pokétch?\p"
+	.string "I believe a Pokétch is now free in\n"
+	.string "exchange for some Coupons?$"
+
+JubilifeCity_Text_TellMe:
+	.string "Looker: Tell me, have you not obtained\n"
+	.string "a Pokétch?\p"
+	.string "I believe a Pokétch is now free in\n"
+	.string "exchange for some Coupons?$"
 
 JubilifeCity_Text_GlobalTerminalClosed:
 	.string "Past here is the Global Terminal, your\n"
