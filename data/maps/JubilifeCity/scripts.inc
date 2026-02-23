@@ -322,9 +322,29 @@ JubilifeCity_EventScript_LookerBlockExplainSchool::
 	delay 16
 	return
 
+JubilifeCity_EventScript_LookerBlockExplainSchoolPanLeft::
+	msgbox JubilifeCity_Text_HelloMyFriend, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
 JubilifeCity_EventScript_LookerBlockExplainPoketch::
 	msgbox JubilifeCity_Text_TellMe, MSGBOX_DEFAULT
 	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
+JubilifeCity_EventScript_LookerBlockExplainPoketchPanLeft::
+	msgbox JubilifeCity_Text_TellMe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
 	waitmovement 0
@@ -366,12 +386,17 @@ JubilifeCity_EventScript_LookerBlockSchool3::
 
 JubilifeCity_EventScript_LookerBlockSchool4::
 	lock
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
 	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach4
 	waitmovement 0
-	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	call JubilifeCity_EventScript_LookerBlockExplainSchoolPanLeft
 	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn4
 	waitmovement 0
+	special RemoveCameraObject
 	release
 	end
 
@@ -410,12 +435,17 @@ JubilifeCity_EventScript_LookerBlockPoketch3::
 
 JubilifeCity_EventScript_LookerBlockPoketch4::
 	lock
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
 	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach4
 	waitmovement 0
-	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	call JubilifeCity_EventScript_LookerBlockExplainPoketchPanLeft
 	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn4
 	waitmovement 0
+	special RemoveCameraObject
 	release
 	end
 
