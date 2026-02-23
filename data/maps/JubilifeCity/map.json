@@ -149,7 +149,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "JubilifeCity_EventScript_ClownGrow",
-      "flag": "FLAG_HIDE_JUBILIFE_CLOWNS"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
@@ -188,7 +188,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "JubilifeCity_EventScript_ClownItem",
-      "flag": "FLAG_HIDE_JUBILIFE_CLOWNS"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
@@ -227,7 +227,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "JubilifeCity_EventScript_ClownType",
-      "flag": "FLAG_HIDE_JUBILIFE_CLOWNS"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",

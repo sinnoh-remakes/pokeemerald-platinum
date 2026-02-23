@@ -414,13 +414,20 @@ JubilifeCity_Movement_TerminalGuard_Leave4:
 	walk_in_place_down
 	step_end
 
+JubilifeCity_EventScript_ClownStickAround::
+	msgbox JubilifeCity_Text_ClownStickAround, MSGBOX_DEFAULT
+	release
+	end
+
 JubilifeCity_EventScript_WrongAnswer::
-	msgbox JubilifeCity_Text_WrongAnswer, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_ClownWrongAnswer, MSGBOX_DEFAULT
+	release
 	end
 
 JubilifeCity_EventScript_ClownGrow::
 	lock
 	faceplayer
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 1, JubilifeCity_EventScript_ClownStickAround
 	goto_if_set FLAG_JUBILIFE_CLOWN_GROW, JubilifeCity_EventScript_ClownGrowDone
 	msgbox JubilifeCity_Text_ClownGrowQuestion, MSGBOX_YESNO
 	@ FODO: Play incorrect answer sound
@@ -442,6 +449,7 @@ JubilifeCity_EventScript_ClownGrowDone::
 JubilifeCity_EventScript_ClownItem::
 	lock
 	faceplayer
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 1, JubilifeCity_EventScript_ClownStickAround
 	goto_if_set FLAG_JUBILIFE_CLOWN_ITEM, JubilifeCity_EventScript_ClownItemDone
 	msgbox JubilifeCity_Text_ClownItemQuestion, MSGBOX_YESNO
 	@ FODO: Play incorrect answer sound
@@ -463,6 +471,7 @@ JubilifeCity_EventScript_ClownItemDone::
 JubilifeCity_EventScript_ClownType::
 	lock
 	faceplayer
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 1, JubilifeCity_EventScript_ClownStickAround
 	goto_if_set FLAG_JUBILIFE_CLOWN_TYPE, JubilifeCity_EventScript_ClownTypeDone
 	msgbox JubilifeCity_Text_ClownTypeQuestion, MSGBOX_YESNO
 	@ FODO: Play incorrect answer sound
@@ -851,7 +860,13 @@ JubilifeCity_Text_GlobalTerminalOpen:
 	.string "with friends, both old and new.\p"
 	.string "That’s awesome!$"
 
-JubilifeCity_Text_WrongAnswer:
+JubilifeCity_Text_ClownStickAround:
+	.string "Hi, there. You should stick around.\n"
+	.string "We’re doing a Pokétch campaign soon.\p"
+	.string "Before it starts, I think you should\n"
+	.string "brush up at the Trainers’ School.$"
+
+JubilifeCity_Text_ClownWrongAnswer:
 	.string "Bzzzzt!\n"
 	.string "That’s the wrong answer...$"
 
