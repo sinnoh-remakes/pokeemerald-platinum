@@ -515,7 +515,7 @@ JubilifeCity_EventScript_PoketchPromote::
 JubilifeCity_EventScript_PoketchMeet1::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch1
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach1
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -523,7 +523,7 @@ JubilifeCity_EventScript_PoketchMeet1::
 JubilifeCity_EventScript_PoketchMeet2::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch2
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach2
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -531,7 +531,7 @@ JubilifeCity_EventScript_PoketchMeet2::
 JubilifeCity_EventScript_PoketchMeet3::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch3
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach3
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -539,7 +539,7 @@ JubilifeCity_EventScript_PoketchMeet3::
 JubilifeCity_EventScript_PoketchMeet4::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch4
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach4
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -547,7 +547,7 @@ JubilifeCity_EventScript_PoketchMeet4::
 JubilifeCity_EventScript_PoketchMeet5::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch5
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach5
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -581,7 +581,7 @@ JubilifeCity_EventScript_PoketchCheck3::
 	release
 	end
 
-JubilifeCity_Movement_Poketch1:
+JubilifeCity_Movement_PoketchMan_Approach1:
 	walk_down
 	walk_down
 	walk_left
@@ -590,7 +590,7 @@ JubilifeCity_Movement_Poketch1:
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch2:
+JubilifeCity_Movement_PoketchMan_Approach2:
 	walk_down
 	walk_down
 	walk_left
@@ -598,14 +598,14 @@ JubilifeCity_Movement_Poketch2:
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch3:
+JubilifeCity_Movement_PoketchMan_Approach3:
 	walk_down
 	walk_down
 	walk_down
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch4:
+JubilifeCity_Movement_PoketchMan_Approach4:
 	walk_down
 	walk_down
 	walk_right
@@ -613,7 +613,7 @@ JubilifeCity_Movement_Poketch4:
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch5:
+JubilifeCity_Movement_PoketchMan_Approach5:
 	walk_down
 	walk_down
 	walk_right
