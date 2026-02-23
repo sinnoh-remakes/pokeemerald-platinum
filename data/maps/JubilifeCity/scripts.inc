@@ -495,7 +495,7 @@ JubilifeCity_EventScript_PoketchGreet::
 	faceplayer
 	setvar VAR_JUBILIFE_CITY_STATE, 3
 	special SpawnCameraObject
-	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up2
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp2
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_WalkInPlaceDown

@@ -171,10 +171,6 @@ Common_Movement_WalkInPlaceUp::
 		walk_in_place_up
 		step_end
 
-Common_Movement_Walk_Up2:
-		walk_up
-		walk_up
-
 Common_Movement_Walk_Up17:
 		walk_up
 		walk_up

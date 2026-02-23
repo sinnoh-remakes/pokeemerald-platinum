@@ -284,8 +284,8 @@ SandgemTown_EventScript_HelperToLab::
 	@ TODO: Cannot hide helper or will not show in next sandgem scene
 	setobjectxy LOCALID_SANDGEM_HELPER 25, 5
 	delay 16
-	applymovement LOCALID_PLAYER, SandgemTown_Movement_PlayerEnter
-	applymovement LOCALID_CAMERA, SandgemTown_Movement_PlayerEnter
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp2
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp2
 	waitmovement 0
 	removeobject LOCALID_PLAYER
 	closedoor 11, 6
@@ -317,11 +317,6 @@ SandgemTown_Movement_RivalRun:
 SandgemTown_Movement_HelperEnter:
 	walk_up
 	walk_left
-	walk_up
-	step_end
-
-SandgemTown_Movement_PlayerEnter:
-	walk_up
 	walk_up
 	step_end
 
