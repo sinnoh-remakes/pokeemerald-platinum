@@ -4734,8 +4734,8 @@
     {
       "id": "LAYOUT_OREBURGH_MINE_B1F",
       "name": "OreburghMine_B1F_Layout",
-      "width": 33,
-      "height": 30,
+      "width": 26,
+      "height": 28,
       "primary_tileset": "gTileset_CaveCoronet",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/OreburghMine_B1F/border.bin",
