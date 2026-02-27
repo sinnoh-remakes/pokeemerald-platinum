@@ -6,8 +6,8 @@ JubilifeCity_MapScripts::
 @ 1: Encountered helper
 @ 2: Received Town Map
 @ 3: Talked to Poketch Man
-@ 3: Received Poketch
-@ 4: Received Coal Badge
+@ 4: Received Poketch
+@ 5: Received Coal Badge
 
 JubilifeCity_OnTransition:
 	setflag FLAG_VISITED_JUBILIFE_CITY
@@ -799,6 +799,7 @@ JubilifeCity_EventScript_PoketchCheck3::
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
+	setvar VAR_JUBILIFE_CITY_STATE, 4
 	removeobject LOCALID_POKETCH_NPC
 	release
 	end
