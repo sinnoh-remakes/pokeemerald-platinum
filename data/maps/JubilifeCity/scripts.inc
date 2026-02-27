@@ -922,18 +922,30 @@ JubilifeCity_EventScript_AceTrainer1::
 	msgbox JubilifeCity_Text_WhereComeFrom, MSGBOX_NPC
 	end
 
-@ FODO: Make 3 item group menu with text selection
-@ Determine how groups should work with game engine
 JubilifeCity_EventScript_AceTrainerGroup::
 	lock
 	faceplayer
-	msgbox JubilifeCity_Text_JoinGroup, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, JubilifeCity_EventScript_JoinGroupYes
-	call_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_JoinGroupNo
+	msgbox JubilifeCity_Text_JoinGroup, MSGBOX_DEFAULT
+	goto JubilifeCity_EventScript_AceTrainerGroupPrompt
+	end
+
+JubilifeCity_EventScript_AceTrainerGroupPrompt::
+	multichoice 0, 0, MULTI_JUBILIFE_CITY_GROUP, FALSE
+	switch VAR_RESULT
+	case 0, JubilifeCity_EventScript_JoinGroupYes
+	case 1, JubilifeCity_EventScript_JoinGroupInfo
+	case 2, JubilifeCity_EventScript_JoinGroupNo
+	goto JubilifeCity_EventScript_JoinGroupNo
 	end
 
 JubilifeCity_EventScript_JoinGroupYes::
+	@ FODO: Add text input for group name
 	msgbox JubilifeCity_Text_NameYourGroup, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_JoinGroupInfo::
+	msgbox JubilifeCity_Text_WhenYouForm, MSGBOX_DEFAULT
+	goto JubilifeCity_EventScript_AceTrainerGroupPrompt
 	return
 
 JubilifeCity_EventScript_JoinGroupNo::
@@ -1358,6 +1370,20 @@ JubilifeCity_Text_NameYourGroup:
 	.string "That's a great name!\p"
 	.string "The leader is {RIVAL}.\n"
 	.string "I hope the group gets more members.$"
+
+JubilifeCity_Text_WhenYouForm:
+	.string "When you form or join a new group,\n"
+	.string "be sure to visit any Union Room.\p"
+	.string "Mix your records with group members,\n"
+	.string "and you'll become integrated.\p"
+	.string "When you're in the same group,\n"
+	.string "events can happen simultaneously.\p"
+	.string "It makes things a lot more fun\n"
+	.string "playing in a group!\p"
+	.string "Anyone can make a group, and anyone\n"
+	.string "can join.\p"
+	.string "I hope you recruit lots of friends\n"
+	.string "so everyone can have fun!$"
 
 JubilifeCity_Text_ThatsTooBad:
 	.string "Oh.\n"

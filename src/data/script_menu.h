@@ -793,6 +793,13 @@ static const struct MenuAction MultichoiceList_TrainerSchoolBlackboard[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_JubilifeCityGroup[] =
+{
+    {COMPOUND_STRING("MAKE GROUP")},
+    {COMPOUND_STRING("INFO")},
+    {gText_Exit},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -916,7 +923,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
-    [MULTI_TRAINER_SCHOOL_BLACKBOARD]  = MULTICHOICE(MultichoiceList_TrainerSchoolBlackboard)
+    [MULTI_TRAINER_SCHOOL_BLACKBOARD]  = MULTICHOICE(MultichoiceList_TrainerSchoolBlackboard),
+    [MULTI_JUBILIFE_CITY_GROUP]        = MULTICHOICE(MultichoiceList_JubilifeCityGroup)
 };
 
 const u8 *const gStdStrings[] =
