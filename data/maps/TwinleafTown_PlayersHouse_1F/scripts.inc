@@ -297,7 +297,7 @@ TwinleafTown_PlayersHouse_1F_EventScript_FaceRivalMomEast::
 	return
 
 TwinleafTown_PlayersHouse_1F_EventScript_RivalMomUp2::
-	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, TwinleafTown_PlayersHouse_1F_Movement_RivalMomUp2
+	applymovement LOCALID_TWINLEAF_PLAYER1F_RIVALMOM, Common_Movement_WalkUp2
 	waitmovement 0
 	call TwinleafTown_PlayersHouse_1F_EventScript_FaceRivalMomEast
 	return
@@ -330,11 +330,6 @@ TwinleafTown_PlayersHouse_1F_EventScript_RivalMomEastLeave::
 TwinleafTown_PlayersHouse_1F_Movement_RivalMomLeft2:
 	walk_right
 	walk_right
-	step_end
-
-TwinleafTown_PlayersHouse_1F_Movement_RivalMomUp2:
-	walk_up
-	walk_up
 	step_end
 
 TwinleafTown_PlayersHouse_1F_Movement_RivalMomNorthLeave:

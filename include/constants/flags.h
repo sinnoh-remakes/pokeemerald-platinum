@@ -670,8 +670,8 @@
 #define FLAG_HIDE_PLAYER_HOUSE_RIVAL_MOM       0x26F
 #define FLAG_HIDE_ROUTE_202_HELPER             0x270
 #define FLAG_HIDE_JUBILIFE_LOOKER              0x271
-#define FLAG_HIDE_JUBILIFE_HELPER              0x272
-#define FLAG_HIDE_JUBILIFE_CLOWNS              0x273
+#define FLAG_HIDE_JUBILIFE_LOOKER_2            0x272
+#define FLAG_HIDE_JUBILIFE_HELPER              0x273
 #define FLAG_HIDE_JUBILIFE_POKETCH             0x274
 #define FLAG_HIDE_TRAINER_SCHOOL_RIVAL         0x275
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
