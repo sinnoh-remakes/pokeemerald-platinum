@@ -948,6 +948,26 @@ JubilifeCity_EventScript_AceTrainer2::
 	msgbox JubilifeCity_Text_WalkWithPokemon, MSGBOX_NPC
 	end
 
+JubilifeCity_EventScript_TownSign::
+	msgbox JubilifeCity_Text_TownSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_TrainerSchoolSign::
+	msgbox JubilifeCity_Text_TrainerSchoolSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_CondominiumSign::
+	msgbox JubilifeCity_Text_CondominiumSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_JubilifeTVSign::
+	msgbox JubilifeCity_Text_JubilifeTVSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_PoketchCompanySign::
+	msgbox JubilifeCity_Text_PoketchCompanySign, MSGBOX_SIGN
+	end
+
 JubilifeCity_Text_AreYouCatching:
 	.string "Dawn: Hi, {PLAYER}!\n"
 	.string "Are you catching Pokémon?$"
@@ -1350,3 +1370,23 @@ JubilifeCity_Text_SeeMeOnTV:
 JubilifeCity_Text_WalkWithPokemon:
 	.string "When you walk with your Pokémon,\n"
 	.string "they gradually grow friendlier.$"
+
+JubilifeCity_Text_TownSign:
+	.string "Jubilife City\n"
+	.string "City of Joy$"
+
+JubilifeCity_Text_TrainerSchoolSign:
+	.string "Trainers' School\n"
+	.string "The First Step for Trainers!$"
+
+JubilifeCity_Text_CondominiumSign:
+	.string "Jubilife Condominiums\n"
+	.string "Tenants Wanted!$"
+
+JubilifeCity_Text_JubilifeTVSign:
+	.string "Jubilife TV\n"
+	.string "The Fun-and-Games TV Station!$"
+
+JubilifeCity_Text_PoketchCompanySign:
+	.string "The Pokétch Company\n"
+	.string "Pokémon Watches for the World!$"

@@ -483,5 +483,62 @@
       "script": "JubilifeCity_EventScript_LookerBlockPoketch4"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 51,
+      "y": 55,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_EventScript_TrainerSchoolSign"
+    },
+    {
+      "type": "sign",
+      "x": 68,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 58,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_EventScript_CondominiumSign"
+    },
+    {
+      "type": "sign",
+      "x": 48,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_EventScript_JubilifeTVSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_EventScript_PoketchCompanySign"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_EventScript_TrainerSchoolSign"
+    }
+  ]
 }
