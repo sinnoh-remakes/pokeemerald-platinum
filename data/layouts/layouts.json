@@ -4730,6 +4730,26 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE_B1F",
+      "name": "OreburghMine_B1F_Layout",
+      "width": 33,
+      "height": 30,
+      "primary_tileset": "gTileset_CaveCoronet",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/OreburghMine_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghMine_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE_B2F",
+      "name": "OreburghMine_B2F_Layout",
+      "width": 33,
+      "height": 30,
+      "primary_tileset": "gTileset_CaveCoronet",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/OreburghMine_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghMine_B2F/map.bin"
     }
   ]
 }
