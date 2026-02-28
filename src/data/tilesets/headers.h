@@ -1204,3 +1204,14 @@ const struct Tileset gTileset_CommonCenter2F =
     .metatileAttributes = gMetatileAttributes_CommonCenter2F,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OreburghMine =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OreburghMine,
+    .palettes = gTilesetPalettes_OreburghMine,
+    .metatiles = gMetatiles_OreburghMine,
+    .metatileAttributes = gMetatileAttributes_OreburghMine,
+    .callback = NULL,
+};
