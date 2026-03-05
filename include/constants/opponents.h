@@ -866,19 +866,21 @@
 #define TRAINER_TRISTAN_3                   860
 #define TRAINER_TRISTAN_4                   861
 #define TRAINER_TRISTAN_5                   862
-#define TRAINER_LOGAN                       863
-#define TRAINER_NATALIE                     864
-#define TRAINER_RIVAL_ROUTE_203_PIPLUP      865
-#define TRAINER_RIVAL_ROUTE_203_TURTWIG     866
-#define TRAINER_RIVAL_ROUTE_203_CHIMCHAR    867
-#define TRAINER_MICHAEL                     868
+#define TRAINER_NATALIE                     863
+#define TRAINER_LOGAN                       864
+#define TRAINER_HARRISON_PT                 865
+#define TRAINER_CHRISTINE                   866
+#define TRAINER_RIVAL_ROUTE_203_PIPLUP      867
+#define TRAINER_RIVAL_ROUTE_203_TURTWIG     868
+#define TRAINER_RIVAL_ROUTE_203_CHIMCHAR    869
+#define TRAINER_MICHAEL                     870
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      869
-#define MAX_TRAINERS_COUNT                  869
+#define TRAINERS_COUNT                      871
+#define MAX_TRAINERS_COUNT                  871
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

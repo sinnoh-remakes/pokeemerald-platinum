@@ -43,12 +43,13 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_ROUTE201_RECEIVED_POTION    0x20
-#define FLAG_GLOBAL_TERMINAL_OPEN        0x21
-#define FLAG_JUBILIFE_CLOWN_GROW         0x22
-#define FLAG_JUBILIFE_CLOWN_ITEM         0x23
-#define FLAG_JUBILIFE_CLOWN_TYPE         0x24
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_ROUTE201_RECEIVED_POTION          0x20
+#define FLAG_GLOBAL_TERMINAL_OPEN              0x21
+#define FLAG_JUBILIFE_CLOWN_GROW               0x22
+#define FLAG_JUBILIFE_CLOWN_ITEM               0x23
+#define FLAG_JUBILIFE_CLOWN_TYPE               0x24
+#define FLAG_TRAINER_SCHOOL_RECEIVED_POTION    0x25
+#define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
@@ -669,10 +670,10 @@
 #define FLAG_HIDE_PLAYER_HOUSE_RIVAL_MOM       0x26F
 #define FLAG_HIDE_ROUTE_202_HELPER             0x270
 #define FLAG_HIDE_JUBILIFE_LOOKER              0x271
-#define FLAG_HIDE_JUBILIFE_HELPER              0x272
-#define FLAG_HIDE_JUBILIFE_CLOWNS              0x273
+#define FLAG_HIDE_JUBILIFE_LOOKER_2            0x272
+#define FLAG_HIDE_JUBILIFE_HELPER              0x273
 #define FLAG_HIDE_JUBILIFE_POKETCH             0x274
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
+#define FLAG_HIDE_TRAINER_SCHOOL_RIVAL         0x275
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
@@ -1228,7 +1229,7 @@
 #define FLAG_ITEM_ROUTE_204_PARALYZE_HEAL                           0x497
 #define FLAG_ITEM_ROUTE_204_HP_UP                                   0x498
 #define FLAG_ITEM_ROUTE_204_SEA_INCENSE                             0x499
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_ITEM_TRAINER_SCHOOL_X_ATTACK                           0x49A
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag

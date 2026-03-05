@@ -6,8 +6,8 @@ JubilifeCity_MapScripts::
 @ 1: Encountered helper
 @ 2: Received Town Map
 @ 3: Talked to Poketch Man
-@ 3: Received Poketch
-@ 4: Received Coal Badge
+@ 4: Received Poketch
+@ 5: Received Coal Badge
 
 JubilifeCity_OnTransition:
 	setflag FLAG_VISITED_JUBILIFE_CITY
@@ -147,8 +147,10 @@ JubilifeCity_EventScript_HelperWalkUp::
 	msgbox JubilifeCity_Text_Um, MSGBOX_DEFAULT
 	applymovement LOCALID_JUBILIFE_LOOKER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_JUBILIFE_LOOKER, Common_Movement_ExclamationMark
 	waitmovement 0
+	delay 48
 	delay 48
 	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_SIGN
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkInPlaceUp
@@ -292,6 +294,219 @@ JubilifeCity_Movement_PlayerWatchHelper:
 	walk_in_place_down
 	step_end
 
+JubilifeCity_EventScript_Looker::
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 2, JubilifeCity_EventScript_Looker2
+	msgbox JubilifeCity_Text_HaveNoFearSchool, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Looker2::
+	msgbox JubilifeCity_Text_HaveNoFearPoketch, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_LookerBlockApproach::
+	playse SE_PIN
+	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	delay 48
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	return
+
+JubilifeCity_EventScript_LookerBlockExplainSchool::
+	msgbox JubilifeCity_Text_HelloMyFriend, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
+JubilifeCity_EventScript_LookerBlockExplainSchoolPanLeft::
+	msgbox JubilifeCity_Text_HelloMyFriend, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
+JubilifeCity_EventScript_LookerBlockExplainPoketch::
+	msgbox JubilifeCity_Text_TellMe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
+JubilifeCity_EventScript_LookerBlockExplainPoketchPanLeft::
+	msgbox JubilifeCity_Text_TellMe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerWalkBack
+	waitmovement 0
+	delay 16
+	return
+
+JubilifeCity_EventScript_LookerBlockSchool1::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach1
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn1
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockSchool2::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach2
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn2
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockSchool3::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach3
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchool
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn3
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockSchool4::
+	lock
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach4
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainSchoolPanLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn4
+	waitmovement 0
+	special RemoveCameraObject
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch1::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach1
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn1
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch2::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach2
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn2
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch3::
+	lock
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach3
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketch
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn3
+	waitmovement 0
+	release
+	end
+
+JubilifeCity_EventScript_LookerBlockPoketch4::
+	lock
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockApproach
+	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerApproach4
+	waitmovement 0
+	call JubilifeCity_EventScript_LookerBlockExplainPoketchPanLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerReturn4
+	waitmovement 0
+	special RemoveCameraObject
+	release
+	end
+
+JubilifeCity_Movement_LookerWalkBack:
+	lock_facing_direction
+	walk_left
+	unlock_facing_direction
+	step_end
+
+JubilifeCity_Movement_LookerApproach1:
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerApproach2:
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerApproach3:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerApproach4:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+JubilifeCity_Movement_LookerReturn1:
+	walk_up
+	walk_in_place_down
+	step_end
+
+JubilifeCity_Movement_LookerReturn2:
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+
+JubilifeCity_Movement_LookerReturn3:
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+
+JubilifeCity_Movement_LookerReturn4:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_down
+	step_end
+
 JubilifeCity_EventScript_TerminalGuard1::
 	lock
 	call JubilifeCity_EventScript_TerminalGuardExclaim
@@ -345,6 +560,7 @@ JubilifeCity_EventScript_TerminalGuard4::
 	end
 	
 JubilifeCity_EventScript_TerminalGuardExclaim::
+	playse SE_PIN
 	applymovement LOCALID_TERMINAL_GUARD, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
@@ -414,13 +630,20 @@ JubilifeCity_Movement_TerminalGuard_Leave4:
 	walk_in_place_down
 	step_end
 
+JubilifeCity_EventScript_ClownStickAround::
+	msgbox JubilifeCity_Text_ClownStickAround, MSGBOX_DEFAULT
+	release
+	end
+
 JubilifeCity_EventScript_WrongAnswer::
-	msgbox JubilifeCity_Text_WrongAnswer, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_ClownWrongAnswer, MSGBOX_DEFAULT
+	release
 	end
 
 JubilifeCity_EventScript_ClownGrow::
 	lock
 	faceplayer
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 1, JubilifeCity_EventScript_ClownStickAround
 	goto_if_set FLAG_JUBILIFE_CLOWN_GROW, JubilifeCity_EventScript_ClownGrowDone
 	msgbox JubilifeCity_Text_ClownGrowQuestion, MSGBOX_YESNO
 	@ FODO: Play incorrect answer sound
@@ -442,6 +665,7 @@ JubilifeCity_EventScript_ClownGrowDone::
 JubilifeCity_EventScript_ClownItem::
 	lock
 	faceplayer
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 1, JubilifeCity_EventScript_ClownStickAround
 	goto_if_set FLAG_JUBILIFE_CLOWN_ITEM, JubilifeCity_EventScript_ClownItemDone
 	msgbox JubilifeCity_Text_ClownItemQuestion, MSGBOX_YESNO
 	@ FODO: Play incorrect answer sound
@@ -463,6 +687,7 @@ JubilifeCity_EventScript_ClownItemDone::
 JubilifeCity_EventScript_ClownType::
 	lock
 	faceplayer
+	goto_if_eq VAR_JUBILIFE_CITY_STATE, 1, JubilifeCity_EventScript_ClownStickAround
 	goto_if_set FLAG_JUBILIFE_CLOWN_TYPE, JubilifeCity_EventScript_ClownTypeDone
 	msgbox JubilifeCity_Text_ClownTypeQuestion, MSGBOX_YESNO
 	@ FODO: Play incorrect answer sound
@@ -486,11 +711,12 @@ JubilifeCity_EventScript_PoketchGreet::
 	faceplayer
 	setvar VAR_JUBILIFE_CITY_STATE, 3
 	special SpawnCameraObject
-	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up2
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp2
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_WalkInPlaceDown
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_POKETCH_NPC, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
@@ -506,7 +732,7 @@ JubilifeCity_EventScript_PoketchPromote::
 JubilifeCity_EventScript_PoketchMeet1::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch1
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach1
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -514,7 +740,7 @@ JubilifeCity_EventScript_PoketchMeet1::
 JubilifeCity_EventScript_PoketchMeet2::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch2
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach2
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -522,7 +748,7 @@ JubilifeCity_EventScript_PoketchMeet2::
 JubilifeCity_EventScript_PoketchMeet3::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch3
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach3
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -530,7 +756,7 @@ JubilifeCity_EventScript_PoketchMeet3::
 JubilifeCity_EventScript_PoketchMeet4::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch4
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach4
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -538,7 +764,7 @@ JubilifeCity_EventScript_PoketchMeet4::
 JubilifeCity_EventScript_PoketchMeet5::
 	call JubilifeCity_EventScript_PoketchGreet
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown2
-	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_Poketch5
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_Approach5
 	waitmovement 0
 	call JubilifeCity_EventScript_PoketchPromote
 	end
@@ -565,14 +791,39 @@ JubilifeCity_EventScript_PoketchCheck3::
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox JubilifeCity_Text_Poketch_Leave, MSGBOX_DEFAULT
-	@ FODO: Add position specific leave code
-	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up17
+	closemessage
+	goto_if_eq VAR_FACING, DIR_NORTH, JubilifeCity_EventScript_PoketchLeaveNorth
+	goto_if_eq VAR_FACING, DIR_SOUTH, JubilifeCity_EventScript_PoketchLeaveSouth
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_Player_WatchPoketchMan
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up6
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
+	setvar VAR_JUBILIFE_CITY_STATE, 4
+	removeobject LOCALID_POKETCH_NPC
 	release
 	end
 
-JubilifeCity_Movement_Poketch1:
+JubilifeCity_EventScript_PoketchLeaveNorth::
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up5
+	waitmovement 0
+	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
+	removeobject LOCALID_POKETCH_NPC
+	release
+	end
+
+JubilifeCity_EventScript_PoketchLeaveSouth::
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_Player_WatchPoketchMan2
+	applymovement LOCALID_POKETCH_NPC, JubilifeCity_Movement_PoketchMan_LeaveSouth
+	waitmovement 0
+	setflag FLAG_HIDE_JUBILIFE_POKETCH
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
+	removeobject LOCALID_POKETCH_NPC
+	release
+	end
+
+JubilifeCity_Movement_PoketchMan_Approach1:
 	walk_down
 	walk_down
 	walk_left
@@ -581,7 +832,7 @@ JubilifeCity_Movement_Poketch1:
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch2:
+JubilifeCity_Movement_PoketchMan_Approach2:
 	walk_down
 	walk_down
 	walk_left
@@ -589,14 +840,14 @@ JubilifeCity_Movement_Poketch2:
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch3:
+JubilifeCity_Movement_PoketchMan_Approach3:
 	walk_down
 	walk_down
 	walk_down
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch4:
+JubilifeCity_Movement_PoketchMan_Approach4:
 	walk_down
 	walk_down
 	walk_right
@@ -604,13 +855,36 @@ JubilifeCity_Movement_Poketch4:
 	walk_down
 	step_end
 
-JubilifeCity_Movement_Poketch5:
+JubilifeCity_Movement_PoketchMan_Approach5:
 	walk_down
 	walk_down
 	walk_right
 	walk_right
 	walk_down
 	walk_down
+	step_end
+
+JubilifeCity_Movement_PoketchMan_LeaveSouth:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+JubilifeCity_Movement_Player_WatchPoketchMan:
+	delay_16
+	walk_in_place_up
+	step_end
+
+JubilifeCity_Movement_Player_WatchPoketchMan2:
+	delay_16
+	walk_in_place_left
+	delay_16
+	walk_in_place_up
 	step_end
 
 JubilifeCity_EventScript_BoyTradingLeft::
@@ -649,18 +923,30 @@ JubilifeCity_EventScript_AceTrainer1::
 	msgbox JubilifeCity_Text_WhereComeFrom, MSGBOX_NPC
 	end
 
-@ FODO: Make 3 item group menu with text selection
-@ Determine how groups should work with game engine
 JubilifeCity_EventScript_AceTrainerGroup::
 	lock
 	faceplayer
-	msgbox JubilifeCity_Text_JoinGroup, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, JubilifeCity_EventScript_JoinGroupYes
-	call_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_JoinGroupNo
+	msgbox JubilifeCity_Text_JoinGroup, MSGBOX_DEFAULT
+	goto JubilifeCity_EventScript_AceTrainerGroupPrompt
+	end
+
+JubilifeCity_EventScript_AceTrainerGroupPrompt::
+	multichoice 0, 0, MULTI_JUBILIFE_CITY_GROUP, FALSE
+	switch VAR_RESULT
+	case 0, JubilifeCity_EventScript_JoinGroupYes
+	case 1, JubilifeCity_EventScript_JoinGroupInfo
+	case 2, JubilifeCity_EventScript_JoinGroupNo
+	goto JubilifeCity_EventScript_JoinGroupNo
 	end
 
 JubilifeCity_EventScript_JoinGroupYes::
+	@ FODO: Add text input for group name
 	msgbox JubilifeCity_Text_NameYourGroup, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_JoinGroupInfo::
+	msgbox JubilifeCity_Text_WhenYouForm, MSGBOX_DEFAULT
+	goto JubilifeCity_EventScript_AceTrainerGroupPrompt
 	return
 
 JubilifeCity_EventScript_JoinGroupNo::
@@ -673,6 +959,26 @@ JubilifeCity_EventScript_Twin::
 
 JubilifeCity_EventScript_AceTrainer2::
 	msgbox JubilifeCity_Text_WalkWithPokemon, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_TownSign::
+	msgbox JubilifeCity_Text_TownSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_TrainerSchoolSign::
+	msgbox JubilifeCity_Text_TrainerSchoolSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_CondominiumSign::
+	msgbox JubilifeCity_Text_CondominiumSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_JubilifeTVSign::
+	msgbox JubilifeCity_Text_JubilifeTVSign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_PoketchCompanySign::
+	msgbox JubilifeCity_Text_PoketchCompanySign, MSGBOX_SIGN
 	end
 
 JubilifeCity_Text_AreYouCatching:
@@ -836,6 +1142,34 @@ JubilifeCity_Text_SawYourFriend:
 	.string "He could still be in there studying.\n"
 	.string "OK, bye now!$"
 
+JubilifeCity_Text_HaveNoFearSchool:
+	.string "Ah, it is you! Have no fear.\n"
+	.string "There are no shady characters about.\p"
+	.string "Incidentally, have you visited the\n"
+	.string "Trainers’ School?\p"
+	.string "Did your friend not guide you there\n"
+	.string "earlier?$"
+
+JubilifeCity_Text_HelloMyFriend:
+	.string "Looker: Hello, my friend.\n"
+	.string "Have you visited the Trainers’ School?\p"
+	.string "Did your friend not guide you there\n"
+	.string "earlier?$"
+
+JubilifeCity_Text_HaveNoFearPoketch:
+	.string "Ah, it is you! Have no fear.\n"
+	.string "There are no shady characters about.\p"
+	.string "Incidentally, have you not obtained\n"
+	.string "a Pokétch?\p"
+	.string "I believe a Pokétch is now free in\n"
+	.string "exchange for some Coupons?$"
+
+JubilifeCity_Text_TellMe:
+	.string "Looker: Tell me, have you not obtained\n"
+	.string "a Pokétch?\p"
+	.string "I believe a Pokétch is now free in\n"
+	.string "exchange for some Coupons?$"
+
 JubilifeCity_Text_GlobalTerminalClosed:
 	.string "Past here is the Global Terminal, your\n"
 	.string "gateway to the world!\p"
@@ -851,7 +1185,13 @@ JubilifeCity_Text_GlobalTerminalOpen:
 	.string "with friends, both old and new.\p"
 	.string "That’s awesome!$"
 
-JubilifeCity_Text_WrongAnswer:
+JubilifeCity_Text_ClownStickAround:
+	.string "Hi, there. You should stick around.\n"
+	.string "We’re doing a Pokétch campaign soon.\p"
+	.string "Before it starts, I think you should\n"
+	.string "brush up at the Trainers’ School.$"
+
+JubilifeCity_Text_ClownWrongAnswer:
 	.string "Bzzzzt!\n"
 	.string "That’s the wrong answer...$"
 
@@ -1032,6 +1372,20 @@ JubilifeCity_Text_NameYourGroup:
 	.string "The leader is {RIVAL}.\n"
 	.string "I hope the group gets more members.$"
 
+JubilifeCity_Text_WhenYouForm:
+	.string "When you form or join a new group,\n"
+	.string "be sure to visit any Union Room.\p"
+	.string "Mix your records with group members,\n"
+	.string "and you'll become integrated.\p"
+	.string "When you're in the same group,\n"
+	.string "events can happen simultaneously.\p"
+	.string "It makes things a lot more fun\n"
+	.string "playing in a group!\p"
+	.string "Anyone can make a group, and anyone\n"
+	.string "can join.\p"
+	.string "I hope you recruit lots of friends\n"
+	.string "so everyone can have fun!$"
+
 JubilifeCity_Text_ThatsTooBad:
 	.string "Oh.\n"
 	.string "That's too bad.$"
@@ -1043,3 +1397,23 @@ JubilifeCity_Text_SeeMeOnTV:
 JubilifeCity_Text_WalkWithPokemon:
 	.string "When you walk with your Pokémon,\n"
 	.string "they gradually grow friendlier.$"
+
+JubilifeCity_Text_TownSign:
+	.string "Jubilife City\n"
+	.string "City of Joy$"
+
+JubilifeCity_Text_TrainerSchoolSign:
+	.string "Trainers' School\n"
+	.string "The First Step for Trainers!$"
+
+JubilifeCity_Text_CondominiumSign:
+	.string "Jubilife Condominiums\n"
+	.string "Tenants Wanted!$"
+
+JubilifeCity_Text_JubilifeTVSign:
+	.string "Jubilife TV\n"
+	.string "The Fun-and-Games TV Station!$"
+
+JubilifeCity_Text_PoketchCompanySign:
+	.string "The Pokétch Company\n"
+	.string "Pokémon Watches for the World!$"

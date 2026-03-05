@@ -10,21 +10,35 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_PT",
-      "x": 4,
-      "y": 6,
+      "local_id": "LOCALID_TRAINER_SCHOOL_BARRY",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY",
+      "x": 5,
+      "y": 2,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Barry",
+      "flag": "FLAG_HIDE_TRAINER_SCHOOL_RIVAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_F_PT",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_TrainerSchool_EventScript_AceTrainerF",
       "flag": "0"
     },
     {
@@ -37,33 +51,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Lass",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BARRY",
-      "x": 5,
-      "y": 2,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_F_PT",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_PT",
       "x": 4,
-      "y": 3,
+      "y": 6,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Youngster1",
       "flag": "0"
     },
     {
@@ -76,7 +77,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Youngster2",
       "flag": "0"
     },
     {
@@ -84,12 +85,12 @@
       "x": 11,
       "y": 3,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Harrison",
       "flag": "0"
     },
     {
@@ -97,12 +98,12 @@
       "x": 13,
       "y": 3,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Christine",
       "flag": "0"
     },
     {
@@ -114,14 +115,14 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "trainer_sight_or_berry_tree_id": "ITEM_X_ATTACK",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TRAINER_SCHOOL_X_ATTACK"
     }
   ],
   "warp_events": [
     {
-      "x": 5,
+      "x": 6,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY",
@@ -129,5 +130,70 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Notebook"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Blackboard"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_Blackboard"
+    },
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_PokemonBooks"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_PokemonBooks"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_PictureBooks"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_PokemonBooks"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "JubilifeCity_TrainerSchool_EventScript_PokemonBooks"
+    }
+  ]
 }
