@@ -1213,5 +1213,5 @@ const struct Tileset gTileset_OreburghMine =
     .palettes = gTilesetPalettes_OreburghMine,
     .metatiles = gMetatiles_OreburghMine,
     .metatileAttributes = gMetatileAttributes_OreburghMine,
-    .callback = NULL,
+    .callback = InitTilesetAnim_OreburghMine,
 };

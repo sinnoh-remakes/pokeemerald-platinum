@@ -36,5 +36,6 @@ void InitTilesetAnim_Lake(void);
 void InitTilesetAnim_Route203(void);
 void InitTilesetAnim_Route204(void);
 void InitTilesetAnim_Oreburgh(void);
+void InitTilesetAnim_OreburghMine(void);
 
 #endif // GUARD_TILESET_ANIMS_H
