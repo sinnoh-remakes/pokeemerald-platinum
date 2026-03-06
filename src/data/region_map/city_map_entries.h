@@ -21,11 +21,6 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Littleroot_0,
     },
     {
-        .mapSecId = MAPSEC_OREBURGH_MINE,
-        .index = 0,
-        .tilemap = gPokenavCityMap_Littleroot_0,
-    },
-    {
         .mapSecId = MAPSEC_LITTLEROOT_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Littleroot_0,
