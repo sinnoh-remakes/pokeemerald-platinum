@@ -310,5 +310,8 @@ const u16 gMetatileAttributes_JubilifeSchool[] = INCBIN_U16("data/tilesets/secon
 const u16 gMetatiles_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatiles.bin");
 const u16 gMetatileAttributes_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatile_attributes.bin");
 
+const u16 gMetatiles_CaveOreburgh[] = INCBIN_U16("data/tilesets/primary/cave_oreburgh/metatiles.bin");
+const u16 gMetatileAttributes_CaveOreburgh[] = INCBIN_U16("data/tilesets/primary/cave_oreburgh/metatile_attributes.bin");
+
 const u16 gMetatiles_OreburghMine[] = INCBIN_U16("data/tilesets/secondary/oreburgh_mine/metatiles.bin");
 const u16 gMetatileAttributes_OreburghMine[] = INCBIN_U16("data/tilesets/secondary/oreburgh_mine/metatile_attributes.bin");

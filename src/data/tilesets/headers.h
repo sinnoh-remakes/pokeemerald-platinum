@@ -1205,6 +1205,17 @@ const struct Tileset gTileset_CommonCenter2F =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_CaveOreburgh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_CaveOreburgh,
+    .palettes = gTilesetPalettes_CaveOreburgh,
+    .metatiles = gMetatiles_CaveOreburgh,
+    .metatileAttributes = gMetatileAttributes_CaveOreburgh,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_OreburghMine =
 {
     .isCompressed = TRUE,
