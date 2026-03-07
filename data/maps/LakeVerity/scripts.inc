@@ -57,8 +57,9 @@ LakeVerity_EventScript_IntroScene::
 	waitmovement 0
 	delay 48
 	msgbox LakeVerity_Text_LetsCatch, MSGBOX_DEFAULT
-	@ FODO: Play mesprit sound
 	msgbox LakeVerity_Text_Kyaun, MSGBOX_SIGN
+	playmoncry SPECIES_MESPRIT, CRY_MODE_ENCOUNTER
+	waitmoncry
 	playse SE_PIN
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
