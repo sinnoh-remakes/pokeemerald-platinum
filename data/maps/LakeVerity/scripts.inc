@@ -57,8 +57,8 @@ LakeVerity_EventScript_IntroScene::
 	waitmovement 0
 	delay 48
 	msgbox LakeVerity_Text_LetsCatch, MSGBOX_DEFAULT
-	msgbox LakeVerity_Text_Kyaun, MSGBOX_SIGN
 	playmoncry SPECIES_MESPRIT, CRY_MODE_ENCOUNTER
+	msgbox LakeVerity_Text_Kyaun, MSGBOX_SIGN
 	waitmoncry
 	playse SE_PIN
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_ExclamationMark
