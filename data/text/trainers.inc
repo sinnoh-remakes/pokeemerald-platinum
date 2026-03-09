@@ -4916,6 +4916,30 @@ JubilifeCity_TrainerSchool_Text_ChristineEventText:
 	.string "If you’d like, talk to my friend and\n"
 	.string "get a nice item from him.$"
 
+Route203_Text_RivalIntro:
+	.string "{RIVAL}: Hey! {PLAYER}!\n"
+	.string "Tell me you got a little tougher!\p"
+	.string "Me? Do you even need to ask?\n"
+	.string "Of course I got tougher!\p"
+	.string "Come on!\n"
+	.string "I’ll demonstrate it to you!$"
+
+Route203_Text_RivalDefeated:
+	.string "What just happened?\n"
+	.string "I lost?!$"
+
+Route203_Text_RivalPostBattle:
+	.string "{RIVAL}: Waah!\n"
+	.string "What do you mean I lost?!\p"
+	.string "Well, that’s it!\n"
+	.string "That’s the last time I’ll ever lose!\p"
+	.string "I’m going to be the world’s toughest\n"
+	.string "Trainer, and you know it!\p"
+	.string "The first thing to do is take on\n"
+	.string "the Oreburgh City Pokémon Gym!\p"
+	.string "I’m gonna toughen up for that,\n"
+	.string "totally!$"
+
 Route203_Text_MichaelIntro:
 	.string "I get my get-up-and-go from my\n"
 	.string "Pokémon!\p"
