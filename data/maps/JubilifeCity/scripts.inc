@@ -787,6 +787,7 @@ JubilifeCity_EventScript_PoketchCheck2::
 JubilifeCity_EventScript_PoketchCheck3::
 	lock
 	faceplayer
+	setvar VAR_JUBILIFE_CITY_STATE, 4
 	msgbox JubilifeCity_Text_Poketch_Count, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
@@ -799,7 +800,6 @@ JubilifeCity_EventScript_PoketchCheck3::
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
-	setvar VAR_JUBILIFE_CITY_STATE, 4
 	removeobject LOCALID_POKETCH_NPC
 	release
 	end
