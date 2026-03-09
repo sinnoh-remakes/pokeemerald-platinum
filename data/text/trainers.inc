@@ -4795,6 +4795,24 @@ VSSeeker_Text_TrainersNotReady::
 	.string "to be ready for battle.\p"
 	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
 
+Route201_Text_RivalIntro:
+	.string "{RIVAL}: I've always wanted to\n"
+	.string "say this...\p"
+	.string "The time has finally come!\p"
+	.string "{PLAYER}!\n"
+	.string "I challenge you to a battle!$"
+
+Route201_Text_RivalDefeated:
+	.string "What are you saying?!\n"
+	.string "We ended up losing?!$"
+
+Route201_Text_RivalPostBattle:
+	.string "{RIVAL}: Whew!\n"
+	.string "Let's go home.\p"
+	.string "I'm beat after that battle.\n"
+	.string "My Pokémon needs rest, too.\p"
+	.string "See ya, {PLAYER}!$"
+
 Route202_Text_TristanIntro:
 	.string "You're a Pokémon Trainer!\n"
 	.string "I happen to be a Pokémon Trainer!\p"
