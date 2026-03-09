@@ -532,7 +532,7 @@ Route201_EventScript_BattleDecline::
 
 Route201_EventScript_BattleAccept::
 	setflag B_FLAG_NO_WHITEOUT
-	msgbox Route201_Text_RivalIntro, MSGBOX_SIGN
+	msgbox Route201_Text_RivalIntro, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route201_EventScript_RivalBattleTurtwig
 	case 1, Route201_EventScript_RivalBattleChimchar
@@ -540,17 +540,17 @@ Route201_EventScript_BattleAccept::
 	end
 
 Route201_EventScript_RivalBattleTurtwig::
-	trainerbattle_single TRAINER_RIVAL_ROUTE_201_CHIMCHAR, Route201_Text_RivalIntro, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_CHIMCHAR, Route201_Text_RivalDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
 Route201_EventScript_RivalBattleChimchar::
-	trainerbattle_single TRAINER_RIVAL_ROUTE_201_PIPLUP, Route201_Text_RivalIntro, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_PIPLUP, Route201_Text_RivalDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
 Route201_EventScript_RivalBattlePiplup::
-	trainerbattle_single TRAINER_RIVAL_ROUTE_201_TURTWIG, Route201_Text_RivalIntro, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_TURTWIG, Route201_Text_RivalDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
