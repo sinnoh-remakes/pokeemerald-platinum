@@ -20,7 +20,43 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 37,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_MINE_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_MINE_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_MINE_B1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 40,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_MINE_B1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 41,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_MINE_B1F",
+      "dest_warp_id": "2"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
