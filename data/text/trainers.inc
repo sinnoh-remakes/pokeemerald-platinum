@@ -4898,16 +4898,16 @@ JubilifeCity_TrainerSchool_Text_ChristineEventText:
 	.string "If you’d like, talk to my friend and\n"
 	.string "get a nice item from him.$"
 
-Route202_Text_MichaelIntro:
+Route203_Text_MichaelIntro:
 	.string "I get my get-up-and-go from my\n"
 	.string "Pokémon!\p"
 	.string "Here we go!\n"
 	.string "KRICKETOT! ZUBAT!$"
 
-Route202_Text_MichaelDefeated:
+Route203_Text_MichaelDefeated:
 	.string "Ack! My Pokémon...$"
 
-Route202_Text_MichaelPostBattle:
+Route203_Text_MichaelPostBattle:
 	.string "Keep out of the grass or dodge the\n"
 	.string "eyes of Trainers...?\p"
 	.string "I always have a tough time choosing.$"
