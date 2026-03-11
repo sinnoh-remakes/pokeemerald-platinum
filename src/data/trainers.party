@@ -120,7 +120,7 @@ Chimchar
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_1 ===
+=== TRAINER_PT_TRISTAN_1 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -129,11 +129,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Starly
+Starly (M)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_2 ===
+=== TRAINER_PT_TRISTAN_2 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -142,11 +142,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Staravia
+Staravia (M)
 Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_3 ===
+=== TRAINER_PT_TRISTAN_3 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -155,11 +155,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Staraptor
+Staraptor (M)
 Level: 35
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_4 ===
+=== TRAINER_PT_TRISTAN_4 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -168,11 +168,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Staraptor
+Staraptor (M)
 Level: 45
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_5 ===
+=== TRAINER_PT_TRISTAN_5 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -181,11 +181,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Staraptor
+Staraptor (M)
 Level: 45
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NATALIE ===
+=== TRAINER_PT_NATALIE ===
 Name: NATALIE
 Class: Lass
 Pic: Lass
@@ -194,11 +194,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Bidoof
+Bidoof (F)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LOGAN ===
+=== TRAINER_PT_LOGAN ===
 Name: LOGAN
 Class: Youngster
 Pic: Youngster
@@ -207,11 +207,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Burmy
+Burmy (M)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_HARRISON_PT ===
+=== TRAINER_PT_HARRISON ===
 Name: HARRISON
 Class: School Kid
 Pic: School Kid M
@@ -220,11 +220,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Starly
+Starly (M)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CHRISTINE ===
+=== TRAINER_PT_CHRISTINE ===
 Name: CHRISTINE
 Class: School Kid
 Pic: School Kid F
@@ -233,7 +233,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Bidoof
+Bidoof (F)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -288,7 +288,7 @@ Chimchar
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MICHAEL ===
+=== TRAINER_PT_MICHAEL ===
 Name: MICHAEL
 Class: Youngster
 Pic: Youngster
@@ -297,12 +297,232 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Kricketot
+Kricketot (M)
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Zubat (M)
 Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_DALLAS_1 ===
+Name: DALLAS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Shinx (M)
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_DALLAS_2 ===
+Name: DALLAS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Luxio (M)
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bibarel (M)
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_DALLAS_3 ===
+Name: DALLAS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Luxio (M)
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bibarel (M)
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Graveler (M)
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_DALLAS_4 ===
+Name: DALLAS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Luxray (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bibarel (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golem (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staraptor (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_DALLAS_5 ===
+Name: DALLAS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Luxray (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bibarel (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golem (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staraptor (M)
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_SEBASTIAN ===
+Name: SEBASTIAN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Machop (M)
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_KAITLIN ===
+Name: KAITLIN
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Bidoof (F)
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Budew (F)
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Starly (F)
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Abra (F)
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_MADELINE_1 ===
+Name: MADELINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Psyduck (F)
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_MADELINE_2 ===
+Name: MADELINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Psyduck (F)
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Buneary (F)
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_MADELINE_3 ===
+Name: MADELINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Golduck (F)
+Level: 33
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Buneary (F)
+Level: 33
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_MADELINE_4 ===
+Name: MADELINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Golduck (F)
+Level: 43
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lopunny (F)
+Level: 43
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_MADELINE_5 ===
+Name: MADELINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Golduck (F)
+Level: 43
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lopunny (F)
+Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MUSEUM_1 ===

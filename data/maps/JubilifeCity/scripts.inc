@@ -132,9 +132,9 @@ JubilifeCity_EventScript_Lucas6::
 	return
 
 JubilifeCity_EventScript_HelperWalkUp::
-	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_Walk_Up17
-	applymovement LOCALID_CAMERA, Common_Movement_Walk_Up17
-	applymovement LOCALID_PLAYER, Common_Movement_Walk_Up17
+	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkUp17
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp17
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp17
 	waitmovement 0
 	msgbox JubilifeCity_Text_ThatMan, MSGBOX_SIGN
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry1
@@ -787,6 +787,7 @@ JubilifeCity_EventScript_PoketchCheck2::
 JubilifeCity_EventScript_PoketchCheck3::
 	lock
 	faceplayer
+	setvar VAR_JUBILIFE_CITY_STATE, 4
 	msgbox JubilifeCity_Text_Poketch_Count, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
@@ -795,17 +796,16 @@ JubilifeCity_EventScript_PoketchCheck3::
 	goto_if_eq VAR_FACING, DIR_NORTH, JubilifeCity_EventScript_PoketchLeaveNorth
 	goto_if_eq VAR_FACING, DIR_SOUTH, JubilifeCity_EventScript_PoketchLeaveSouth
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_Player_WatchPoketchMan
-	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up6
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_WalkUp6
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
-	setvar VAR_JUBILIFE_CITY_STATE, 4
 	removeobject LOCALID_POKETCH_NPC
 	release
 	end
 
 JubilifeCity_EventScript_PoketchLeaveNorth::
-	applymovement LOCALID_POKETCH_NPC, Common_Movement_Walk_Up5
+	applymovement LOCALID_POKETCH_NPC, Common_Movement_WalkUp5
 	waitmovement 0
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	setflag FLAG_HIDE_JUBILIFE_LOOKER_2

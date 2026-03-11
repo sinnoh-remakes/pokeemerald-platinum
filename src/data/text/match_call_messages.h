@@ -320,10 +320,20 @@ const u8 gText_MatchCallYoungCouple_LoisAndHal_Intro2[] = _("Forever lovey-dovey
 
 // FODO: Add match call text for Sinnoh trainers
 
-const u8 gText_MatchCallYoungster_Tristan_Strategy[] = _("");
-const u8 gText_MatchCallYoungster_Tristan_Pokemon[] = _("");
-const u8 gText_MatchCallYoungster_Tristan_Intro1[] = _("");
-const u8 gText_MatchCallYoungster_Tristan_Intro2[] = _("");
+const u8 gText_MatchCallYoungster_Tristan_Pt_Strategy[] = _("");
+const u8 gText_MatchCallYoungster_Tristan_Pt_Pokemon[] = _("");
+const u8 gText_MatchCallYoungster_Tristan_Pt_Intro1[] = _("");
+const u8 gText_MatchCallYoungster_Tristan_Pt_Intro2[] = _("");
+
+const u8 gText_MatchCallYoungster_Dallas_Pt_Strategy[] = _("");
+const u8 gText_MatchCallYoungster_Dallas_Pt_Pokemon[] = _("");
+const u8 gText_MatchCallYoungster_Dallas_Pt_Intro1[] = _("");
+const u8 gText_MatchCallYoungster_Dallas_Pt_Intro2[] = _("");
+
+const u8 gText_MatchCallLass_Madeline_Pt_Strategy[] = _("");
+const u8 gText_MatchCallLass_Madeline_Pt_Pokemon[] = _("");
+const u8 gText_MatchCallLass_Madeline_Pt_Intro1[] = _("");
+const u8 gText_MatchCallLass_Madeline_Pt_Intro2[] = _("");
 
 const u8 gText_MatchCallPkmnTrainer_Wally_Strategy[] = _("We let it all hang out.");
 const u8 gText_MatchCallPkmnTrainer_Wally_Pokemon[] = _("The 1st POKéMON I caught.");
@@ -461,7 +471,9 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
     [REMATCH_TRENT] = MCFLAVOR(Hiker_Trent),
     [REMATCH_SAWYER] = MCFLAVOR(Hiker_Sawyer),
     [REMATCH_KIRA_AND_DAN] = MCFLAVOR(YoungCouple_LoisAndHal),
-    [REMATCH_TRISTAN] = MCFLAVOR(Youngster_Tristan),
+    [REMATCH_PT_TRISTAN] = MCFLAVOR(Youngster_Tristan_Pt),
+    [REMATCH_PT_DALLAS] = MCFLAVOR(Youngster_Dallas_Pt),
+    [REMATCH_PT_MADELINE] = MCFLAVOR(Lass_Madeline_Pt),
     [REMATCH_WALLY_VR] = MCFLAVOR(PkmnTrainer_Wally),
     [REMATCH_ROXANNE] = MCFLAVOR(RockinWhiz_Roxanne),
     [REMATCH_BRAWLY] = MCFLAVOR(TheBigHit_Brawly),

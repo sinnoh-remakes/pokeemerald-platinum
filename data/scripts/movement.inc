@@ -171,7 +171,7 @@ Common_Movement_WalkInPlaceUp::
 		walk_in_place_up
 		step_end
 
-Common_Movement_Walk_Up5:
+Common_Movement_WalkUp5:
 		walk_up
 		walk_up
 		walk_up
@@ -179,16 +179,7 @@ Common_Movement_Walk_Up5:
 		walk_up
 		step_end
 
-Common_Movement_Walk_Up6:
-		walk_up
-		walk_up
-		walk_up
-		walk_up
-		walk_up
-		walk_up
-		step_end
-
-Common_Movement_Walk_Up17:
+Common_Movement_WalkUp17:
 		walk_up
 		walk_up
 		walk_up
@@ -226,4 +217,15 @@ Common_Movement_WalkDown6:
 		walk_down
 		walk_down
 		walk_down
+		step_end
+
+Common_Movement_WalkFastRight8:
+		walk_fast_right
+		walk_fast_right
+		walk_fast_right
+		walk_fast_right
+		walk_fast_right
+		walk_fast_right
+		walk_fast_right
+		walk_fast_right
 		step_end

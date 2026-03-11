@@ -306,10 +306,10 @@ Route202_EventScript_TrainerTips::
 	end
 
 Route202_EventScript_Tristan::
-	trainerbattle_single TRAINER_TRISTAN_1, Route202_Text_TristanIntro, Route202_Text_TristanDefeated, Route202_EventScript_TristanRegisterMatchCallAfterBattle
+	trainerbattle_single TRAINER_PT_TRISTAN_1, Route202_Text_TristanIntro, Route202_Text_TristanDefeated, Route202_EventScript_TristanRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route202_EventScript_TristanRematch
-	setvar VAR_0x8004, TRAINER_TRISTAN_1
+	setvar VAR_0x8004, TRAINER_PT_TRISTAN_1
 	specialvar VAR_RESULT, IsTrainerRegistered
 	goto_if_eq VAR_RESULT, FALSE, Route202_EventScript_TristanTryRegister
 	msgbox Route202_Text_TristanPostBattle, MSGBOX_DEFAULT
@@ -325,7 +325,7 @@ Route202_EventScript_TristanRegisterMatchCallAfterBattle::
 
 Route202_EventScript_TristanRegisterMatchCall::
 	msgbox Route202_Text_TristanRegisterShort, MSGBOX_DEFAULT
-	register_matchcall TRAINER_TRISTAN_1
+	register_matchcall TRAINER_PT_TRISTAN_1
 	release
 	end
 
@@ -337,22 +337,22 @@ Route202_EventScript_TristanTryRegister::
 
 Route202_EventScript_TristanRegister::
 	msgbox Route202_Text_TristanRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_TRISTAN_1
+	register_matchcall TRAINER_PT_TRISTAN_1
 	release
 	end
 
 Route202_EventScript_TristanRematch::
-	trainerbattle_rematch TRAINER_TRISTAN_1, Route202_Text_TristanRematchIntro, Route202_Text_TristanRematchDefeated
+	trainerbattle_rematch TRAINER_PT_TRISTAN_1, Route202_Text_TristanRematchIntro, Route202_Text_TristanRematchDefeated
 	msgbox Route202_Text_TristanRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route202_EventScript_Natalie::
-	trainerbattle_single TRAINER_NATALIE, Route202_Text_NatalieIntro, Route202_Text_NatalieDefeated
+	trainerbattle_single TRAINER_PT_NATALIE, Route202_Text_NatalieIntro, Route202_Text_NatalieDefeated
 	msgbox Route202_Text_NataliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route202_EventScript_Logan::
-	trainerbattle_single TRAINER_LOGAN, Route202_Text_LoganIntro, Route202_Text_LoganDefeated
+	trainerbattle_single TRAINER_PT_LOGAN, Route202_Text_LoganIntro, Route202_Text_LoganDefeated
 	msgbox Route202_Text_LoganPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -473,15 +473,15 @@ Route202_Text_KeepWaiting:
 	.string "till I've seen every last one of 'em!$"
 
 Route202_Text_TrainerTips:
-	.string "TRAINER TIPS!\p"
+	.string "Trainer Tips!\p"
 	.string "All Pokémon that are involved in\n"
 	.string "a battle earn Exp. Points\p"
 	.string "The more your Pokémon battle,\n"
 	.string "the stronger they will become.$"
 
 Route202_Text_RouteSignSandgem:
-	.string "{DOWN_ARROW} Rt.202\n"
-	.string "   Sandgem Town$"
+	.string "   Rt.202\n"
+	.string "{DOWN_ARROW} Sandgem Town$"
 
 Route202_Text_RouteSignJubilife:
 	.string "{UP_ARROW} Rt.202\n"

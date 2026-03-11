@@ -532,7 +532,7 @@ Route201_EventScript_BattleDecline::
 
 Route201_EventScript_BattleAccept::
 	setflag B_FLAG_NO_WHITEOUT
-	msgbox Route201_Text_AlwaysWanted, MSGBOX_SIGN
+	msgbox Route201_Text_RivalIntro, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route201_EventScript_RivalBattleTurtwig
 	case 1, Route201_EventScript_RivalBattleChimchar
@@ -555,7 +555,7 @@ Route201_EventScript_RivalBattlePiplup::
 	end
 
 Route201_EventScript_PostRivalBattle::
-	msgbox Route201_Text_GoHome, MSGBOX_SIGN
+	msgbox Route201_Text_RivalPostBattle, MSGBOX_SIGN
 	setvar VAR_ROUTE201_STATE, 2
 	setvar VAR_TWINLEAF_TOWN_STATE, 2
 	setvar VAR_TWINLEAF_INTRO_STATE, 6
@@ -980,24 +980,6 @@ Route201_Text_OneThing:
 Route201_Text_ThatAttitude:
 	.string "{RIVAL}: What's with that attitude?\n"
 	.string "Don't be that way!$"
-
-Route201_Text_AlwaysWanted:
-	.string "{RIVAL}: I've always wanted to\n"
-	.string "say this...\p"
-	.string "The time has finally come!\p"
-	.string "{PLAYER}!\n"
-	.string "I challenge you to a battle!$"
-
-Route201_Text_RivalDefeated:
-	.string "What are you saying?!\n"
-	.string "We ended up losing?!$"
-
-Route201_Text_GoHome:
-	.string "{RIVAL}: Whew!\n"
-	.string "Let's go home.\p"
-	.string "I'm beat after that battle.\n"
-	.string "My Pokémon needs rest, too.\p"
-	.string "See ya, {PLAYER}!$"
 
 Route201_Text_SickOfWaiting:
 	.string "{RIVAL}: Too slow!\n"

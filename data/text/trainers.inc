@@ -4795,6 +4795,24 @@ VSSeeker_Text_TrainersNotReady::
 	.string "to be ready for battle.\p"
 	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
 
+Route201_Text_RivalIntro:
+	.string "{RIVAL}: I've always wanted to\n"
+	.string "say this...\p"
+	.string "The time has finally come!\p"
+	.string "{PLAYER}!\n"
+	.string "I challenge you to a battle!$"
+
+Route201_Text_RivalDefeated:
+	.string "What are you saying?!\n"
+	.string "We ended up losing?!$"
+
+Route201_Text_RivalPostBattle:
+	.string "{RIVAL}: Whew!\n"
+	.string "Let's go home.\p"
+	.string "I'm beat after that battle.\n"
+	.string "My Pokémon needs rest, too.\p"
+	.string "See ya, {PLAYER}!$"
+
 Route202_Text_TristanIntro:
 	.string "You're a Pokémon Trainer!\n"
 	.string "I happen to be a Pokémon Trainer!\p"
@@ -4898,16 +4916,86 @@ JubilifeCity_TrainerSchool_Text_ChristineEventText:
 	.string "If you’d like, talk to my friend and\n"
 	.string "get a nice item from him.$"
 
-Route202_Text_MichaelIntro:
+Route203_Text_RivalIntro:
+	.string "{RIVAL}: Hey! {PLAYER}!\n"
+	.string "Tell me you got a little tougher!\p"
+	.string "Me? Do you even need to ask?\n"
+	.string "Of course I got tougher!\p"
+	.string "Come on!\n"
+	.string "I’ll demonstrate it to you!$"
+
+Route203_Text_RivalDefeated:
+	.string "What just happened?\n"
+	.string "I lost?!$"
+
+Route203_Text_RivalPostBattle:
+	.string "{RIVAL}: Waah!\n"
+	.string "What do you mean I lost?!\p"
+	.string "Well, that’s it!\n"
+	.string "That’s the last time I’ll ever lose!\p"
+	.string "I’m going to be the world’s toughest\n"
+	.string "Trainer, and you know it!\p"
+	.string "The first thing to do is take on\n"
+	.string "the Oreburgh City Pokémon Gym!\p"
+	.string "I’m gonna toughen up for that,\n"
+	.string "totally!$"
+
+Route203_Text_MichaelIntro:
 	.string "I get my get-up-and-go from my\n"
 	.string "Pokémon!\p"
 	.string "Here we go!\n"
 	.string "KRICKETOT! ZUBAT!$"
 
-Route202_Text_MichaelDefeated:
+Route203_Text_MichaelDefeated:
 	.string "Ack! My Pokémon...$"
 
-Route202_Text_MichaelPostBattle:
+Route203_Text_MichaelPostBattle:
 	.string "Keep out of the grass or dodge the\n"
 	.string "eyes of Trainers...?\p"
 	.string "I always have a tough time choosing.$"
+
+Route203_Text_DallasIntro:
+	.string "I'm never apart from my SHINX.\n"
+	.string "Our bond is strong!$"
+
+Route203_Text_DallasDefeated:
+	.string "So sad...\n"
+	.string "And so crushed...$"
+
+Route203_Text_DallasPostBattle:
+	.string "I don't bear grudges over losing.\n"
+	.string "But I promise I'll get tougher!$"
+
+Route203_Text_SebastianIntro:
+	.string "Before I challenge the Pokémon Gym\n"
+	.string "Leader, I'll test my strength on you!$"
+
+Route203_Text_SebastianDefeated:
+	.string "I guess it means I'm not ready for\n"
+	.string "the Gym challenge yet...$"
+
+Route203_Text_SebastianPostBattle:
+	.string "I guess if you don't have a single\n"
+	.string "Gym badge, you're a total nobody...$"
+
+Route203_Text_KaitlinIntro:
+	.string "I found a Trainer while looking for\n"
+	.string "some Pokémon!$"
+
+Route203_Text_KaitlinDefeated:
+	.string "Hunh? You're finished so soon?$"
+
+Route203_Text_KaitlinPostBattle:
+	.string "I walk through tall grass until I\n"
+	.string "find the Pokémon I want.$"
+
+Route203_Text_MadelineIntro:
+	.string "I got a nifty-keen Gym badge from\n"
+	.string "the Gym leader in Oreburgh City!$"
+
+Route203_Text_MadelineDefeated:
+	.string "Oh, I lost! Lalala!$"
+
+Route203_Text_MadelinePostBattle:
+	.string "I'm collecting lost of Gym badges.\n"
+	.string "They're so sparkly and pretty!$"
