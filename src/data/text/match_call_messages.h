@@ -325,6 +325,16 @@ const u8 gText_MatchCallYoungster_Tristan_Pokemon[] = _("");
 const u8 gText_MatchCallYoungster_Tristan_Intro1[] = _("");
 const u8 gText_MatchCallYoungster_Tristan_Intro2[] = _("");
 
+const u8 gText_MatchCallYoungster_Dallas_Strategy[] = _("");
+const u8 gText_MatchCallYoungster_Dallas_Pokemon[] = _("");
+const u8 gText_MatchCallYoungster_Dallas_Intro1[] = _("");
+const u8 gText_MatchCallYoungster_Dallas_Intro2[] = _("");
+
+const u8 gText_MatchCallLass_Madeline_Strategy[] = _("");
+const u8 gText_MatchCallLass_Madeline_Pokemon[] = _("");
+const u8 gText_MatchCallLass_Madeline_Intro1[] = _("");
+const u8 gText_MatchCallLass_Madeline_Intro2[] = _("");
+
 const u8 gText_MatchCallPkmnTrainer_Wally_Strategy[] = _("We let it all hang out.");
 const u8 gText_MatchCallPkmnTrainer_Wally_Pokemon[] = _("The 1st POKéMON I caught.");
 const u8 gText_MatchCallPkmnTrainer_Wally_Intro1[] = _("POKéMON and I have grown");

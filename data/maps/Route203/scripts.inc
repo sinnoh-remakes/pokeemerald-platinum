@@ -116,7 +116,7 @@ Route203_EventScript_Michael::
 	end
 
 Route203_EventScript_Dallas::
-	trainerbattle_single TRAINER_DALLAS, Route203_Text_DallasIntro, Route203_Text_DallasDefeated
+	trainerbattle_single TRAINER_DALLAS_1, Route203_Text_DallasIntro, Route203_Text_DallasDefeated
 	msgbox Route203_Text_DallasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -131,7 +131,7 @@ Route203_EventScript_Kaitlin::
 	end
 
 Route203_EventScript_Madeline::
-	trainerbattle_single TRAINER_MADELINE_PT, Route203_Text_MadelineIntro, Route203_Text_MadelineDefeated
+	trainerbattle_single TRAINER_MADELINE_PT_1 Route203_Text_MadelineIntro, Route203_Text_MadelineDefeated
 	msgbox Route203_Text_MadelinePostBattle, MSGBOX_AUTOCLOSE
 	end
 
