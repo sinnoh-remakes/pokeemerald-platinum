@@ -5022,7 +5022,7 @@ Route204_Text_TylerDefeated:
 
 Route204_Text_TylerPostBattle:
 	.string "Who gave you your first Pokémon?\p"
-	.string "our first Pokémon is the one with\n"
+	.string "Your first Pokémon is the one with\n"
 	.string "the most fond memories, I think.$"
 
 Route204_Text_SamanthaIntro:
