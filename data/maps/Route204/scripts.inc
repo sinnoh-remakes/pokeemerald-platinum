@@ -39,4 +39,4 @@ Route204_Text_RouteSignJubilife:
 	.string "{DOWN_ARROW} Jubilife City$"
 
 Route204_Text_RouteSignRavagedPath:
-	.string "Ravaged Path"$
+	.string "Ravaged Path$"
