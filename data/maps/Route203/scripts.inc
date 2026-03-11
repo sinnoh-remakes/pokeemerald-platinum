@@ -111,27 +111,27 @@ Route203_Movement_RivalApproach4:
 	step_end
 
 Route203_EventScript_Michael::
-	trainerbattle_single TRAINER_MICHAEL, Route203_Text_MichaelIntro, Route203_Text_MichaelDefeated
+	trainerbattle_single TRAINER_PT_MICHAEL, Route203_Text_MichaelIntro, Route203_Text_MichaelDefeated
 	msgbox Route203_Text_MichaelPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route203_EventScript_Dallas::
-	trainerbattle_single TRAINER_DALLAS_1, Route203_Text_DallasIntro, Route203_Text_DallasDefeated
+	trainerbattle_single TRAINER_PT_DALLAS_1, Route203_Text_DallasIntro, Route203_Text_DallasDefeated
 	msgbox Route203_Text_DallasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route203_EventScript_Sebastian::
-	trainerbattle_single TRAINER_SEBASTIAN_PT, Route203_Text_SebastianIntro, Route203_Text_SebastianDefeated
+	trainerbattle_single TRAINER_PT_SEBASTIAN, Route203_Text_SebastianIntro, Route203_Text_SebastianDefeated
 	msgbox Route203_Text_SebastianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route203_EventScript_Kaitlin::
-	trainerbattle_single TRAINER_KAITLIN, Route203_Text_KaitlinIntro, Route203_Text_KaitlinDefeated
+	trainerbattle_single TRAINER_PT_KAITLIN, Route203_Text_KaitlinIntro, Route203_Text_KaitlinDefeated
 	msgbox Route203_Text_KaitlinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route203_EventScript_Madeline::
-	trainerbattle_single TRAINER_MADELINE_PT_1 Route203_Text_MadelineIntro, Route203_Text_MadelineDefeated
+	trainerbattle_single TRAINER_PT_MADELINE_1 Route203_Text_MadelineIntro, Route203_Text_MadelineDefeated
 	msgbox Route203_Text_MadelinePostBattle, MSGBOX_AUTOCLOSE
 	end
 

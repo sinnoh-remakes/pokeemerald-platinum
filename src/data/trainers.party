@@ -120,7 +120,7 @@ Chimchar
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_1 ===
+=== TRAINER_PT_TRISTAN_1 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -133,7 +133,7 @@ Starly (M)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_2 ===
+=== TRAINER_PT_TRISTAN_2 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -146,7 +146,7 @@ Staravia (M)
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_3 ===
+=== TRAINER_PT_TRISTAN_3 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -159,7 +159,7 @@ Staraptor (M)
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_4 ===
+=== TRAINER_PT_TRISTAN_4 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -172,7 +172,7 @@ Staraptor (M)
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TRISTAN_5 ===
+=== TRAINER_PT_TRISTAN_5 ===
 Name: TRISTAN
 Class: Youngster
 Pic: Youngster
@@ -185,7 +185,7 @@ Staraptor (M)
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NATALIE ===
+=== TRAINER_PT_NATALIE ===
 Name: NATALIE
 Class: Lass
 Pic: Lass
@@ -198,7 +198,7 @@ Bidoof (F)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LOGAN ===
+=== TRAINER_PT_LOGAN ===
 Name: LOGAN
 Class: Youngster
 Pic: Youngster
@@ -211,7 +211,7 @@ Burmy (M)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_HARRISON_PT ===
+=== TRAINER_PT_HARRISON ===
 Name: HARRISON
 Class: School Kid
 Pic: School Kid M
@@ -224,7 +224,7 @@ Starly (M)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CHRISTINE ===
+=== TRAINER_PT_CHRISTINE ===
 Name: CHRISTINE
 Class: School Kid
 Pic: School Kid F
@@ -288,7 +288,7 @@ Chimchar
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MICHAEL ===
+=== TRAINER_PT_MICHAEL ===
 Name: MICHAEL
 Class: Youngster
 Pic: Youngster
@@ -305,7 +305,7 @@ Zubat (M)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DALLAS_1 ===
+=== TRAINER_PT_DALLAS_1 ===
 Name: DALLAS
 Class: Youngster
 Pic: Youngster
@@ -318,7 +318,7 @@ Shinx (M)
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DALLAS_2 ===
+=== TRAINER_PT_DALLAS_2 ===
 Name: DALLAS
 Class: Youngster
 Pic: Youngster
@@ -335,7 +335,7 @@ Bibarel (M)
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DALLAS_3 ===
+=== TRAINER_PT_DALLAS_3 ===
 Name: DALLAS
 Class: Youngster
 Pic: Youngster
@@ -356,7 +356,7 @@ Graveler (M)
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DALLAS_4 ===
+=== TRAINER_PT_DALLAS_4 ===
 Name: DALLAS
 Class: Youngster
 Pic: Youngster
@@ -381,7 +381,7 @@ Staraptor (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DALLAS_5 ===
+=== TRAINER_PT_DALLAS_5 ===
 Name: DALLAS
 Class: Youngster
 Pic: Youngster
@@ -406,7 +406,7 @@ Staraptor (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_SEBASTIAN_PT ===
+=== TRAINER_PT_SEBASTIAN ===
 Name: SEBASTIAN
 Class: Youngster
 Pic: Youngster
@@ -419,7 +419,7 @@ Machop (M)
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_KAITLIN ===
+=== TRAINER_PT_KAITLIN ===
 Name: KAITLIN
 Class: Lass
 Pic: Lass
@@ -444,7 +444,7 @@ Abra (F)
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MADELINE_PT_1 ===
+=== TRAINER_PT_MADELINE_1 ===
 Name: MADELINE
 Class: Lass
 Pic: Lass
@@ -457,7 +457,7 @@ Psyduck (F)
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MADELINE_PT_2 ===
+=== TRAINER_PT_MADELINE_2 ===
 Name: MADELINE
 Class: Lass
 Pic: Lass
@@ -474,7 +474,7 @@ Buneary (F)
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MADELINE_PT_3 ===
+=== TRAINER_PT_MADELINE_3 ===
 Name: MADELINE
 Class: Lass
 Pic: Lass
@@ -491,7 +491,7 @@ Buneary (F)
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MADELINE_PT_4 ===
+=== TRAINER_PT_MADELINE_4 ===
 Name: MADELINE
 Class: Lass
 Pic: Lass
@@ -508,7 +508,7 @@ Lopunny (F)
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MADELINE_PT_5 ===
+=== TRAINER_PT_MADELINE_5 ===
 Name: MADELINE
 Class: Lass
 Pic: Lass
