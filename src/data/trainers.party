@@ -194,7 +194,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Bidoof
+Bidoof (F)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -207,7 +207,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Burmy
+Burmy (M)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -220,7 +220,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Starly
+Starly (M)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -233,7 +233,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Bidoof
+Bidoof (F)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -297,11 +297,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Kricketot
+Kricketot (M)
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Zubat (M)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -314,7 +314,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Shinx
+Shinx (M)
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -327,11 +327,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Luxio
+Luxio (M)
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Bibarel
+Bibarel (M)
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -344,15 +344,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Luxio
+Luxio (M)
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Bibarel
+Bibarel (M)
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Graveler
+Graveler (M)
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -365,19 +365,19 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Luxray
+Luxray (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Bibarel
+Bibarel (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golem
+Golem (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Staraptor
+Staraptor (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -390,19 +390,19 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Luxray
+Luxray (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Bibarel
+Bibarel (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golem
+Golem (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Staraptor
+Staraptor (M)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -415,7 +415,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machop
+Machop (M)
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -428,19 +428,19 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Bidoof
+Bidoof (F)
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Budew
+Budew (F)
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starly
+Starly (F)
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Abra
+Abra (F)
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -453,7 +453,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Psyduck
+Psyduck (F)
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -466,11 +466,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Psyduck
+Psyduck (F)
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Buneary
+Buneary (F)
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -483,11 +483,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Golduck
+Golduck (F)
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Buneary
+Buneary (F)
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -500,11 +500,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Golduck
+Golduck (F)
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lopunny
+Lopunny (F)
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -517,11 +517,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Golduck
+Golduck (F)
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lopunny
+Lopunny (F)
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
