@@ -4953,3 +4953,49 @@ Route203_Text_MichaelPostBattle:
 	.string "Keep out of the grass or dodge the\n"
 	.string "eyes of Trainers...?\p"
 	.string "I always have a tough time choosing.$"
+
+Route203_Text_DallasIntro:
+	.string "I'm never apart from my SHINX.\n"
+	.string "Our bond is strong!$"
+
+Route203_Text_DallasDefeated:
+	.string "So sad...\n"
+	.string "And so crushed...$"
+
+Route203_Text_DallasPostBattle:
+	.string "I don't bear grudges over losing.\n"
+	.string "But I promise I'll get tougher!$"
+
+Route203_Text_SebastianIntro:
+	.string "Before I challenge the Pokémon Gym\n"
+	.string "Leader, I'll test my strength on you!$"
+
+Route203_Text_SebastianDefeated:
+	.string "I guess it means I'm not ready for\n"
+	.string "the Gym challenge yet...$"
+
+Route203_Text_SebastianPostBattle:
+	.string "I guess if you don't have a single\n"
+	.string "Gym badge, you're a total nobody...$"
+
+Route203_Text_KaitlinIntro:
+	.string "I found a Trainer while looking for\n"
+	.string "some Pokémon!$"
+
+Route203_Text_KaitlinDefeated:
+	.string "Hunh? You're finished so soon?$"
+
+Route203_Text_KaitlinPostBattle:
+	.string "I walk through tall grass until I\n"
+	.string "find the Pokémon I want.$"
+
+Route203_Text_MadelineIntro:
+	.string "I got a nifty-keen Gym badge from\n"
+	.string "the Gym leader in Oreburgh City!$"
+
+Route203_Text_MadelineDefeated:
+	.string "Oh, I lost! Lalala!$"
+
+Route203_Text_MadelinePostBattle:
+	.string "I'm collecting lost of Gym badges.\n"
+	.string "They're so sparkly and pretty!$"

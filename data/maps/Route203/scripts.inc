@@ -115,20 +115,28 @@ Route203_EventScript_Michael::
 	msgbox Route203_Text_MichaelPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route203_EventScript_Lass1::
-	msgbox Route203_Text_FavoriteParty, MSGBOX_NPC
-	end
-
 Route203_EventScript_Dallas::
-	end
-
-Route203_EventScript_Kaitlin::
-	end
-
-Route203_EventScript_Madeline::
+	trainerbattle_single TRAINER_DALLAS, Route203_Text_DallasIntro, Route203_Text_DallasDefeated
+	msgbox Route203_Text_DallasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route203_EventScript_Sebastian::
+	trainerbattle_single TRAINER_SEBASTIAN_PT, Route203_Text_SebastianIntro, Route203_Text_SebastianDefeated
+	msgbox Route203_Text_SebastianPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route203_EventScript_Kaitlin::
+	trainerbattle_single TRAINER_KAITLIN, Route203_Text_KaitlinIntro, Route203_Text_KaitlinDefeated
+	msgbox Route203_Text_KaitlinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route203_EventScript_Madeline::
+	trainerbattle_single TRAINER_MADELINE_PT, Route203_Text_MadelineIntro, Route203_Text_MadelineDefeated
+	msgbox Route203_Text_MadelinePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route203_EventScript_Lass::
+	msgbox Route203_Text_FavoriteParty, MSGBOX_NPC
 	end
 
 Route203_EventScript_RouteSignJubilife::
