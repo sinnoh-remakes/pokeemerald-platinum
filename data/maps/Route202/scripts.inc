@@ -473,15 +473,15 @@ Route202_Text_KeepWaiting:
 	.string "till I've seen every last one of 'em!$"
 
 Route202_Text_TrainerTips:
-	.string "TRAINER TIPS!\p"
+	.string "Trainer Tips!\p"
 	.string "All Pokémon that are involved in\n"
 	.string "a battle earn Exp. Points\p"
 	.string "The more your Pokémon battle,\n"
 	.string "the stronger they will become.$"
 
 Route202_Text_RouteSignSandgem:
-	.string "{DOWN_ARROW} Rt.202\n"
-	.string "   Sandgem Town$"
+	.string "   Rt.202\n"
+	.string "{DOWN_ARROW} Sandgem Town$"
 
 Route202_Text_RouteSignJubilife:
 	.string "{UP_ARROW} Rt.202\n"

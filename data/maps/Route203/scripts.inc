@@ -140,15 +140,19 @@ Route203_EventScript_Lass::
 	end
 
 Route203_EventScript_RouteSignJubilife::
+	msgbox Route203_Text_RouteSignJubilife, MSGBOX_SIGN
 	end
 
 Route203_EventScript_RouteSignOreburgh::
+	msgbox Route203_Text_RouteSignOreburgh, MSGBOX_SIGN
 	end
 
-Route203_EventScript_Sign1::
+Route203_EventScript_TrainerTips1::
+	msgbox Route203_Text_TrainerTips1, MSGBOX_SIGN
 	end
 
-Route203_EventScript_Sign2::
+Route203_EventScript_TrainerTips2::
+	msgbox Route203_Text_TrainerTips2, MSGBOX_SIGN
 	end
 
 Route203_Text_FavoriteParty:
@@ -157,15 +161,15 @@ Route203_Text_FavoriteParty:
 	.string "That way, it will be the first to go out\n"
 	.string "in a battle.$"
 
-Route203_Text_FavoriteParty1:
-	.string "Rt. 203\n"
-	.string "Jubilife City$"
+Route203_Text_RouteSignJubilife:
+	.string "    Rt.203\n"
+	.string "{LEFT_ARROW} Jubilife City$"
 
-Route203_Text_FavoriteParty2:
-	.string "Rt. 203\n"
-	.string "Oreburgh City$"
+Route203_Text_RouteSignOreburgh:
+	.string "    Rt.203\n"
+	.string "{RIGHT_ARROW} Oreburgh City$"
 
-Route203_Text_FavoriteParty3:
+Route203_Text_TrainerTips1:
 	.string "Trainer Tips!\p"
 	.string "If a Pokémon is about to evolve,\n"
 	.string "it can be instantly stopped.\p"
@@ -174,7 +178,7 @@ Route203_Text_FavoriteParty3:
 	.string "That is how evolution can be\n"
 	.string "canceled.$"
 
-Route203_Text_FavoriteParty4:
+Route203_Text_TrainerTips2:
 	.string "Trainer Tips!\p"
 	.string "Pokémon moves use energy called\n"
 	.string "Power Points, or PP for short.\p"
