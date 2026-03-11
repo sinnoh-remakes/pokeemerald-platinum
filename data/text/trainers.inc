@@ -4999,3 +4999,40 @@ Route203_Text_MadelineDefeated:
 Route203_Text_MadelinePostBattle:
 	.string "I'm collecting lost of Gym badges.\n"
 	.string "They're so sparkly and pretty!$"
+
+Route204_Text_SarahIntro:
+	.string "Oh, a weak-looking Trainer...\n"
+	.string "Do you want to have a go?$"
+
+Route204_Text_SarahDefeated:
+	.string "Aww...\n"
+	.string "I should have said no.$"
+
+Route204_Text_SarahPostBattle:
+	.string "Oh, you’re so mean!\n"
+	.string "I just started training Pokémon!$"
+
+Route204_Text_TylerIntro:
+	.string "I’ll beat you with the MAGIKARP my dad\n"
+	.string "gave me!$"
+
+Route204_Text_TylerDefeated:
+	.string "But they’re Pokémon I got from my\n"
+	.string "dad...$"
+
+Route204_Text_TylerPostBattle:
+	.string "Who gave you your first Pokémon?\p"
+	.string "our first Pokémon is the one with\n"
+	.string "the most fond memories, I think.$"
+
+Route204_Text_SamanthaIntro:
+	.string "May I please trouble you for a\n"
+	.string "battle?$"
+
+Route204_Text_SamanthaDefeated:
+	.string "Oh...\n"
+	.string "You’re so strong...$"
+
+Route204_Text_SamanthaPostBattle:
+	.string "Maybe I could have won if my Pokémon\n"
+	.string "was holding a Berry...\n"
