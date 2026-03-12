@@ -525,6 +525,117 @@ Lopunny (F)
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_PT_SARAH ===
+Name: SARAH
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Shinx (F)
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_TYLER ===
+Name: TYLER
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magikarp (M)
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_SAMANTHA_1 ===
+Name: SAMANTHA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Budew (F)
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_SAMANTHA_2 ===
+Name: SAMANTHA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Budew (F)
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_SAMANTHA_3 ===
+Name: SAMANTHA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Beautifly (F)
+Level: 33
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Roselia (F)
+Level: 33
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_SAMANTHA_4 ===
+Name: SAMANTHA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Combee (M)
+Level: 51
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Roselia (F)
+Level: 51
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Beautifly (F)
+Level: 51
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_SAMANTHA_5 ===
+Name: SAMANTHA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Combee (M)
+Level: 51
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Roselia (F)
+Level: 51
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Beautifly (F)
+Level: 51
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MUSEUM_1 ===
 Name: GRUNT
 Class: Team Aqua
