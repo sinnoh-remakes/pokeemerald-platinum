@@ -1298,7 +1298,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (void *)VRAM);
     DecompressDataWithHeaderVram(sBirchSpeechBgMap, (void *)(BG_SCREEN_ADDR(7)));
     LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
-    LoadPalette(&sBirchSpeechBgGradientPal[8], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
+    //∂LoadPalette(&sBirchSpeechBgGradientPal[8], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
     ScanlineEffect_Stop();
     ResetSpriteData();
     FreeAllSpritePalettes();
@@ -1309,7 +1309,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
     gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
     gTasks[taskId].data[3] = 0xFF;
-    gTasks[taskId].tTimer = 0xD8;
+    gTasks[taskId].tTimer = 042;
     PlayBGM(MUS_ROUTE122);
     ShowBg(0);
     ShowBg(1);
@@ -1833,7 +1833,7 @@ static void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void)
     DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (u8 *)VRAM);
     DecompressDataWithHeaderVram(sBirchSpeechBgMap, (u8 *)(BG_SCREEN_ADDR(7)));
     LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
-    LoadPalette(&sBirchSpeechBgGradientPal[1], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
+    //LoadPalette(&sBirchSpeechBgGradientPal[1], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
     ResetTasks();
     taskId = CreateTask(Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox, 0);
     gTasks[taskId].tTimer = 5;
@@ -2036,24 +2036,7 @@ static void NewGameBirchSpeech_StartFadeInTarget1OutTarget2(u8 taskId, u8 delay)
 
 static void Task_NewGameBirchSpeech_FadePlatformIn(u8 taskId)
 {
-    if (gTasks[taskId].tDelayBefore)
-    {
-        gTasks[taskId].tDelayBefore--;
-    }
-    else if (gTasks[taskId].tPalIndex == 8)
-    {
-        DestroyTask(taskId);
-    }
-    else if (gTasks[taskId].tDelayTimer)
-    {
-        gTasks[taskId].tDelayTimer--;
-    }
-    else
-    {
-        gTasks[taskId].tDelayTimer = gTasks[taskId].tDelay;
-        gTasks[taskId].tPalIndex++;
-        LoadPalette(&sBirchSpeechBgGradientPal[gTasks[taskId].tPalIndex], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
-    }
+    DestroyTask(taskId);
 }
 
 static void NewGameBirchSpeech_StartFadePlatformIn(u8 taskId, u8 delay)
@@ -2063,31 +2046,14 @@ static void NewGameBirchSpeech_StartFadePlatformIn(u8 taskId, u8 delay)
     taskId2 = CreateTask(Task_NewGameBirchSpeech_FadePlatformIn, 0);
     gTasks[taskId2].tMainTask = taskId;
     gTasks[taskId2].tPalIndex = 0;
-    gTasks[taskId2].tDelayBefore = 8;
-    gTasks[taskId2].tDelay = delay;
-    gTasks[taskId2].tDelayTimer = delay;
+    gTasks[taskId2].tDelayBefore = 0;
+    gTasks[taskId2].tDelay = 0;
+    gTasks[taskId2].tDelayTimer = 0;
 }
 
 static void Task_NewGameBirchSpeech_FadePlatformOut(u8 taskId)
 {
-    if (gTasks[taskId].tDelayBefore)
-    {
-        gTasks[taskId].tDelayBefore--;
-    }
-    else if (gTasks[taskId].tPalIndex == 0)
-    {
-        DestroyTask(taskId);
-    }
-    else if (gTasks[taskId].tDelayTimer)
-    {
-        gTasks[taskId].tDelayTimer--;
-    }
-    else
-    {
-        gTasks[taskId].tDelayTimer = gTasks[taskId].tDelay;
-        gTasks[taskId].tPalIndex--;
-        LoadPalette(&sBirchSpeechBgGradientPal[gTasks[taskId].tPalIndex], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
-    }
+    DestroyTask(taskId);
 }
 
 static void NewGameBirchSpeech_StartFadePlatformOut(u8 taskId, u8 delay)
@@ -2097,9 +2063,9 @@ static void NewGameBirchSpeech_StartFadePlatformOut(u8 taskId, u8 delay)
     taskId2 = CreateTask(Task_NewGameBirchSpeech_FadePlatformOut, 0);
     gTasks[taskId2].tMainTask = taskId;
     gTasks[taskId2].tPalIndex = 8;
-    gTasks[taskId2].tDelayBefore = 8;
-    gTasks[taskId2].tDelay = delay;
-    gTasks[taskId2].tDelayTimer = delay;
+    gTasks[taskId2].tDelayBefore = 0;
+    gTasks[taskId2].tDelay = 0;
+    gTasks[taskId2].tDelayTimer = 0;
 }
 
 #undef tMainTask
