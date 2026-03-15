@@ -49,7 +49,7 @@
 #define FLAG_JUBILIFE_CLOWN_ITEM               0x23
 #define FLAG_JUBILIFE_CLOWN_TYPE               0x24
 #define FLAG_TRAINER_SCHOOL_RECEIVED_POTION    0x25
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_ITEM_OREBURGH_CITY_SUPER_POTION   0x26
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
