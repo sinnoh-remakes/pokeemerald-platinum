@@ -219,6 +219,18 @@ OreburghCityNorth_EventScript_Hiker::
 	msgbox OreburghCityNorth_Text_HugeMountain, MSGBOX_NPC
 	end
 
+OreburghCitySouth_EventScript_TownSign::
+	msgbox OreburghCitySouth_Text_TownSign, MSGBOX_SIGN
+	end
+
+OreburghCitySouth_EventScript_GymSign::
+	msgbox OreburghCitySouth_Text_GymSign, MSGBOX_SIGN
+	end
+
+OreburghCitySouth_EventScript_MuseumSign::
+	msgbox OreburghCitySouth_Text_MuseumSign, MSGBOX_SIGN
+	end
+
 OreburghCityNorth_Text_HowdyTrainer:
 	.string "Howdy, Trainer!\p"
 	.string "Huh? Uh-oh!\n"
@@ -293,3 +305,16 @@ OreburghCityNorth_Text_HugeMountain:
 	.string "that towers above everything.\p"
 	.string "It divides Sinnoh into two distinct\n"
 	.string "halves.$"
+
+OreburghCitySouth_Text_TownSign: 
+	.string "Oreburgh City\n"
+	.string "City of Energy$"
+
+OreburghCitySouth_Text_GymSign:
+	.string "Oreburgh City Pokémon Gym\n"
+	.string "Leader: Roark\l"
+	.string "“Call me Roark the Rock!”$"
+
+OreburghCitySouth_Text_MuseumSign:
+	.string "Oreburgh Mining Museum\n"
+	.string "“Coal Mining and You!”$"

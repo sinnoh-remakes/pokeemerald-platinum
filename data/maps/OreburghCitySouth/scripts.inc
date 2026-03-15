@@ -39,6 +39,10 @@ OreburghCitySouth_EventScript_Machop3::
 	msgbox OreburghCitySouth_Text_Machop3, MSGBOX_NPC
 	end
 
+OreburghCitySouth_EventScript_MineSign::
+	msgbox OreburghCitySouth_Text_MineSign, MSGBOX_SIGN
+	end
+
 OreburghCitySouth_Text_EveryoneProud:
 	.string "Everyone’s proud of the mine.\p"
 	.string "They’re digging for coal under the\n"
@@ -74,3 +78,7 @@ OreburghCitySouth_Text_HaleHearty:
 
 OreburghCitySouth_Text_Machop3:
 	.string "MACHOP: Macho! Chopo!$"
+
+OreburghCitySouth_Text_MineSign:
+	.string "Oreburgh Mine\n"
+	.string "Beware of Busy Pokémon!$"
