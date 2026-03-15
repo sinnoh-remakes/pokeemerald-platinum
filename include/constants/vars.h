@@ -269,14 +269,15 @@
 #define VAR_SANDGEM_TOWN_STATE                           0x40F9
 #define VAR_SANDGEM_LAB_STATE                            0x40FA
 #define VAR_JUBILIFE_CITY_STATE                          0x40FB
-#define VAR_ROUTE201_STATE                               0x40FC
-#define VAR_ROUTE202_STATE                               0x40FD
-#define VAR_ROUTE203_STATE                               0x40FE
-#define VAR_VERITY_STATE                                 0x40FF
-#define VAR_ALTERNATE_TEXT                               0x4100
-#define VAR_FOLLOWER_TEXT                                0x4101
+#define VAR_OREBURGH_CITY_STATE                          0x40FC
+#define VAR_ROUTE201_STATE                               0x40FD
+#define VAR_ROUTE202_STATE                               0x40FE
+#define VAR_ROUTE203_STATE                               0x40FF
+#define VAR_VERITY_STATE                                 0x4100
+#define VAR_ALTERNATE_TEXT                               0x4101
+#define VAR_FOLLOWER_TEXT                                0x4102
 
-#define VARS_END                                         0x4101
+#define VARS_END                                         0x4102
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000
