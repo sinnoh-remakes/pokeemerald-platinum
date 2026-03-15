@@ -1204,3 +1204,25 @@ const struct Tileset gTileset_CommonCenter2F =
     .metatileAttributes = gMetatileAttributes_CommonCenter2F,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_CaveOreburgh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_CaveOreburgh,
+    .palettes = gTilesetPalettes_CaveOreburgh,
+    .metatiles = gMetatiles_CaveOreburgh,
+    .metatileAttributes = gMetatileAttributes_CaveOreburgh,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_OreburghMine =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OreburghMine,
+    .palettes = gTilesetPalettes_OreburghMine,
+    .metatiles = gMetatiles_OreburghMine,
+    .metatileAttributes = gMetatileAttributes_OreburghMine,
+    .callback = InitTilesetAnim_OreburghMine,
+};
