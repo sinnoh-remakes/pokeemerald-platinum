@@ -44,6 +44,16 @@ OreburghGate_EventScript_HikerAlert2::
 	goto OreburghGate_EventScript_HikerGive
 	end
 
+OreburghGate_EventScript_Curtis::
+	trainerbattle_single TRAINER_PT_CURTIS, OreburghGate_Text_CurtisIntro, OreburghGate_Text_CurtisDefeated
+	msgbox OreburghGate_Text_CurtisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+OreburghGate_EventScript_Diana::
+	trainerbattle_single TRAINER_PT_DIANA, OreburghGate_Text_DianaIntro, OreburghGate_Text_DianaDefeated
+	msgbox OreburghGate_Text_DianaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 OreburghGate_Text_SparkingNew:
 	.string "That sparkling new Pokétch!\n"
 	.string "Your awkwardness as a traveler!\p"

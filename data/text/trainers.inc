@@ -5037,6 +5037,30 @@ Route204_Text_SamanthaPostBattle:
 	.string "Maybe I could have won if my Pokémon\n"
 	.string "was holding a Berry...\n"
 
+OreburghGate_Text_CurtisDefeated:
+	.string "Hmm...\n"
+	.string "Insufficiently raised?$"
+
+OreburghGate_Text_CurtisPostBattle:
+	.string "Pokémon can appear anywhere in a cave.\n"
+	.string "It’s not like the tall grass by roads.$"
+
+OreburghGate_Text_CurtisIntro:
+	.string "We Trainers will accept challenges\n"
+	.string "anywhere! It’s what we do.$"
+
+OreburghGate_Text_DianaDefeated:
+	.string "Well, I guess losing is something\n"
+	.string "to commemorate, too...$"
+
+OreburghGate_Text_DianaPostBattle:
+	.string "Getting through that cave feels\n"
+	.string "like an adventure.$"
+
+OreburghGate_Text_DianaIntro:
+	.string "To celebrate my getting through this\n"
+	.string "cave, I’m going to battle you!$"
+
 Ace_Trainer_AbelDefeat:
 	.string "You’re not a Trainer that can be\n"
 	.string "taken lightly!$"
@@ -6740,18 +6764,6 @@ Camper_AnthonyIntro:
 Camper_AnthonyRematch:
 	.string "Go for it, my Pokémon!\n"
 	.string "I’ll do more than my best this time!$"
-
-Camper_CurtisDefeat:
-	.string "Hmm...\n"
-	.string "Insufficiently raised?$"
-
-Camper_CurtisPostBattle:
-	.string "Pokémon can appear anywhere in a cave.\n"
-	.string "It’s not like the tall grass by roads.$"
-
-Camper_CurtisIntro:
-	.string "We Trainers will accept challenges\n"
-	.string "anywhere! It’s what we do.$"
 
 Camper_DiegoDefeat:
 	.string "You didn’t really have to win!\n"
@@ -9157,18 +9169,6 @@ Picnicker_CheyennePostBattle:
 Picnicker_CheyenneIntro:
 	.string "I’m not afraid of picnicking anywhere,\n"
 	.string "so I’ve learned all sorts of things.$"
-
-Picnicker_DianaDefeat:
-	.string "Well, I guess losing is something\n"
-	.string "to commemorate, too...$"
-
-Picnicker_DianaPostBattle:
-	.string "Getting through that cave feels\n"
-	.string "like an adventure.$"
-
-Picnicker_DianaIntro:
-	.string "To celebrate my getting through this\n"
-	.string "cave, I’m going to battle you!$"
 
 Picnicker_KarinaDefeat:
 	.string "Oh, boo!\n"
