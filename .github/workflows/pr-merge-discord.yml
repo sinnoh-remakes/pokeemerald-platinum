@@ -1,0 +1,19 @@
+name: Notify Discord on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  notify:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send message to Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{
+            "content": "PR merged: **${{ github.event.pull_request.title }}** by ${{ github.event.pull_request.user.login }}\n${{ github.event.pull_request.html_url }}"
+          }' \
+          ${{ secrets.DISCORD_WEBHOOK }}
