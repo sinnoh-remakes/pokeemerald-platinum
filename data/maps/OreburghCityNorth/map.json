@@ -26,6 +26,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_OREBURGH_CITY_YOUNGSTER",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_PT",
       "x": 17,
       "y": 19,
@@ -35,7 +36,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OreburghCityNorth_EventScript_YoungsterTalk",
       "flag": "0"
     },
     {
@@ -61,7 +62,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OreburghCityNorth_EventScript_Barry",
       "flag": "0"
     },
     {
@@ -152,6 +153,43 @@
       "dest_warp_id": "3"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "1",
+      "script": "OreburghCityNorth_EventScript_Youngster1"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "1",
+      "script": "OreburghCityNorth_EventScript_Youngster2"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "1",
+      "script": "OreburghCityNorth_EventScript_Youngster3"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "1",
+      "script": "OreburghCityNorth_EventScript_Youngster4"
+    }
+  ],
   "bg_events": []
 }
