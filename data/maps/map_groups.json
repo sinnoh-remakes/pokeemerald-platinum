@@ -8,6 +8,7 @@
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
+    "gMapGroup_IndoorOreburgh",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -99,6 +100,9 @@
     "JubilifeCity_PokemonCenter_1F",
     "JubilifeCity_PokemonCenter_2F",
     "JubilifeCity_Mart"
+  ],
+  "gMapGroup_IndoorOreburgh": [
+    "OreburghCity_Gym"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
