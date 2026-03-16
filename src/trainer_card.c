@@ -227,7 +227,7 @@ static const struct BgTemplate sTrainerCardBgTemplates[4] =
         .screenSize = 0,
         .paletteMode = 0,
         .priority = 1,
-        .baseTile = 192
+        .baseTile = 256
     },
 };
 
@@ -1502,10 +1502,11 @@ static void DrawStarsAndBadgesOnCard(void)
     static const u8 yOffsets[] = {7, 7};
 
     s16 i, x;
-    u16 tileNum = 192;
+    u16 tileNum = 256
+;
     u8 palNum = 3;
 
-    FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
+    FillBgTilemapBufferRect(3, 235, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
     if (!sData->isLink)
     {
         x = 4;
