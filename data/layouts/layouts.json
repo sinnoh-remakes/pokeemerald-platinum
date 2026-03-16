@@ -4754,10 +4754,10 @@
     {
       "id": "LAYOUT_OREBURGH_CITY_GYM",
       "name": "OreburghCity_Gym_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 10,
+      "height": 24,
+      "primary_tileset": "gTileset_CaveOreburgh",
+      "secondary_tileset": "gTileset_OreburghGym",
       "border_filepath": "data/layouts/OreburghCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity_Gym/map.bin"
     }
