@@ -227,7 +227,7 @@ static const struct BgTemplate sTrainerCardBgTemplates[4] =
         .screenSize = 0,
         .paletteMode = 0,
         .priority = 1,
-        .baseTile = 256
+        .baseTile = 192
     },
 };
 
@@ -294,8 +294,8 @@ static const u8 sTrainerPicOffset[2][GENDER_COUNT][2] =
     },
     // Hoenn
     {
-        [MALE]   = {1, 0},
-        [FEMALE] = {1, 0}
+        [MALE]   = {9, 16},
+        [FEMALE] = {13, 16}
     },
 };
 
@@ -1005,13 +1005,16 @@ static void PrintNameOnCardFront(void)
 {
     u8 buffer[32];
     u8 *txtPtr;
+    s32 xOffset;
     txtPtr = StringCopy(buffer, gText_TrainerCardName);
-    StringCopy(txtPtr, sData->trainerCard.playerName);
     ConvertInternationalString(txtPtr, sData->language);
     if (sData->cardType == CARD_TYPE_FRLG)
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 20, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
     else
-        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 33, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 10, 24, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
+    StringCopy(gStringVar4, sData->trainerCard.playerName);
+    xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 144);
+    AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, xOffset, 24, sTrainerCardTextColors, TEXT_SKIP_DRAW, gStringVar4);
 }
 
 static void PrintIdOnCard(void)
@@ -1029,8 +1032,8 @@ static void PrintIdOnCard(void)
     }
     else
     {
-        xPos = GetStringCenterAlignXOffset(FONT_NORMAL, buffer, 96) + 120;
-        top = 9;
+        xPos = GetStringCenterAlignXOffset(FONT_NORMAL, buffer, 96) + 136;
+        top = 120;
     }
 
     AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, xPos, top, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
@@ -1044,7 +1047,7 @@ static void PrintMoneyOnCard(void)
     if (!sData->isHoenn)
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 20, 56, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardMoney);
     else
-        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 57, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardMoney);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 10, 40, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardMoney);
 
     ConvertIntToDecimalStringN(gStringVar1, sData->trainerCard.money, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
@@ -1055,8 +1058,8 @@ static void PrintMoneyOnCard(void)
     }
     else
     {
-        xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 128);
-        top = 57;
+        xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 144);
+        top = 40;
     }
     AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, xOffset, top, sTrainerCardTextColors, TEXT_SKIP_DRAW, gStringVar4);
 }
@@ -1078,7 +1081,7 @@ static void PrintPokedexOnCard(void)
         if (!sData->isHoenn)
             AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 20, 72, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardPokedex);
         else
-            AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 73, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardPokedex);
+            AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 10, 64, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardPokedex);
         StringCopy(ConvertIntToDecimalStringN(gStringVar4, sData->trainerCard.caughtMonsCount, STR_CONV_MODE_LEFT_ALIGN, 4), gText_EmptyString6);
         if (!sData->isHoenn)
         {
@@ -1087,8 +1090,8 @@ static void PrintPokedexOnCard(void)
         }
         else
         {
-            xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 128);
-            top = 73;
+            xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 144);
+            top = 64;
         }
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, xOffset, top, sTrainerCardTextColors, TEXT_SKIP_DRAW, gStringVar4);
     }
@@ -1106,7 +1109,7 @@ static void PrintTimeOnCard(void)
     if (!sData->isHoenn)
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 20, 88, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardTime);
     else
-        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 89, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardTime);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 10, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardTime);
 
     if (sData->isLink)
     {
@@ -1128,12 +1131,12 @@ static void PrintTimeOnCard(void)
     if (!sData->isHoenn)
     {
         x = 144;
-        y = 88;
+        y = 112;
     }
     else
     {
-        x = 128;
-        y = 89;
+        x = 144;
+        y = 112;
     }
     totalWidth = width + 30;
     x -= totalWidth;
@@ -1502,11 +1505,11 @@ static void DrawStarsAndBadgesOnCard(void)
     static const u8 yOffsets[] = {7, 7};
 
     s16 i, x;
-    u16 tileNum = 256
+    u16 tileNum = 192;
 ;
     u8 palNum = 3;
 
-    FillBgTilemapBufferRect(3, 235, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
+    FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
     if (!sData->isLink)
     {
         x = 4;
