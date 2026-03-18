@@ -1497,6 +1497,12 @@ static void DrawCardFrontOrBack(u16 *ptr)
                 dst[32 * i + j] = ptr[0];
         }
     }
+    // hide stars on front
+    if (!sData->onBack){
+        for(i = 0; i < 5 - sData->trainerCard.stars; i++){
+            dst[87 + i] = ptr[82];
+        }
+    }
     CopyBgTilemapBufferToVram(0);
 }
 
@@ -1506,10 +1512,9 @@ static void DrawStarsAndBadgesOnCard(void)
 
     s16 i, x;
     u16 tileNum = 192;
-;
     u8 palNum = 3;
 
-    FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
+    //FillBgTilemapBufferRect(3, 118, 15, yOffsets[sData->isHoenn], 1, 1, 10);
     if (!sData->isLink)
     {
         x = 4;
