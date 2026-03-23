@@ -4754,7 +4754,7 @@
     {
       "id": "LAYOUT_OREBURGH_CITY_GYM",
       "name": "OreburghCity_Gym_Layout",
-      "width": 10,
+      "width": 16,
       "height": 24,
       "primary_tileset": "gTileset_CaveOreburgh",
       "secondary_tileset": "gTileset_OreburghGym",
