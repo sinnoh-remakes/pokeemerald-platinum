@@ -297,6 +297,8 @@ const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pic
 //BackPics
 const u8 gTrainerBackPic_Lucas[] = INCBIN_U8("graphics/trainers/back_pics/lucas_p.4bpp");
 const u8 gTrainerBackPic_Dawn[] = INCBIN_U8("graphics/trainers/back_pics/dawn_p.4bpp");
+const u16 gTrainerPalette_Barry_Back[] = INCBIN_U16("graphics/trainers/palettes/barry_back.gbapal");
+const u8 gTrainerBackPic_Barry[] = INCBIN_U8("graphics/trainers/back_pics/barry.4bpp");
 
 //FrontPics
 const u32 gTrainerFrontPic_DP_Ace_Trainer_DoubleTeam[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ace_Trainer_DoubleTeam.4bpp.lz");
@@ -859,4 +861,5 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_STEVEN, 4, gTrainerBackPic_Steven, gTrainerPalette_Steven, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_LUCAS, 4, gTrainerBackPic_Lucas, gTrainerPalette_DP_Lucas_p, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_DAWN, 4, gTrainerBackPic_Dawn, gTrainerPalette_DP_Dawn_p, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_BARRY, 4, gTrainerBackPic_Barry, gTrainerPalette_Barry_Back, sBackAnims_Hoenn),
 };
