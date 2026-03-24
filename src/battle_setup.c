@@ -892,6 +892,7 @@ void ChooseStarter(void)
 
 static void CB2_GiveStarterNoBattle(void)
 {
+    UpdatePaletteFade();
     u16 starterMon;
 
     *GetVarPointer(VAR_STARTER_MON) = gSpecialVar_Result;
