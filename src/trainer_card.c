@@ -966,31 +966,31 @@ static bool8 PrintAllOnCardBack(void)
     switch (sData->printState)
     {
     case 0:
-        PrintNameOnCardBack();
+        //PrintNameOnCardBack();
         break;
     case 1:
-        PrintHofDebutTimeOnCard();
+        //PrintHofDebutTimeOnCard();
         break;
     case 2:
-        PrintLinkBattleResultsOnCard();
+        //PrintLinkBattleResultsOnCard();
         break;
     case 3:
-        PrintTradesStringOnCard();
+        //PrintTradesStringOnCard();
         break;
     case 4:
-        PrintBerryCrushStringOnCard();
-        PrintPokeblockStringOnCard();
+        //PrintBerryCrushStringOnCard();
+        //PrintPokeblockStringOnCard();
         break;
     case 5:
-        PrintUnionStringOnCard();
-        PrintContestStringOnCard();
+        //PrintUnionStringOnCard();
+        //PrintContestStringOnCard();
         break;
     case 6:
-        PrintPokemonIconsOnCard();
-        PrintBattleFacilityStringOnCard();
+        //PrintPokemonIconsOnCard();
+        //PrintBattleFacilityStringOnCard();
         break;
     case 7:
-        PrintStickersOnCard();
+        //PrintStickersOnCard();
         break;
     default:
         sData->printState = 0;
@@ -1758,10 +1758,14 @@ static bool8 Task_SetCardFlipped(struct Task *task)
     // If on back of card, draw front of card because its being flipped
     if (sData->onBack)
     {
+        LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
         DrawTrainerCardWindow(WIN_TRAINER_PIC);
         DrawCardScreenBackground(sData->bgTilemap);
         DrawCardFrontOrBack(sData->frontTilemap);
         DrawStarsAndBadgesOnCard();
+    }
+    else {
+        LoadPalette(gHoennTrainerCardBack_Pal, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
     }
     DrawTrainerCardWindow(WIN_CARD_TEXT);
     sData->onBack ^= 1;
