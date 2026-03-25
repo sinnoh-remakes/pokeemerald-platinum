@@ -86,7 +86,6 @@ struct TrainerCardData
     u8 badgeTiles[0x80 * NUM_BADGES];
     u8 stickerTiles[0x200];
     u8 cardTiles[0x2300];
-    u8 backTiles[0x2300];
     u16 cardTilemapBuffer[0x1000];
     u16 bgTilemapBuffer[0x1000];
     u16 cardTop;
@@ -586,7 +585,6 @@ static bool8 LoadCardGfx(void)
             DecompressDataWithHeaderWram(gHoennTrainerCard_Gfx, sData->cardTiles);
         else
             DecompressDataWithHeaderWram(gKantoTrainerCard_Gfx, sData->cardTiles);
-            DecompressDataWithHeaderWram(gHoennTrainerCardBack_Gfx, sData->backTiles);
         break;
     case 5:
         if (sData->cardType == CARD_TYPE_FRLG)
@@ -1454,7 +1452,7 @@ static u8 SetCardBgsAndPals(void)
         LoadBgTiles(3, sData->badgeTiles, ARRAY_COUNT(sData->badgeTiles), 0);
         break;
     case 1:
-        LoadBgTiles(0, sData->cardTiles, 0x1800, 0);
+        LoadBgTiles(0, sData->cardTiles, 0x2200, 0);
         break;
     case 2:
         if (sData->cardType != CARD_TYPE_FRLG)
@@ -1712,14 +1710,6 @@ static bool8 Task_DrawFlippedCardSide(struct Task *task)
         case 0:
             FillWindowPixelBuffer(WIN_CARD_TEXT, PIXEL_FILL(0));
             FillBgTilemapBufferRect_Palette0(3, 0, 0, 0, 0x20, 0x20);
-            if(!sData->onBack)
-            {
-                LoadBgTiles(0, sData->cardTiles, 0x1800, 0);
-            }
-            else
-            {
-                LoadBgTiles(0, sData->backTiles, 0x1800, 0);
-            }
             break;
         case 1:
             if (!sData->onBack)
