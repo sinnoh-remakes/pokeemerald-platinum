@@ -83,7 +83,7 @@ struct TrainerCardData
     u16 frontTilemap[600];
     u16 backTilemap[600];
     u16 bgTilemap[600];
-    u8 badgeTiles[0x80 * NUM_BADGES];
+    u8 badgeTiles[0x1E00];
     u8 stickerTiles[0x200];
     u8 cardTiles[0x2300];
     u16 cardTilemapBuffer[0x1000];
@@ -184,14 +184,6 @@ static const u16 sKantoTrainerCardGold_Pal[]     = INCBIN_U16("graphics/trainer_
 static const u16 sHoennTrainerCardFemaleBg_Pal[] = INCBIN_U16("graphics/trainer_card/female_bg.gbapal");
 static const u16 sKantoTrainerCardFemaleBg_Pal[] = INCBIN_U16("graphics/trainer_card/frlg/female_bg.gbapal");
 static const u16 sHoennTrainerCardBadges_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge1_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge2_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge3_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge4_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge5_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge6_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge7_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
-static const u16 sHoennTrainerCardBadge8_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
 static const u16 sKantoTrainerCardBadges_Pal[]   = INCBIN_U16("graphics/trainer_card/frlg/badges.gbapal");
 static const u16 sTrainerCardStar_Pal[]          = INCBIN_U16("graphics/trainer_card/star.gbapal");
 static const u16 sTrainerCardSticker1_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers1.gbapal");
@@ -237,7 +229,7 @@ static const struct BgTemplate sTrainerCardBgTemplates[4] =
         .screenSize = 0,
         .paletteMode = 0,
         .priority = 1,
-        .baseTile = 192
+        .baseTile = 0
     },
 };
 
@@ -1435,7 +1427,6 @@ static void LoadStickerGfx(void)
     LoadPalette(sTrainerCardSticker2_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
     LoadPalette(sTrainerCardSticker3_Pal, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
     LoadPalette(sTrainerCardSticker4_Pal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
-    LoadBgTiles(3, sData->stickerTiles, 1024, 128);
 }
 
 static void DrawTrainerCardWindow(u8 windowId)
@@ -1449,7 +1440,7 @@ static u8 SetCardBgsAndPals(void)
     switch (sData->bgPalLoadState)
     {
     case 0:
-        LoadBgTiles(3, sData->badgeTiles, ARRAY_COUNT(sData->badgeTiles), 0);
+        LoadBgTiles(3, sData->badgeTiles, 0x1E00, 0);
         break;
     case 1:
         LoadBgTiles(0, sData->cardTiles, 0x2200, 0);
@@ -1458,7 +1449,7 @@ static u8 SetCardBgsAndPals(void)
         if (sData->cardType != CARD_TYPE_FRLG)
         {
             LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
-            LoadPalette(sHoennTrainerCardBadges_Pal, BG_PLTT_ID(3), PLTT_SIZE_4BPP);
+            LoadPalette(sHoennTrainerCardBadges_Pal, BG_PLTT_ID(3), 8 * PLTT_SIZE_4BPP);
             if (sData->trainerCard.gender != MALE)
                 LoadPalette(sHoennTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         }
@@ -1758,14 +1749,12 @@ static bool8 Task_SetCardFlipped(struct Task *task)
     // If on back of card, draw front of card because its being flipped
     if (sData->onBack)
     {
-        LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
         DrawTrainerCardWindow(WIN_TRAINER_PIC);
         DrawCardScreenBackground(sData->bgTilemap);
         DrawCardFrontOrBack(sData->frontTilemap);
         DrawStarsAndBadgesOnCard();
     }
     else {
-        LoadPalette(gHoennTrainerCardBack_Pal, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
     }
     DrawTrainerCardWindow(WIN_CARD_TEXT);
     sData->onBack ^= 1;
