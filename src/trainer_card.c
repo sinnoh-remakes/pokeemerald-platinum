@@ -83,9 +83,8 @@ struct TrainerCardData
     u16 frontTilemap[600];
     u16 backTilemap[600];
     u16 bgTilemap[600];
-    u8 badgeTiles[0x1E00];
     u8 stickerTiles[0x200];
-    u8 cardTiles[0x2300];
+    u8 cardTiles[0x3600];
     u16 cardTilemapBuffer[0x1000];
     u16 bgTilemapBuffer[0x1000];
     u16 cardTop;
@@ -229,7 +228,7 @@ static const struct BgTemplate sTrainerCardBgTemplates[4] =
         .screenSize = 0,
         .paletteMode = 0,
         .priority = 1,
-        .baseTile = 0
+        .baseTile = 192
     },
 };
 
@@ -414,7 +413,7 @@ static void Task_TrainerCard(u8 taskId)
         sData->mainState++;
         break;
     case 6:
-        DrawStarsAndBadgesOnCard();
+        //DrawStarsAndBadgesOnCard();
         sData->mainState++;
         break;
     // Fade in
@@ -567,10 +566,10 @@ static bool8 LoadCardGfx(void)
         }
         break;
     case 3:
-        if (sData->cardType != CARD_TYPE_FRLG)
+        /*if (sData->cardType != CARD_TYPE_FRLG)
             DecompressDataWithHeaderWram(sHoennTrainerCardBadges_Gfx, sData->badgeTiles);
         else
-            DecompressDataWithHeaderWram(sKantoTrainerCardBadges_Gfx, sData->badgeTiles);
+            DecompressDataWithHeaderWram(sKantoTrainerCardBadges_Gfx, sData->badgeTiles);*/
         break;
     case 4:
         if (sData->cardType != CARD_TYPE_FRLG)
@@ -1396,7 +1395,7 @@ static void LoadMonIconGfx(void)
         TintPalette_SepiaTone(sData->monIconPal, 96);
         break;
     }
-    LoadPalette(sData->monIconPal, BG_PLTT_ID(5), 6 * PLTT_SIZE_4BPP);
+    //LoadPalette(sData->monIconPal, BG_PLTT_ID(5), 6 * PLTT_SIZE_4BPP);
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
@@ -1440,18 +1439,26 @@ static u8 SetCardBgsAndPals(void)
     switch (sData->bgPalLoadState)
     {
     case 0:
-        LoadBgTiles(3, sData->badgeTiles, 0x1E00, 0);
+        //LoadBgTiles(3, sData->badgeTiles, 0x1E00, 0);
         break;
     case 1:
-        LoadBgTiles(0, sData->cardTiles, 0x2200, 0);
+        LoadBgTiles(0, sData->cardTiles, 0x3600, 0);
         break;
     case 2:
         if (sData->cardType != CARD_TYPE_FRLG)
         {
-            LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
-            LoadPalette(sHoennTrainerCardBadges_Pal, BG_PLTT_ID(3), 8 * PLTT_SIZE_4BPP);
+            LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 12 * PLTT_SIZE_4BPP);
             if (sData->trainerCard.gender != MALE)
                 LoadPalette(sHoennTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
+
+            // Hide badges that have not been obtained yet
+            for(u8 i = 0; i < NUM_BADGES; i++){
+                if(!sData->badgeCount[i]){
+                // Trainer Sprite is used in BG_PLTT_ID(8) so badges 6-8 are loaded starting from BG_PLTT_ID(9)
+                u8 badgeIndex = i > 4 ? 4 + i : 3 + i;
+                LoadPalette(sHoennTrainerCardBadges_Pal, BG_PLTT_ID(badgeIndex), PLTT_SIZE_4BPP);
+                }
+            }
         }
         else
         {
@@ -1460,7 +1467,7 @@ static u8 SetCardBgsAndPals(void)
             if (sData->trainerCard.gender != MALE)
                 LoadPalette(sKantoTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         }
-        LoadPalette(sTrainerCardStar_Pal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
+        //LoadPalette(sTrainerCardStar_Pal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
         break;
     case 3:
         SetBgTilemapBuffer(0, sData->cardTilemapBuffer);
