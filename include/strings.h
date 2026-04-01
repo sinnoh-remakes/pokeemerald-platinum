@@ -264,7 +264,11 @@ extern const u8 gText_Birch_YourePlayer[];
 extern const u8 gText_Birch_AreYouReady[];
 
 extern const u8 gText_BirchInTrouble[];
+extern const u8 gText_RowanGiveStarter[];
 extern const u8 gText_ConfirmStarterChoice[];
+extern const u8 gText_ConfirmStarterChoiceLT[];
+extern const u8 gText_ConfirmStarterChoiceMD[];
+extern const u8 gText_ConfirmStarterChoiceRT[];
 
 // mystery event menu text
 extern const u8 gText_EventSafelyLoaded[];
