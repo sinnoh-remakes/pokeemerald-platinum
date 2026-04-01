@@ -1952,6 +1952,12 @@ const u16 gUsePokeblockNatureWin_Pal[] = INCBIN_U16("graphics/pokeblock/use_scre
 
 // trainer card
 
+const u32 gSinnohTrainerCard_Gfx[] = INCBIN_U32("graphics/trainer_card/pt/tiles.4bpp.smol");
+const u32 gSinnohTrainerCardBg_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/bg.bin.smolTM");
+const u32 gSinnohTrainerCardFront_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/front.bin.smolTM");
+const u32 gSinnohTrainerCardBack_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/back.bin.smolTM");
+const u32 gSinnohTrainerCardFrontLink_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/front_link.bin.smolTM");
+
 const u16 gHoennTrainerCardGreen_Pal[] = INCBIN_U16("graphics/trainer_card/green.gbapal");
 const u32 gHoennTrainerCard_Gfx[] = INCBIN_U32("graphics/trainer_card/tiles.4bpp.smol");
 const u32 gHoennTrainerCardBg_Tilemap[] = INCBIN_U32("graphics/trainer_card/bg.bin.smolTM");

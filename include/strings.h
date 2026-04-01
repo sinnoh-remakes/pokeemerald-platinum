@@ -1936,6 +1936,7 @@ extern const u8 gText_ContestantsMonWon[];
 extern const u8 gText_LinkCableBattles[];
 extern const u8 gText_LinkBattles[];
 extern const u8 gText_WaitingTrainerFinishReading[];
+extern const u8 gText_SinnohTrainerCardName[];
 extern const u8 gText_TrainerCardName[];
 extern const u8 gText_TrainerCardIDNo[];
 extern const u8 gText_TrainerCardMoney[];
