@@ -3279,17 +3279,22 @@ extern const u16 gContestResultsTitle_Tilemap[];
 
 // Trainer Card.
 extern const u16 gHoennTrainerCardGreen_Pal[];
+extern const u32 gSinnohTrainerCard_Gfx[];
 extern const u32 gHoennTrainerCard_Gfx[];
 extern const u16 gKantoTrainerCardBlue_Pal[];
 extern const u32 gKantoTrainerCard_Gfx[];
 extern const u32 gKantoTrainerCardBg_Tilemap[];
+extern const u32 gSinnohTrainerCardBack_Tilemap[];
 extern const u32 gHoennTrainerCardBack_Tilemap[];
 extern const u32 gKantoTrainerCardBack_Tilemap[];
+extern const u32 gSinnohTrainerCardFront_Tilemap[];
 extern const u32 gHoennTrainerCardFront_Tilemap[];
 extern const u32 gKantoTrainerCardFront_Tilemap[];
+extern const u32 gSinnohTrainerCardFrontLink_Tilemap[];
 extern const u32 gHoennTrainerCardFrontLink_Tilemap[];
 extern const u32 gKantoTrainerCardFrontLink_Tilemap[];
 extern const u32 gHoennTrainerCardBg_Tilemap[];
+extern const u32 gSinnohTrainerCardBg_Tilemap[];
 
 // Frontier Pass
 extern const u32 gFrontierPassBg_Gfx[];

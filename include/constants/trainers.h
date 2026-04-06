@@ -278,12 +278,12 @@
 #define FACILITY_CLASS_TWINS                 0x39
 #define FACILITY_CLASS_SAILOR                0x3a
 #define FACILITY_CLASS_WALLY                 0x3b
-#define FACILITY_CLASS_LUCAS                 0x3c
-#define FACILITY_CLASS_LUCAS_2               0x3d
-#define FACILITY_CLASS_LUCAS_3               0x3e
-#define FACILITY_CLASS_DAWN                  0x3f
-#define FACILITY_CLASS_DAWN_2                0x40
-#define FACILITY_CLASS_DAWN_3                0x41
+#define FACILITY_CLASS_BRENDAN               0x3c
+#define FACILITY_CLASS_BRENDAN_2             0x3d
+#define FACILITY_CLASS_BRENDAN_3             0x3e
+#define FACILITY_CLASS_MAY                   0x3f
+#define FACILITY_CLASS_MAY_2                 0x40
+#define FACILITY_CLASS_MAY_3                 0x41
 #define FACILITY_CLASS_PKMN_BREEDER_M        0x42
 #define FACILITY_CLASS_BUG_CATCHER           0x43
 #define FACILITY_CLASS_PKMN_RANGER_M         0x44
@@ -301,8 +301,14 @@
 #define FACILITY_CLASS_RS_BRENDAN            0x50
 #define FACILITY_CLASS_RS_MAY                0x51
 #define FACILITY_CLASS_BARRY                 0x52
+#define FACILITY_CLASS_LUCAS                 0x53
+#define FACILITY_CLASS_LUCAS_2               0x54
+#define FACILITY_CLASS_LUCAS_3               0x55
+#define FACILITY_CLASS_DAWN                  0x56
+#define FACILITY_CLASS_DAWN_2                0x57
+#define FACILITY_CLASS_DAWN_3                0x58
 
-#define FACILITY_CLASSES_COUNT               0x53
+#define FACILITY_CLASSES_COUNT               0x59
 
 #define RS_FACILITY_CLASS_AQUA_LEADER_ARCHIE    0x0
 #define RS_FACILITY_CLASS_AQUA_GRUNT_M          0x1
@@ -362,12 +368,12 @@
 #define RS_FACILITY_CLASS_BOARDER_2             0x37
 #define RS_FACILITY_CLASS_COLLECTOR             0x38
 #define RS_FACILITY_CLASS_WALLY                 0x39
-#define RS_FACILITY_CLASS_LUCAS_1             0x3A
-#define RS_FACILITY_CLASS_LUCAS_2             0x3B
-#define RS_FACILITY_CLASS_LUCAS_3             0x3C
-#define RS_FACILITY_CLASS_DAWN_1                 0x3D
-#define RS_FACILITY_CLASS_DAWN_2                 0x3E
-#define RS_FACILITY_CLASS_DAWN_3                 0x3F
+#define RS_FACILITY_CLASS_BRENDAN_1             0x3A
+#define RS_FACILITY_CLASS_BRENDAN_2             0x3B
+#define RS_FACILITY_CLASS_BRENDAN_3             0x3C
+#define RS_FACILITY_CLASS_MAY_1                 0x3D
+#define RS_FACILITY_CLASS_MAY_2                 0x3E
+#define RS_FACILITY_CLASS_MAY_3                 0x3F
 #define RS_FACILITY_CLASS_PKMN_BREEDER_M        0x40
 #define RS_FACILITY_CLASS_PKMN_BREEDER_F        0x41
 #define RS_FACILITY_CLASS_PKMN_RANGER_M         0x42
