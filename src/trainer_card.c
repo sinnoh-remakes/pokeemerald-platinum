@@ -1521,7 +1521,7 @@ static u8 SetCardBgsAndPals(void)
                 LoadPalette(sSinnohTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
 
             // Hide badges that have not been obtained yet
-            for(u8 i = 8; i < NUM_BADGES; i++){
+            for(u8 i = 0; i < NUM_BADGES; i++){
                 if(!sData->badgeCount[i]){
                 // Trainer Sprite is used in BG_PLTT_ID(8) so badges 6-8 are loaded starting from BG_PLTT_ID(9)
                 u8 badgeIndex = i > 4 ? 4 + i : 3 + i;
