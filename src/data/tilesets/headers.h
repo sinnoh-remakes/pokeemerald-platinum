@@ -1237,3 +1237,14 @@ const struct Tileset gTileset_OreburghGym =
     .metatileAttributes = gMetatileAttributes_OreburghGym,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GymOreburgh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymOreburgh,
+    .palettes = gTilesetPalettes_GymOreburgh,
+    .metatiles = gMetatiles_GymOreburgh,
+    .metatileAttributes = gMetatileAttributes_GymOreburgh,
+    .callback = NULL,
+};

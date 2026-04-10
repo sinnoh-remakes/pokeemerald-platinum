@@ -4756,7 +4756,7 @@
       "name": "OreburghCity_Gym_Layout",
       "width": 16,
       "height": 24,
-      "primary_tileset": "gTileset_CaveOreburgh",
+      "primary_tileset": "gTileset_GymOreburgh",
       "secondary_tileset": "gTileset_OreburghGym",
       "border_filepath": "data/layouts/OreburghCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity_Gym/map.bin"
