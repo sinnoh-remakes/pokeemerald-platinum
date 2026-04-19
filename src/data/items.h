@@ -12398,7 +12398,10 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("TM76"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The user lays a trap of levitating\n"
+            "stones around the foe. The trap\n"
+            "hurts foes that switch into battle."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
