@@ -1226,3 +1226,25 @@ const struct Tileset gTileset_OreburghMine =
     .metatileAttributes = gMetatileAttributes_OreburghMine,
     .callback = InitTilesetAnim_OreburghMine,
 };
+
+const struct Tileset gTileset_OreburghGym =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OreburghGym,
+    .palettes = gTilesetPalettes_OreburghGym,
+    .metatiles = gMetatiles_OreburghGym,
+    .metatileAttributes = gMetatileAttributes_OreburghGym,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymOreburgh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymOreburgh,
+    .palettes = gTilesetPalettes_GymOreburgh,
+    .metatiles = gMetatiles_GymOreburgh,
+    .metatileAttributes = gMetatileAttributes_GymOreburgh,
+    .callback = NULL,
+};
