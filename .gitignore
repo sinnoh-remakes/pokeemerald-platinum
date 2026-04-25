@@ -58,4 +58,3 @@ tools/compresSmol/compresSmolTilemap
 *.smolTM
 __pycache__
 venv
-tiles/
