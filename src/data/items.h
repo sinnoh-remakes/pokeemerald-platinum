@@ -12394,6 +12394,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
+    // FODO: Figure out how to add new items without failing compilation
     [ITEM_TM76] =
     {
         .name = ITEM_NAME("TM76"),
