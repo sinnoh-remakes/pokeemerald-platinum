@@ -5061,6 +5061,30 @@ OreburghGate_Text_DianaIntro:
 	.string "To celebrate my getting through this\n"
 	.string "cave, I’m going to battle you!$"
 
+OreburghCity_Gym_Text_JonathonIntro:
+	.string "You avoided the long way around?\n"
+	.string "Let's see why'd you do that!$"
+
+OreburghCity_Gym_Text_JonathonDefeat:
+	.string "Now I understand why you decided to"
+	.string "battle with me.$"
+
+OreburghCity_Gym_Text_JonathonPostBattle:
+	.string "You should go whichever way you\n"
+	.string "want, shortcut or the long way!$"
+
+OreburghCity_Gym_Text_DariusIntro:
+	.string "Only those who want to win can\n"
+	.string "challenge a Pokémon gym!$"
+
+OreburghCity_Gym_Text_DariusDefeat:
+	.string "Gggh...\n"
+	.string "This is humiliating!$"
+
+OreburghCity_Gym_Text_DariusPostBattle:
+	.string "One day, I'm going to become a tough\n"
+	.string "trainer like you.$"
+
 Ace_Trainer_AbelDefeat:
 	.string "You’re not a Trainer that can be\n"
 	.string "taken lightly!$"
