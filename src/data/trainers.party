@@ -708,15 +708,29 @@ AI: Basic Trainer
 
 Geodude (M)
 Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Rock Head
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Nature: Lax
+- Stealth Rock
+- Rock Throw
 
 Onix (M)
 Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Rock Head
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Nature: Bold
+- Stealth Rock
+- Rock Throw
+- Screech
 
 Cranidos (M)
 Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Mold Breaker
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Nature: Jolly
+- Headbutt
+- Pursuit
+- Leer
 
 === TRAINER_GRUNT_MUSEUM_1 ===
 Name: GRUNT
