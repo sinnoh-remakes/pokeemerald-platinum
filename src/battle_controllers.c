@@ -66,34 +66,34 @@ void HandleLinkBattleSetup(void)
     }
 }
 
-// void SetUpBattleVarsAndBirchZigzagoon(void)
-// {
-//     s32 i;
-//
-//     gBattleMainFunc = BeginBattleIntroDummy;
-//
-//     for (i = 0; i < MAX_BATTLERS_COUNT; i++)
-//     {
-//         gBattlerControllerFuncs[i] = BattleControllerDummy;
-//         gBattlerPositions[i] = 0xFF;
-//         gActionSelectionCursor[i] = 0;
-//         gMoveSelectionCursor[i] = 0;
-//     }
-//
-//     HandleLinkBattleSetup();
-//     gBattleControllerExecFlags = 0;
-//     ClearBattleAnimationVars();
-//     BattleAI_SetupItems();
-//     BattleAI_SetupFlags();
-//
-//     if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
-//     {
+void SetUpBattleVarsAndBirchZigzagoon(void)
+{
+    s32 i;
+
+    gBattleMainFunc = BeginBattleIntroDummy;
+
+    for (i = 0; i < MAX_BATTLERS_COUNT; i++)
+    {
+        gBattlerControllerFuncs[i] = BattleControllerDummy;
+        gBattlerPositions[i] = 0xFF;
+        gActionSelectionCursor[i] = 0;
+        gMoveSelectionCursor[i] = 0;
+    }
+
+    HandleLinkBattleSetup();
+    gBattleControllerExecFlags = 0;
+    ClearBattleAnimationVars();
+    BattleAI_SetupItems();
+    BattleAI_SetupFlags();
+
+    // if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
+    // {
     //     ZeroEnemyPartyMons();
     //     CreateMon(&gEnemyParty[0], SPECIES_ZIGZAGOON, 2, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
     //     i = 0;
     //     SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &i);
-//     }
-// }
+    // }
+}
 
 void InitBattleControllers(void)
 {
