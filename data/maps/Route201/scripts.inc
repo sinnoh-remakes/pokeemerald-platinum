@@ -542,17 +542,17 @@ Route201_EventScript_BattleAccept::
 	end
 
 Route201_EventScript_RivalBattleTurtwig::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_CHIMCHAR, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_CHIMCHAR, Route201_Text_RivalChimcharDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
 Route201_EventScript_RivalBattleChimchar::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_PIPLUP, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_PIPLUP, Route201_Text_RivalPiplupDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 
 Route201_EventScript_RivalBattlePiplup::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_TURTWIG, Route201_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_201_TURTWIG, Route201_Text_RivalTurtwigDefeated
 	goto Route201_EventScript_PostRivalBattle
 	end
 

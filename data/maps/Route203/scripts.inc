@@ -53,17 +53,17 @@ Route203_EventScript_Rival::
 	end
 
 Route203_EventScript_RivalBattleTurtwig::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_203_CHIMCHAR, Route203_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_203_CHIMCHAR, Route203_Text_RivalChimcharDefeated
 	goto Route203_EventScript_PostRivalBattle
 	end
 
 Route203_EventScript_RivalBattleChimchar::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_203_PIPLUP, Route203_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_203_PIPLUP, Route203_Text_RivalPiplupDefeated
 	goto Route203_EventScript_PostRivalBattle
 	end
 
 Route203_EventScript_RivalBattlePiplup::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_203_TURTWIG, Route203_Text_RivalDefeated
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE_203_TURTWIG, Route203_Text_RivalTurtwigDefeated
 	goto Route203_EventScript_PostRivalBattle
 	end
 
