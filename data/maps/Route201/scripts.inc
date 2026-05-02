@@ -260,15 +260,16 @@ Route201_EventScript_ProfessorMeet::
 	msgbox Route201_Text_DoNotSeem, MSGBOX_DEFAULT
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
-	msgbox Route201_Text_ThisOldGuy, MSGBOX_SIGN
+	msgbox Route201_Text_ThisOldGuy, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkAway
 	waitmovement 0
-	msgbox Route201_Text_TheyTried, MSGBOX_SIGN
+	msgbox Route201_Text_TheyTried, MSGBOX_DEFAULT
+	closemessage
 	delay 48
 	delay 48
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorWalkBack
-	setobjectmovementtype LOCALID_ROUTE201_RIVAL, MOVEMENT_TYPE_FACE_DOWN
 	waitmovement 0
 	goto Route201_EventScript_TrulyLove
 
@@ -280,7 +281,8 @@ Route201_EventScript_TrulyLove::
 Route201_EventScript_TrulyFail::
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Route201_Text_HoldUp, MSGBOX_SIGN
+	msgbox Route201_Text_HoldUp, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route201_Text_DidNotCatch, MSGBOX_DEFAULT
@@ -315,7 +317,8 @@ Route201_EventScript_HundredPass::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	msgbox Route201_Text_FriendHere, MSGBOX_SIGN
+	msgbox Route201_Text_FriendHere, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
@@ -342,31 +345,36 @@ Route201_EventScript_HundredPass::
 	msgbox Route201_Text_StraightFace, MSGBOX_DEFAULT
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
-	msgbox Route201_Text_SomeClass, MSGBOX_SIGN
+	msgbox Route201_Text_SomeClass, MSGBOX_DEFAULT
+	closemessage
 	delay 48
 	release
 	end
 
 Route201_EventScript_LeftBriefcaseDawn::
-	msgbox Route201_Text_LeftBriefcaseDawn, MSGBOX_SIGN
+	msgbox Route201_Text_LeftBriefcaseDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route201_EventScript_LeftBriefcaseLucas::
-	msgbox Route201_Text_LeftBriefcaseLucas, MSGBOX_SIGN
+	msgbox Route201_Text_LeftBriefcaseLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 	
 Route201_EventScript_SomethingWrongDawn::
 	msgbox Route201_Text_SomethingWrongDawn, MSGBOX_DEFAULT
 	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	msgbox Route201_Text_HardReplaceDawn, MSGBOX_SIGN
+	msgbox Route201_Text_HardReplaceDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 	
 Route201_EventScript_SomethingWrongLucas::
 	msgbox Route201_Text_SomethingWrongLucas, MSGBOX_DEFAULT
 	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	msgbox Route201_Text_HardReplaceLucas, MSGBOX_SIGN
+	msgbox Route201_Text_HardReplaceLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route201_Movement_ProfessorEnter:
@@ -450,7 +458,8 @@ Route201_EventScript_PickStarter::
 	case 2, Route201_EventScript_RivalPickPiplup
 
 Route201_EventScript_StarterPicked::
-	msgbox Route201_Text_ChosenGood, MSGBOX_SIGN
+	msgbox Route201_Text_ChosenGood, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
@@ -471,7 +480,8 @@ Route201_EventScript_StarterPicked::
 	applymovement LOCALID_ROUTE201_HELPER, Route201_Movement_ProfessorEnter
 	waitmovement 0
 	removeobject LOCALID_ROUTE201_HELPER
-	msgbox Route201_Text_ReallyNice, MSGBOX_SIGN
+	msgbox Route201_Text_ReallyNice, MSGBOX_DEFAULT
+	closemessage
 	delay 48
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
@@ -508,19 +518,23 @@ Route201_EventScript_RivalPickPiplup::
 	end
 
 Route201_EventScript_HelperWaitDawn::
-	msgbox Route201_Text_HelperWaitDawn, MSGBOX_SIGN
+	msgbox Route201_Text_HelperWaitDawn, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox Route201_Text_HelperPassDawn, MSGBOX_SIGN
+	msgbox Route201_Text_HelperPassDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route201_EventScript_HelperWaitLucas::
-	msgbox Route201_Text_HelperWaitLucas, MSGBOX_SIGN
+	msgbox Route201_Text_HelperWaitLucas, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_ROUTE201_HELPER, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox Route201_Text_HelperPassLucas, MSGBOX_SIGN
+	msgbox Route201_Text_HelperPassLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route201_EventScript_RivalBattle::
