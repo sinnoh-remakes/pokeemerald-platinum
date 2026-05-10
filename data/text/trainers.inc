@@ -5105,7 +5105,7 @@ OreburghCity_Gym_Text_JonathonIntro:
 	.string "You avoided the long way around?\n"
 	.string "Let's see why'd you do that!$"
 
-OreburghCity_Gym_Text_JonathonDefeat:
+OreburghCity_Gym_Text_JonathonDefeated:
 	.string "Now I understand why you decided to"
 	.string "battle with me.$"
 
@@ -5117,10 +5117,14 @@ OreburghCity_Gym_Text_DariusIntro:
 	.string "Only those who want to win can\n"
 	.string "challenge a Pokémon gym!$"
 
-OreburghCity_Gym_Text_DariusDefeat:
+OreburghCity_Gym_Text_DariusDefeated:
 	.string "Gggh...\n"
 	.string "This is humiliating!$"
 
 OreburghCity_Gym_Text_DariusPostBattle:
 	.string "One day, I'm going to become a tough\n"
 	.string "trainer like you.$"
+
+OreburghCity_Gym_Text_RoarkDefeated:
+	.string "W-what? That can’t be!\n"
+	.string "My buffed-up Pokémon!$"
