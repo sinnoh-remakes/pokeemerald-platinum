@@ -5,6 +5,7 @@ OreburghCityNorth_MapScripts::
 @ 1: Received HM Rock Smash
 @ 2: Talked to Youngster
 @ 3: Talked to Barry
+@ 4: Talked to Roark
 
 OreburghCityNorth_EventScript_Youngster::
 	lock

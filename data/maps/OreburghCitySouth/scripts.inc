@@ -10,6 +10,7 @@ OreburghCitySouth_EventScript_Worker1::
 	end
 
 OreburghCitySouth_EventScript_Machop1::
+	@ FODO: Play Machop sound
 	msgbox OreburghCitySouth_Text_Machop1, MSGBOX_NPC
 	end
 
@@ -18,6 +19,7 @@ OreburghCitySouth_EventScript_Worker2::
 	end
 
 OreburghCitySouth_EventScript_Machop2::
+	@ FODO: Play Machop sound
 	msgbox OreburghCitySouth_Text_Machop2, MSGBOX_NPC
 	end
 
@@ -59,7 +61,6 @@ OreburghCitySouth_Text_Machop1:
 
 OreburghCitySouth_Text_ChopChop:
 	.string "Chop, chop, MACHOP!\n"
-	@ .string "Chop, chop away on rocks! ~$"
 	.string "Chop, chop away on rocks! ~$"
 
 OreburghCitySouth_Text_Machop2:

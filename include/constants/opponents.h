@@ -895,16 +895,18 @@
 #define TRAINER_PT_SAMANTHA_5               889
 #define TRAINER_PT_CURTIS                   890
 #define TRAINER_PT_DIANA                    891
-#define TRAINER_PT_JONATHON                 892
-#define TRAINER_PT_DARIUS                   893
-#define TRAINER_PT_ROARK                    894
+#define TRAINER_PT_MASON                    892
+#define TRAINER_PT_COLIN                    893
+#define TRAINER_PT_JONATHON                 894
+#define TRAINER_PT_DARIUS                   895
+#define TRAINER_PT_ROARK                    896
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      895
-#define MAX_TRAINERS_COUNT                  895
+#define TRAINERS_COUNT                      897
+#define MAX_TRAINERS_COUNT                  897
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
