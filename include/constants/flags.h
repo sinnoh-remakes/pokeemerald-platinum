@@ -1233,12 +1233,12 @@
 #define FLAG_ITEM_ROUTE_204_HP_UP                                   0x498
 #define FLAG_ITEM_ROUTE_204_SEA_INCENSE                             0x499
 #define FLAG_ITEM_TRAINER_SCHOOL_X_ATTACK                           0x49A
-#define FLAG_ITEM_OREBURGH_CITY_DIRE_HIT                            0x49B
-#define FLAG_ITEM_OREBURGH_CITY_YELLOW_SHARD                        0x49C
-#define FLAG_ITEM_OREBURGH_MINE_POKE_BALL                           0x49D
-#define FLAG_ITEM_OREBURGH_MINE_POTION                              0x49E
-#define FLAG_ITEM_OREBURGH_MINE_ESCAPE_ROPE                         0x49F
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
+#define FLAG_ITEM_ROUTE_207_POKE_BALL                               0x49B
+#define FLAG_ITEM_OREBURGH_CITY_DIRE_HIT                            0x49C
+#define FLAG_ITEM_OREBURGH_CITY_YELLOW_SHARD                        0x49D
+#define FLAG_ITEM_OREBURGH_MINE_POKE_BALL                           0x49E
+#define FLAG_ITEM_OREBURGH_MINE_POTION                              0x49F
+#define FLAG_ITEM_OREBURGH_MINE_ESCAPE_ROPE                         0x4A0
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
