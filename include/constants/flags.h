@@ -678,7 +678,7 @@
 #define FLAG_HIDE_JUBILIFE_POKETCH             0x274
 #define FLAG_HIDE_TRAINER_SCHOOL_RIVAL         0x275
 #define FLAG_HIDE_ROUTE_203_RIVAL              0x276
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
+#define FLAG_HIDE_OREBURGH_CITY_RIVAL          0x277
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag

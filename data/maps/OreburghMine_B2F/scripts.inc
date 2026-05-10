@@ -2,6 +2,27 @@ OreburghMine_B2F_MapScripts::
 	.byte 0
 
 OreburghMine_B2F_EventScript_Roark::
+	lock
+	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_FaceDown
+	waitmovement 0
+	delay 16
+	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	delay 48
+	msgbox OreburghMine_B2F_Text_StandBack, MSGBOX_DEFAULT
+	closemessage
+	removeobject LOCALID_OREBURGH_MINE_ROCK
+	delay 48
+	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox OreburghMine_B2F_Text_FallenBoulders, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_WalkRight7
+	waitmovement 0
+	setvar VAR_OREBURGH_CITY_STATE, 4
+	setflag FLAG_HIDE_OREBURGH_CITY_RIVAL
+	removeobject LOCALID_OREBURGH_MINE_ROARK
+	release
 	end
 
 OreburghMine_EventScript_Mason::
@@ -30,20 +51,6 @@ OreburghMine_B2F_EventScript_Worker::
 	msgbox OreburghMine_B2F_Text_MetTheseMachop, MSGBOX_NPC
 	end
 
-OreburghMine_B2F_Text_Machop1:
-	.string "MACHOP: Chopmacho!$"
-
-OreburghMine_B2F_Text_Machop2:
-	.string "MACHOP: Chopchop!$"
-
-OreburghMine_B2F_Text_Machop3:
-	.string "MACHOP: Maaacho!$"
-
-OreburghMine_B2F_Text_MetTheseMachop:
-	.string "I met these MACHOP on Route 207.\p"
-	.string "They’ve now become my most trusted\n"
-	.string "partners!$"
-
 OreburghMine_B2F_Text_StandBack:
 	.string "OK, stand back and watch this.\p"
 	.string "Using the hidden move Rock Smash,\n"
@@ -57,3 +64,17 @@ OreburghMine_B2F_Text_FallenBoulders:
 	.string "to do this too.\p"
 	.string "Of course, you’d have to beat the\n"
 	.string "Gym Leader first. That’d be me!$\p"
+
+OreburghMine_B2F_Text_Machop1:
+	.string "MACHOP: Chopmacho!$"
+
+OreburghMine_B2F_Text_Machop2:
+	.string "MACHOP: Chopchop!$"
+
+OreburghMine_B2F_Text_Machop3:
+	.string "MACHOP: Maaacho!$"
+
+OreburghMine_B2F_Text_MetTheseMachop:
+	.string "I met these MACHOP on Route 207.\p"
+	.string "They’ve now become my most trusted\n"
+	.string "partners!$"
