@@ -5,50 +5,58 @@ OreburghMine_B2F_EventScript_Roark::
 	lock
 	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_FaceDown
 	waitmovement 0
-	delay 16
+	delay 48
 	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_WalkInPlaceRight
 	waitmovement 0
+	delay 48
+	delay 48
 	delay 48
 	msgbox OreburghMine_B2F_Text_StandBack, MSGBOX_DEFAULT
 	closemessage
 	removeobject LOCALID_OREBURGH_MINE_ROCK
 	delay 48
+	delay 48
+	delay 48
 	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox OreburghMine_B2F_Text_FallenBoulders, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_WalkRight7
+	applymovement LOCALID_OREBURGH_MINE_ROARK, Common_Movement_WalkRight8
 	waitmovement 0
 	setvar VAR_OREBURGH_CITY_STATE, 4
 	setflag FLAG_HIDE_OREBURGH_CITY_RIVAL
 	removeobject LOCALID_OREBURGH_MINE_ROARK
+	delay 48
 	release
 	end
 
 OreburghMine_EventScript_Mason::
-	trainerbattle_single TRAINER_PT_MASON, OreburghMine_Text_MasonIntro, OreburghMine_Text_MasonDefeat
+	trainerbattle_single TRAINER_PT_MASON, OreburghMine_Text_MasonIntro, OreburghMine_Text_MasonDefeated
 	msgbox OreburghMine_Text_MasonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 OreburghMine_EventScript_Colin::
-	trainerbattle_single TRAINER_PT_COLIN, OreburghMine_Text_ColinIntro, OreburghMine_Text_ColinDefeat
+	trainerbattle_single TRAINER_PT_COLIN, OreburghMine_Text_ColinIntro, OreburghMine_Text_ColinDefeated
 	msgbox OreburghMine_Text_ColinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 OreburghMine_B2F_EventScript_Machop1::
+	@ FODO: Play Machop sound
 	msgbox OreburghMine_B2F_Text_Machop1, MSGBOX_NPC
-	end
-
-OreburghMine_B2F_EventScript_Machop2::
-	msgbox OreburghMine_B2F_Text_Machop2, MSGBOX_NPC
-	end
-
-OreburghMine_B2F_EventScript_Machop3::
-	msgbox OreburghMine_B2F_Text_Machop3, MSGBOX_NPC
 	end
 
 OreburghMine_B2F_EventScript_Worker::
 	msgbox OreburghMine_B2F_Text_MetTheseMachop, MSGBOX_NPC
+	end
+
+OreburghMine_B2F_EventScript_Machop2::
+	@ FODO: Play Machop sound
+	msgbox OreburghMine_B2F_Text_Machop2, MSGBOX_NPC
+	end
+
+OreburghMine_B2F_EventScript_Machop3::
+	@ FODO: Play Machop sound
+	msgbox OreburghMine_B2F_Text_Machop3, MSGBOX_NPC
 	end
 
 OreburghMine_B2F_Text_StandBack:
@@ -68,13 +76,13 @@ OreburghMine_B2F_Text_FallenBoulders:
 OreburghMine_B2F_Text_Machop1:
 	.string "MACHOP: Chopmacho!$"
 
+OreburghMine_B2F_Text_MetTheseMachop:
+	.string "I met these MACHOP on Route 207.\p"
+	.string "They’ve now become my most trusted\n"
+	.string "partners!$"
+
 OreburghMine_B2F_Text_Machop2:
 	.string "MACHOP: Chopchop!$"
 
 OreburghMine_B2F_Text_Machop3:
 	.string "MACHOP: Maaacho!$"
-
-OreburghMine_B2F_Text_MetTheseMachop:
-	.string "I met these MACHOP on Route 207.\p"
-	.string "They’ve now become my most trusted\n"
-	.string "partners!$"

@@ -225,7 +225,8 @@ Common_Movement_WalkDown6:
 		walk_down
 		step_end
 
-Common_Movement_WalkRight7:
+Common_Movement_WalkRight8:
+		walk_right
 		walk_right
 		walk_right
 		walk_right
