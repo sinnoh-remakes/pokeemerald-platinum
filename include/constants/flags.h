@@ -1235,7 +1235,7 @@
 #define FLAG_ITEM_TRAINER_SCHOOL_X_ATTACK                           0x49A
 #define FLAG_ITEM_OREBURGH_CITY_DIRE_HIT                            0x49B
 #define FLAG_ITEM_OREBURGH_CITY_YELLOW_SHARD                        0x49C
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
+#define FLAG_ITEM_OREBURGH_MINE_POKE_BALL                           0x49D
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
