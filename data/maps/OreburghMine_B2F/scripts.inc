@@ -2,7 +2,17 @@ OreburghMine_B2F_MapScripts::
 	.byte 0
 
 OreburghMine_B2F_EventScript_Roark::
+	end
 
+OreburghMine_EventScript_Mason::
+	trainerbattle_single TRAINER_PT_MASON, OreburghMine_Text_MasonIntro, OreburghMine_Text_MasonDefeat
+	msgbox OreburghMine_Text_MasonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+OreburghMine_EventScript_Colin::
+	trainerbattle_single TRAINER_PT_COLIN, OreburghMine_Text_ColinIntro, OreburghMine_Text_ColinDefeat
+	msgbox OreburghMine_Text_ColinPostBattle, MSGBOX_AUTOCLOSE
+	end
 
 OreburghMine_B2F_EventScript_Machop1::
 	msgbox OreburghMine_B2F_Text_Machop1, MSGBOX_NPC

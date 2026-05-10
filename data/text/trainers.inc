@@ -5061,6 +5061,30 @@ OreburghGate_Text_DianaIntro:
 	.string "To celebrate my getting through this\n"
 	.string "cave, I’m going to battle you!$"
 
+OreburghMine_Text_MasonIntro:
+	.string "I’m gonna let you in on a secret...\n"
+	.string "I snuck my Pokémon to work!$"
+
+OreburghMine_Text_MasonDefeated:
+	.string "Well, now aren’t you something!$"
+
+OreburghMine_Text_MasonPostBattle:
+	.string "OK, OK, time for work! I’ll work up\n"
+	.string "a thirst with my Pokémon!$"
+
+OreburghMine_Text_ColinIntro:
+	.string "Fine, all righty then.\n"
+	.string "Just a quick battle on my break!$"
+
+OreburghMine_Text_ColinDefeated:
+	.string "Wahaha!\n"
+	.string "Mercy, I cry mercy!$"
+
+OreburghMine_Text_ColinPostBattle:
+	.string "I’d better get on back to work...\p"
+	.string "You know, I’d rather be traveling\n"
+	.string "around with Pokémon the way you do.$"
+
 OreburghCity_Gym_Text_JonathonIntro:
 	.string "You avoided the long way around?\n"
 	.string "Let's see why'd you do that!$"
@@ -11459,19 +11483,6 @@ Worker_BrendonIntro:
 	.string "Hey! This is no playground!\n"
 	.string "If you’re gonna play, battle me!$"
 
-Worker_ColinDefeat:
-	.string "Wahaha!\n"
-	.string "Mercy, I cry mercy!$"
-
-Worker_ColinPostBattle:
-	.string "I’d better get on back to work...\p"
-	.string "You know, I’d rather be traveling\n"
-	.string "around with Pokémon the way you do.$"
-
-Worker_ColinIntro:
-	.string "Fine, all righty then.\n"
-	.string "Just a quick battle on my break!$"
-
 Worker_ConradDefeat:
 	.string "I’m going down in flames!$"
 
@@ -11549,17 +11560,6 @@ Worker_JacksonPostBattle:
 Worker_JacksonIntro:
 	.string "Up and down you go on the lifts.\n"
 	.string "Me? I like to battle!$"
-
-Worker_MasonDefeat:
-	.string "Well, now aren’t you something!$"
-
-Worker_MasonPostBattle:
-	.string "OK, OK, time for work! I’ll work up\n"
-	.string "a thirst with my Pokémon!$"
-
-Worker_MasonIntro:
-	.string "I’m gonna let you in on a secret...\n"
-	.string "I snuck my Pokémon to work!$"
 
 Worker_NoelDefeat:
 	.string "The working-class hero waves bye...$"
