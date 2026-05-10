@@ -83,7 +83,7 @@ Double Battle: No
 
 === TRAINER_RIVAL_ROUTE_201_PIPLUP ===
 Name: Barry
-Class: Rival
+Class: Pt_Rival
 Pic: DP_Barry
 Gender: Male
 Music: Male
@@ -96,7 +96,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_201_TURTWIG ===
 Name: Barry
-Class: Rival
+Class: Pt_Rival
 Pic: DP_Barry
 Gender: Male
 Music: Male
@@ -109,7 +109,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_201_CHIMCHAR ===
 Name: Barry
-Class: Rival
+Class: Pt_Rival
 Pic: DP_Barry
 Gender: Male
 Music: Male
@@ -122,7 +122,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_1 ===
 Name: Tristan
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -135,7 +135,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_2 ===
 Name: Tristan
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -148,7 +148,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_3 ===
 Name: Tristan
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -161,7 +161,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_4 ===
 Name: Tristan
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -174,7 +174,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_5 ===
 Name: Tristan
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -187,7 +187,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_NATALIE ===
 Name: Natalie
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -200,7 +200,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_LOGAN ===
 Name: Logan
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -213,7 +213,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_HARRISON ===
 Name: Harrison
-Class: School Kid
+Class: Pt_School Kid
 Pic: DP_School Kid M
 Gender: Male
 Music: Male
@@ -226,7 +226,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_CHRISTINE ===
 Name: Christine
-Class: School Kid
+Class: Pt_School Kid
 Pic: DP_School Kid F
 Gender: Female
 Music: Female
@@ -239,7 +239,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_203_PIPLUP ===
 Name: Barry
-Class: Rival
+Class: Pt_Rival
 Pic: DP_Barry
 Gender: Male
 Music: Male
@@ -256,7 +256,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_203_TURTWIG ===
 Name: Barry
-Class: Rival
+Class: Pt_Rival
 Pic: DP_Barry
 Gender: Male
 Music: Male
@@ -273,7 +273,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_203_CHIMCHAR ===
 Name: Barry
-Class: Rival
+Class: Pt_Rival
 Pic: DP_Barry
 Gender: Male
 Music: Male
@@ -290,7 +290,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MICHAEL ===
 Name: Michael
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -307,7 +307,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_1 ===
 Name: Dallas
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -320,7 +320,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_2 ===
 Name: Dallas
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -337,7 +337,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_3 ===
 Name: Dallas
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -358,7 +358,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_4 ===
 Name: Dallas
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -383,7 +383,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_5 ===
 Name: Dallas
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -408,7 +408,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SEBASTIAN ===
 Name: Sebastian
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -421,7 +421,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_KAITLIN ===
 Name: Kaitlin
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -446,7 +446,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_1 ===
 Name: Madeline
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -459,7 +459,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_2 ===
 Name: Madeline
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -476,7 +476,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_3 ===
 Name: Madeline
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -493,7 +493,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_4 ===
 Name: Madeline
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -510,7 +510,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_5 ===
 Name: Madeline
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -527,7 +527,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SARAH ===
 Name: Sarah
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -540,7 +540,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TYLER ===
 Name: Tyler
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -553,7 +553,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_1 ===
 Name: Samantha
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -566,7 +566,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_2 ===
 Name: Samantha
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -579,7 +579,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_3 ===
 Name: Samantha
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -596,7 +596,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_4 ===
 Name: Samantha
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -617,7 +617,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_5 ===
 Name: Samantha
-Class: Lass
+Class: Pt_Lass
 Pic: DP_Lass
 Gender: Female
 Music: Female
@@ -638,7 +638,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_CURTIS===
 Name: Curtis
-Class: Camper
+Class: Pt_Camper
 Pic: DP_Camper
 Gender: Male
 Music: Male
@@ -655,7 +655,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DIANA ===
 Name: Diana
-Class: Picnicker
+Class: Pt_Picnicker
 Pic: DP_Picnicker
 Gender: Female
 Music: Female
@@ -668,7 +668,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MASON ===
 Name: Mason
-Class: Worker
+Class: Pt_Worker
 Pic: DP_Worker
 Gender: Male
 Music: Male
@@ -681,7 +681,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_COLIN ===
 Name: Colin
-Class: Worker
+Class: Pt_Worker
 Pic: DP_Worker
 Gender: Male
 Music: Male
@@ -698,7 +698,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_JONATHON ===
 Name: Jonathon
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -711,7 +711,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DARIUS ===
 Name: Darius
-Class: Youngster
+Class: Pt_Youngster
 Pic: DP_Youngster
 Gender: Male
 Music: Male
@@ -728,7 +728,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ROARK ===
 Name: Roark
-Class: Leader
+Class: Pt_Leader
 Pic: DP_Roark
 Gender: Male
 Music: Male
