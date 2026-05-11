@@ -33,6 +33,22 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_RAVAGED_PATH",
+      "name": "RAVAGED PATH",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_OREBURGH_GATE",
+      "name": "OREBURGH GATE",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_OREBURGH_MINE",
       "name": "OREBURGH MINE",
       "x": 4,
