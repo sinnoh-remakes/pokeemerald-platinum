@@ -5053,6 +5053,10 @@ Route204_Text_SamanthaPostBattle:
 	.string "Maybe I could have won if my Pokémon\n"
 	.string "was holding a Berry...\n"
 
+OreburghGate_Text_CurtisIntro:
+	.string "We Trainers will accept challenges\n"
+	.string "anywhere! It’s what we do.$"
+
 OreburghGate_Text_CurtisDefeated:
 	.string "Hmm...\n"
 	.string "Insufficiently raised?$"
@@ -5061,9 +5065,9 @@ OreburghGate_Text_CurtisPostBattle:
 	.string "Pokémon can appear anywhere in a cave.\n"
 	.string "It’s not like the tall grass by roads.$"
 
-OreburghGate_Text_CurtisIntro:
-	.string "We Trainers will accept challenges\n"
-	.string "anywhere! It’s what we do.$"
+OreburghGate_Text_DianaIntro:
+	.string "To celebrate my getting through this\n"
+	.string "cave, I’m going to battle you!$"
 
 OreburghGate_Text_DianaDefeated:
 	.string "Well, I guess losing is something\n"
@@ -5072,10 +5076,6 @@ OreburghGate_Text_DianaDefeated:
 OreburghGate_Text_DianaPostBattle:
 	.string "Getting through that cave feels\n"
 	.string "like an adventure.$"
-
-OreburghGate_Text_DianaIntro:
-	.string "To celebrate my getting through this\n"
-	.string "cave, I’m going to battle you!$"
 
 OreburghMine_Text_MasonIntro:
 	.string "I’m gonna let you in on a secret...\n"
