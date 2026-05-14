@@ -676,7 +676,15 @@ Route201_EventScript_FollowGrass::
 
 Route201_EventScript_FollowGrass2::
 	lock
-	goto_if_eq VAR_FACING, DIR_EAST, Route201_EventScript_FollowGrass
+	call_if_eq VAR_FACING, DIR_EAST, Route201_EventScript_FollowGrassWestApproach
+	call_if_eq VAR_FACING, DIR_NORTH, Route201_EventScript_FollowGrassSouthApproach
+	release
+	end
+
+Route201_EventScript_FollowGrassWestApproach::
+	goto Route201_EventScript_FollowGrass
+
+Route201_EventScript_FollowGrassSouthApproach::
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
@@ -687,8 +695,7 @@ Route201_EventScript_FollowGrass2::
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceUp
 	waitmovement 0
 	delay 30
-	release
-	end
+	return
 
 Route201_EventScript_TipSign::
 	msgbox Route201_Text_TipSign, MSGBOX_SIGN
