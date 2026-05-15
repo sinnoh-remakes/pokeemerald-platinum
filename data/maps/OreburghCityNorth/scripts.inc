@@ -220,20 +220,20 @@ OreburghCityNorth_EventScript_Hiker::
 	msgbox OreburghCityNorth_Text_HugeMountain, MSGBOX_NPC
 	end
 
-OreburghCitySouth_EventScript_TownSign::
-	msgbox OreburghCitySouth_Text_TownSign, MSGBOX_SIGN
+OreburghCityNorth_EventScript_TownSign::
+	msgbox OreburghCityNorth_Text_TownSign, MSGBOX_SIGN
 	end
 
-OreburghCitySouth_EventScript_GymSign::
-	msgbox OreburghCitySouth_Text_GymSign, MSGBOX_SIGN
+OreburghCityNorth_EventScript_GymSign::
+	msgbox OreburghCityNorth_Text_GymSign, MSGBOX_SIGN
 	end
 
-OreburghCitySouth_EventScript_MuseumSign::
-	msgbox OreburghCitySouth_Text_MuseumSign, MSGBOX_SIGN
+OreburghCityNorth_EventScript_MuseumSign::
+	msgbox OreburghCityNorth_Text_MuseumSign, MSGBOX_SIGN
 	end
 
 OreburghCityNorth_EventScript_MuseumBlock::
-	msgbox OreburghCity_Text_MuseumBlock, MSGBOX_SIGN
+	msgbox OreburghCityNorth_Text_MuseumBlock, MSGBOX_SIGN
 	end
 
 OreburghCityNorth_Text_HowdyTrainer:
@@ -311,20 +311,20 @@ OreburghCityNorth_Text_HugeMountain:
 	.string "It divides Sinnoh into two distinct\n"
 	.string "halves.$"
 
-OreburghCitySouth_Text_TownSign: 
+OreburghCityNorth_Text_TownSign: 
 	.string "Oreburgh City\n"
 	.string "City of Energy$"
 
-OreburghCitySouth_Text_GymSign:
+OreburghCityNorth_Text_GymSign:
 	.string "Oreburgh City Pokémon Gym\n"
 	.string "Leader: Roark\l"
 	.string "“Call me Roark the Rock!”$"
 
-OreburghCitySouth_Text_MuseumSign:
+OreburghCityNorth_Text_MuseumSign:
 	.string "Oreburgh Mining Museum\n"
 	.string "“Coal Mining and You!”$"
 
-OreburghCity_Text_MuseumBlock:
+OreburghCityNorth_Text_MuseumBlock:
 	.string "This building is closed for\n"
 	.string "maintenance.\p"
 	.string "Please come back later.$"
