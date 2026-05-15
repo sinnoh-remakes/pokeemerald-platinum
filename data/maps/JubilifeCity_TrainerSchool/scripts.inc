@@ -15,7 +15,7 @@ JubilifeCity_TrainerSchool_EventScript_Barry::
 	msgbox JubilifeCity_TrainerSchool_Text_AccordingToTownMap, MSGBOX_DEFAULT
 	closemessage
 	goto_if_eq VAR_FACING, DIR_NORTH, JubilifeCity_TrainerSchool_EventScript_BarryLeaveAlternate
-	applymovement LOCALID_PLAYER, JubilifeCity_TrainerSchool_Movement_PlayerWatch
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_TRAINER_SCHOOL_BARRY, JubilifeCity_TrainerSchool_Movement_BarryLeave
 	waitmovement 0
 	removeobject LOCALID_TRAINER_SCHOOL_BARRY
@@ -58,15 +58,8 @@ JubilifeCity_TrainerSchool_Movement_BarryLeaveAlternate:
 	walk_fast_down
 	step_end
 
-JubilifeCity_TrainerSchool_Movement_PlayerWatch:
-	delay_16
-	walk_in_place_down
-	step_end
-
 JubilifeCity_TrainerSchool_Movement_PlayerWatchAlternate:
-	delay_16
 	walk_in_place_right
-	delay_16
 	walk_in_place_down
 	step_end
 
