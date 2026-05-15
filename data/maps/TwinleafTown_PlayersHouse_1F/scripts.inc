@@ -91,6 +91,8 @@ TwinleafTown_PlayersHouse_1F_TurnPlayerNorth::
 TwinleafTown_PlayersHouse_1F_EventScript_LakeReturn::
 	lock
 	setvar VAR_TWINLEAF_INTRO_STATE, 7
+	clearflag B_FLAG_NO_WHITEOUT
+	special HealPlayerParty
 	delay 48
 	delay 48
 	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, TwinleafTown_PlayersHouse_1F_Movement_MomKitchen
