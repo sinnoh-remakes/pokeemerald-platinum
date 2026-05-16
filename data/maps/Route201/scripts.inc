@@ -716,11 +716,11 @@ Route201_EventScript_LassTalk::
 Route201_EventScript_MartSample::
 	lock
 	faceplayer
-	goto_if_set FLAG_ROUTE201_RECEIVED_POTION, Route201_EventScript_MartSample2
+	goto_if_set FLAG_ROUTE_201_RECEIVED_POTION, Route201_EventScript_MartSample2
 	msgbox Route201_Text_MartSample1, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_ROUTE201_RECEIVED_POTION
+	setflag FLAG_ROUTE_201_RECEIVED_POTION
 	release
 	end
 
