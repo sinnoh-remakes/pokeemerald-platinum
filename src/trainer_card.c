@@ -276,12 +276,12 @@ static const struct WindowTemplate sTrainerCardWindowTemplates[] =
 
 static const u16 *const sSinnohTrainerCardPals[] =
 {
-    sSinnohTrainerCardRed_Pal,  // Default (0 stars)
-    sSinnohTrainerCardBlue_Pal, // 1 star
+    sSinnohTrainerCardRed_Pal,    // Default (0 stars)
+    sSinnohTrainerCardBlue_Pal,   // 1 star
     sSinnohTrainerCardSilver_Pal, // 2 star
     sSinnohTrainerCardBronze_Pal, // 3 stars
-    sSinnohTrainerCardGold_Pal, // 4 stars
-    sSinnohTrainerCardBlack_Pal,   // 5 stars
+    sSinnohTrainerCardGold_Pal,   // 4 stars
+    sSinnohTrainerCardBlack_Pal,  // 5 stars
 };
 
 static const u16 *const sHoennTrainerCardPals[] =
@@ -1521,11 +1521,13 @@ static u8 SetCardBgsAndPals(void)
                 LoadPalette(sSinnohTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
 
             // Hide badges that have not been obtained yet
-            for(u8 i = 0; i < NUM_BADGES; i++){
-                if(!sData->badgeCount[i]){
-                // Trainer Sprite is used in BG_PLTT_ID(8) so badges 6-8 are loaded starting from BG_PLTT_ID(9)
-                u8 badgeIndex = i > 4 ? 4 + i : 3 + i;
-                LoadPalette(sSinnohTrainerCardBadges_Pal, BG_PLTT_ID(badgeIndex), PLTT_SIZE_4BPP);
+            for (u8 i = 0; i < NUM_BADGES; i++)
+            {
+                if (!sData->badgeCount[i])
+                {
+                    // Trainer Sprite is used in BG_PLTT_ID(8) so badges 6-8 are loaded starting from BG_PLTT_ID(9)
+                    u8 badgeIndex = i > 4 ? 4 + i : 3 + i;
+                    LoadPalette(sSinnohTrainerCardBadges_Pal, BG_PLTT_ID(badgeIndex), PLTT_SIZE_4BPP);
                 }
             }
         }

@@ -13,6 +13,7 @@ const u16 gObjectEventPal_Brendan[] = INCBIN_U16("graphics/object_events/palette
 const u32 gObjectEventPic_RubySapphireBrendanNormal[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/walking.4bpp");
 const u32 gObjectEventPic_RubySapphireBrendanRunning[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/running.4bpp");
 const u16 gObjectEventPal_RubySapphireBrendan[] = INCBIN_U16("graphics/object_events/palettes/ruby_sapphire_brendan.gbapal");
+const u16 gObjectEventPal_Null1[16] = {};
 const u32 gObjectEventPic_BugCatcherPt[] = INCBIN_U32("graphics/object_events/pics/people/bug_catcher_pt.4bpp");
 const u16 gObjectEventPal_BugCatcherPt[] = INCBIN_U16("graphics/object_events/palettes/bug_catcher_pt.gbapal");
 const u32 gObjectEventPic_AceTrainerMPt[] = INCBIN_U32("graphics/object_events/pics/people/ace_trainer_m_pt.4bpp");

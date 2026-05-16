@@ -111,10 +111,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 - [Data Files](https://www.pokecommunity.com/showthread.php?t=417909)
 - [Complete FireRed Upgrade](https://github.com/Skeli789/Complete-Fire-Red-Upgrade)
 - [pokeemerald](https://github.com/pret/pokeemerald/)
-- [RichardPT](https://www.deviantart.com/richardpt/gallery/82040224/pokemon-trainers-overworld-sprites)
-- [robloxmaster376](https://www.deviantart.com/robloxmaster376/gallery)
-- [The Spriter's Resource](https://www.spriters-resource.com/ds_dsi/pokemonplatinum/)
-- TheWiggliestJiggliest
 
 ### Pokeemerald Platinum Feature Credits
 * Allow player to change direction while moving: [cbt](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-15#post-10402610)
@@ -122,6 +118,12 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 * BetterBag (Gen 4 Bag): [AsparagusEduardo](https://github.com/AsparagusEduardo/pokeemerald/tree/BetterBag)
 * Distortion World Tileset: [Rahtak](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/tree/main/Tilesets/The%20Great%20Tileset%20Exchange/Full%20Tilesets/Distortion%20World%20Secondary)
 * DPPt Music: [CyanSMP64](https://github.com/CyanSMP64/pokeemerald/tree/dppt_music)
+
+### Pokeemerald Pkatinum Graphics Credits
+* [RichardPT](https://www.deviantart.com/richardpt/gallery/82040224/pokemon-trainers-overworld-sprites)
+* [robloxmaster376](https://www.deviantart.com/robloxmaster376/gallery)
+* [The Spriter's Resource](https://www.spriters-resource.com/ds_dsi/pokemonplatinum/)
+* TheWiggliestJiggliest
 
 ### Pokeemerald Platinum Sprite Credits
 

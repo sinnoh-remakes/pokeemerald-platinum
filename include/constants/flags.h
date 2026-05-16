@@ -464,6 +464,7 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
+#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
 #define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
@@ -1397,16 +1398,17 @@
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
-#define FLAG_UNUSED_0x888                           (SYSTEM_FLAGS + 0x28) // Unused Flag
-#define FLAG_UNUSED_0x889                           (SYSTEM_FLAGS + 0x29) // Unused Flag
 
-#define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x2A)
-#define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x2B)
+#define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
+#define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
 // Sets abnormal weather on maps that check for it
-#define FLAG_SYS_WEATHER_CTRL                       (SYSTEM_FLAGS + 0x2C)
-#define FLAG_SYS_CYCLING_ROAD                       (SYSTEM_FLAGS + 0x2D)
-#define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2E)
-#define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2F)
+#define FLAG_SYS_WEATHER_CTRL                       (SYSTEM_FLAGS + 0x2A)
+#define FLAG_SYS_CYCLING_ROAD                       (SYSTEM_FLAGS + 0x2B)
+#define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
+#define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
+
+#define FLAG_UNUSED_0x88E                           (SYSTEM_FLAGS + 0x2E) // Unused Flag
+#define FLAG_UNUSED_0x88F                           (SYSTEM_FLAGS + 0x2F) // Unused Flag
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
 #define FLAG_SYS_TV_WATCH                           (SYSTEM_FLAGS + 0x31)

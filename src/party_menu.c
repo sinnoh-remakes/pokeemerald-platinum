@@ -3216,7 +3216,7 @@ static void CursorCb_Switch(u8 taskId)
 #define tSlot2Offset   data[9]
 #define tSlot1SlideDir data[10]
 #define tSlot2SlideDir data[11]
-#define tSlot1BaseBlock data[12] //C
+#define tSlot1BaseBlock data[12]
 #define tSlot2BaseBlock data[13]
 #define count           data[14]
 
