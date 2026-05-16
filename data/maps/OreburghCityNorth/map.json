@@ -179,6 +179,20 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_TOWER_C_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_HOUSE_A",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_HOUSE_B",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
