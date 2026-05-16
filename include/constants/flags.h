@@ -49,10 +49,10 @@
 #define FLAG_JUBILIFE_CLOWN_ITEM               0x23
 #define FLAG_JUBILIFE_CLOWN_TYPE               0x24
 #define FLAG_TRAINER_SCHOOL_RECEIVED_POTION    0x25
-#define FLAG_ITEM_OREBURGH_CITY_SUPER_POTION   0x26
-#define FLAG_RECEIVED_TM_STEALTH_ROCK          0x27
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_ITEM_OREBURGH_CITY_SUPER_POTION        0x26
+#define FLAG_OREBURGH_CITY_DUSK_BALL           0x27
+#define FLAG_OREBURGH_CITY_GREAT_BALL          0x28
+#define FLAG_RECEIVED_TM_STEALTH_ROCK          0x29
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
