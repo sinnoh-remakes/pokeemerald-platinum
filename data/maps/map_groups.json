@@ -103,7 +103,12 @@
   ],
   "gMapGroup_IndoorOreburgh": [
     "OreburghCity_TowerA_1F",
-    "OreburghCity_Gym"
+    "OreburghCity_Gym",
+    "OreburghCity_TowerA_2F",
+    "OreburghCity_TowerB_1F",
+    "OreburghCity_TowerB_2F",
+    "OreburghCity_TowerC_1F",
+    "OreburghCity_TowerC_2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
