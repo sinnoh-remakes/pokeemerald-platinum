@@ -933,7 +933,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_TRAINER_SCHOOL_BLACKBOARD]  = MULTICHOICE(MultichoiceList_TrainerSchoolBlackboard),
-    [MULTI_JUBILIFE_CITY_GROUP]        = MULTICHOICE(MultichoiceList_JubilifeCityGroup)
+    [MULTI_JUBILIFE_CITY_GROUP]        = MULTICHOICE(MultichoiceList_JubilifeCityGroup),
     [MULTI_OREBURGH_CITY_TRAINERS]     = MULTICHOICE(MultichoiceList_OreburghCityTrainers)
 };
 

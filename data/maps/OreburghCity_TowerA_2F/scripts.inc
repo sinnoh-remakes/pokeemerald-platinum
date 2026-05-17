@@ -2,11 +2,11 @@ OreburghCity_TowerA_2F_MapScripts::
 	.byte 0
 
 OreburghCity_TowerA_2F_EventScript_LassDuskBall::
-	goto_if_set FLAG_ITEM_OREBURGH_CITY_DUSK_BALL, OreburghCity_TowerA_2F_EventScript_LassDuskBallGiven
+	goto_if_set FLAG_OREBURGH_CITY_DUSK_BALL, OreburghCity_TowerA_2F_EventScript_LassDuskBallGiven
 	msgbox OreburghCity_TowerA_2F_Text_AreYouCatching, MSGBOX_DEFAULT
 	giveitem ITEM_DUSK_BALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_ITEM_OREBURGH_CITY_DUSK_BALL
+	setflag FLAG_OREBURGH_CITY_DUSK_BALL
 	msgbox OreburghCity_TowerA_2F_Text_TheDuskBall, MSGBOX_DEFAULT
 	closemessage
 	end

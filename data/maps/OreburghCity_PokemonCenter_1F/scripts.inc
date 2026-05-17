@@ -109,7 +109,6 @@ OreburghCity_PokemonCenter_1F_EventScript_NDSKidB::
 OreburghCity_PokemonCenter_1F_EventScript_Teala::
 	msgbox OreburghCity_PokemonCenter_1F_Text_WorkingUnderground, MSGBOX_NPC
 	end
-	end
 
 OreburghCity_PokemonCenter_1F_Text_SwitchOn:
 	.string "Switch on the PC at any Pokémon\n"
@@ -162,7 +161,7 @@ OreburghCity_PokemonCenter_1F_Text_ISeeRoughneck:
 	
 OreburghCity_PokemonCenter_1F_Text_OthersMayCome:
 	.string "If that’s the case, others may come\n"
-	.string "to see you in the same way.\r"
+	.string "to see you in the same way.\p"
 	.string "OK, then I’ll just talk to you later!$"
 	
 OreburghCity_PokemonCenter_1F_Text_TalkToYouLater:
@@ -171,7 +170,7 @@ OreburghCity_PokemonCenter_1F_Text_TalkToYouLater:
 	@ .string "Hello! You’ve been mistaken for\n"
 	@ .string "{STRVAR_1, 14, 0, 0}, haven’t you?\p"
 	@ .string "But I think you can also pass for\n"
-	@ .string "a different kind of Trainer.\r"
+	@ .string "a different kind of Trainer.\p"
 	@ .string "So, how about telling me what kind of\n"
 	@ .string "Trainer that you like?\p"
 
