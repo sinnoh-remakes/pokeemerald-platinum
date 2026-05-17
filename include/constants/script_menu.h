@@ -125,6 +125,7 @@
 #define MULTI_BERRY_PLOT                   114
 #define MULTI_TRAINER_SCHOOL_BLACKBOARD    115
 #define MULTI_JUBILIFE_CITY_GROUP          116
+#define MULTI_OREBURGH_CITY_TRAINERS       117
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

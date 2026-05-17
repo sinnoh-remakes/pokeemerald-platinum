@@ -111,7 +111,9 @@
     "OreburghCity_HouseA",
     "OreburghCity_HouseB",
     "OreburghCity_HouseC",
-    "OreburghCity_Gym"
+    "OreburghCity_Gym",
+    "OreburghCity_PokemonCenter_1F",
+    "OreburghCity_PokemonCenter_2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

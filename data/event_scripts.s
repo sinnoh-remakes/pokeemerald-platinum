@@ -619,6 +619,8 @@ gStdScripts_End::
 	.include "data/maps/OreburghCity_HouseB/scripts.inc"
 	.include "data/maps/OreburghCity_HouseA/scripts.inc"
 	.include "data/maps/OreburghCity_HouseC/scripts.inc"
+	.include "data/maps/OreburghCity_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/OreburghCity_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/Gate_Jubilife/scripts.inc"
