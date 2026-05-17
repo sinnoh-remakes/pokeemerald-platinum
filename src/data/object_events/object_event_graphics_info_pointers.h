@@ -717,6 +717,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_JASMINE_PT] =               &gObjectEventGraphicsInfo_JasminePt,
     [OBJ_EVENT_GFX_CASHIER_F_PT] =             &gObjectEventGraphicsInfo_CashierFPt,
     [OBJ_EVENT_GFX_CASHIER_M_PT] =             &gObjectEventGraphicsInfo_CashierMPt,
+    [OBJ_EVENT_GFX_POKEFAN_M_PT] =             &gObjectEventGraphicsInfo_PokefanMPt,
     [OBJ_EVENT_GFX_ROARK_PT] =                 &gObjectEventGraphicsInfo_RoarkPt,
     [OBJ_EVENT_GFX_GARDENIA_PT] =              &gObjectEventGraphicsInfo_GardeniaPt,
     [OBJ_EVENT_GFX_MAYLENE_PT] =               &gObjectEventGraphicsInfo_MaylenePt,
