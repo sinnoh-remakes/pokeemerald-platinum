@@ -22,7 +22,6 @@
 #include "graphics.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
-#include "sound_check_menu.h"
 
 enum {
     TAG_VERSION = 1000,
@@ -39,7 +38,6 @@ enum {
 
 #define CLEAR_SAVE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_UP)
 #define RESET_RTC_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_LEFT)
-#define SOUND_TEST_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_RIGHT)
 #define BERRY_UPDATE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON)
 #define A_B_START_SELECT (A_BUTTON | B_BUTTON | START_BUTTON | SELECT_BUTTON)
 
@@ -50,7 +48,6 @@ static void Task_TitleScreenPhase3(u8);
 static void CB2_GoToMainMenu(void);
 static void CB2_GoToClearSaveDataScreen(void);
 static void CB2_GoToResetRtcScreen(void);
-static void CB2_GoToSoundCheckScreen(void);
 static void CB2_GoToBerryFixScreen(void);
 static void CB2_GoToCopyrightScreen(void);
 static void UpdateLegendaryMarkingColor(u8);
@@ -799,12 +796,6 @@ static void Task_TitleScreenPhase3(u8 taskId)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         SetMainCallback2(CB2_GoToResetRtcScreen);
     }
-    else if (JOY_HELD(SOUND_TEST_BUTTON_COMBO) == SOUND_TEST_BUTTON_COMBO)
-    {
-        FadeOutBGM(4);
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
-        SetMainCallback2(CB2_GoToSoundCheckScreen);
-    }
     else if (JOY_HELD(BERRY_UPDATE_BUTTON_COMBO) == BERRY_UPDATE_BUTTON_COMBO)
     {
         FadeOutBGM(4);
@@ -852,14 +843,6 @@ static void CB2_GoToResetRtcScreen(void)
 {
     if (!UpdatePaletteFade())
         SetMainCallback2(CB2_InitResetRtcScreen);
-}
-
-static void CB2_GoToSoundCheckScreen(void)
-{
-    if (!UpdatePaletteFade())
-        SetMainCallback2(CB2_StartSoundCheckMenu);
-    AnimateSprites();
-    BuildOamBuffer();
 }
 
 static void CB2_GoToBerryFixScreen(void)
