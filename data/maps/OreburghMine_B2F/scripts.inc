@@ -41,8 +41,9 @@ OreburghMine_EventScript_Colin::
 	end
 
 OreburghMine_B2F_EventScript_Machop1::
-	@ FODO: Play Machop sound
+	playmoncry SPECIES_MACHOP, CRY_MODE_ENCOUNTER
 	msgbox OreburghMine_B2F_Text_Machop1, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghMine_B2F_EventScript_Worker::
@@ -50,13 +51,15 @@ OreburghMine_B2F_EventScript_Worker::
 	end
 
 OreburghMine_B2F_EventScript_Machop2::
-	@ FODO: Play Machop sound
+	playmoncry SPECIES_MACHOP, CRY_MODE_ENCOUNTER
 	msgbox OreburghMine_B2F_Text_Machop2, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghMine_B2F_EventScript_Machop3::
-	@ FODO: Play Machop sound
+	playmoncry SPECIES_MACHOP, CRY_MODE_ENCOUNTER
 	msgbox OreburghMine_B2F_Text_Machop3, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghMine_B2F_Text_StandBack:

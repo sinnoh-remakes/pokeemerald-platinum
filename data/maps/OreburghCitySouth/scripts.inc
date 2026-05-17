@@ -10,8 +10,9 @@ OreburghCitySouth_EventScript_Worker1::
 	end
 
 OreburghCitySouth_EventScript_Machop1::
-	@ FODO: Play Machop sound
+	playmoncry SPECIES_MACHOP, CRY_MODE_ENCOUNTER
 	msgbox OreburghCitySouth_Text_Machop1, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghCitySouth_EventScript_Worker2::
@@ -19,8 +20,9 @@ OreburghCitySouth_EventScript_Worker2::
 	end
 
 OreburghCitySouth_EventScript_Machop2::
-	@ FODO: Play Machop sound
+	playmoncry SPECIES_MACHOP, CRY_MODE_ENCOUNTER
 	msgbox OreburghCitySouth_Text_Machop2, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghCitySouth_EventScript_WorkerSuperPotion::
