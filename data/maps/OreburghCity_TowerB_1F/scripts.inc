@@ -6,22 +6,26 @@ OreburghCity_TowerB_1F_EventScript_Breeder::
 	end
 
 OreburghCity_TowerB_1F_EventScript_SchoolKidF::
+	lock
+	faceplayer
 	msgbox OreburghCity_TowerB_1F_Text_ListenListen, MSGBOX_YESNO
 	switch VAR_RESULT
-	case NO, OreburghCity_TowerB_1F_EventScript_SchoolKidFTrade
+	case NO, OreburghCity_TowerB_1F_EventScript_SchoolKidFReject
 	@ FODO: Implement Abra trade
-	case YES, OreburghCity_TowerB_1F_EventScript_SchoolKidFReject
+	case YES, OreburghCity_TowerB_1F_EventScript_SchoolKidFTrade
 	case MULTI_B_PRESSED, OreburghCity_TowerB_1F_EventScript_SchoolKidFReject
 	end
 
 OreburghCity_TowerB_1F_EventScript_SchoolKidFTrade::
 	msgbox OreburghCity_TowerB_1F_Text_BeNiceTo, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 OreburghCity_TowerB_1F_EventScript_SchoolKidFReject::
 	msgbox OreburghCity_TowerB_1F_Text_MakeYouTradeMe, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 OreburghCity_TowerB_1F_EventScript_Expert::

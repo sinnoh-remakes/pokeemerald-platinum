@@ -28,4 +28,5 @@ OreburghCity_HouseA_Text_DifferentlyColored:
 	.string "has a sort of orange body.$"
 
 OreburghCity_HouseA_Text_Pikachu:
+	@ FODO: Play Pikachu sound
 	.string "PIKACHU: Pikaaah!$"

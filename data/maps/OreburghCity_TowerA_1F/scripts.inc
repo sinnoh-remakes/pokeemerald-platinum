@@ -29,6 +29,6 @@ OreburghCity_TowerA_1F_Text_ThereAreEight:
 	.string "There are eight Gym leaders in the\n"
 	.string "Sinnoh region.\p"
 	.string "The objective for Trainers is to get\n"
-	.string "Gym Badges from all of them."
+	.string "Gym Badges from all of them.\p"
 	.string "That means you have to defeat all of\n"
 	.string "them in battles at their Gyms!$"

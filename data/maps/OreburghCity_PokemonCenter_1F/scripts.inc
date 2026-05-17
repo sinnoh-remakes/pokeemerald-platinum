@@ -15,6 +15,7 @@ OreburghCity_PokemonCenter_1F_EventScript_AceTrainerF::
 
 OreburghCity_PokemonCenter_1F_EventScript_Psychic::
 	lock
+	faceplayer
 	msgbox OreburghCity_PokemonCenter_1F_Text_FavoriteKind, MSGBOX_DEFAULT
 	goto OreburghCity_PokemonCenter_1F_EventScript_PsychicTrainerClass
 	end
@@ -22,9 +23,13 @@ OreburghCity_PokemonCenter_1F_EventScript_Psychic::
 OreburghCity_PokemonCenter_1F_EventScript_PsychicTrainerClass:
 	@ FODO: Store trainer class value for future detection
 	msgbox OreburghCity_PokemonCenter_1F_Text_KindOfTrainer, MSGBOX_DEFAULT
-	multichoice 20, 0, MULTI_OREBURGH_CITY_TRAINERS, FALSE
+	multichoice 0, 0, MULTI_OREBURGH_CITY_TRAINERS, FALSE
 	switch VAR_RESULT
 	case 0, OreburghCity_PokemonCenter_1F_EventScript_MultiChoiceSchoolKid
+	case 1, OreburghCity_PokemonCenter_1F_EventScript_MultiChoiceBugCatcher
+	case 2, OreburghCity_PokemonCenter_1F_EventScript_MultiChoiceAceTrainer
+	case 3, OreburghCity_PokemonCenter_1F_EventScript_MultiChoiceRoughneck
+	case MULTI_B_PRESSED, OreburghCity_PokemonCenter_1F_EventScript_PsychicDecline
 	closemessage
 	release
 	end

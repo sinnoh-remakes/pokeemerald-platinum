@@ -3,12 +3,15 @@ OreburghCity_TowerA_2F_MapScripts::
 
 OreburghCity_TowerA_2F_EventScript_LassDuskBall::
 	goto_if_set FLAG_OREBURGH_CITY_DUSK_BALL, OreburghCity_TowerA_2F_EventScript_LassDuskBallGiven
+	lock
+	faceplayer
 	msgbox OreburghCity_TowerA_2F_Text_AreYouCatching, MSGBOX_DEFAULT
 	giveitem ITEM_DUSK_BALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_OREBURGH_CITY_DUSK_BALL
 	msgbox OreburghCity_TowerA_2F_Text_TheDuskBall, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 OreburghCity_TowerA_2F_EventScript_LassDuskBallGiven::
@@ -20,6 +23,7 @@ OreburghCity_TowerA_2F_EventScript_Worker::
 	end
 
 OreburghCity_TowerA_2F_EventScript_Psyduck::
+	@ FODO: Play Psyduck sound
 	msgbox OreburghCity_TowerA_2F_Text_Duck, MSGBOX_NPC
 	end
 
