@@ -24,7 +24,7 @@ OreburghCitySouth_EventScript_Machop2::
 	end
 
 OreburghCitySouth_EventScript_WorkerSuperPotion::
-	goto_if_set FLAG_OREBURGH_CITY_RECEIVED_SUPER_POTION, OreburghCitySouth_EventScript_WorkerSuperPotionGiven
+	goto_if_set FLAG_OREBURGH_CITY_SUPER_POTION, OreburghCitySouth_EventScript_WorkerSuperPotionGiven
 	msgbox OreburghCitySouth_Text_NoQuestion, MSGBOX_DEFAULT
 	giveitem ITEM_SUPER_POTION
 	setflag FLAG_OREBURGH_CITY_SUPER_POTION

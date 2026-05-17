@@ -66,7 +66,7 @@ JubilifeCity_TrainerSchool_Movement_PlayerWatchAlternate:
 JubilifeCity_TrainerSchool_EventScript_Harrison::
 	lock
 	faceplayer
-	goto_if_set FLAG_TRAINER_SCHOOL_RECEIVED_POTION, JubilifeCity_TrainerSchool_EventScript_HarrisonDefeated
+	goto_if_set FLAG_TRAINER_SCHOOL_POTION, JubilifeCity_TrainerSchool_EventScript_HarrisonDefeated
 	goto_if_defeated TRAINER_PT_HARRISON, JubilifeCity_TrainerSchool_EventScript_HarrisonCheckChristine
 	msgbox JubilifeCity_TrainerSchool_Text_DoingIt, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_TrainerSchool_EventScript_HarrisonDecline
@@ -86,7 +86,7 @@ JubilifeCity_TrainerSchool_EventScript_HarrisonGivePotion::
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox JubilifeCity_TrainerSchool_Text_PotionIsUsed, MSGBOX_AUTOCLOSE
-	setflag FLAG_TRAINER_SCHOOL_RECEIVED_POTION
+	setflag FLAG_TRAINER_SCHOOL_POTION
 	release
 	end
 
@@ -103,7 +103,7 @@ JubilifeCity_TrainerSchool_EventScript_HarrisonDecline::
 JubilifeCity_TrainerSchool_EventScript_Christine::
 	lock
 	faceplayer
-	goto_if_set FLAG_TRAINER_SCHOOL_RECEIVED_POTION, JubilifeCity_TrainerSchool_EventScript_ChristineDefeated
+	goto_if_set FLAG_TRAINER_SCHOOL_POTION, JubilifeCity_TrainerSchool_EventScript_ChristineDefeated
 	goto_if_defeated TRAINER_PT_CHRISTINE, JubilifeCity_TrainerSchool_EventScript_ChristineDefeated
 	msgbox JubilifeCity_TrainerSchool_Text_JustBecameFriends, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_TrainerSchool_EventScript_ChristineDecline

@@ -171,6 +171,55 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_GYM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_TOWER_A_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_TOWER_B_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_TOWER_C_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_HOUSE_A",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_HOUSE_B",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 54,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 36,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_MART",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
