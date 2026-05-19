@@ -551,7 +551,6 @@
 #define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
 #endif //OW_FOLLOWERS_POKEBALLS
 
-// Sinnoh event objects
 #define OBJ_EVENT_PAL_TAG_LUCAS                   0x1125
 #define OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION        0x1126
 #define OBJ_EVENT_PAL_TAG_DAWN                    0x1127

@@ -9,7 +9,7 @@ Route201_MapScripts::
 	@ 3: Entered lake event
 	@ 4: Finished lake event
 	
-	@ State descriptions for VAR_FOLLOWER_TEXT
+	@ State descriptions for VAR_TEXT_FOLLOWER
 	@ 1-6: Visit lake with Rival
 
 Route201_OnTransition:
@@ -606,41 +606,41 @@ Route201_EventScript_RivalLake::
 
 Route201_EventScript_Rival::
 	facefollowernpc
-	goto_if_eq VAR_FOLLOWER_TEXT, 0, Route201_EventScript_RivalTalk1
-	goto_if_eq VAR_FOLLOWER_TEXT, 1, Route201_EventScript_RivalTalk2
-	goto_if_eq VAR_FOLLOWER_TEXT, 2, Route201_EventScript_RivalTalk3
-	goto_if_eq VAR_FOLLOWER_TEXT, 3, Route201_EventScript_RivalTalk4
-	goto_if_eq VAR_FOLLOWER_TEXT, 4, Route201_EventScript_RivalTalk5
+	goto_if_eq VAR_TEXT_FOLLOWER, 0, Route201_EventScript_RivalTalk1
+	goto_if_eq VAR_TEXT_FOLLOWER, 1, Route201_EventScript_RivalTalk2
+	goto_if_eq VAR_TEXT_FOLLOWER, 2, Route201_EventScript_RivalTalk3
+	goto_if_eq VAR_TEXT_FOLLOWER, 3, Route201_EventScript_RivalTalk4
+	goto_if_eq VAR_TEXT_FOLLOWER, 4, Route201_EventScript_RivalTalk5
 	goto Route201_EventScript_RivalTalk6
 
 
 Route201_EventScript_RivalTalk1::
-	setvar VAR_FOLLOWER_TEXT, 1
+	setvar VAR_TEXT_FOLLOWER, 1
 	msgbox Route201_Text_RivalTalk1, MSGBOX_SIGN
 	end
 
 Route201_EventScript_RivalTalk2::
-	setvar VAR_FOLLOWER_TEXT, 2
+	setvar VAR_TEXT_FOLLOWER, 2
 	msgbox Route201_Text_RivalTalk2, MSGBOX_SIGN
 	end
 
 Route201_EventScript_RivalTalk3::
-	setvar VAR_FOLLOWER_TEXT, 3
+	setvar VAR_TEXT_FOLLOWER, 3
 	msgbox Route201_Text_RivalTalk3, MSGBOX_SIGN
 	end
 
 Route201_EventScript_RivalTalk4::
-	setvar VAR_FOLLOWER_TEXT, 4
+	setvar VAR_TEXT_FOLLOWER, 4
 	msgbox Route201_Text_RivalTalk4, MSGBOX_SIGN
 	end
 
 Route201_EventScript_RivalTalk5::
-	setvar VAR_FOLLOWER_TEXT, 5
+	setvar VAR_TEXT_FOLLOWER, 5
 	msgbox Route201_Text_RivalTalk5, MSGBOX_SIGN
 	end
 
 Route201_EventScript_RivalTalk6::
-	setvar VAR_FOLLOWER_TEXT, 6
+	setvar VAR_TEXT_FOLLOWER, 6
 	msgbox Route201_Text_RivalTalk6, MSGBOX_SIGN
 	end
 

@@ -21,7 +21,7 @@ TwinleafTown_MapScripts::
 	@ 8: Received Pokédex
 	@ 9: Received Parcel
 
-	@ State descriptions for VAR_ALTERNATE_TEXT
+	@ State descriptions for VAR_TEXT_ALTERNATE
 	@ 1: Mom saying bye in intro event
 	@ 2: Rival's Mom speaking after Rival leaves Twinleaf
 	@ 3: Helper Route 202 requesting you notify family

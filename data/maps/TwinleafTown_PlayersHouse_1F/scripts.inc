@@ -162,12 +162,12 @@ TwinleafTown_PlayersHouse_1F_EventScript_Impatient::
 	end
 
 TwinleafTown_PlayersHouse_1F_EventScript_MomAlternate::
-	goto_if_lt VAR_ALTERNATE_TEXT, 1, TwinleafTown_PlayersHouse_1F_EventScript_TakeCare
+	goto_if_lt VAR_TEXT_ALTERNATE, 1, TwinleafTown_PlayersHouse_1F_EventScript_TakeCare
 	msgbox TwinleafTown_PlayersHouse_1F_Text_RivalWaiting, MSGBOX_NPC
 	end
 
 TwinleafTown_PlayersHouse_1F_EventScript_TakeCare::
-	setvar VAR_ALTERNATE_TEXT, 1
+	setvar VAR_TEXT_ALTERNATE, 1
 	msgbox TwinleafTown_PlayersHouse_1F_Text_TakeCare, MSGBOX_NPC
 	end
 

@@ -299,9 +299,9 @@
 #define FACILITY_CLASS_LEAF                  0x4f
 #define FACILITY_CLASS_RS_BRENDAN            0x50
 #define FACILITY_CLASS_RS_MAY                0x51
-#define FACILITY_CLASS_BARRY                 0x52
-#define FACILITY_CLASS_LUCAS                 0x53
-#define FACILITY_CLASS_DAWN                  0x54
+#define FACILITY_CLASS_LUCAS                 0x52
+#define FACILITY_CLASS_DAWN                  0x53
+#define FACILITY_CLASS_BARRY                 0x54
 
 #define FACILITY_CLASSES_COUNT               0x55
 

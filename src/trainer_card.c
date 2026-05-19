@@ -1061,7 +1061,7 @@ static void PrintNameOnCardFront(void)
     u8 buffer[32];
     u8 *txtPtr;
     s32 xOffset;
-    txtPtr = StringCopy(buffer, sData->isSinnoh ? gText_SinnohTrainerCardName : gText_TrainerCardName);
+    txtPtr = StringCopy(buffer, sData->isSinnoh ? gText_TrainerCardNameSinnoh : gText_TrainerCardName);
     ConvertInternationalString(txtPtr, sData->language);
     if (sData->cardType == CARD_TYPE_FRLG)
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 20, 28, getTrainerCardTextColors(), TEXT_SKIP_DRAW, buffer);
