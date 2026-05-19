@@ -108,7 +108,6 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
-//Platinum
 #define TRAINER_PIC_DP_ACE_TRAINER_DT           93
 #define TRAINER_PIC_DP_ACE_TRAINER_F            94
 #define TRAINER_PIC_DP_ACE_TRAINER_M            95

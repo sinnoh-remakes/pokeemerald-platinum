@@ -25,13 +25,13 @@ SandgemTown_ProfessorRowansLab_EventScript_ShowStarter::
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox SandgemTown_ProfessorRowansLab_Text_LetMeSee, MSGBOX_DEFAULT
-  @ // FODO: Add animation of giving item
+    @ FODO: Add animation of giving item
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 48
 	delay 48
 	msgbox SandgemTown_ProfessorRowansLab_Text_SeemsHappy, MSGBOX_SIGN
-  @ // FODO: Add animation of taking item back
+    @ FODO: Add animation of taking item back
 	bufferleadmonspeciesname STR_VAR_1
 	msgbox SandgemTown_ProfessorRowansLab_Text_GiveGift, MSGBOX_DEFAULT
 	msgbox SandgemTown_ProfessorRowansLab_Text_GiveNickname, MSGBOX_YESNO
