@@ -8,6 +8,7 @@ Common_EventScript_SetGymTrainers::
 	case 6, FortreeCity_Gym_SetGymTrainers
 	case 7, MossdeepCity_Gym_SetGymTrainers
 	case 8, SootopolisCity_Gym_SetGymTrainers
+	case 9, OreburghCity_Gym_SetGymTrainers
 	end
 
 RustboroCity_Gym_SetGymTrainers::
@@ -89,4 +90,9 @@ SootopolisCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_BETHANY
 	settrainerflag TRAINER_ANNIKA
 	settrainerflag TRAINER_DAPHNE
+	return
+
+OreburghCity_Gym_SetGymTrainers::
+	settrainerflag TRAINER_PT_JONATHON
+	settrainerflag TRAINER_PT_DARIUS
 	return

@@ -6,6 +6,7 @@ OreburghCityNorth_MapScripts::
 @ 2: Talked to Youngster
 @ 3: Talked to Barry
 @ 4: Talked to Roark
+@ 5: Obtained Coal Badge
 
 OreburghCityNorth_EventScript_Youngster::
 	lock
