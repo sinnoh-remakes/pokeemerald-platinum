@@ -30,7 +30,7 @@ OreburghCitySouth_EventScript_WorkerSuperPotion::
 	msgbox OreburghCitySouth_Text_NoQuestion, MSGBOX_DEFAULT
 	giveitem ITEM_SUPER_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_ITEM_OREBURGH_CITY_SUPER_POTION
+	setflag FLAG_OREBURGH_CITY_SUPER_POTION
 	msgbox OreburghCitySouth_Text_HaleHearty, MSGBOX_DEFAULT
 	closemessage
 	end
