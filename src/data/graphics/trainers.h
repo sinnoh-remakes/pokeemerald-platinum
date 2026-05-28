@@ -292,15 +292,13 @@ const u8 gTrainerBackPic_Steven[] = INCBIN_U8("graphics/trainers/back_pics/steve
 const u16 gTrainerBackPicPalette_Red[] = INCBIN_U16("graphics/trainers/back_pics/red.gbapal");
 const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pics/leaf.gbapal");
 
-//Platinum Trainers
-
-//BackPics
 const u8 gTrainerBackPic_Lucas[] = INCBIN_U8("graphics/trainers/back_pics/lucas_p.4bpp");
 const u8 gTrainerBackPic_Dawn[] = INCBIN_U8("graphics/trainers/back_pics/dawn_p.4bpp");
-const u16 gTrainerPalette_Barry_Back[] = INCBIN_U16("graphics/trainers/palettes/barry_back.gbapal");
 const u8 gTrainerBackPic_Barry[] = INCBIN_U8("graphics/trainers/back_pics/barry.4bpp");
+const u16 gTrainerBackPicPalette_Lucas[] = INCBIN_U16("graphics/trainers/back_pics/lucas_p.gbapal");
+const u16 gTrainerBackPicPalette_Dawn[] = INCBIN_U16("graphics/trainers/back_pics/dawn_p.gbapal");
+const u16 gTrainerBackPicPalette_Barry[] = INCBIN_U16("graphics/trainers/back_pics/barry.gbapal");
 
-//FrontPics
 const u32 gTrainerFrontPic_DP_Ace_Trainer_DoubleTeam[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ace_Trainer_DoubleTeam.4bpp.lz");
 const u16 gTrainerPalette_DP_Ace_Trainer_DoubleTeam[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ace_Trainer_DoubleTeam.gbapal");
 
@@ -580,7 +578,6 @@ const u16 gTrainerPalette_DP_Young_Couple[] = INCBIN_U16("graphics/trainers/fron
 const u32 gTrainerFrontPic_DP_Youngster[] = INCBIN_U32("graphics/trainers/front_pics/DP_Youngster.4bpp.lz");
 const u16 gTrainerPalette_DP_Youngster[] = INCBIN_U16("graphics/trainers/front_pics/DP_Youngster.gbapal");
 
-//Mugshots
 const u32 gTrainerFrontPic_DP_Cynthia_Mugshot[] = INCBIN_U32("graphics/trainers/front_pics/DP_cynthia_mugshot.4bpp.lz");
 const u16 gTrainerPalette_DP_Cynthia_Mugshot[] = INCBIN_U16("graphics/trainers/front_pics/DP_cynthia_mugshot.gbapal");
 
@@ -693,7 +690,6 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEAF, gTrainerFrontPic_Leaf, gTrainerPalette_Leaf),
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
-    //Poke Platinum Trainers
     TRAINER_SPRITE(TRAINER_PIC_LUCAS, gTrainerFrontPic_DP_Lucas_p, gTrainerPalette_DP_Lucas_p),
     TRAINER_SPRITE(TRAINER_PIC_DAWN, gTrainerFrontPic_DP_Dawn_p, gTrainerPalette_DP_Dawn_p),
     TRAINER_SPRITE(TRAINER_PIC_DP_ACE_TRAINER_DT, gTrainerFrontPic_DP_Ace_Trainer_DoubleTeam, gTrainerPalette_DP_Ace_Trainer_DoubleTeam),
@@ -714,6 +710,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_DP_BUG_CATCHER, gTrainerFrontPic_DP_Bug_Catcher, gTrainerPalette_DP_Bug_Catcher),
     TRAINER_SPRITE(TRAINER_PIC_DP_BYRON, gTrainerFrontPic_DP_Byron, gTrainerPalette_DP_Byron),
     TRAINER_SPRITE(TRAINER_PIC_DP_CAMERAMAN, gTrainerFrontPic_DP_Cameraman, gTrainerPalette_DP_Cameraman),
+    TRAINER_SPRITE(TRAINER_PIC_DP_CAMPER, gTrainerFrontPic_DP_Camper, gTrainerPalette_DP_Camper),
     TRAINER_SPRITE(TRAINER_PIC_DP_CANDICE, gTrainerFrontPic_DP_Candice, gTrainerPalette_DP_Candice),
     TRAINER_SPRITE(TRAINER_PIC_DP_CHERYL, gTrainerFrontPic_DP_Cheryl, gTrainerPalette_DP_Cheryl),
     TRAINER_SPRITE(TRAINER_PIC_DP_CLOWN, gTrainerFrontPic_DP_Clown, gTrainerPalette_DP_Clown),
@@ -749,6 +746,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_DP_PAINTER_ARTIST, gTrainerFrontPic_DP_Painter_Artist, gTrainerPalette_DP_Painter_Artist),
     TRAINER_SPRITE(TRAINER_PIC_DP_PALMER, gTrainerFrontPic_DP_Palmer, gTrainerPalette_DP_Palmer),
     TRAINER_SPRITE(TRAINER_PIC_DP_PARASOL_LADY, gTrainerFrontPic_DP_Parasol_Lady, gTrainerPalette_DP_Parasol_Lady),
+    TRAINER_SPRITE(TRAINER_PIC_DP_PICNICKER, gTrainerFrontPic_DP_Picnicker, gTrainerPalette_DP_Picnicker),
     TRAINER_SPRITE(TRAINER_PIC_DP_POKE_KID, gTrainerFrontPic_DP_Poke_Kid, gTrainerPalette_DP_Poke_Kid),
     TRAINER_SPRITE(TRAINER_PIC_DP_POKEFAN_F, gTrainerFrontPic_DP_Pokefan_F, gTrainerPalette_DP_Pokefan_F),
     TRAINER_SPRITE(TRAINER_PIC_DP_POKEFAN_M, gTrainerFrontPic_DP_Pokefan_M, gTrainerPalette_DP_Pokefan_M),
@@ -859,7 +857,7 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY, 4, gTrainerBackPic_RubySapphireMay, gTrainerPalette_RubySapphireMay, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_WALLY, 4, gTrainerBackPic_Wally, gTrainerPalette_Wally, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_STEVEN, 4, gTrainerBackPic_Steven, gTrainerPalette_Steven, sBackAnims_Hoenn),
-    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_LUCAS, 4, gTrainerBackPic_Lucas, gTrainerPalette_DP_Lucas_p, sBackAnims_Hoenn),
-    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_DAWN, 4, gTrainerBackPic_Dawn, gTrainerPalette_DP_Dawn_p, sBackAnims_Hoenn),
-    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_BARRY, 4, gTrainerBackPic_Barry, gTrainerPalette_Barry_Back, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_LUCAS, 4, gTrainerBackPic_Lucas, gTrainerBackPicPalette_Lucas, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_DAWN, 4, gTrainerBackPic_Dawn, gTrainerBackPicPalette_Dawn, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_BARRY, 4, gTrainerBackPic_Barry, gTrainerBackPicPalette_Barry, sBackAnims_Hoenn),
 };

@@ -3,15 +3,15 @@ LakeVerity_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeVerity_OnFrame
 	.byte 0
 
-	@ State descriptions for VAR_VERITY_STATE
+	@ State descriptions for VAR_LAKE_VERITY_STATE
 	@ 1: After First Lake Scene
 
 LakeVerity_OnWarp:
-	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_TurnPlayerNorth
+	map_script_2 VAR_LAKE_VERITY_STATE, 0, LakeVerity_TurnPlayerNorth
 	.2byte 0
 
 LakeVerity_OnFrame:
-	map_script_2 VAR_VERITY_STATE, 0, LakeVerity_EventScript_IntroScene
+	map_script_2 VAR_LAKE_VERITY_STATE, 0, LakeVerity_EventScript_IntroScene
 	.2byte 0
 
 LakeVerity_TurnPlayerNorth::
@@ -21,7 +21,7 @@ LakeVerity_TurnPlayerNorth::
 LakeVerity_EventScript_IntroScene::
 	lock
 	special SpawnCameraObject
-	setvar VAR_VERITY_STATE, 1
+	setvar VAR_LAKE_VERITY_STATE, 1
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE_201_RIVAL
 	msgbox LakeVerity_Text_WhatsGoing, MSGBOX_SIGN

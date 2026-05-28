@@ -264,18 +264,18 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_TWINLEAF_TOWN_STATE                          0x40F7
-#define VAR_TWINLEAF_INTRO_STATE                         0x40F8
-#define VAR_SANDGEM_TOWN_STATE                           0x40F9
-#define VAR_SANDGEM_LAB_STATE                            0x40FA
-#define VAR_JUBILIFE_CITY_STATE                          0x40FB
-#define VAR_OREBURGH_CITY_STATE                          0x40FC
-#define VAR_ROUTE201_STATE                               0x40FD
-#define VAR_ROUTE202_STATE                               0x40FE
-#define VAR_ROUTE203_STATE                               0x40FF
-#define VAR_VERITY_STATE                                 0x4100
-#define VAR_ALTERNATE_TEXT                               0x4101
-#define VAR_FOLLOWER_TEXT                                0x4102
+#define VAR_TEXT_ALTERNATE                               0x40F7
+#define VAR_TEXT_FOLLOWER                                0x40F8
+#define VAR_TWINLEAF_TOWN_STATE                          0x40F9
+#define VAR_TWINLEAF_INTRO_STATE                         0x40FA
+#define VAR_SANDGEM_TOWN_STATE                           0x40FB
+#define VAR_SANDGEM_LAB_STATE                            0x40FC
+#define VAR_JUBILIFE_CITY_STATE                          0x40FD
+#define VAR_OREBURGH_CITY_STATE                          0x40FE
+#define VAR_ROUTE201_STATE                               0x40FF
+#define VAR_ROUTE202_STATE                               0x4100
+#define VAR_ROUTE203_STATE                               0x4101
+#define VAR_LAKE_VERITY_STATE                            0x4102
 
 #define VARS_END                                         0x4102
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
@@ -328,15 +328,15 @@
 #define VAR_TEMP_TRANSFERRED_SPECIES  VAR_TEMP_1
 
 #if TESTING
-#define TESTING_VARS_START             0x9000
-#define TESTING_VAR_DIFFICULTY         (TESTING_VARS_START + 0x0)
-#define TESTING_VAR_UNUSED_1           (TESTING_VARS_START + 0x1)
-#define TESTING_VAR_UNUSED_2           (TESTING_VARS_START + 0x2)
-#define TESTING_VAR_UNUSED_3           (TESTING_VARS_START + 0x3)
-#define TESTING_VAR_UNUSED_4           (TESTING_VARS_START + 0x4)
-#define TESTING_VAR_UNUSED_5           (TESTING_VARS_START + 0x5)
-#define TESTING_VAR_UNUSED_6           (TESTING_VARS_START + 0x6)
-#define TESTING_VAR_UNUSED_7           (TESTING_VARS_START + 0x7)
+#define TESTING_VARS_START                  0x9000
+#define TESTING_VAR_DIFFICULTY              (TESTING_VARS_START + 0x0)
+#define TESTING_VAR_STARTING_STATUS         (TESTING_VARS_START + 0x1)
+#define TESTING_VAR_STARTING_STATUS_TIMER   (TESTING_VARS_START + 0x2)
+#define TESTING_VAR_UNUSED_3                (TESTING_VARS_START + 0x3)
+#define TESTING_VAR_UNUSED_4                (TESTING_VARS_START + 0x4)
+#define TESTING_VAR_UNUSED_5                (TESTING_VARS_START + 0x5)
+#define TESTING_VAR_UNUSED_6                (TESTING_VARS_START + 0x6)
+#define TESTING_VAR_UNUSED_7                (TESTING_VARS_START + 0x7)
 #endif // TESTING
 
 #endif // GUARD_CONSTANTS_VARS_H

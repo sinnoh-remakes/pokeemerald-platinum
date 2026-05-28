@@ -91,6 +91,8 @@ TwinleafTown_PlayersHouse_1F_TurnPlayerNorth::
 TwinleafTown_PlayersHouse_1F_EventScript_LakeReturn::
 	lock
 	setvar VAR_TWINLEAF_INTRO_STATE, 7
+	clearflag B_FLAG_NO_WHITEOUT
+	special HealPlayerParty
 	delay 48
 	delay 48
 	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, TwinleafTown_PlayersHouse_1F_Movement_MomKitchen
@@ -160,12 +162,12 @@ TwinleafTown_PlayersHouse_1F_EventScript_Impatient::
 	end
 
 TwinleafTown_PlayersHouse_1F_EventScript_MomAlternate::
-	goto_if_lt VAR_ALTERNATE_TEXT, 1, TwinleafTown_PlayersHouse_1F_EventScript_TakeCare
+	goto_if_lt VAR_TEXT_ALTERNATE, 1, TwinleafTown_PlayersHouse_1F_EventScript_TakeCare
 	msgbox TwinleafTown_PlayersHouse_1F_Text_RivalWaiting, MSGBOX_NPC
 	end
 
 TwinleafTown_PlayersHouse_1F_EventScript_TakeCare::
-	setvar VAR_ALTERNATE_TEXT, 1
+	setvar VAR_TEXT_ALTERNATE, 1
 	msgbox TwinleafTown_PlayersHouse_1F_Text_TakeCare, MSGBOX_NPC
 	end
 

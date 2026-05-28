@@ -22,12 +22,12 @@ TwinleafTown_RivalsHouse_1F_EventScript_RunningBack::
 	end
 
 TwinleafTown_RivalsHouse_1F_EventScript_MomAlternate::
-	goto_if_lt VAR_ALTERNATE_TEXT, 2, TwinleafTown_RivalsHouse_1F_EventScript_RocketedOff
+	goto_if_lt VAR_TEXT_ALTERNATE, 2, TwinleafTown_RivalsHouse_1F_EventScript_RocketedOff
 	msgbox TwinleafTown_RivalsHouse_1F_TakesAfter, MSGBOX_NPC
 	end
 
 TwinleafTown_RivalsHouse_1F_EventScript_RocketedOff::
-	setvar VAR_ALTERNATE_TEXT, 2
+	setvar VAR_TEXT_ALTERNATE, 2
 	msgbox TwinleafTown_RivalsHouse_1F_RocketedOff, MSGBOX_NPC
 	end
 

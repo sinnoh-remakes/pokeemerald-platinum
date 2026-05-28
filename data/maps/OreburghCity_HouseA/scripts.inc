@@ -10,7 +10,9 @@ OreburghCity_HouseA_EventScript_Youngster::
 	end
 
 OreburghCity_HouseA_EventScript_Pikachu::
+	playmoncry SPECIES_PIKACHU, CRY_MODE_ENCOUNTER
 	msgbox OreburghCity_HouseA_Text_Pikachu, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghCity_HouseA_Text_DifferentNatures:
@@ -28,5 +30,4 @@ OreburghCity_HouseA_Text_DifferentlyColored:
 	.string "has a sort of orange body.$"
 
 OreburghCity_HouseA_Text_Pikachu:
-	@ FODO: Play Pikachu sound
 	.string "PIKACHU: Pikaaah!$"

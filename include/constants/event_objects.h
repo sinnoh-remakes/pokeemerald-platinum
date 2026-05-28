@@ -380,13 +380,11 @@
 // #define OBJ_EVENT_GFX_ARGENTA_PT              373
 // #define OBJ_EVENT_GFX_DARACH_PT               374
 // #define OBJ_EVENT_GFX_DAHLIA_PT               375
-// #define OBJ_EVENT_GFX__PT                 3
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
 #define NUM_OBJ_EVENT_GFX                        365
-// #define NUM_OBJ_EVENT_GFX                        376
 
 
 // These are dynamic object gfx ids.
@@ -553,7 +551,6 @@
 #define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
 #endif //OW_FOLLOWERS_POKEBALLS
 
-// Sinnoh event objects
 #define OBJ_EVENT_PAL_TAG_LUCAS                   0x1125
 #define OBJ_EVENT_PAL_TAG_LUCAS_REFLECTION        0x1126
 #define OBJ_EVENT_PAL_TAG_DAWN                    0x1127
@@ -671,7 +668,6 @@
 // #define OBJ_EVENT_PAL_TAG_ARGENTA_PT              0x1239
 // #define OBJ_EVENT_PAL_TAG_DARACH_PT               0x1240
 // #define OBJ_EVENT_PAL_TAG_DAHLIA_PT               0x1241
-// #define OBJ_EVENT_PAL_TAG__PT              0x123
 
 
 // Used as a placeholder follower graphic
