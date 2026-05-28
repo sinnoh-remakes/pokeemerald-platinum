@@ -580,10 +580,6 @@ const u16 gTrainerPalette_DP_Young_Couple[] = INCBIN_U16("graphics/trainers/fron
 const u32 gTrainerFrontPic_DP_Youngster[] = INCBIN_U32("graphics/trainers/front_pics/DP_Youngster.4bpp.lz");
 const u16 gTrainerPalette_DP_Youngster[] = INCBIN_U16("graphics/trainers/front_pics/DP_Youngster.gbapal");
 
-//Mugshots
-const u32 gTrainerFrontPic_DP_Cynthia_Mugshot[] = INCBIN_U32("graphics/trainers/front_pics/DP_cynthia_mugshot.4bpp.lz");
-const u16 gTrainerPalette_DP_Cynthia_Mugshot[] = INCBIN_U16("graphics/trainers/front_pics/DP_cynthia_mugshot.gbapal");
-
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
