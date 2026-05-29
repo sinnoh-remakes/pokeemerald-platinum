@@ -1,7 +1,7 @@
 {
   "id": "MAP_JUBILIFE_CITY_TOWER_C_1F",
   "name": "JubilifeCity_TowerC_1F",
-  "layout": "LAYOUT_JUBILIFE_CITY_TOWER_C_1F",
+  "layout": "LAYOUT_JUBILIFE_CITY_TOWER_1F",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_JUBILIFE_CITY",
   "requires_flash": false,

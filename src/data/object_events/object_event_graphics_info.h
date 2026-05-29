@@ -1323,7 +1323,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NurseJoyPt = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_NurseJoyPt,
     .images = sPicTable_NurseJoyPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };

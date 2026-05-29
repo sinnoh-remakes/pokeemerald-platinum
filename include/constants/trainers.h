@@ -303,15 +303,11 @@
 #define FACILITY_CLASS_LEAF                  0x4f
 #define FACILITY_CLASS_RS_BRENDAN            0x50
 #define FACILITY_CLASS_RS_MAY                0x51
-#define FACILITY_CLASS_BARRY                 0x52
-#define FACILITY_CLASS_LUCAS                 0x53
-#define FACILITY_CLASS_LUCAS_2               0x54
-#define FACILITY_CLASS_LUCAS_3               0x55
-#define FACILITY_CLASS_DAWN                  0x56
-#define FACILITY_CLASS_DAWN_2                0x57
-#define FACILITY_CLASS_DAWN_3                0x58
+#define FACILITY_CLASS_LUCAS                 0x52
+#define FACILITY_CLASS_DAWN                  0x53
+#define FACILITY_CLASS_BARRY                 0x54
 
-#define FACILITY_CLASSES_COUNT               0x59
+#define FACILITY_CLASSES_COUNT               0x55
 
 #define RS_FACILITY_CLASS_AQUA_LEADER_ARCHIE    0x0
 #define RS_FACILITY_CLASS_AQUA_GRUNT_M          0x1
@@ -461,7 +457,14 @@ enum TrainerClassID
     TRAINER_CLASS_PIKE_QUEEN,
     TRAINER_CLASS_PYRAMID_KING,
     TRAINER_CLASS_RS_PROTAG,
-    TRAINER_CLASS_WORKER,
+    TRAINER_CLASS_PT_RIVAL,
+    TRAINER_CLASS_PT_YOUNGSTER,
+    TRAINER_CLASS_PT_LASS,
+    TRAINER_CLASS_PT_SCHOOL_KID,
+    TRAINER_CLASS_PT_CAMPER,
+    TRAINER_CLASS_PT_PICNICKER,
+    TRAINER_CLASS_PT_WORKER,
+    TRAINER_CLASS_PT_LEADER,
     TRAINER_CLASS_COUNT,
 };
 

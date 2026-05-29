@@ -57,21 +57,21 @@
   "warp_events": [
     {
       "x": 11,
-      "y": 1,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_SOUTH",
       "dest_warp_id": "1"
     },
     {
       "x": 12,
-      "y": 1,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_SOUTH",
       "dest_warp_id": "2"
     },
     {
       "x": 13,
-      "y": 1,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_SOUTH",
       "dest_warp_id": "3"

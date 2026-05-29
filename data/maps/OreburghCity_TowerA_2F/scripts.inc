@@ -23,8 +23,9 @@ OreburghCity_TowerA_2F_EventScript_Worker::
 	end
 
 OreburghCity_TowerA_2F_EventScript_Psyduck::
-	@ FODO: Play Psyduck sound
+	playmoncry SPECIES_PSYDUCK, CRY_MODE_ENCOUNTER
 	msgbox OreburghCity_TowerA_2F_Text_Duck, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghCity_TowerA_2F_EventScript_SchoolKidF::

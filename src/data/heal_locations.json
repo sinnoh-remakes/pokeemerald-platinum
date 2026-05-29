@@ -191,7 +191,9 @@
       "id": "HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE",
       "map": "MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F",
       "x": 3,
-      "y": 5
+      "y": 5,
+      "respawn_map": "MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
+      "respawn_npc": "LOCALID_TWINLEAF_PLAYER1F_MOM"
     },
     {
       "id": "HEAL_LOCATION_SANDGEM_TOWN",

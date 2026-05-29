@@ -544,9 +544,9 @@ static void Task_AskConfirmStarter(u8 taskId)
 
     static const u8 *const sStarterConfirmStrings[] =
     {
-        gText_ConfirmStarterChoiceLT,
-        gText_ConfirmStarterChoiceMD,
-        gText_ConfirmStarterChoiceRT
+        gText_ConfirmStarterChoiceLeft,
+        gText_ConfirmStarterChoiceMiddle,
+        gText_ConfirmStarterChoiceRight
     };
 
     if (selection > 2)
