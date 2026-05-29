@@ -292,293 +292,301 @@ const u8 gTrainerBackPic_Steven[] = INCBIN_U8("graphics/trainers/back_pics/steve
 const u16 gTrainerBackPicPalette_Red[] = INCBIN_U16("graphics/trainers/back_pics/red.gbapal");
 const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pics/leaf.gbapal");
 
-//Platinum Trainers
-
-//BackPics
 const u8 gTrainerBackPic_Lucas[] = INCBIN_U8("graphics/trainers/back_pics/lucas_p.4bpp");
 const u8 gTrainerBackPic_Dawn[] = INCBIN_U8("graphics/trainers/back_pics/dawn_p.4bpp");
-const u16 gTrainerPalette_Barry_Back[] = INCBIN_U16("graphics/trainers/palettes/barry_back.gbapal");
 const u8 gTrainerBackPic_Barry[] = INCBIN_U8("graphics/trainers/back_pics/barry.4bpp");
+const u16 gTrainerBackPicPalette_Barry[] = INCBIN_U16("graphics/trainers/palettes/barry.gbapal");
 
-//FrontPics
-const u32 gTrainerFrontPic_DP_Ace_Trainer_DoubleTeam[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ace_Trainer_DoubleTeam.4bpp.lz");
-const u16 gTrainerPalette_DP_Ace_Trainer_DoubleTeam[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ace_Trainer_DoubleTeam.gbapal");
+const u32 gTrainerFrontPic_LucasDP[] = INCBIN_U32("graphics/trainers/front_pics/lucas_dp.4bpp.lz");
+const u16 gTrainerPalette_LucasDP[] = INCBIN_U16("graphics/trainers/front_pics/lucas_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Ace_Trainer_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ace_Trainer_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Ace_Trainer_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ace_Trainer_F.gbapal");
+const u32 gTrainerFrontPic_DawnDP[] = INCBIN_U32("graphics/trainers/front_pics/dawn_dp.4bpp.lz");
+const u16 gTrainerPalette_DawnDP[] = INCBIN_U16("graphics/trainers/front_pics/dawn_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Ace_Trainer_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ace_Trainer_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Ace_Trainer_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ace_Trainer_M.gbapal");
+const u32 gTrainerFrontPic_AceTrainerFDP[] = INCBIN_U32("graphics/trainers/front_pics/ace_trainer_f_dp.4bpp.lz");
+const u16 gTrainerPalette_AceTrainerFDP[] = INCBIN_U16("graphics/trainers/front_pics/ace_trainer_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Ace_Trainer_Snow_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ace_Trainer_Snow_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Ace_Trainer_Snow_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ace_Trainer_Snow_F.gbapal");
+const u32 gTrainerFrontPic_AceTrainerMDP[] = INCBIN_U32("graphics/trainers/front_pics/ace_trainer_m_dp.4bpp.lz");
+const u16 gTrainerPalette_AceTrainerMDP[] = INCBIN_U16("graphics/trainers/front_pics/ace_trainer_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Ace_Trainer_Snow_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ace_Trainer_Snow_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Ace_Trainer_Snow_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ace_Trainer_Snow_M.gbapal");
+const u32 gTrainerFrontPic_AceTrainerSnowFDP[] = INCBIN_U32("graphics/trainers/front_pics/ace_trainer_snow_f_dp.4bpp.lz");
+const u16 gTrainerPalette_AceTrainerSnowFDP[] = INCBIN_U16("graphics/trainers/front_pics/ace_trainer_snow_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Aroma_Lady[] = INCBIN_U32("graphics/trainers/front_pics/DP_Aroma_Lady.4bpp.lz");
-const u16 gTrainerPalette_DP_Aroma_Lady[] = INCBIN_U16("graphics/trainers/front_pics/DP_Aroma_Lady.gbapal");
+const u32 gTrainerFrontPic_AceTrainerSnowMDP[] = INCBIN_U32("graphics/trainers/front_pics/ace_trainer_snow_m_dp.4bpp.lz");
+const u16 gTrainerPalette_AceTrainerSnowMDP[] = INCBIN_U16("graphics/trainers/front_pics/ace_trainer_snow_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Barry[] = INCBIN_U32("graphics/trainers/front_pics/DP_Barry_p.4bpp.lz");
-const u16 gTrainerPalette_DP_Barry[] = INCBIN_U16("graphics/trainers/front_pics/DP_Barry_p.gbapal");
+// const u32 gTrainerFrontPic_ArgentaDP[] = INCBIN_U32("graphics/trainers/front_pics/argenta_dp.4bpp.lz");
+// const u16 gTrainerPalette_ArgentaDP[] = INCBIN_U16("graphics/trainers/front_pics/argenta_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Battle_Girl[] = INCBIN_U32("graphics/trainers/front_pics/DP_Battle_Girl.4bpp.lz");
-const u16 gTrainerPalette_DP_Battle_Girl[] = INCBIN_U16("graphics/trainers/front_pics/DP_Battle_Girl.gbapal");
+const u32 gTrainerFrontPic_AromaLadyDP[] = INCBIN_U32("graphics/trainers/front_pics/aroma_lady_dp.4bpp.lz");
+const u16 gTrainerPalette_AromaLadyDP[] = INCBIN_U16("graphics/trainers/front_pics/aroma_lady_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Beauty[] = INCBIN_U32("graphics/trainers/front_pics/DP_Beauty.4bpp.lz");
-const u16 gTrainerPalette_DP_Beauty[] = INCBIN_U16("graphics/trainers/front_pics/DP_Beauty.gbapal");
+const u32 gTrainerFrontPic_ArtistDP[] = INCBIN_U32("graphics/trainers/front_pics/artist_dp.4bpp.lz");
+const u16 gTrainerPalette_ArtistDP[] = INCBIN_U16("graphics/trainers/front_pics/artist_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Bertha[] = INCBIN_U32("graphics/trainers/front_pics/DP_Bertha.4bpp.lz");
-const u16 gTrainerPalette_DP_Bertha[] = INCBIN_U16("graphics/trainers/front_pics/DP_Bertha.gbapal");
+const u32 gTrainerFrontPic_BarryDP[] = INCBIN_U32("graphics/trainers/front_pics/barry_p_dp.4bpp.lz");
+const u16 gTrainerPalette_BarryDP[] = INCBIN_U16("graphics/trainers/front_pics/barry_p_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Bird_Keeper[] = INCBIN_U32("graphics/trainers/front_pics/DP_Bird_Keeper.4bpp.lz");
-const u16 gTrainerPalette_DP_Bird_Keeper[] = INCBIN_U16("graphics/trainers/front_pics/DP_Bird_Keeper.gbapal");
+const u32 gTrainerFrontPic_BattleGirlDP[] = INCBIN_U32("graphics/trainers/front_pics/battle_girl_dp.4bpp.lz");
+const u16 gTrainerPalette_BattleGirlDP[] = INCBIN_U16("graphics/trainers/front_pics/battle_girl_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Black_Belt[] = INCBIN_U32("graphics/trainers/front_pics/DP_Black_Belt.4bpp.lz");
-const u16 gTrainerPalette_DP_Black_Belt[] = INCBIN_U16("graphics/trainers/front_pics/DP_Black_Belt.gbapal");
+const u32 gTrainerFrontPic_BeautyDP[] = INCBIN_U32("graphics/trainers/front_pics/beauty_dp.4bpp.lz");
+const u16 gTrainerPalette_BeautyDP[] = INCBIN_U16("graphics/trainers/front_pics/beauty_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Breeder_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Breeder_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Breeder_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Breeder_F.gbapal");
+const u32 gTrainerFrontPic_BelleAndPaDP[] = INCBIN_U32("graphics/trainers/front_pics/belle_and_pa_dp.4bpp.lz");
+const u16 gTrainerPalette_BelleAndPaDP[] = INCBIN_U16("graphics/trainers/front_pics/belle_and_pa_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Breeder_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Breeder_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Breeder_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Breeder_M.gbapal");
+const u32 gTrainerFrontPic_BerthaDP[] = INCBIN_U32("graphics/trainers/front_pics/bertha_dp.4bpp.lz");
+const u16 gTrainerPalette_BerthaDP[] = INCBIN_U16("graphics/trainers/front_pics/bertha_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Buck[] = INCBIN_U32("graphics/trainers/front_pics/DP_Buck.4bpp.lz");
-const u16 gTrainerPalette_DP_Buck[] = INCBIN_U16("graphics/trainers/front_pics/DP_Buck.gbapal");
+const u32 gTrainerFrontPic_BirdKeeperDP[] = INCBIN_U32("graphics/trainers/front_pics/bird_keeper_dp.4bpp.lz");
+const u16 gTrainerPalette_BirdKeeperDP[] = INCBIN_U16("graphics/trainers/front_pics/bird_keeper_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Bug_Catcher[] = INCBIN_U32("graphics/trainers/front_pics/DP_Bug_Catcher.4bpp.lz");
-const u16 gTrainerPalette_DP_Bug_Catcher[] = INCBIN_U16("graphics/trainers/front_pics/DP_Bug_Catcher.gbapal");
+const u32 gTrainerFrontPic_BlackBeltDP[] = INCBIN_U32("graphics/trainers/front_pics/black_belt_dp.4bpp.lz");
+const u16 gTrainerPalette_BlackBeltDP[] = INCBIN_U16("graphics/trainers/front_pics/black_belt_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Byron[] = INCBIN_U32("graphics/trainers/front_pics/DP_Byron.4bpp.lz");
-const u16 gTrainerPalette_DP_Byron[] = INCBIN_U16("graphics/trainers/front_pics/DP_Byron.gbapal");
+const u32 gTrainerFrontPic_BreederFDP[] = INCBIN_U32("graphics/trainers/front_pics/breeder_f_dp.4bpp.lz");
+const u16 gTrainerPalette_BreederFDP[] = INCBIN_U16("graphics/trainers/front_pics/breeder_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Cameraman[] = INCBIN_U32("graphics/trainers/front_pics/DP_Cameraman.4bpp.lz");
-const u16 gTrainerPalette_DP_Cameraman[] = INCBIN_U16("graphics/trainers/front_pics/DP_Cameraman.gbapal");
+const u32 gTrainerFrontPic_BreederMDP[] = INCBIN_U32("graphics/trainers/front_pics/breeder_m_dp.4bpp.lz");
+const u16 gTrainerPalette_BreederMDP[] = INCBIN_U16("graphics/trainers/front_pics/breeder_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Camper[] = INCBIN_U32("graphics/trainers/front_pics/DP_Camper.4bpp.lz");
-const u16 gTrainerPalette_DP_Camper[] = INCBIN_U16("graphics/trainers/front_pics/DP_Camper.gbapal");
+const u32 gTrainerFrontPic_BuckDP[] = INCBIN_U32("graphics/trainers/front_pics/buck_dp.4bpp.lz");
+const u16 gTrainerPalette_BuckDP[] = INCBIN_U16("graphics/trainers/front_pics/buck_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Candice[] = INCBIN_U32("graphics/trainers/front_pics/DP_Candice.4bpp.lz");
-const u16 gTrainerPalette_DP_Candice[] = INCBIN_U16("graphics/trainers/front_pics/DP_Candice.gbapal");
+const u32 gTrainerFrontPic_BugCatcherDP[] = INCBIN_U32("graphics/trainers/front_pics/bug_catcher_dp.4bpp.lz");
+const u16 gTrainerPalette_BugCatcherDP[] = INCBIN_U16("graphics/trainers/front_pics/bug_catcher_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Cheryl[] = INCBIN_U32("graphics/trainers/front_pics/DP_Cheryl.4bpp.lz");
-const u16 gTrainerPalette_DP_Cheryl[] = INCBIN_U16("graphics/trainers/front_pics/DP_Cheryl.gbapal");
+const u32 gTrainerFrontPic_ByronDP[] = INCBIN_U32("graphics/trainers/front_pics/byron_dp.4bpp.lz");
+const u16 gTrainerPalette_ByronDP[] = INCBIN_U16("graphics/trainers/front_pics/byron_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Clown[] = INCBIN_U32("graphics/trainers/front_pics/DP_Clown.4bpp.lz");
-const u16 gTrainerPalette_DP_Clown[] = INCBIN_U16("graphics/trainers/front_pics/DP_Clown.gbapal");
+const u32 gTrainerFrontPic_CameramanDP[] = INCBIN_U32("graphics/trainers/front_pics/cameraman_dp.4bpp.lz");
+const u16 gTrainerPalette_CameramanDP[] = INCBIN_U16("graphics/trainers/front_pics/cameraman_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Collector[] = INCBIN_U32("graphics/trainers/front_pics/DP_Collector.4bpp.lz");
-const u16 gTrainerPalette_DP_Collector[] = INCBIN_U16("graphics/trainers/front_pics/DP_Collector.gbapal");
+const u32 gTrainerFrontPic_CamperDP[] = INCBIN_U32("graphics/trainers/front_pics/camper_dp.4bpp.lz");
+const u16 gTrainerPalette_CamperDP[] = INCBIN_U16("graphics/trainers/front_pics/camper_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Cowgirl[] = INCBIN_U32("graphics/trainers/front_pics/DP_Cowgirl.4bpp.lz");
-const u16 gTrainerPalette_DP_Cowgirl[] = INCBIN_U16("graphics/trainers/front_pics/DP_Cowgirl.gbapal");
+const u32 gTrainerFrontPic_CandiceDP[] = INCBIN_U32("graphics/trainers/front_pics/candice_dp.4bpp.lz");
+const u16 gTrainerPalette_CandiceDP[] = INCBIN_U16("graphics/trainers/front_pics/candice_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Crasher_Wake[] = INCBIN_U32("graphics/trainers/front_pics/DP_Crasher_Wake.4bpp.lz");
-const u16 gTrainerPalette_DP_Crasher_Wake[] = INCBIN_U16("graphics/trainers/front_pics/DP_Crasher_Wake.gbapal");
+const u32 gTrainerFrontPic_CherylDP[] = INCBIN_U32("graphics/trainers/front_pics/cheryl_dp.4bpp.lz");
+const u16 gTrainerPalette_CherylDP[] = INCBIN_U16("graphics/trainers/front_pics/cheryl_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Cyclist_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Cyclist_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Cyclist_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Cyclist_F.gbapal");
+const u32 gTrainerFrontPic_ClownDP[] = INCBIN_U32("graphics/trainers/front_pics/clown_dp.4bpp.lz");
+const u16 gTrainerPalette_ClownDP[] = INCBIN_U16("graphics/trainers/front_pics/clown_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Cyclist_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Cyclist_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Cyclist_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Cyclist_M.gbapal");
+const u32 gTrainerFrontPic_CollectorDP[] = INCBIN_U32("graphics/trainers/front_pics/collector_dp.4bpp.lz");
+const u16 gTrainerPalette_CollectorDP[] = INCBIN_U16("graphics/trainers/front_pics/collector_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Cynthia[] = INCBIN_U32("graphics/trainers/front_pics/DP_Cynthia.4bpp.lz");
-const u16 gTrainerPalette_DP_Cynthia[] = INCBIN_U16("graphics/trainers/front_pics/DP_Cynthia.gbapal");
+const u32 gTrainerFrontPic_CowgirlDP[] = INCBIN_U32("graphics/trainers/front_pics/cowgirl_dp.4bpp.lz");
+const u16 gTrainerPalette_CowgirlDP[] = INCBIN_U16("graphics/trainers/front_pics/cowgirl_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Cyrus[] = INCBIN_U32("graphics/trainers/front_pics/DP_Cyrus.4bpp.lz");
-const u16 gTrainerPalette_DP_Cyrus[] = INCBIN_U16("graphics/trainers/front_pics/DP_Cyrus.gbapal");
+const u32 gTrainerFrontPic_CrasherWakeDP[] = INCBIN_U32("graphics/trainers/front_pics/crasher_wake_dp.4bpp.lz");
+const u16 gTrainerPalette_CrasherWakeDP[] = INCBIN_U16("graphics/trainers/front_pics/crasher_wake_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Dragon_Tamer[] = INCBIN_U32("graphics/trainers/front_pics/DP_Dragon_Tamer.4bpp.lz");
-const u16 gTrainerPalette_DP_Dragon_Tamer[] = INCBIN_U16("graphics/trainers/front_pics/DP_Dragon_Tamer.gbapal");
+const u32 gTrainerFrontPic_CyclistFDP[] = INCBIN_U32("graphics/trainers/front_pics/cyclist_f_dp.4bpp.lz");
+const u16 gTrainerPalette_CyclistFDP[] = INCBIN_U16("graphics/trainers/front_pics/cyclist_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Dawn_p[] = INCBIN_U32("graphics/trainers/front_pics/DP_Dawn_p.4bpp.lz");
-const u16 gTrainerPalette_DP_Dawn_p[] = INCBIN_U16("graphics/trainers/front_pics/DP_Dawn_p.gbapal");
+const u32 gTrainerFrontPic_CyclistMDP[] = INCBIN_U32("graphics/trainers/front_pics/cyclist_m_dp.4bpp.lz");
+const u16 gTrainerPalette_CyclistMDP[] = INCBIN_U16("graphics/trainers/front_pics/cyclist_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Fantina[] = INCBIN_U32("graphics/trainers/front_pics/DP_Fantina.4bpp.lz");
-const u16 gTrainerPalette_DP_Fantina[] = INCBIN_U16("graphics/trainers/front_pics/DP_Fantina.gbapal");
+const u32 gTrainerFrontPic_CynthiaDP[] = INCBIN_U32("graphics/trainers/front_pics/cynthia_dp.4bpp.lz");
+const u16 gTrainerPalette_CynthiaDP[] = INCBIN_U16("graphics/trainers/front_pics/cynthia_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Fisherman[] = INCBIN_U32("graphics/trainers/front_pics/DP_Fisherman.4bpp.lz");
-const u16 gTrainerPalette_DP_Fisherman[] = INCBIN_U16("graphics/trainers/front_pics/DP_Fisherman.gbapal");
+const u32 gTrainerFrontPic_CyrusDP[] = INCBIN_U32("graphics/trainers/front_pics/cyrus_dp.4bpp.lz");
+const u16 gTrainerPalette_CyrusDP[] = INCBIN_U16("graphics/trainers/front_pics/cyrus_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Galactic_Grunt_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Galactic_Grunt_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Galactic_Grunt_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Galactic_Grunt_F.gbapal");
+// const u32 gTrainerFrontPic_DahliaDP[] = INCBIN_U32("graphics/trainers/front_pics/dahlia_dp.4bpp.lz");
+// const u16 gTrainerPalette_DahliaDP[] = INCBIN_U16("graphics/trainers/front_pics/dahlia_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Galactic_Grunt_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Galactic_Grunt_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Galactic_Grunt_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Galactic_Grunt_M.gbapal");
+// const u32 gTrainerFrontPic_DarachDP[] = INCBIN_U32("graphics/trainers/front_pics/darach_dp.4bpp.lz");
+// const u16 gTrainerPalette_DarachDP[] = INCBIN_U16("graphics/trainers/front_pics/darach_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Gambler[] = INCBIN_U32("graphics/trainers/front_pics/DP_Gambler.4bpp.lz");
-const u16 gTrainerPalette_DP_Gambler[] = INCBIN_U16("graphics/trainers/front_pics/DP_Gambler.gbapal");
+const u32 gTrainerFrontPic_DoubleTeamDP[] = INCBIN_U32("graphics/trainers/front_pics/double_team_dp.4bpp.lz");
+const u16 gTrainerPalette_DoubleTeamDP[] = INCBIN_U16("graphics/trainers/front_pics/double_team_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Gardenia[] = INCBIN_U32("graphics/trainers/front_pics/DP_Gardenia.4bpp.lz");
-const u16 gTrainerPalette_DP_Gardenia[] = INCBIN_U16("graphics/trainers/front_pics/DP_Gardenia.gbapal");
+const u32 gTrainerFrontPic_DragonTamerDP[] = INCBIN_U32("graphics/trainers/front_pics/dragon_tamer_dp.4bpp.lz");
+const u16 gTrainerPalette_DragonTamerDP[] = INCBIN_U16("graphics/trainers/front_pics/dragon_tamer_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Gentleman[] = INCBIN_U32("graphics/trainers/front_pics/DP_Gentleman.4bpp.lz");
-const u16 gTrainerPalette_DP_Gentleman[] = INCBIN_U16("graphics/trainers/front_pics/DP_Gentleman.gbapal");
+const u32 gTrainerFrontPic_FantinaDP[] = INCBIN_U32("graphics/trainers/front_pics/fantina_dp.4bpp.lz");
+const u16 gTrainerPalette_FantinaDP[] = INCBIN_U16("graphics/trainers/front_pics/fantina_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/DP_Hiker.4bpp.lz");
-const u16 gTrainerPalette_DP_Hiker[] = INCBIN_U16("graphics/trainers/front_pics/DP_Hiker.gbapal");
+const u32 gTrainerFrontPic_FishermanDP[] = INCBIN_U32("graphics/trainers/front_pics/fisherman_dp.4bpp.lz");
+const u16 gTrainerPalette_FishermanDP[] = INCBIN_U16("graphics/trainers/front_pics/fisherman_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Idol[] = INCBIN_U32("graphics/trainers/front_pics/DP_Idol.4bpp.lz");
-const u16 gTrainerPalette_DP_Idol[] = INCBIN_U16("graphics/trainers/front_pics/DP_Idol.gbapal");
+const u32 gTrainerFrontPic_GalacticGruntFDP[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_f_dp.4bpp.lz");
+const u16 gTrainerPalette_GalacticGruntFDP[] = INCBIN_U16("graphics/trainers/front_pics/galactic_grunt_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Interviewers[] = INCBIN_U32("graphics/trainers/front_pics/DP_Interviewers.4bpp.lz");
-const u16 gTrainerPalette_DP_Interviewers[] = INCBIN_U16("graphics/trainers/front_pics/DP_Interviewers.gbapal");
+const u32 gTrainerFrontPic_GalacticGruntMDP[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_m_dp.4bpp.lz");
+const u16 gTrainerPalette_GalacticGruntMDP[] = INCBIN_U16("graphics/trainers/front_pics/galactic_grunt_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Jogger[] = INCBIN_U32("graphics/trainers/front_pics/DP_Jogger.4bpp.lz");
-const u16 gTrainerPalette_DP_Jogger[] = INCBIN_U16("graphics/trainers/front_pics/DP_Jogger.gbapal");
+const u32 gTrainerFrontPic_GamblerDP[] = INCBIN_U32("graphics/trainers/front_pics/gambler_dp.4bpp.lz");
+const u16 gTrainerPalette_GamblerDP[] = INCBIN_U16("graphics/trainers/front_pics/gambler_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Jupiter[] = INCBIN_U32("graphics/trainers/front_pics/DP_Jupiter.4bpp.lz");
-const u16 gTrainerPalette_DP_Jupiter[] = INCBIN_U16("graphics/trainers/front_pics/DP_Jupiter.gbapal");
+const u32 gTrainerFrontPic_GardeniaDP[] = INCBIN_U32("graphics/trainers/front_pics/gardenia_dp.4bpp.lz");
+const u16 gTrainerPalette_GardeniaDP[] = INCBIN_U16("graphics/trainers/front_pics/gardenia_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Lady[] = INCBIN_U32("graphics/trainers/front_pics/DP_Lady.4bpp.lz");
-const u16 gTrainerPalette_DP_Lady[] = INCBIN_U16("graphics/trainers/front_pics/DP_Lady.gbapal");
+const u32 gTrainerFrontPic_GentlemanDP[] = INCBIN_U32("graphics/trainers/front_pics/gentleman_dp.4bpp.lz");
+const u16 gTrainerPalette_GentlemanDP[] = INCBIN_U16("graphics/trainers/front_pics/gentleman_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Lass[] = INCBIN_U32("graphics/trainers/front_pics/DP_Lass.4bpp.lz");
-const u16 gTrainerPalette_DP_Lass[] = INCBIN_U16("graphics/trainers/front_pics/DP_Lass.gbapal");
+const u32 gTrainerFrontPic_GuitaristDP[] = INCBIN_U32("graphics/trainers/front_pics/guitarist_dp.4bpp.lz");
+const u16 gTrainerPalette_GuitaristDP[] = INCBIN_U16("graphics/trainers/front_pics/guitarist_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Lucas_p[] = INCBIN_U32("graphics/trainers/front_pics/DP_Lucas_p.4bpp.lz");
-const u16 gTrainerPalette_DP_Lucas_p[] = INCBIN_U16("graphics/trainers/front_pics/DP_Lucas_p.gbapal");
+const u32 gTrainerFrontPic_HikerDP[] = INCBIN_U32("graphics/trainers/front_pics/hiker_dp.4bpp.lz");
+const u16 gTrainerPalette_HikerDP[] = INCBIN_U16("graphics/trainers/front_pics/hiker_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Lucian[] = INCBIN_U32("graphics/trainers/front_pics/DP_Lucian.4bpp.lz");
-const u16 gTrainerPalette_DP_Lucian[] = INCBIN_U16("graphics/trainers/front_pics/DP_Lucian.gbapal");
+const u32 gTrainerFrontPic_IdolDP[] = INCBIN_U32("graphics/trainers/front_pics/idol_dp.4bpp.lz");
+const u16 gTrainerPalette_IdolDP[] = INCBIN_U16("graphics/trainers/front_pics/idol_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Marley[] = INCBIN_U32("graphics/trainers/front_pics/DP_Marley.4bpp.lz");
-const u16 gTrainerPalette_DP_Marley[] = INCBIN_U16("graphics/trainers/front_pics/DP_Marley.gbapal");
+const u32 gTrainerFrontPic_InterviewersDP[] = INCBIN_U32("graphics/trainers/front_pics/interviewers_dp.4bpp.lz");
+const u16 gTrainerPalette_InterviewersDP[] = INCBIN_U16("graphics/trainers/front_pics/interviewers_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Mars[] = INCBIN_U32("graphics/trainers/front_pics/DP_Mars.4bpp.lz");
-const u16 gTrainerPalette_DP_Mars[] = INCBIN_U16("graphics/trainers/front_pics/DP_Mars.gbapal");
+const u32 gTrainerFrontPic_JoggerDP[] = INCBIN_U32("graphics/trainers/front_pics/jogger_dp.4bpp.lz");
+const u16 gTrainerPalette_JoggerDP[] = INCBIN_U16("graphics/trainers/front_pics/jogger_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Maylene[] = INCBIN_U32("graphics/trainers/front_pics/DP_Maylene.4bpp.lz");
-const u16 gTrainerPalette_DP_Maylene[] = INCBIN_U16("graphics/trainers/front_pics/DP_Maylene.gbapal");
+const u32 gTrainerFrontPic_JupiterDP[] = INCBIN_U32("graphics/trainers/front_pics/jupiter_dp.4bpp.lz");
+const u16 gTrainerPalette_JupiterDP[] = INCBIN_U16("graphics/trainers/front_pics/jupiter_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Mira[] = INCBIN_U32("graphics/trainers/front_pics/DP_Mira.4bpp.lz");
-const u16 gTrainerPalette_DP_Mira[] = INCBIN_U16("graphics/trainers/front_pics/DP_Mira.gbapal");
+const u32 gTrainerFrontPic_LadyDP[] = INCBIN_U32("graphics/trainers/front_pics/lady_dp.4bpp.lz");
+const u16 gTrainerPalette_LadyDP[] = INCBIN_U16("graphics/trainers/front_pics/lady_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Ninja_Boy[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ninja_Boy.4bpp.lz");
-const u16 gTrainerPalette_DP_Ninja_Boy[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ninja_Boy.gbapal");
+const u32 gTrainerFrontPic_LassDP[] = INCBIN_U32("graphics/trainers/front_pics/lass_dp.4bpp.lz");
+const u16 gTrainerPalette_LassDP[] = INCBIN_U16("graphics/trainers/front_pics/lass_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Officer[] = INCBIN_U32("graphics/trainers/front_pics/DP_Officer.4bpp.lz");
-const u16 gTrainerPalette_DP_Officer[] = INCBIN_U16("graphics/trainers/front_pics/DP_Officer.gbapal");
+const u32 gTrainerFrontPic_LucianDP[] = INCBIN_U32("graphics/trainers/front_pics/lucian_dp.4bpp.lz");
+const u16 gTrainerPalette_LucianDP[] = INCBIN_U16("graphics/trainers/front_pics/lucian_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Painter_Artist[] = INCBIN_U32("graphics/trainers/front_pics/DP_Painter_Artist.4bpp.lz");
-const u16 gTrainerPalette_DP_Painter_Artist[] = INCBIN_U16("graphics/trainers/front_pics/DP_Painter_Artist.gbapal");
+const u32 gTrainerFrontPic_MarleyDP[] = INCBIN_U32("graphics/trainers/front_pics/marley_dp.4bpp.lz");
+const u16 gTrainerPalette_MarleyDP[] = INCBIN_U16("graphics/trainers/front_pics/marley_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Palmer[] = INCBIN_U32("graphics/trainers/front_pics/DP_Palmer.4bpp.lz");
-const u16 gTrainerPalette_DP_Palmer[] = INCBIN_U16("graphics/trainers/front_pics/DP_Palmer.gbapal");
+const u32 gTrainerFrontPic_MarsDP[] = INCBIN_U32("graphics/trainers/front_pics/mars_dp.4bpp.lz");
+const u16 gTrainerPalette_MarsDP[] = INCBIN_U16("graphics/trainers/front_pics/mars_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Parasol_Lady[] = INCBIN_U32("graphics/trainers/front_pics/DP_Parasol_Lady.4bpp.lz");
-const u16 gTrainerPalette_DP_Parasol_Lady[] = INCBIN_U16("graphics/trainers/front_pics/DP_Parasol_Lady.gbapal");
+const u32 gTrainerFrontPic_MayleneDP[] = INCBIN_U32("graphics/trainers/front_pics/maylene_dp.4bpp.lz");
+const u16 gTrainerPalette_MayleneDP[] = INCBIN_U16("graphics/trainers/front_pics/maylene_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Picnicker[] = INCBIN_U32("graphics/trainers/front_pics/DP_Picnicker.4bpp.lz");
-const u16 gTrainerPalette_DP_Picnicker[] = INCBIN_U16("graphics/trainers/front_pics/DP_Picnicker.gbapal");
+const u32 gTrainerFrontPic_MiraDP[] = INCBIN_U32("graphics/trainers/front_pics/mira_dp.4bpp.lz");
+const u16 gTrainerPalette_MiraDP[] = INCBIN_U16("graphics/trainers/front_pics/mira_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Poke_Kid[] = INCBIN_U32("graphics/trainers/front_pics/DP_Poke_Kid.4bpp.lz");
-const u16 gTrainerPalette_DP_Poke_Kid[] = INCBIN_U16("graphics/trainers/front_pics/DP_Poke_Kid.gbapal");
+const u32 gTrainerFrontPic_NinjaBoyDP[] = INCBIN_U32("graphics/trainers/front_pics/ninja_boy_dp.4bpp.lz");
+const u16 gTrainerPalette_NinjaBoyDP[] = INCBIN_U16("graphics/trainers/front_pics/ninja_boy_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Pokefan_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Pokefan_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Pokefan_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Pokefan_F.gbapal");
+const u32 gTrainerFrontPic_OfficerDP[] = INCBIN_U32("graphics/trainers/front_pics/officer_dp.4bpp.lz");
+const u16 gTrainerPalette_OfficerDP[] = INCBIN_U16("graphics/trainers/front_pics/officer_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Pokefan_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Pokefan_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Pokefan_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Pokefan_M.gbapal");
+const u32 gTrainerFrontPic_PalmerDP[] = INCBIN_U32("graphics/trainers/front_pics/palmer_dp.4bpp.lz");
+const u16 gTrainerPalette_PalmerDP[] = INCBIN_U16("graphics/trainers/front_pics/palmer_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Pokemon_Ranger_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Pokemon_Ranger_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Pokemon_Ranger_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Pokemon_Ranger_F.gbapal");
+const u32 gTrainerFrontPic_ParasolLadyDP[] = INCBIN_U32("graphics/trainers/front_pics/parasol_lady_dp.4bpp.lz");
+const u16 gTrainerPalette_ParasolLadyDP[] = INCBIN_U16("graphics/trainers/front_pics/parasol_lady_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Pokemon_Ranger_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Pokemon_Ranger_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Pokemon_Ranger_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Pokemon_Ranger_M.gbapal");
+const u32 gTrainerFrontPic_PicnickerDP[] = INCBIN_U32("graphics/trainers/front_pics/picnicker_dp.4bpp.lz");
+const u16 gTrainerPalette_PicnickerDP[] = INCBIN_U16("graphics/trainers/front_pics/picnicker_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Psychic_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Psychic_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Psychic_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Psychic_F.gbapal");
+const u32 gTrainerFrontPic_PokeKidDP[] = INCBIN_U32("graphics/trainers/front_pics/poke_kid_dp.4bpp.lz");
+const u16 gTrainerPalette_PokeKidDP[] = INCBIN_U16("graphics/trainers/front_pics/poke_kid_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Psychic_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Psychic_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Psychic_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Psychic_M.gbapal");
+const u32 gTrainerFrontPic_PokefanFDP[] = INCBIN_U32("graphics/trainers/front_pics/pokefan_f_dp.4bpp.lz");
+const u16 gTrainerPalette_PokefanFDP[] = INCBIN_U16("graphics/trainers/front_pics/pokefan_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Rancher[] = INCBIN_U32("graphics/trainers/front_pics/DP_Rancher.4bpp.lz");
-const u16 gTrainerPalette_DP_Rancher[] = INCBIN_U16("graphics/trainers/front_pics/DP_Rancher.gbapal");
+const u32 gTrainerFrontPic_PokefanMDP[] = INCBIN_U32("graphics/trainers/front_pics/pokefan_m_dp.4bpp.lz");
+const u16 gTrainerPalette_PokefanMDP[] = INCBIN_U16("graphics/trainers/front_pics/pokefan_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Rancher_Duo_Belle_and_Pa[] = INCBIN_U32("graphics/trainers/front_pics/DP_Rancher_Duo_Belle_and_Pa.4bpp.lz");
-const u16 gTrainerPalette_DP_Rancher_Duo_Belle_and_Pa[] = INCBIN_U16("graphics/trainers/front_pics/DP_Rancher_Duo_Belle_and_Pa.gbapal");
+const u32 gTrainerFrontPic_PokemonRangerFDP[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_ranger_f_dp.4bpp.lz");
+const u16 gTrainerPalette_PokemonRangerFDP[] = INCBIN_U16("graphics/trainers/front_pics/pokemon_ranger_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Reporter[] = INCBIN_U32("graphics/trainers/front_pics/DP_Reporter.4bpp.lz");
-const u16 gTrainerPalette_DP_Reporter[] = INCBIN_U16("graphics/trainers/front_pics/DP_Reporter.gbapal");
+const u32 gTrainerFrontPic_PokemonRangerMDP[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_ranger_m_dp.4bpp.lz");
+const u16 gTrainerPalette_PokemonRangerMDP[] = INCBIN_U16("graphics/trainers/front_pics/pokemon_ranger_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Rich_Boy[] = INCBIN_U32("graphics/trainers/front_pics/DP_Rich_Boy.4bpp.lz");
-const u16 gTrainerPalette_DP_Rich_Boy[] = INCBIN_U16("graphics/trainers/front_pics/DP_Rich_Boy.gbapal");
+const u32 gTrainerFrontPic_PsychicFDP[] = INCBIN_U32("graphics/trainers/front_pics/psychic_f_dp.4bpp.lz");
+const u16 gTrainerPalette_PsychicFDP[] = INCBIN_U16("graphics/trainers/front_pics/psychic_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Riley[] = INCBIN_U32("graphics/trainers/front_pics/DP_Riley.4bpp.lz");
-const u16 gTrainerPalette_DP_Riley[] = INCBIN_U16("graphics/trainers/front_pics/DP_Riley.gbapal");
+const u32 gTrainerFrontPic_PsychicMDP[] = INCBIN_U32("graphics/trainers/front_pics/psychic_m_dp.4bpp.lz");
+const u16 gTrainerPalette_PsychicMDP[] = INCBIN_U16("graphics/trainers/front_pics/psychic_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Roark[] = INCBIN_U32("graphics/trainers/front_pics/DP_Roark.4bpp.lz");
-const u16 gTrainerPalette_DP_Roark[] = INCBIN_U16("graphics/trainers/front_pics/DP_Roark.gbapal");
+const u32 gTrainerFrontPic_RancherDP[] = INCBIN_U32("graphics/trainers/front_pics/rancher_dp.4bpp.lz");
+const u16 gTrainerPalette_RancherDP[] = INCBIN_U16("graphics/trainers/front_pics/rancher_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Rocker_Guitarist[] = INCBIN_U32("graphics/trainers/front_pics/DP_Rocker_Guitarist.4bpp.lz");
-const u16 gTrainerPalette_DP_Rocker_Guitarist[] = INCBIN_U16("graphics/trainers/front_pics/DP_Rocker_Guitarist.gbapal");
+const u32 gTrainerFrontPic_ReporterDP[] = INCBIN_U32("graphics/trainers/front_pics/reporter_dp.4bpp.lz");
+const u16 gTrainerPalette_ReporterDP[] = INCBIN_U16("graphics/trainers/front_pics/reporter_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Roughneck[] = INCBIN_U32("graphics/trainers/front_pics/DP_Roughneck.4bpp.lz");
-const u16 gTrainerPalette_DP_Roughneck[] = INCBIN_U16("graphics/trainers/front_pics/DP_Roughneck.gbapal");
+const u32 gTrainerFrontPic_RichBoyDP[] = INCBIN_U32("graphics/trainers/front_pics/rich_boy_dp.4bpp.lz");
+const u16 gTrainerPalette_RichBoyDP[] = INCBIN_U16("graphics/trainers/front_pics/rich_boy_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Ruin_Maniac[] = INCBIN_U32("graphics/trainers/front_pics/DP_Ruin_Maniac.4bpp.lz");
-const u16 gTrainerPalette_DP_Ruin_Maniac[] = INCBIN_U16("graphics/trainers/front_pics/DP_Ruin_Maniac.gbapal");
+const u32 gTrainerFrontPic_RileyDP[] = INCBIN_U32("graphics/trainers/front_pics/riley_dp.4bpp.lz");
+const u16 gTrainerPalette_RileyDP[] = INCBIN_U16("graphics/trainers/front_pics/riley_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Sailor[] = INCBIN_U32("graphics/trainers/front_pics/DP_Sailor.4bpp.lz");
-const u16 gTrainerPalette_DP_Sailor[] = INCBIN_U16("graphics/trainers/front_pics/DP_Sailor.gbapal");
+const u32 gTrainerFrontPic_RoarkDP[] = INCBIN_U32("graphics/trainers/front_pics/roark_dp.4bpp.lz");
+const u16 gTrainerPalette_RoarkDP[] = INCBIN_U16("graphics/trainers/front_pics/roark_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Saturn[] = INCBIN_U32("graphics/trainers/front_pics/DP_Saturn.4bpp.lz");
-const u16 gTrainerPalette_DP_Saturn[] = INCBIN_U16("graphics/trainers/front_pics/DP_Saturn.gbapal");
+const u32 gTrainerFrontPic_RoughneckDP[] = INCBIN_U32("graphics/trainers/front_pics/roughneck_dp.4bpp.lz");
+const u16 gTrainerPalette_RoughneckDP[] = INCBIN_U16("graphics/trainers/front_pics/roughneck_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_School_Kid_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_School_Kid_F.4bpp.lz");
-const u16 gTrainerPalette_DP_School_Kid_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_School_Kid_F.gbapal");
+const u32 gTrainerFrontPic_RuinManiacDP[] = INCBIN_U32("graphics/trainers/front_pics/ruin_maniac_dp.4bpp.lz");
+const u16 gTrainerPalette_RuinManiacDP[] = INCBIN_U16("graphics/trainers/front_pics/ruin_maniac_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_School_Kid_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_School_Kid_M.4bpp.lz");
-const u16 gTrainerPalette_DP_School_Kid_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_School_Kid_M.gbapal");
+const u32 gTrainerFrontPic_SailorDP[] = INCBIN_U32("graphics/trainers/front_pics/sailor_dp.4bpp.lz");
+const u16 gTrainerPalette_SailorDP[] = INCBIN_U16("graphics/trainers/front_pics/sailor_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Scientist[] = INCBIN_U32("graphics/trainers/front_pics/DP_Scientist.4bpp.lz");
-const u16 gTrainerPalette_DP_Scientist[] = INCBIN_U16("graphics/trainers/front_pics/DP_Scientist.gbapal");
+const u32 gTrainerFrontPic_SaturnDP[] = INCBIN_U32("graphics/trainers/front_pics/saturn_dp.4bpp.lz");
+const u16 gTrainerPalette_SaturnDP[] = INCBIN_U16("graphics/trainers/front_pics/saturn_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Skier_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Skier_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Skier_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Skier_F.gbapal");
+const u32 gTrainerFrontPic_SchoolKidFDP[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_f_dp.4bpp.lz");
+const u16 gTrainerPalette_SchoolKidFDP[] = INCBIN_U16("graphics/trainers/front_pics/school_kid_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Skier_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Skier_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Skier_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Skier_M.gbapal");
+const u32 gTrainerFrontPic_SchoolKidMDP[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_m_dp.4bpp.lz");
+const u16 gTrainerPalette_SchoolKidMDP[] = INCBIN_U16("graphics/trainers/front_pics/school_kid_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Socialite[] = INCBIN_U32("graphics/trainers/front_pics/DP_Socialite.4bpp.lz");
-const u16 gTrainerPalette_DP_Socialite[] = INCBIN_U16("graphics/trainers/front_pics/DP_Socialite.gbapal");
+const u32 gTrainerFrontPic_ScientistDP[] = INCBIN_U32("graphics/trainers/front_pics/scientist_dp.4bpp.lz");
+const u16 gTrainerPalette_ScientistDP[] = INCBIN_U16("graphics/trainers/front_pics/scientist_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Swimmer_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Swimmer_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Swimmer_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Swimmer_F.gbapal");
+const u32 gTrainerFrontPic_SkierFDP[] = INCBIN_U32("graphics/trainers/front_pics/skier_f_dp.4bpp.lz");
+const u16 gTrainerPalette_SkierFDP[] = INCBIN_U16("graphics/trainers/front_pics/skier_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Swimmer_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Swimmer_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Swimmer_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Swimmer_M.gbapal");
+const u32 gTrainerFrontPic_SkierMDP[] = INCBIN_U32("graphics/trainers/front_pics/skier_m_dp.4bpp.lz");
+const u16 gTrainerPalette_SkierMDP[] = INCBIN_U16("graphics/trainers/front_pics/skier_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Tuber_F[] = INCBIN_U32("graphics/trainers/front_pics/DP_Tuber_F.4bpp.lz");
-const u16 gTrainerPalette_DP_Tuber_F[] = INCBIN_U16("graphics/trainers/front_pics/DP_Tuber_F.gbapal");
+const u32 gTrainerFrontPic_SocialiteDP[] = INCBIN_U32("graphics/trainers/front_pics/socialite_dp.4bpp.lz");
+const u16 gTrainerPalette_SocialiteDP[] = INCBIN_U16("graphics/trainers/front_pics/socialite_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Tuber_M[] = INCBIN_U32("graphics/trainers/front_pics/DP_Tuber_M.4bpp.lz");
-const u16 gTrainerPalette_DP_Tuber_M[] = INCBIN_U16("graphics/trainers/front_pics/DP_Tuber_M.gbapal");
+const u32 gTrainerFrontPic_SwimmerFDP[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_f_dp.4bpp.lz");
+const u16 gTrainerPalette_SwimmerFDP[] = INCBIN_U16("graphics/trainers/front_pics/swimmer_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Twins[] = INCBIN_U32("graphics/trainers/front_pics/DP_Twins.4bpp.lz");
-const u16 gTrainerPalette_DP_Twins[] = INCBIN_U16("graphics/trainers/front_pics/DP_Twins.gbapal");
+const u32 gTrainerFrontPic_SwimmerMDP[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_m_dp.4bpp.lz");
+const u16 gTrainerPalette_SwimmerMDP[] = INCBIN_U16("graphics/trainers/front_pics/swimmer_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Veteran[] = INCBIN_U32("graphics/trainers/front_pics/DP_Veteran.4bpp.lz");
-const u16 gTrainerPalette_DP_Veteran[] = INCBIN_U16("graphics/trainers/front_pics/DP_Veteran.gbapal");
+// const u32 gTrainerFrontPic_ThorntonDP[] = INCBIN_U32("graphics/trainers/front_pics/thornton_dp.4bpp.lz");
+// const u16 gTrainerPalette_ThorntonDP[] = INCBIN_U16("graphics/trainers/front_pics/thornton_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Volkner[] = INCBIN_U32("graphics/trainers/front_pics/DP_Volkner.4bpp.lz");
-const u16 gTrainerPalette_DP_Volkner[] = INCBIN_U16("graphics/trainers/front_pics/DP_Volkner.gbapal");
+const u32 gTrainerFrontPic_TuberFDP[] = INCBIN_U32("graphics/trainers/front_pics/tuber_f_dp.4bpp.lz");
+const u16 gTrainerPalette_TuberFDP[] = INCBIN_U16("graphics/trainers/front_pics/tuber_f_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Waiter[] = INCBIN_U32("graphics/trainers/front_pics/DP_Waiter.4bpp.lz");
-const u16 gTrainerPalette_DP_Waiter[] = INCBIN_U16("graphics/trainers/front_pics/DP_Waiter.gbapal");
+const u32 gTrainerFrontPic_TuberMDP[] = INCBIN_U32("graphics/trainers/front_pics/tuber_m_dp.4bpp.lz");
+const u16 gTrainerPalette_TuberMDP[] = INCBIN_U16("graphics/trainers/front_pics/tuber_m_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Waitress[] = INCBIN_U32("graphics/trainers/front_pics/DP_Waitress.4bpp.lz");
-const u16 gTrainerPalette_DP_Waitress[] = INCBIN_U16("graphics/trainers/front_pics/DP_Waitress.gbapal");
+const u32 gTrainerFrontPic_TwinsDP[] = INCBIN_U32("graphics/trainers/front_pics/twins_dp.4bpp.lz");
+const u16 gTrainerPalette_TwinsDP[] = INCBIN_U16("graphics/trainers/front_pics/twins_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Worker[] = INCBIN_U32("graphics/trainers/front_pics/DP_Worker.4bpp.lz");
-const u16 gTrainerPalette_DP_Worker[] = INCBIN_U16("graphics/trainers/front_pics/DP_Worker.gbapal");
+const u32 gTrainerFrontPic_VeteranDP[] = INCBIN_U32("graphics/trainers/front_pics/veteran_dp.4bpp.lz");
+const u16 gTrainerPalette_VeteranDP[] = INCBIN_U16("graphics/trainers/front_pics/veteran_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Young_Couple[] = INCBIN_U32("graphics/trainers/front_pics/DP_Young_Couple.4bpp.lz");
-const u16 gTrainerPalette_DP_Young_Couple[] = INCBIN_U16("graphics/trainers/front_pics/DP_Young_Couple.gbapal");
+const u32 gTrainerFrontPic_VolknerDP[] = INCBIN_U32("graphics/trainers/front_pics/volkner_dp.4bpp.lz");
+const u16 gTrainerPalette_VolknerDP[] = INCBIN_U16("graphics/trainers/front_pics/volkner_dp.gbapal");
 
-const u32 gTrainerFrontPic_DP_Youngster[] = INCBIN_U32("graphics/trainers/front_pics/DP_Youngster.4bpp.lz");
-const u16 gTrainerPalette_DP_Youngster[] = INCBIN_U16("graphics/trainers/front_pics/DP_Youngster.gbapal");
+const u32 gTrainerFrontPic_WaiterDP[] = INCBIN_U32("graphics/trainers/front_pics/waiter_dp.4bpp.lz");
+const u16 gTrainerPalette_WaiterDP[] = INCBIN_U16("graphics/trainers/front_pics/waiter_dp.gbapal");
+
+const u32 gTrainerFrontPic_WaitressDP[] = INCBIN_U32("graphics/trainers/front_pics/waitress_dp.4bpp.lz");
+const u16 gTrainerPalette_WaitressDP[] = INCBIN_U16("graphics/trainers/front_pics/waitress_dp.gbapal");
+
+const u32 gTrainerFrontPic_WorkerDP[] = INCBIN_U32("graphics/trainers/front_pics/worker_dp.4bpp.lz");
+const u16 gTrainerPalette_WorkerDP[] = INCBIN_U16("graphics/trainers/front_pics/worker_dp.gbapal");
+
+const u32 gTrainerFrontPic_YoungCoupleDP[] = INCBIN_U32("graphics/trainers/front_pics/young_couple_dp.4bpp.lz");
+const u16 gTrainerPalette_YoungCoupleDP[] = INCBIN_U16("graphics/trainers/front_pics/young_couple_dp.gbapal");
+
+const u32 gTrainerFrontPic_YoungsterDP[] = INCBIN_U32("graphics/trainers/front_pics/youngster_dp.4bpp.lz");
+const u16 gTrainerPalette_YoungsterDP[] = INCBIN_U16("graphics/trainers/front_pics/youngster_dp.gbapal");
 
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
@@ -689,98 +697,101 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEAF, gTrainerFrontPic_Leaf, gTrainerPalette_Leaf),
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
-    //Poke Platinum Trainers
-    TRAINER_SPRITE(TRAINER_PIC_LUCAS, gTrainerFrontPic_DP_Lucas_p, gTrainerPalette_DP_Lucas_p),
-    TRAINER_SPRITE(TRAINER_PIC_DAWN, gTrainerFrontPic_DP_Dawn_p, gTrainerPalette_DP_Dawn_p),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ACE_TRAINER_DT, gTrainerFrontPic_DP_Ace_Trainer_DoubleTeam, gTrainerPalette_DP_Ace_Trainer_DoubleTeam),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ACE_TRAINER_F, gTrainerFrontPic_DP_Ace_Trainer_F, gTrainerPalette_DP_Ace_Trainer_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ACE_TRAINER_M, gTrainerFrontPic_DP_Ace_Trainer_M, gTrainerPalette_DP_Ace_Trainer_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ACE_TRAINER_SNOW_F, gTrainerFrontPic_DP_Ace_Trainer_Snow_F, gTrainerPalette_DP_Ace_Trainer_Snow_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ACE_TRAINER_SNOW_M, gTrainerFrontPic_DP_Ace_Trainer_Snow_M, gTrainerPalette_DP_Ace_Trainer_Snow_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_AROMA_LADY, gTrainerFrontPic_DP_Aroma_Lady, gTrainerPalette_DP_Aroma_Lady),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BARRY, gTrainerFrontPic_DP_Barry, gTrainerPalette_DP_Barry),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BATTLE_GIRL, gTrainerFrontPic_DP_Battle_Girl, gTrainerPalette_DP_Battle_Girl),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BEAUTY, gTrainerFrontPic_DP_Beauty, gTrainerPalette_DP_Beauty),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BERTHA, gTrainerFrontPic_DP_Bertha, gTrainerPalette_DP_Bertha),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BIRD_KEEPER, gTrainerFrontPic_DP_Bird_Keeper, gTrainerPalette_DP_Bird_Keeper),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BLACK_BELT, gTrainerFrontPic_DP_Black_Belt, gTrainerPalette_DP_Black_Belt),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BREEDER_F, gTrainerFrontPic_DP_Breeder_F, gTrainerPalette_DP_Breeder_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BREEDER_M, gTrainerFrontPic_DP_Breeder_M, gTrainerPalette_DP_Breeder_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BUCK, gTrainerFrontPic_DP_Buck, gTrainerPalette_DP_Buck),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BUG_CATCHER, gTrainerFrontPic_DP_Bug_Catcher, gTrainerPalette_DP_Bug_Catcher),
-    TRAINER_SPRITE(TRAINER_PIC_DP_BYRON, gTrainerFrontPic_DP_Byron, gTrainerPalette_DP_Byron),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CAMERAMAN, gTrainerFrontPic_DP_Cameraman, gTrainerPalette_DP_Cameraman),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CANDICE, gTrainerFrontPic_DP_Candice, gTrainerPalette_DP_Candice),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CHERYL, gTrainerFrontPic_DP_Cheryl, gTrainerPalette_DP_Cheryl),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CLOWN, gTrainerFrontPic_DP_Clown, gTrainerPalette_DP_Clown),
-    TRAINER_SPRITE(TRAINER_PIC_DP_COLLECTOR, gTrainerFrontPic_DP_Collector, gTrainerPalette_DP_Collector),
-    TRAINER_SPRITE(TRAINER_PIC_DP_COWGIRL, gTrainerFrontPic_DP_Cowgirl, gTrainerPalette_DP_Cowgirl),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CRASHER_WAKE, gTrainerFrontPic_DP_Crasher_Wake, gTrainerPalette_DP_Crasher_Wake),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CYCLIST_F, gTrainerFrontPic_DP_Cyclist_F, gTrainerPalette_DP_Cyclist_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CYCLIST_M, gTrainerFrontPic_DP_Cyclist_M, gTrainerPalette_DP_Cyclist_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CYNTHIA, gTrainerFrontPic_DP_Cynthia, gTrainerPalette_DP_Cynthia),
-    TRAINER_SPRITE(TRAINER_PIC_DP_CYRUS, gTrainerFrontPic_DP_Cyrus, gTrainerPalette_DP_Cyrus),
-    TRAINER_SPRITE(TRAINER_PIC_DP_DRAGON_TAMER, gTrainerFrontPic_DP_Dragon_Tamer, gTrainerPalette_DP_Dragon_Tamer),
-    TRAINER_SPRITE(TRAINER_PIC_DP_FANTINA, gTrainerFrontPic_DP_Fantina, gTrainerPalette_DP_Fantina),
-    TRAINER_SPRITE(TRAINER_PIC_DP_FISHERMAN, gTrainerFrontPic_DP_Fisherman, gTrainerPalette_DP_Fisherman),
-    TRAINER_SPRITE(TRAINER_PIC_DP_GALACTIC_GRUNT_F, gTrainerFrontPic_DP_Galactic_Grunt_F, gTrainerPalette_DP_Galactic_Grunt_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_GALACTIC_GRUNT_M, gTrainerFrontPic_DP_Galactic_Grunt_M, gTrainerPalette_DP_Galactic_Grunt_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_GAMBLER, gTrainerFrontPic_DP_Gambler, gTrainerPalette_DP_Gambler),
-    TRAINER_SPRITE(TRAINER_PIC_DP_GARDENIA, gTrainerFrontPic_DP_Gardenia, gTrainerPalette_DP_Gardenia),
-    TRAINER_SPRITE(TRAINER_PIC_DP_GENTLEMAN, gTrainerFrontPic_DP_Gentleman, gTrainerPalette_DP_Gentleman),
-    TRAINER_SPRITE(TRAINER_PIC_DP_HIKER, gTrainerFrontPic_DP_Hiker, gTrainerPalette_DP_Hiker),
-    TRAINER_SPRITE(TRAINER_PIC_DP_IDOL, gTrainerFrontPic_DP_Idol, gTrainerPalette_DP_Idol),
-    TRAINER_SPRITE(TRAINER_PIC_DP_INTERVIEWERS, gTrainerFrontPic_DP_Interviewers, gTrainerPalette_DP_Interviewers),
-    TRAINER_SPRITE(TRAINER_PIC_DP_JOGGER, gTrainerFrontPic_DP_Jogger, gTrainerPalette_DP_Jogger),
-    TRAINER_SPRITE(TRAINER_PIC_DP_JUPITER, gTrainerFrontPic_DP_Jupiter, gTrainerPalette_DP_Jupiter),
-    TRAINER_SPRITE(TRAINER_PIC_DP_LADY, gTrainerFrontPic_DP_Lady, gTrainerPalette_DP_Lady),
-    TRAINER_SPRITE(TRAINER_PIC_DP_LASS, gTrainerFrontPic_DP_Lass, gTrainerPalette_DP_Lass),
-    TRAINER_SPRITE(TRAINER_PIC_DP_LUCIAN, gTrainerFrontPic_DP_Lucian, gTrainerPalette_DP_Lucian),
-    TRAINER_SPRITE(TRAINER_PIC_DP_MARLEY, gTrainerFrontPic_DP_Marley, gTrainerPalette_DP_Marley),
-    TRAINER_SPRITE(TRAINER_PIC_DP_MARS, gTrainerFrontPic_DP_Mars, gTrainerPalette_DP_Mars),
-    TRAINER_SPRITE(TRAINER_PIC_DP_MAYLENE, gTrainerFrontPic_DP_Maylene, gTrainerPalette_DP_Maylene),
-    TRAINER_SPRITE(TRAINER_PIC_DP_MIRA, gTrainerFrontPic_DP_Mira, gTrainerPalette_DP_Mira),
-    TRAINER_SPRITE(TRAINER_PIC_DP_NINJA_BOY, gTrainerFrontPic_DP_Ninja_Boy, gTrainerPalette_DP_Ninja_Boy),
-    TRAINER_SPRITE(TRAINER_PIC_DP_OFFICER, gTrainerFrontPic_DP_Officer, gTrainerPalette_DP_Officer),
-    TRAINER_SPRITE(TRAINER_PIC_DP_PAINTER_ARTIST, gTrainerFrontPic_DP_Painter_Artist, gTrainerPalette_DP_Painter_Artist),
-    TRAINER_SPRITE(TRAINER_PIC_DP_PALMER, gTrainerFrontPic_DP_Palmer, gTrainerPalette_DP_Palmer),
-    TRAINER_SPRITE(TRAINER_PIC_DP_PARASOL_LADY, gTrainerFrontPic_DP_Parasol_Lady, gTrainerPalette_DP_Parasol_Lady),
-    TRAINER_SPRITE(TRAINER_PIC_DP_POKE_KID, gTrainerFrontPic_DP_Poke_Kid, gTrainerPalette_DP_Poke_Kid),
-    TRAINER_SPRITE(TRAINER_PIC_DP_POKEFAN_F, gTrainerFrontPic_DP_Pokefan_F, gTrainerPalette_DP_Pokefan_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_POKEFAN_M, gTrainerFrontPic_DP_Pokefan_M, gTrainerPalette_DP_Pokefan_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_POKEMON_RANGER_F, gTrainerFrontPic_DP_Pokemon_Ranger_F, gTrainerPalette_DP_Pokemon_Ranger_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_POKEMON_RANGER_M, gTrainerFrontPic_DP_Pokemon_Ranger_M, gTrainerPalette_DP_Pokemon_Ranger_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_PSYCHIC_F, gTrainerFrontPic_DP_Psychic_F, gTrainerPalette_DP_Psychic_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_PSYCHIC_M, gTrainerFrontPic_DP_Psychic_M, gTrainerPalette_DP_Psychic_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_RANCHER, gTrainerFrontPic_DP_Rancher, gTrainerPalette_DP_Rancher),
-    TRAINER_SPRITE(TRAINER_PIC_DP_RANCHER_DUO_BELLE_AND_PA, gTrainerFrontPic_DP_Rancher_Duo_Belle_and_Pa, gTrainerPalette_DP_Rancher_Duo_Belle_and_Pa),
-    TRAINER_SPRITE(TRAINER_PIC_DP_REPORTER, gTrainerFrontPic_DP_Reporter, gTrainerPalette_DP_Reporter),
-    TRAINER_SPRITE(TRAINER_PIC_DP_RICH_BOY, gTrainerFrontPic_DP_Rich_Boy, gTrainerPalette_DP_Rich_Boy),
-    TRAINER_SPRITE(TRAINER_PIC_DP_RILEY, gTrainerFrontPic_DP_Riley, gTrainerPalette_DP_Riley),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ROARK, gTrainerFrontPic_DP_Roark, gTrainerPalette_DP_Roark),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ROCKER_GUITARIST, gTrainerFrontPic_DP_Rocker_Guitarist, gTrainerPalette_DP_Rocker_Guitarist),
-    TRAINER_SPRITE(TRAINER_PIC_DP_ROUGHNECK, gTrainerFrontPic_DP_Roughneck, gTrainerPalette_DP_Roughneck),
-    TRAINER_SPRITE(TRAINER_PIC_DP_RUIN_MANIAC, gTrainerFrontPic_DP_Ruin_Maniac, gTrainerPalette_DP_Ruin_Maniac),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SAILOR, gTrainerFrontPic_DP_Sailor, gTrainerPalette_DP_Sailor),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SATURN, gTrainerFrontPic_DP_Saturn, gTrainerPalette_DP_Saturn),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SCHOOL_KID_F, gTrainerFrontPic_DP_School_Kid_F, gTrainerPalette_DP_School_Kid_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SCHOOL_KID_M, gTrainerFrontPic_DP_School_Kid_M, gTrainerPalette_DP_School_Kid_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SCIENTIST, gTrainerFrontPic_DP_Scientist, gTrainerPalette_DP_Scientist),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SKIER_F, gTrainerFrontPic_DP_Skier_F, gTrainerPalette_DP_Skier_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SKIER_M, gTrainerFrontPic_DP_Skier_M, gTrainerPalette_DP_Skier_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SOCIALITE, gTrainerFrontPic_DP_Socialite, gTrainerPalette_DP_Socialite),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SWIMMER_F, gTrainerFrontPic_DP_Swimmer_F, gTrainerPalette_DP_Swimmer_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_SWIMMER_M, gTrainerFrontPic_DP_Swimmer_M, gTrainerPalette_DP_Swimmer_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_TUBER_F, gTrainerFrontPic_DP_Tuber_F, gTrainerPalette_DP_Tuber_F),
-    TRAINER_SPRITE(TRAINER_PIC_DP_TUBER_M, gTrainerFrontPic_DP_Tuber_M, gTrainerPalette_DP_Tuber_M),
-    TRAINER_SPRITE(TRAINER_PIC_DP_TWINS, gTrainerFrontPic_DP_Twins, gTrainerPalette_DP_Twins),
-    TRAINER_SPRITE(TRAINER_PIC_DP_VETERAN, gTrainerFrontPic_DP_Veteran, gTrainerPalette_DP_Veteran),
-    TRAINER_SPRITE(TRAINER_PIC_DP_VOLKNER, gTrainerFrontPic_DP_Volkner, gTrainerPalette_DP_Volkner),
-    TRAINER_SPRITE(TRAINER_PIC_DP_WAITER, gTrainerFrontPic_DP_Waiter, gTrainerPalette_DP_Waiter),
-    TRAINER_SPRITE(TRAINER_PIC_DP_WAITRESS, gTrainerFrontPic_DP_Waitress, gTrainerPalette_DP_Waitress),
-    TRAINER_SPRITE(TRAINER_PIC_DP_WORKER, gTrainerFrontPic_DP_Worker, gTrainerPalette_DP_Worker),
-    TRAINER_SPRITE(TRAINER_PIC_DP_YOUNGSTER, gTrainerFrontPic_DP_Youngster, gTrainerPalette_DP_Youngster)
-};
+    TRAINER_SPRITE(TRAINER_PIC_LUCAS, gTrainerFrontPic_LucasDP, gTrainerPalette_LucasDP),
+    TRAINER_SPRITE(TRAINER_PIC_DAWN, gTrainerFrontPic_DawnDP, gTrainerPalette_DawnDP),
+    TRAINER_SPRITE(TRAINER_PIC_ACE_TRAINER_F_DP, gTrainerFrontPic_AceTrainerFDP, gTrainerPalette_AceTrainerFDP),
+    TRAINER_SPRITE(TRAINER_PIC_ACE_TRAINER_M_DP, gTrainerFrontPic_AceTrainerMDP, gTrainerPalette_AceTrainerMDP),
+    TRAINER_SPRITE(TRAINER_PIC_ACE_TRAINER_SNOW_F_DP, gTrainerFrontPic_AceTrainerSnowFDP, gTrainerPalette_AceTrainerSnowFDP),
+    TRAINER_SPRITE(TRAINER_PIC_ACE_TRAINER_SNOW_M_DP, gTrainerFrontPic_AceTrainerSnowMDP, gTrainerPalette_AceTrainerSnowMDP),
+    // TRAINER_SPRITE(TRAINER_PIC_ARGENTA_DP, gTrainerFrontPic_ArgentaDP, gTrainerPalette_ArgentaDP),
+    TRAINER_SPRITE(TRAINER_PIC_AROMA_LADY_DP, gTrainerFrontPic_AromaLadyDP, gTrainerPalette_AromaLadyDP),
+    TRAINER_SPRITE(TRAINER_PIC_ARTIST_DP, gTrainerFrontPic_ArtistDP, gTrainerPalette_ArtistDP),
+    TRAINER_SPRITE(TRAINER_PIC_BARRY_DP, gTrainerFrontPic_BarryDP, gTrainerPalette_BarryDP),
+    TRAINER_SPRITE(TRAINER_PIC_BATTLE_GIRL_DP, gTrainerFrontPic_BattleGirlDP, gTrainerPalette_BattleGirlDP),
+    TRAINER_SPRITE(TRAINER_PIC_BEAUTY_DP, gTrainerFrontPic_BeautyDP, gTrainerPalette_BeautyDP),
+    TRAINER_SPRITE(TRAINER_PIC_BELLE_AND_PA_DP, gTrainerFrontPic_BelleAndPaDP, gTrainerPalette_BelleAndPaDP),
+    TRAINER_SPRITE(TRAINER_PIC_BERTHA_DP, gTrainerFrontPic_BerthaDP, gTrainerPalette_BerthaDP),
+    TRAINER_SPRITE(TRAINER_PIC_BIRD_KEEPER_DP, gTrainerFrontPic_BirdKeeperDP, gTrainerPalette_BirdKeeperDP),
+    TRAINER_SPRITE(TRAINER_PIC_BLACK_BELT_DP, gTrainerFrontPic_BlackBeltDP, gTrainerPalette_BlackBeltDP),
+    TRAINER_SPRITE(TRAINER_PIC_BREEDER_F_DP, gTrainerFrontPic_BreederFDP, gTrainerPalette_BreederFDP),
+    TRAINER_SPRITE(TRAINER_PIC_BREEDER_M_DP, gTrainerFrontPic_BreederMDP, gTrainerPalette_BreederMDP),
+    TRAINER_SPRITE(TRAINER_PIC_BUCK_DP, gTrainerFrontPic_BuckDP, gTrainerPalette_BuckDP),
+    TRAINER_SPRITE(TRAINER_PIC_BUG_CATCHER_DP, gTrainerFrontPic_BugCatcherDP, gTrainerPalette_BugCatcherDP),
+    TRAINER_SPRITE(TRAINER_PIC_BYRON_DP, gTrainerFrontPic_ByronDP, gTrainerPalette_ByronDP),
+    TRAINER_SPRITE(TRAINER_PIC_CAMERAMAN_DP, gTrainerFrontPic_CameramanDP, gTrainerPalette_CameramanDP),
+    TRAINER_SPRITE(TRAINER_PIC_CANDICE_DP, gTrainerFrontPic_CandiceDP, gTrainerPalette_CandiceDP),
+    TRAINER_SPRITE(TRAINER_PIC_CHERYL_DP, gTrainerFrontPic_CherylDP, gTrainerPalette_CherylDP),
+    TRAINER_SPRITE(TRAINER_PIC_CLOWN_DP, gTrainerFrontPic_ClownDP, gTrainerPalette_ClownDP),
+    TRAINER_SPRITE(TRAINER_PIC_COLLECTOR_DP, gTrainerFrontPic_CollectorDP, gTrainerPalette_CollectorDP),
+    TRAINER_SPRITE(TRAINER_PIC_COWGIRL_DP, gTrainerFrontPic_CowgirlDP, gTrainerPalette_CowgirlDP),
+    TRAINER_SPRITE(TRAINER_PIC_CRASHER_WAKE_DP, gTrainerFrontPic_CrasherWakeDP, gTrainerPalette_CrasherWakeDP),
+    TRAINER_SPRITE(TRAINER_PIC_CYCLIST_F_DP, gTrainerFrontPic_CyclistFDP, gTrainerPalette_CyclistFDP),
+    TRAINER_SPRITE(TRAINER_PIC_CYCLIST_M_DP, gTrainerFrontPic_CyclistMDP, gTrainerPalette_CyclistMDP),
+    TRAINER_SPRITE(TRAINER_PIC_CYNTHIA_DP, gTrainerFrontPic_CynthiaDP, gTrainerPalette_CynthiaDP),
+    TRAINER_SPRITE(TRAINER_PIC_CYRUS_DP, gTrainerFrontPic_CyrusDP, gTrainerPalette_CyrusDP),
+    // TRAINER_SPRITE(TRAINER_PIC_DAHLIA_DP, gTrainerFrontPic_DahliaDP, gTrainerPalette_DahliaDP),
+    // TRAINER_SPRITE(TRAINER_PIC_DARACH_DP, gTrainerFrontPic_DarachDP, gTrainerPalette_DarachDP),
+    TRAINER_SPRITE(TRAINER_PIC_DOUBLE_TEAM_DP, gTrainerFrontPic_DoubleTeamDP, gTrainerPalette_DoubleTeamDP),
+    TRAINER_SPRITE(TRAINER_PIC_DRAGON_TAMER_DP, gTrainerFrontPic_DragonTamerDP, gTrainerPalette_DragonTamerDP),
+    TRAINER_SPRITE(TRAINER_PIC_FANTINA_DP, gTrainerFrontPic_FantinaDP, gTrainerPalette_FantinaDP),
+    TRAINER_SPRITE(TRAINER_PIC_FISHERMAN_DP, gTrainerFrontPic_FishermanDP, gTrainerPalette_FishermanDP),
+    TRAINER_SPRITE(TRAINER_PIC_GALACTIC_GRUNT_F_DP, gTrainerFrontPic_GalacticGruntFDP, gTrainerPalette_GalacticGruntFDP),
+    TRAINER_SPRITE(TRAINER_PIC_GALACTIC_GRUNT_M_DP, gTrainerFrontPic_GalacticGruntMDP, gTrainerPalette_GalacticGruntMDP),
+    TRAINER_SPRITE(TRAINER_PIC_GAMBLER_DP, gTrainerFrontPic_GamblerDP, gTrainerPalette_GamblerDP),
+    TRAINER_SPRITE(TRAINER_PIC_GARDENIA_DP, gTrainerFrontPic_GardeniaDP, gTrainerPalette_GardeniaDP),
+    TRAINER_SPRITE(TRAINER_PIC_GENTLEMAN_DP, gTrainerFrontPic_GentlemanDP, gTrainerPalette_GentlemanDP),
+    TRAINER_SPRITE(TRAINER_PIC_GUITARIST_DP, gTrainerFrontPic_GuitaristDP, gTrainerPalette_GuitaristDP),
+    TRAINER_SPRITE(TRAINER_PIC_HIKER_DP, gTrainerFrontPic_HikerDP, gTrainerPalette_HikerDP),
+    TRAINER_SPRITE(TRAINER_PIC_IDOL_DP, gTrainerFrontPic_IdolDP, gTrainerPalette_IdolDP),
+    TRAINER_SPRITE(TRAINER_PIC_INTERVIEWERS_DP, gTrainerFrontPic_InterviewersDP, gTrainerPalette_InterviewersDP),
+    TRAINER_SPRITE(TRAINER_PIC_JOGGER_DP, gTrainerFrontPic_JoggerDP, gTrainerPalette_JoggerDP),
+    TRAINER_SPRITE(TRAINER_PIC_JUPITER_DP, gTrainerFrontPic_JupiterDP, gTrainerPalette_JupiterDP),
+    TRAINER_SPRITE(TRAINER_PIC_LADY_DP, gTrainerFrontPic_LadyDP, gTrainerPalette_LadyDP),
+    TRAINER_SPRITE(TRAINER_PIC_LASS_DP, gTrainerFrontPic_LassDP, gTrainerPalette_LassDP),
+    TRAINER_SPRITE(TRAINER_PIC_LUCIAN_DP, gTrainerFrontPic_LucianDP, gTrainerPalette_LucianDP),
+    TRAINER_SPRITE(TRAINER_PIC_MARLEY_DP, gTrainerFrontPic_MarleyDP, gTrainerPalette_MarleyDP),
+    TRAINER_SPRITE(TRAINER_PIC_MARS_DP, gTrainerFrontPic_MarsDP, gTrainerPalette_MarsDP),
+    TRAINER_SPRITE(TRAINER_PIC_MAYLENE_DP, gTrainerFrontPic_MayleneDP, gTrainerPalette_MayleneDP),
+    TRAINER_SPRITE(TRAINER_PIC_MIRA_DP, gTrainerFrontPic_MiraDP, gTrainerPalette_MiraDP),
+    TRAINER_SPRITE(TRAINER_PIC_NINJA_BOY_DP, gTrainerFrontPic_NinjaBoyDP, gTrainerPalette_NinjaBoyDP),
+    TRAINER_SPRITE(TRAINER_PIC_OFFICER_DP, gTrainerFrontPic_OfficerDP, gTrainerPalette_OfficerDP),
+    TRAINER_SPRITE(TRAINER_PIC_PALMER_DP, gTrainerFrontPic_PalmerDP, gTrainerPalette_PalmerDP),
+    TRAINER_SPRITE(TRAINER_PIC_PARASOL_LADY_DP, gTrainerFrontPic_ParasolLadyDP, gTrainerPalette_ParasolLadyDP),
+    TRAINER_SPRITE(TRAINER_PIC_POKE_KID_DP, gTrainerFrontPic_PokeKidDP, gTrainerPalette_PokeKidDP),
+    TRAINER_SPRITE(TRAINER_PIC_POKEFAN_F_DP, gTrainerFrontPic_PokefanFDP, gTrainerPalette_PokefanFDP),
+    TRAINER_SPRITE(TRAINER_PIC_POKEFAN_M_DP, gTrainerFrontPic_PokefanMDP, gTrainerPalette_PokefanMDP),
+    TRAINER_SPRITE(TRAINER_PIC_POKEMON_RANGER_F_DP, gTrainerFrontPic_PokemonRangerFDP, gTrainerPalette_PokemonRangerFDP),
+    TRAINER_SPRITE(TRAINER_PIC_POKEMON_RANGER_M_DP, gTrainerFrontPic_PokemonRangerMDP, gTrainerPalette_PokemonRangerMDP),
+    TRAINER_SPRITE(TRAINER_PIC_PSYCHIC_F_DP, gTrainerFrontPic_PsychicFDP, gTrainerPalette_PsychicFDP),
+    TRAINER_SPRITE(TRAINER_PIC_PSYCHIC_M_DP, gTrainerFrontPic_PsychicMDP, gTrainerPalette_PsychicMDP),
+    TRAINER_SPRITE(TRAINER_PIC_RANCHER_DP, gTrainerFrontPic_RancherDP, gTrainerPalette_RancherDP),
+    TRAINER_SPRITE(TRAINER_PIC_REPORTER_DP, gTrainerFrontPic_ReporterDP, gTrainerPalette_ReporterDP),
+    TRAINER_SPRITE(TRAINER_PIC_RICH_BOY_DP, gTrainerFrontPic_RichBoyDP, gTrainerPalette_RichBoyDP),
+    TRAINER_SPRITE(TRAINER_PIC_RILEY_DP, gTrainerFrontPic_RileyDP, gTrainerPalette_RileyDP),
+    TRAINER_SPRITE(TRAINER_PIC_ROARK_DP, gTrainerFrontPic_RoarkDP, gTrainerPalette_RoarkDP),
+    TRAINER_SPRITE(TRAINER_PIC_ROUGHNECK_DP, gTrainerFrontPic_RoughneckDP, gTrainerPalette_RoughneckDP),
+    TRAINER_SPRITE(TRAINER_PIC_RUIN_MANIAC_DP, gTrainerFrontPic_RuinManiacDP, gTrainerPalette_RuinManiacDP),
+    TRAINER_SPRITE(TRAINER_PIC_SAILOR_DP, gTrainerFrontPic_SailorDP, gTrainerPalette_SailorDP),
+    TRAINER_SPRITE(TRAINER_PIC_SATURN_DP, gTrainerFrontPic_SaturnDP, gTrainerPalette_SaturnDP),
+    TRAINER_SPRITE(TRAINER_PIC_SCHOOL_KID_F_DP, gTrainerFrontPic_SchoolKidFDP, gTrainerPalette_SchoolKidFDP),
+    TRAINER_SPRITE(TRAINER_PIC_SCHOOL_KID_M_DP, gTrainerFrontPic_SchoolKidMDP, gTrainerPalette_SchoolKidMDP),
+    TRAINER_SPRITE(TRAINER_PIC_SCIENTIST_DP, gTrainerFrontPic_ScientistDP, gTrainerPalette_ScientistDP),
+    TRAINER_SPRITE(TRAINER_PIC_SKIER_F_DP, gTrainerFrontPic_SkierFDP, gTrainerPalette_SkierFDP),
+    TRAINER_SPRITE(TRAINER_PIC_SKIER_M_DP, gTrainerFrontPic_SkierMDP, gTrainerPalette_SkierMDP),
+    TRAINER_SPRITE(TRAINER_PIC_SOCIALITE_DP, gTrainerFrontPic_SocialiteDP, gTrainerPalette_SocialiteDP),
+    TRAINER_SPRITE(TRAINER_PIC_SWIMMER_F_DP, gTrainerFrontPic_SwimmerFDP, gTrainerPalette_SwimmerFDP),
+    TRAINER_SPRITE(TRAINER_PIC_SWIMMER_M_DP, gTrainerFrontPic_SwimmerMDP, gTrainerPalette_SwimmerMDP),
+    // TRAINER_SPRITE(TRAINER_PIC_THORNTON_DP, gTrainerFrontPic_ThorntonDP, gTrainerPalette_ThorntonDP),
+    TRAINER_SPRITE(TRAINER_PIC_TUBER_F_DP, gTrainerFrontPic_TuberFDP, gTrainerPalette_TuberFDP),
+    TRAINER_SPRITE(TRAINER_PIC_TUBER_M_DP, gTrainerFrontPic_TuberMDP, gTrainerPalette_TuberMDP),
+    TRAINER_SPRITE(TRAINER_PIC_TWINS_DP, gTrainerFrontPic_TwinsDP, gTrainerPalette_TwinsDP),
+    TRAINER_SPRITE(TRAINER_PIC_VETERAN_DP, gTrainerFrontPic_VeteranDP, gTrainerPalette_VeteranDP),
+    TRAINER_SPRITE(TRAINER_PIC_VOLKNER_DP, gTrainerFrontPic_VolknerDP, gTrainerPalette_VolknerDP),
+    TRAINER_SPRITE(TRAINER_PIC_WAITER_DP, gTrainerFrontPic_WaiterDP, gTrainerPalette_WaiterDP),
+    TRAINER_SPRITE(TRAINER_PIC_WAITRESS_DP, gTrainerFrontPic_WaitressDP, gTrainerPalette_WaitressDP),
+    TRAINER_SPRITE(TRAINER_PIC_WORKER_DP, gTrainerFrontPic_WorkerDP, gTrainerPalette_WorkerDP),
+    TRAINER_SPRITE(TRAINER_PIC_YOUNGSTER_DP, gTrainerFrontPic_YoungsterDP, gTrainerPalette_YoungsterDP)
+    };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
 {
@@ -855,7 +866,7 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY, 4, gTrainerBackPic_RubySapphireMay, gTrainerPalette_RubySapphireMay, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_WALLY, 4, gTrainerBackPic_Wally, gTrainerPalette_Wally, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_STEVEN, 4, gTrainerBackPic_Steven, gTrainerPalette_Steven, sBackAnims_Hoenn),
-    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_LUCAS, 4, gTrainerBackPic_Lucas, gTrainerPalette_DP_Lucas_p, sBackAnims_Hoenn),
-    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_DAWN, 4, gTrainerBackPic_Dawn, gTrainerPalette_DP_Dawn_p, sBackAnims_Hoenn),
-    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_BARRY, 4, gTrainerBackPic_Barry, gTrainerPalette_Barry_Back, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_LUCAS, 4, gTrainerBackPic_Lucas, gTrainerPalette_LucasDP, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_DAWN, 4, gTrainerBackPic_Dawn, gTrainerPalette_DawnDP, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_BARRY, 4, gTrainerBackPic_Barry, gTrainerBackPicPalette_Barry, sBackAnims_Hoenn),
 };
