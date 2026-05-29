@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_SANDGEM_LAB_PROF",
-      "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
+      "graphics_id": "OBJ_EVENT_GFX_ROWAN_PT",
       "x": 6,
       "y": 5,
       "elevation": 3,

@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_TRAINER_SCHOOL_BARRY",
-      "graphics_id": "OBJ_EVENT_GFX_BARRY",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY_PT",
       "x": 5,
       "y": 2,
       "elevation": 0,
