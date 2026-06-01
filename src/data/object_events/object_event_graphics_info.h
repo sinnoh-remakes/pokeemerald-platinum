@@ -1689,7 +1689,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RoughneckPt = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rowan = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RowanPt = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_ROWAN_PT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,

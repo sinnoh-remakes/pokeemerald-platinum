@@ -196,7 +196,7 @@ $(OBJEVENTGFXDIR)/people/maid_pt.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/man_snow_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/man.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/man_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/marley_pt.4bpp: %.4bpp: %.png
@@ -346,7 +346,7 @@ $(OBJEVENTGFXDIR)/people/waitress_pt.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/woman_snow_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/woman.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/woman_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/worker_pt.4bpp: %.4bpp: %.png
