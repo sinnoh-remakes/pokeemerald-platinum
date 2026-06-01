@@ -1,5 +1,16 @@
 #!/bin/bash
 
+echo "Compiling [PRIMARY] indoor_center"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_center ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] common_center_1f"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_center_1f ./tiles/common_center_1f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] common_center_2f"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_center_2f ./tiles/common_center_2f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+echo "Compiling [PRIMARY] indoor_mart"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] common_mart"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_mart ./tiles/common_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
+
 echo "Compiling [PRIMARY] outdoor_jubilife"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_jubilife ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf"
@@ -16,15 +27,6 @@ echo "Compiling [secondary] route_203"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_203 ./tiles/route_203 ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_204"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_204 ./tiles/route_204 ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
-
-echo "Compiling [PRIMARY] outdoor_oreburgh"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_oreburgh ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] oreburgh_north"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_north ./tiles/oreburgh_north ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] oreburgh_south"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_south ./tiles/oreburgh_south ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] route_207"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_207 ./tiles/route_207 ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_twinleaf"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
@@ -56,16 +58,19 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/jubilife_tower ./
 echo "Compiling [secondary] jubilife_school"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/jubilife_school ./tiles/jubilife_school ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
 
-echo "Compiling [PRIMARY] indoor_center"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_center ./tiles/indoor_center ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] common_center_1f"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_center_1f ./tiles/common_center_1f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] common_center_2f"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_center_2f ./tiles/common_center_2f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
-echo "Compiling [PRIMARY] indoor_mart"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] common_mart"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_mart ./tiles/common_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
+echo "Compiling [PRIMARY] outdoor_oreburgh"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_oreburgh ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] oreburgh_north"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_north ./tiles/oreburgh_north ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] oreburgh_south"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_south ./tiles/oreburgh_south ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] route_207"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_207 ./tiles/route_207 ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+
+echo "Compiling [PRIMARY] gym_oreburgh"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/gym_oreburgh ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] oreburgh_gym"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_gym ./tiles/oreburgh_gym ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] cave_coronet"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/cave_coronet ./tiles/cave_coronet ./include/constants/metatile_behaviors.h
@@ -76,8 +81,3 @@ echo "Compiling [PRIMARY] cave_oreburgh"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/cave_oreburgh ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] oreburgh_mine"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_mine ./tiles/oreburgh_mine ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
-
-echo "Compiling [PRIMARY] gym_oreburgh"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/gym_oreburgh ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] oreburgh_gym"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_gym ./tiles/oreburgh_gym ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
