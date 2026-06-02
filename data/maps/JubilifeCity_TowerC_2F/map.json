@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEMON_BREEDER_M_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER_PT",
       "x": 5,
       "y": 7,
       "elevation": 0,
