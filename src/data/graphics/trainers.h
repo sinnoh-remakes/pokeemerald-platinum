@@ -477,8 +477,8 @@ const u16 gTrainerPalette_NinjaBoyDP[] = INCBIN_U16("graphics/trainers/front_pic
 const u32 gTrainerFrontPic_OfficerDP[] = INCBIN_U32("graphics/trainers/front_pics/officer_dp.4bpp.lz");
 const u16 gTrainerPalette_OfficerDP[] = INCBIN_U16("graphics/trainers/front_pics/officer_dp.gbapal");
 
-const u32 gTrainerFrontPic_PalmerDP[] = INCBIN_U32("graphics/trainers/front_pics/palmer_dp.4bpp.lz");
-const u16 gTrainerPalette_PalmerDP[] = INCBIN_U16("graphics/trainers/front_pics/palmer_dp.gbapal");
+// const u32 gTrainerFrontPic_PalmerDP[] = INCBIN_U32("graphics/trainers/front_pics/palmer_dp.4bpp.lz");
+// const u16 gTrainerPalette_PalmerDP[] = INCBIN_U16("graphics/trainers/front_pics/palmer_dp.gbapal");
 
 const u32 gTrainerFrontPic_ParasolLadyDP[] = INCBIN_U32("graphics/trainers/front_pics/parasol_lady_dp.4bpp.lz");
 const u16 gTrainerPalette_ParasolLadyDP[] = INCBIN_U16("graphics/trainers/front_pics/parasol_lady_dp.gbapal");
@@ -759,7 +759,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_MIRA_DP, gTrainerFrontPic_MiraDP, gTrainerPalette_MiraDP),
     TRAINER_SPRITE(TRAINER_PIC_NINJA_BOY_DP, gTrainerFrontPic_NinjaBoyDP, gTrainerPalette_NinjaBoyDP),
     TRAINER_SPRITE(TRAINER_PIC_OFFICER_DP, gTrainerFrontPic_OfficerDP, gTrainerPalette_OfficerDP),
-    TRAINER_SPRITE(TRAINER_PIC_PALMER_DP, gTrainerFrontPic_PalmerDP, gTrainerPalette_PalmerDP),
+    // TRAINER_SPRITE(TRAINER_PIC_PALMER_DP, gTrainerFrontPic_PalmerDP, gTrainerPalette_PalmerDP),
     TRAINER_SPRITE(TRAINER_PIC_PARASOL_LADY_DP, gTrainerFrontPic_ParasolLadyDP, gTrainerPalette_ParasolLadyDP),
     TRAINER_SPRITE(TRAINER_PIC_POKE_KID_DP, gTrainerFrontPic_PokeKidDP, gTrainerPalette_PokeKidDP),
     TRAINER_SPRITE(TRAINER_PIC_PICNICKER_DP, gTrainerFrontPic_PicnickerDP, gTrainerPalette_PicnickerDP),

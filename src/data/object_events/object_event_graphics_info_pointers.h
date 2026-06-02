@@ -5,6 +5,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerC
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerColdMPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerFPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerMPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ArgentaPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AromaLadyPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ArtistPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BabyPt;
@@ -22,6 +23,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CamperPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CandicePt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CashierFPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CashierMPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CharonPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CherylPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ClownPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CollectorPt;
@@ -31,6 +33,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclistFPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclistMPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CynthiaPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyrusPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DahliaPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DarachPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FantinaPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FishermanPt;
@@ -98,6 +102,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerMPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TealaPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ThorntonPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberMPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TwinsPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VeteranPt;
@@ -629,7 +634,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ACE_TRAINER_COLD_M_PT] =    &gObjectEventGraphicsInfo_AceTrainerColdMPt,
     [OBJ_EVENT_GFX_ACE_TRAINER_F_PT] =         &gObjectEventGraphicsInfo_AceTrainerFPt,
     [OBJ_EVENT_GFX_ACE_TRAINER_M_PT] =         &gObjectEventGraphicsInfo_AceTrainerMPt,
-    // [OBJ_EVENT_GFX_ARGENTA_PT] =               &gObjectEventGraphicsInfo_ArgentaPt,
+    [OBJ_EVENT_GFX_ARGENTA_PT] =               &gObjectEventGraphicsInfo_ArgentaPt,
     [OBJ_EVENT_GFX_AROMA_LADY_PT] =            &gObjectEventGraphicsInfo_AromaLadyPt,
     [OBJ_EVENT_GFX_ARTIST_PT] =                &gObjectEventGraphicsInfo_ArtistPt,
     [OBJ_EVENT_GFX_BABY_PT] =                  &gObjectEventGraphicsInfo_BabyPt,
@@ -657,8 +662,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CYCLIST_M_PT] =             &gObjectEventGraphicsInfo_CyclistMPt,
     [OBJ_EVENT_GFX_CYNTHIA_PT] =               &gObjectEventGraphicsInfo_CynthiaPt,
     [OBJ_EVENT_GFX_CYRUS_PT] =                 &gObjectEventGraphicsInfo_CyrusPt,
-    // [OBJ_EVENT_GFX_DAHLIA_PT] =                &gObjectEventGraphicsInfo_DahliaPt,
-    // [OBJ_EVENT_GFX_DARACH_PT] =                &gObjectEventGraphicsInfo_DarachPt,
+    [OBJ_EVENT_GFX_DAHLIA_PT] =                &gObjectEventGraphicsInfo_DahliaPt,
+    [OBJ_EVENT_GFX_DARACH_PT] =                &gObjectEventGraphicsInfo_DarachPt,
     [OBJ_EVENT_GFX_EXPERT_PT] =                &gObjectEventGraphicsInfo_ExpertPt,
     [OBJ_EVENT_GFX_FANTINA_PT] =               &gObjectEventGraphicsInfo_FantinaPt,
     [OBJ_EVENT_GFX_FISHERMAN_PT] =             &gObjectEventGraphicsInfo_FishermanPt,
@@ -724,7 +729,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SWIMMER_F_PT] =             &gObjectEventGraphicsInfo_SwimmerFPt,
     [OBJ_EVENT_GFX_SWIMMER_M_PT] =             &gObjectEventGraphicsInfo_SwimmerMPt,
     [OBJ_EVENT_GFX_TEALA_PT] =                 &gObjectEventGraphicsInfo_TealaPt,
-    // [OBJ_EVENT_GFX_THORNTON_PT] =              &gObjectEventGraphicsInfo_ThorntonPt,
+    [OBJ_EVENT_GFX_THORNTON_PT] =              &gObjectEventGraphicsInfo_ThorntonPt,
     [OBJ_EVENT_GFX_TUBER_F_PT] =               &gObjectEventGraphicsInfo_TuberFPt,
     [OBJ_EVENT_GFX_TUBER_M_PT] =               &gObjectEventGraphicsInfo_TuberMPt,
     [OBJ_EVENT_GFX_TWINS_PT] =                 &gObjectEventGraphicsInfo_TwinsPt,

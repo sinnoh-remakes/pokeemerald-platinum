@@ -26,6 +26,10 @@ static const struct SpriteFrameImage sPicTable_AceTrainerMPt[] = {
     overworld_ascending_frames(gObjectEventPic_AceTrainerMPt, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_ArgentaPt[] = {
+    overworld_ascending_frames(gObjectEventPic_ArgentaPt, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_AromaLadyPt[] = {
     overworld_ascending_frames(gObjectEventPic_AromaLadyPt, 4, 4),
 };
@@ -132,6 +136,14 @@ static const struct SpriteFrameImage sPicTable_CynthiaPt[] = {
 
 static const struct SpriteFrameImage sPicTable_CyrusPt[] = {
     overworld_ascending_frames(gObjectEventPic_CyrusPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_DahliaPt[] = {
+    overworld_ascending_frames(gObjectEventPic_DahliaPt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_DarachPt[] = {
+    overworld_ascending_frames(gObjectEventPic_DarachPt, 4, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_ExpertPt[] = {
