@@ -57,14 +57,14 @@ gText_TrainerCard::
 	.string "Trainer Card?$"
 	
 gText_ClubUnionRoom::
-	.string "Welcome to the Pokemon Wireless\n"
+	.string "Welcome to the Pokémon Wireless\n"
 	.string "Club Union Room.\p"
 	.string "You may interact directly with\n"
 	.string "many Trainers here.\p"
 	.string "Would you like to enter the room?$"
 
 gText_ClubColosseum::
-	.string "Welcome to the Pokemon Communication\n"
+	.string "Welcome to the Pokémon Communication\n"
 	.string "Club Colosseum.\p"
 	.string "You may battle with your friends\n"
 	.string "here.\p"

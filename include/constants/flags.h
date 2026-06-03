@@ -43,16 +43,16 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_ROUTE201_RECEIVED_POTION          0x20
-#define FLAG_GLOBAL_TERMINAL_OPEN              0x21
-#define FLAG_JUBILIFE_CLOWN_GROW               0x22
-#define FLAG_JUBILIFE_CLOWN_ITEM               0x23
-#define FLAG_JUBILIFE_CLOWN_TYPE               0x24
-#define FLAG_TRAINER_SCHOOL_RECEIVED_POTION    0x25
-#define FLAG_ITEM_OREBURGH_CITY_SUPER_POTION        0x26
-#define FLAG_OREBURGH_CITY_DUSK_BALL           0x27
-#define FLAG_OREBURGH_CITY_GREAT_BALL          0x28
-#define FLAG_RECEIVED_TM_STEALTH_ROCK          0x29
+#define FLAG_ROUTE_201_POTION           0x20
+#define FLAG_GLOBAL_TERMINAL_OPEN       0x21
+#define FLAG_JUBILIFE_CLOWN_GROW        0x22
+#define FLAG_JUBILIFE_CLOWN_ITEM        0x23
+#define FLAG_JUBILIFE_CLOWN_TYPE        0x24
+#define FLAG_TRAINER_SCHOOL_POTION      0x25
+#define FLAG_OREBURGH_CITY_SUPER_POTION 0x26
+#define FLAG_OREBURGH_CITY_DUSK_BALL    0x27
+#define FLAG_OREBURGH_CITY_GREAT_BALL   0x28
+#define FLAG_TM_STEALTH_ROCK            0x29
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
@@ -464,6 +464,7 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
+#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
 #define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
@@ -1233,12 +1234,12 @@
 #define FLAG_ITEM_ROUTE_204_HP_UP                                   0x498
 #define FLAG_ITEM_ROUTE_204_SEA_INCENSE                             0x499
 #define FLAG_ITEM_TRAINER_SCHOOL_X_ATTACK                           0x49A
-#define FLAG_ITEM_OREBURGH_CITY_DIRE_HIT                            0x49B
-#define FLAG_ITEM_OREBURGH_CITY_YELLOW_SHARD                        0x49C
-#define FLAG_ITEM_OREBURGH_MINE_POKE_BALL                           0x49D
-#define FLAG_ITEM_OREBURGH_MINE_POTION                              0x49E
-#define FLAG_ITEM_OREBURGH_MINE_ESCAPE_ROPE                         0x49F
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
+#define FLAG_ITEM_ROUTE_207_POKE_BALL                               0x49B
+#define FLAG_ITEM_OREBURGH_CITY_DIRE_HIT                            0x49C
+#define FLAG_ITEM_OREBURGH_CITY_YELLOW_SHARD                        0x49D
+#define FLAG_ITEM_OREBURGH_MINE_POKE_BALL                           0x49E
+#define FLAG_ITEM_OREBURGH_MINE_POTION                              0x49F
+#define FLAG_ITEM_OREBURGH_MINE_ESCAPE_ROPE                         0x4A0
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
@@ -1305,8 +1306,8 @@
 #define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
 #define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
 #define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
-#define FLAG_DEFEATED_OREBURGH_GYM                                  0x4E3
-#define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
+#define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
+#define FLAG_DEFEATED_OREBURGH_GYM                                  0x4E4
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
 #define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
 #define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
@@ -1397,16 +1398,17 @@
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
-#define FLAG_UNUSED_0x888                           (SYSTEM_FLAGS + 0x28) // Unused Flag
-#define FLAG_UNUSED_0x889                           (SYSTEM_FLAGS + 0x29) // Unused Flag
 
-#define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x2A)
-#define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x2B)
+#define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
+#define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
 // Sets abnormal weather on maps that check for it
-#define FLAG_SYS_WEATHER_CTRL                       (SYSTEM_FLAGS + 0x2C)
-#define FLAG_SYS_CYCLING_ROAD                       (SYSTEM_FLAGS + 0x2D)
-#define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2E)
-#define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2F)
+#define FLAG_SYS_WEATHER_CTRL                       (SYSTEM_FLAGS + 0x2A)
+#define FLAG_SYS_CYCLING_ROAD                       (SYSTEM_FLAGS + 0x2B)
+#define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
+#define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
+
+#define FLAG_UNUSED_0x88E                           (SYSTEM_FLAGS + 0x2E) // Unused Flag
+#define FLAG_UNUSED_0x88F                           (SYSTEM_FLAGS + 0x2F) // Unused Flag
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
 #define FLAG_SYS_TV_WATCH                           (SYSTEM_FLAGS + 0x31)

@@ -32,7 +32,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_ROUTE201_RIVAL",
-      "graphics_id": "OBJ_EVENT_GFX_BARRY",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY_PT",
       "x": 16,
       "y": 15,
       "elevation": 0,
@@ -46,7 +46,7 @@
     },
     {
       "local_id": "LOCALID_ROUTE201_PROF",
-      "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
+      "graphics_id": "OBJ_EVENT_GFX_ROWAN_PT",
       "x": 10,
       "y": 13,
       "elevation": 0,
@@ -73,7 +73,7 @@
       "flag": "FLAG_HIDE_ROUTE_201_STARTER_EVENT"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEMON_BREEDER_M_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER_PT",
       "x": 27,
       "y": 14,
       "elevation": 0,

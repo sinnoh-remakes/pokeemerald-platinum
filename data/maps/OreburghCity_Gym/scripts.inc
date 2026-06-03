@@ -2,40 +2,40 @@ OreburghCity_Gym_MapScripts::
 	.byte 0
 
 OreburghCity_Gym_EventScript_Roark::
-	trainerbattle_single TRAINER_PT_ROARK, OreburghCity_Gym_Text_RoarkIntro, OreburghCity_Gym_Text_RoarkDefeat, OreburghCity_Gym_EventScript_RoarkDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_PT_ROARK, OreburghCity_Gym_Text_RoarkIntro, OreburghCity_Gym_Text_RoarkDefeated, OreburghCity_Gym_EventScript_RoarkDefeated, NO_MUSIC
 	msgbox OreburghCity_Gym_Text_RoarkPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 OreburghCity_Gym_EventScript_RoarkDefeated::
-	msgbox OreburghCity_Gym_Text_RoarkDefeated, MSGBOX_DEFAULT
+	msgbox OreburghCity_Gym_Text_ThisIsEmbarrassing, MSGBOX_DEFAULT
 	message OreburghCity_Gym_Text_ReceivedCoalBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox OreburghCity_Gym_Text_CoalBadgeInfoTakeThis, MSGBOX_DEFAULT
+	msgbox OreburghCity_Gym_Text_HavingThatCoalBadge, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_OREBURGH_GYM
 	setflag FLAG_BADGE01_GET
-	@ setvar VAR_RUSTBORO_CITY_STATE, 1
-	@ setvar VAR_0x8008, 1
-	@ call Common_EventScript_SetGymTrainers
+	setvar VAR_OREBURGH_CITY_STATE, 5
+	setvar VAR_0x8008, 9
+	call Common_EventScript_SetGymTrainers
 	goto OreburghCity_Gym_EventScript_GiveStealthRock
 	end
 
 OreburghCity_Gym_EventScript_GiveStealthRock::
 	giveitem ITEM_TM76
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_STEALTH_ROCK
-	msgbox OreburghCity_Gym_Text_ExplainStealthRock, MSGBOX_DEFAULT
+	setflag FLAG_TM_STEALTH_ROCK
+	msgbox OreburghCity_Gym_Text_TheMoveStealthRock, MSGBOX_DEFAULT
 	release
 	end
 
 OreburghCity_Gym_EventScript_Jonathon::
-	trainerbattle_single TRAINER_PT_JONATHON, OreburghCity_Gym_Text_JonathonIntro, OreburghCity_Gym_Text_JonathonDefeat
+	trainerbattle_single TRAINER_PT_JONATHON, OreburghCity_Gym_Text_JonathonIntro, OreburghCity_Gym_Text_JonathonDefeated
 	msgbox OreburghCity_Gym_Text_JonathonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 OreburghCity_Gym_EventScript_Darius::
-	trainerbattle_single TRAINER_PT_DARIUS, OreburghCity_Gym_Text_DariusIntro, OreburghCity_Gym_Text_DariusDefeat
+	trainerbattle_single TRAINER_PT_DARIUS, OreburghCity_Gym_Text_DariusIntro, OreburghCity_Gym_Text_DariusDefeated
 	msgbox OreburghCity_Gym_Text_DariusPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -114,11 +114,7 @@ OreburghCity_Gym_Text_RoarkIntro:
 	.string "And, I’ll need to see the toughness\n"
 	.string "of the Pokémon that battle with you!$"
 
-OreburghCity_Gym_Text_RoarkDefeat:
-	.string "W-what? That can't be!"
-	.string "My buffed-up Pokémon!$"
-
-OreburghCity_Gym_Text_RoarkDefeated:
+OreburghCity_Gym_Text_ThisIsEmbarrassing:
 	.string "This is embarrassing...\p"
 	.string "I went and lost to a Trainer who\n"
 	.string "didn’t have a single Gym Badge...\p"
@@ -134,13 +130,13 @@ OreburghCity_Gym_Text_ReceivedCoalBadge:
 	.string "{PLAYER} received\n"
 	.string "the Coal Badge from Roark!$"
 
-OreburghCity_Gym_Text_CoalBadgeInfoTakeThis:
+OreburghCity_Gym_Text_HavingThatCoalBadge:
 	.string "Having that Coal Badge means your\n"
 	.string "Pokémon can now use the hidden move\l"
 	.string "Rock Smash outside of battle.\p"
 	.string "You should also take this, too.$"
 
-OreburghCity_Gym_Text_ExplainStealthRock:
+OreburghCity_Gym_Text_TheMoveStealthRock:
 	.string "That TM76 contains\n"
 	.string "the move Stealth Rock.\p"
 	.string "It’s a move that inflicts damage on\n"

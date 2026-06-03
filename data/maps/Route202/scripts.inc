@@ -92,14 +92,14 @@ Route202_EventScript_HelperTeach5::
 	end
 
 Route202_EventScript_HelperDecline::
-	goto_if_lt VAR_ALTERNATE_TEXT, 3, Route202_EventScript_HelperDeclineFirst
+	goto_if_lt VAR_TEXT_ALTERNATE, 3, Route202_EventScript_HelperDeclineFirst
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route202_EventScript_TellFamilyDawn
 	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_TellFamilyLucas
 	return
 
 Route202_EventScript_HelperDeclineFirst::
-	setvar VAR_ALTERNATE_TEXT, 3
+	setvar VAR_TEXT_ALTERNATE, 3
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route202_EventScript_ReallyEagerDawn
 	call_if_eq VAR_RESULT, FEMALE, Route202_EventScript_ReallyEagerLucas

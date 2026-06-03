@@ -264,11 +264,12 @@ extern const u8 gText_Birch_YourePlayer[];
 extern const u8 gText_Birch_AreYouReady[];
 
 extern const u8 gText_BirchInTrouble[];
-extern const u8 gText_RowanGiveStarter[];
 extern const u8 gText_ConfirmStarterChoice[];
-extern const u8 gText_ConfirmStarterChoiceLT[];
-extern const u8 gText_ConfirmStarterChoiceMD[];
-extern const u8 gText_ConfirmStarterChoiceRT[];
+extern const u8 gText_RowanGiveStarter[];
+extern const u8 gText_ConfirmStarterChoiceSinnoh[];
+extern const u8 gText_ConfirmStarterChoiceLeft[];
+extern const u8 gText_ConfirmStarterChoiceMiddle[];
+extern const u8 gText_ConfirmStarterChoiceRight[];
 
 // mystery event menu text
 extern const u8 gText_EventSafelyLoaded[];
@@ -1936,7 +1937,7 @@ extern const u8 gText_ContestantsMonWon[];
 extern const u8 gText_LinkCableBattles[];
 extern const u8 gText_LinkBattles[];
 extern const u8 gText_WaitingTrainerFinishReading[];
-extern const u8 gText_SinnohTrainerCardName[];
+extern const u8 gText_TrainerCardNameSinnoh[];
 extern const u8 gText_TrainerCardName[];
 extern const u8 gText_TrainerCardIDNo[];
 extern const u8 gText_TrainerCardMoney[];

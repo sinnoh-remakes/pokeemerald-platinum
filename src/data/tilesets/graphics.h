@@ -328,7 +328,7 @@ const u16 gTilesetPalettes_BattleFrontierOutsideEast[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/palettes/15.gbapal"),
 };
 
-const u32 gTilesetTiles_InsideBuilding[] = INCBIN_U32("data/tilesets/primary/building/tiles.4bpp.fastSmol");
+const u32 gTilesetTiles_InsideBuilding[] = INCBIN_U32("data/tilesets/primary/building/tiles.4bpp.smol");
 
 const u16 gTilesetPalettes_InsideBuilding[][16] =
 {
