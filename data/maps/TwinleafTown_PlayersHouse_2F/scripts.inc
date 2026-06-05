@@ -7,7 +7,7 @@ TwinleafTown_PlayersHouse_2F_OnTransition:
 	end
 
 TwinleafTown_PlayersHouse_2F_Init::
-	setrespawn HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE
+	setrespawn HEAL_LOCATION_TWINLEAF_TOWN_PLAYERS_HOUSE_1F
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	end
 
