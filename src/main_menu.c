@@ -238,6 +238,8 @@ static void Task_NewGameBirchSpeech_WaitForPlayerShrink(u8);
 static void Task_NewGameBirchSpeech_FadePlayerToWhite(u8);
 static void Task_NewGameBirchSpeech_Cleanup(u8);
 static void SpriteCB_Null(struct Sprite *);
+static void SpriteCB_RowanTop(struct Sprite *);
+static void SpriteCB_RowanBottom(struct Sprite *);
 static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8);
 static void MainMenu_FormatSavegamePlayer(void);
 static void MainMenu_FormatSavegamePokedex(void);
@@ -1885,6 +1887,22 @@ static void SpriteCB_Null(struct Sprite *sprite)
 {
 }
 
+static void SpriteCB_RowanTop(struct Sprite *sprite)
+{
+    sprite->y2 = -32;
+}
+
+static void SpriteCB_RowanBottom(struct Sprite *sprite)
+{
+    u8 topId = sprite->data[0];
+    struct Sprite *top = &gSprites[topId];
+    sprite->x = top->x;
+    sprite->y = top->y + 32;
+    sprite->invisible = top->invisible;
+    sprite->oam.objMode = top->oam.objMode;
+    sprite->oam.priority = top->oam.priority;
+}
+
 static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *sprite)
 {
     u32 y;
@@ -1907,10 +1925,15 @@ static void AddBirchSpeechObjects(u8 taskId)
     u8 maySpriteId;
 
     birchSpriteId = AddNewGameBirchObject(0x88, 0x3C, 1);
-    gSprites[birchSpriteId].callback = SpriteCB_Null;
+    gSprites[birchSpriteId].callback = SpriteCB_RowanTop;
     gSprites[birchSpriteId].oam.priority = 0;
     gSprites[birchSpriteId].invisible = TRUE;
     gTasks[taskId].tBirchSpriteId = birchSpriteId;
+    {
+        u8 bottomId = gSprites[birchSpriteId].data[0];
+        gSprites[bottomId].callback = SpriteCB_RowanBottom;
+        gSprites[bottomId].data[0] = birchSpriteId;
+    }
     lotadSpriteId = NewGameBirchSpeech_CreateLotadSprite(100, 0x4B);
     gSprites[lotadSpriteId].callback = SpriteCB_Null;
     gSprites[lotadSpriteId].oam.priority = 0;
