@@ -191,6 +191,7 @@ static void Task_HandleMainMenuAPressed(u8);
 static void Task_HandleMainMenuBPressed(u8);
 static void Task_NewGameBirchSpeech_Init(u8);
 static void Task_DisplayMainMenuInvalidActionError(u8);
+static void NewGameBirchSpeech_SetupBottomGradient(void);
 static void AddBirchSpeechObjects(u8);
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8);
 static void NewGameBirchSpeech_StartFadeInTarget1OutTarget2(u8, u8);
@@ -1284,6 +1285,68 @@ static void HighlightSelectedMainMenuItem(u8 menuType, u8 selectedMenuItem, s16 
 #define tBrendanSpriteId data[10]
 #define tMaySpriteId data[11]
 
+// The top gradient uses tilemap rows 0-3 with palette bank 1, tiles 1-4 (colors increasing),
+// followed by solid flat color on rows 4+.
+// The bottom gradient mirrors this but reversed and twice as tall (8 rows):
+//   Rows 12-15: 4-step descending gradient (palette bank 2, tiles 4->3->2->1)
+//   Rows 16-19: solid last color (palette bank 2, tile 1) matching how the top
+//               transitions to flat after its 4 gradient rows.
+#define BOTTOM_GRAD_PAL_BANK   3
+#define BOTTOM_GRAD_START_ROW  12
+#define BOTTOM_GRAD_NUM_ROWS   4
+
+static void NewGameBirchSpeech_SetupBottomGradient(void)
+{
+    u16 reversedPal[16];
+    u16 *tilemapBase;
+    u8 row, col;
+
+    // Build a reversed copy of sBirchSpeechBgGradientPal into palette bank 2.
+    // Colors 1-7 are reversed so tile 1 = darkest (the "last" color at the very
+    // bottom) and tile 4 = lightest (the first step of the gradient from above).
+    reversedPal[0] = sBirchSpeechBgGradientPal[0];
+    reversedPal[1] = sBirchSpeechBgGradientPal[7];
+    reversedPal[2] = sBirchSpeechBgGradientPal[6];
+    reversedPal[3] = sBirchSpeechBgGradientPal[5];
+    reversedPal[4] = sBirchSpeechBgGradientPal[4];
+    reversedPal[5] = sBirchSpeechBgGradientPal[3];
+    reversedPal[6] = sBirchSpeechBgGradientPal[2];
+    reversedPal[7] = sBirchSpeechBgGradientPal[1];
+    reversedPal[8]  = 0;
+    reversedPal[9]  = 0;
+    reversedPal[10] = 0;
+    reversedPal[11] = 0;
+    reversedPal[12] = 0;
+    reversedPal[13] = 0;
+    reversedPal[14] = 0;
+    reversedPal[15] = 0;
+    LoadPalette(reversedPal, BG_PLTT_ID(BOTTOM_GRAD_PAL_BANK), PLTT_SIZE_4BPP);
+
+    tilemapBase = (u16 *)BG_SCREEN_ADDR(7);
+
+    // Rows 12-15: descending gradient steps, tile 1 up to tile 4.
+    for (row = 0; row < BOTTOM_GRAD_NUM_ROWS; row++)
+    {
+        u16 tileIndex = row + 1; // 1, 2, 3, 4
+        u16 entry = (BOTTOM_GRAD_PAL_BANK << 12) | tileIndex;
+        for (col = 0; col < 32; col++)
+            tilemapBase[(BOTTOM_GRAD_START_ROW + row) * 32 + col] = entry;
+    }
+
+    // Rows 16-19: solid last color (tile 4), mirroring how the top
+    // gradient's flat region uses a single color after its 4 stepped rows.
+    for (row = 0; row < BOTTOM_GRAD_NUM_ROWS; row++)
+    {
+        u16 entry = (BOTTOM_GRAD_PAL_BANK << 12) | BOTTOM_GRAD_NUM_ROWS;
+        for (col = 0; col < 32; col++)
+            tilemapBase[(BOTTOM_GRAD_START_ROW + BOTTOM_GRAD_NUM_ROWS + row) * 32 + col] = entry;
+    }
+}
+
+#undef BOTTOM_GRAD_PAL_BANK
+#undef BOTTOM_GRAD_START_ROW
+#undef BOTTOM_GRAD_NUM_ROWS
+
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
@@ -1301,6 +1364,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     DecompressDataWithHeaderVram(sBirchSpeechBgMap, (void *)(BG_SCREEN_ADDR(7)));
     LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
     LoadPalette(&sBirchSpeechBgGradientPal[1], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
+    NewGameBirchSpeech_SetupBottomGradient();
     ScanlineEffect_Stop();
     ResetSpriteData();
     FreeAllSpritePalettes();
@@ -1836,6 +1900,7 @@ static void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void)
     DecompressDataWithHeaderVram(sBirchSpeechBgMap, (u8 *)(BG_SCREEN_ADDR(7)));
     LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
     LoadPalette(&sBirchSpeechBgGradientPal[1], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
+    NewGameBirchSpeech_SetupBottomGradient();
     ResetTasks();
     taskId = CreateTask(Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox, 0);
     gTasks[taskId].tTimer = 5;
