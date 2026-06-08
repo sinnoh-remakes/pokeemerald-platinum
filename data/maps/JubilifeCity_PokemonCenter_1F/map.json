@@ -1,7 +1,7 @@
 {
   "id": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
   "name": "JubilifeCity_PokemonCenter_1F",
-  "layout": "LAYOUT_SINNOH_CENTER_1F",
+  "layout": "LAYOUT_POKEMON_CENTER_PT_1F",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_JUBILIFE_CITY",
   "requires_flash": false,
