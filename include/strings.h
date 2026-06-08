@@ -253,6 +253,7 @@ extern const u8 gText_SelectorArrow3[];
 extern const u8 gText_YesNo[];
 
 // main menu/birch speech text
+extern const u8 gText_Birch_HelloThere[];
 extern const u8 gText_Birch_Welcome[];
 extern const u8 gText_ThisIsAPokemon[];
 extern const u8 gText_Birch_MainSpeech[];
