@@ -4582,14 +4582,14 @@
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
     {
-      "id": "LAYOUT_GATE_JUBILIFE",
-      "name": "Gate_Jubilife_Layout",
+      "id": "LAYOUT_GATE_PT",
+      "name": "Gate_Pt_Layout",
       "width": 16,
       "height": 11,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_Gatehouse",
-      "border_filepath": "data/layouts/Gate_Jubilife/border.bin",
-      "blockdata_filepath": "data/layouts/Gate_Jubilife/map.bin"
+      "border_filepath": "data/layouts/Gate_Pt/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Pt/map.bin"
     },
     {
       "id": "LAYOUT_POKEMON_CENTER_PT_1F",
