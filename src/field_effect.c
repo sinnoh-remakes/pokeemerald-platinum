@@ -357,6 +357,12 @@ static const struct SpriteFrameImage sPicTable_NewGameBirch[] =
     obj_frame_tiles(sNewGameBirch_Gfx)
 };
 
+static const struct SpritePalette sSpritePalette_NewGameBirch =
+{
+    .data = sNewGameBirch_Pal,
+    .tag = 0x1006
+};
+
 static const struct SpritePalette sSpritePalette_NewGameRowan =
 {
     .data = sNewGameRowan_Pal,

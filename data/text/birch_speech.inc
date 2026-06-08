@@ -16,13 +16,11 @@ gText_Birch_Welcome::
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
-	.string "\n"
+	.string "This world is widely inhabited by\n"
+	.string "creatures known as Pokémon.\p"
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "This world is widely inhabited by\n"
-	.string "creatures known as Pokémon.\p"
 	@ FODO: Implement intro poke ball interaction
 	@ .string "Here, I have a Poké Ball.\p"
 	@ .string "Touch the button on the middle of\n"
