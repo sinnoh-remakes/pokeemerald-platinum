@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_CITY_HOUSE_C",
   "name": "OreburghCity_HouseC",
   "layout": "LAYOUT_TWINLEAF_TOWN_GENERIC_HOUSE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_OREBURGH_DAY",
   "region_map_section": "MAPSEC_OREBURGH_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
