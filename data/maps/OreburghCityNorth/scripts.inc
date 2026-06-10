@@ -38,6 +38,7 @@ OreburghCityNorth_EventScript_Youngster1::
 	waitmovement 0
 	msgbox OreburghCityNorth_Text_HowdyTrainer, MSGBOX_DEFAULT
 	closemessage
+	playbgm MUS_DP_FOLLOW_ME, FALSE
 	applymovement LOCALID_CAMERA, OreburghCityNorth_Movement_IntroPlayer1
 	applymovement LOCALID_PLAYER, OreburghCityNorth_Movement_IntroPlayer1
 	applymovement LOCALID_OREBURGH_CITY_YOUNGSTER, OreburghCityNorth_Movement_IntroYoungster1
@@ -51,6 +52,7 @@ OreburghCityNorth_EventScript_Youngster2::
 	waitmovement 0
 	msgbox OreburghCityNorth_Text_HowdyTrainer, MSGBOX_DEFAULT
 	closemessage
+	playbgm MUS_DP_FOLLOW_ME, FALSE
 	applymovement LOCALID_CAMERA, OreburghCityNorth_Movement_IntroPlayer2
 	applymovement LOCALID_PLAYER, OreburghCityNorth_Movement_IntroPlayer2
 	applymovement LOCALID_OREBURGH_CITY_YOUNGSTER, OreburghCityNorth_Movement_IntroYoungster2
@@ -64,6 +66,7 @@ OreburghCityNorth_EventScript_Youngster3::
 	waitmovement 0
 	msgbox OreburghCityNorth_Text_HowdyTrainer, MSGBOX_DEFAULT
 	closemessage
+	playbgm MUS_DP_FOLLOW_ME, FALSE
 	applymovement LOCALID_CAMERA, OreburghCityNorth_Movement_IntroPlayer3
 	applymovement LOCALID_PLAYER, OreburghCityNorth_Movement_IntroPlayer3
 	applymovement LOCALID_OREBURGH_CITY_YOUNGSTER, OreburghCityNorth_Movement_IntroYoungster3
@@ -75,6 +78,7 @@ OreburghCityNorth_EventScript_Youngster4::
 	call OreburghCityNorth_EventScript_Youngster
 	msgbox OreburghCityNorth_Text_HowdyTrainer, MSGBOX_DEFAULT
 	closemessage
+	playbgm MUS_DP_FOLLOW_ME, FALSE
 	applymovement LOCALID_CAMERA, OreburghCityNorth_Movement_IntroPlayer4
 	applymovement LOCALID_PLAYER, OreburghCityNorth_Movement_IntroPlayer4
 	applymovement LOCALID_OREBURGH_CITY_YOUNGSTER, OreburghCityNorth_Movement_IntroYoungster4

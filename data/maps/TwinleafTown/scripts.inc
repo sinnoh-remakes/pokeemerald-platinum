@@ -60,6 +60,7 @@ TwinleafTown_EventScript_RivalMeet::
 	playse SE_PIN
 	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
+	playbgm MUS_DP_RIVAL, FALSE
 	msgbox TwinleafTown_Text_RivalBump, MSGBOX_SIGN
 	applymovement LOCALID_PLAYER, TwinleafTown_Movement_PlayerFaceRight
 	applymovement LOCALID_TWINLEAF_RIVAL, TwinleafTown_Movement_RivalRight
@@ -80,6 +81,7 @@ TwinleafTown_EventScript_RivalMeet::
 	opendoor 3, 12
 	waitdooranim
 	waitmovement 0
+	fadedefaultbgm
 	applymovement LOCALID_TWINLEAF_RIVAL, TwinleafTown_Movement_RivalUp
 	waitmovement 0
 	closedoor 3, 12

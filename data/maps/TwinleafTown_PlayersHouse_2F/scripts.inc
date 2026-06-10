@@ -25,6 +25,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterUp::
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnUp
 	waitmovement 0
 	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitUp
 	waitmovement 0
@@ -47,6 +48,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterLeft::
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnLeft
 	waitmovement 0
 	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitLeft
 	waitmovement 0
@@ -69,6 +71,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterDown::
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnDown
 	waitmovement 0
 	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitDown
 	waitmovement 0
@@ -91,6 +94,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterRight::
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnRight
 	waitmovement 0
 	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitRight
 	waitmovement 0
@@ -109,6 +113,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnter::
 	waitmovement 0
 	delay 48
 	delay 48
+	playbgm MUS_DP_RIVAL, FALSE
 	msgbox TwinleafTown_PlayersHouse_2F_Text_ThereYouAre, MSGBOX_SIGN
 	return
 
