@@ -351,6 +351,9 @@ Route201_EventScript_HundredPass::
 	waitmovement 0
 	msgbox Route201_Text_SomeClass, MSGBOX_DEFAULT
 	closemessage
+	fadedefaultbgm
+	delay 48
+	delay 48
 	delay 48
 	release
 	end
@@ -379,7 +382,6 @@ Route201_EventScript_SomethingWrongDawn::
 	waitmovement 0
 	msgbox Route201_Text_HardReplaceDawn, MSGBOX_DEFAULT
 	closemessage
-	fadedefaultbgm
 	return
 	
 Route201_EventScript_SomethingWrongLucas::
@@ -388,7 +390,6 @@ Route201_EventScript_SomethingWrongLucas::
 	waitmovement 0
 	msgbox Route201_Text_HardReplaceLucas, MSGBOX_DEFAULT
 	closemessage
-	fadedefaultbgm
 	return
 
 Route201_Movement_ProfessorEnter:
@@ -784,6 +785,7 @@ Route201_Text_HereGoes:
 	.string "OK, here goes!\p"
 	.string "On your marks...$"
 
+@ FODO: Make text print double height
 Route201_Text_HoldIt:
 	.string "Hold it!$"
 

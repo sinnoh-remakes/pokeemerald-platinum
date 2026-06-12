@@ -28,6 +28,7 @@ OreburghCityNorth_EventScript_YoungsterConfused::
 	@ Someone there
 	msgbox OreburghCityNorth_Text_SomeoneThere, MSGBOX_DEFAULT
 	setvar VAR_OREBURGH_CITY_STATE, 2
+	fadedefaultbgm
 	special RemoveCameraObject
 	release
 	end

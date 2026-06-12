@@ -88,6 +88,8 @@ TwinleafTown_EventScript_RivalMeet::
 	removeobject LOCALID_TWINLEAF_RIVAL
 	waitdooranim
 	release
+	delay 48
+	delay 48
 	end
 
 TwinleafTown_Movement_PlayerBump:
@@ -361,6 +363,7 @@ TwinleafTown_Movement_WalkLeft7:
 	walk_down
 	step_end
 
+@ FODO: Make text print double height
 TwinleafTown_Text_Thud:
 	.string "THUD!!$"
 

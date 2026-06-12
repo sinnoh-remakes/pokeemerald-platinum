@@ -53,6 +53,8 @@ TwinleafTown_RivalsHouse_2F_EventScript_MeetRival::
 	removeobject LOCALID_TWINLEAF_RIVAL2F_RIVAL
 	setflag FLAG_HIDE_RIVAL_HOUSE_RIVAL
 	release
+	delay 48
+	delay 48
 	end
 
 TwinleafTown_RivalsHouse_2F_Movement_RivalRun1:

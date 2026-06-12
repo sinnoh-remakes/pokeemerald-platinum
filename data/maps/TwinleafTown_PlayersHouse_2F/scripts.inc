@@ -31,6 +31,9 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterUp::
 	waitmovement 0
 	removeobject LOCALID_TWINLEAF_PLAYER2F_RIVAL
 	delay 48
+	delay 48
+	delay 48
+	delay 48
 	release
 	end
 
