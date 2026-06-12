@@ -673,8 +673,6 @@ EventScript_AfterWhiteOutHealMsg::
 
 EventScript_AfterWhiteOutMomHeal::
 	lockall
-	applymovement LOCALID_TWINLEAF_PLAYER1F_MOM, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox gText_MomExplainHPGetPotions
@@ -1009,25 +1007,26 @@ gText_MonsHealed::
 	.string "We hope you excel!$"
 
 gText_HadQuiteAnExperienceTakeRest::
-	.string "MOM: {PLAYER}!\n"
+	.string "Mom: {PLAYER}!\n"
 	.string "Welcome home.\p"
-	.string "It sounds like you had quite\n"
-	.string "an experience.\p"
+	.string "It sounds like you had quite the\n"
+	.string "experience out there.\p"
 	.string "Maybe you should take a quick\n"
-	.string "rest.$"
+	.string "rest so you can relax.$"
 
 gText_MomExplainHPGetPotions::
-	.string "MOM: Oh, good! You and your\n"
-	.string "POKéMON are looking great.\p"
-	.string "I just heard from PROF. BIRCH.\p"
-	.string "He said that POKéMON's energy is\n"
-	.string "measured in HP.\p"
-	.string "If your POKéMON lose their HP,\n"
-	.string "you can restore them at any\l"
-	.string "POKéMON CENTER.\p"
+	.string "Mom: Oh, good! You and your\n"
+	.string "Pokémon are looking great.\p"
+	.string "Oh yes, I heard from Professor\n"
+	.string "Rowan.\p"
+	.string "He said that a Pokémon's energy is\n"
+	.string "measured in HP (Hit Points).\p"
+	.string "If your Pokémon lose their HP,\n"
+	.string "you can restore it at any\l"
+	.string "Pokémon Center.\p"
 	.string "If you're going to travel far away,\n"
-	.string "the smart TRAINER stocks up on\l"
-	.string "POTIONS at the POKéMON MART.\p"
+	.string "the smart trainer stocks up on\l"
+	.string "Potions at the Pokémon Mart.\p"
 	.string "Make me proud, honey!\p"
 	.string "Take care!$"
 
