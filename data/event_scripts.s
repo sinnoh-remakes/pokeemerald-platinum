@@ -821,6 +821,11 @@ Common_EventScript_PlayGymBadgeFanfare::
 	waitfanfare
 	return
 
+Common_EventScript_PlayGymBadgeFanfarePt::
+	playfanfare MUS_DP_OBTAIN_BADGE
+	waitfanfare
+	return
+
 Common_EventScript_OutOfCenterPartyHeal::
 	fadescreenswapbuffers FADE_TO_BLACK
 	playfanfare MUS_HEAL
