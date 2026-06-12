@@ -178,7 +178,7 @@ BerryTree_EventScript_PickBerry::
 	message BerryTree_Text_PickedTheBerry
 	delay 10
 	showberrydescription
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_DP_OBTAIN_BERRY
 	waitmessage
 	waitfanfare
 	waitbuttonpress
@@ -370,7 +370,7 @@ BerryTree_EventScript_PickBerry_Mutation::
 	special IncrementDailyPickedBerries
 	special ObjectEventInteractionRemoveBerryTree
 	message BerryTree_Text_PickedTheBerry_Mutation
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_DP_OBTAIN_BERRY
 	waitmessage
 	waitfanfare
 	waitbuttonpress
