@@ -673,10 +673,6 @@ EventScript_AfterWhiteOutHealMsg::
 
 EventScript_AfterWhiteOutMomHeal::
 	lockall
-	@ FODO: Change direction before screen fades in
-	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
-	applymovement VAR_LAST_TALKED, Common_Movement_FaceRight
-	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox gText_MomExplainHPGetPotions
