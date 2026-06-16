@@ -60,10 +60,8 @@ gText_Birch_YourePlayer::
 	@ FODO: Implement rival naming
 	@ .string "Now, this boy here...\n"
 	@ .string "I believe he's your friend.\p"
+	@ .string "What might his name be?"
 	.string "$"
-
-gText_Birch_WhatsHisName::
-	.string "What might his name be?$"
 
 gText_Birch_AreYouReady::
 	.string "All right, {PLAYER}, the time\n"

@@ -119,7 +119,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 * Distortion World Tileset: [Rahtak](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/tree/main/Tilesets/The%20Great%20Tileset%20Exchange/Full%20Tilesets/Distortion%20World%20Secondary)
 * DPPt Music: [CyanSMP64](https://github.com/CyanSMP64/pokeemerald/tree/dppt_music)
 
-### Pokeemerald Pkatinum Graphics Credits
+### Pokeemerald Platinum Graphics Credits
 * [RichardPT](https://www.deviantart.com/richardpt/gallery/82040224/pokemon-trainers-overworld-sprites)
 * [robloxmaster376](https://www.deviantart.com/robloxmaster376/gallery)
 * [The Spriter's Resource](https://www.spriters-resource.com/ds_dsi/pokemonplatinum/)
