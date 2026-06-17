@@ -1797,6 +1797,7 @@ void CB2_NewGame(void)
     // gFieldCallback = ExecuteTruckSequence;
     gFieldCallback2 = NULL;
     DoMapLoadLoop(&gMain.state);
+    PlayerFaceDirection(DIR_NORTH);
     SetFieldVBlankCallback();
     SetMainCallback1(CB1_Overworld);
     SetMainCallback2(CB2_Overworld);

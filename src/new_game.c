@@ -131,7 +131,6 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    // FODO: Make player face upwards
     SetWarpDestination(MAP_GROUP(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 3, 5);
     WarpIntoMap();
 }

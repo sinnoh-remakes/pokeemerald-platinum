@@ -108,7 +108,6 @@ bool8 SetDiveWarpDive(u16 x, u16 y);
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum);
 void ResetInitialPlayerAvatarState(void);
 void StoreInitialPlayerAvatarState(void);
-void SetInitialPlayerAvatarDirection(u8 direction);
 bool32 Overworld_IsBikingAllowed(void);
 void SetDefaultFlashLevel(void);
 void SetFlashLevel(s32 flashLevel);
