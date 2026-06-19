@@ -24,7 +24,8 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterUp::
 	call TwinleafTown_PlayersHouse_2F_EventScript_RivalPC
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnUp
 	waitmovement 0
-	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_DEFAULT
+	closemessage
 	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitUp
@@ -50,7 +51,8 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterLeft::
 	call TwinleafTown_PlayersHouse_2F_EventScript_RivalPC
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnLeft
 	waitmovement 0
-	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_DEFAULT
+	closemessage
 	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitLeft
@@ -73,7 +75,8 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterDown::
 	call TwinleafTown_PlayersHouse_2F_EventScript_RivalPC
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnDown
 	waitmovement 0
-	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_DEFAULT
+	closemessage
 	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitDown
@@ -96,7 +99,8 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnterRight::
 	call TwinleafTown_PlayersHouse_2F_EventScript_RivalPC
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ReturnRight
 	waitmovement 0
-	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_RightRight, MSGBOX_DEFAULT
+	closemessage
 	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_PlayersHouse_2F_Movement_PlayerRight
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, TwinleafTown_PlayersHouse_2F_Movement_ExitRight
@@ -117,11 +121,12 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnter::
 	delay 48
 	delay 48
 	playbgm MUS_DP_RIVAL, FALSE
-	msgbox TwinleafTown_PlayersHouse_2F_Text_ThereYouAre, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_ThereYouAre, MSGBOX_DEFAULT
+	closemessage
 	return
 
 TwinleafTown_PlayersHouse_2F_EventScript_RivalExplain::
-	msgbox TwinleafTown_PlayersHouse_2F_Text_SeeTV, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_SeeTV, MSGBOX_DEFAULT
 	playse SE_PIN
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -130,10 +135,12 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalExplain::
 	return
 
 TwinleafTown_PlayersHouse_2F_EventScript_RivalPC::
-	msgbox TwinleafTown_PlayersHouse_2F_Text_NewPC, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_NewPC, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	msgbox TwinleafTown_PlayersHouse_2F_Text_WhereWas, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_WhereWas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 TwinleafTown_PlayersHouse_2F_Movement_RivalEnter:

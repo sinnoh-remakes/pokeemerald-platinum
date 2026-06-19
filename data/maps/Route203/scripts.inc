@@ -70,7 +70,8 @@ Route203_EventScript_RivalBattlePiplup::
 
 Route203_EventScript_PostRivalBattle::
 	setvar VAR_ROUTE203_STATE, 1
-	msgbox Route203_Text_RivalPostBattle, MSGBOX_SIGN
+	msgbox Route203_Text_RivalPostBattle, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ROUTE203_RIVAL, Common_Movement_WalkFastRight8
 	waitmovement 0
 	setflag FLAG_HIDE_ROUTE_203_RIVAL

@@ -147,7 +147,8 @@ JubilifeCity_EventScript_HelperWalkUp::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp17
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp17
 	waitmovement 0
-	msgbox JubilifeCity_Text_ThatMan, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_ThatMan, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry1
 	waitmovement 0
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry2
@@ -164,7 +165,8 @@ JubilifeCity_EventScript_HelperWalkUp::
 	delay 48
 	delay 48
 	playbgm MUS_PL_LOOKER, FALSE
-	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox JubilifeCity_Text_BegYourPardon, MSGBOX_YESNO
@@ -174,10 +176,12 @@ JubilifeCity_EventScript_HelperWalkUp::
 	@ FODO: Implement and give Vs. Recorder item
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox JubilifeCity_Text_NiftyDevice, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_NiftyDevice, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookAround
 	waitmovement 0
-	msgbox JubilifeCity_Text_HaveRequest, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_HaveRequest, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperWatchLooker
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerWatchLooker
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry3
@@ -185,15 +189,18 @@ JubilifeCity_EventScript_HelperWalkUp::
 	fadedefaultbgm
 	closemessage
 	delay 48
-	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_DEFAULT
+	closemessage
 	delay 48
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerSeeSchool
 	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperSeeSchool
 	waitmovement 0
-	msgbox JubilifeCity_Text_HereItIs, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_HereItIs, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperLeaveSchool
 	waitmovement 0
-	msgbox JubilifeCity_Text_SawYourFriend, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_SawYourFriend, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerWatchHelper
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown6
 	waitmovement 0

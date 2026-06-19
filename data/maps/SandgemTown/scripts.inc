@@ -245,11 +245,13 @@ SandgemTown_EventScript_HelperTalk1::
 	return
 
 SandgemTown_EventScript_WaitingDawn::
-	msgbox SandgemTown_Text_WaitingDawn, MSGBOX_SIGN
+	msgbox SandgemTown_Text_WaitingDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_WaitingLucas::
-	msgbox SandgemTown_Text_WaitingLucas, MSGBOX_SIGN
+	msgbox SandgemTown_Text_WaitingLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_HelperToLab::
@@ -270,7 +272,8 @@ SandgemTown_EventScript_HelperToLab::
 	delay 48
 	delay 48
 	playbgm MUS_DP_RIVAL, FALSE
-	msgbox SandgemTown_Text_Rival, MSGBOX_SIGN
+	msgbox SandgemTown_Text_Rival, MSGBOX_DEFAULT
+	closemessage
 	fadedefaultbgm
 	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_TurnRight
 	applymovement LOCALID_PLAYER, SandgemTown_Movement_TurnRight
@@ -341,11 +344,13 @@ SandgemTown_EventScript_OurLabLucas::
 	return
 
 SandgemTown_EventScript_AnywayDawn::
-	msgbox SandgemTown_Text_AnywayDawn, MSGBOX_SIGN
+	msgbox SandgemTown_Text_AnywayDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_AnywayLucas::
-	msgbox SandgemTown_Text_AnywayLucas, MSGBOX_SIGN
+	msgbox SandgemTown_Text_AnywayLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_MoveHelper::
@@ -365,7 +370,8 @@ SandgemTown_EventScript_HelperBuildings::
 	delay 48
 	applymovement LOCALID_SANDGEM_PROF, Common_Movement_WalkInPlaceDown
 	waitmovement 0
-	msgbox SandgemTown_Text_Surprise, MSGBOX_SIGN
+	msgbox SandgemTown_Text_Surprise, MSGBOX_DEFAULT
+	closemessage
 	playse SE_PIN
 	applymovement LOCALID_SANDGEM_HELPER, Common_Movement_ExclamationMark
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
@@ -378,7 +384,8 @@ SandgemTown_EventScript_HelperBuildings::
 	giveitem ITEM_TM_RETURN
 	setflag FLAG_RECEIVED_TM_RETURN
 	@ goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox SandgemTown_Text_TechnicalMove, MSGBOX_SIGN
+	msgbox SandgemTown_Text_TechnicalMove, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_SANDGEM_PROF, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_PROF
@@ -436,43 +443,53 @@ SandgemTown_EventScript_HelperBuildings::
 	end
 
 SandgemTown_EventScript_ShockDawn::
-	msgbox SandgemTown_Text_ShockDawn, MSGBOX_SIGN
+	msgbox SandgemTown_Text_ShockDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_MentorDawn::
-	msgbox SandgemTown_Text_MentorDawn, MSGBOX_SIGN
+	msgbox SandgemTown_Text_MentorDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_CenterDawn::
-	msgbox SandgemTown_Text_CenterDawn, MSGBOX_SIGN
+	msgbox SandgemTown_Text_CenterDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_MartDawn::
-	msgbox SandgemTown_Text_MartDawn, MSGBOX_SIGN
+	msgbox SandgemTown_Text_MartDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_FamilyDawn::
-	msgbox SandgemTown_Text_FamilyDawn, MSGBOX_SIGN
+	msgbox SandgemTown_Text_FamilyDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_ShockLucas::
-	msgbox SandgemTown_Text_ShockLucas, MSGBOX_SIGN
+	msgbox SandgemTown_Text_ShockLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_MentorLucas::
-	msgbox SandgemTown_Text_MentorLucas, MSGBOX_SIGN
+	msgbox SandgemTown_Text_MentorLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_CenterLucas::
-	msgbox SandgemTown_Text_CenterLucas, MSGBOX_SIGN
+	msgbox SandgemTown_Text_CenterLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_MartLucas::
-	msgbox SandgemTown_Text_MartLucas, MSGBOX_SIGN
+	msgbox SandgemTown_Text_MartLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_EventScript_FamilyLucas::
-	msgbox SandgemTown_Text_FamilyLucas, MSGBOX_SIGN
+	msgbox SandgemTown_Text_FamilyLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_Movement_Helper_Guide1:

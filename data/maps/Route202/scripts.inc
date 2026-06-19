@@ -250,27 +250,33 @@ Route202_Movement_HelperLeave:
 	step_end
 
 Route202_EventScript_ReallyEagerDawn::
-	msgbox Route202_Text_ReallyEagerDawn, MSGBOX_SIGN
+	msgbox Route202_Text_ReallyEagerDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_ReallyEagerLucas::
-	msgbox Route202_Text_ReallyEagerLucas, MSGBOX_SIGN
+	msgbox Route202_Text_ReallyEagerLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_TellFamilyDawn::
-	msgbox Route202_Text_TellFamilyDawn, MSGBOX_SIGN
+	msgbox Route202_Text_TellFamilyDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_TellFamilyLucas::
-	msgbox Route202_Text_TellFamilyLucas, MSGBOX_SIGN
+	msgbox Route202_Text_TellFamilyLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_DemonstrateDawn::
-	msgbox Route202_Text_DemonstrateDawn, MSGBOX_SIGN
+	msgbox Route202_Text_DemonstrateDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_DemonstrateLucas::
-	msgbox Route202_Text_DemonstrateLucas, MSGBOX_SIGN
+	msgbox Route202_Text_DemonstrateLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_LoweredDawn::
@@ -282,11 +288,13 @@ Route202_EventScript_LoweredLucas::
 	return
 
 Route202_EventScript_FartherDawn::
-	msgbox Route202_Text_FartherDawn, MSGBOX_SIGN
+	msgbox Route202_Text_FartherDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_FartherLucas::
-	msgbox Route202_Text_FartherLucas, MSGBOX_SIGN
+	msgbox Route202_Text_FartherLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 Route202_EventScript_RouteSignSandgem::

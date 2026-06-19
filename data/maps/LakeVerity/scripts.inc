@@ -24,18 +24,21 @@ LakeVerity_EventScript_IntroScene::
 	setvar VAR_LAKE_VERITY_STATE, 1
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE_201_RIVAL
-	msgbox LakeVerity_Text_WhatsGoing, MSGBOX_SIGN
+	msgbox LakeVerity_Text_WhatsGoing, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_CAMERA, LakeVerity_Movement_CameraPan1
 	waitmovement 0
 	delay 48
-	msgbox LakeVerity_Text_TimeSpace, MSGBOX_SIGN
+	msgbox LakeVerity_Text_TimeSpace, MSGBOX_DEFAULT
+	closemessage
 	delay 48
 	delay 48
 	applymovement LOCALID_CAMERA, LakeVerity_Movement_CameraPan2
 	applymovement LOCALID_CYRUS, LakeVerity_Movement_CyrusLeave1
 	waitmovement 0
 	delay 10
-	msgbox LakeVerity_Text_AllowPass, MSGBOX_SIGN
+	msgbox LakeVerity_Text_AllowPass, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkRight
 	waitmovement 0
@@ -51,14 +54,16 @@ LakeVerity_EventScript_IntroScene::
 	waitmovement 0
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
-	msgbox LakeVerity_Text_WhatsAbout, MSGBOX_SIGN
+	msgbox LakeVerity_Text_WhatsAbout, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
 	msgbox LakeVerity_Text_LetsCatch, MSGBOX_DEFAULT
 	playmoncry SPECIES_MESPRIT, CRY_MODE_ENCOUNTER
-	msgbox LakeVerity_Text_Kyaun, MSGBOX_SIGN
+	msgbox LakeVerity_Text_Kyaun, MSGBOX_DEFAULT
+	closemessage
 	waitmoncry
 	delay 48
 	playse SE_PIN
@@ -85,13 +90,15 @@ LakeVerity_EventScript_IntroScene::
 	delay 48
 	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_Scurry
 	waitmovement 0
-	msgbox LakeVerity_Text_HearThat, MSGBOX_SIGN
+	msgbox LakeVerity_Text_HearThat, MSGBOX_DEFAULT
+	closemessage
 	playse SE_PIN
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
 	delay 48
-	msgbox LakeVerity_Text_NoBalls, MSGBOX_SIGN
+	msgbox LakeVerity_Text_NoBalls, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_RivalLeave
 	waitmovement 0

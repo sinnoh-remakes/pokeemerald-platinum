@@ -61,7 +61,8 @@ TwinleafTown_EventScript_RivalMeet::
 	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	playbgm MUS_DP_RIVAL, FALSE
-	msgbox TwinleafTown_Text_RivalBump, MSGBOX_SIGN
+	msgbox TwinleafTown_Text_RivalBump, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, TwinleafTown_Movement_PlayerFaceRight
 	applymovement LOCALID_TWINLEAF_RIVAL, TwinleafTown_Movement_RivalRight
 	waitmovement 0
@@ -76,7 +77,8 @@ TwinleafTown_EventScript_RivalMeet::
 	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 30
-	msgbox TwinleafTown_Text_RivalForget, MSGBOX_SIGN
+	msgbox TwinleafTown_Text_RivalForget, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_FaceUp
 	opendoor 3, 12
 	waitdooranim

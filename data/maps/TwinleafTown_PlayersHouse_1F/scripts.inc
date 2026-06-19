@@ -100,7 +100,8 @@ TwinleafTown_PlayersHouse_1F_EventScript_LakeReturn::
 	waitmovement 0
 	delay 48
 	delay 48
-	msgbox TwinleafTown_PlayersHouse_1F_Text_Unharmed, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_1F_Text_Unharmed, MSGBOX_DEFAULT
+	closemessage
 	delay 48
 	msgbox TwinleafTown_PlayersHouse_1F_Text_PutOn, MSGBOX_DEFAULT
 	playfanfare MUS_DP_OBTAIN_ITEM
@@ -110,7 +111,8 @@ TwinleafTown_PlayersHouse_1F_EventScript_LakeReturn::
 	setflag FLAG_SYS_B_DASH
 	delay 48
 	msgbox TwinleafTown_PlayersHouse_1F_Text_GoingSandGem, MSGBOX_DEFAULT
-	msgbox TwinleafTown_PlayersHouse_1F_Text_ShoesManual, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_1F_Text_ShoesManual, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
@@ -201,7 +203,8 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomAdventure::
 	call_if_eq VAR_FACING, DIR_EAST, TwinleafTown_PlayersHouse_1F_EventScript_MomTurnNorth
 	msgbox TwinleafTown_PlayersHouse_1F_Text_EnvyKiddo, MSGBOX_DEFAULT
 	faceplayer
-	msgbox TwinleafTown_PlayersHouse_1F_Text_JustJoking, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_1F_Text_JustJoking, MSGBOX_DEFAULT
+	closemessage
 	@ TODO: Play door open sound
 	addobject LOCALID_TWINLEAF_PLAYER1F_RIVALMOM
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
@@ -224,7 +227,8 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomAdventure::
 	call_if_eq VAR_FACING, DIR_WEST, TwinleafTown_PlayersHouse_1F_EventScript_FaceMomEast
 	call_if_eq VAR_FACING, DIR_SOUTH, TwinleafTown_PlayersHouse_1F_EventScript_FaceMomNorth
 	call_if_eq VAR_FACING, DIR_EAST, TwinleafTown_PlayersHouse_1F_EventScript_FaceMomWest
-	msgbox TwinleafTown_PlayersHouse_1F_Text_WontYou, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_1F_Text_WontYou, MSGBOX_DEFAULT
+	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, TwinleafTown_PlayersHouse_1F_EventScript_FaceRivalMomEast
 	call_if_eq VAR_FACING, DIR_WEST, TwinleafTown_PlayersHouse_1F_EventScript_RivalMomRight2
 	call_if_eq VAR_FACING, DIR_SOUTH, TwinleafTown_PlayersHouse_1F_EventScript_RivalMomUp2
@@ -233,7 +237,8 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomAdventure::
 	playfanfare MUS_DP_OBTAIN_ITEM
 	message TwinleafTown_PlayersHouse_1F_Text_ReceivedParcel
 	waitfanfare
-	msgbox TwinleafTown_PlayersHouse_1F_Text_KnowingMyBoy, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_1F_Text_KnowingMyBoy, MSGBOX_DEFAULT
+	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, TwinleafTown_PlayersHouse_1F_EventScript_RivalMomWestSouthLeave
 	call_if_eq VAR_FACING, DIR_WEST, TwinleafTown_PlayersHouse_1F_EventScript_RivalMomEastLeave
 	call_if_eq VAR_FACING, DIR_SOUTH, TwinleafTown_PlayersHouse_1F_EventScript_RivalMomNorthLeave
