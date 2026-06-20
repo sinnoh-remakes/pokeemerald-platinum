@@ -11,7 +11,7 @@ OreburghCity_Gym_EventScript_RoarkDefeated::
 	msgbox OreburghCity_Gym_Text_ThisIsEmbarrassing, MSGBOX_DEFAULT
 	message OreburghCity_Gym_Text_ReceivedCoalBadge
 	waitmessage
-	call Common_EventScript_PlayGymBadgeFanfare
+	call Common_EventScript_PlayGymBadgeFanfarePt
 	msgbox OreburghCity_Gym_Text_HavingThatCoalBadge, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_OREBURGH_GYM
 	setflag FLAG_BADGE01_GET

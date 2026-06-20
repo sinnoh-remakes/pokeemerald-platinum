@@ -4682,7 +4682,7 @@ static void Cmd_getexp(void)
                     && !gBattleStruct->wildVictorySong)
                 {
                     BattleStopLowHpSound();
-                    PlayBGM(MUS_VICTORY_WILD);
+                    PlayBGM(MUS_DP_VICTORY_WILD);
                     gBattleStruct->wildVictorySong++;
                 }
 
@@ -17022,7 +17022,7 @@ void BS_SetTeleportOutcome(void)
 void BS_PlayTrainerDefeatedMusic(void)
 {
     NATIVE_ARGS();
-    BtlController_EmitPlayFanfareOrBGM(gBattlerAttacker, B_COMM_TO_CONTROLLER, MUS_VICTORY_TRAINER, TRUE);
+    BtlController_EmitPlayFanfareOrBGM(gBattlerAttacker, B_COMM_TO_CONTROLLER, MUS_DP_VICTORY_TRAINER, TRUE);
     MarkBattlerForControllerExec(gBattlerAttacker);
     gBattlescriptCurrInstr = cmd->nextInstr;
 }

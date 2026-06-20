@@ -60,6 +60,7 @@ LakeVerity_EventScript_IntroScene::
 	playmoncry SPECIES_MESPRIT, CRY_MODE_ENCOUNTER
 	msgbox LakeVerity_Text_Kyaun, MSGBOX_SIGN
 	waitmoncry
+	delay 48
 	playse SE_PIN
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0

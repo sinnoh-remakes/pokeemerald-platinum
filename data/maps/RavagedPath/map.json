@@ -2,7 +2,7 @@
   "id": "MAP_RAVAGED_PATH",
   "name": "RavagedPath",
   "layout": "LAYOUT_RAVAGED_PATH",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_OREBURGH_GATE",
   "region_map_section": "MAPSEC_RAVAGED_PATH",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

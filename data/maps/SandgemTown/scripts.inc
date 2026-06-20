@@ -267,9 +267,9 @@ SandgemTown_EventScript_HelperToLab::
 	playse SE_PIN
 	applymovement LOCALID_SANDGEM_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	delay 48
-	delay 48
+	playbgm MUS_DP_RIVAL, FALSE
 	msgbox SandgemTown_Text_Rival, MSGBOX_SIGN
+	fadedefaultbgm
 	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_TurnRight
 	applymovement LOCALID_PLAYER, SandgemTown_Movement_TurnRight
 	applymovement LOCALID_SANDGEM_RIVAL, SandgemTown_Movement_RivalRun
@@ -393,6 +393,7 @@ SandgemTown_EventScript_HelperBuildings::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_MentorDawn
 	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_MentorLucas
+	playbgm MUS_DP_FOLLOW_ME, FALSE
 	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper_Guide1
 	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player_Guide1
 	applymovement LOCALID_CAMERA, SandgemTown_Movement_Player_Guide1
@@ -419,6 +420,10 @@ SandgemTown_EventScript_HelperBuildings::
 	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_FamilyLucas
 	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player_Guide2
 	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper_Guide3
+	delay 48
+	delay 48
+	delay 48
+	fadedefaultbgm
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_HELPER
 	setflag FLAG_HIDE_SANDGEM_TOWN_HELPER

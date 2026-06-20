@@ -2,7 +2,7 @@
   "id": "MAP_TWINLEAF_TOWN",
   "name": "TwinleafTown",
   "layout": "LAYOUT_TWINLEAF_TOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_TWINLEAF_DAY",
   "region_map_section": "MAPSEC_TWINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
