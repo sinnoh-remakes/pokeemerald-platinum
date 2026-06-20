@@ -103,7 +103,7 @@ TwinleafTown_PlayersHouse_1F_EventScript_LakeReturn::
 	msgbox TwinleafTown_PlayersHouse_1F_Text_Unharmed, MSGBOX_SIGN
 	delay 48
 	msgbox TwinleafTown_PlayersHouse_1F_Text_PutOn, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_DP_OBTAIN_ITEM
 	message TwinleafTown_PlayersHouse_1F_Text_ReceivedShoes
 	waitfanfare
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -230,7 +230,7 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomAdventure::
 	call_if_eq VAR_FACING, DIR_SOUTH, TwinleafTown_PlayersHouse_1F_EventScript_RivalMomUp2
 	call_if_eq VAR_FACING, DIR_EAST, TwinleafTown_PlayersHouse_1F_EventScript_FaceRivalMomNorth
 	msgbox TwinleafTown_PlayersHouse_1F_Text_TakeThis, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_DP_OBTAIN_ITEM
 	message TwinleafTown_PlayersHouse_1F_Text_ReceivedParcel
 	waitfanfare
 	msgbox TwinleafTown_PlayersHouse_1F_Text_KnowingMyBoy, MSGBOX_SIGN

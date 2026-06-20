@@ -42,6 +42,7 @@ Route203_EventScript_RivalApproach::
 	waitmovement 0
 	applymovement LOCALID_ROUTE203_RIVAL, Common_Movement_Delay48
 	waitmovement 0
+	playbgm MUS_DP_RIVAL, FALSE
 	return
 
 Route203_EventScript_Rival::

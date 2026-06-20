@@ -60,6 +60,14 @@ JubilifeCity_EventScript_HelperEncounter_3::
 	goto JubilifeCity_EventScript_HelperWalkUp
 	end
 
+JubilifeCity_EventScript_PlayMusicLucas::
+	playbgm MUS_DP_LUCAS, FALSE
+	return
+
+JubilifeCity_EventScript_PlayMusicDawn::
+	playbgm MUS_DP_DAWN, FALSE
+	return
+
 JubilifeCity_EventScript_HelperWalkDown::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown2
@@ -69,6 +77,9 @@ JubilifeCity_EventScript_HelperWalkDown::
 	waitmovement 0
 	delay 48
 	delay 48
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_PlayMusicDawn
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_PlayMusicLucas
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown3
 	waitmovement 0
@@ -152,6 +163,7 @@ JubilifeCity_EventScript_HelperWalkUp::
 	waitmovement 0
 	delay 48
 	delay 48
+	playbgm MUS_PL_LOOKER, FALSE
 	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_SIGN
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
@@ -170,6 +182,7 @@ JubilifeCity_EventScript_HelperWalkUp::
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerWatchLooker
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry3
 	waitmovement 0
+	fadedefaultbgm
 	closemessage
 	delay 48
 	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_SIGN
