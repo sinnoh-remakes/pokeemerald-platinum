@@ -4550,16 +4550,22 @@ BattleScript_LocalBattleLostPrintWhiteOut::
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_LocalBattleLostEnd
 	printstring STRINGID_PLAYERWHITEOUT2_WILD
 	waitmessage B_WAIT_TIME_LONG
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 	waitmessage B_WAIT_TIME_LONG
 	end2
 BattleScript_LocalBattleLostEnd::
 	printstring STRINGID_PLAYERWHITEOUT2_TRAINER
 	waitmessage B_WAIT_TIME_LONG
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 	waitmessage B_WAIT_TIME_LONG
 	end2
 .else
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_LocalBattleLostEnd::
@@ -8806,6 +8812,8 @@ BattleScript_ForfeitBattleGaveMoney::
 .if B_WHITEOUT_MONEY >= GEN_4
 	printstring STRINGID_PLAYERWHITEOUT2_TRAINER
 .else
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 .endif
 	waitmessage B_WAIT_TIME_LONG

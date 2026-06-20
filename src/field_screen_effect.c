@@ -1423,6 +1423,15 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         CopyWindowToVram(windowId, COPYWIN_FULL);
 
         gTasks[taskId].tIsPlayerHouse = IsLastHealLocationPlayerHouse();
+        if (gTasks[taskId].tIsPlayerHouse)
+        {
+            ObjectEventTurn(&gObjectEvents[gPlayerAvatar.objectEventId], DIR_WEST);
+            ObjectEventTurn(&gObjectEvents[GetObjectEventIdByLocalId(gSpecialVar_LastTalked)], DIR_EAST);
+        }
+        else
+        {
+            ObjectEventTurn(&gObjectEvents[gPlayerAvatar.objectEventId], DIR_NORTH);
+        }
         gTasks[taskId].tState = WHITEOUT_CUTSCENE_PRINT_MSG;
         break;
     case WHITEOUT_CUTSCENE_PRINT_MSG:
@@ -1431,7 +1440,6 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
 
         if (PrintWhiteOutRecoveryMessage(taskId, recoveryMessage, 2, 8))
         {
-            ObjectEventTurn(&gObjectEvents[gPlayerAvatar.objectEventId], DIR_NORTH);
             gTasks[taskId].tState = WHITEOUT_CUTSCENE_LEAVE_MSG_SCREEN;
         }
         break;
