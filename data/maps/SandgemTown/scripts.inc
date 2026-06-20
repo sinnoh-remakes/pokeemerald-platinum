@@ -418,9 +418,12 @@ SandgemTown_EventScript_HelperBuildings::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_FamilyDawn
 	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_FamilyLucas
-	fadedefaultbgm
 	applymovement LOCALID_PLAYER, SandgemTown_Movement_Player_Guide2
 	applymovement LOCALID_SANDGEM_HELPER, SandgemTown_Movement_Helper_Guide3
+	delay 48
+	delay 48
+	delay 48
+	fadedefaultbgm
 	waitmovement 0
 	removeobject LOCALID_SANDGEM_HELPER
 	setflag FLAG_HIDE_SANDGEM_TOWN_HELPER
