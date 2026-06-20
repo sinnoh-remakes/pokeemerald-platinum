@@ -538,7 +538,7 @@
       "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "JubilifeCity_EventScript_TrainerSchoolSign"
+      "script": "JubilifeCity_EventScript_TownSign"
     }
   ]
 }
