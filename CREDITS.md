@@ -112,23 +112,23 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 - [Complete FireRed Upgrade](https://github.com/Skeli789/Complete-Fire-Red-Upgrade)
 - [pokeemerald](https://github.com/pret/pokeemerald/)
 
-### Pokeemerald Platinum Feature Credits
-* Allow player to change direction while moving: [cbt](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-15#post-10402610)
-* Battle Backgrounds: [RavePossum](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/tree/main/Battle%20Backgrounds/RavePossum)
-* BetterBag (Gen 4 Bag): [AsparagusEduardo](https://github.com/AsparagusEduardo/pokeemerald/tree/BetterBag)
+## Pokeemerald Platinum
+
+### Contributors
+* rylawesome / spilledpizza
+* Nintendude / nintendude91
+* Gnome777 / gnome
+* Willic5783
+
+### Features
 * Distortion World Tileset: [Rahtak](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/tree/main/Tilesets/The%20Great%20Tileset%20Exchange/Full%20Tilesets/Distortion%20World%20Secondary)
+* Gen 4 Bike Behavior: [LOuroboros](https://github.com/LOuroboros/pokeemerald/tree/gen4_bike)
 * DPPt Music: [CyanSMP64](https://github.com/CyanSMP64/pokeemerald/tree/dppt_music)
 
-### Pokeemerald Platinum Graphics Credits
-* [RichardPT](https://www.deviantart.com/richardpt/gallery/82040224/pokemon-trainers-overworld-sprites)
-* [robloxmaster376](https://www.deviantart.com/robloxmaster376/gallery)
+### Sprites
 * [The Spriter's Resource](https://www.spriters-resource.com/ds_dsi/pokemonplatinum/)
-* TheWiggliestJiggliest
-
-### Pokeemerald Platinum Sprite Credits
-
-* Dawn/Lucas DPPt Sprites: Multiple
-  * VanillaSunshine (walking sprites)
-  * Mr. Gela (trainer card/battle sprites)
-  * Me/Zygoat: "(everything else, I did not rip them, I just formatted them for RMXP)"
-* Overworld NPC sprites: PurpleZaffre
+* [spilledpizza, RichardPT, robloxmaster376, TheWiggliestJiggliest](https://www.pokecommunity.com/threads/platinum-ow-trainer-sprite-pack-for-pokeemerald-pokefirered.537257/) - Dawn/Lucas All Sprites
+* Zygoat - Dawn/Lucas All Sprites
+* VanillaSunshine - Dawn/Lucas Walking Sprites
+* Mr. Gela - Trainer Card, Dawn/Lucas Battle SPrites
+* PurpleZaffre - Overworld NPC sprites
