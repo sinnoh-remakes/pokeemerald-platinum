@@ -43,7 +43,7 @@ static void Task_AskConfirmStarter(u8 taskId);
 static void Task_HandleConfirmStarterInput(u8 taskId);
 static void Task_DeclineStarter(u8 taskId);
 static void Task_MoveStarterChooseCursor(u8 taskId);
-// static void Task_CreateStarterLabel(u8 taskId);
+static void Task_CreateStarterLabel(u8 taskId);
 static void CreateStarterPokemonLabel(u8 selection);
 static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y);
 static void SpriteCB_SelectionHand(struct Sprite *sprite);
@@ -460,7 +460,7 @@ void CB2_ChooseStarter(void)
     gSprites[spriteId].sTaskId = taskId;
     gSprites[spriteId].sBallId = 2;
 
-    // sStarterLabelWindowId = WINDOW_NONE;
+    sStarterLabelWindowId = WINDOW_NONE;
 }
 
 static void CB2_StarterChoose(void)
@@ -607,15 +607,15 @@ static void CreateStarterPokemonLabel(u8 selection)
     struct WindowTemplate winTemplate;
     const u8 *speciesName;
     s32 width;
-    // u8 labelLeft, labelRight, labelTop, labelBottom;
+    u8 labelLeft, labelRight, labelTop, labelBottom;
 
     u16 species = GetStarterPokemon(selection);
     CopyMonCategoryText(species, categoryText);
     speciesName = GetSpeciesName(species);
 
-    // winTemplate = sWindowTemplate_StarterLabel;
-    // winTemplate.tilemapLeft = sStarterLabelCoords[selection][0];
-    // winTemplate.tilemapTop = sStarterLabelCoords[selection][1];
+    winTemplate = sWindowTemplate_StarterLabel;
+    winTemplate.tilemapLeft = sStarterLabelCoords[selection][0];
+    winTemplate.tilemapTop = sStarterLabelCoords[selection][1];
 
     sStarterLabelWindowId = AddWindow(&winTemplate);
     FillWindowPixelBuffer(sStarterLabelWindowId, PIXEL_FILL(0));
@@ -629,12 +629,12 @@ static void CreateStarterPokemonLabel(u8 selection)
     PutWindowTilemap(sStarterLabelWindowId);
     ScheduleBgCopyTilemapToVram(0);
 
-    // labelLeft = sStarterLabelCoords[selection][0] * 8 - 4;
-    // labelRight = (sStarterLabelCoords[selection][0] + 13) * 8 + 4;
-    // labelTop = sStarterLabelCoords[selection][1] * 8;
-    // labelBottom = (sStarterLabelCoords[selection][1] + 4) * 8;
-    // SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(labelLeft, labelRight));
-    // SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(labelTop, labelBottom));
+    labelLeft = sStarterLabelCoords[selection][0] * 8 - 4;
+    labelRight = (sStarterLabelCoords[selection][0] + 13) * 8 + 4;
+    labelTop = sStarterLabelCoords[selection][1] * 8;
+    labelBottom = (sStarterLabelCoords[selection][1] + 4) * 8;
+    SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(labelLeft, labelRight));
+    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(labelTop, labelBottom));
 }
 
 static void ClearStarterLabel(void)
@@ -651,13 +651,12 @@ static void ClearStarterLabel(void)
 static void Task_MoveStarterChooseCursor(u8 taskId)
 {
     ClearStarterLabel();
-    // gTasks[taskId].func = Task_CreateStarterLabel;
-    gTasks[taskId].func = Task_HandleStarterChooseInput;
+    gTasks[taskId].func = Task_CreateStarterLabel;
 }
 
 static void Task_CreateStarterLabel(u8 taskId)
 {
-    // CreateStarterPokemonLabel(gTasks[taskId].tStarterSelection);
+    CreateStarterPokemonLabel(gTasks[taskId].tStarterSelection);
     gTasks[taskId].func = Task_HandleStarterChooseInput;
 }
 

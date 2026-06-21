@@ -603,6 +603,9 @@ Route201_Movement_RivalScurry:
 	walk_in_place_fast_down
 	walk_in_place_fast_down
 	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	walk_fast_left
 	walk_fast_down
 	step_end

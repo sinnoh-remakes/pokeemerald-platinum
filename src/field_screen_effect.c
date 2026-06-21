@@ -1346,9 +1346,9 @@ static void Task_EnableScriptAfterMusicFade(u8 taskId)
 static const struct WindowTemplate sWindowTemplate_WhiteoutText =
 {
     .bg = 0,
-    .tilemapLeft = 0,
+    .tilemapLeft = 2,
     .tilemapTop = 5,
-    .width = 30,
+    .width = 26,
     .height = 11,
     .paletteNum = 15,
     .baseBlock = 1,
@@ -1438,7 +1438,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
     {
         const u8 *recoveryMessage = GenerateRecoveryMessage(taskId);
 
-        if (PrintWhiteOutRecoveryMessage(taskId, recoveryMessage, 2, 8))
+        if (PrintWhiteOutRecoveryMessage(taskId, recoveryMessage, 12, 8))
         {
             gTasks[taskId].tState = WHITEOUT_CUTSCENE_LEAVE_MSG_SCREEN;
         }

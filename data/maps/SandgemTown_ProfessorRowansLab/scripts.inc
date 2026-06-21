@@ -25,19 +25,22 @@ SandgemTown_ProfessorRowansLab_EventScript_ShowStarter::
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox SandgemTown_ProfessorRowansLab_Text_LetMeSee, MSGBOX_DEFAULT
+	closemessage
     @ FODO: Add animation of giving item
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	delay 48
 	delay 48
-	msgbox SandgemTown_ProfessorRowansLab_Text_SeemsHappy, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_SeemsHappy, MSGBOX_DEFAULT
+	closemessage
     @ FODO: Add animation of taking item back
 	bufferleadmonspeciesname STR_VAR_1
 	msgbox SandgemTown_ProfessorRowansLab_Text_GiveGift, MSGBOX_DEFAULT
 	msgbox SandgemTown_ProfessorRowansLab_Text_GiveNickname, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, SandgemTown_ProfessorRowansLab_EventScript_NicknameStarter
 	bufferleadmonspeciesname STR_VAR_1
-	msgbox SandgemTown_ProfessorRowansLab_Text_EntrustYou, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_EntrustYou, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_SANDGEM_LAB_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
@@ -87,7 +90,7 @@ SandgemTown_ProfessorRowansLab_EventScript_GivePokedex::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, SandgemTown_ProfessorRowansLab_EventScript_GotOneDawn
 	call_if_eq VAR_RESULT, FEMALE, SandgemTown_ProfessorRowansLab_EventScript_GotOneLucas
-	msgbox SandgemTown_ProfessorRowansLab_Text_SixtyYears, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_SixtyYears, MSGBOX_DEFAULT
 	applymovement LOCALID_SANDGEM_LAB_HELPER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
@@ -106,7 +109,8 @@ SandgemTown_ProfessorRowansLab_EventScript_GivePokedex::
 	end
 	
 SandgemTown_ProfessorRowansLab_EventScript_KindDawn::
-	msgbox SandgemTown_ProfessorRowansLab_Text_KindDawn, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_KindDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 	
 SandgemTown_ProfessorRowansLab_EventScript_GotOneDawn::
@@ -122,21 +126,25 @@ SandgemTown_ProfessorRowansLab_EventScript_Helper_DawnMany::
 	
 SandgemTown_ProfessorRowansLab_EventScript_Helper_Dawn3::
 	msgbox SandgemTown_ProfessorRowansLab_Text_PiplupDawn, MSGBOX_DEFAULT
-	msgbox SandgemTown_ProfessorRowansLab_Text_LikeYouDawn, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_LikeYouDawn, MSGBOX_DEFAULT
+	closemessage
 	return
-	
+
 SandgemTown_ProfessorRowansLab_EventScript_Helper_Dawn4::
 	msgbox SandgemTown_ProfessorRowansLab_Text_TurtwigDawn, MSGBOX_DEFAULT
-	msgbox SandgemTown_ProfessorRowansLab_Text_LikeYouDawn, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_LikeYouDawn, MSGBOX_DEFAULT
+	closemessage
 	return
-	
+
 SandgemTown_ProfessorRowansLab_EventScript_Helper_Dawn5::
 	msgbox SandgemTown_ProfessorRowansLab_Text_ChimcharDawn, MSGBOX_DEFAULT
-	msgbox SandgemTown_ProfessorRowansLab_Text_LikeYouDawn, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_LikeYouDawn, MSGBOX_DEFAULT
+	closemessage
 	return
 	
 SandgemTown_ProfessorRowansLab_EventScript_KindLucas::
-	msgbox SandgemTown_ProfessorRowansLab_Text_KindLucas, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_KindLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 	
 SandgemTown_ProfessorRowansLab_EventScript_GotOneLucas::
@@ -144,7 +152,8 @@ SandgemTown_ProfessorRowansLab_EventScript_GotOneLucas::
 	return
 	
 SandgemTown_ProfessorRowansLab_EventScript_ComradesLucas::
-	msgbox SandgemTown_ProfessorRowansLab_Text_ComradesLucas, MSGBOX_SIGN
+	msgbox SandgemTown_ProfessorRowansLab_Text_ComradesLucas, MSGBOX_DEFAULT
+	closemessage
 	return
 
 SandgemTown_ProfessorRowansLab_Movement_Player1:
