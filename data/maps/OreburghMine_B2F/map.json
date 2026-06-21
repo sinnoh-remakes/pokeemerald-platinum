@@ -81,7 +81,7 @@
     },
     {
       "local_id": "LOCALID_OREBURGH_MINE_ROCK",
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
       "x": 20,
       "y": 27,
       "elevation": 0,
@@ -108,7 +108,7 @@
       "flag": "FLAG_HIDE_OREBURGH_CITY_RIVAL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
       "x": 18,
       "y": 27,
       "elevation": 0,
