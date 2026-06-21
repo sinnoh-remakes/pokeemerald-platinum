@@ -458,6 +458,14 @@ static const struct SpriteFrameImage sPicTable_YoungsterPt[] = {
     overworld_ascending_frames(gObjectEventPic_YoungsterPt, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_BriefcasePt[] = {
+    obj_frame_tiles(gObjectEventPic_BriefcasePt),
+};
+
+static const struct SpriteFrameImage sPicTable_RockPt[] = {
+    obj_frame_tiles(gObjectEventPic_RockPt),
+};
+
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
 };
