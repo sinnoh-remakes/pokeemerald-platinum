@@ -113,6 +113,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WomanPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WomanSnowPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YoungsterPt;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BriefcasePt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RockPt;
+
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -741,6 +745,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WOMAN_SNOW_PT] =            &gObjectEventGraphicsInfo_WomanSnowPt,
     [OBJ_EVENT_GFX_WORKER_PT] =                &gObjectEventGraphicsInfo_WorkerPt,
     [OBJ_EVENT_GFX_YOUNGSTER_PT] =             &gObjectEventGraphicsInfo_YoungsterPt,
+    [OBJ_EVENT_GFX_BRIEFCASE_PT] =             &gObjectEventGraphicsInfo_BriefcasePt,
+    [OBJ_EVENT_GFX_ROCK_PT] =                  &gObjectEventGraphicsInfo_RockPt,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
