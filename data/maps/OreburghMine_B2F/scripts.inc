@@ -1,5 +1,10 @@
 OreburghMine_B2F_MapScripts::
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, OreburghMine_B2F_OnWarp
 	.byte 0
+
+OreburghMine_B2F_OnWarp:
+	map_script_2 VAR_OREBURGH_CITY_STATE, 4, OreburghMine_B2F_ShowRock
+	.2byte 0
 
 OreburghMine_B2F_EventScript_Roark::
 	lock
@@ -14,6 +19,7 @@ OreburghMine_B2F_EventScript_Roark::
 	msgbox OreburghMine_B2F_Text_StandBack, MSGBOX_DEFAULT
 	closemessage
 	removeobject LOCALID_OREBURGH_MINE_ROCK
+	setflag FLAG_HIDE_OREBURGH_MINE_ROCK
 	delay 48
 	delay 48
 	delay 48
@@ -28,6 +34,10 @@ OreburghMine_B2F_EventScript_Roark::
 	removeobject LOCALID_OREBURGH_MINE_ROARK
 	delay 48
 	release
+	end
+
+OreburghMine_B2F_ShowRock::
+	clearflag FLAG_HIDE_OREBURGH_MINE_ROCK
 	end
 
 OreburghMine_EventScript_Mason::
