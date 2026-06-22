@@ -1514,6 +1514,16 @@ u8 GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
     case OBJ_EVENT_GFX_MAY_UNDERWATER:
     case OBJ_EVENT_GFX_MAY_FISHING:
     case OBJ_EVENT_GFX_MAY_WATERING:
+    case OBJ_EVENT_GFX_DAWN_NORMAL:
+    case OBJ_EVENT_GFX_DAWN_BIKE:
+    case OBJ_EVENT_GFX_DAWN_FIELD_MOVE:
+    case OBJ_EVENT_GFX_DAWN_FISHING:
+    case OBJ_EVENT_GFX_DAWN_HEAL:
+    case OBJ_EVENT_GFX_DAWN_POKETCH:
+    case OBJ_EVENT_GFX_DAWN_SAVE:
+    case OBJ_EVENT_GFX_DAWN_SURF:
+    case OBJ_EVENT_GFX_DAWN_SEEKER:
+    case OBJ_EVENT_GFX_DAWN_WATERING:
         return FEMALE;
     default:
         return MALE;
