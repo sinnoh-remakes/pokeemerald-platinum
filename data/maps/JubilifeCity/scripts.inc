@@ -15,7 +15,7 @@ JubilifeCity_OnTransition:
 	end
 
 JubilifeCity_EventScript_HelperEncounter_1::
-	lockall
+	lock
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	setobjectxy LOCALID_JUBILIFE_HELPER, 54, 54
@@ -32,7 +32,7 @@ JubilifeCity_EventScript_HelperEncounter_1::
 	end
 
 JubilifeCity_EventScript_HelperEncounter_2::
-	lockall
+	lock
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	call JubilifeCity_EventScript_HelperWalkDown
@@ -44,7 +44,7 @@ JubilifeCity_EventScript_HelperEncounter_2::
 	end
 
 JubilifeCity_EventScript_HelperEncounter_3::
-	lockall
+	lock
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	setobjectxy LOCALID_JUBILIFE_HELPER, 56, 54
@@ -650,16 +650,6 @@ JubilifeCity_Movement_TerminalGuard_Leave4:
 	walk_in_place_down
 	step_end
 
-JubilifeCity_EventScript_ClownStickAround::
-	msgbox JubilifeCity_Text_ClownStickAround, MSGBOX_DEFAULT
-	release
-	end
-
-JubilifeCity_EventScript_WrongAnswer::
-	msgbox JubilifeCity_Text_ClownWrongAnswer, MSGBOX_DEFAULT
-	release
-	end
-
 JubilifeCity_EventScript_ClownGrow::
 	lock
 	faceplayer
@@ -674,11 +664,6 @@ JubilifeCity_EventScript_ClownGrow::
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_JUBILIFE_CLOWN_GROW
-	release
-	end
-
-JubilifeCity_EventScript_ClownGrowDone::
-	msgbox JubilifeCity_Text_ClownGrowDone, MSGBOX_DEFAULT
 	release
 	end
 
@@ -699,11 +684,6 @@ JubilifeCity_EventScript_ClownItem::
 	release
 	end
 
-JubilifeCity_EventScript_ClownItemDone::
-	msgbox JubilifeCity_Text_ClownItemDone, MSGBOX_DEFAULT
-	release
-	end
-
 JubilifeCity_EventScript_ClownType::
 	lock
 	faceplayer
@@ -721,8 +701,33 @@ JubilifeCity_EventScript_ClownType::
 	release
 	end
 
+JubilifeCity_EventScript_ClownStickAround::
+	msgbox JubilifeCity_Text_ClownStickAround, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+JubilifeCity_EventScript_WrongAnswer::
+	msgbox JubilifeCity_Text_ClownWrongAnswer, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+JubilifeCity_EventScript_ClownGrowDone::
+	msgbox JubilifeCity_Text_ClownGrowDone, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+JubilifeCity_EventScript_ClownItemDone::
+	msgbox JubilifeCity_Text_ClownItemDone, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
 JubilifeCity_EventScript_ClownTypeDone::
 	msgbox JubilifeCity_Text_ClownTypeDone, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 

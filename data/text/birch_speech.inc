@@ -56,6 +56,7 @@ gText_Birch_SoItsPlayer::
 	.string "$"
 
 gText_Birch_YourePlayer::
+	.string "Your name is {PLAYER}{KUN}?\p"
 	.string "A fine name that is!\p"
 	@ FODO: Implement rival naming
 	@ .string "Now, this boy here...\n"

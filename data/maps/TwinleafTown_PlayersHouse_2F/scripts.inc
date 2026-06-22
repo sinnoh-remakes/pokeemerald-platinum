@@ -127,6 +127,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnter::
 
 TwinleafTown_PlayersHouse_2F_EventScript_RivalExplain::
 	msgbox TwinleafTown_PlayersHouse_2F_Text_SeeTV, MSGBOX_DEFAULT
+	closemessage
 	playse SE_PIN
 	applymovement LOCALID_TWINLEAF_PLAYER2F_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0

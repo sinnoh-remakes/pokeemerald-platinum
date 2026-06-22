@@ -239,7 +239,7 @@ OreburghCityNorth_EventScript_MuseumSign::
 	end
 
 OreburghCityNorth_EventScript_MuseumBlock::
-	msgbox OreburghCityNorth_Text_MuseumBlock, MSGBOX_SIGN
+	msgbox OreburghCityNorth_Text_MuseumBlock, MSGBOX_NPC
 	end
 
 OreburghCityNorth_Text_HowdyTrainer:

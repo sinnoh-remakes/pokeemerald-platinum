@@ -25,6 +25,7 @@ SandgemTown_ProfessorRowansLab_EventScript_ShowStarter::
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox SandgemTown_ProfessorRowansLab_Text_LetMeSee, MSGBOX_DEFAULT
+	closemessage
     @ FODO: Add animation of giving item
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
