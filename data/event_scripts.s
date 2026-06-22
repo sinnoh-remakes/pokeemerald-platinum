@@ -1109,6 +1109,10 @@ gText_Sudowoodo_Attacked::
 gText_LegendaryFlewAway::
 	.string "The {STR_VAR_1} flew away!$"
 
+gText_RuggedRock::
+	.string "It's a rugged rock, but a Pokémon\n"
+	.string "may be able to smash it.$"
+
 	.include "data/text/pc_transfer.inc"
 	.include "data/text/questionnaire.inc"
 	.include "data/text/abnormal_weather.inc"
@@ -1156,6 +1160,12 @@ Common_EventScript_LegendaryFlewAway::
 	fadescreenswapbuffers FADE_FROM_BLACK
 	bufferspeciesname STR_VAR_1, VAR_0x8004
 	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	release
+	end
+
+Common_EventScript_RuggedRock::
+	msgbox gText_RuggedRock, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
