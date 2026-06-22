@@ -1240,7 +1240,7 @@
 #define FLAG_ITEM_OREBURGH_MINE_POKE_BALL                           0x49E
 #define FLAG_ITEM_OREBURGH_MINE_POTION                              0x49F
 #define FLAG_ITEM_OREBURGH_MINE_ESCAPE_ROPE                         0x4A0
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
+#define FLAG_ITEM_RAVAGED_PATH_POTION                               0x4A1
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
