@@ -1001,6 +1001,10 @@ JubilifeCity_EventScript_PoketchCompanySign::
 	msgbox JubilifeCity_Text_PoketchCompanySign, MSGBOX_SIGN
 	end
 
+JubilifeCity_EventScript_CompanyBlock::
+	msgbox JubilifeCity_Text_CompanyBlock, MSGBOX_NPC
+	end
+
 JubilifeCity_Text_AreYouCatching:
 	.string "Dawn: Hi, {PLAYER}!\n"
 	.string "Are you catching Pokémon?$"
@@ -1437,3 +1441,8 @@ JubilifeCity_Text_JubilifeTVSign:
 JubilifeCity_Text_PoketchCompanySign:
 	.string "The Pokétch Company\n"
 	.string "Pokémon Watches for the World!$"
+
+JubilifeCity_Text_CompanyBlock:
+	.string "This building is closed for\n"
+	.string "maintenance.\p"
+	.string "Please come back later.$"
