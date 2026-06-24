@@ -4495,7 +4495,7 @@
       "id": "LAYOUT_ROUTE204_SOUTH",
       "name": "Route204South_Layout",
       "width": 32,
-      "height": 66,
+      "height": 40,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route204South",
       "border_filepath": "data/layouts/Route204South/border.bin",
