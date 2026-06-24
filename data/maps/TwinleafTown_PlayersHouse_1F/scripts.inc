@@ -376,8 +376,7 @@ TwinleafTown_PlayersHouse_1F_EventScript_Fridge::
 
 TwinleafTown_PlayersHouse_1F_Text_Hurry:
 	.string "Mom: {PLAYER}!\p"
-	.string "{RIVAL} already left.\n"
-	.string "while ago.\p"
+	.string "{RIVAL} already left.\p"
 	.string "I don't know what it was about, but\n"
 	.string "he sure was in a hurry!$"
 

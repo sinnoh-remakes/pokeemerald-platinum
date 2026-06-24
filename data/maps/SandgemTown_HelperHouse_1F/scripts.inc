@@ -2,14 +2,34 @@ SandgemTown_HelperHouse_1F_MapScripts::
 	.byte 0
 
 SandgemTown_HelperHouse_1F_EventScript_Girl::
-	msgbox SandgemTown_HelperHouse_1F_Text_Girl, MSGBOX_NPC
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, SandgemTown_HelperHouse_1F_EventScript_GirlSister
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_HelperHouse_1F_EventScript_GirlBrother
+	end
+
+SandgemTown_HelperHouse_1F_EventScript_GirlSister::
+	msgbox SandgemTown_HelperHouse_1F_Text_GirlSister, MSGBOX_NPC
+	end
+
+SandgemTown_HelperHouse_1F_EventScript_GirlBrother::
+	msgbox SandgemTown_HelperHouse_1F_Text_GirlBrother, MSGBOX_NPC
 	end
 
 SandgemTown_HelperHouse_1F_EventScript_Man::
 	msgbox SandgemTown_HelperHouse_1F_Text_Man, MSGBOX_NPC
 	end
 
-SandgemTown_HelperHouse_1F_Text_Girl:
+SandgemTown_HelperHouse_1F_Text_GirSister:
+	.string "Who are you?\p"
+	.string "...\p"
+	.string "Oh...\n"
+	.string "You're {PLAYER}?\p"
+	.string "You're doing that Pokédex thingy\n"
+	.string "for the professor!\p"
+	.string "Wow! That's the same as my big\n"
+	.string "sister! Go for it!$"
+
+SandgemTown_HelperHouse_1F_Text_GirlBrother:
 	.string "Who are you?\p"
 	.string "...\p"
 	.string "Oh...\n"

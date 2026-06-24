@@ -7,6 +7,7 @@ SandgemTown_HouseA_EventScript_Aroma::
 
 SandgemTown_HouseA_EventScript_Boy::
 	msgbox SandgemTown_HouseA_Text_Boy, MSGBOX_NPC
+	end
 
 SandgemTown_HouseA_Text_Aroma:
 	.string "A good Trainer is one that takes care\n"

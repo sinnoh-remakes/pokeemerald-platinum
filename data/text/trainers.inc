@@ -5013,7 +5013,7 @@ Route203_Text_MadelineDefeated:
 	.string "Oh, I lost! Lalala!$"
 
 Route203_Text_MadelinePostBattle:
-	.string "I'm collecting lost of Gym badges.\n"
+	.string "I'm collecting lots of Gym badges.\n"
 	.string "They're so sparkly and pretty!$"
 
 Route204_Text_SarahIntro:

@@ -710,6 +710,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_PLAZA_ATTENDANT_F_PT] =     &gObjectEventGraphicsInfo_PlazaAttendantFPt,
     [OBJ_EVENT_GFX_PLAZA_ATTENDANT_M_PT] =     &gObjectEventGraphicsInfo_PlazaAttendantMPt,
     [OBJ_EVENT_GFX_POKEFAN_F_PT] =             &gObjectEventGraphicsInfo_PokefanFPt,
+    [OBJ_EVENT_GFX_POKEFAN_M_PT] =             &gObjectEventGraphicsInfo_PokefanMPt,
     [OBJ_EVENT_GFX_POLICEMAN_PT] =             &gObjectEventGraphicsInfo_PolicemanPt,
     [OBJ_EVENT_GFX_PSYCHIC_PT] =               &gObjectEventGraphicsInfo_PsychicPt,
     [OBJ_EVENT_GFX_RANCHER_PT] =               &gObjectEventGraphicsInfo_RancherPt,

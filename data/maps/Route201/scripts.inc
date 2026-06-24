@@ -876,7 +876,7 @@ Route201_Text_FriendHere:
 	.string "the tall grass and all...\p"
 	.string "Professor: !\p"
 	.string "How big of you...\p"
-	.string "Ver well, then!\n"
+	.string "Very well, then!\n"
 	.string "I will entrust you two with Pokémon!\p"
 	.string "I apologize for putting you through\n"
 	.string "that exercise.\p"

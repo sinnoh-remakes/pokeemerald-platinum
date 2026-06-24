@@ -365,12 +365,10 @@ SandgemTown_EventScript_HelperBuildings::
 	opendoor 11, 6
 	waitdooranim
 	addobject LOCALID_SANDGEM_PROF
-	msgbox SandgemTown_Text_Thud, MSGBOX_DEFAULT
-	delay 48
-	delay 48
 	applymovement LOCALID_SANDGEM_PROF, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox SandgemTown_Text_Surprise, MSGBOX_DEFAULT
+	delay 48
 	closemessage
 	playse SE_PIN
 	applymovement LOCALID_SANDGEM_HELPER, Common_Movement_ExclamationMark
