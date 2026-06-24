@@ -1018,15 +1018,15 @@ const struct Tileset gTileset_Route203 =
     .callback = InitTilesetAnim_Route203,
 };
 
-const struct Tileset gTileset_Route204 =
+const struct Tileset gTileset_Route204South =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Route204,
-    .palettes = gTilesetPalettes_Route204,
-    .metatiles = gMetatiles_Route204,
-    .metatileAttributes = gMetatileAttributes_Route204,
-    .callback = InitTilesetAnim_Route204,
+    .tiles = gTilesetTiles_Route204South,
+    .palettes = gTilesetPalettes_Route204South,
+    .metatiles = gMetatiles_Route204South,
+    .metatileAttributes = gMetatileAttributes_Route204South,
+    .callback = InitTilesetAnim_Route204South,
 };
 
 const struct Tileset gTileset_Route207 =

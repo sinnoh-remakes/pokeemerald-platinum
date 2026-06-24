@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE204",
-  "name": "Route204",
-  "layout": "LAYOUT_ROUTE204",
+  "id": "MAP_ROUTE204_SOUTH",
+  "name": "Route204South",
+  "layout": "LAYOUT_ROUTE204_SOUTH",
   "music": "MUS_DP_ROUTE203_DAY",
   "region_map_section": "MAPSEC_ROUTE_204",
   "requires_flash": false,
@@ -30,7 +30,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route204_EventScript_Sarah",
+      "script": "Route204South_EventScript_Sarah",
       "flag": "0"
     },
     {
@@ -43,7 +43,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route204_EventScript_Tyler",
+      "script": "Route204South_EventScript_Tyler",
       "flag": "0"
     },
     {
@@ -56,7 +56,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "Route204_EventScript_Samantha",
+      "script": "Route204South_EventScript_Samantha",
       "flag": "0"
     },
     {
@@ -69,7 +69,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route204_EventScript_Youngster",
+      "script": "Route204South_EventScript_Youngster",
       "flag": "0"
     },
     {
@@ -129,7 +129,7 @@
       "y": 48,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route204_EventScript_RouteSignJubilife"
+      "script": "Route204South_EventScript_RouteSignJubilife"
     },
     {
       "type": "sign",
@@ -137,7 +137,7 @@
       "y": 33,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route204_EventScript_RouteSignRavagedPath"
+      "script": "Route204South_EventScript_RouteSignRavagedPath"
     }
   ]
 }
