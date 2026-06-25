@@ -19,7 +19,7 @@ SandgemTown_HelperHouse_1F_EventScript_Man::
 	msgbox SandgemTown_HelperHouse_1F_Text_Man, MSGBOX_NPC
 	end
 
-SandgemTown_HelperHouse_1F_Text_GirSister:
+SandgemTown_HelperHouse_1F_Text_GirlSister:
 	.string "Who are you?\p"
 	.string "...\p"
 	.string "Oh...\n"
