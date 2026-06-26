@@ -4740,6 +4740,16 @@
       "secondary_tileset": "gTileset_OreburghGym",
       "border_filepath": "data/layouts/OreburghCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE204_NORTH",
+      "name": "Route204North_Layout",
+      "width": 28,
+      "height": 32,
+      "primary_tileset": "gTileset_OutdoorFloaroma",
+      "secondary_tileset": "gTileset_Route204North",
+      "border_filepath": "data/layouts/Route204North/border.bin",
+      "blockdata_filepath": "data/layouts/Route204North/map.bin"
     }
   ]
 }
