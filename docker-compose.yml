@@ -1,0 +1,30 @@
+services:
+  platinum:
+    build: .
+    environment:
+      CCACHE_DIR: /ccache
+    volumes:
+      # Host repo, mounted READ-ONLY. The container can never modify your sources,
+      # tool binaries, or build artifacts on the host.
+      - ./:/src:ro
+      # Isolated working copy where the build actually happens (tool binaries and
+      # build/ live here, inside the volume - never on the host). Persisted across
+      # runs so rebuilds stay incremental.
+      - platinum_build:/build
+      # Persistent ccache to speed up recompilation.
+      - platinum_ccache:/ccache
+      # The only writable host path: where the finished ROM is copied back out.
+      - ./dist:/dist
+    command: >
+      bash -lc "
+      rsync -a --delete --exclude='/build/' --exclude='/dist/' /src/ /build/ &&
+      cd /build &&
+      make clean-tools &&
+      make -j$$(nproc) &&
+      cp -f pokeemerald.gba /dist/pokeemerald.gba &&
+      { chown $$(stat -c '%u:%g' /src) /dist/pokeemerald.gba || true; }
+      "
+
+volumes:
+  platinum_build:
+  platinum_ccache:
