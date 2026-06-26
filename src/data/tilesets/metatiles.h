@@ -321,3 +321,9 @@ const u16 gMetatileAttributes_OreburghGym[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_GymOreburgh[] = INCBIN_U16("data/tilesets/primary/gym_oreburgh/metatiles.bin");
 const u16 gMetatileAttributes_GymOreburgh[] = INCBIN_U16("data/tilesets/primary/gym_oreburgh/metatile_attributes.bin");
+
+const u16 gMetatiles_OutdoorFloaroma[] = INCBIN_U16("data/tilesets/primary/outdoor_floaroma/metatiles.bin");
+const u16 gMetatileAttributes_OutdoorFloaroma[] = INCBIN_U16("data/tilesets/primary/outdoor_floaroma/metatile_attributes.bin");
+
+const u16 gMetatiles_Route204North[] = INCBIN_U16("data/tilesets/secondary/route_204_north/metatiles.bin");
+const u16 gMetatileAttributes_Route204North[] = INCBIN_U16("data/tilesets/secondary/route_204_north/metatile_attributes.bin");

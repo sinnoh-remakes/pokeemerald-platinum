@@ -81,3 +81,8 @@ echo "Compiling [PRIMARY] cave_oreburgh"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/cave_oreburgh ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] oreburgh_mine"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_mine ./tiles/oreburgh_mine ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
+
+echo "Compiling [PRIMARY] outdoor_floaroma"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_floaroma ./tiles/outdoor_floaroma ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] route_204_north"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_204_north ./tiles/route_204_north ./tiles/outdoor_floaroma ./include/constants/metatile_behaviors.h
