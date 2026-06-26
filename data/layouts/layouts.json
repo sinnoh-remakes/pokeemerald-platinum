@@ -4515,7 +4515,7 @@
       "id": "LAYOUT_ROUTE219",
       "name": "Route219_Layout",
       "width": 36,
-      "height": 16,
+      "height": 32,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route204",
       "border_filepath": "data/layouts/Route219/border.bin",
