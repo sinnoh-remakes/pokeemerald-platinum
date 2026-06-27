@@ -4745,7 +4745,7 @@
       "id": "LAYOUT_ROUTE204_NORTH",
       "name": "Route204North_Layout",
       "width": 32,
-      "height": 36,
+      "height": 37,
       "primary_tileset": "gTileset_OutdoorFloaroma",
       "secondary_tileset": "gTileset_Route204North",
       "border_filepath": "data/layouts/Route204North/border.bin",
