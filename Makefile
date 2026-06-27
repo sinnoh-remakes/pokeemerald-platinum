@@ -575,3 +575,15 @@ leafgreen: all
 # Symbol file (`make syms`)
 $(SYM): $(ELF)
 	$(OBJDUMP) -t $< | sort -u | grep -E "^0[2389]" | $(PERL) -p -e 's/^(\w{8}) (\w).{6} \S+\t(\w{8}) (\S+)$$/\1 \2 \3 \4/g' > $@
+
+.PHONY: docker-build docker-shell docker-clean
+
+docker-build:
+	mkdir -p dist
+	docker compose run --rm platinum
+
+docker-shell:
+	docker compose run --rm --entrypoint bash platinum -lc "rsync -a --delete --exclude='/build/' --exclude='/dist/' /src/ /build/ && cd /build && exec bash -l"
+
+docker-clean:
+	docker compose down -v
