@@ -34,7 +34,7 @@ void InitTilesetAnim_BattlePyramid(void);
 void InitTilesetAnim_Twinleaf(void);
 void InitTilesetAnim_Lake(void);
 void InitTilesetAnim_Route203(void);
-void InitTilesetAnim_Route204(void);
+void InitTilesetAnim_Route204South(void);
 void InitTilesetAnim_Oreburgh(void);
 void InitTilesetAnim_OreburghMine(void);
 

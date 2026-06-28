@@ -12114,7 +12114,7 @@
           }
         },
         {
-          "map": "MAP_ROUTE204",
+          "map": "MAP_ROUTE204_SOUTH",
           "base_label": "gRoute204_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -12183,7 +12183,7 @@
           }
         },
         {
-          "map": "MAP_ROUTE204",
+          "map": "MAP_ROUTE204_SOUTH",
           "base_label": "gRoute204_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -12252,7 +12252,7 @@
           }
         },
         {
-          "map": "MAP_ROUTE204",
+          "map": "MAP_ROUTE204_SOUTH",
           "base_label": "gRoute204_Night",
           "land_mons": {
             "encounter_rate": 10,

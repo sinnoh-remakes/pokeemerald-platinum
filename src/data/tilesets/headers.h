@@ -1018,15 +1018,15 @@ const struct Tileset gTileset_Route203 =
     .callback = InitTilesetAnim_Route203,
 };
 
-const struct Tileset gTileset_Route204 =
+const struct Tileset gTileset_Route204South =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Route204,
-    .palettes = gTilesetPalettes_Route204,
-    .metatiles = gMetatiles_Route204,
-    .metatileAttributes = gMetatileAttributes_Route204,
-    .callback = InitTilesetAnim_Route204,
+    .tiles = gTilesetTiles_Route204South,
+    .palettes = gTilesetPalettes_Route204South,
+    .metatiles = gMetatiles_Route204South,
+    .metatileAttributes = gMetatileAttributes_Route204South,
+    .callback = InitTilesetAnim_Route204South,
 };
 
 const struct Tileset gTileset_Route207 =
@@ -1246,5 +1246,27 @@ const struct Tileset gTileset_GymOreburgh =
     .palettes = gTilesetPalettes_GymOreburgh,
     .metatiles = gMetatiles_GymOreburgh,
     .metatileAttributes = gMetatileAttributes_GymOreburgh,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_OutdoorFloaroma =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorFloaroma,
+    .palettes = gTilesetPalettes_OutdoorFloaroma,
+    .metatiles = gMetatiles_OutdoorFloaroma,
+    .metatileAttributes = gMetatileAttributes_OutdoorFloaroma,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Route204North =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route204North,
+    .palettes = gTilesetPalettes_Route204North,
+    .metatiles = gMetatiles_Route204North,
+    .metatileAttributes = gMetatileAttributes_Route204North,
     .callback = NULL,
 };
