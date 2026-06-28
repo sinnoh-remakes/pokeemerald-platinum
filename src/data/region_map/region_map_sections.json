@@ -33,6 +33,14 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_FLOAROMA_TOWN",
+      "name": "FLOAROMA TOWN",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_ROUTE_201",
       "name": "ROUTE 201",
       "x": 4,

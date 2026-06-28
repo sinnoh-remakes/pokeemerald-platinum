@@ -1,12 +1,12 @@
 {
-  "id": "MAP_ROUTE204_NORTH",
-  "name": "Route204North",
-  "layout": "LAYOUT_ROUTE204_NORTH",
-  "music": "MUS_DP_ROUTE203_DAY",
-  "region_map_section": "MAPSEC_ROUTE_204",
+  "id": "MAP_FLOAROMA_TOWN",
+  "name": "FloaromaTown",
+  "layout": "LAYOUT_FLOAROMA_TOWN",
+  "music": "MUS_DP_FLOAROMA_DAY",
+  "region_map_section": "MAPSEC_FLOAROMA_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
-  "map_type": "MAP_TYPE_ROUTE",
+  "map_type": "MAP_TYPE_TOWN",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_FLOAROMA_TOWN",
+      "map": "MAP_ROUTE204_NORTH",
       "offset": 0,
-      "direction": "up"
+      "direction": "down"
     }
   ],
   "object_events": [],
