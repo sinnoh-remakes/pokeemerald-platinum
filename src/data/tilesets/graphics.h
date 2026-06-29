@@ -2413,3 +2413,22 @@ const u16 gTilesetPalettes_OutdoorFloaroma[][16] =
 };
 
 const u32 gTilesetTiles_OutdoorFloaroma[] = INCBIN_U32("data/tilesets/primary/outdoor_floaroma/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Floaroma[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floaroma/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Floaroma[] = INCBIN_U32("data/tilesets/secondary/floaroma/tiles.4bpp.lz");

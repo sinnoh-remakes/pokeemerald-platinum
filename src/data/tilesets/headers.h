@@ -1281,3 +1281,14 @@ const struct Tileset gTileset_OutdoorFloaroma =
     .metatileAttributes = gMetatileAttributes_OutdoorFloaroma,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Floaroma =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Floaroma,
+    .palettes = gTilesetPalettes_Floaroma,
+    .metatiles = gMetatiles_Floaroma,
+    .metatileAttributes = gMetatileAttributes_Floaroma,
+    .callback = NULL,
+};

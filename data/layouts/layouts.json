@@ -4757,7 +4757,7 @@
       "width": 32,
       "height": 40,
       "primary_tileset": "gTileset_OutdoorFloaroma",
-      "secondary_tileset": "gTileset_Route204North",
+      "secondary_tileset": "gTileset_Floaroma",
       "border_filepath": "data/layouts/FloaromaTown/border.bin",
       "blockdata_filepath": "data/layouts/FloaromaTown/map.bin"
     }

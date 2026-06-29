@@ -330,3 +330,6 @@ const u16 gMetatileAttributes_Route204North[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_OutdoorFloaroma[] = INCBIN_U16("data/tilesets/primary/outdoor_floaroma/metatiles.bin");
 const u16 gMetatileAttributes_OutdoorFloaroma[] = INCBIN_U16("data/tilesets/primary/outdoor_floaroma/metatile_attributes.bin");
+
+const u16 gMetatiles_Floaroma[] = INCBIN_U16("data/tilesets/secondary/floaroma/metatiles.bin");
+const u16 gMetatileAttributes_Floaroma[] = INCBIN_U16("data/tilesets/secondary/floaroma/metatile_attributes.bin");
