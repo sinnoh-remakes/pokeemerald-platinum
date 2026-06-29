@@ -28,7 +28,14 @@ OreburghCityNorth_EventScript_RivalLeaving::
 	applymovement OBJ_EVENT_ID_PLAYER, OreburghCityNorth_Movement_PlayerLeft
 	waitmovement OBJ_EVENT_ID_PLAYER
 	playbgm MUS_DP_RIVAL, FALSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
 	msgbox OreburghCityNorth_Text_RivalLeaving, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_RIVAL_EVENT, Common_Movement_WalkInPlaceRight
+	msgbox OreburghCityNorth_Text_RivalLeavingSection2, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_RIVAL_EVENT, Common_Movement_WalkInPlaceLeft
+	msgbox OreburghCityNorth_Text_RivalLeavingSection3, MSGBOX_DEFAULT
 	closemessage
 
 	compare VAR_0x8001, 15
@@ -378,9 +385,13 @@ OreburghCityNorth_Text_RivalLeaving:
 	.string "{RIVAL}: Whoops! {PLAYER}!\n"
 	.string "You got the Gym Badge, huh?\p"
 	.string "Eterna City is the next place with\n"
-	.string "a Gym that gives away Badges, right?\p"
+	.string "a Gym that gives away Badges, right?$"
+
+OreburghCityNorth_Text_RivalLeavingSection2:
 	.string "So, yeah, I went to Route 207, but\n"
-	.string "you can't go there without a Bicycle.\p"
+	.string "you can't go there without a Bicycle.$"
+
+OreburghCityNorth_Text_RivalLeavingSection3:
 	.string "I made my team battle and toughened\n"
 	.string "them up, so it wasn't a waste.\p"
 	.string "So. I'm going back to Jubilife City.\n"
