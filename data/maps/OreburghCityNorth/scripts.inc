@@ -8,6 +8,75 @@ OreburghCityNorth_MapScripts::
 @ 4: Talked to Roark
 @ 5: Obtained Coal Badge
 
+OreburghCityNorth_EventScript_RivalLeaving::
+	goto_if_unset FLAG_DEFEATED_OREBURGH_GYM, End
+    goto_if_set FLAG_SHOW_OREBURGH_RIVAL_LEAVING, End
+	setflag FLAG_SHOW_OREBURGH_RIVAL_LEAVING
+
+	lock
+
+	clearflag FLAG_HIDE_OREBURGH_CITY_RIVAL
+	getplayerxy VAR_0x8000, VAR_0x8001
+	addvar VAR_0x8000, 8
+	addvar VAR_0x8001, 2
+	addobject LOCALID_RIVAL_EVENT
+	setobjectxy LOCALID_RIVAL_EVENT, VAR_0x8000, VAR_0x8001
+
+	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeaving
+	waitmovement LOCALID_RIVAL_EVENT
+	playse SE_WALL_HIT
+	applymovement OBJ_EVENT_ID_PLAYER, OreburghCityNorth_Movement_PlayerLeft
+	waitmovement OBJ_EVENT_ID_PLAYER
+	playbgm MUS_DP_RIVAL, FALSE
+	msgbox OreburghCityNorth_Text_RivalLeaving, MSGBOX_DEFAULT
+	closemessage
+
+	compare VAR_0x8001, 15
+	call_if_eq OreburghCityNorth_EventScript_RivalLeaving_Section1
+
+	compare VAR_0x8001, 16
+	call_if_eq OreburghCityNorth_EventScript_RivalLeaving_Section2
+
+	compare VAR_0x8001, 17
+	call_if_eq OreburghCityNorth_EventScript_RivalLeaving_Section3
+
+	compare VAR_0x8001, 18
+	call_if_eq OreburghCityNorth_EventScript_RivalLeaving_Section4
+
+	removeobject LOCALID_RIVAL_EVENT
+	playse SE_EXIT
+	setflag FLAG_HIDE_OREBURGH_CITY_RIVAL
+	fadedefaultbgm
+	release
+	end
+
+OreburghCityNorth_EventScript_RivalLeaving_Section1:
+	closemessage
+	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY13
+	waitmovement
+	return
+
+OreburghCityNorth_EventScript_RivalLeaving_Section2:
+	closemessage
+	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY14
+	waitmovement
+	return
+
+OreburghCityNorth_EventScript_RivalLeaving_Section3:
+	closemessage
+	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY15
+	waitmovement
+	return
+
+OreburghCityNorth_EventScript_RivalLeaving_Section4:
+	closemessage
+	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY16
+	waitmovement
+	return
+
+End:
+	end
+
 OreburghCityNorth_EventScript_Youngster::
 	lock
 	special SpawnCameraObject
@@ -165,6 +234,57 @@ OreburghCityNorth_Movement_IntroPlayerLong:
 	walk_right
 	step_end
 
+OreburghCityNorth_Movement_RivalLeaving:
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+	walk_left
+	walk_up
+    walk_left
+	walk_left
+	walk_up
+    walk_left
+    step_end
+
+OreburghCityNorth_Movement_RivalLeavingY13:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+OreburghCityNorth_Movement_RivalLeavingY14:
+	walk_down
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	step_end
+
+OreburghCityNorth_Movement_RivalLeavingY15:
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+OreburghCityNorth_Movement_RivalLeavingY16:
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+OreburghCityNorth_Movement_PlayerLeft:
+	walk_left
+	step_end
+
 OreburghCityNorth_Movement_IntroYoungsterLong:
 	walk_down
 	walk_down
@@ -252,6 +372,22 @@ OreburghCityNorth_Text_HowdyTrainer:
 OreburghCityNorth_Text_SomeoneThere:
 	.string "Huh?\n"
 	.string "There’s someone there.$"
+
+OreburghCityNorth_Text_RivalLeaving:
+    .string "Thud!\p"
+	.string "{RIVAL}: Whoops! {PLAYER}!\n"
+	.string "You got the Gym Badge, huh?\p"
+	.string "Eterna City is the next place with\n"
+	.string "a Gym that gives away Badges, right?\p"
+	.string "So, yeah, I went to Route 207, but\n"
+	.string "you can't go there without a Bicycle.\p"
+	.string "I made my team battle and toughened\n"
+	.string "them up, so it wasn't a waste.\p"
+	.string "So. I'm going back to Jubilife City.\n"
+	.string "Next stop, the Eterna Gym Badge!\p"
+	.string "Ten seconds before I dash!\p"
+	.string "Nine...\p"
+	.string "Bah! Who's got time to count?!$"
 
 OreburghCityNorth_Text_FinallyGotHere:
 	.string "{RIVAL}: Hunh?\p"
