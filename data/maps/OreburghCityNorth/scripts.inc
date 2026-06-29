@@ -10,7 +10,7 @@ OreburghCityNorth_MapScripts::
 
 OreburghCityNorth_EventScript_RivalLeaving::
 	goto_if_unset FLAG_DEFEATED_OREBURGH_GYM, End
-	addvar VAR_TEMP_0, 1
+	setvar VAR_SHOW_RIVAL_LEAVING_OREBURGH, 1
 
 	lock
 
