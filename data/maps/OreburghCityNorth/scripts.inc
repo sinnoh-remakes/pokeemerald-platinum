@@ -10,8 +10,7 @@ OreburghCityNorth_MapScripts::
 
 OreburghCityNorth_EventScript_RivalLeaving::
 	goto_if_unset FLAG_DEFEATED_OREBURGH_GYM, End
-    goto_if_set FLAG_SHOW_OREBURGH_RIVAL_LEAVING, End
-	setflag FLAG_SHOW_OREBURGH_RIVAL_LEAVING
+	addvar VAR_TEMP_0, 1
 
 	lock
 
@@ -26,17 +25,17 @@ OreburghCityNorth_EventScript_RivalLeaving::
 	waitmovement LOCALID_RIVAL_EVENT
 	playse SE_WALL_HIT
 	applymovement OBJ_EVENT_ID_PLAYER, OreburghCityNorth_Movement_PlayerLeft
-	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement 0
 	playbgm MUS_DP_RIVAL, FALSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+	waitmovement 0
 	msgbox OreburghCityNorth_Text_RivalLeaving, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_RIVAL_EVENT, Common_Movement_WalkInPlaceRight
+	waitmovement 0
 	msgbox OreburghCityNorth_Text_RivalLeavingSection2, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_RIVAL_EVENT, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
 	msgbox OreburghCityNorth_Text_RivalLeavingSection3, MSGBOX_DEFAULT
-	closemessage
 
 	compare VAR_0x8001, 15
 	call_if_eq OreburghCityNorth_EventScript_RivalLeaving_Section1
@@ -60,25 +59,41 @@ OreburghCityNorth_EventScript_RivalLeaving::
 OreburghCityNorth_EventScript_RivalLeaving_Section1:
 	closemessage
 	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY13
-	waitmovement
+	delay 16
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	delay 32
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement LOCALID_RIVAL_EVENT
 	return
 
 OreburghCityNorth_EventScript_RivalLeaving_Section2:
 	closemessage
 	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY14
-	waitmovement
+	delay 16
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	delay 32
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement LOCALID_RIVAL_EVENT
 	return
 
 OreburghCityNorth_EventScript_RivalLeaving_Section3:
 	closemessage
 	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY15
-	waitmovement
+	delay 16
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	delay 32
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement LOCALID_RIVAL_EVENT
 	return
 
 OreburghCityNorth_EventScript_RivalLeaving_Section4:
 	closemessage
 	applymovement LOCALID_RIVAL_EVENT, OreburghCityNorth_Movement_RivalLeavingY16
-	waitmovement
+	delay 16
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	delay 64
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement LOCALID_RIVAL_EVENT
 	return
 
 End:
@@ -394,7 +409,7 @@ OreburghCityNorth_Text_RivalLeavingSection2:
 OreburghCityNorth_Text_RivalLeavingSection3:
 	.string "I made my team battle and toughened\n"
 	.string "them up, so it wasn't a waste.\p"
-	.string "So. I'm going back to Jubilife City.\n"
+	.string "So, I'm going back to Jubilife City.\n"
 	.string "Next stop, the Eterna Gym Badge!\p"
 	.string "Ten seconds before I dash!\p"
 	.string "Nine...\p"
