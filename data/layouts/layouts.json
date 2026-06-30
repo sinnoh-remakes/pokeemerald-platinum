@@ -4754,8 +4754,8 @@
     {
       "id": "LAYOUT_FLOAROMA_TOWN",
       "name": "FloaromaTown_Layout",
-      "width": 32,
-      "height": 40,
+      "width": 40,
+      "height": 44,
       "primary_tileset": "gTileset_OutdoorFloaroma",
       "secondary_tileset": "gTileset_Floaroma",
       "border_filepath": "data/layouts/FloaromaTown/border.bin",
