@@ -664,6 +664,25 @@ Route201_EventScript_RivalTalk6::
 
 Route201_EventScript_FollowLeave::
 	lock
+
+	getobjectfacingdirection OBJ_EVENT_ID_PLAYER, VAR_0x8003
+
+	compare VAR_0x8003, DIR_NORTH
+	call_if_eq Route201_EventScript_FollowLeave_GoDown
+
+	compare VAR_0x8003, DIR_SOUTH
+	call_if_eq Route201_EventScript_FollowLeave_GoUp
+
+	compare VAR_0x8003, DIR_WEST
+	call_if_eq Route201_EventScript_FollowLeave_GoRight
+
+	compare VAR_0x8003, DIR_EAST
+	call_if_eq Route201_EventScript_FollowLeave_GoLeft
+
+	release
+	end
+
+Route201_EventScript_FollowLeave_GoUp:
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
@@ -674,8 +693,46 @@ Route201_EventScript_FollowLeave::
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 30
-	release
-	end
+	return
+
+Route201_EventScript_FollowLeave_GoDown:
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox Route201_Text_FollowLeave, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceUp
+	waitmovement 0
+	delay 30
+	return
+
+Route201_EventScript_FollowLeave_GoRight:
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	msgbox Route201_Text_FollowLeave, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 30
+	return
+
+Route201_EventScript_FollowLeave_GoLeft:
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	msgbox Route201_Text_FollowLeave, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceRight
+	waitmovement 0
+	delay 30
+	return
 
 Route201_EventScript_FollowGrass::
 	lock
