@@ -53,6 +53,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_RIVAL_EVENT",
       "graphics_id": "OBJ_EVENT_GFX_BARRY_PT",
       "x": 33,
       "y": 24,
@@ -258,6 +259,42 @@
       "var": "VAR_OREBURGH_CITY_STATE",
       "var_value": "1",
       "script": "OreburghCityNorth_EventScript_Youngster4"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
+      "script": "OreburghCityNorth_EventScript_RivalLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
+      "script": "OreburghCityNorth_EventScript_RivalLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
+      "script": "OreburghCityNorth_EventScript_RivalLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
+      "script": "OreburghCityNorth_EventScript_RivalLeaving"
     }
   ],
   "bg_events": [

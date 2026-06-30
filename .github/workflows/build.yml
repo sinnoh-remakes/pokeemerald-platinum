@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+# Cancel superseded runs on the same branch/PR to save CI minutes.
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build ROM
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install toolchain and build deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            binutils-arm-none-eabi \
+            gcc-arm-none-eabi \
+            git \
+            make \
+            python3 \
+            pkg-config \
+            libpng-dev
+
+      - name: Build ROM
+        run: make -j"$(nproc)"
+
+      - name: Upload ROM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokeemerald.gba
+          path: pokeemerald.gba
+          if-no-files-found: error
