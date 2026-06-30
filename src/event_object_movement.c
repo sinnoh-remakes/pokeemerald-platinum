@@ -6712,11 +6712,30 @@ bool8 ObjectEventIsHeldMovementActive(struct ObjectEvent *objectEvent)
 
 static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
 {
+    s16 x, y;
+    u8 direction;
+
     if (objectEvent->isPlayer || objectEvent->localId == OBJ_EVENT_ID_FOLLOWER || objectEvent->localId == OBJ_EVENT_ID_NPC_FOLLOWER
      || objectEvent->localId == LOCALID_CAMERA)
         return movementActionId;    // handled separately
 
-    if (!ObjectMovingOnRockStairs(objectEvent, objectEvent->movementDirection))
+    // Derive the intended direction from the action so we can check the correct destination tile.
+    // For east/west movement, ObjectMovingOnRockStairs relies on directionOverwrite which is only
+    // populated by GetCollisionAtCoords — scripted NPCs never go through the player collision path,
+    // so we call it here to set directionOverwrite before the stairs check.
+    switch (movementActionId)
+    {
+        case MOVEMENT_ACTION_WALK_NORMAL_DOWN:  direction = DIR_SOUTH; break;
+        case MOVEMENT_ACTION_WALK_NORMAL_UP:    direction = DIR_NORTH; break;
+        case MOVEMENT_ACTION_WALK_NORMAL_LEFT:  direction = DIR_WEST;  break;
+        case MOVEMENT_ACTION_WALK_NORMAL_RIGHT: direction = DIR_EAST;  break;
+        default: return movementActionId;
+    }
+
+    ObjectEventMoveDestCoords(objectEvent, direction, &x, &y);
+    GetCollisionAtCoords(objectEvent, x, y, direction);
+
+    if (!ObjectMovingOnRockStairs(objectEvent, direction))
         return movementActionId;
 
     switch (movementActionId)
