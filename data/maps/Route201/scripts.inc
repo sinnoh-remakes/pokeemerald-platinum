@@ -423,16 +423,6 @@ Route201_Movement_HelperEnter:
 	walk_right
 	step_end
 
-Route201_EventScript_PickLeaveRight::
-	lock
-	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	msgbox Route201_Text_WhatsUp, MSGBOX_SIGN
-	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	release
-	end
-
 Route201_EventScript_PickLeaveDown::
 	lock
 	applymovement LOCALID_ROUTE201_RIVAL, Common_Movement_WalkInPlaceDown
@@ -748,29 +738,6 @@ Route201_EventScript_FollowGrass::
 	delay 30
 	release
 	end
-
-Route201_EventScript_FollowGrass2::
-	lock
-	call_if_eq VAR_FACING, DIR_EAST, Route201_EventScript_FollowGrassWestApproach
-	call_if_eq VAR_FACING, DIR_NORTH, Route201_EventScript_FollowGrassSouthApproach
-	release
-	end
-
-Route201_EventScript_FollowGrassWestApproach::
-	goto Route201_EventScript_FollowGrass
-
-Route201_EventScript_FollowGrassSouthApproach::
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkInPlaceUp
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	msgbox Route201_Text_FollowGrass, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_WalkDown
-	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_FaceUp
-	waitmovement 0
-	delay 30
-	return
 
 Route201_EventScript_TipSign::
 	msgbox Route201_Text_TipSign, MSGBOX_SIGN
