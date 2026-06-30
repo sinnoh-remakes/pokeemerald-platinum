@@ -7,10 +7,10 @@ OreburghCityNorth_MapScripts::
 @ 3: Talked to Barry
 @ 4: Talked to Roark
 @ 5: Obtained Coal Badge
+@ 6: Rival left Oreburgh
 
 OreburghCityNorth_EventScript_RivalLeaving::
-	goto_if_unset FLAG_DEFEATED_OREBURGH_GYM, End
-	setvar VAR_SHOW_RIVAL_LEAVING_OREBURGH, 1
+	setvar VAR_OREBURGH_CITY_STATE, 6
 
 	lock
 
@@ -95,9 +95,6 @@ OreburghCityNorth_EventScript_RivalLeaving_Section4:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement LOCALID_RIVAL_EVENT
 	return
-
-End:
-	end
 
 OreburghCityNorth_EventScript_Youngster::
 	lock

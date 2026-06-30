@@ -265,8 +265,8 @@
       "x": 13,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_SHOW_RIVAL_LEAVING_OREBURGH",
-      "var_value": "0",
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
       "script": "OreburghCityNorth_EventScript_RivalLeaving"
     },
     {
@@ -274,8 +274,8 @@
       "x": 13,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_SHOW_RIVAL_LEAVING_OREBURGH",
-      "var_value": "0",
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
       "script": "OreburghCityNorth_EventScript_RivalLeaving"
     },
     {
@@ -283,8 +283,8 @@
       "x": 13,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_SHOW_RIVAL_LEAVING_OREBURGH",
-      "var_value": "0",
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
       "script": "OreburghCityNorth_EventScript_RivalLeaving"
     },
     {
@@ -292,8 +292,8 @@
       "x": 13,
       "y": 16,
       "elevation": 0,
-      "var": "VAR_SHOW_RIVAL_LEAVING_OREBURGH",
-      "var_value": "0",
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "5",
       "script": "OreburghCityNorth_EventScript_RivalLeaving"
     }
   ],
