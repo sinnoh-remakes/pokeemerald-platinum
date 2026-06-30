@@ -247,7 +247,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
       "var_value": "3",
-      "script": "Route201_EventScript_FollowGrass2"
+      "script": "Route201_EventScript_FollowGrass"
     },
     {
       "type": "trigger",
