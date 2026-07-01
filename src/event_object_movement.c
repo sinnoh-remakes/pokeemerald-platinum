@@ -6710,6 +6710,61 @@ bool8 ObjectEventIsHeldMovementActive(struct ObjectEvent *objectEvent)
     return FALSE;
 }
 
+// Map a walk/run movement action back to its cardinal direction. Each walk-speed
+// family is laid out DOWN, UP, LEFT, RIGHT == DIR_SOUTH, DIR_NORTH, DIR_WEST, DIR_EAST,
+// so the direction is the offset from the family's DOWN action plus DIR_SOUTH.
+// Returns DIR_NONE for any non-walk action (face, jump, delay, ...).
+static u8 GetMoveDirectionFromMovementActionId(u8 movementActionId)
+{
+    if (movementActionId >= MOVEMENT_ACTION_WALK_SLOW_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_SLOW_RIGHT)
+        return movementActionId - MOVEMENT_ACTION_WALK_SLOW_DOWN + DIR_SOUTH;
+    if (movementActionId >= MOVEMENT_ACTION_WALK_NORMAL_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_NORMAL_RIGHT)
+        return movementActionId - MOVEMENT_ACTION_WALK_NORMAL_DOWN + DIR_SOUTH;
+    if (movementActionId >= MOVEMENT_ACTION_WALK_FAST_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_FAST_RIGHT)
+        return movementActionId - MOVEMENT_ACTION_WALK_FAST_DOWN + DIR_SOUTH;
+    if (movementActionId >= MOVEMENT_ACTION_WALK_FASTER_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_FASTER_RIGHT)
+        return movementActionId - MOVEMENT_ACTION_WALK_FASTER_DOWN + DIR_SOUTH;
+    if (movementActionId >= MOVEMENT_ACTION_PLAYER_RUN_DOWN && movementActionId <= MOVEMENT_ACTION_PLAYER_RUN_RIGHT)
+        return movementActionId - MOVEMENT_ACTION_PLAYER_RUN_DOWN + DIR_SOUTH;
+    return DIR_NONE;
+}
+
+// Give regular NPCs the same sideways-stairs diagonal motion the player and followers
+// get. Scripted (applymovement) walks reach ObjectEventSetHeldMovement without ever
+// running the collision check that sets directionOverwrite, so without this they walk
+// straight through sideways stairs. The player (GetCollisionAtCoords) and followers
+// (follower_npc.c) set directionOverwrite in their own code, so they're bypassed here.
+static void TrySetSidewaysStairsDirectionOverwrite(struct ObjectEvent *objectEvent, u8 movementActionId)
+{
+    u8 direction, currentBehavior, nextBehavior;
+    s16 x, y;
+
+    if (objectEvent->isPlayer || objectEvent->localId == OBJ_EVENT_ID_FOLLOWER || objectEvent->localId == OBJ_EVENT_ID_NPC_FOLLOWER
+     || objectEvent->localId == LOCALID_CAMERA)
+        return;    // handled separately
+
+    direction = GetMoveDirectionFromMovementActionId(movementActionId);
+    if (direction == DIR_NONE)
+        return;
+
+    x = objectEvent->currentCoords.x;
+    y = objectEvent->currentCoords.y;
+    currentBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    MoveCoords(direction, &x, &y);
+    nextBehavior = MapGridGetMetatileBehaviorAt(x, y);
+
+    objectEvent->directionOverwrite = DIR_NONE;
+    switch (GetSidewaysStairsCollision(objectEvent, direction, currentBehavior, nextBehavior, COLLISION_NONE))
+    {
+    case COLLISION_SIDEWAYS_STAIRS_TO_LEFT:
+        objectEvent->directionOverwrite = GetLeftSideStairsDirection(direction);
+        break;
+    case COLLISION_SIDEWAYS_STAIRS_TO_RIGHT:
+        objectEvent->directionOverwrite = GetRightSideStairsDirection(direction);
+        break;
+    }
+}
+
 static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
 {
     if (objectEvent->isPlayer || objectEvent->localId == OBJ_EVENT_ID_FOLLOWER || objectEvent->localId == OBJ_EVENT_ID_NPC_FOLLOWER
@@ -6753,6 +6808,9 @@ bool8 ObjectEventSetHeldMovement(struct ObjectEvent *objectEvent, u8 movementAct
         return TRUE;
 
     movementActionId = TryUpdateMovementActionOnStairs(objectEvent, movementActionId);
+    // Set diagonal directionOverwrite for regular NPCs walking on sideways stairs.
+    // Runs after the rock-stairs check above, which reads directionOverwrite itself.
+    TrySetSidewaysStairsDirectionOverwrite(objectEvent, movementActionId);
 
     UnfreezeObjectEvent(objectEvent);
     objectEvent->movementActionId = movementActionId;
