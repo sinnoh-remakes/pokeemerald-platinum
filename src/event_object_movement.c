@@ -6710,25 +6710,6 @@ bool8 ObjectEventIsHeldMovementActive(struct ObjectEvent *objectEvent)
     return FALSE;
 }
 
-// Map a walk/run movement action back to its cardinal direction. Each walk-speed
-// family is laid out DOWN, UP, LEFT, RIGHT == DIR_SOUTH, DIR_NORTH, DIR_WEST, DIR_EAST,
-// so the direction is the offset from the family's DOWN action plus DIR_SOUTH.
-// Returns DIR_NONE for any non-walk action (face, jump, delay, ...).
-static u8 GetMoveDirectionFromMovementActionId(u8 movementActionId)
-{
-    if (movementActionId >= MOVEMENT_ACTION_WALK_SLOW_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_SLOW_RIGHT)
-        return movementActionId - MOVEMENT_ACTION_WALK_SLOW_DOWN + DIR_SOUTH;
-    if (movementActionId >= MOVEMENT_ACTION_WALK_NORMAL_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_NORMAL_RIGHT)
-        return movementActionId - MOVEMENT_ACTION_WALK_NORMAL_DOWN + DIR_SOUTH;
-    if (movementActionId >= MOVEMENT_ACTION_WALK_FAST_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_FAST_RIGHT)
-        return movementActionId - MOVEMENT_ACTION_WALK_FAST_DOWN + DIR_SOUTH;
-    if (movementActionId >= MOVEMENT_ACTION_WALK_FASTER_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_FASTER_RIGHT)
-        return movementActionId - MOVEMENT_ACTION_WALK_FASTER_DOWN + DIR_SOUTH;
-    if (movementActionId >= MOVEMENT_ACTION_PLAYER_RUN_DOWN && movementActionId <= MOVEMENT_ACTION_PLAYER_RUN_RIGHT)
-        return movementActionId - MOVEMENT_ACTION_PLAYER_RUN_DOWN + DIR_SOUTH;
-    return DIR_NONE;
-}
-
 static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
 {
     u8 direction, currentBehavior, nextBehavior;
@@ -6738,17 +6719,19 @@ static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 mo
      || objectEvent->localId == LOCALID_CAMERA)
         return movementActionId;    // handled separately
 
-    // movementDirection is stale here (only refreshed once the action executes), so
-    // derive the intended direction from the action id. Non-walk actions bail out.
-    direction = GetMoveDirectionFromMovementActionId(movementActionId);
-    if (direction == DIR_NONE)
+    // Only normal-speed scripted walks get the sideways-stairs slow climb (mirrors the
+    // player). movementDirection is stale here (only refreshed once the action executes),
+    // so derive the cardinal direction from the action id: WALK_NORMAL_{DOWN,UP,LEFT,RIGHT}
+    // is laid out as DIR_{SOUTH,NORTH,WEST,EAST}.
+    if (movementActionId < MOVEMENT_ACTION_WALK_NORMAL_DOWN || movementActionId > MOVEMENT_ACTION_WALK_NORMAL_RIGHT)
         return movementActionId;
+    direction = movementActionId - MOVEMENT_ACTION_WALK_NORMAL_DOWN + DIR_SOUTH;
 
     // Scripted/autonomous NPCs never run the player collision path that populates
     // directionOverwrite, so compute the sideways-stairs diagonal here (mirrors
     // follower_npc.c). ObjectMovingOnRockStairs then treats "E/W with directionOverwrite
-    // set" as a stair and the switch below converts the walk to WALK_SLOW_STAIRS - the
-    // same diagonal, slow climb the player performs on sideways stairs.
+    // set" as a stair, and we swap the walk for the WALK_SLOW_STAIRS action - the same
+    // diagonal, slow climb the player performs on sideways stairs.
     x = objectEvent->currentCoords.x;
     y = objectEvent->currentCoords.y;
     currentBehavior = MapGridGetMetatileBehaviorAt(x, y);
@@ -6768,19 +6751,7 @@ static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 mo
     if (!ObjectMovingOnRockStairs(objectEvent, direction))
         return movementActionId;
 
-    switch (movementActionId)
-    {
-        case MOVEMENT_ACTION_WALK_NORMAL_DOWN:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_DOWN;
-        case MOVEMENT_ACTION_WALK_NORMAL_UP:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_UP;
-        case MOVEMENT_ACTION_WALK_NORMAL_LEFT:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_LEFT;
-        case MOVEMENT_ACTION_WALK_NORMAL_RIGHT:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_RIGHT;
-        default:
-            return movementActionId;
-    }
+    return GetWalkSlowStairsMovementAction(direction);
 }
 
 static const u8 sActionIdToCopyableMovement[] = {
