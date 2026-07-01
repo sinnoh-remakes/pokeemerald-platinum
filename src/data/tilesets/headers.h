@@ -1279,7 +1279,7 @@ const struct Tileset gTileset_OutdoorFloaroma =
     .palettes = gTilesetPalettes_OutdoorFloaroma,
     .metatiles = gMetatiles_OutdoorFloaroma,
     .metatileAttributes = gMetatileAttributes_OutdoorFloaroma,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Floaroma,
 };
 
 const struct Tileset gTileset_Floaroma =
