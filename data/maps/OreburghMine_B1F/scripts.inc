@@ -1,5 +1,10 @@
 OreburghMine_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, OreburghMine_B1F_OnResume
 	.byte 0
+
+OreburghMine_B1F_OnResume:
+	setescapewarp MAP_OREBURGH_CITY_SOUTH, 39, 32
+	end
 
 OreburghMine_B1F_EventScript_Worker::
 	msgbox OreburghMine_B1F_Text_EveryoneThatWorks, MSGBOX_NPC
