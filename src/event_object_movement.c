@@ -6729,30 +6729,31 @@ static u8 GetMoveDirectionFromMovementActionId(u8 movementActionId)
     return DIR_NONE;
 }
 
-// Give regular NPCs the same sideways-stairs diagonal motion the player and followers
-// get. Scripted (applymovement) walks reach ObjectEventSetHeldMovement without ever
-// running the collision check that sets directionOverwrite, so without this they walk
-// straight through sideways stairs. The player (GetCollisionAtCoords) and followers
-// (follower_npc.c) set directionOverwrite in their own code, so they're bypassed here.
-static void TrySetSidewaysStairsDirectionOverwrite(struct ObjectEvent *objectEvent, u8 movementActionId)
+static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
 {
     u8 direction, currentBehavior, nextBehavior;
     s16 x, y;
 
     if (objectEvent->isPlayer || objectEvent->localId == OBJ_EVENT_ID_FOLLOWER || objectEvent->localId == OBJ_EVENT_ID_NPC_FOLLOWER
      || objectEvent->localId == LOCALID_CAMERA)
-        return;    // handled separately
+        return movementActionId;    // handled separately
 
+    // movementDirection is stale here (only refreshed once the action executes), so
+    // derive the intended direction from the action id. Non-walk actions bail out.
     direction = GetMoveDirectionFromMovementActionId(movementActionId);
     if (direction == DIR_NONE)
-        return;
+        return movementActionId;
 
+    // Scripted/autonomous NPCs never run the player collision path that populates
+    // directionOverwrite, so compute the sideways-stairs diagonal here (mirrors
+    // follower_npc.c). ObjectMovingOnRockStairs then treats "E/W with directionOverwrite
+    // set" as a stair and the switch below converts the walk to WALK_SLOW_STAIRS - the
+    // same diagonal, slow climb the player performs on sideways stairs.
     x = objectEvent->currentCoords.x;
     y = objectEvent->currentCoords.y;
     currentBehavior = MapGridGetMetatileBehaviorAt(x, y);
     MoveCoords(direction, &x, &y);
     nextBehavior = MapGridGetMetatileBehaviorAt(x, y);
-
     objectEvent->directionOverwrite = DIR_NONE;
     switch (GetSidewaysStairsCollision(objectEvent, direction, currentBehavior, nextBehavior, COLLISION_NONE))
     {
@@ -6763,15 +6764,8 @@ static void TrySetSidewaysStairsDirectionOverwrite(struct ObjectEvent *objectEve
         objectEvent->directionOverwrite = GetRightSideStairsDirection(direction);
         break;
     }
-}
 
-static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
-{
-    if (objectEvent->isPlayer || objectEvent->localId == OBJ_EVENT_ID_FOLLOWER || objectEvent->localId == OBJ_EVENT_ID_NPC_FOLLOWER
-     || objectEvent->localId == LOCALID_CAMERA)
-        return movementActionId;    // handled separately
-
-    if (!ObjectMovingOnRockStairs(objectEvent, objectEvent->movementDirection))
+    if (!ObjectMovingOnRockStairs(objectEvent, direction))
         return movementActionId;
 
     switch (movementActionId)
@@ -6808,9 +6802,6 @@ bool8 ObjectEventSetHeldMovement(struct ObjectEvent *objectEvent, u8 movementAct
         return TRUE;
 
     movementActionId = TryUpdateMovementActionOnStairs(objectEvent, movementActionId);
-    // Set diagonal directionOverwrite for regular NPCs walking on sideways stairs.
-    // Runs after the rock-stairs check above, which reads directionOverwrite itself.
-    TrySetSidewaysStairsDirectionOverwrite(objectEvent, movementActionId);
 
     UnfreezeObjectEvent(objectEvent);
     objectEvent->movementActionId = movementActionId;
