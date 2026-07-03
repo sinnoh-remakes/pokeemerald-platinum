@@ -6712,26 +6712,46 @@ bool8 ObjectEventIsHeldMovementActive(struct ObjectEvent *objectEvent)
 
 static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
 {
+    u8 direction, currentBehavior, nextBehavior;
+    s16 x, y;
+
     if (objectEvent->isPlayer || objectEvent->localId == OBJ_EVENT_ID_FOLLOWER || objectEvent->localId == OBJ_EVENT_ID_NPC_FOLLOWER
      || objectEvent->localId == LOCALID_CAMERA)
         return movementActionId;    // handled separately
 
-    if (!ObjectMovingOnRockStairs(objectEvent, objectEvent->movementDirection))
+    // Only normal-speed scripted walks get the sideways-stairs slow climb (mirrors the
+    // player). movementDirection is stale here (only refreshed once the action executes),
+    // so derive the cardinal direction from the action id: WALK_NORMAL_{DOWN,UP,LEFT,RIGHT}
+    // is laid out as DIR_{SOUTH,NORTH,WEST,EAST}.
+    if (movementActionId < MOVEMENT_ACTION_WALK_NORMAL_DOWN || movementActionId > MOVEMENT_ACTION_WALK_NORMAL_RIGHT)
+        return movementActionId;
+    direction = movementActionId - MOVEMENT_ACTION_WALK_NORMAL_DOWN + DIR_SOUTH;
+
+    // Scripted/autonomous NPCs never run the player collision path that populates
+    // directionOverwrite, so compute the sideways-stairs diagonal here (mirrors
+    // follower_npc.c). ObjectMovingOnRockStairs then treats "E/W with directionOverwrite
+    // set" as a stair, and we swap the walk for the WALK_SLOW_STAIRS action - the same
+    // diagonal, slow climb the player performs on sideways stairs.
+    x = objectEvent->currentCoords.x;
+    y = objectEvent->currentCoords.y;
+    currentBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    MoveCoords(direction, &x, &y);
+    nextBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    objectEvent->directionOverwrite = DIR_NONE;
+    switch (GetSidewaysStairsCollision(objectEvent, direction, currentBehavior, nextBehavior, COLLISION_NONE))
+    {
+    case COLLISION_SIDEWAYS_STAIRS_TO_LEFT:
+        objectEvent->directionOverwrite = GetLeftSideStairsDirection(direction);
+        break;
+    case COLLISION_SIDEWAYS_STAIRS_TO_RIGHT:
+        objectEvent->directionOverwrite = GetRightSideStairsDirection(direction);
+        break;
+    }
+
+    if (!ObjectMovingOnRockStairs(objectEvent, direction))
         return movementActionId;
 
-    switch (movementActionId)
-    {
-        case MOVEMENT_ACTION_WALK_NORMAL_DOWN:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_DOWN;
-        case MOVEMENT_ACTION_WALK_NORMAL_UP:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_UP;
-        case MOVEMENT_ACTION_WALK_NORMAL_LEFT:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_LEFT;
-        case MOVEMENT_ACTION_WALK_NORMAL_RIGHT:
-            return MOVEMENT_ACTION_WALK_SLOW_STAIRS_RIGHT;
-        default:
-            return movementActionId;
-    }
+    return GetWalkSlowStairsMovementAction(direction);
 }
 
 static const u8 sActionIdToCopyableMovement[] = {
