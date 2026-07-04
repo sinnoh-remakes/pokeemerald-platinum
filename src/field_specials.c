@@ -4361,7 +4361,7 @@ void EnterCode(void)
 
 void DoRivalNamingScreen(void)
 {
-    DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->rivalName, MALE, 0, 0, CB2_ReturnToFieldContinueScript);
+    DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, 0, 0, 0, CB2_ReturnToFieldContinueScript);
 }
 
 void GetCodeFeedback(void)
