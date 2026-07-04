@@ -121,6 +121,10 @@ TwinleafTown_PlayersHouse_2F_EventScript_RivalEnter::
 	delay 48
 	delay 48
 	playbgm MUS_DP_RIVAL, FALSE
+	msgbox TwinleafTown_PlayersHouse_2F_Text_NameRivalPrompt, MSGBOX_DEFAULT
+	closemessage
+	special DoRivalNamingScreen
+	waitstate
 	msgbox TwinleafTown_PlayersHouse_2F_Text_ThereYouAre, MSGBOX_DEFAULT
 	closemessage
 	return
@@ -328,6 +332,11 @@ TwinleafTown_PlayersHouse_2F_EventScript_TV::
 TwinleafTown_PlayersHouse_2F_EventScript_GameCube::
 	msgbox TwinleafTown_PlayersHouse_2F_Text_GameCube, MSGBOX_SIGN
 	end
+
+TwinleafTown_PlayersHouse_2F_Text_NameRivalPrompt:
+	.string "Your friend and rival from next door\n"
+	.string "burst into the room!\p"
+	.string "What is his name?$"
 
 TwinleafTown_PlayersHouse_2F_Text_ThereYouAre:
 	.string "{RIVAL}: There you are!$"
