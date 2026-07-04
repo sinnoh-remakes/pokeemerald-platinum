@@ -336,7 +336,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_GameCube::
 TwinleafTown_PlayersHouse_2F_Text_NameRivalPrompt:
 	.string "Your friend and rival from next door\n"
 	.string "burst into the room!\p"
-	.string "What is his name?$"
+	.string "What is their name?$"
 
 TwinleafTown_PlayersHouse_2F_Text_ThereYouAre:
 	.string "{RIVAL}: There you are!$"
