@@ -44,3 +44,81 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+
+=== PARTNER_DAWN_PIPLUP ===
+Name: Dawn
+Pic: Dawn
+Gender: Female
+Back Pic: Dawn
+AI: Basic Trainer
+
+Piplup
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pound
+- Bubble
+
+=== PARTNER_DAWN_TURTWIG ===
+Name: Dawn
+Pic: Dawn
+Gender: Female
+Back Pic: Dawn
+AI: Basic Trainer
+
+Turtwig
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Absorb
+
+=== PARTNER_DAWN_CHIMCHAR ===
+Name: Dawn
+Pic: Dawn
+Gender: Female
+Back Pic: Dawn
+AI: Basic Trainer
+
+Chimchar
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Scratch
+- Ember
+
+=== PARTNER_LUCAS_PIPLUP ===
+Name: Lucas
+Pic: Lucas
+Gender: Male
+Back Pic: Lucas
+AI: Basic Trainer
+
+Piplup
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pound
+- Bubble
+
+=== PARTNER_LUCAS_TURTWIG ===
+Name: Lucas
+Pic: Lucas
+Gender: Male
+Back Pic: Lucas
+AI: Basic Trainer
+
+Turtwig
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Absorb
+
+=== PARTNER_LUCAS_CHIMCHAR ===
+Name: Lucas
+Pic: Lucas
+Gender: Male
+Back Pic: Lucas
+AI: Basic Trainer
+
+Chimchar
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Scratch
+- Ember

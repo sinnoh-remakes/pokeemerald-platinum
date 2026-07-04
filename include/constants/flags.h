@@ -43,18 +43,18 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_ROUTE_201_POTION           0x20
-#define FLAG_GLOBAL_TERMINAL_OPEN       0x21
-#define FLAG_TRAINER_SCHOOL_POTION      0x22
-#define FLAG_JUBILIFE_CLOWN_GROW        0x23
-#define FLAG_JUBILIFE_CLOWN_ITEM        0x24
-#define FLAG_JUBILIFE_CLOWN_TYPE        0x25
-#define FLAG_JUBILIFE_CITY_QUICK_CLAW   0x26
-#define FLAG_OREBURGH_CITY_SUPER_POTION 0x27
-#define FLAG_OREBURGH_CITY_DUSK_BALL    0x28
-#define FLAG_OREBURGH_CITY_GREAT_BALL   0x29
-#define FLAG_TM_STEALTH_ROCK            0x2A
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_ROUTE_201_POTION                            0x20
+#define FLAG_GLOBAL_TERMINAL_OPEN                        0x21
+#define FLAG_TRAINER_SCHOOL_POTION                       0x22
+#define FLAG_JUBILIFE_CLOWN_GROW                         0x23
+#define FLAG_JUBILIFE_CLOWN_ITEM                         0x24
+#define FLAG_JUBILIFE_CLOWN_TYPE                         0x25
+#define FLAG_JUBILIFE_CITY_QUICK_CLAW                    0x26
+#define FLAG_OREBURGH_CITY_SUPER_POTION                  0x27
+#define FLAG_OREBURGH_CITY_DUSK_BALL                     0x28
+#define FLAG_OREBURGH_CITY_GREAT_BALL                    0x29
+#define FLAG_TM_STEALTH_ROCK                             0x2A
+#define FLAG_JUBILIFE_CITY_HIDE_GALACTIC_GRUNTS_EVENT    0x2B
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

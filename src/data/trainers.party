@@ -17554,3 +17554,30 @@ Nature: Jolly
 - Headbutt
 - Pursuit
 - Leer
+
+=== TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1 ===
+Name: Grunt
+Class: Galactic
+Gender: Male
+Pic: GALACTIC GRUNT M DP
+
+Stunky
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Focus Energy
+- Poison Gas
+- Screech
+- Fury Swipes
+
+=== TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2 ===
+Name: Grunt
+Class: Galactic
+Gender: Male
+Pic: GALACTIC GRUNT M DP
+
+Glameow
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fake Out
+- Scratch
+- Growl
