@@ -404,6 +404,7 @@ static const struct WindowTemplate sNewGameBirchSpeechTextWindows[] =
         .paletteNum = 15,
         .baseBlock = 1
     },
+    // Unused since the BOY/GIRL menu was removed; kept so later windows keep their indices.
     {
         .bg = 0,
         .tilemapLeft = 3,
@@ -1736,6 +1737,7 @@ static void NewGameBirchSpeech_UpdateGenderHighlight(u8 taskId)
         focused = gTasks[taskId].tMaySpriteId;
         faded = gTasks[taskId].tBrendanSpriteId;
     }
+    // Unselected trainer is washed out 11/16 of the way toward white.
     BlendPalette(OBJ_PLTT_ID(gSprites[focused].oam.paletteNum), 16, 0, RGB_WHITE);
     BlendPalette(OBJ_PLTT_ID(gSprites[faded].oam.paletteNum), 16, 11, RGB_WHITE);
 }
