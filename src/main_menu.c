@@ -250,6 +250,7 @@ static void Task_NewGameBirchSpeech_RivalNameSlidePlatformAway(u8);
 static void CB2_NewGameBirchSpeech_ReturnFromRivalNamingScreen(void);
 static void Task_NewGameBirchSpeech_ReturnFromRivalNamingScreenShowTextbox(u8);
 static void NewGameBirchSpeech_ShowRivalNameMenu(void);
+static void NewGameBirchSpeech_ClearMenuWindow(u8, u8);
 static void Task_NewGameBirchSpeech_AreYouReady(u8);
 static void Task_NewGameBirchSpeech_ShrinkPlayer(u8);
 static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *);
@@ -1962,14 +1963,14 @@ static void Task_NewGameBirchSpeech_ChooseRivalName(u8 taskId)
             break;
         case 0: // New name!
             PlaySE(SE_SELECT);
-            NewGameBirchSpeech_ClearGenderWindow(2, 1);
+            NewGameBirchSpeech_ClearMenuWindow(2, 1);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             gTasks[taskId].func = Task_NewGameBirchSpeech_StartRivalNamingScreen;
             break;
         default:
             PlaySE(SE_SELECT);
             StringCopy(gSaveBlock2Ptr->rivalName, sMenuActions_RivalName[input].text);
-            NewGameBirchSpeech_ClearGenderWindow(2, 1);
+            NewGameBirchSpeech_ClearMenuWindow(2, 1);
             gTasks[taskId].func = Task_NewGameBirchSpeech_SoItsRivalName;
             break;
     }
@@ -2175,20 +2176,24 @@ static void NewGameBirchSpeech_ReturnFromNaming(bool8 nameRival)
     FreeAllSpritePalettes();
     ResetAllPicSprites();
     AddBirchSpeechObjects(taskId);
-    if (gSaveBlock2Ptr->playerGender != MALE)
-    {
-        gTasks[taskId].tPlayerGender = FEMALE;
-        spriteId = gTasks[taskId].tMaySpriteId;
-    }
-    else
-    {
-        gTasks[taskId].tPlayerGender = MALE;
-        spriteId = gTasks[taskId].tBrendanSpriteId;
-    }
     if (nameRival)
+    {
         spriteId = gTasks[taskId].tRivalSpriteId;
+    }
     else
+    {
+        if (gSaveBlock2Ptr->playerGender != MALE)
+        {
+            gTasks[taskId].tPlayerGender = FEMALE;
+            spriteId = gTasks[taskId].tMaySpriteId;
+        }
+        else
+        {
+            gTasks[taskId].tPlayerGender = MALE;
+            spriteId = gTasks[taskId].tBrendanSpriteId;
+        }
         gTasks[taskId].tPlayerSpriteId = spriteId;
+    }
     gSprites[spriteId].x = 180;
     gSprites[spriteId].y = 60;
     gSprites[spriteId].invisible = FALSE;
@@ -2470,6 +2475,20 @@ static void NewGameBirchSpeech_ShowRivalNameMenu(void)
     InitMenuInUpperLeftCornerNormal(2, ARRAY_COUNT(sMenuActions_RivalName), 0);
     PutWindowTilemap(2);
     CopyWindowToVram(2, COPYWIN_FULL);
+}
+
+static void NewGameBirchSpeech_ClearMenuWindowTilemap(u8 bg, u8 x, u8 y, u8 width, u8 height, u8 unused)
+{
+    FillBgTilemapBufferRect(bg, 0, x + 255, y + 255, width + 2, height + 2, 2);
+}
+
+static void NewGameBirchSpeech_ClearMenuWindow(u8 windowId, bool8 copyToVram)
+{
+    CallWindowFunction(windowId, NewGameBirchSpeech_ClearMenuWindowTilemap);
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    ClearWindowTilemap(windowId);
+    if (copyToVram == TRUE)
+        CopyWindowToVram(windowId, COPYWIN_FULL);
 }
 
 void NewGameBirchSpeech_SetDefaultPlayerName(u8 nameId)
