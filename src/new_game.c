@@ -22,8 +22,6 @@
 #include "tv.h"
 #include "coins.h"
 #include "text.h"
-#include "string_util.h"
-#include "strings.h"
 #include "overworld.h"
 #include "mail.h"
 #include "battle_records.h"
@@ -169,7 +167,6 @@ void NewGameInitData(void)
     ClearAllMail();
     gSaveBlock2Ptr->specialSaveWarpFlags = 0;
     gSaveBlock2Ptr->gcnLinkFlags = 0;
-    StringCopy(gSaveBlock2Ptr->rivalName, gText_ExpandedPlaceholder_Barry);
     InitPlayerTrainerId();
     PlayTimeCounter_Reset();
     ClearPokedexFlags();
