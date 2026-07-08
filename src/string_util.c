@@ -478,7 +478,9 @@ static const u8 *ExpandPlaceholder_KunChan(void)
 
 static const u8 *ExpandPlaceholder_RivalName(void)
 {
-    return gText_ExpandedPlaceholder_Barry;
+    if (gSaveBlock2Ptr->rivalName[0] == EOS || gSaveBlock2Ptr->rivalName[0] == CHAR_SPACE)
+        return gText_ExpandedPlaceholder_Barry;
+    return gSaveBlock2Ptr->rivalName;
 }
 
 static const u8 *ExpandPlaceholder_Version(void)
