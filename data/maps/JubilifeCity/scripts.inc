@@ -13,19 +13,7 @@ JubilifeCity_MapScripts::
 JubilifeCity_OnTransition:
 	setflag FLAG_VISITED_JUBILIFE_CITY
 	call Common_EventScript_SetupRivalGfxId
-	compare VAR_JUBILIFE_CITY_STATE, 5
-	call_if_lt JubilifeCity_SetFlag_GalacticGrunts
-	compare VAR_JUBILIFE_CITY_STATE, 6
-	call_if_eq JubilifeCity_SetFlag_GalacticGrunts
 	end
-
-JubilifeCity_SetFlag_GalacticGrunts:
-	setflag FLAG_JUBILIFE_CITY_HIDE_GALACTIC_GRUNTS_EVENT
-	removeobject LOCALID_ASSISTANT
-	removeobject LOCALID_PROF_ROWAN
-	removeobject LOCALID_GALACTIC_GRUNT_1
-	removeobject LOCALID_GALACTIC_GRUNT_2
-	return
 
 JubilifeCity_EventScript_GalacticGruntsEventIntro:
 	lock
