@@ -1344,7 +1344,7 @@ JubilifeCity_Text_GalacticGrunts_Main4:
 
 JubilifeCity_Text_GalacticGrunts_Lucas:
 	.string "Lucas: {PLAYER}!\n"
-	.string "Let's battle together!$"
+	.string "Join me and battle these guys!$"
 
 JubilifeCity_Text_GalacticGrunts_Dawn:
 	.string "Dawn: {PLAYER}!\n"
@@ -1388,15 +1388,16 @@ JubilifeCity_Text_GalacticGrunts_Dawn_Outro:
 	.string "That's really unforgivable!$"
 
 JubilifeCity_Text_GalacticGrunts_Lucas_Outro:
-	.string "Lucas: {PLAYER}, did you know?\n"
-	.string "The professor studies the evolution\l"
-	.string "of Pokémon, too.\p"
+	.string "Lucas: {PLAYER}, did you know\n"
+	.string "about this?\p"
+	.string "The professor studies the\n"
+	.string "evolution of Pokémon, too.\p"
 	.string "According to his research, 90% of all\n"
 	.string "Pokémon are somehow tied to evolution!\p"
-	.string "Well, maybe that's the reason those\n"
-	.string "people tried to take the professor's\l"
-	.string "research data by force.\p"
-	.string "That's really unforgivable!$"
+	.string "Maybe that's the reason those goons\n"
+	.string "tried to take the professor's\p"
+	.string "research data\n"
+	.string "They're not allowed to do that!$"
 
 JubilifeCity_Text_GalacticGrunts_Prof_Outro2:
 	.string "Rowan: It's all over, so you can\n"
