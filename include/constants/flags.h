@@ -681,7 +681,7 @@
 #define FLAG_HIDE_ROUTE_203_RIVAL                        0x276
 #define FLAG_HIDE_OREBURGH_CITY_RIVAL                    0x277
 #define FLAG_HIDE_OREBURGH_MINE_ROCK                     0x278
-#define FLAG_JUBILIFE_CITY_HIDE_GALACTIC_GRUNTS_EVENT    0x279
+#define FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT    0x279
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
 #define FLAG_UNUSED_0x27B  0x27B // Unused Flag
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag

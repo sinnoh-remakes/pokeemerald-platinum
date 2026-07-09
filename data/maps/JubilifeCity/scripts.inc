@@ -204,6 +204,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Win::
 	removeobject LOCALID_ASSISTANT
 	removeobject LOCALID_PROF_ROWAN
 	setvar VAR_JUBILIFE_CITY_STATE, 6
+	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT
 	release
 	end
 
