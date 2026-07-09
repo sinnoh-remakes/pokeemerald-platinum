@@ -27,8 +27,7 @@ JubilifeCity_SetFlag_GalacticGrunts:
 	removeobject LOCALID_GALACTIC_GRUNT_2
 	return
 
-
-JubilifeCity_EventScript_GalacticGruntsEvent1::
+JubilifeCity_EventScript_GalacticGruntsEventIntro:
 	lock
 	msgbox JubilifeCity_Text_GalacticGruntsIntro, MSGBOX_DEFAULT
 	closemessage
@@ -37,43 +36,30 @@ JubilifeCity_EventScript_GalacticGruntsEvent1::
 	playse SE_PIN
 	applymovement LOCALID_PROF_ROWAN, Common_Movement_ExclamationMark
 	waitmovement 0
+	return
+
+JubilifeCity_EventScript_GalacticGruntsEvent1::
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement1
+	waitmovement 0
 	goto JubilifeCity_EventScript_GalacticGruntsEventMain
 
 JubilifeCity_EventScript_GalacticGruntsEvent2::
-	lock
-	msgbox JubilifeCity_Text_GalacticGruntsIntro, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	playse SE_PIN
-	applymovement LOCALID_PROF_ROWAN, Common_Movement_ExclamationMark
-	waitmovement 0
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement2
+	waitmovement 0
 	goto JubilifeCity_EventScript_GalacticGruntsEventMain
 
 JubilifeCity_EventScript_GalacticGruntsEvent3::
-	lock
-	msgbox JubilifeCity_Text_GalacticGruntsIntro, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	playse SE_PIN
-	applymovement LOCALID_PROF_ROWAN, Common_Movement_ExclamationMark
-	waitmovement 0
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement3
+	waitmovement 0
 	goto JubilifeCity_EventScript_GalacticGruntsEventMain
 
 JubilifeCity_EventScript_GalacticGruntsEvent4::
-	lock
-	msgbox JubilifeCity_Text_GalacticGruntsIntro, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	playse SE_PIN
-	applymovement LOCALID_PROF_ROWAN, Common_Movement_ExclamationMark
-	waitmovement 0
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement4
+	waitmovement 0
 	goto JubilifeCity_EventScript_GalacticGruntsEventMain
 
 JubilifeCity_EventScript_GalacticGruntsEventMain::
@@ -222,7 +208,11 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Win::
 	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_GalacticGruntsEvent_Outro_Lucas
 	applymovement LOCALID_PROF_ROWAN, JubilifeCity_Movement_GalacticGruntsEvent_Prof_Leave
 	applymovement LOCALID_ASSISTANT, JubilifeCity_Movement_GalacticGruntsEvent_Assistant_Leave
-	waitmovement 0
+	delay 16
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
+	delay 16
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
+	waitmovement LOCALID_ASSISTANT
 	removeobject LOCALID_ASSISTANT
 	removeobject LOCALID_PROF_ROWAN
 	setvar VAR_JUBILIFE_CITY_STATE, 6
@@ -231,11 +221,13 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Win::
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Outro_Dawn:
 	msgbox JubilifeCity_Text_GalacticGrunts_Dawn_Outro
+	msgbox JubilifeCity_Text_GalacticGrunts_Prof_Outro2
 	closemessage
 	return
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Outro_Lucas:
 	msgbox JubilifeCity_Text_GalacticGrunts_Lucas_Outro
+	msgbox JubilifeCity_Text_GalacticGrunts_Prof_Outro2
 	closemessage
 	return
 
@@ -724,14 +716,14 @@ JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement4:
 	step_end
 
 JubilifeCity_Movement_GalacticGruntsEvent_Retreat:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 JubilifeCity_Movement_GalacticGruntsEvent_AssistantWalkUpToPlayer:
@@ -1363,11 +1355,11 @@ JubilifeCity_Text_GalacticGrunts_Main4:
 
 JubilifeCity_Text_GalacticGrunts_Lucas:
 	.string "Lucas: {PLAYER}!\n"
-	.string "Join me and battle these guys!$"
+	.string "Let's battle together!$"
 
 JubilifeCity_Text_GalacticGrunts_Dawn:
 	.string "Dawn: {PLAYER}!\n"
-	.string "Join me and battle these guys!$"
+	.string "Let's battle together!$"
 
 JubilifeCity_Text_GalacticGrunts_PlayerVictory1:
 	.string "How is this madness possible?\n"
@@ -1391,51 +1383,33 @@ JubilifeCity_Text_GalacticGrunts_Prof_Outro:
 	.string "However, I believe that it's a mystic\n"
 	.string "power far beyond our control.\p"
 	.string "But Team Galactic seems to be studying\n"
-	.string "that power's potential\p"
+	.string "that power's potential.\p"
 	.string "They want to know if it can be used as\n"
 	.string "energy for something...$"
 
 JubilifeCity_Text_GalacticGrunts_Dawn_Outro:
-	.string "Dawn: {PLAYER}, did you know\n"
-	.string "about this?\p"
-	.string "The professor studies the\n"
-	.string "evolution of Pokémon, too.\p"
+	.string "Dawn: {PLAYER}, did you know?\n"
+	.string "The professor studies the evolution\l"
+	.string "of Pokémon, too.\p"
 	.string "According to his research, 90% of all\n"
 	.string "Pokémon are somehow tied to evolution!\p"
-	.string "Maybe that's the reason those goons\n"
-	.string "tried to take the professor's\p"
-	.string "research data\n"
-	.string "They're not allowed to do that!\p"
-	.string "Rowan: It's all over, so you can\n"
-	.string "relax now.\p"
-	.string "Still, thanks to you two, nothing came\n"
-	.string "of that situation. I appreciate that.\p"
-	.string "Incidentally, {PLAYER}.\n"
-	.string "Kudos to you for your battling skill.\p"
-	.string "It got me thinking. Why don't you\n"
-	.string "collect all the Gym Badges of Sinnoh?\p"
-	.string "Doing so, you will be sure to encounter\n"
-	.string "lots of Pokémon.\p"
-	.string "That, of course, means your Pokédex\n"
-	.string "pages will continuously fill up.\p"
-	.string "In other words, it will be of great help\n"
-	.string "to my research.\p"
-	.string "That said, I've given you your first\n"
-	.string "Pokémon and Pokédex as yours to keep.\p"
-	.string "You're free to do with them as you wish.\n"
-	.string "Take care now.$"
+	.string "Well, maybe that's the reason those\n"
+	.string "people tried to take the professor's\l"
+	.string "research data by force.\p"
+	.string "That's really unforgivable!$"
 
 JubilifeCity_Text_GalacticGrunts_Lucas_Outro:
-	.string "Lucas: {PLAYER}, did you know\n"
-	.string "about this?\p"
-	.string "The professor studies the\n"
-	.string "evolution of Pokémon, too.\p"
+	.string "Lucas: {PLAYER}, did you know?\n"
+	.string "The professor studies the evolution\l"
+	.string "of Pokémon, too.\p"
 	.string "According to his research, 90% of all\n"
 	.string "Pokémon are somehow tied to evolution!\p"
-	.string "Maybe that's the reason those goons\n"
-	.string "tried to take the professor's\p"
-	.string "research data\n"
-	.string "They're not allowed to do that!\p"
+	.string "Well, maybe that's the reason those\n"
+	.string "people tried to take the professor's\l"
+	.string "research data by force.\p"
+	.string "That's really unforgivable!$"
+
+JubilifeCity_Text_GalacticGrunts_Prof_Outro2:
 	.string "Rowan: It's all over, so you can\n"
 	.string "relax now.\p"
 	.string "Still, thanks to you two, nothing came\n"
