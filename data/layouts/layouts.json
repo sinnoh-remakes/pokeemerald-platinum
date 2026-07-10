@@ -4745,11 +4745,21 @@
       "id": "LAYOUT_ROUTE204_NORTH",
       "name": "Route204North_Layout",
       "width": 32,
-      "height": 37,
-      "primary_tileset": "gTileset_OutdoorFloaroma",
+      "height": 43,
+      "primary_tileset": "gTileset_OutdoorRoute204",
       "secondary_tileset": "gTileset_Route204North",
       "border_filepath": "data/layouts/Route204North/border.bin",
       "blockdata_filepath": "data/layouts/Route204North/map.bin"
+    },
+    {
+      "id": "LAYOUT_FLOAROMA_TOWN",
+      "name": "FloaromaTown_Layout",
+      "width": 42,
+      "height": 44,
+      "primary_tileset": "gTileset_OutdoorFloaroma",
+      "secondary_tileset": "gTileset_Floaroma",
+      "border_filepath": "data/layouts/FloaromaTown/border.bin",
+      "blockdata_filepath": "data/layouts/FloaromaTown/map.bin"
     }
   ]
 }

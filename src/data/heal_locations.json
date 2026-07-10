@@ -226,6 +226,12 @@
       "respawn_npc": "LOCALID_OREBURGH_NURSE",
       "respawn_x": 7,
       "respawn_y": 8
+    },
+    {
+      "id": "HEAL_LOCATION_FLOAROMA_TOWN",
+      "map": "MAP_FLOAROMA_TOWN",
+      "x": 9,
+      "y": 26
     }
   ]
 }
