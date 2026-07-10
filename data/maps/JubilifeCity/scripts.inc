@@ -8,11 +8,217 @@ JubilifeCity_MapScripts::
 @ 3: Talked to Poketch Man
 @ 4: Received Poketch
 @ 5: Received Coal Badge
+@ 6: Defeated Galactic grunts
 
 JubilifeCity_OnTransition:
 	setflag FLAG_VISITED_JUBILIFE_CITY
 	call Common_EventScript_SetupRivalGfxId
 	end
+
+JubilifeCity_EventScript_GalacticGruntsEventIntro:
+	lock
+	msgbox JubilifeCity_Text_GalacticGruntsIntro, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_PROF_ROWAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	return
+
+JubilifeCity_EventScript_GalacticGruntsEvent1::
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement1
+	waitmovement 0
+	goto JubilifeCity_EventScript_GalacticGruntsEventMain
+
+JubilifeCity_EventScript_GalacticGruntsEvent2::
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement2
+	waitmovement 0
+	goto JubilifeCity_EventScript_GalacticGruntsEventMain
+
+JubilifeCity_EventScript_GalacticGruntsEvent3::
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement3
+	waitmovement 0
+	goto JubilifeCity_EventScript_GalacticGruntsEventMain
+
+JubilifeCity_EventScript_GalacticGruntsEvent4::
+	call JubilifeCity_EventScript_GalacticGruntsEventIntro
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement4
+	waitmovement 0
+	goto JubilifeCity_EventScript_GalacticGruntsEventMain
+
+JubilifeCity_EventScript_GalacticGruntsEventMain::
+	msgbox JubilifeCity_Text_GalacticGrunts_ProfIntro, MSGBOX_DEFAULT
+	applymovement LOCALID_GALACTIC_GRUNT_1, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	msgbox JubilifeCity_Text_GalacticGrunts_Main1,MSGBOX_DEFAULT
+	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	msgbox JubilifeCity_Text_GalacticGrunts_Main2, MSGBOX_DEFAULT
+	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox JubilifeCity_Text_GalacticGrunts_Main3, MSGBOX_DEFAULT
+	applymovement LOCALID_GALACTIC_GRUNT_1, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_GALACTIC_GRUNT_2, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	msgbox JubilifeCity_Text_GalacticGrunts_Main4, MSGBOX_DEFAULT
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_GalacticGruntsEventMain_Dawn
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_GalacticGruntsEventMain_Lucas
+	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	applymovement LOCALID_ASSISTANT, Common_Movement_WalkLeft
+	applymovement LOCALID_PLAYER, JubilifeCity_Movement_GalacticGruntsEvent_PlayerPreBattle
+	waitmovement 0
+	goto JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init1
+
+JubilifeCity_EventScript_GalacticGruntsEventMain_Lucas:
+	applymovement LOCALID_ASSISTANT, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox JubilifeCity_Text_GalacticGrunts_Lucas, MSGBOX_DEFAULT
+	closemessage
+	return
+
+JubilifeCity_EventScript_GalacticGruntsEventMain_Dawn:
+	applymovement LOCALID_ASSISTANT, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox JubilifeCity_Text_GalacticGrunts_Dawn, MSGBOX_DEFAULT
+	closemessage
+	return
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init1::
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	waitstate
+	goto_if_ne VAR_RESULT, 0, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init2
+	special LoadPlayerParty
+	goto JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init1
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init2::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Dawn
+	goto_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Lucas
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Dawn::
+	switch VAR_STARTER_MON
+	case 0, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnPiplup
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnTurtwig
+	case 2, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnChimchar
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnTurtwig::
+	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_TURTWIG
+	switch VAR_RESULT
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnPiplup::
+	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_PIPLUP
+	switch VAR_RESULT
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnChimchar::
+	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_CHIMCHAR
+	switch VAR_RESULT
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Lucas::
+	switch VAR_STARTER_MON
+	case 0, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnPiplup
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnTurtwig
+	case 2, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnChimchar
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasTurtwig::
+	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_TURTWIG
+	switch VAR_RESULT
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasPiplup::
+	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_PIPLUP
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasChimchar::
+	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_CHIMCHAR
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Win::
+	msgbox JubilifeCity_Text_GalacticGrunts_Retreat, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_GALACTIC_GRUNT_1, JubilifeCity_Movement_GalacticGruntsEvent_Retreat
+	applymovement LOCALID_GALACTIC_GRUNT_2, JubilifeCity_Movement_GalacticGruntsEvent_Retreat
+	waitmovement 0
+	removeobject LOCALID_GALACTIC_GRUNT_1
+	removeobject LOCALID_GALACTIC_GRUNT_2
+	applymovement LOCALID_PROF_ROWAN, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_ASSISTANT, JubilifeCity_Movement_GalacticGruntsEvent_AssistantWalkUpToPlayer
+	waitmovement 0
+	msgbox JubilifeCity_Text_GalacticGrunts_Prof_Outro, MSGBOX_DEFAULT
+	applymovement LOCALID_ASSISTANT, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_GalacticGruntsEvent_Outro_Dawn
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_GalacticGruntsEvent_Outro_Lucas
+	applymovement LOCALID_PROF_ROWAN, JubilifeCity_Movement_GalacticGruntsEvent_Prof_Leave
+	applymovement LOCALID_ASSISTANT, JubilifeCity_Movement_GalacticGruntsEvent_Assistant_Leave
+	delay 16
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
+	delay 16
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
+	waitmovement LOCALID_ASSISTANT
+	removeobject LOCALID_ASSISTANT
+	removeobject LOCALID_PROF_ROWAN
+	setvar VAR_JUBILIFE_CITY_STATE, 6
+	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT
+	release
+	end
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Outro_Dawn:
+	msgbox JubilifeCity_Text_GalacticGrunts_Dawn_Outro
+	msgbox JubilifeCity_Text_GalacticGrunts_Prof_Outro2
+	closemessage
+	return
+
+JubilifeCity_EventScript_GalacticGruntsEvent_Outro_Lucas:
+	msgbox JubilifeCity_Text_GalacticGrunts_Lucas_Outro
+	msgbox JubilifeCity_Text_GalacticGrunts_Prof_Outro2
+	closemessage
+	return
 
 JubilifeCity_EventScript_HelperEncounter_1::
 	lock
@@ -468,6 +674,74 @@ JubilifeCity_EventScript_LookerBlockPoketch4::
 	special RemoveCameraObject
 	release
 	end
+
+JubilifeCity_Movement_GalacticGruntsEvent_PlayerPreBattle:
+	walk_left
+	face_up
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement1:
+	walk_left
+	walk_up
+	walk_up
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement2:
+	walk_up
+	walk_up
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement3:
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_PlayerMovement4:
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_Retreat:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_AssistantWalkUpToPlayer:
+	walk_left
+	walk_down
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_Prof_Leave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+JubilifeCity_Movement_GalacticGruntsEvent_Assistant_Leave:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 JubilifeCity_Movement_LookerWalkBack:
 	lock_facing_direction
@@ -1009,6 +1283,141 @@ JubilifeCity_EventScript_PoketchCompanySign::
 JubilifeCity_EventScript_CompanyBlock::
 	msgbox JubilifeCity_Text_CompanyBlock, MSGBOX_NPC
 	end
+
+JubilifeCity_Text_GalacticGruntsIntro:
+	.string "Mystery man: Now, now, now, now, now!\n"
+	.string "Professor Rowan, you must comply.\p"
+	.string "Hand over all your research findings.\n"
+	.string "For free, naturally.\p"
+	.string "Failure to comply will result in a painful\n"
+	.string "time for your assistant.$"
+
+JubilifeCity_Text_GalacticGrunts_ProfIntro:
+	.string "Rowan: Ah, {PLAYER}.\n"
+	.string "Well? How is the Pokédex progressing?\p"
+	.string "Hm!\n"
+	.string "That's Oreburgh's Gym Badge, I see.\p"
+	.string "But hadn't I given you your first\n"
+	.string "Pokémon only recently...?\p"
+	.string "Perhaps being a Trainer is like second\n"
+	.string "nature to you.$"
+
+JubilifeCity_Text_GalacticGrunts_Main1:
+	.string "Mystery man: Oh, professor of Pokémon,\n"
+	.string "must you be so difficult?\p"
+	.string "We are speaking to you on business.\n"
+	.string "Because this is work for us.\p"
+	.string "What we're saying is--we demand\n"
+	.string "you comply with our demands.$"
+
+JubilifeCity_Text_GalacticGrunts_Main2:
+	.string "Rowan: Quiet, you lot!\n"
+	.string "Why must you be such a nuisance?\p"
+	.string "Let me list some lessons you still\n"
+	.string "need to learn.\p"
+	.string "N1: Don't loiter about for no good\n"
+	.string "reason.\p"
+	.string "N2: Don't interrupt others while they\n"
+	.string "are attempting to converse.\p"
+	.string "N3: If you don't get your way, don't\n"
+	.string "raise your voice to be intimidating.\p"
+	.string "N4: Don't think you've grown strong\n"
+	.string "just because you're in a group.\p"
+	.string "N5: What is with those outlandish\n"
+	.string "outfits you have on?$"
+
+JubilifeCity_Text_GalacticGrunts_Main3:
+	.string "My goodness...\n"
+	.string "You call yourselves adults?\p"
+	.string "You kids, don't grow up to be like these\n"
+	.string "sorry specimens.$"
+
+JubilifeCity_Text_GalacticGrunts_Main4:
+	.string "Mystery man: Eeeeeh!\n"
+	.string "You had to make this personal!\p"
+	.string "You have forced our hand into making\n"
+	.string "a show of force!\p"
+	.string "We will make you regret insulting\n"
+	.string "Team Galactic!\p"
+	.string "Rowan: You kids, give these thugs a\n"
+	.string "lesson in civility, please.$"
+
+JubilifeCity_Text_GalacticGrunts_Lucas:
+	.string "Lucas: {PLAYER}!\n"
+	.string "Join me and battle these guys!$"
+
+JubilifeCity_Text_GalacticGrunts_Dawn:
+	.string "Dawn: {PLAYER}!\n"
+	.string "Let's battle together!$"
+
+JubilifeCity_Text_GalacticGrunts_PlayerVictory1:
+	.string "How is this madness possible?\n"
+	.string "The two of us, losing to children?$"
+
+JubilifeCity_Text_GalacticGrunts_PlayerVictory2:
+	.string "This won't do... Time to retreat.\n"
+	.string "This mission is a failure.$"
+
+JubilifeCity_Text_GalacticGrunts_Retreat:
+	.string "Grunt 1: You leave us no option.\n"
+	.string "We will retreat for now.\p"
+	.string "We shall do so because Team Galactic\n"
+	.string "is benevolent to all.$"
+
+JubilifeCity_Text_GalacticGrunts_Prof_Outro:
+	.string "Rowan: That lot...\n"
+	.string "They called themselves Team Galactic.\p"
+	.string "When Pokémon evolve, they seem to\n"
+	.string "release some type of energy...\p"
+	.string "However, I believe that it's a mystic\n"
+	.string "power far beyond our control.\p"
+	.string "But Team Galactic seems to be studying\n"
+	.string "that power's potential.\p"
+	.string "They want to know if it can be used as\n"
+	.string "energy for something...$"
+
+JubilifeCity_Text_GalacticGrunts_Dawn_Outro:
+	.string "Dawn: {PLAYER}, did you know?\n"
+	.string "The professor studies the evolution\l"
+	.string "of Pokémon, too.\p"
+	.string "According to his research, 90% of all\n"
+	.string "Pokémon are somehow tied to evolution!\p"
+	.string "Well, maybe that's the reason those\n"
+	.string "people tried to take the professor's\l"
+	.string "research data by force.\p"
+	.string "That's really unforgivable!$"
+
+JubilifeCity_Text_GalacticGrunts_Lucas_Outro:
+	.string "Lucas: {PLAYER}, did you know\n"
+	.string "about this?\p"
+	.string "The professor studies the\n"
+	.string "evolution of Pokémon, too.\p"
+	.string "According to his research, 90% of all\n"
+	.string "Pokémon are somehow tied to evolution!\p"
+	.string "Maybe that's the reason those goons\n"
+	.string "tried to take the professor's\p"
+	.string "research data\n"
+	.string "They're not allowed to do that!$"
+
+JubilifeCity_Text_GalacticGrunts_Prof_Outro2:
+	.string "Rowan: It's all over, so you can\n"
+	.string "relax now.\p"
+	.string "Still, thanks to you two, nothing came\n"
+	.string "of that situation. I appreciate that.\p"
+	.string "Incidentally, {PLAYER}.\n"
+	.string "Kudos to you for your battling skill.\p"
+	.string "It got me thinking. Why don't you\n"
+	.string "collect all the Gym Badges of Sinnoh?\p"
+	.string "Doing so, you will be sure to encounter\n"
+	.string "lots of Pokémon.\p"
+	.string "That, of course, means your Pokédex\n"
+	.string "pages will continuously fill up.\p"
+	.string "In other words, it will be of great help\n"
+	.string "to my research.\p"
+	.string "That said, I've given you your first\n"
+	.string "Pokémon and Pokédex as yours to keep.\p"
+	.string "You're free to do with them as you wish.\n"
+	.string "Take care now.$"
 
 JubilifeCity_Text_AreYouCatching:
 	.string "Dawn: Hi, {PLAYER}!\n"

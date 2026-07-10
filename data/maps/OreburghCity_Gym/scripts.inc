@@ -15,7 +15,9 @@ OreburghCity_Gym_EventScript_RoarkDefeated::
 	msgbox OreburghCity_Gym_Text_HavingThatCoalBadge, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_OREBURGH_GYM
 	setflag FLAG_BADGE01_GET
+	clearflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT
 	setvar VAR_OREBURGH_CITY_STATE, 5
+	setvar VAR_JUBILIFE_CITY_STATE, 5
 	setvar VAR_0x8008, 9
 	call Common_EventScript_SetGymTrainers
 	goto OreburghCity_Gym_EventScript_GiveStealthRock
