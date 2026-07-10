@@ -17555,7 +17555,7 @@ Nature: Jolly
 - Pursuit
 - Leer
 
-=== TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1 ===
+=== TRAINER_JUBILIFE_CITY_GRUNT_1 ===
 Name: Grunt
 Class: Pt_Galactic
 Gender: Male
@@ -17569,7 +17569,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Screech
 - Fury Swipes
 
-=== TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2 ===
+=== TRAINER_JUBILIFE_CITY_GRUNT_2 ===
 Name: Grunt
 Class: Pt_Galactic
 Gender: Male
