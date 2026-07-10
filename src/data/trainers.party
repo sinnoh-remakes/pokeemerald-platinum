@@ -17557,9 +17557,9 @@ Nature: Jolly
 
 === TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_1 ===
 Name: Grunt
-Class: Galactic
+Class: Pt_Galactic
 Gender: Male
-Pic: GALACTIC GRUNT M DP
+Pic: Galactic Grunt M DP
 
 Stunky
 Level: 11
@@ -17571,9 +17571,9 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JUBILIFE_CITY_GALACTIC_GRUNT_2 ===
 Name: Grunt
-Class: Galactic
+Class: Pt_Galactic
 Gender: Male
-Pic: GALACTIC GRUNT M DP
+Pic: Galactic Grunt M DP
 
 Glameow
 Level: 11
