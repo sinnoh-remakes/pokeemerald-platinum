@@ -5,7 +5,7 @@ OreburghGate_EventScript_Hiker::
 	lock
 	faceplayer
 	goto_if_eq VAR_OREBURGH_CITY_STATE, 0, OreburghGate_EventScript_HikerGive
-	msgbox OrebrughGate_Text_HiddenMachine, MSGBOX_NPC
+	msgbox OreburghGate_Text_HiddenMachine, MSGBOX_NPC
 	end
 
 OreburghGate_EventScript_HikerGive::
@@ -14,7 +14,7 @@ OreburghGate_EventScript_HikerGive::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setvar VAR_OREBURGH_CITY_STATE, 1
-	msgbox OrebrughGate_Text_HiddenMachine, MSGBOX_DEFAULT
+	msgbox OreburghGate_Text_HiddenMachine, MSGBOX_DEFAULT
 	release
 	end
 
@@ -65,7 +65,7 @@ OreburghGate_Text_SparkingNew:
 	.string "So, let me make a gift of this Hidden\n"
 	.string "Machine to you!$"
 
-OrebrughGate_Text_HiddenMachine:
+OreburghGate_Text_HiddenMachine:
 	.string "That Hidden Machine, or HM for short,\n"
 	.string "contains the hidden move Rock Smash.\p"
 	.string "A Pokémon learning Rock Smash can\n"
