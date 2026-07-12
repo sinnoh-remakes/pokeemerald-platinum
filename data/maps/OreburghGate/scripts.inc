@@ -10,8 +10,9 @@ OreburghGate_EventScript_Hiker::
 
 OreburghGate_EventScript_HikerGive::
 	msgbox OreburghGate_Text_SparkingNew, MSGBOX_DEFAULT
-	giveitem ITEM_POTION
+	giveitem ITEM_HM_ROCK_SMASH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setvar VAR_OREBURGH_CITY_STATE, 1
 	msgbox OrebrughGate_Text_HiddenMachine, MSGBOX_DEFAULT
 	release
