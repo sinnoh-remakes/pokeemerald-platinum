@@ -2254,7 +2254,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RockPt = {
     .tracks = TRACKS_NONE,
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = sOamTables_16x16,
-    .anims = sAnimTable_Inanimate,
+    .anims = sAnimTable_BreakableRockPt,
     .images = sPicTable_RockPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
