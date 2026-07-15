@@ -570,7 +570,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent1"
     },
     {
@@ -579,7 +579,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent2"
     },
     {
@@ -588,7 +588,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent3"
     },
     {
@@ -597,8 +597,44 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent4"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
     }
   ],
   "bg_events": [
