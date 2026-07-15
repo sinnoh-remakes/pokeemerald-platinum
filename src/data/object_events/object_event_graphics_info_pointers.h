@@ -749,7 +749,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WORKER_PT] =                &gObjectEventGraphicsInfo_WorkerPt,
     [OBJ_EVENT_GFX_YOUNGSTER_PT] =             &gObjectEventGraphicsInfo_YoungsterPt,
     [OBJ_EVENT_GFX_BRIEFCASE_PT] =             &gObjectEventGraphicsInfo_BriefcasePt,
-    [OBJ_EVENT_GFX_ROCK_PT] =                  &gObjectEventGraphicsInfo_RockPt,
+    [OBJ_EVENT_GFX_BREAKABLE_ROCK_PT] =        &gObjectEventGraphicsInfo_RockPt,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
