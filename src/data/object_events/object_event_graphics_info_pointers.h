@@ -1,5 +1,7 @@
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFieldMove;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFieldMove;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AaronPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerColdFPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerColdMPt;
@@ -615,7 +617,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
     [OBJ_EVENT_GFX_LUCAS_NORMAL] =             &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_LUCAS_BIKE] =               &gObjectEventGraphicsInfo_LucasNormal,
-    [OBJ_EVENT_GFX_LUCAS_FIELD_MOVE] =         &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_FIELD_MOVE] =         &gObjectEventGraphicsInfo_LucasFieldMove,
     [OBJ_EVENT_GFX_LUCAS_FISHING] =            &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_LUCAS_HEAL] =               &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_LUCAS_POKETCH] =            &gObjectEventGraphicsInfo_LucasNormal,
@@ -625,7 +627,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LUCAS_WATERING] =           &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_DAWN_NORMAL] =              &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_BIKE] =                &gObjectEventGraphicsInfo_DawnNormal,
-    [OBJ_EVENT_GFX_DAWN_FIELD_MOVE] =          &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_FIELD_MOVE] =          &gObjectEventGraphicsInfo_DawnFieldMove,
     [OBJ_EVENT_GFX_DAWN_FISHING] =             &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_HEAL] =                &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_POKETCH] =             &gObjectEventGraphicsInfo_DawnNormal,
