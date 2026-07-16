@@ -382,7 +382,7 @@
 #define OBJ_EVENT_GFX_YOUNGSTER_PT               375
 
 #define OBJ_EVENT_GFX_BRIEFCASE_PT               376
-#define OBJ_EVENT_GFX_ROCK_PT                    377
+#define OBJ_EVENT_GFX_BREAKABLE_ROCK_PT          377
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit

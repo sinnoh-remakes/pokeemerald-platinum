@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 12,
       "y": 9,
       "elevation": 0,
@@ -24,11 +24,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_1"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 17,
       "y": 10,
       "elevation": 0,
@@ -37,11 +37,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 10,
       "y": 14,
       "elevation": 0,
@@ -50,11 +50,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_3"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 9,
       "y": 15,
       "elevation": 0,
@@ -63,11 +63,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_4"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 23,
       "y": 27,
       "elevation": 0,
@@ -76,11 +76,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_5"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 9,
       "y": 28,
       "elevation": 0,
@@ -89,11 +89,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_6"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 11,
       "y": 29,
       "elevation": 0,
@@ -102,11 +102,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_7"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROCK_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_PT",
       "x": 13,
       "y": 29,
       "elevation": 0,
@@ -115,8 +115,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_RuggedRock",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_8"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_PT",
