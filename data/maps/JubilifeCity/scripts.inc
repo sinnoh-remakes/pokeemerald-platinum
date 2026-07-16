@@ -23,12 +23,13 @@ JubilifeCity_EventScript_LookerAfterOreburgh::
 	clearflag FLAG_HIDE_JUBILIFE_LOOKER_2
 	addobject LOCALID_JUBILIFE_LOOKER_2
 	setobjectxy LOCALID_JUBILIFE_LOOKER_2, VAR_0x8005, VAR_0x8006
-	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_WalkRight
+	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_WalkRightSlow
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_ExclamationMark
 	waitmovement 0
-	delay 16
+	delay 48
+	delay 48
 	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerAfterOreburgh_WalkToPlayer
 	waitmovement 0
 	playbgm MUS_PL_LOOKER, FALSE
@@ -41,8 +42,6 @@ JubilifeCity_EventScript_LookerAfterOreburgh::
 	waitmovement 0
 	msgbox JubilifeCity_Text_LookerAfterOreburgh2, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_WalkLeft
-	waitmovement 0
 	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerAfterOreburgh_Leave
 	waitmovement 0
 	removeobject LOCALID_JUBILIFE_LOOKER_2
@@ -240,8 +239,8 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Win::
 	waitmovement LOCALID_ASSISTANT
 	removeobject LOCALID_ASSISTANT
 	removeobject LOCALID_PROF_ROWAN
-	setvar VAR_JUBILIFE_CITY_STATE, 6
-	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT
+	setvar VAR_JUBILIFE_CITY_STATE, 7
+	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT
 	release
 	end
 
@@ -722,6 +721,7 @@ JubilifeCity_Movement_LookerAfterOreburgh_WalkToPlayer:
 	step_end
 
 JubilifeCity_Movement_LookerAfterOreburgh_Leave:
+	walk_slow_left
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
