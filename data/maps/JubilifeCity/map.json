@@ -294,7 +294,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT"
+      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT"
     },
     {
       "local_id": "LOCALID_GALACTIC_GRUNT_1",
@@ -308,7 +308,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT"
+      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT"
     },
     {
       "local_id": "LOCALID_GALACTIC_GRUNT_2",
@@ -322,7 +322,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT"
+      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT"
     },
     {
       "local_id": "LOCALID_ASSISTANT",
@@ -336,7 +336,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT"
+      "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT"
     }
   ],
   "warp_events": [

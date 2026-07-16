@@ -1,6 +1,8 @@
 const u32 gObjectEventPic_LucasNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/lucas/walking.4bpp", "graphics/object_events/pics/people/lucas/running.4bpp");
+const u32 gObjectEventPic_LucasFieldMove[] = INCBIN_U32("graphics/object_events/pics/people/lucas/field_move.4bpp");
 const u16 gObjectEventPal_Lucas[] = INCBIN_U16("graphics/object_events/palettes/lucas.gbapal");
 const u32 gObjectEventPic_DawnNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/dawn/walking.4bpp", "graphics/object_events/pics/people/dawn/running.4bpp");
+const u32 gObjectEventPic_DawnFieldMove[] = INCBIN_U32("graphics/object_events/pics/people/dawn/field_move.4bpp");
 const u16 gObjectEventPal_Dawn[] = INCBIN_U16("graphics/object_events/palettes/dawn.gbapal");
 const u16 gObjectEventPal_AaronPt[] = INCBIN_U16("graphics/object_events/palettes/aaron_pt.gbapal");
 const u32 gObjectEventPic_AaronPt[] = INCBIN_U32("graphics/object_events/pics/people/aaron_pt.4bpp");
@@ -20,7 +22,7 @@ const u16 gObjectEventPal_ArtistPt[] = INCBIN_U16("graphics/object_events/palett
 const u32 gObjectEventPic_ArtistPt[] = INCBIN_U32("graphics/object_events/pics/people/artist_pt.4bpp");
 const u16 gObjectEventPal_BabyPt[] = INCBIN_U16("graphics/object_events/palettes/baby_pt.gbapal");
 const u32 gObjectEventPic_BabyPt[] = INCBIN_U32("graphics/object_events/pics/people/baby_pt.4bpp");
-const u16 gObjectEventPal_BarryPt[] = INCBIN_U16("graphics/object_events/palettes/barry.gbapal");
+const u16 gObjectEventPal_BarryPt[] = INCBIN_U16("graphics/object_events/palettes/barry_pt.gbapal");
 const u32 gObjectEventPic_BarryPt[] = INCBIN_U32("graphics/object_events/pics/people/barry_pt.4bpp");
 const u16 gObjectEventPal_BattleGirlPt[] = INCBIN_U16("graphics/object_events/palettes/battle_girl_pt.gbapal");
 const u32 gObjectEventPic_BattleGirlPt[] = INCBIN_U32("graphics/object_events/pics/people/battle_girl_pt.4bpp");
