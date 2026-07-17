@@ -20,32 +20,32 @@ JubilifeCity_EventScript_LookerAfterOreburgh::
 	lock
 	getplayerxy VAR_0x8005, VAR_0x8006
 	subvar VAR_0x8005, 8
-	clearflag FLAG_HIDE_JUBILIFE_LOOKER_2
-	addobject LOCALID_JUBILIFE_LOOKER_2
-	setobjectxy LOCALID_JUBILIFE_LOOKER_2, VAR_0x8005, VAR_0x8006
-	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_WalkRightSlow
+	clearflag FLAG_HIDE_JUBILIFE_LOOKER_3
+	addobject LOCALID_JUBILIFE_LOOKER_3
+	setobjectxy LOCALID_JUBILIFE_LOOKER_3, VAR_0x8005, VAR_0x8006
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_WalkRightSlow
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_ExclamationMark
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 48
 	delay 48
-	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerAfterOreburgh_WalkToPlayer
+	applymovement LOCALID_JUBILIFE_LOOKER_3, JubilifeCity_Movement_LookerAfterOreburgh_WalkToPlayer
 	waitmovement 0
 	playbgm MUS_PL_LOOKER, FALSE
 	msgbox JubilifeCity_Text_LookerAfterOreburgh1, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 32
-	applymovement LOCALID_JUBILIFE_LOOKER_2, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox JubilifeCity_Text_LookerAfterOreburgh2, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_JUBILIFE_LOOKER_2, JubilifeCity_Movement_LookerAfterOreburgh_Leave
+	applymovement LOCALID_JUBILIFE_LOOKER_3, JubilifeCity_Movement_LookerAfterOreburgh_Leave
 	waitmovement 0
-	removeobject LOCALID_JUBILIFE_LOOKER_2
-	setflag FLAG_HIDE_JUBILIFE_LOOKER_2
+	removeobject LOCALID_JUBILIFE_LOOKER_3
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_3
 	setvar VAR_JUBILIFE_CITY_STATE, 6
 	fadedefaultbgm
 	release
@@ -240,7 +240,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Win::
 	removeobject LOCALID_ASSISTANT
 	removeobject LOCALID_PROF_ROWAN
 	setvar VAR_JUBILIFE_CITY_STATE, 7
-	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_GRUNTS_EVENT
+	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT
 	release
 	end
 

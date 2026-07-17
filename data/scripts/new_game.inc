@@ -281,5 +281,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_PLAYER_HOUSE_RIVAL_MOM
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_3
 	call EventScript_ResetAllBerries
 	end
