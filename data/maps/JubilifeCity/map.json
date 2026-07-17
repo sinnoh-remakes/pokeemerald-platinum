@@ -337,6 +337,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT"
+    },
+    {
+      "local_id": "LOCALID_JUBILIFE_LOOKER_3",
+      "graphics_id": "OBJ_EVENT_GFX_LOOKER_PT",
+      "x": 61,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JubilifeCity_EventScript_Looker",
+      "flag": "FLAG_HIDE_JUBILIFE_LOOKER_3"
     }
   ],
   "warp_events": [
@@ -570,7 +584,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent1"
     },
     {
@@ -579,7 +593,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent2"
     },
     {
@@ -588,7 +602,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent3"
     },
     {
@@ -597,8 +611,44 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_JUBILIFE_CITY_STATE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "JubilifeCity_EventScript_GalacticGruntsEvent4"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "5",
+      "script": "JubilifeCity_EventScript_LookerAfterOreburgh"
     }
   ],
   "bg_events": [

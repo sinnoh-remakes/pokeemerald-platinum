@@ -8,11 +8,47 @@ JubilifeCity_MapScripts::
 @ 3: Talked to Poketch Man
 @ 4: Received Poketch
 @ 5: Received Coal Badge
-@ 6: Defeated Galactic grunts
+@ 6: Talked to Looker after returning
+@ 7: Defeated Galactic grunts
 
 JubilifeCity_OnTransition:
 	setflag FLAG_VISITED_JUBILIFE_CITY
 	call Common_EventScript_SetupRivalGfxId
+	end
+
+JubilifeCity_EventScript_LookerAfterOreburgh::
+	lock
+	getplayerxy VAR_0x8005, VAR_0x8006
+	subvar VAR_0x8005, 8
+	clearflag FLAG_HIDE_JUBILIFE_LOOKER_3
+	addobject LOCALID_JUBILIFE_LOOKER_3
+	setobjectxy LOCALID_JUBILIFE_LOOKER_3, VAR_0x8005, VAR_0x8006
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_WalkRightSlow
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 48
+	delay 48
+	applymovement LOCALID_JUBILIFE_LOOKER_3, JubilifeCity_Movement_LookerAfterOreburgh_WalkToPlayer
+	waitmovement 0
+	playbgm MUS_PL_LOOKER, FALSE
+	msgbox JubilifeCity_Text_LookerAfterOreburgh1, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	delay 32
+	applymovement LOCALID_JUBILIFE_LOOKER_3, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	msgbox JubilifeCity_Text_LookerAfterOreburgh2, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_JUBILIFE_LOOKER_3, JubilifeCity_Movement_LookerAfterOreburgh_Leave
+	waitmovement 0
+	removeobject LOCALID_JUBILIFE_LOOKER_3
+	setflag FLAG_HIDE_JUBILIFE_LOOKER_3
+	setvar VAR_JUBILIFE_CITY_STATE, 6
+	fadedefaultbgm
+	release
 	end
 
 JubilifeCity_EventScript_GalacticGruntsEventIntro:
@@ -203,7 +239,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Win::
 	waitmovement LOCALID_ASSISTANT
 	removeobject LOCALID_ASSISTANT
 	removeobject LOCALID_PROF_ROWAN
-	setvar VAR_JUBILIFE_CITY_STATE, 6
+	setvar VAR_JUBILIFE_CITY_STATE, 7
 	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT
 	release
 	end
@@ -674,6 +710,26 @@ JubilifeCity_EventScript_LookerBlockPoketch4::
 	special RemoveCameraObject
 	release
 	end
+
+JubilifeCity_Movement_LookerAfterOreburgh_WalkToPlayer:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+JubilifeCity_Movement_LookerAfterOreburgh_Leave:
+	walk_slow_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
 
 JubilifeCity_Movement_GalacticGruntsEvent_PlayerPreBattle:
 	walk_left
@@ -1283,6 +1339,20 @@ JubilifeCity_EventScript_PoketchCompanySign::
 JubilifeCity_EventScript_CompanyBlock::
 	msgbox JubilifeCity_Text_CompanyBlock, MSGBOX_NPC
 	end
+
+JubilifeCity_Text_LookerAfterOreburgh1:
+	.string "Looker: Tell me, have you not obtained\n"
+	.string "a Pal Pad?\p"
+	.string "Is not a Pal Pad free to anyone visiting\n"
+	.string "the Pokemon Center's basement?$"
+
+JubilifeCity_Text_LookerAfterOreburgh2:
+	.string "Anyway, there appears to be no one\n"
+	.string "shady in this Jubilife City.\p"
+	.string "I shall therefore take my investigation\n"
+	.string "elsewhere.\p"
+	.string "But, my friend, I suggest you remain\n"
+	.string "vigilant for shady grown-ups!$"
 
 JubilifeCity_Text_GalacticGruntsIntro:
 	.string "Mystery man: Now, now, now, now, now!\n"
