@@ -4766,7 +4766,7 @@
       "name": "Route205South_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_OutdoorRoute204",
+      "primary_tileset": "gTileset_OutdoorRoute205",
       "secondary_tileset": "gTileset_Route204North",
       "border_filepath": "data/layouts/Route205South/border.bin",
       "blockdata_filepath": "data/layouts/Route205South/map.bin"

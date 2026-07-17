@@ -94,3 +94,5 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/floaroma ./tiles/
 
 echo "Compiling [PRIMARY] outdoor_route_205"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_route_205 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] route_205_north"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_205_north ./tiles/route_205_north ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
