@@ -4764,10 +4764,10 @@
     {
       "id": "LAYOUT_ROUTE205_SOUTH",
       "name": "Route205South_Layout",
-      "width": 32,
+      "width": 34,
       "height": 23,
       "primary_tileset": "gTileset_OutdoorRoute205",
-      "secondary_tileset": "gTileset_Route204North",
+      "secondary_tileset": "gTileset_Route205South",
       "border_filepath": "data/layouts/Route205South/border.bin",
       "blockdata_filepath": "data/layouts/Route205South/map.bin"
     }
