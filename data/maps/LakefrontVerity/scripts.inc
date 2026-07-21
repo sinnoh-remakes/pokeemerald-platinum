@@ -22,7 +22,7 @@ LakefrontVerity_EventScript_EnterLake_Main:
 
 LakeFrontVerity_EventScript_EnterLake_Left::
     call LakefrontVerity_EventScript_EnterLake_Main
-    warp MAP_LAKE_VERITY, 12, 23
+    warp MAP_LAKE_VERITY, 12, 24
     waitstate
     destroyfollowernpc
     release
@@ -30,7 +30,7 @@ LakeFrontVerity_EventScript_EnterLake_Left::
 
 LakeFrontVerity_EventScript_EnterLake_Right::
     call LakefrontVerity_EventScript_EnterLake_Main
-    warp MAP_LAKE_VERITY, 13, 23
+    warp MAP_LAKE_VERITY, 13, 24
     waitstate
     destroyfollowernpc
     release

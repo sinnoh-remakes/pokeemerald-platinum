@@ -26,6 +26,12 @@ LakeVerity_EventScript_IntroScene::
 	setvar VAR_LAKE_VERITY_STATE, 1
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE_201_RIVAL
+	getplayerxy VAR_0x8005, VAR_0x8006
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkUp
+	delay 4
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
 	msgbox LakeVerity_Text_WhatsGoing, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_CAMERA, LakeVerity_Movement_CameraPan1
@@ -41,7 +47,6 @@ LakeVerity_EventScript_IntroScene::
 	delay 10
 	msgbox LakeVerity_Text_AllowPass, MSGBOX_DEFAULT
 	closemessage
-	getplayerxy VAR_0x8005, VAR_0x8006
 	call_if_eq VAR_0x8005, 12, LakeVerity_EventScript_BarryStepAway
 	call_if_eq VAR_0x8005, 13, LakeVerity_EventScript_PlayerStepAway
 	waitmovement 0
@@ -110,7 +115,7 @@ LakeVerity_EventScript_IntroScene::
 	end
 
 LakeVerity_EventScript_MoveBarryToLeft:
-	setobjectxy LOCALID_LAKE_VERITY_RIVAL, 12, 23
+	setobjectxy LOCALID_LAKE_VERITY_RIVAL, 12, 24
 	return
 
 LakeVerity_EventScript_BarryStepAway:
