@@ -5,7 +5,7 @@ LakefrontVerity_MapScripts::
 LakefrontVerity_OnFrame:
     .2byte 0
 
-LakefrontVerity_EventScript_EnterLake_Main:
+LakeFrontVerity_EventScript_EnterLake::
     lock
     setvar VAR_ROUTE201_STATE, 3
     applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
@@ -18,19 +18,7 @@ LakefrontVerity_EventScript_EnterLake_Main:
     hideobjectat LOCALID_PLAYER, MAP_LAKEFRONT_VERITY
     applymovement OBJ_EVENT_ID_NPC_FOLLOWER , Common_Movement_WalkUp
     waitmovement 0
-    return
-
-LakeFrontVerity_EventScript_EnterLake_Left::
-    call LakefrontVerity_EventScript_EnterLake_Main
     warp MAP_LAKE_VERITY, 12, 24
-    waitstate
-    destroyfollowernpc
-    release
-    end
-
-LakeFrontVerity_EventScript_EnterLake_Right::
-    call LakefrontVerity_EventScript_EnterLake_Main
-    warp MAP_LAKE_VERITY, 13, 24
     waitstate
     destroyfollowernpc
     release

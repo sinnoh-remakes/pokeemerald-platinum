@@ -16,8 +16,6 @@ LakeVerity_OnFrame:
 
 LakeVerity_TurnPlayerNorth::
 	turnobject LOCALID_PLAYER, DIR_NORTH
-	getplayerxy VAR_0x8005, VAR_0x8006
-	call_if_eq VAR_0x8005, 13, LakeVerity_EventScript_MoveBarryToLeft
 	end
 
 LakeVerity_EventScript_IntroScene::
@@ -26,7 +24,6 @@ LakeVerity_EventScript_IntroScene::
 	setvar VAR_LAKE_VERITY_STATE, 1
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE_201_RIVAL
-	getplayerxy VAR_0x8005, VAR_0x8006
 	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkUp
 	delay 4
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
@@ -47,20 +44,25 @@ LakeVerity_EventScript_IntroScene::
 	delay 10
 	msgbox LakeVerity_Text_AllowPass, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_0x8005, 12, LakeVerity_EventScript_BarryStepAway
-	call_if_eq VAR_0x8005, 13, LakeVerity_EventScript_PlayerStepAway
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_CYRUS, LakeVerity_Movement_CyrusLeave2
 	waitmovement 0
 	playse SE_EXIT
 	removeobject LOCALID_CYRUS
 	delay 48
-	call_if_eq VAR_0x8005, 12, LakeVerity_EventScript_BarryReturn
-	call_if_eq VAR_0x8005, 13, LakeVerity_EventScript_PlayerReturn
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceDown
+	waitmovement 0
 	msgbox LakeVerity_Text_WhatsAbout, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_0x8005, 12, LakeVerity_EventScript_LookAtEachOther1
-	call_if_eq VAR_0x8005, 13, LakeVerity_EventScript_LookAtEachOther2
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
 	msgbox LakeVerity_Text_LetsCatch, MSGBOX_DEFAULT
@@ -87,12 +89,11 @@ LakeVerity_EventScript_IntroScene::
 	delay 10
 	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_RunDown
 	waitmovement 0
-	call_if_eq VAR_0x8005, 12, LakeVerity_EventScript_LookAtEachOther1
-	call_if_eq VAR_0x8005, 13, LakeVerity_EventScript_LookAtEachOther2
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	delay 48
-	call_if_eq VAR_0x8005, 12, LakeVerity_EventScript_BarryScurryLeft
-	call_if_eq VAR_0x8005, 13, LakeVerity_EventScript_BarryScurryRight
+	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_Scurry
 	waitmovement 0
 	msgbox LakeVerity_Text_HearThat, MSGBOX_DEFAULT
 	closemessage
@@ -113,58 +114,6 @@ LakeVerity_EventScript_IntroScene::
 	setflag FLAG_LAKE_VERITY_INTRO_EVENT
 	release
 	end
-
-LakeVerity_EventScript_MoveBarryToLeft:
-	setobjectxy LOCALID_LAKE_VERITY_RIVAL, 12, 24
-	return
-
-LakeVerity_EventScript_BarryStepAway:
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_FaceLeft
-	return
-
-LakeVerity_EventScript_PlayerStepAway:
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
-	return
-
-LakeVerity_EventScript_BarryReturn:
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	return
-
-LakeVerity_EventScript_PlayerReturn:
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceDown
-	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	return
-
-LakeVerity_EventScript_LookAtEachOther1:
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceRight
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceLeft
-	return
-
-LakeVerity_EventScript_LookAtEachOther2:
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
-	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkInPlaceRight
-	return
-
-LakeVerity_EventScript_BarryScurryLeft:
-	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_Scurry
-	return
-
-LakeVerity_EventScript_BarryScurryRight:
-	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_Scurry2
-	return
 
 LakeVerity_Movement_CameraPan1:
 	walk_up

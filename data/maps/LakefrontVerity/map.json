@@ -44,7 +44,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
       "var_value": "3",
-      "script": "LakeFrontVerity_EventScript_EnterLake_Left"
+      "script": "LakeFrontVerity_EventScript_EnterLake"
     },
     {
       "type": "trigger",
@@ -53,7 +53,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE201_STATE",
       "var_value": "3",
-      "script": "LakeFrontVerity_EventScript_EnterLake_Right"
+      "script": "LakeFrontVerity_EventScript_EnterLake"
     }
   ],
   "bg_events": [
