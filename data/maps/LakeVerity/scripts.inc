@@ -24,6 +24,11 @@ LakeVerity_EventScript_IntroScene::
 	setvar VAR_LAKE_VERITY_STATE, 1
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE_201_RIVAL
+	applymovement LOCALID_LAKE_VERITY_RIVAL, Common_Movement_WalkUp
+	delay 4
+	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
 	msgbox LakeVerity_Text_WhatsGoing, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_CAMERA, LakeVerity_Movement_CameraPan1
@@ -169,6 +174,13 @@ LakeVerity_Movement_Scurry:
 	walk_in_place_fast_left
 	walk_in_place_fast_left
 	walk_in_place_fast_left
+	step_end
+
+LakeVerity_Movement_Scurry2:
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	step_end
 
 LakeVerity_Movement_RivalLeave:
