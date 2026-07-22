@@ -2452,21 +2452,40 @@ const u16 gTilesetPalettes_OutdoorRoute205[][16] =
 
 const u32 gTilesetTiles_OutdoorRoute205[] = INCBIN_U32("data/tilesets/primary/outdoor_route_205/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_Route205South[][16] =
+const u16 gTilesetPalettes_Route205South1[][16] =
 {
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/00.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/01.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/02.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/03.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/04.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/05.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/06.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/07.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/08.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/09.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/10.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/11.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/route_205_south/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_1/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_Route205South[] = INCBIN_U32("data/tilesets/secondary/route_205_south/tiles.4bpp.lz");
+const u32 gTilesetTiles_Route205South1[] = INCBIN_U32("data/tilesets/secondary/route_205_south_1/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Route205South2[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_205_south_2/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Route205South2[] = INCBIN_U32("data/tilesets/secondary/route_205_south_2/tiles.4bpp.lz");

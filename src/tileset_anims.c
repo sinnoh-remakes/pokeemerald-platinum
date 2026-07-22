@@ -1522,10 +1522,10 @@ void InitTilesetAnim_Floaroma(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_Floaroma;
 }
 
-const u16 gTilesetAnims_Route205South_Flowers_Frame0[] = INCBIN_U16("data/tilesets/secondary/route_205_south/anim/flowers/00.4bpp");
-const u16 gTilesetAnims_Route205South_Flowers_Frame1[] = INCBIN_U16("data/tilesets/secondary/route_205_south/anim/flowers/01.4bpp");
-const u16 gTilesetAnims_Route205South_Flowers_Frame2[] = INCBIN_U16("data/tilesets/secondary/route_205_south/anim/flowers/02.4bpp");
-const u16 gTilesetAnims_Route205South_Flowers_Frame3[] = INCBIN_U16("data/tilesets/secondary/route_205_south/anim/flowers/03.4bpp");
+const u16 gTilesetAnims_Route205South_Flowers_Frame0[] = INCBIN_U16("data/tilesets/secondary/route_205_south_1/anim/flowers/00.4bpp");
+const u16 gTilesetAnims_Route205South_Flowers_Frame1[] = INCBIN_U16("data/tilesets/secondary/route_205_south_1/anim/flowers/01.4bpp");
+const u16 gTilesetAnims_Route205South_Flowers_Frame2[] = INCBIN_U16("data/tilesets/secondary/route_205_south_1/anim/flowers/02.4bpp");
+const u16 gTilesetAnims_Route205South_Flowers_Frame3[] = INCBIN_U16("data/tilesets/secondary/route_205_south_1/anim/flowers/03.4bpp");
 
 const u16 *const gTilesetAnims_Route205South_Flowers[] = {
     gTilesetAnims_Route205South_Flowers_Frame0,

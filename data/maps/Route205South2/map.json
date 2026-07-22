@@ -1,7 +1,7 @@
 {
   "id": "MAP_ROUTE205SOUTH",
   "name": "Route205South",
-  "layout": "LAYOUT_ROUTE205_SOUTH",
+  "layout": "LAYOUT_ROUTE205_SOUTH2",
   "music": "MUS_DP_ROUTE205_DAY",
   "region_map_section": "MAPSEC_ROUTE_205",
   "requires_flash": false,
@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_ROUTE205SOUTH1",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
   "object_events": [],
   "warp_events": [],
   "coord_events": [],

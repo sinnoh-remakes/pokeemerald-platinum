@@ -4762,14 +4762,24 @@
       "blockdata_filepath": "data/layouts/FloaromaTown/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE205_SOUTH",
-      "name": "Route205South_Layout",
+      "id": "LAYOUT_ROUTE205SOUTH1",
+      "name": "Route205South1_Layout",
       "width": 39,
-      "height": 93,
+      "height": 64,
       "primary_tileset": "gTileset_OutdoorRoute205",
-      "secondary_tileset": "gTileset_Route205South",
-      "border_filepath": "data/layouts/Route205South/border.bin",
-      "blockdata_filepath": "data/layouts/Route205South/map.bin"
+      "secondary_tileset": "gTileset_Route205South1",
+      "border_filepath": "data/layouts/Route205South1/border.bin",
+      "blockdata_filepath": "data/layouts/Route205South1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE205_SOUTH2",
+      "name": "Route205South_Layout2",
+      "width": 39,
+      "height": 29,
+      "primary_tileset": "gTileset_OutdoorRoute205",
+      "secondary_tileset": "gTileset_Route205South2",
+      "border_filepath": "data/layouts/Route205South2/border.bin",
+      "blockdata_filepath": "data/layouts/Route205South2/map.bin"
     }
   ]
 }
