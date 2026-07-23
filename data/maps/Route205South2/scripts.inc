@@ -1,2 +1,2 @@
-Route205South_MapScripts::
+Route205South2_MapScripts::
 	.byte 0
