@@ -1,5 +1,5 @@
 ---
-name: Tileset Feature
+name: Feature addition - Tilesets
 about: For creating a new map with tilesets
 title: Create [MAP] Map and Tileset
 labels: tilesets

@@ -1,5 +1,5 @@
 ---
-name: Mapping Feature
+name: Feature addition - Mapping
 about: For adding metadata to a new map
 title: Add [MAP] Map Data
 labels: mapping
@@ -9,8 +9,9 @@ type: Feature
 ---
 
 Add the following to the [MAP] map:
-- Map header data (song, map type, etc)
-- Map connections
 - Collision borders
-- Event object data (passive NPCs, trainers, warps, signs)
+- Passive event objects (e.g. NPCs, pokeball items, rock smash, etc)
+- Trainer objects and trainer data
+- Map warp objects
+- Sign objects
 - Wild encounters (morning, day, night)
