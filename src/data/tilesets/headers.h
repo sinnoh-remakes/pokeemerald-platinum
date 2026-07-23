@@ -1292,3 +1292,36 @@ const struct Tileset gTileset_Floaroma =
     .metatileAttributes = gMetatileAttributes_Floaroma,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OutdoorRoute205 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorRoute205,
+    .palettes = gTilesetPalettes_OutdoorRoute205,
+    .metatiles = gMetatiles_OutdoorRoute205,
+    .metatileAttributes = gMetatileAttributes_OutdoorRoute205,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Route205South1 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route205South1,
+    .palettes = gTilesetPalettes_Route205South1,
+    .metatiles = gMetatiles_Route205South1,
+    .metatileAttributes = gMetatileAttributes_Route205South1,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Route205South2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route205South2,
+    .palettes = gTilesetPalettes_Route205South2,
+    .metatiles = gMetatiles_Route205South2,
+    .metatileAttributes = gMetatileAttributes_Route205South2,
+    .callback = InitTilesetAnim_Route205South,
+};
