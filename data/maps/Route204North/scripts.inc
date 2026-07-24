@@ -38,7 +38,7 @@ Route204North_EventScript_TMCaptivate::
 	faceplayer
 	goto_if_set FLAG_ITEM_ROUTE_204_TM_CAPTIVATE, Route204North_EventScript_TMCaptivate2
 	msgbox Route204North_Text_FlirtyType, MSGBOX_DEFAULT
-	giveitem ITEM_TM_CAPTIVATE
+	giveitem ITEM_TM78
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_ITEM_ROUTE_204_TM_CAPTIVATE
 	msgbox Route204North_Text_Genders, MSGBOX_DEFAULT
