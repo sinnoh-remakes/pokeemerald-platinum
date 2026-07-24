@@ -5184,7 +5184,7 @@ Route204North_Text_LivRematch:
 
 Route204North_Text_LizIntro:
 	.string "Liz: We're the strongest in our\n"
-	.string "class!$
+	.string "class!$"
 
 Route204North_Text_LizDefeated:
 	.string "Liz: Oh, but, wait!$"
