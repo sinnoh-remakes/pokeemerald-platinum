@@ -12,16 +12,6 @@ Route204North_EventScript_Brandon::
 	end
 
 Route204North_EventScript_Liv::
-	trainerbattle_double TRAINER_PT_LIV_AND_LIZ, Route204North_Text_LivLizIntro, Route204North_Text_LivLizDefeated
-	msgbox Route204North_Text_LivPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route204North_EventScript_Liz::
-	trainerbattle_double TRAINER_PT_LIV_AND_LIZ, Route204North_Text_LivLizIntro, Route204North_Text_LivLizDefeated
-	msgbox Route204North_Text_LizPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route204North_EventScript_Liv::
 	trainerbattle_double TRAINER_PT_LIV_AND_LIZ, Route204North_Text_LivIntro, Route204North_Text_LivDefeated, Route204North_Text_LivNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route204North_Text_LivPostBattle, MSGBOX_DEFAULT
