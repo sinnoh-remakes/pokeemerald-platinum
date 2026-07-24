@@ -58,7 +58,7 @@ Route204_Text_RaisingDifferent:
 	.string "against types it's weak to.$"
 
 Route204North_Text_RouteSignFloaroma: 
-	.string "    Rt.204\n"
+	.string "{UP_ARROW}  Rt.204\n"
 	.string "{LEFT_ARROW} Floaroma Town$"
 
 Route204North_Text_FlirtyType:
