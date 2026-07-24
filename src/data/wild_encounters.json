@@ -13561,6 +13561,213 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ROUTE204_NORTH",
+          "base_label": "gRoute204North_Day",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_WURMPLE"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE204_NORTH",
+          "base_label": "gRoute204North_Morning",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_WURMPLE"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_KRICKETOT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE204_NORTH",
+          "base_label": "gRoute204North_Night",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_KRICKETOT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUDEW"
+              }
+            ]
+          }
         }
       ]
     },

@@ -110,6 +110,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_SEA_INCENSE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_204_SEA_INCENSE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_PT",
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route204North_EventScript_Youngster",
+      "flag": "0"
     }
   ],
   "warp_events": [

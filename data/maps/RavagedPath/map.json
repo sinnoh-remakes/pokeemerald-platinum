@@ -170,7 +170,7 @@
       "x": 17,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE204_SOUTH",
+      "dest_map": "MAP_ROUTE204_NORTH",
       "dest_warp_id": "0"
     }
   ],
