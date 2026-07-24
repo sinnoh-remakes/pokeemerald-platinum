@@ -1463,6 +1463,9 @@ void PlayTrainerEncounterMusic(void)
         case TRAINER_ENCOUNTER_MUSIC_ARTIST:
             music = MUS_DP_ENCOUNTER_ARTIST;
             break;
+        case TRAINER_ENCOUNTER_MUSIC_LADY:
+            music = MUS_DP_ENCOUNTER_LADY;
+            break;
         case TRAINER_ENCOUNTER_MUSIC_MALE:
             music = MUS_ENCOUNTER_MALE;
             break;
