@@ -5128,3 +5128,75 @@ OreburghCity_Gym_Text_DariusPostBattle:
 OreburghCity_Gym_Text_RoarkDefeated:
 	.string "W-what? That can’t be!\n"
 	.string "My buffed-up Pokémon!$"
+
+Route204North_Text_TaylorDefeated:
+	.string "It was a strong Trainer who was drawn\n"
+	.string "here by the scent of flowers!$"
+
+Route204North_Text_TaylorPostBattle:
+	.string "By the way, have you collected new\n"
+	.string "apps from the Pokétch Company?$"
+
+Route204North_Text_TaylorIntro:
+	.string "What kind of person are you, to be\n"
+	.string "drawn here by the scent of flowers?$"
+
+Route204North_Text_TaylorRematch:
+	.string "You came back to me because you\n"
+	.string "couldn’t forget the smell of flowers!$"
+
+Route204North_Text_BrandonDefeated:
+	.string "I’m not going to be able to explain\n"
+	.string "the charms of bug Pokémon this way!$"
+
+Route204North_Text_BrandonPostBattle:
+	.string "Bug Pokémon grow quickly, and they do\n"
+	.string "stuff like poison and paralyze, and\p"
+	.string "they’re cute and yet cool.\p"
+	.string "You gotta believe me. They’re good!$"
+
+Route204North_Text_BrandonIntro:
+	.string "Hey, hey, let me show off my bug\n"
+	.string "Pokémon!$"
+
+Route204North_Text_BrandonRematch:
+	.string "So, listen. Tell me you’ve grown to\n"
+	.string "like bug Pokémon since we last met.$"
+
+Route204North_Text_LivIntro:
+	.string "Liv: We can one-shot this Trainer,\n"
+	.string "can't we, Liz?\p"
+
+Route204North_Text_LivDefeated:
+	.string "Liv: Oh, oh, oh?\n"
+
+Route204North_Text_LivPostBattle:
+	.string "Liv: This Trainer...will brag about\n"
+	.string "beating us, Liz.$"
+
+Route204North_Text_LivNotEnoughMons:
+	.string "Liv: You only have one Pokémon?\n"
+	.string "That's so boring!$"
+
+Route204North_Text_LivRematch:
+	.string "Liv: Oh! You're that Trainer!\n"
+	.string "Let's get payback, Liz!$"
+
+Route204North_Text_LizIntro:
+	.string "Liz: We're the strongest in our\n"
+	.string "class!$
+
+Route204North_Text_LizDefeated:
+	.string "Liz: Oh, but, wait!$"
+
+Route204North_Text_LizPostBattle:
+	.string "Liz: This Trainer...is really happy about\n"
+	.string "beating us, Liv.$"
+
+Route204North_Text_LizNotEnoughMons:
+	.string "Liz: Um, will you battle with us?\n"
+	.string "Me and Liv?$"
+
+Route204North_Text_LizRematch:
+	.string "Liz: We're the best in our class.\n"
+	.string "We can't be losers all the time!$"
