@@ -641,6 +641,7 @@ gStdScripts_End::
 	.include "data/maps/OreburghCitySouth/scripts.inc"
 	.include "data/maps/OreburghMine_B1F/scripts.inc"
 	.include "data/maps/OreburghMine_B2F/scripts.inc"
+	.include "data/maps/ValleyWindworks/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

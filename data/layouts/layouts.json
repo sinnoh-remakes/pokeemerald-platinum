@@ -4780,6 +4780,16 @@
       "secondary_tileset": "gTileset_Route205South2",
       "border_filepath": "data/layouts/Route205South2/border.bin",
       "blockdata_filepath": "data/layouts/Route205South2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALLEY_WINDWORKS",
+      "name": "ValleyWindworks_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ValleyWindworks/border.bin",
+      "blockdata_filepath": "data/layouts/ValleyWindworks/map.bin"
     }
   ]
 }

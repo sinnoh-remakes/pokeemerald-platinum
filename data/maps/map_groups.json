@@ -5,6 +5,7 @@
     "gMapGroup_Caves",
     "gMapGroup_Lakes",
     "gMapGroup_Gates",
+    "gMapGroup_Miscellaneous",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
@@ -75,6 +76,9 @@
   ],
   "gMapGroup_Gates": [
     "Gate_Jubilife"
+  ],
+  "gMapGroup_Miscellaneous": [
+    "ValleyWindworks"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "TwinleafTown_PlayersHouse_1F",
