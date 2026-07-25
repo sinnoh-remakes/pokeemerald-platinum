@@ -62,8 +62,7 @@
     "Route205South1",
     "Route205South2",
     "Route207",
-    "Route219",
-    "LakefrontVerity"
+    "Route219"
   ],
   "gMapGroup_Caves": [
     "RavagedPath",
@@ -72,7 +71,8 @@
     "OreburghMine_B2F"
   ],
   "gMapGroup_Lakes": [
-    "LakeVerity"
+    "LakeVerity",
+    "LakefrontVerity"
   ],
   "gMapGroup_Gates": [
     "Gate_Jubilife"
