@@ -4764,7 +4764,7 @@
     {
       "id": "LAYOUT_ROUTE205SOUTH1",
       "name": "Route205South1_Layout",
-      "width": 39,
+      "width": 42,
       "height": 64,
       "primary_tileset": "gTileset_OutdoorRoute205",
       "secondary_tileset": "gTileset_Route205South1",
@@ -4784,9 +4784,9 @@
     {
       "id": "LAYOUT_VALLEY_WINDWORKS",
       "name": "ValleyWindworks_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
+      "width": 32,
+      "height": 30,
+      "primary_tileset": "gTileset_OutdoorRoute205",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/ValleyWindworks/border.bin",
       "blockdata_filepath": "data/layouts/ValleyWindworks/map.bin"
