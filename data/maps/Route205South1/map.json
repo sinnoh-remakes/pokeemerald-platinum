@@ -1,5 +1,5 @@
 {
-  "id": "MAP_ROUTE205SOUTH1",
+  "id": "MAP_ROUTE205_SOUTH1",
   "name": "Route205South1",
   "layout": "LAYOUT_ROUTE205_SOUTH1",
   "music": "MUS_DP_ROUTE205_DAY",
@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE205SOUTH",
+      "map": "MAP_ROUTE205_SOUTH",
       "offset": 0,
       "direction": "down"
     }
