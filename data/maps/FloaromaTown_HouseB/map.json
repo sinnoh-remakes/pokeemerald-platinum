@@ -1,0 +1,20 @@
+{
+  "id": "MAP_FLOAROMA_TOWN_HOUSE_B",
+  "name": "FloaromaTown_HouseB",
+  "layout": "LAYOUT_TWINLEAF_TOWN_HOUSE",
+  "music": "MUS_DP_FLOAROMA_DAY",
+  "region_map_section": "MAPSEC_FLOAROMA_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}
