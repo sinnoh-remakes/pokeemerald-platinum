@@ -4492,6 +4492,16 @@
       "blockdata_filepath": "data/layouts/Route203/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE204_NORTH",
+      "name": "Route204North_Layout",
+      "width": 32,
+      "height": 43,
+      "primary_tileset": "gTileset_OutdoorRoute204",
+      "secondary_tileset": "gTileset_Route204North",
+      "border_filepath": "data/layouts/Route204North/border.bin",
+      "blockdata_filepath": "data/layouts/Route204North/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE204_SOUTH",
       "name": "Route204South_Layout",
       "width": 32,
@@ -4500,6 +4510,26 @@
       "secondary_tileset": "gTileset_Route204South",
       "border_filepath": "data/layouts/Route204South/border.bin",
       "blockdata_filepath": "data/layouts/Route204South/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE205_SOUTH1",
+      "name": "Route205South1_Layout",
+      "width": 39,
+      "height": 64,
+      "primary_tileset": "gTileset_OutdoorRoute205",
+      "secondary_tileset": "gTileset_Route205South1",
+      "border_filepath": "data/layouts/Route205South1/border.bin",
+      "blockdata_filepath": "data/layouts/Route205South1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE205_SOUTH2",
+      "name": "Route205South_Layout2",
+      "width": 39,
+      "height": 30,
+      "primary_tileset": "gTileset_OutdoorRoute205",
+      "secondary_tileset": "gTileset_Route205South2",
+      "border_filepath": "data/layouts/Route205South2/border.bin",
+      "blockdata_filepath": "data/layouts/Route205South2/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE207",
@@ -4742,16 +4772,6 @@
       "blockdata_filepath": "data/layouts/OreburghCity_Gym/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE204_NORTH",
-      "name": "Route204North_Layout",
-      "width": 32,
-      "height": 43,
-      "primary_tileset": "gTileset_OutdoorRoute204",
-      "secondary_tileset": "gTileset_Route204North",
-      "border_filepath": "data/layouts/Route204North/border.bin",
-      "blockdata_filepath": "data/layouts/Route204North/map.bin"
-    },
-    {
       "id": "LAYOUT_FLOAROMA_TOWN",
       "name": "FloaromaTown_Layout",
       "width": 42,
@@ -4760,26 +4780,6 @@
       "secondary_tileset": "gTileset_Floaroma",
       "border_filepath": "data/layouts/FloaromaTown/border.bin",
       "blockdata_filepath": "data/layouts/FloaromaTown/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE205SOUTH1",
-      "name": "Route205South1_Layout",
-      "width": 39,
-      "height": 64,
-      "primary_tileset": "gTileset_OutdoorRoute205",
-      "secondary_tileset": "gTileset_Route205South1",
-      "border_filepath": "data/layouts/Route205South1/border.bin",
-      "blockdata_filepath": "data/layouts/Route205South1/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE205_SOUTH2",
-      "name": "Route205South_Layout2",
-      "width": 39,
-      "height": 30,
-      "primary_tileset": "gTileset_OutdoorRoute205",
-      "secondary_tileset": "gTileset_Route205South2",
-      "border_filepath": "data/layouts/Route205South2/border.bin",
-      "blockdata_filepath": "data/layouts/Route205South2/map.bin"
     }
   ]
 }
