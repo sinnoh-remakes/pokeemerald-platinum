@@ -1,2 +1,14 @@
 FloaromaTown_PokemonCenter_2F_MapScripts::
 	.byte 0
+
+FloaromaTown_PokemonCenter_2F_EventScript_TrainerCard::
+	call EventScript_PkmnCenterNurse_TrainerCard
+	end
+
+FloaromaTown_PokemonCenter_2F_EventScript_UnionRoom::
+	call EventScript_PkmnCenterNurse_UnionRoom
+	end
+	
+FloaromaTown_PokemonCenter_2F_EventScript_Colosseum::
+	call EventScript_PkmnCenterNurse_Colosseum
+	end
