@@ -4787,7 +4787,7 @@
       "width": 32,
       "height": 30,
       "primary_tileset": "gTileset_OutdoorRoute205",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_ValleyWindworks",
       "border_filepath": "data/layouts/ValleyWindworks/border.bin",
       "blockdata_filepath": "data/layouts/ValleyWindworks/map.bin"
     }
