@@ -641,6 +641,7 @@ gStdScripts_End::
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/Gate_Jubilife/scripts.inc"
+	.include "data/maps/FloaromaMeadow/scripts.inc"
 	.include "data/maps/ValleyWindworks/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"

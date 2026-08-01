@@ -100,3 +100,5 @@ echo "Compiling [secondary] route_205_south_2"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_205_south_2 ./tiles/route_205_south_2 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] valley_windworks"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/valley_windworks ./tiles/valley_windworks ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] floaroma_meadow"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/floaroma_meadow ./tiles/floaroma_meadow ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
