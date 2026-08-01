@@ -4790,6 +4790,16 @@
       "secondary_tileset": "gTileset_ValleyWindworks",
       "border_filepath": "data/layouts/ValleyWindworks/border.bin",
       "blockdata_filepath": "data/layouts/ValleyWindworks/map.bin"
+    },
+    {
+      "id": "LAYOUT_FLOAROMA_MEADOW",
+      "name": "FloaromaMeadow_Layout",
+      "width": 62,
+      "height": 61,
+      "primary_tileset": "gTileset_OutdoorRoute205",
+      "secondary_tileset": "gTileset_FloaromaMeadow",
+      "border_filepath": "data/layouts/FloaromaMeadow/border.bin",
+      "blockdata_filepath": "data/layouts/FloaromaMeadow/map.bin"
     }
   ]
 }

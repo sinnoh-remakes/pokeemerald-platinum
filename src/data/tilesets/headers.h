@@ -1336,3 +1336,14 @@ const struct Tileset gTileset_ValleyWindworks =
     .metatileAttributes = gMetatileAttributes_ValleyWindworks,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_FloaromaMeadow =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_FloaromaMeadow,
+    .palettes = gTilesetPalettes_FloaromaMeadow,
+    .metatiles = gMetatiles_FloaromaMeadow,
+    .metatileAttributes = gMetatileAttributes_FloaromaMeadow,
+    .callback = InitTilesetAnim_FloaromaMeadow,
+};

@@ -641,6 +641,7 @@ gStdScripts_End::
 	.include "data/maps/OreburghCity_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/OreburghCity_Mart/scripts.inc"
 	.include "data/maps/OreburghCity_Gym/scripts.inc"
+	.include "data/maps/FloaromaMeadow/scripts.inc"
 	.include "data/maps/ValleyWindworks/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
