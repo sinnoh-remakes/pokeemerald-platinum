@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE205SOUTH",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_VALLEY_WINDWORKS",
+      "offset": 39,
+      "direction": "down"
     }
   ],
   "object_events": [],

@@ -342,3 +342,6 @@ const u16 gMetatileAttributes_Route205South1[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_Route205South2[] = INCBIN_U16("data/tilesets/secondary/route_205_south_2/metatiles.bin");
 const u16 gMetatileAttributes_Route205South2[] = INCBIN_U16("data/tilesets/secondary/route_205_south_2/metatile_attributes.bin");
+
+const u16 gMetatiles_ValleyWindworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatiles.bin");
+const u16 gMetatileAttributes_ValleyWindworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatile_attributes.bin");

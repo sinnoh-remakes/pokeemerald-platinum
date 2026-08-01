@@ -14,6 +14,11 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+      "map": "MAP_VALLEY_WINDWORKS",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
       "map": "MAP_ROUTE205SOUTH1",
       "offset": 0,
       "direction": "up"

@@ -1325,3 +1325,14 @@ const struct Tileset gTileset_Route205South2 =
     .metatileAttributes = gMetatileAttributes_Route205South2,
     .callback = InitTilesetAnim_Route205South,
 };
+
+const struct Tileset gTileset_ValleyWindworks =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ValleyWindworks,
+    .palettes = gTilesetPalettes_ValleyWindworks,
+    .metatiles = gMetatiles_ValleyWindworks,
+    .metatileAttributes = gMetatileAttributes_ValleyWindworks,
+    .callback = NULL,
+};
