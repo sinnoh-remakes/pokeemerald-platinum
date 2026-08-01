@@ -129,6 +129,22 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_LAKEFRONT_VERITY",
+      "name": "VERITY LAKEFRONT",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_VALLEY_WINDWORKS",
+      "name": "VALLEY WINDWORKS",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_LITTLEROOT_TOWN",
       "name": "LITTLEROOT TOWN",
       "x": 4,

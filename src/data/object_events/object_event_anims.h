@@ -1109,6 +1109,22 @@ static const union AnimCmd *const sAnimTable_Inanimate[] = {
     [ANIM_STAY_STILL] = sAnim_StayStill,
 };
 
+static const union AnimCmd sAnim_WindTurbineBladesSpin[] =
+{
+    ANIMCMD_FRAME(0, 12),
+    ANIMCMD_FRAME(1, 12),
+    ANIMCMD_FRAME(2, 12),
+    ANIMCMD_FRAME(3, 12),
+    ANIMCMD_FRAME(4, 12),
+    ANIMCMD_FRAME(5, 12),
+    ANIMCMD_FRAME(6, 12),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_WindTurbineBlades[] = {
+    [ANIM_STAY_STILL] = sAnim_WindTurbineBladesSpin,
+};
+
 static const union AnimCmd *const sAnimTable_QuintyPlump[] = {
     [ANIM_STD_FACE_SOUTH] = sAnim_QuintyPlumpFaceSouth,
     [ANIM_STD_FACE_NORTH] = sAnim_QuintyPlumpFaceNorth,

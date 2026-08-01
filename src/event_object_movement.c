@@ -172,6 +172,7 @@ static void VirtualObject_UpdateAnim(struct Sprite *);
 static void ApplyLevitateMovement(u8);
 static bool8 MovementType_Disguise_Callback(struct ObjectEvent *, struct Sprite *);
 static bool8 MovementType_Buried_Callback(struct ObjectEvent *, struct Sprite *);
+static bool8 MovementType_WindTurbineBlades_Callback(struct ObjectEvent *, struct Sprite *);
 static void CreateReflectionEffectSprites(void);
 static u8 GetObjectEventIdByLocalIdAndMapInternal(u8, u8, u8);
 static bool8 GetAvailableObjectEventId(u16, u8, u8, u8 *);
@@ -348,6 +349,7 @@ static void (*const sMovementTypeCallbacks[])(struct Sprite *) =
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_LEFT] = MovementType_WalkSlowlyInPlace,
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = MovementType_WalkSlowlyInPlace,
     [MOVEMENT_TYPE_FOLLOW_PLAYER] = MovementType_FollowPlayer,
+    [MOVEMENT_TYPE_WIND_TURBINE_BLADES] = MovementType_WindTurbineBlades,
 };
 
 static const bool8 sMovementTypeHasRange[NUM_MOVEMENT_TYPES] = {
@@ -477,6 +479,7 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_LEFT] = DIR_WEST,
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = DIR_EAST,
     [MOVEMENT_TYPE_FOLLOW_PLAYER] = DIR_SOUTH,
+    [MOVEMENT_TYPE_WIND_TURBINE_BLADES] = DIR_SOUTH,
 };
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -510,6 +513,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_MayReflection,         OBJ_EVENT_PAL_TAG_MAY_REFLECTION},
     {gObjectEventPal_MovingBox,             OBJ_EVENT_PAL_TAG_MOVING_BOX},
     {gObjectEventPal_CableCar,              OBJ_EVENT_PAL_TAG_CABLE_CAR},
+    {gObjectEventPal_WindTurbine,           OBJ_EVENT_PAL_TAG_WIND_TURBINE},
     {gObjectEventPal_SSTidal,               OBJ_EVENT_PAL_TAG_SSTIDAL},
     {gObjectEventPal_Kyogre,                OBJ_EVENT_PAL_TAG_KYOGRE},
     {gObjectEventPal_KyogreReflection,      OBJ_EVENT_PAL_TAG_KYOGRE_REFLECTION},
@@ -6046,6 +6050,23 @@ void MovementType_Buried(struct Sprite *sprite)
 static bool8 MovementType_Buried_Callback(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     return gMovementTypeFuncs_Buried[sprite->sTypeFuncId](objectEvent, sprite);
+}
+
+void MovementType_WindTurbineBlades(struct Sprite *sprite)
+{
+    if (!sprite->data[7])
+    {
+        gObjectEvents[sprite->sObjEventId].fixedPriority = TRUE;
+        sprite->oam.priority = 1;
+        sprite->subspriteMode = SUBSPRITES_IGNORE_PRIORITY;
+        sprite->data[7]++;
+    }
+    UpdateObjectEventCurrentMovement(&gObjectEvents[sprite->sObjEventId], sprite, MovementType_WindTurbineBlades_Callback);
+}
+
+static bool8 MovementType_WindTurbineBlades_Callback(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    return FALSE;
 }
 
 bool8 MovementType_Buried_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
