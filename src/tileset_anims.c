@@ -1537,7 +1537,7 @@ const u16 *const gTilesetAnims_Route205South_Flowers[] = {
 static void QueueAnimTiles_Route205South_Flowers(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Route205South_Flowers);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Route205South_Flowers[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 12 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Route205South_Flowers[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 8 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_Route205South(u16 timer)
