@@ -39,5 +39,6 @@ void InitTilesetAnim_Oreburgh(void);
 void InitTilesetAnim_OreburghMine(void);
 void InitTilesetAnim_Floaroma(void);
 void InitTilesetAnim_Route205South(void);
+void InitTilesetAnim_FloaromaMeadow(void);
 
 #endif // GUARD_TILESET_ANIMS_H

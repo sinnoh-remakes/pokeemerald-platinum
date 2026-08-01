@@ -1553,3 +1553,35 @@ void InitTilesetAnim_Route205South(void)
     sPrimaryTilesetAnimCounterMax = 256;
     sPrimaryTilesetAnimCallback = TilesetAnim_Route205South;
 }
+
+const u16 gTilesetAnims_FloaromaMeadow_Flowers_Frame0[] = INCBIN_U16("data/tilesets/primary/floaroma_meadow/anim/flowers/00.4bpp");
+const u16 gTilesetAnims_FloaromaMeadow_Flowers_Frame1[] = INCBIN_U16("data/tilesets/primary/floaroma_meadow/anim/flowers/01.4bpp");
+const u16 gTilesetAnims_FloaromaMeadow_Flowers_Frame2[] = INCBIN_U16("data/tilesets/primary/floaroma_meadow/anim/flowers/02.4bpp");
+const u16 gTilesetAnims_FloaromaMeadow_Flowers_Frame3[] = INCBIN_U16("data/tilesets/primary/floaroma_meadow/anim/flowers/03.4bpp");
+
+const u16 *const gTilesetAnims_FloaromaMeadow_Flowers[] = {
+    gTilesetAnims_FloaromaMeadow_Flowers_Frame0,
+    gTilesetAnims_FloaromaMeadow_Flowers_Frame1,
+    gTilesetAnims_FloaromaMeadow_Flowers_Frame2,
+    gTilesetAnims_FloaromaMeadow_Flowers_Frame3
+};
+
+static void QueueAnimTiles_FloaromaMeadow_Flowers(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_FloaromaMeadow_Flowers);
+    AppendTilesetAnimToBuffer(gTilesetAnims_FloaromaMeadow_Flowers[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0)), 16 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_FloaromaMeadow(u16 timer)
+{
+    if (timer % 32 == 0) {
+        QueueAnimTiles_FloaromaMeadow_Flowers(timer / 32);
+    }
+}
+
+void InitTilesetAnim_FloaromaMeadow(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_FloaromaMeadow;
+}
