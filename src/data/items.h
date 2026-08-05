@@ -12534,11 +12534,15 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
+    // FODO: Figure out how to add new TMs without failing compilation
     [ITEM_TM88] =
     {
         .name = ITEM_NAME("TM88"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The user pecks the foe. If the\n"
+            "foe is holding a Berry, the user\n"
+            "plucks it and gains its effect.\n"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

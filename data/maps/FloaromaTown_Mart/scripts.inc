@@ -41,3 +41,24 @@ FloaromaTown_Mart_Pokemart_Secondary:
 	.2byte ITEM_HEAL_BALL
 	.2byte ITEM_NET_BALL
 	pokemartlistend
+
+FloaromaTown_Mart_EventScript_SchoolKidF::
+	msgbox FloaromaTown_Mart_Text_DressUp, MSGBOX_NPC
+	end
+
+FloaromaTown_Mart_EventScript_BattleGirl::
+	msgbox FloaromaTown_Mart_Text_BuyBerries, MSGBOX_NPC
+	end
+
+FloaromaTown_Mart_Text_DressUp:
+	.string "I'm going to dress up my Pokémon with\n"
+	.string "cute Accessories and take it to the\l"
+	.string "TV station in Jubilife City.\p"
+	.string "That way, everyone in the region\n"
+	.string "will be able to see my Pokémon!$"
+
+FloaromaTown_Mart_Text_BuyBerries:
+	.string "You can’t buy Berries or Accessories\n"
+	.string "at Poké Marts.\p"
+	.string "It’s better for me that way.\n"
+	.string "I won’t waste money impulse shopping.$"
