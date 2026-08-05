@@ -643,7 +643,6 @@ gStdScripts_End::
 	.include "data/maps/OreburghCity_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/OreburghCity_Mart/scripts.inc"
 	.include "data/maps/OreburghCity_Gym/scripts.inc"
-
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/new_game.inc"
