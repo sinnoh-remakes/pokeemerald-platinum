@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_ROUTE205_SOUTH1",
       "name": "Route205South1_Layout",
-      "width": 39,
+      "width": 43,
       "height": 64,
       "primary_tileset": "gTileset_OutdoorRoute205",
       "secondary_tileset": "gTileset_Route205South1",
