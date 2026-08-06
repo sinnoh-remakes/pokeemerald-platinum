@@ -4800,6 +4800,16 @@
       "secondary_tileset": "gTileset_OreburghGym",
       "border_filepath": "data/layouts/OreburghCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_HOUSE",
+      "name": "SunyshoreCity_House_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_IndoorSunyshore",
+      "secondary_tileset": "gTileset_SunyshoreHouse",
+      "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
     }
   ]
 }

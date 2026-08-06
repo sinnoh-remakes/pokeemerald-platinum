@@ -1,12 +1,6 @@
 #!/bin/bash
 
-echo "Compiling [PRIMARY] outdoor_route_205"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_route_205 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] route_205_south_1"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_205_south_1 ./tiles/route_205_south_1 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] route_205_south_2"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_205_south_2 ./tiles/route_205_south_2 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] valley_windworks"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/valley_windworks ./tiles/valley_windworks ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] floaroma_meadow"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/floaroma_meadow ./tiles/floaroma_meadow ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+echo "Compiling [PRIMARY] indoor_sunyshore"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_sunyshore ./tiles/indoor_sunyshore ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] sunyshore_house"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sunyshore_house ./tiles/sunyshore_house ./tiles/indoor_sunyshore ./include/constants/metatile_behaviors.h

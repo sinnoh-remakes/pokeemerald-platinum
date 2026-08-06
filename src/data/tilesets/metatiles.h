@@ -348,3 +348,9 @@ const u16 gMetatileAttributes_ValleyWindworks[] = INCBIN_U16("data/tilesets/seco
 
 const u16 gMetatiles_FloaromaMeadow[] = INCBIN_U16("data/tilesets/secondary/floaroma_meadow/metatiles.bin");
 const u16 gMetatileAttributes_FloaromaMeadow[] = INCBIN_U16("data/tilesets/secondary/floaroma_meadow/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorSunyshore[] = INCBIN_U16("data/tilesets/primary/indoor_sunyshore/metatiles.bin");
+const u16 gMetatileAttributes_IndoorSunyshore[] = INCBIN_U16("data/tilesets/primary/indoor_sunyshore/metatile_attributes.bin");
+
+const u16 gMetatiles_SunyshoreHouse[] = INCBIN_U16("data/tilesets/secondary/sunyshore_house/metatiles.bin");
+const u16 gMetatileAttributes_SunyshoreHouse[] = INCBIN_U16("data/tilesets/secondary/sunyshore_house/metatile_attributes.bin");
