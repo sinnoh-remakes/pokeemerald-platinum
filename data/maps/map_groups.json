@@ -10,6 +10,7 @@
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
     "gMapGroup_IndoorOreburgh",
+    "gMapGroup_IndoorMiscellaneous",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -124,6 +125,9 @@
     "OreburghCity_PokemonCenter_2F",
     "OreburghCity_Mart",
     "OreburghCity_Gym"
+  ],
+  "gMapGroup_IndoorMiscellaneous": [
+    "Route205South1_House"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

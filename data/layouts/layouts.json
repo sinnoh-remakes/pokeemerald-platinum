@@ -4800,6 +4800,16 @@
       "secondary_tileset": "gTileset_FloaromaMeadow",
       "border_filepath": "data/layouts/FloaromaMeadow/border.bin",
       "blockdata_filepath": "data/layouts/FloaromaMeadow/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_HOUSE",
+      "name": "SunyshoreCity_House_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_TwinleafHouse",
+      "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
     }
   ]
 }
