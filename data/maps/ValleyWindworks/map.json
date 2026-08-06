@@ -15,8 +15,8 @@
   "connections": [
     {
       "map": "MAP_ROUTE205_SOUTH1",
-      "offset": -64,
-      "direction": "left"
+      "offset": -39,
+      "direction": "up"
     },
     {
       "map": "MAP_ROUTE205_SOUTH",
