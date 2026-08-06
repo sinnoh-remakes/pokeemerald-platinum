@@ -10,6 +10,7 @@
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
     "gMapGroup_IndoorOreburgh",
+    "gMapGroup_IndoorFloaroma",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -78,8 +79,8 @@
     "Gate_Jubilife"
   ],
   "gMapGroup_Miscellaneous": [
-    "FloaromaMeadow",
-    "ValleyWindworks"
+    "ValleyWindworks",
+    "FloaromaMeadow"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "TwinleafTown_PlayersHouse_1F",
@@ -124,6 +125,13 @@
     "OreburghCity_PokemonCenter_2F",
     "OreburghCity_Mart",
     "OreburghCity_Gym"
+  ],
+  "gMapGroup_IndoorFloaroma": [
+    "FloaromaTown_HouseA",
+    "FloaromaTown_HouseB",
+    "FloaromaTown_PokemonCenter_1F",
+    "FloaromaTown_PokemonCenter_2F",
+    "FloaromaTown_Mart"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
