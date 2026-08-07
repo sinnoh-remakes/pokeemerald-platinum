@@ -9,10 +9,15 @@ Route205South1_House_EventScript_PokeFanF::
 	lock
 	faceplayer
 	msgbox Route205South1_House_Text_Tired, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route205South1_House_Text_PushYourself
+	goto_if_eq VAR_RESULT, NO, Route205South1_House_EventScript_PokeFanFRejected
 	special HealPlayerParty
 	@ callnative UpdateFollowingPokemon
 	msgbox Route205South1_House_Text_Refreshed, MSGBOX_DEFAULT
+	release
+	end
+
+Route205South1_House_EventScript_PokeFanFRejected::
+	msgbox Route205South1_House_Text_PushYourself, MSGBOX_DEFAULT
 	release
 	end
 
