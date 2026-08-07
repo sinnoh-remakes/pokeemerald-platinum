@@ -10,6 +10,7 @@ Route205South1_House_EventScript_PokeFanF::
 	faceplayer
 	msgbox Route205South1_House_Text_Tired, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route205South1_House_EventScript_PokeFanFRejected
+	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
 	@ callnative UpdateFollowingPokemon
 	msgbox Route205South1_House_Text_Refreshed, MSGBOX_DEFAULT
