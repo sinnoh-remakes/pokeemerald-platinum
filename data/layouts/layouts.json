@@ -4802,6 +4802,16 @@
       "blockdata_filepath": "data/layouts/OreburghCity_Gym/map.bin"
     },
     {
+      "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",
+      "name": "ValleyWindworksIndoor_Layout",
+      "width": 32,
+      "height": 30,
+      "primary_tileset": "gTileset_OutdoorRoute205",
+      "secondary_tileset": "gTileset_ValleyWindworks",
+      "border_filepath": "data/layouts/ValleyWindworksIndoor/border.bin",
+      "blockdata_filepath": "data/layouts/ValleyWindworksIndoor/map.bin"
+    },
+    {
       "id": "LAYOUT_SUNYSHORE_CITY_HOUSE",
       "name": "SunyshoreCity_House_Layout",
       "width": 9,
