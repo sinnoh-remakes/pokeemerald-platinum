@@ -4807,7 +4807,7 @@
       "width": 22,
       "height": 16,
       "primary_tileset": "gTileset_IndoorWindworks",
-      "secondary_tileset": "gTileset_ValleyWindworks",
+      "secondary_tileset": "gTileset_ValleyWindworksIndoor",
       "border_filepath": "data/layouts/ValleyWindworksIndoor/border.bin",
       "blockdata_filepath": "data/layouts/ValleyWindworksIndoor/map.bin"
     },

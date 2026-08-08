@@ -1380,3 +1380,14 @@ const struct Tileset gTileset_IndoorWindworks =
     .metatileAttributes = gMetatileAttributes_IndoorWindworks,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ValleyWindworksIndoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ValleyWindworksIndoor,
+    .palettes = gTilesetPalettes_ValleyWindworksIndoor,
+    .metatiles = gMetatiles_ValleyWindworksIndoor,
+    .metatileAttributes = gMetatileAttributes_ValleyWindworksIndoor,
+    .callback = NULL,
+};

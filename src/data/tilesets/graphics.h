@@ -2584,3 +2584,22 @@ const u16 gTilesetPalettes_IndoorWindworks[][16] =
 };
 
 const u32 gTilesetTiles_IndoorWindworks[] = INCBIN_U32("data/tilesets/primary/indoor_windworks/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_ValleyWindworksIndoor[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_ValleyWindworksIndoor[] = INCBIN_U32("data/tilesets/secondary/valley_windworks_indoor/tiles.4bpp.lz");
