@@ -1614,8 +1614,8 @@ static void QueueAnimTiles_ValleyWindworksIndoor_OrangeBox(u16 timer)
 
 static void TilesetAnim_ValleyWindworksIndoor(u16 timer)
 {
-    if (timer % 16 == 0) {
-        QueueAnimTiles_ValleyWindworksIndoor_OrangeBox(timer / 16);
+    if (timer % 8 == 0) {
+        QueueAnimTiles_ValleyWindworksIndoor_OrangeBox(timer / 8);
     }
 }
 
