@@ -11,6 +11,7 @@
     "gMapGroup_IndoorJubilife",
     "gMapGroup_IndoorOreburgh",
     "gMapGroup_IndoorFloaroma",
+    "gMapGroup_IndoorMiscellaneous",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -132,6 +133,10 @@
     "FloaromaTown_PokemonCenter_1F",
     "FloaromaTown_PokemonCenter_2F",
     "FloaromaTown_Mart"
+  ],
+  "gMapGroup_IndoorMiscellaneous": [
+    "FloaromaMeadow_House",
+    "Route205South1_House"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

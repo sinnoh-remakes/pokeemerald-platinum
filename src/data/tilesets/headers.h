@@ -1347,3 +1347,25 @@ const struct Tileset gTileset_FloaromaMeadow =
     .metatileAttributes = gMetatileAttributes_FloaromaMeadow,
     .callback = InitTilesetAnim_FloaromaMeadow,
 };
+
+const struct Tileset gTileset_IndoorSunyshore =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorSunyshore,
+    .palettes = gTilesetPalettes_IndoorSunyshore,
+    .metatiles = gMetatiles_IndoorSunyshore,
+    .metatileAttributes = gMetatileAttributes_IndoorSunyshore,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SunyshoreHouse =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SunyshoreHouse,
+    .palettes = gTilesetPalettes_SunyshoreHouse,
+    .metatiles = gMetatiles_SunyshoreHouse,
+    .metatileAttributes = gMetatileAttributes_SunyshoreHouse,
+    .callback = NULL,
+};
