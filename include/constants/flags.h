@@ -1245,11 +1245,11 @@
 #define FLAG_ITEM_ROUTE_204_TM_BULLET_SEED                          0x4A3
 #define FLAG_ITEM_ROUTE_204_TM_CAPTIVATE                            0x4A4
 #define FLAG_ITEM_FLOAROMA_TOWN_TM_PLUCK                            0x4A5
-#define FLAG_ITEM_FLOAROMA_MEADOW_MIRACLE_SEED                      0x4A6
-#define FLAG_ITEM_FLOAROMA_MEADOW_ULTRA_BALL                        0x4A7
-#define FLAG_ITEM_FLOAROMA_MEADOW_RARE_CANDY                        0x4A8
-#define FLAG_ITEM_FLOAROMA_MEADOW_LEAF_STONE                        0x4A9
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
+#define FLAG_ITEM_VALLEY_WINDWORKS_POTION                           0x4A6
+#define FLAG_ITEM_FLOAROMA_MEADOW_MIRACLE_SEED                      0x4A7
+#define FLAG_ITEM_FLOAROMA_MEADOW_ULTRA_BALL                        0x4A8
+#define FLAG_ITEM_FLOAROMA_MEADOW_RARE_CANDY                        0x4A9
+#define FLAG_ITEM_FLOAROMA_MEADOW_LEAF_STONE                        0x4AA
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag

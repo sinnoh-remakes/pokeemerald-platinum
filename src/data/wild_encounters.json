@@ -13768,6 +13768,213 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_VALLEY_WINDWORKS",
+          "base_label": "gValleyWindworks_Morning",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_VALLEY_WINDWORKS",
+          "base_label": "gValleyWindworks_Day",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_VALLEY_WINDWORKS",
+          "base_label": "gValleyWindworks_Night",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_SHELLOS_WEST"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_BUIZEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PACHIRISU"
+              }
+            ]
+          }
         }
       ]
     },
