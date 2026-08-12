@@ -1389,5 +1389,5 @@ const struct Tileset gTileset_ValleyWindworksIndoor =
     .palettes = gTilesetPalettes_ValleyWindworksIndoor,
     .metatiles = gMetatiles_ValleyWindworksIndoor,
     .metatileAttributes = gMetatileAttributes_ValleyWindworksIndoor,
-    .callback = NULL,
+    .callback = InitTilesetAnim_ValleyWindworksIndoor,
 };

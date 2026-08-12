@@ -1585,3 +1585,39 @@ void InitTilesetAnim_FloaromaMeadow(void)
     sPrimaryTilesetAnimCounterMax = 256;
     sPrimaryTilesetAnimCallback = TilesetAnim_FloaromaMeadow;
 }
+
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame0[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/00.4bpp");
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame1[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/01.4bpp");
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame2[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/02.4bpp");
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame3[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/03.4bpp");
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame4[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/00.4bpp");
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame5[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/01.4bpp");
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame6[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/02.4bpp");
+const u16 gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame7[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/anim/orange_box/03.4bpp");
+
+const u16 *const gTilesetAnims_ValleyWindworksIndoor_OrangeBox[] = {
+    gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame0,
+    gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame1,
+    gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame2,
+    gTilesetAnims_ValleyWindworksIndoor_OrangeBox_Frame3
+};
+
+static void QueueAnimTiles_ValleyWindworksIndoor_OrangeBox(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_ValleyWindworksIndoor_OrangeBox);
+    AppendTilesetAnimToBuffer(gTilesetAnims_ValleyWindworksIndoor_OrangeBox[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 2 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_ValleyWindworksIndoor(u16 timer)
+{
+    if (timer % 32 == 0) {
+        QueueAnimTiles_ValleyWindworksIndoor_OrangeBox(timer / 32);
+    }
+}
+
+void InitTilesetAnim_ValleyWindworksIndoor(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_ValleyWindworksIndoor;
+}
