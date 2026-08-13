@@ -13408,20 +13408,21 @@ const struct Item gItemsInfo[] =
 
 // Story Key Items
 
-    [ITEM_SS_TICKET] =
+    [ITEM_WORKS_KEY] =
     {
-        .name = ITEM_NAME("S.S. Ticket"),
+        .name = ITEM_NAME("Works Key"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "The ticket required\n"
-            "for sailing on a\n"
-            "ferry."),
+            "A large key for operating the\n"
+            "doors of the Valley Windworks\n"
+            "in the canyon. It was held by\n"
+            "a Team Galactic Grunt."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_SSTicket,
-        .iconPalette = gItemIconPalette_SSTicket,
+        .iconPic = gItemIcon_WorksKey,
+        .iconPalette = gItemIconPalette_WorksKey,
     },
 
     [ITEM_EON_TICKET] =

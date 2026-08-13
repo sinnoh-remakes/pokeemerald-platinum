@@ -65,6 +65,62 @@
       "trainer_sight_or_berry_tree_id": "ITEM_LEAF_STONE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_FLOAROMA_MEADOW_LEAF_STONE"
+    },
+    {
+      "local_id": "LOCALID_GRUNT_1",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M_PT",
+      "x": 12,
+      "y": 46,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FLOAROMA_MEADOW_GALACTIC_EVENT"
+    },
+    {
+      "local_id": "LOCALID_GRUNT_2",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M_PT",
+      "x": 13,
+      "y": 46,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FLOAROMA_MEADOW_GALACTIC_EVENT"
+    },
+    {
+      "local_id": "LOCALID_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M_PT",
+      "x": 12,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_WORKS_KEY_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 46,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT"
     }
   ],
   "warp_events": [
@@ -90,6 +146,25 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 47,
+      "elevation": 0,
+      "var": "VAR_FLOAROMA_MEADOW_STATE",
+      "var_value": "0",
+      "script": "FloaromaMeadow_EventScript_Galactic_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 47,
+      "elevation": 0,
+      "var": "VAR_FLOAROMA_MEADOW_STATE",
+      "var_value": "0",
+      "script": "FloaromaMeadow_EventScript_Galactic_Left"
+    }
+  ],
   "bg_events": []
 }

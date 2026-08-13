@@ -24,8 +24,60 @@
       "direction": "up"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_ROUTE205_GRUNT_RIGHT",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M_PT",
+      "x": 33,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route205South2_EventScript_Galactic_Dialog_Right",
+      "flag": "FLAG_DEFEATED_MARS"
+    },
+    {
+      "local_id": "LOCALID_ROUTE205_GRUNT_LEFT",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M_PT",
+      "x": 31,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route205South2_EventScript_Galactic_Dialog_Left",
+      "flag": "FLAG_DEFEATED_MARS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWINS_PT",
+      "x": 26,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route205South2_EventScript_Girl",
+      "flag": "FLAG_DEFEATED_MARS"
+    }
+  ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE205_SOUTH_2_STATE",
+      "var_value": "0",
+      "script": "Route205South2_EventScript_Galactic_Roadblock"
+    }
+  ],
   "bg_events": []
 }
