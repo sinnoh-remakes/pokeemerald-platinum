@@ -648,6 +648,7 @@ gStdScripts_End::
 	.include "data/maps/FloaromaTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/FloaromaTown_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/FloaromaTown_Mart/scripts.inc"
+	.include "data/maps/FloaromaMeadow_House/scripts.inc"
 	.include "data/maps/ValleyWindworksIndoor/scripts.inc"
 	.include "data/maps/Route205South1_House/scripts.inc"
 	.include "data/scripts/std_msgbox.inc"
