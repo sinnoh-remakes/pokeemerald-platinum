@@ -81,3 +81,40 @@
     },
     {
       "type": "trigger",
+      "x": 26,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_ROUTE205_SOUTH_2_STATE",
+      "var_value": "0",
+      "script": "Route205South2_EventScript_Girl_Notice_Top_Middle"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_ROUTE205_SOUTH_2_STATE",
+      "var_value": "0",
+      "script": "Route205South2_EventScript_Girl_Notice_Top"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_ROUTE205_SOUTH_2_STATE",
+      "var_value": "0",
+      "script": "Route205South2_EventScript_Girl_Notice_Bottom_Middle"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_ROUTE205_SOUTH_2_STATE",
+      "var_value": "0",
+      "script": "Route205South2_EventScript_Girl_Notice_Bottom"
+    }
+  ],
+  "bg_events": []
+}
