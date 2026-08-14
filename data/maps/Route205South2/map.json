@@ -54,6 +54,7 @@
       "flag": "FLAG_DEFEATED_MARS"
     },
     {
+      "local_id": "LOCALID_ROUTE205_GIRL",
       "graphics_id": "OBJ_EVENT_GFX_TWINS_PT",
       "x": 26,
       "y": 19,
@@ -75,9 +76,8 @@
       "y": 11,
       "elevation": 0,
       "var": "VAR_ROUTE205_SOUTH_2_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "Route205South2_EventScript_Galactic_Roadblock"
-    }
-  ],
-  "bg_events": []
-}
+    },
+    {
+      "type": "trigger",
