@@ -21,6 +21,8 @@ ValleyWindworks_EventScript_Galactic_Grunt::
 	removeobject LOCALID_GALACTIC_GRUNT
 	playse SE_DOOR
 	setflag FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT
+	delay 12
+	msgbox ValleyWindworks_Text_Kerchunk, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -83,3 +85,6 @@ ValleyWindworks_Text_Key:
 ValleyWindworks_Text_Unlocked:
 	.string "Ker-chunk!\p"
 	.string "The door to Valley Windworks opened!$"
+
+ValleyWindworks_Text_Kerchunk:
+	.string "Ker-chunk!$"

@@ -62,8 +62,16 @@ FloaromaMeadow_EventScript_Galactic_Outro::
 	msgbox FloaromaMeadow_Text_Galactic_Man, MSGBOX_DEFAULT
 	giveitem ITEM_WORKS_KEY, 1
 	msgbox FloaromaMeadow_Text_Galactic_Outro, MSGBOX_DEFAULT
-	giveitem ITEM_HONEY, 1
+	giveitem ITEM_HONEY, 10
 	msgbox FloaromaMeadow_Text_Galactic_Outro2, MSGBOX_DEFAULT
+	release
+	end
+
+FloaromaMeadow_EventScript_HoneySeller::
+	lock
+	faceplayer
+	msgbox FloaromaMeadow_Text_Honey_Seller, MSGBOX_DEFAULT
+	pokemart FloaromaMeadow_Mart_Honey
 	release
 	end
 
@@ -131,3 +139,11 @@ FloaromaMeadow_Text_Galactic_Outro:
 FloaromaMeadow_Text_Galactic_Outro2:
 	.string "Slather that Honey on a sweet-smell\n"
 	.string "tree. It might attract Pokémon.$"
+
+FloaromaMeadow_Text_Honey_Seller:
+	.string "Would you like to buy some Honey for\n"
+	.string "attracting Pokémon? Just ¥100 each!$"
+
+FloaromaMeadow_Mart_Honey:
+	.2byte ITEM_HONEY
+	pokemartlistend

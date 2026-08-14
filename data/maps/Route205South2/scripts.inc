@@ -2,7 +2,8 @@ Route205South2_MapScripts::
 	.byte 0
 
 @ State descriptions for VAR_ROUTE205_SOUTH_2_STATE
-@ 1: Defeated Mars
+@ 1: Talked to the girl
+@ 2: Defeated Mars
 
 Route205South2_EventScript_Galactic_Roadblock::
 	lock
@@ -31,12 +32,85 @@ Route205South2_EventScript_Galactic_Roadblock::
 	release
 	end
 
-Route205South2_EventScript_Girl::
+Route205South2_EventScript_Girl_Notice_Top::
 	lock
-	faceplayer
+	addvar VAR_ROUTE205_SOUTH_2_STATE, 1
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 48
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
+	waitmovement 0
 	msgbox Route205South2_Text_Girl, MSGBOX_AUTOCLOSE
 	release
 	end
+
+Route205South2_EventScript_Girl_Notice_Top_Middle::
+	lock
+	addvar VAR_ROUTE205_SOUTH_2_STATE, 1
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 48
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox Route205South2_Text_Girl, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route205South2_EventScript_Girl_Notice_Bottom_Middle::
+	lock
+	addvar VAR_ROUTE205_SOUTH_2_STATE, 1
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 48
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	msgbox Route205South2_Text_Girl, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route205South2_EventScript_Girl_Notice_Bottom::
+	lock
+	addvar VAR_ROUTE205_SOUTH_2_STATE, 1
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 48
+	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	msgbox Route205South2_Text_Girl, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route205South2_EventScript_Girl::
+	lock
+	faceplayer
+	compare VAR_ROUTE205_SOUTH_2_STATE, 1
+	goto_if_eq Route205South2_EventScript_Girl_Second_Dialog
+	compare VAR_ROUTE205_SOUTH_2_STATE, 0
+	call_if_eq Route205South2_EventScript_Girl_AddVar
+	msgbox Route205South2_Text_Girl, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route205South2_EventScript_Girl_Second_Dialog::
+	msgbox Route205South2_Text_Girl_Second_Dialog, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route205South2_EventScript_Girl_AddVar:
+	addvar VAR_ROUTE205_SOUTH_2_STATE, 1
+	return
 
 Route205South2_EventScript_Galactic_Dialog_Left::
 	lock
@@ -73,3 +147,7 @@ Route205South2_Text_Girl:
 	.string "my papa do something.\p"
 	.string "Please, Trainer!\n"
 	.string "I miss my papa!$"
+
+Route205South2_Text_Girl_Second_Dialog:
+	.string "Please, Trainer! I want to see my papa.\n"
+	.string "He’s at the Valley Windworks...$"
