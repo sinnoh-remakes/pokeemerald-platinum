@@ -4682,6 +4682,16 @@
       "blockdata_filepath": "data/layouts/FloaromaMeadow/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_FOREST",
+      "name": "EternaForest_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/EternaForest/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForest/map.bin"
+    },
+    {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
       "name": "TwinleafTown_PlayersHouse_1F_Layout",
       "width": 11,
