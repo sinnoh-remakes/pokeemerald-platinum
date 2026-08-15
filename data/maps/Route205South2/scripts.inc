@@ -39,7 +39,7 @@ Route205South2_EventScript_Girl_Notice_Top::
 	waitmovement 0
 	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
 	playse SE_PIN
-	delay 48
+	delay 96
 	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
@@ -55,7 +55,7 @@ Route205South2_EventScript_Girl_Notice_Top_Middle::
 	waitmovement 0
 	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
 	playse SE_PIN
-	delay 48
+	delay 96
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox Route205South2_Text_Girl, MSGBOX_AUTOCLOSE
@@ -69,7 +69,7 @@ Route205South2_EventScript_Girl_Notice_Bottom_Middle::
 	waitmovement 0
 	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
 	playse SE_PIN
-	delay 48
+	delay 96
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox Route205South2_Text_Girl, MSGBOX_AUTOCLOSE
@@ -83,7 +83,7 @@ Route205South2_EventScript_Girl_Notice_Bottom::
 	waitmovement 0
 	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_ExclamationMark
 	playse SE_PIN
-	delay 48
+	delay 96
 	applymovement LOCALID_ROUTE205_GIRL, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceUp
