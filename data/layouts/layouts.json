@@ -4686,7 +4686,7 @@
       "name": "EternaForest_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_IndoorForest",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/EternaForest/border.bin",
       "blockdata_filepath": "data/layouts/EternaForest/map.bin"
