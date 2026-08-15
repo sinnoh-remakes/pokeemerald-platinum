@@ -17691,3 +17691,27 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Pachirisu (F)
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
+Name: Grunt
+Class: Pt_Galactic
+Gender: Male
+Pic: Galactic Grunt M DP
+
+Zubat (M)
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_2 ===
+Name: Grunt
+Class: Pt_Galactic
+Gender: Male
+Pic: Galactic Grunt M DP
+
+Glameow (F)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Stunky (M)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

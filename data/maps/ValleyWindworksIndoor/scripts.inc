@@ -1,2 +1,12 @@
 ValleyWindworksIndoor_MapScripts::
 	.byte 0
+
+ValleyWindworksIndoor_EventScript_Grunt1::
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_1, ValleyWindworksIndoor_Text_BrandonIntro, ValleyWindworksIndoor_Text_BrandonDefeated
+	msgbox ValleyWindworksIndoor_Text_BrandonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ValleyWindworksIndoor_EventScript_Grunt2::
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_2, ValleyWindworksIndoor_Text_BrandonIntro, ValleyWindworksIndoor_Text_BrandonDefeated
+	msgbox ValleyWindworksIndoor_Text_BrandonPostBattle, MSGBOX_AUTOCLOSE
+	end
