@@ -682,11 +682,11 @@
 #define FLAG_HIDE_OREBURGH_CITY_RIVAL                    0x277
 #define FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT           0x278
 #define FLAG_HIDE_JUBILIFE_LOOKER_3                      0x279
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
+#define FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT         0x27A
+#define FLAG_HIDE_VALLEYWINDWORKS_DOOR_LOCK              0x27B
+#define FLAG_HIDE_FLOAROMA_MEADOW_GALACTIC_EVENT         0x27C
+#define FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT        0x27D
+#define FLAG_DEFEATED_MARS  0x27E
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
 #define FLAG_UNUSED_0x280  0x280 // Unused Flag
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag
