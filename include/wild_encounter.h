@@ -68,7 +68,6 @@ u16 GetCurrentMapWildMonHeaderId(void);
 u32 ChooseWildMonIndex_Land(void);
 u32 ChooseWildMonIndex_Water(void);
 u32 ChooseWildMonIndex_Rocks(void);
-u32 ChooseWildMonIndex_HoneyTree(void);
 u32 ChooseHiddenMonIndex(void);
 void HoneyTreeWildEncounter(void);
 bool32 MapHasNoEncounterData(void);

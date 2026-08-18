@@ -275,33 +275,6 @@ u32 ChooseWildMonIndex_Rocks(void)
     return wildMonIndex;
 }
 
-// HONEY_TREE_WILD_COUNT
-u32 ChooseWildMonIndex_HoneyTree(void)
-{
-    u32 wildMonIndex = 0;
-    bool8 swap = FALSE;
-    u8 rand = Random() % ENCOUNTER_CHANCE_HONEY_TREE_MONS_TOTAL;
-
-    if (rand < ENCOUNTER_CHANCE_HONEY_TREE_MONS_SLOT_0)
-        wildMonIndex = 0;
-    else if (rand >= ENCOUNTER_CHANCE_HONEY_TREE_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_HONEY_TREE_MONS_SLOT_1)
-        wildMonIndex = 1;
-    else if (rand >= ENCOUNTER_CHANCE_HONEY_TREE_MONS_SLOT_1 && rand < ENCOUNTER_CHANCE_HONEY_TREE_MONS_SLOT_2)
-        wildMonIndex = 2;
-    else if (rand >= ENCOUNTER_CHANCE_HONEY_TREE_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_HONEY_TREE_MONS_SLOT_3)
-        wildMonIndex = 3;
-    else
-        wildMonIndex = 4;
-
-    if (LURE_STEP_COUNT != 0 && (Random() % 10 < 2))
-        swap = TRUE;
-
-    if (swap)
-        wildMonIndex = 4 - wildMonIndex;
-
-    return wildMonIndex;
-}
-
 // FISH_WILD_COUNT
 static u32 ChooseWildMonIndex_Fishing(u8 rod)
 {
@@ -591,7 +564,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum 
         wildMonIndex = ChooseWildMonIndex_Rocks();
         break;
     case WILD_AREA_HONEY_TREE:
-        wildMonIndex = ChooseWildMonIndex_HoneyTree();
+        wildMonIndex = ChooseWildMonIndex_Land();
         break;
     default:
     case WILD_AREA_FISHING:
