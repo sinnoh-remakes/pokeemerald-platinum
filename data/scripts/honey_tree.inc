@@ -32,11 +32,10 @@ Common_Text_SweetScentInTheAir:
 	.string "There is a sweet scent in the air...$"
 
 Common_Text_SlatherBarkWithHoney:
-	.string "Slather the bark with honey?$"
+	.string "Slather the bark with Honey?$"
 
 Common_Text_SlatheredBarkWithHoney:
-	.string "{PLAYER} slathered honey on the\n"
-	.string "tree's bark.$"
+	.string "The bark was slathered with Honey.$"
 
 Common_Text_HoneyTreeNothingHappened:
-	.string "Nothing seems to have happened…$"
+	.string "But nothing appeared...$"
