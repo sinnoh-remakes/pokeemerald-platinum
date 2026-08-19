@@ -13855,7 +13855,7 @@
             ]
           },
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -13989,7 +13989,7 @@
             ]
           },
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -14123,7 +14123,7 @@
             ]
           },
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -14192,7 +14192,7 @@
           "map": "MAP_ROUTE205_SOUTH",
           "base_label": "gRoute205South2_Morning",
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -14261,7 +14261,7 @@
           "map": "MAP_ROUTE205_SOUTH",
           "base_label": "gRoute205South2_Day",
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -14330,7 +14330,7 @@
           "map": "MAP_ROUTE205_SOUTH",
           "base_label": "gRoute205South2_Night",
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -14399,7 +14399,7 @@
           "map": "MAP_FLOAROMA_MEADOW",
           "base_label": "gFloaromaMeadow_Morning",
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -14468,7 +14468,7 @@
           "map": "MAP_FLOAROMA_MEADOW",
           "base_label": "gFloaromaMeadow_Day",
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
@@ -14537,7 +14537,7 @@
           "map": "MAP_FLOAROMA_MEADOW",
           "base_label": "gFloaromaMeadow_Night",
           "honey_tree_mons": {
-            "encounter_rate": 60,
+            "encounter_rate": 162,
             "mons": [
               {
                 "min_level": 5,
