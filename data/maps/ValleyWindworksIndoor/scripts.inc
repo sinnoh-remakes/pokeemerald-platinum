@@ -13,6 +13,7 @@ ValleyWindworksIndoor_EventScript_Grunt2::
 
 ValleyWindworksIndoor_EventScript_Grunt3::
 	msgbox ValleyWindworksIndoor_Text_SmooshYou, MSGBOX_NPC
+	end
 
 ValleyWindworksIndoor_Text_SmooshYou:
 	.string "My Pokémon can’t battle anymore.\p"
