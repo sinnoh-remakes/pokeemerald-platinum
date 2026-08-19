@@ -11,10 +11,13 @@ Common_EventScript_HoneyTree::
 Common_EventScript_HoneyTree_HasHoney::
 	msgbox Common_Text_SlatherBarkWithHoney, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Common_EventScript_HoneyTree_Decline
+	closemessage
 	removeitem ITEM_HONEY
+	delay 96
 	msgbox Common_Text_SlatheredBarkWithHoney, MSGBOX_DEFAULT
 	special HoneyTreeWildEncounter
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_HoneyTree_Nothing
+	closemessage
 	waitstate
 	release
 	end
