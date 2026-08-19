@@ -4805,7 +4805,7 @@
       "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",
       "name": "ValleyWindworksIndoor_Layout",
       "width": 22,
-      "height": 16,
+      "height": 17,
       "primary_tileset": "gTileset_IndoorWindworks",
       "secondary_tileset": "gTileset_ValleyWindworksIndoor",
       "border_filepath": "data/layouts/ValleyWindworksIndoor/border.bin",

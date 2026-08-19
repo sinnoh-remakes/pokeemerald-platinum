@@ -911,13 +911,15 @@
 #define TRAINER_WINDWORKS_VALLEY_GRUNT      905
 #define TRAINER_FLOAROMA_MEADOW_GRUNT       906
 #define TRAINER_FLOAROMA_MEADOW_GRUNT_2     907
+#define TRAINER_VALLEY_WINDWORKS_GRUNT_1    908
+#define TRAINER_VALLEY_WINDWORKS_GRUNT_2    909
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      908
-#define MAX_TRAINERS_COUNT                  908
+#define TRAINERS_COUNT                      910
+#define MAX_TRAINERS_COUNT                  910
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

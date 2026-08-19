@@ -5200,3 +5200,29 @@ Route204North_Text_LizNotEnoughMons:
 Route204North_Text_LizRematch:
 	.string "Liz: We're the best in our class.\n"
 	.string "We can't be losers all the time!$"
+
+ValleyWindworksIndoor_Text_Grunt1Intro:
+	.string "Oi! This is no fun and games!\n"
+	.string "This is proper work, I tell you!$"
+
+ValleyWindworksIndoor_Text_Grunt1Defeated:
+	.string "What...?!\n"
+	.string "Some brat messed up my job...$"
+
+ValleyWindworksIndoor_Text_Grunt1PostBattle:
+	.string "Team Galactic needs electricity for\n"
+	.string "doing something big!$"
+
+ValleyWindworksIndoor_Text_Grunt2Intro:
+	.string "Collecting electricity from the Valley\n"
+	.string "Windworks... That's our mission.$"
+
+ValleyWindworksIndoor_Text_Grunt2Defeated:
+	.string "I really don't like kids who also\n"
+	.string "happen to be tough Trainers...$"
+
+ValleyWindworksIndoor_Text_Grunt2PostBattle:
+	.string "You don't have an inkling of what\n"
+	.string "Team Galactic is trying to achieve!\p"
+	.string "Of course, they don't tell a grunt\n"
+	.string "like me anything, either... But still!$"
