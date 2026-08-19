@@ -17692,26 +17692,50 @@ Pachirisu (F)
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
+=== TRAINER_WINDWORKS_VALLEY_GRUNT ===
 Name: Grunt
 Class: Pt_Galactic
 Gender: Male
 Pic: Galactic Grunt M DP
 
-Zubat (M)
+Glameow
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fake Out
+- Scratch
+- Growl
+- Hypnosis
+
+=== TRAINER_FLOAROMA_MEADOW_GRUNT ===
+Name: Grunt
+Class: Pt_Galactic
+Gender: Male
+Pic: Galactic Grunt M DP
+
+Stunky
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fury Swipes
+- Screech
+- Poison Gas
+- Scratch
 
-=== TRAINER_VALLEY_WINDWORKS_GRUNT_2 ===
+=== TRAINER_FLOAROMA_MEADOW_GRUNT_2 ===
 Name: Grunt
 Class: Pt_Galactic
 Gender: Male
 Pic: Galactic Grunt M DP
 
-Glameow (F)
+Zubat
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Astonish
+- Supersonic
+- Leech Life
 
-Stunky (M)
+Zubat
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Astonish
+- Supersonic
+- Leech Life

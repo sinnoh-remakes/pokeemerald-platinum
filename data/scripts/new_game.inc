@@ -282,5 +282,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_JUBILIFE_POKETCH
 	setflag FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT
 	setflag FLAG_HIDE_JUBILIFE_LOOKER_3
+	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT
 	call EventScript_ResetAllBerries
 	end
