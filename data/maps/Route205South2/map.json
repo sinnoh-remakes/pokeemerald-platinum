@@ -68,7 +68,36 @@
       "flag": "FLAG_DEFEATED_MARS"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_FLOAROMA_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_FLOAROMA_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_FLOAROMA_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_FLOAROMA_TOWN",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",

@@ -25,7 +25,29 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 29,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE205SOUTH1_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE205_SOUTH1",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 22,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE205_SOUTH1",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
