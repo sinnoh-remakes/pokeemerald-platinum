@@ -4552,6 +4552,16 @@
       "blockdata_filepath": "data/layouts/Route204South/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE205_NORTH",
+      "name": "Route205North_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route205North/border.bin",
+      "blockdata_filepath": "data/layouts/Route205North/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE205_SOUTH1",
       "name": "Route205South1_Layout",
       "width": 43,

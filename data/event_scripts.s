@@ -594,6 +594,7 @@ gStdScripts_End::
 	.include "data/maps/Route203/scripts.inc"
 	.include "data/maps/Route204North/scripts.inc"
 	.include "data/maps/Route204South/scripts.inc"
+	.include "data/maps/Route205North/scripts.inc"
 	.include "data/maps/Route205South1/scripts.inc"
 	.include "data/maps/Route205South2/scripts.inc"
 	.include "data/maps/Route207/scripts.inc"

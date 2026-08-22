@@ -1402,3 +1402,14 @@ const struct Tileset gTileset_IndoorForest =
     .metatileAttributes = gMetatileAttributes_IndoorForest,
     .callback = InitTilesetAnim_EternaForest,
 };
+
+const struct Tileset gTileset_OutdoorEterna =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorEterna,
+    .palettes = gTilesetPalettes_OutdoorEterna,
+    .metatiles = gMetatiles_OutdoorEterna,
+    .metatileAttributes = gMetatileAttributes_OutdoorEterna,
+    .callback = NULL,
+};
