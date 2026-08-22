@@ -607,6 +607,7 @@ gStdScripts_End::
 	.include "data/maps/Gate_Jubilife/scripts.inc"
 	.include "data/maps/ValleyWindworks/scripts.inc"
 	.include "data/maps/FloaromaMeadow/scripts.inc"
+	.include "data/maps/EternaForest/scripts.inc"
 	.include "data/maps/TwinleafTown_PlayersHouse_1F/scripts.inc"
 	.include "data/maps/TwinleafTown_PlayersHouse_2F/scripts.inc"
 	.include "data/maps/TwinleafTown_RivalsHouse_1F/scripts.inc"

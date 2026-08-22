@@ -41,5 +41,6 @@ void InitTilesetAnim_Floaroma(void);
 void InitTilesetAnim_Route205South(void);
 void InitTilesetAnim_FloaromaMeadow(void);
 void InitTilesetAnim_ValleyWindworksIndoor(void);
+void InitTilesetAnim_EternaForest(void);
 
 #endif // GUARD_TILESET_ANIMS_H

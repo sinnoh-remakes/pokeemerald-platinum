@@ -1391,3 +1391,14 @@ const struct Tileset gTileset_ValleyWindworksIndoor =
     .metatileAttributes = gMetatileAttributes_ValleyWindworksIndoor,
     .callback = InitTilesetAnim_ValleyWindworksIndoor,
 };
+
+const struct Tileset gTileset_IndoorForest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorForest,
+    .palettes = gTilesetPalettes_IndoorForest,
+    .metatiles = gMetatiles_IndoorForest,
+    .metatileAttributes = gMetatileAttributes_IndoorForest,
+    .callback = InitTilesetAnim_EternaForest,
+};

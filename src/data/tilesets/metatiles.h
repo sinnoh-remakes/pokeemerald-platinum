@@ -360,3 +360,6 @@ const u16 gMetatileAttributes_IndoorWindworks[] = INCBIN_U16("data/tilesets/prim
 
 const u16 gMetatiles_ValleyWindworksIndoor[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/metatiles.bin");
 const u16 gMetatileAttributes_ValleyWindworksIndoor[] = INCBIN_U16("data/tilesets/secondary/valley_windworks_indoor/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorForest[] = INCBIN_U16("data/tilesets/primary/indoor_forest/metatiles.bin");
+const u16 gMetatileAttributes_IndoorForest[] = INCBIN_U16("data/tilesets/primary/indoor_forest/metatile_attributes.bin");
