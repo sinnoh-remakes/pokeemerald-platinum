@@ -1400,5 +1400,5 @@ const struct Tileset gTileset_IndoorForest =
     .palettes = gTilesetPalettes_IndoorForest,
     .metatiles = gMetatiles_IndoorForest,
     .metatileAttributes = gMetatileAttributes_IndoorForest,
-    .callback = NULL,
+    .callback = InitTilesetAnim_EternaForest,
 };
