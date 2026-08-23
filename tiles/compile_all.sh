@@ -115,3 +115,6 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/valley_windworks_
 
 echo "Compiling [PRIMARY] indoor_forest"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_forest ./tiles/indoor_forest ./include/constants/metatile_behaviors.h
+
+echo "Compiling [PRIMARY] outdoor_eterna"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_eterna ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
