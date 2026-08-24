@@ -17763,3 +17763,23 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Stunky (M)
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_VALLEYWINDWORKS_INDOOR_MARS ===
+Name: Mars
+Class: Pt_Commander
+Gender: Male
+Pic: Mars DP
+
+Zubat (F)
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bite
+- Leech Life
+- Toxic
+
+Purugly (F) @ Oran Berry
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Faint Attack
+- Scratch
+- Fake Out
