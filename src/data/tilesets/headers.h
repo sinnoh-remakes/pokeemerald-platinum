@@ -1413,3 +1413,14 @@ const struct Tileset gTileset_OutdoorEterna =
     .metatileAttributes = gMetatileAttributes_OutdoorEterna,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route205North =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route205North,
+    .palettes = gTilesetPalettes_Route205North,
+    .metatiles = gMetatiles_Route205North,
+    .metatileAttributes = gMetatileAttributes_Route205North,
+    .callback = NULL,
+};
