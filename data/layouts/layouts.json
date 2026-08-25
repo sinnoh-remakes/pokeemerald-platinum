@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_ROUTE205_NORTH",
       "name": "Route205North_Layout",
-      "width": 40,
+      "width": 38,
       "height": 32,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Route205North",
