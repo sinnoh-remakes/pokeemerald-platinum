@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_ROUTE205_NORTH",
       "name": "Route205North_Layout",
-      "width": 38,
+      "width": 32,
       "height": 32,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Route205North",
@@ -4700,6 +4700,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/EternaForest/border.bin",
       "blockdata_filepath": "data/layouts/EternaForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_FOREST_OUTER",
+      "name": "EternaForestOuter_Layout",
+      "width": 18,
+      "height": 36,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Route205North",
+      "border_filepath": "data/layouts/EternaForestOuter/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForestOuter/map.bin"
     },
     {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
