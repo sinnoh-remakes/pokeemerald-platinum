@@ -1402,3 +1402,25 @@ const struct Tileset gTileset_IndoorForest =
     .metatileAttributes = gMetatileAttributes_IndoorForest,
     .callback = InitTilesetAnim_EternaForest,
 };
+
+const struct Tileset gTileset_OutdoorEterna =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorEterna,
+    .palettes = gTilesetPalettes_OutdoorEterna,
+    .metatiles = gMetatiles_OutdoorEterna,
+    .metatileAttributes = gMetatileAttributes_OutdoorEterna,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Route205North =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route205North,
+    .palettes = gTilesetPalettes_Route205North,
+    .metatiles = gMetatiles_Route205North,
+    .metatileAttributes = gMetatileAttributes_Route205North,
+    .callback = NULL,
+};
