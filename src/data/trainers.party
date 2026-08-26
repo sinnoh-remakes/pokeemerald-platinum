@@ -17692,7 +17692,7 @@ Pachirisu (F)
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WINDWORKS_VALLEY_GRUNT ===
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
 Name: Grunt
 Class: Pt_Galactic
 Gender: Male
@@ -17740,7 +17740,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Supersonic
 - Leech Life
 
-=== TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_2 ===
 Name: Grunt
 Class: Pt_Galactic
 Gender: Male
@@ -17750,7 +17750,7 @@ Zubat (M)
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_VALLEY_WINDWORKS_GRUNT_2 ===
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_3 ===
 Name: Grunt
 Class: Pt_Galactic
 Gender: Male
@@ -17764,7 +17764,7 @@ Stunky (M)
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_VALLEYWINDWORKS_INDOOR_MARS ===
+=== TRAINER_VALLEY_WINDWORKS_MARS ===
 Name: Mars
 Class: Pt_Commander
 Gender: Male
@@ -17773,13 +17773,7 @@ Pic: Mars DP
 Zubat (F)
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Bite
-- Leech Life
-- Toxic
 
 Purugly (F) @ Oran Berry
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Faint Attack
-- Scratch
-- Fake Out

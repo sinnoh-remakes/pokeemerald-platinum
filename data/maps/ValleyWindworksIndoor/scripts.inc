@@ -2,13 +2,13 @@ ValleyWindworksIndoor_MapScripts::
 	.byte 0
 
 ValleyWindworksIndoor_EventScript_Grunt1::
-	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_1, ValleyWindworksIndoor_Text_Grunt1Intro, ValleyWindworksIndoor_Text_Grunt1Defeated
-	msgbox ValleyWindworksIndoor_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_2, ValleyWindworks_Text_Grunt2_Intro, ValleyWindworks_Text_Grunt2_Defeated
+	msgbox ValleyWindworks_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ValleyWindworksIndoor_EventScript_Grunt2::
-	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_2, ValleyWindworksIndoor_Text_Grunt2Intro, ValleyWindworksIndoor_Text_Grunt2Defeated
-	msgbox ValleyWindworksIndoor_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_3, ValleyWindworks_Text_Grunt3_Intro, ValleyWindworks_Text_Grunt3_Defeated
+	msgbox ValleyWindworks_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ValleyWindworksIndoor_EventScript_Grunt3::
@@ -38,7 +38,7 @@ ValleyWindworksIndoor_EventScript_Mars_Top::
 ValleyWindworksIndoor_EventScript_Mars::
 	msgbox ValleyWindworksIndoor_Text_Mars, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro TRAINER_VALLEYWINDWORKS_INDOOR_MARS, ValleyWindworksIndoor_Text_Mars_Defeat
+	trainerbattle_no_intro TRAINER_VALLEY_WINDWORKS_MARS, ValleyWindworksIndoor_Text_Mars_Defeat
 	setflag FLAG_DEFEATED_MARS
 	setvar VAR_ROUTE205_SOUTH_2_STATE, 2
 	msgbox ValleyWindworksIndoor_Text_Mars_Post_Battle, MSGBOX_DEFAULT

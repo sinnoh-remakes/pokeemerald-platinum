@@ -908,12 +908,12 @@
 #define TRAINER_PT_BRANDON_3                902
 #define TRAINER_PT_BRANDON_4                903
 #define TRAINER_PT_LIV_AND_LIZ              904
-#define TRAINER_WINDWORKS_VALLEY_GRUNT      905
+#define TRAINER_VALLEY_WINDWORKS_GRUNT_1    905
 #define TRAINER_FLOAROMA_MEADOW_GRUNT       906
 #define TRAINER_FLOAROMA_MEADOW_GRUNT_2     907
-#define TRAINER_VALLEY_WINDWORKS_GRUNT_1    908
-#define TRAINER_VALLEY_WINDWORKS_GRUNT_2    909
-#define TRAINER_VALLEYWINDWORKS_INDOOR_MARS 910
+#define TRAINER_VALLEY_WINDWORKS_GRUNT_2    908
+#define TRAINER_VALLEY_WINDWORKS_GRUNT_3    909
+#define TRAINER_VALLEY_WINDWORKS_MARS       910
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

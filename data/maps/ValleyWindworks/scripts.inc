@@ -12,9 +12,8 @@ ValleyWindworks_Text_WindDrivenEnergy:
 ValleyWindworks_EventScript_Galactic_Grunt::
 	lock
 	faceplayer
-	msgbox ValleyWindworks_Text_Galactic_Grunt, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_WINDWORKS_VALLEY_GRUNT, ValleyWindworks_Text_Galactic_Grunt_Defeat
-	msgbox ValleyWindworks_Text_Galactic_Grunt_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_1, ValleyWindworks_Text_Galactic_Grunt1_Intro, ValleyWindworks_Text_Galactic_Grunt1_Defeated
+	msgbox ValleyWindworks_Text_Galactic_Grunt1_PostBattle, MSGBOX_AUTOCLOSE
 	closemessage
 	applymovement LOCALID_GALACTIC_GRUNT, Common_Movement_WalkInPlaceUp
 	waitmovement 0
@@ -49,32 +48,6 @@ ValleyWindworks_EventScript_Unlock::
 	removeitem ITEM_WORKS_KEY
 	release
 	end
-
-ValleyWindworks_Text_Galactic_Grunt:
-	.string "Don't you dare go into the Valley\n"
-	.string "Windworks.\p"
-	.string "I got ordered to keep everyone out\n"
-	.string "if they're not part of Team Galactic\p"
-	.string "You're giving me a look that makes\n"
-	.string "me think you're gonna try to get in.\p"
-	.string "OK, then.\n"
-	.string "You'll have to battle me for it!$"
-
-ValleyWindworks_Text_Galactic_Grunt_Defeat:
-	.string "Yeah, like I'm really supposed to\n"
-	.string "win with a Pokémon like this...$"
-
-ValleyWindworks_Text_Galactic_Grunt_PostBattle:
-	.string "Isn't that just great.\n"
-	.string "Getting defeated by some kid.\p"
-	.string "But you can't do a thing if I lock\n"
-	.string "myself in with my Works Key!\p"
-	.string "That's right, the other Works Key's\n"
-	.string "not here!\p"
-	.string "My cohorts in the flower patch have\n"
-	.string "the only other one!\p"
-	.string "Hahaha! In that sense, I'm no longer\n"
-	.string "the loser!$"
 
 ValleyWindworks_Text_Locked:
 	.string "It's locked from inside!$"
