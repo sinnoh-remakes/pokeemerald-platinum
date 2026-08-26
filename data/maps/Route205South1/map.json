@@ -22,6 +22,11 @@
       "map": "MAP_VALLEY_WINDWORKS",
       "offset": 39,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ETERNA_FOREST_OUTER2",
+      "offset": 28,
+      "direction": "up"
     }
   ],
   "object_events": [],

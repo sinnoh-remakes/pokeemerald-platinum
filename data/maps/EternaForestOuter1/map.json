@@ -1,7 +1,7 @@
 {
   "id": "MAP_ETERNA_FOREST_OUTER",
-  "name": "EternaForestOuter",
-  "layout": "LAYOUT_ETERNA_FOREST_OUTER",
+  "name": "EternaForestOuter1",
+  "layout": "LAYOUT_ETERNA_FOREST_OUTER1",
   "music": "MUS_DP_ROUTE205_DAY",
   "region_map_section": "MAPSEC_ETERNA_FOREST",
   "requires_flash": false,
@@ -20,7 +20,22 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_FOREST_OUTER2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_FOREST_OUTER2",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
