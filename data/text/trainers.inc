@@ -5201,27 +5201,53 @@ Route204North_Text_LizRematch:
 	.string "Liz: We're the best in our class.\n"
 	.string "We can't be losers all the time!$"
 
-ValleyWindworksIndoor_Text_Grunt1Intro:
+ValleyWindworks_Text_Galactic_Grunt1_Intro:
+	.string "Don't you dare go into the Valley\n"
+	.string "Windworks.\p"
+	.string "I got ordered to keep everyone out\n"
+	.string "if they're not part of Team Galactic\p"
+	.string "You're giving me a look that makes\n"
+	.string "me think you're gonna try to get in.\p"
+	.string "OK, then.\n"
+	.string "You'll have to battle me for it!$"
+
+ValleyWindworks_Text_Galactic_Grunt1_Defeated:
+	.string "Yeah, like I'm really supposed to\n"
+	.string "win with a Pokémon like this...$"
+
+ValleyWindworks_Text_Galactic_Grunt1_PostBattle:
+	.string "Isn't that just great.\n"
+	.string "Getting defeated by some kid.\p"
+	.string "But you can't do a thing if I lock\n"
+	.string "myself in with my Works Key!\p"
+	.string "That's right, the other Works Key's\n"
+	.string "not here!\p"
+	.string "My cohorts in the flower patch have\n"
+	.string "the only other one!\p"
+	.string "Hahaha! In that sense, I'm no longer\n"
+	.string "the loser!$"
+
+ValleyWindworks_Text_Grunt2_Intro:
 	.string "Oi! This is no fun and games!\n"
 	.string "This is proper work, I tell you!$"
 
-ValleyWindworksIndoor_Text_Grunt1Defeated:
+ValleyWindworks_Text_Grunt2_Defeated:
 	.string "What...?!\n"
 	.string "Some brat messed up my job...$"
 
-ValleyWindworksIndoor_Text_Grunt1PostBattle:
+ValleyWindworks_Text_Grunt2_PostBattle:
 	.string "Team Galactic needs electricity for\n"
 	.string "doing something big!$"
 
-ValleyWindworksIndoor_Text_Grunt2Intro:
+ValleyWindworks_Text_Grunt3_Intro:
 	.string "Collecting electricity from the Valley\n"
 	.string "Windworks... That's our mission.$"
 
-ValleyWindworksIndoor_Text_Grunt2Defeated:
+ValleyWindworks_Text_Grunt3_Defeated:
 	.string "I really don't like kids who also\n"
 	.string "happen to be tough Trainers...$"
 
-ValleyWindworksIndoor_Text_Grunt2PostBattle:
+ValleyWindworks_Text_Grunt3_PostBattle:
 	.string "You don't have an inkling of what\n"
 	.string "Team Galactic is trying to achieve!\p"
 	.string "Of course, they don't tell a grunt\n"

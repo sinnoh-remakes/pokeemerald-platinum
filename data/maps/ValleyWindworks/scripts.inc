@@ -65,9 +65,8 @@ ValleyWindworks_Text_WindDrivenEnergy:
 ValleyWindworks_EventScript_Galactic_Grunt::
 	lock
 	faceplayer
-	msgbox ValleyWindworks_Text_Galactic_Grunt, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_WINDWORKS_VALLEY_GRUNT, ValleyWindworks_Text_Galactic_Grunt_Defeat
-	msgbox ValleyWindworks_Text_Galactic_Grunt_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_1, ValleyWindworks_Text_Galactic_Grunt1_Intro, ValleyWindworks_Text_Galactic_Grunt1_Defeated
+	msgbox ValleyWindworks_Text_Galactic_Grunt1_PostBattle, MSGBOX_AUTOCLOSE
 	closemessage
 	applymovement LOCALID_GALACTIC_GRUNT, Common_Movement_WalkInPlaceUp
 	waitmovement 0
