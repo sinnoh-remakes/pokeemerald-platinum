@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE205NORTH",
-      "offset": 0,
+      "offset": -16,
       "direction": "right"
     }
   ],
@@ -23,14 +23,14 @@
   "warp_events": [
     {
       "x": 8,
-      "y": 58,
+      "y": 42,
       "elevation": 0,
       "dest_map": "MAP_ETERNA_FOREST_OUTER2",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
-      "y": 58,
+      "y": 42,
       "elevation": 0,
       "dest_map": "MAP_ETERNA_FOREST_OUTER2",
       "dest_warp_id": "1"

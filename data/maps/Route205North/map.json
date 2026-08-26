@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ETERNA_FOREST_OUTER",
-      "offset": 0,
+      "offset": 16,
       "direction": "left"
     }
   ],
