@@ -1,2 +1,2 @@
-GTS_MapScripts::
+JubilifeCity_GTS_MapScripts::
 	.byte 0
