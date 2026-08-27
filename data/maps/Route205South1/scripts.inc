@@ -35,3 +35,31 @@ Route205South2_EventScript_Karina::
 	trainerbattle_single TRAINER_PT_KARINA_1, Route205South_Text_KarinaIntro, Route205South_Text_KarinaDefeated
 	msgbox Route205South_Text_KarinaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route205South1_EventScript_RouteSign::
+	msgbox Route205South1_Text_RouteSign, MSGBOX_SIGN
+	end
+
+Route205South1_EventScript_AirVent::
+	msgbox Route205South1_Text_AirVent, MSGBOX_SIGN
+	end
+
+Route205South1_EventScript_TrainerTips::
+	msgbox Route205South1_Text_TrainerTips, MSGBOX_SIGN
+	end
+
+Route205South1_Text_RouteSign:
+	.string "{UP_ARROW} Rt.205\n"
+	.string "   Eterna Forest$"
+
+Route205South1_Text_AirVent:
+	.string "It's an air vent that exchanges\n"
+	.string "the underground tunnels' air.$"
+
+Route205South1_Text_TrainerTips:
+	.string "Trainer Tips!\p"
+	.string "The items placed in your Bag are\n"
+	.string "automatically sorted to the\l"
+	.string "appropriate pockets.\p"
+	.string "It’s very convenient!\n"
+	.string "It’s a Trainer’s best friend!$"

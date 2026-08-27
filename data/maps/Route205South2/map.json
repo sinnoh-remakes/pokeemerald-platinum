@@ -200,6 +200,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_HoneyTree"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route205South2_EventScript_RouteSign"
     }
   ]
 }

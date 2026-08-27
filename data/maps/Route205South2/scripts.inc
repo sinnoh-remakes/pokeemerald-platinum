@@ -129,6 +129,10 @@ Route205South2_EventScript_Galactic_Dialog_Right::
 	release
 	end
 
+Route205South2_EventScript_RouteSign::
+	msgbox Route205South2_Text_RouteSign, MSGBOX_SIGN
+	end
+
 Route205South2_Text_Galactic_Roadblock_Left:
 	.string "We, Team Galactic, are conducting\n"
 	.string "research in the Eterna Forest!\p"
@@ -156,3 +160,7 @@ Route205South2_Text_Girl:
 Route205South2_Text_Girl_Second_Dialog:
 	.string "Please, Trainer! I want to see my papa.\n"
 	.string "He’s at the Valley Windworks...$"
+
+Route205South2_Text_RouteSign:
+	.string "    Rt.205\n"
+	.string "{LEFT_ARROW} Floaroma Town$"
