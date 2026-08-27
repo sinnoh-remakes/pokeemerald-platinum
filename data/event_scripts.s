@@ -610,6 +610,7 @@ gStdScripts_End::
 	.include "data/maps/FloaromaMeadow/scripts.inc"
 	.include "data/maps/EternaForest/scripts.inc"
 	.include "data/maps/EternaForestOuter1/scripts.inc"
+	.include "data/maps/EternaForestOuter2/scripts.inc"
 	.include "data/maps/TwinleafTown_PlayersHouse_1F/scripts.inc"
 	.include "data/maps/TwinleafTown_PlayersHouse_2F/scripts.inc"
 	.include "data/maps/TwinleafTown_RivalsHouse_1F/scripts.inc"
@@ -1237,5 +1238,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/honey_tree.inc"
-
-	.include "data/maps/EternaForestOuter2/scripts.inc"

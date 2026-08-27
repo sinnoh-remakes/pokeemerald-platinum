@@ -4712,6 +4712,16 @@
       "blockdata_filepath": "data/layouts/EternaForestOuter1/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_FOREST_OUTER2",
+      "name": "EternaForestOuter2_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_OutdoorRoute205",
+      "secondary_tileset": "gTileset_Route205South1",
+      "border_filepath": "data/layouts/EternaForestOuter2/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForestOuter2/map.bin"
+    },
+    {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
       "name": "TwinleafTown_PlayersHouse_1F_Layout",
       "width": 11,
@@ -4850,16 +4860,6 @@
       "secondary_tileset": "gTileset_SunyshoreHouse",
       "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
-    },
-    {
-      "id": "LAYOUT_ETERNA_FOREST_OUTER2",
-      "name": "EternaForestOuter2_Layout",
-      "width": 10,
-      "height": 12,
-      "primary_tileset": "gTileset_OutdoorRoute205",
-      "secondary_tileset": "gTileset_Route205South1",
-      "border_filepath": "data/layouts/EternaForestOuter2/border.bin",
-      "blockdata_filepath": "data/layouts/EternaForestOuter2/map.bin"
     }
   ]
 }
