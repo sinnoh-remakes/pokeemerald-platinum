@@ -3666,6 +3666,25 @@ const u16 gTilesetPalettes_JubilifeSchool[][16] =
 
 const u32 gTilesetTiles_JubilifeSchool[] = INCGFX_U32("data/tilesets/secondary/jubilife_school/tiles.png", ".4bpp.lz");
 
+const u16 gTilesetPalettes_JubilifeGTS[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/00.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/01.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/02.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/03.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/04.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/05.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/06.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/07.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/08.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/09.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/10.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/11.pal", ".gbapal"),
+    INCBIN_U16("data/tilesets/secondary/jubilife_gts/palettes/12.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_JubilifeGTS[] = INCGFX_U32("data/tilesets/secondary/jubilife_gts/tiles.png", ".4bpp.lz");
+
 const u16 gTilesetPalettes_CommonCenter2F[][16] =
 {
     INCGFX_U16("data/tilesets/secondary/common_center_2f/palettes/00.pal", ".gbapal"),

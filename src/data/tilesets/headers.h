@@ -1905,6 +1905,17 @@ const struct Tileset gTileset_JubilifeSchool =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_JubilifeGTS =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_JubilifeGTS,
+    .palettes = gTilesetPalettes_JubilifeGTS,
+    .metatiles = gMetatiles_JubilifeGTS,
+    .metatileAttributes = gMetatileAttributes_JubilifeGTS,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_CommonCenter2F =
 {
     .isCompressed = TRUE,
