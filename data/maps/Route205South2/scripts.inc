@@ -5,11 +5,6 @@ Route205South2_MapScripts::
 @ 1: Talked to the girl
 @ 2: Defeated Mars
 
-Route205South2_EventScript_Jacob::
-	trainerbattle_single TRAINER_PT_JACOB, Route205South_Text_JacobIntro, Route205South_Text_JacobDefeated
-	msgbox Route205South_Text_JacobPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route205South2_EventScript_Galactic_Roadblock::
 	lock
 	applymovement LOCALID_ROUTE205_GRUNT_LEFT, Common_Movement_WalkInPlaceRight
@@ -127,6 +122,11 @@ Route205South2_EventScript_Galactic_Dialog_Right::
 	lock
 	msgbox Route205South2_Text_Galactic_Roadblock_Right, MSGBOX_DEFAULT
 	release
+	end
+
+Route205South2_EventScript_Jacob::
+	trainerbattle_single TRAINER_PT_JACOB, Route205South_Text_JacobIntro, Route205South_Text_JacobDefeated
+	msgbox Route205South_Text_JacobPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route205South2_EventScript_RouteSign::
