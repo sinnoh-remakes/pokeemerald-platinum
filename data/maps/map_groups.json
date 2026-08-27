@@ -113,7 +113,8 @@
     "JubilifeCity_TrainerSchool",
     "JubilifeCity_PokemonCenter_1F",
     "JubilifeCity_PokemonCenter_2F",
-    "JubilifeCity_Mart"
+    "JubilifeCity_Mart",
+    "JubilifeCity_GTS"
   ],
   "gMapGroup_IndoorOreburgh": [
     "OreburghCity_TowerA_1F",

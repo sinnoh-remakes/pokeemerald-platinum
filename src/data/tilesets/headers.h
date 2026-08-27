@@ -1424,3 +1424,14 @@ const struct Tileset gTileset_Route205North =
     .metatileAttributes = gMetatileAttributes_Route205North,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_JubilifeGTS =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_JubilifeGTS,
+    .palettes = gTilesetPalettes_JubilifeGTS,
+    .metatiles = gMetatiles_JubilifeGTS,
+    .metatileAttributes = gMetatileAttributes_JubilifeGTS,
+    .callback = NULL,
+};

@@ -633,6 +633,7 @@ gStdScripts_End::
 	.include "data/maps/JubilifeCity_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/JubilifeCity_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/JubilifeCity_Mart/scripts.inc"
+	.include "data/maps/JubilifeCity_GTS/scripts.inc"
 	.include "data/maps/OreburghCity_TowerA_1F/scripts.inc"
 	.include "data/maps/OreburghCity_TowerA_2F/scripts.inc"
 	.include "data/maps/OreburghCity_TowerB_1F/scripts.inc"
