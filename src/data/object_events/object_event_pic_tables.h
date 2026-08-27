@@ -965,6 +965,34 @@ static const struct SpriteFrameImage sPicTable_WindTurbineBlades2[] = {
     overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 6),
 };
 
+static const struct SpriteFrameImage sPicTable_GTSGlobe[] = {
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 0),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 1),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 2),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 3),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 4),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 5),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 6),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 7),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 8),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 9),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 10),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 11),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 12),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 13),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 14),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 15),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 16),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 17),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 18),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 19),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 20),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 21),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 22),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 23),
+    overworld_frame(gObjectEventPic_GTSGlobe, 6, 6, 24),
+};
+
 static const struct SpriteFrameImage sPicTable_Scientist2[] = {
     overworld_ascending_frames(gObjectEventPic_Scientist2, 2, 4),
 };

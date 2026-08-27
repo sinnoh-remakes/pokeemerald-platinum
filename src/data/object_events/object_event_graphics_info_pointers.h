@@ -236,6 +236,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableCar;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GTSGlobe;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DevonEmployee;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AquaMemberM;
@@ -493,6 +494,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WIND_TURBINE_BASE] =         &gObjectEventGraphicsInfo_WindTurbineBase,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1] =     &gObjectEventGraphicsInfo_WindTurbineBlades1,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2] =     &gObjectEventGraphicsInfo_WindTurbineBlades2,
+    [OBJ_EVENT_GFX_GTS_GLOBE] =                 &gObjectEventGraphicsInfo_GTSGlobe,
     [OBJ_EVENT_GFX_SCIENTIST_2] =              &gObjectEventGraphicsInfo_Scientist2,
     [OBJ_EVENT_GFX_DEVON_EMPLOYEE] =           &gObjectEventGraphicsInfo_DevonEmployee,
     [OBJ_EVENT_GFX_AQUA_MEMBER_M] =            &gObjectEventGraphicsInfo_AquaMemberM,
