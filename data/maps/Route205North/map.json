@@ -17,6 +17,11 @@
       "map": "MAP_ETERNA_FOREST_OUTER",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ETERNA_CITY",
+      "offset": 4,
+      "direction": "right"
     }
   ],
   "object_events": [],

@@ -4850,6 +4850,16 @@
       "secondary_tileset": "gTileset_SunyshoreHouse",
       "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY",
+      "name": "EternaCity_Layout",
+      "width": 48,
+      "height": 48,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/EternaCity/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity/map.bin"
     }
   ]
 }
