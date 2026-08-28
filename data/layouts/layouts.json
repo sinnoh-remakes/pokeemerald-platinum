@@ -4854,10 +4854,10 @@
     {
       "id": "LAYOUT_ETERNA_CITY",
       "name": "EternaCity_Layout",
-      "width": 48,
-      "height": 48,
+      "width": 60,
+      "height": 54,
       "primary_tileset": "gTileset_OutdoorEterna",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Eterna",
       "border_filepath": "data/layouts/EternaCity/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity/map.bin"
     }

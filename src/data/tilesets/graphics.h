@@ -2660,3 +2660,22 @@ const u16 gTilesetPalettes_Route205North[][16] =
 };
 
 const u32 gTilesetTiles_Route205North[] = INCBIN_U32("data/tilesets/secondary/route_205_north/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Eterna[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/eterna/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Eterna[] = INCBIN_U32("data/tilesets/secondary/eterna/tiles.4bpp.lz");

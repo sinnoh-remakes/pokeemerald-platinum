@@ -369,3 +369,6 @@ const u16 gMetatileAttributes_OutdoorEterna[] = INCBIN_U16("data/tilesets/primar
 
 const u16 gMetatiles_Route205North[] = INCBIN_U16("data/tilesets/secondary/route_205_north/metatiles.bin");
 const u16 gMetatileAttributes_Route205North[] = INCBIN_U16("data/tilesets/secondary/route_205_north/metatile_attributes.bin");
+
+const u16 gMetatiles_Eterna[] = INCBIN_U16("data/tilesets/secondary/eterna/metatiles.bin");
+const u16 gMetatileAttributes_Eterna[] = INCBIN_U16("data/tilesets/secondary/eterna/metatile_attributes.bin");
