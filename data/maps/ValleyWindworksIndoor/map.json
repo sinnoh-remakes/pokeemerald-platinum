@@ -87,8 +87,8 @@
     {
       "local_id": "LOCALID_VALLEYWINDWORKS_SCIENTIST",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_M_PT",
-      "x": 20,
-      "y": 2,
+      "x": 17,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -101,19 +101,41 @@
     {
       "local_id": "LOCALID_VALLEYWINDWORKS_GIRL",
       "graphics_id": "OBJ_EVENT_GFX_TWINS_PT",
-      "x": 9,
-      "y": 7,
+      "x": 20,
+      "y": 4,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ValleyWindworksIndoor_EventScript_Girl",
       "flag": "FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL"
+    },
+    {
+      "local_id": "LOCALID_VALLEYWINDWORKS_GRUNT_INTRO",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M_PT",
+      "x": 11,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValleyWindworksIndoor_EventScript_Grunt3",
+      "flag": "FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_VALLEY_WINDWORKS",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",
@@ -121,7 +143,7 @@
       "y": 5,
       "elevation": 0,
       "var": "VAR_ROUTE205_SOUTH_2_STATE",
-      "var_value": "1",
+      "var_value": "2",
       "script": "ValleyWindworksIndoor_EventScript_Mars_Top"
     },
     {
@@ -130,7 +152,7 @@
       "y": 6,
       "elevation": 0,
       "var": "VAR_ROUTE205_SOUTH_2_STATE",
-      "var_value": "1",
+      "var_value": "2",
       "script": "ValleyWindworksIndoor_EventScript_Mars_Bottom"
     }
   ],

@@ -1,5 +1,41 @@
 ValleyWindworksIndoor_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ValleyWindworksIndoor_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ValleyWindworksIndoor_OnFrame
 	.byte 0
+
+@ State descriptions for VAR_ROUTE205_SOUTH_2_STATE
+@ 1: Talked to the girl
+@ 2: Entered Windworks Valley Indoors
+@ 3: Defeated Mars
+
+ValleyWindworksIndoor_OnTransition::
+	call_if_unset FLAG_DEFEATED_MARS, ValleyWindworksIndoor_EventScript_Set_Event_Position
+	end
+
+ValleyWindworksIndoor_EventScript_Set_Event_Position:
+	setobjectxyperm LOCALID_VALLEYWINDWORKS_SCIENTIST, 20, 2
+	return
+
+ValleyWindworksIndoor_OnFrame::
+	map_script_2 VAR_ROUTE205_SOUTH_2_STATE, 1, ValleyWindworksIndoor_1F_EventScript_Grunt_Intro
+	.2byte 0
+
+ValleyWindworksIndoor_1F_EventScript_Grunt_Intro::
+	lock
+	setvar VAR_ROUTE205_SOUTH_2_STATE, 2
+	clearflag FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT
+	addobject LOCALID_VALLEYWINDWORKS_GRUNT_INTRO
+	delay 8
+	applymovement LOCALID_VALLEYWINDWORKS_GRUNT_INTRO, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 48
+	msgbox ValleyWindworksIndoor_Text_Grunt_Intro, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_VALLEYWINDWORKS_GRUNT_INTRO, ValleyWindworksIndoor_Movement_Grunt_Intro
+	waitmovement 0
+	removeobject LOCALID_VALLEYWINDWORKS_GRUNT_INTRO
+	setflag FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT
+	release
+	end
 
 ValleyWindworksIndoor_EventScript_Grunt1::
 	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_1, ValleyWindworksIndoor_Text_Grunt1Intro, ValleyWindworksIndoor_Text_Grunt1Defeated
@@ -40,7 +76,7 @@ ValleyWindworksIndoor_EventScript_Mars::
 	closemessage
 	trainerbattle_no_intro TRAINER_VALLEYWINDWORKS_INDOOR_MARS, ValleyWindworksIndoor_Text_Mars_Defeat
 	setflag FLAG_DEFEATED_MARS
-	setvar VAR_ROUTE205_SOUTH_2_STATE, 2
+	setvar VAR_ROUTE205_SOUTH_2_STATE, 3
 	msgbox ValleyWindworksIndoor_Text_Mars_Post_Battle, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_VALLEYWINDWORKS_CHARON, Common_Movement_WalkInPlaceDown
@@ -82,31 +118,60 @@ ValleyWindworksIndoor_EventScript_Mars_Outro::
 	closemessage
 	clearflag FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL
 	addobject LOCALID_VALLEYWINDWORKS_GIRL
+	setobjectxy LOCALID_VALLEYWINDWORKS_GIRL, 9, 7
 	applymovement LOCALID_VALLEYWINDWORKS_GIRL, ValleyWindworksIndoor_Movement_Girl_1
 	waitmovement 0
 	compare VAR_0x800A, FALSE
-	call_if_eq ValleyWindworksIndoor_EventScript_Girl_Walk_Up
+	call_if_ne ValleyWindworksIndoor_EventScript_Girl_Walk_Up
+	applymovement LOCALID_VALLEYWINDWORKS_GIRL, Common_Movement_WalkUpFast
+	waitmovement 0
 	applymovement LOCALID_VALLEYWINDWORKS_GIRL, ValleyWindworksIndoor_Movement_Girl_2
 	waitmovement 0
+	call_if_ne ValleyWindworksIndoor_EventScript_Girl_Face_Down
+	call_if_eq ValleyWindworksIndoor_EventScript_Girl_Face_Up
 	delay 8
-	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_WalkInPlaceDown
+	call_if_eq ValleyWindworksIndoor_EventScript_Scientist_WalkInPlace_Down
+	call_if_ne ValleyWindworksIndoor_EventScript_Scientist_WalkInPlace_Up
 	waitmovement 0
 	msgbox ValleyWindworksIndoor_Text_Girl, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_FaceRight
 	delay 32
 	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_FaceLeft
 	delay 32
-	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_FaceDown
+	call_if_eq ValleyWindworksIndoor_EventScript_Scientist_Face_Down
+	call_if_ne ValleyWindworksIndoor_EventScript_Scientist_Face_Up
 	msgbox ValleyWindworksIndoor_Text_Scientist_End, MSGBOX_DEFAULT
 	msgbox ValleyWindworksIndoor_Text_Balloon_Pokemon, MSGBOX_DEFAULT
 	applymovement LOCALID_VALLEYWINDWORKS_GIRL, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	getobjectxy LOCALID_VALLEYWINDWORKS_SCIENTIST, CURRENT_POSITION, VAR_0x8005, VAR_0x8006
-	setobjectxyperm LOCALID_VALLEYWINDWORKS_SCIENTIST, VAR_0x8005, VAR_0x8006
-	getobjectxy LOCALID_VALLEYWINDWORKS_GIRL, CURRENT_POSITION, VAR_0x8005, VAR_0x8006
-	setobjectxyperm LOCALID_VALLEYWINDWORKS_GIRL, VAR_0x8005, VAR_0x8006
 	release
 	end
+
+ValleyWindworksIndoor_EventScript_Scientist_WalkInPlace_Down:
+	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	return
+
+ValleyWindworksIndoor_EventScript_Scientist_WalkInPlace_Up:
+	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	return
+
+ValleyWindworksIndoor_EventScript_Scientist_Face_Down:
+	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_FaceDown
+	return
+
+ValleyWindworksIndoor_EventScript_Scientist_Face_Up:
+	applymovement LOCALID_VALLEYWINDWORKS_SCIENTIST, Common_Movement_FaceUp
+	return
+
+ValleyWindworksIndoor_EventScript_Girl_Face_Down:
+	applymovement LOCALID_VALLEYWINDWORKS_GIRL, Common_Movement_FaceDown
+	return
+
+ValleyWindworksIndoor_EventScript_Girl_Face_Up:
+	applymovement LOCALID_VALLEYWINDWORKS_GIRL, Common_Movement_FaceUp
+	return
 
 ValleyWindworksIndoor_EventScript_Girl_Walk_Up:
 	applymovement LOCALID_VALLEYWINDWORKS_GIRL, Common_Movement_WalkUpFast
@@ -222,6 +287,14 @@ ValleyWindworksIndoor_Text_Balloon_Pokemon_Explanation:
 	.string "to do with this windworks using\l"
 	.string "wind-generated energy?$"
 
+ValleyWindworksIndoor_Text_Grunt_Intro:
+	.string "What?! No way!\n"
+	.string "You have the key?\p"
+	.string "Locking the door was meaningless!\n"
+	.string "I am the loser in this after all!\p"
+	.string "This is no time for self-pity!\n"
+	.string "I’ve got to alert the Commander!$"
+
 ValleyWindworksIndoor_Movement_Scientist:
 	walk_down
 	walk_down
@@ -243,5 +316,15 @@ ValleyWindworksIndoor_Movement_Girl_2:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
-	face_up
+	step_end
+
+ValleyWindworksIndoor_Movement_Grunt_Intro:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
