@@ -363,3 +363,9 @@ const u16 gMetatileAttributes_ValleyWindworksIndoor[] = INCBIN_U16("data/tileset
 
 const u16 gMetatiles_IndoorForest[] = INCBIN_U16("data/tilesets/primary/indoor_forest/metatiles.bin");
 const u16 gMetatileAttributes_IndoorForest[] = INCBIN_U16("data/tilesets/primary/indoor_forest/metatile_attributes.bin");
+
+const u16 gMetatiles_OutdoorEterna[] = INCBIN_U16("data/tilesets/primary/outdoor_eterna/metatiles.bin");
+const u16 gMetatileAttributes_OutdoorEterna[] = INCBIN_U16("data/tilesets/primary/outdoor_eterna/metatile_attributes.bin");
+
+const u16 gMetatiles_Route205North[] = INCBIN_U16("data/tilesets/secondary/route_205_north/metatiles.bin");
+const u16 gMetatileAttributes_Route205North[] = INCBIN_U16("data/tilesets/secondary/route_205_north/metatile_attributes.bin");

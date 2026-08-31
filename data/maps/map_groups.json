@@ -61,6 +61,7 @@
     "Route203",
     "Route204North",
     "Route204South",
+    "Route205North",
     "Route205South1",
     "Route205South2",
     "Route207",
@@ -82,7 +83,9 @@
   "gMapGroup_Miscellaneous": [
     "ValleyWindworks",
     "FloaromaMeadow",
-    "EternaForest"
+    "EternaForest",
+    "EternaForestOuter1",
+    "EternaForestOuter2"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "TwinleafTown_PlayersHouse_1F",
