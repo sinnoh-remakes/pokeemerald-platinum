@@ -114,6 +114,15 @@
       "var": "VAR_ROUTE205_SOUTH_2_STATE",
       "var_value": "0",
       "script": "Route205South2_EventScript_Girl_Notice_Bottom"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE205_SOUTH_2_STATE",
+      "var_value": "2",
+      "script": "Route205South2_EventScript_Galactic_Roadblock"
     }
   ],
   "bg_events": [
