@@ -17788,8 +17788,11 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_VALLEY_WINDWORKS_MARS ===
 Name: Mars
 Class: Pt_Commander
-Gender: Male
 Pic: Mars DP
+Gender: Female
+Music: Commander DP
+Double Battle: No
+AI: Check Bad Move
 
 Zubat (F)
 Level: 14

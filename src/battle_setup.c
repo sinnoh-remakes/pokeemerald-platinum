@@ -1481,6 +1481,12 @@ void PlayTrainerEncounterMusic(void)
         case TRAINER_ENCOUNTER_MUSIC_GALACTIC_GRUNT_F_DP:
             music = MUS_DP_ENCOUNTER_GALACTIC;
             break;
+        case TRAINER_ENCOUNTER_MUSIC_COMMANDER_DP:
+            music = MUS_DP_VS_GALACTIC_COMMANDER;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_BOSS_DP:
+            music = MUS_DP_VS_GALACTIC_BOSS;
+            break;
         case TRAINER_ENCOUNTER_MUSIC_AROMA_LADY_DP:
         case TRAINER_ENCOUNTER_MUSIC_BEAUTY_DP:
         case TRAINER_ENCOUNTER_MUSIC_BREEDER_F_DP:
