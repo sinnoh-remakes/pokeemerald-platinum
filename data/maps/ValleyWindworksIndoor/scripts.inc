@@ -23,8 +23,6 @@ ValleyWindworksIndoor_OnFrame::
 ValleyWindworksIndoor_1F_EventScript_Grunt_Intro::
 	lock
 	setvar VAR_ROUTE205_SOUTH_2_STATE, 2
-	clearflag FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT
-	addobject LOCALID_VALLEYWINDWORKS_GRUNT_INTRO
 	delay 8
 	applymovement LOCALID_VALLEYWINDWORKS_GRUNT_INTRO, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -32,8 +30,8 @@ ValleyWindworksIndoor_1F_EventScript_Grunt_Intro::
 	msgbox ValleyWindworksIndoor_Text_Grunt_Intro, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_VALLEYWINDWORKS_GRUNT_INTRO, ValleyWindworksIndoor_Movement_Grunt_Intro
 	waitmovement 0
+	setflag FLAG_HIDE_WINDWORKSVALLEY_GRUNT
 	removeobject LOCALID_VALLEYWINDWORKS_GRUNT_INTRO
-	setflag FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT
 	release
 	end
 

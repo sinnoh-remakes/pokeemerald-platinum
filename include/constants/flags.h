@@ -688,7 +688,7 @@
 #define FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT        0x27D
 #define FLAG_DEFEATED_MARS                               0x27E
 #define FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL           0x27F
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
+#define FLAG_HIDE_WINDWORKSVALLEY_GRUNT                  0x280
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag
 #define FLAG_UNUSED_0x282  0x282 // Unused Flag
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
