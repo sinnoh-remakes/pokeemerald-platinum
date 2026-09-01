@@ -139,4 +139,3 @@ FloaromaTown_Text_ShopSign:
 FloaromaTown_Text_MeadowSign:
 	.string "Floaroma Meadow Ahead\n"
 	.string "Honey Available$"
-	
