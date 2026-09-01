@@ -16876,7 +16876,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_201_PIPLUP ===
 Name: Barry
-Class: Pt_Rival
+Class: Pt Rival
 Pic: Barry DP
 Gender: Male
 Music: Male
@@ -16889,7 +16889,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_201_TURTWIG ===
 Name: Barry
-Class: Pt_Rival
+Class: Pt Rival
 Pic: Barry DP
 Gender: Male
 Music: Male
@@ -16902,7 +16902,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_201_CHIMCHAR ===
 Name: Barry
-Class: Pt_Rival
+Class: Pt Rival
 Pic: Barry DP
 Gender: Male
 Music: Male
@@ -16915,7 +16915,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_1 ===
 Name: Tristan
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -16928,7 +16928,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_2 ===
 Name: Tristan
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -16941,7 +16941,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_3 ===
 Name: Tristan
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -16954,7 +16954,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_4 ===
 Name: Tristan
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -16967,7 +16967,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TRISTAN_5 ===
 Name: Tristan
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -16980,7 +16980,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_NATALIE ===
 Name: Natalie
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -16993,7 +16993,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_LOGAN ===
 Name: Logan
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17006,7 +17006,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_HARRISON ===
 Name: Harrison
-Class: Pt_School Kid
+Class: Pt School Kid
 Pic: School Kid M DP
 Gender: Male
 Music: Male
@@ -17019,7 +17019,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_CHRISTINE ===
 Name: Christine
-Class: Pt_School Kid
+Class: Pt School Kid
 Pic: School Kid F DP
 Gender: Female
 Music: Female
@@ -17032,7 +17032,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_203_PIPLUP ===
 Name: Barry
-Class: Pt_Rival
+Class: Pt Rival
 Pic: Barry DP
 Gender: Male
 Music: Male
@@ -17049,7 +17049,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_203_TURTWIG ===
 Name: Barry
-Class: Pt_Rival
+Class: Pt Rival
 Pic: Barry DP
 Gender: Male
 Music: Male
@@ -17066,7 +17066,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_ROUTE_203_CHIMCHAR ===
 Name: Barry
-Class: Pt_Rival
+Class: Pt Rival
 Pic: Barry DP
 Gender: Male
 Music: Male
@@ -17083,7 +17083,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MICHAEL ===
 Name: Michael
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17100,7 +17100,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_1 ===
 Name: Dallas
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17113,7 +17113,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_2 ===
 Name: Dallas
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17130,7 +17130,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_3 ===
 Name: Dallas
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17151,7 +17151,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_4 ===
 Name: Dallas
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17176,7 +17176,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_5 ===
 Name: Dallas
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17201,7 +17201,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SEBASTIAN ===
 Name: Sebastian
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17214,7 +17214,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_KAITLIN ===
 Name: Kaitlin
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17239,7 +17239,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_1 ===
 Name: Madeline
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17252,7 +17252,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_2 ===
 Name: Madeline
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17269,7 +17269,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_3 ===
 Name: Madeline
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17286,7 +17286,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_4 ===
 Name: Madeline
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17303,7 +17303,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MADELINE_5 ===
 Name: Madeline
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17320,7 +17320,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SARAH ===
 Name: Sarah
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17333,7 +17333,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TYLER ===
 Name: Tyler
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17346,7 +17346,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_1 ===
 Name: Samantha
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17359,7 +17359,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_2 ===
 Name: Samantha
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17372,7 +17372,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_3 ===
 Name: Samantha
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17389,7 +17389,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_4 ===
 Name: Samantha
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17410,7 +17410,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_5 ===
 Name: Samantha
-Class: Pt_Lass
+Class: Pt Lass
 Pic: Lass DP
 Gender: Female
 Music: Lass DP
@@ -17431,7 +17431,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_CURTIS===
 Name: Curtis
-Class: Pt_Camper
+Class: Pt Camper
 Pic: Camper DP
 Gender: Male
 Music: Camper DP
@@ -17448,7 +17448,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DIANA ===
 Name: Diana
-Class: Pt_Picnicker
+Class: Pt Picnicker
 Pic: Picnicker DP
 Gender: Female
 Music: Picnicker DP
@@ -17461,7 +17461,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_MASON ===
 Name: Mason
-Class: Pt_Worker
+Class: Pt Worker
 Pic: Worker DP
 Gender: Male
 Music: Worker DP
@@ -17474,7 +17474,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_COLIN ===
 Name: Colin
-Class: Pt_Worker
+Class: Pt Worker
 Pic: Worker DP
 Gender: Male
 Music: Worker DP
@@ -17491,7 +17491,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_JONATHON ===
 Name: Jonathon
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17504,7 +17504,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DARIUS ===
 Name: Darius
-Class: Pt_Youngster
+Class: Pt Youngster
 Pic: Youngster DP
 Gender: Male
 Music: Youngster DP
@@ -17521,7 +17521,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ROARK ===
 Name: Roark
-Class: Pt_Leader
+Class: Pt Leader
 Pic: Roark DP
 Gender: Male
 Music: Male
@@ -17557,7 +17557,7 @@ Nature: Jolly
 
 === TRAINER_JUBILIFE_CITY_GRUNT_1 ===
 Name: Grunt
-Class: Pt_Galactic
+Class: Pt Galactic
 Pic: Galactic Grunt M DP
 Gender: Male
 Music: Galactic Grunt M DP
@@ -17574,7 +17574,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JUBILIFE_CITY_GRUNT_2 ===
 Name: Grunt
-Class: Pt_Galactic
+Class: Pt Galactic
 Pic: Galactic Grunt M DP
 Gender: Male
 Music: Galactic Grunt M DP
@@ -17590,7 +17590,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_TAYLOR ===
 Name: Taylor
-Class: Pt_Aroma Lady
+Class: Pt Aroma Lady
 Pic: Aroma Lady DP
 Gender: Female
 Music: Aroma Lady DP
@@ -17607,7 +17607,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_BRANDON_1 ===
 Name: Brandon
-Class: Pt_Bug Catcher
+Class: Pt Bug Catcher
 Pic: Bug Catcher DP
 Gender: Male
 Music: Bug Catcher DP
@@ -17624,7 +17624,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_BRANDON_2 ===
 Name: Brandon
-Class: Pt_Bug Catcher
+Class: Pt Bug Catcher
 Pic: Bug Catcher DP
 Gender: Male
 Music: Bug Catcher DP
@@ -17641,7 +17641,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_BRANDON_3 ===
 Name: Brandon
-Class: Pt_Bug Catcher
+Class: Pt Bug Catcher
 Pic: Bug Catcher DP
 Gender: Male
 Music: Bug Catcher DP
@@ -17662,7 +17662,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_BRANDON_4 ===
 Name: Brandon
-Class: Pt_Bug Catcher
+Class: Pt Bug Catcher
 Pic: Bug Catcher DP
 Gender: Male
 Music: Bug Catcher DP
@@ -17683,7 +17683,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_LIV_AND_LIZ ===
 Name: Liv & Liz
-Class: Pt_Twins
+Class: Pt Twins
 Pic: Twins DP
 Gender: Female
 Music: Twins DP
@@ -17700,7 +17700,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WINDWORKS_VALLEY_GRUNT ===
 Name: Grunt
-Class: Pt_Galactic
+Class: Pt Galactic
 Pic: Galactic Grunt M DP
 Gender: Male
 Music: Galactic Grunt M DP
@@ -17713,7 +17713,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FLOAROMA_MEADOW_GRUNT ===
 Name: Grunt
-Class: Pt_Galactic
+Class: Pt Galactic
 Pic: Galactic Grunt M DP
 Gender: Male
 Music: Galactic Grunt M DP
@@ -17726,7 +17726,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FLOAROMA_MEADOW_GRUNT_2 ===
 Name: Grunt
-Class: Pt_Galactic
+Class: Pt Galactic
 Pic: Galactic Grunt M DP
 Gender: Male
 Music: Galactic Grunt M DP
@@ -17743,7 +17743,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
 Name: Grunt
-Class: Pt_Galactic
+Class: Pt Galactic
 Pic: Galactic Grunt M DP
 Gender: Male
 Music: Galactic Grunt M DP
@@ -17756,7 +17756,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VALLEY_WINDWORKS_GRUNT_2 ===
 Name: Grunt
-Class: Pt_Galactic
+Class: Pt Galactic
 Pic: Galactic Grunt M DP
 Gender: Male
 Music: Galactic Grunt M DP
@@ -17773,7 +17773,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VALLEY_WINDWORKS_MARS ===
 Name: Mars
-Class: Pt_Commander
+Class: Pt Commander
 Pic: Mars DP
 Gender: Female
 Music: Galactic Commander DP
@@ -17824,7 +17824,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ELIZABETH_1 ===
 Name: Elizabeth
-Class: Pt_Aroma Lady
+Class: Pt Aroma Lady
 Pic: Aroma Lady DP
 Gender: Female
 Music: Aroma Lady DP
@@ -17837,7 +17837,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ELIZABETH_2 ===
 Name: Elizabeth
-Class: Pt_Aroma Lady
+Class: Pt Aroma Lady
 Pic: Aroma Lady DP
 Gender: Female
 Music: Aroma Lady DP
@@ -17850,7 +17850,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ELIZABETH_3 ===
 Name: Elizabeth
-Class: Pt_Aroma Lady
+Class: Pt Aroma Lady
 Pic: Aroma Lady DP
 Gender: Female
 Music: Aroma Lady DP
@@ -17863,7 +17863,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ELIZABETH_4 ===
 Name: Elizabeth
-Class: Pt_Aroma Lady
+Class: Pt Aroma Lady
 Pic: Aroma Lady DP
 Gender: Female
 Music: Aroma Lady DP
@@ -17876,7 +17876,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ZACKARY_1 ===
 Name: Zackary
-Class: Pt_Camper
+Class: Pt Camper
 Pic: Camper DP
 Gender: Male
 Music: Male
@@ -17889,7 +17889,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ZACKARY_2 ===
 Name: Zackary
-Class: Pt_Camper
+Class: Pt Camper
 Pic: Camper DP
 Gender: Male
 Music: Male
@@ -17902,7 +17902,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ZACKARY_3 ===
 Name: Zackary
-Class: Pt_Camper
+Class: Pt Camper
 Pic: Camper DP
 Gender: Male
 Music: Male
@@ -17915,7 +17915,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_ZACKARY_4 ===
 Name: Zackary
-Class: Pt_Camper
+Class: Pt Camper
 Pic: Camper DP
 Gender: Male
 Music: Male
@@ -17932,7 +17932,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SIENA ===
 Name: Siena
-Class: Pt_Picnicker
+Class: Pt Picnicker
 Pic: Picnicker DP
 Gender: Female
 Music: Picnicker DP
@@ -17975,7 +17975,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_KARINA_1 ===
 Name: Karina
-Class: Pt_Picnicker
+Class: Pt Picnicker
 Pic: Picnicker DP
 Gender: Female
 Music: Picnicker DP
@@ -17988,7 +17988,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_KARINA_2 ===
 Name: Karina
-Class: Pt_Picnicker
+Class: Pt Picnicker
 Pic: Picnicker DP
 Gender: Female
 Music: Picnicker DP
@@ -18001,7 +18001,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_KARINA_3 ===
 Name: Karina
-Class: Pt_Picnicker
+Class: Pt Picnicker
 Pic: Picnicker DP
 Gender: Female
 Music: Picnicker DP
@@ -18014,7 +18014,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_KARINA_4 ===
 Name: Karina
-Class: Pt_Picnicker
+Class: Pt Picnicker
 Pic: Picnicker DP
 Gender: Female
 Music: Picnicker DP
