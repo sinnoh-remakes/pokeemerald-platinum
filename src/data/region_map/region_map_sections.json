@@ -73,7 +73,15 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_ROUTE_205",
+      "id": "MAPSEC_ROUTE_205_NORTH",
+      "name": "ROUTE 205",
+      "x": 4,
+      "y": 11,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_205_SOUTH",
       "name": "ROUTE 205",
       "x": 4,
       "y": 11,
@@ -137,6 +145,14 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_VALLEY_WINDWORKS",
+      "name": "VALLEY WINDWORKS",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_FLOAROMA_MEADOW",
       "name": "FLOAROMA MEADOW",
       "x": 4,
@@ -145,8 +161,8 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_VALLEY_WINDWORKS",
-      "name": "VALLEY WINDWORKS",
+      "id": "MAPSEC_ETERNA_FOREST",
+      "name": "ETERNA FOREST",
       "x": 4,
       "y": 11,
       "width": 1,

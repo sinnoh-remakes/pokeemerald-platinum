@@ -3,7 +3,7 @@
   "name": "Route205South1",
   "layout": "LAYOUT_ROUTE205_SOUTH1",
   "music": "MUS_DP_ROUTE205_DAY",
-  "region_map_section": "MAPSEC_ROUTE_205",
+  "region_map_section": "MAPSEC_ROUTE_205_SOUTH",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -22,6 +22,11 @@
       "map": "MAP_VALLEY_WINDWORKS",
       "offset": 39,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ETERNA_FOREST_OUTER2",
+      "offset": 28,
+      "direction": "up"
     }
   ],
   "object_events": [

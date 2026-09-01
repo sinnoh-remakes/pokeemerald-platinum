@@ -3,7 +3,8 @@ Route205South2_MapScripts::
 
 @ State descriptions for VAR_ROUTE205_SOUTH_2_STATE
 @ 1: Talked to the girl
-@ 2: Defeated Mars
+@ 2: Entered Windworks Valley Indoors
+@ 3: Defeated Mars
 
 Route205South2_EventScript_Galactic_Roadblock::
 	lock

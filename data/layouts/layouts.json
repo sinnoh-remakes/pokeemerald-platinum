@@ -4552,6 +4552,16 @@
       "blockdata_filepath": "data/layouts/Route204South/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE205_NORTH",
+      "name": "Route205North_Layout",
+      "width": 32,
+      "height": 36,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Route205North",
+      "border_filepath": "data/layouts/Route205North/border.bin",
+      "blockdata_filepath": "data/layouts/Route205North/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE205_SOUTH1",
       "name": "Route205South1_Layout",
       "width": 43,
@@ -4680,6 +4690,36 @@
       "secondary_tileset": "gTileset_FloaromaMeadow",
       "border_filepath": "data/layouts/FloaromaMeadow/border.bin",
       "blockdata_filepath": "data/layouts/FloaromaMeadow/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_FOREST",
+      "name": "EternaForest_Layout",
+      "width": 86,
+      "height": 68,
+      "primary_tileset": "gTileset_IndoorForest",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/EternaForest/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_FOREST_OUTER1",
+      "name": "EternaForestOuter1_Layout",
+      "width": 50,
+      "height": 48,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Route205North",
+      "border_filepath": "data/layouts/EternaForestOuter1/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForestOuter1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_FOREST_OUTER2",
+      "name": "EternaForestOuter2_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_OutdoorRoute205",
+      "secondary_tileset": "gTileset_Route205South1",
+      "border_filepath": "data/layouts/EternaForestOuter2/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForestOuter2/map.bin"
     },
     {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERS_HOUSE_1F",
