@@ -10,26 +10,28 @@ concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   build:
     name: Build ROM
     runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/${{ github.repository }}-build:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install toolchain and build deps
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            build-essential \
-            binutils-arm-none-eabi \
-            gcc-arm-none-eabi \
-            git \
-            make \
-            python3 \
-            pkg-config \
-            libpng-dev
+      - name: Cache built host tools
+        uses: actions/cache@v4
+        with:
+          path: tools
+          key: tools-${{ hashFiles('tools/**/*.c', 'tools/**/*.cpp', 'tools/**/*.h', 'tools/**/*.hpp', 'tools/**/Makefile') }}
 
       - name: Build ROM
         run: make -j"$(nproc)"
