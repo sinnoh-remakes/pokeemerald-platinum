@@ -17710,10 +17710,6 @@ AI: Check Bad Move
 Glameow
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Fake Out
-- Scratch
-- Growl
-- Hypnosis
 
 === TRAINER_FLOAROMA_MEADOW_GRUNT ===
 Name: Grunt
@@ -17727,10 +17723,6 @@ AI: Check Bad Move
 Stunky
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Fury Swipes
-- Screech
-- Poison Gas
-- Scratch
 
 === TRAINER_FLOAROMA_MEADOW_GRUNT_2 ===
 Name: Grunt
@@ -17744,16 +17736,10 @@ AI: Check Bad Move
 Zubat
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Astonish
-- Supersonic
-- Leech Life
 
 Zubat
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Astonish
-- Supersonic
-- Leech Life
 
 === TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
 Name: Grunt
@@ -17797,16 +17783,10 @@ AI: Check Bad Move
 Zubat (F)
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Bite
-- Leech Life
-- Toxic
 
 Purugly (F) @ Oran Berry
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Faint Attack
-- Scratch
-- Fake Out
 
 === TRAINER_PT_JACOB ===
 Name: Jacob
