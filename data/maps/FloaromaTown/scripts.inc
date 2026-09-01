@@ -115,7 +115,7 @@ FloaromaTown_Text_GalacticGuys:
 
 FloaromaTown_Text_PleasantMood:
 	.string "Being surrounded by flowers puts me\n"
-	.string "in an oddly pleasant mood."
+	.string "in an oddly pleasant mood.$"
 
 FloaromaTown_Text_Welcome:
 	.string "Welcome to Floaroma, the town of\n"
