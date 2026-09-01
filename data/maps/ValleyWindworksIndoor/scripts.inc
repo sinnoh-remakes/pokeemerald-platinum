@@ -72,7 +72,7 @@ ValleyWindworksIndoor_EventScript_Mars_Top::
 ValleyWindworksIndoor_EventScript_Mars::
 	msgbox ValleyWindworksIndoor_Text_Mars, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro TRAINER_VALLEYWINDWORKS_INDOOR_MARS, ValleyWindworksIndoor_Text_Mars_Defeat
+	trainerbattle_no_intro TRAINER_VALLEY_WINDWORKS_MARS, ValleyWindworksIndoor_Text_Mars_Defeat
 	setflag FLAG_DEFEATED_MARS
 	setvar VAR_ROUTE205_SOUTH_2_STATE, 3
 	msgbox ValleyWindworksIndoor_Text_Mars_Post_Battle, MSGBOX_DEFAULT

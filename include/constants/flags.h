@@ -1250,10 +1250,10 @@
 #define FLAG_ITEM_FLOAROMA_MEADOW_ULTRA_BALL                        0x4A8
 #define FLAG_ITEM_FLOAROMA_MEADOW_RARE_CANDY                        0x4A9
 #define FLAG_ITEM_FLOAROMA_MEADOW_LEAF_STONE                        0x4AA
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
+#define FLAG_ITEM_ROUTE_205_REPEL                                   0x4AB
+#define FLAG_ITEM_ROUTE_205_HEAL_BALL                               0x4AC
+#define FLAG_ITEM_ROUTE_205_SUPER_POTION                            0x4AD
+#define FLAG_ITEM_ROUTE_205_X_SP_DEF                                0x4AE
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
 #define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
 #define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
