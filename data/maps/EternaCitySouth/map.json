@@ -17,6 +17,11 @@
       "map": "MAP_ETERNA_CITY_NORTH",
       "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE205_NORTH",
+      "offset": -26,
+      "direction": "left"
     }
   ],
   "object_events": [],
