@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_ROUTE205_NORTH",
       "name": "Route205North_Layout",
-      "width": 32,
+      "width": 33,
       "height": 36,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Route205North",
@@ -4864,7 +4864,7 @@
     {
       "id": "LAYOUT_ETERNA_CITY",
       "name": "EternaCity_Layout",
-      "width": 60,
+      "width": 59,
       "height": 54,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Eterna",
