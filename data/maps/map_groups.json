@@ -54,7 +54,8 @@
     "OreburghCityNorth",
     "OreburghCitySouth",
     "FloaromaTown",
-    "EternaCity"
+    "EternaCityNorth",
+    "EternaCitySouth"
   ],
   "gMapGroup_Routes": [
     "Route201",

@@ -4862,14 +4862,24 @@
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
     },
     {
-      "id": "LAYOUT_ETERNA_CITY",
-      "name": "EternaCity_Layout",
-      "width": 59,
-      "height": 54,
+      "id": "LAYOUT_ETERNA_CITY_NORTH",
+      "name": "EternaCityNorth_Layout",
+      "width": 60,
+      "height": 25,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Eterna",
-      "border_filepath": "data/layouts/EternaCity/border.bin",
-      "blockdata_filepath": "data/layouts/EternaCity/map.bin"
+      "border_filepath": "data/layouts/EternaCityNorth/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCityNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_SOUTH",
+      "name": "EternaCitySouth_Layout",
+      "width": 60,
+      "height": 29,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Eterna",
+      "border_filepath": "data/layouts/EternaCitySouth/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCitySouth/map.bin"
     }
   ]
 }
