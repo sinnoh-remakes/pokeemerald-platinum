@@ -2240,9 +2240,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BriefcasePt = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RockPt = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRockPt = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_ROCK_PT,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BREAKABLE_ROCK_PT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -2255,7 +2255,64 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RockPt = {
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_BreakableRockPt,
-    .images = sPicTable_RockPt,
+    .images = sPicTable_BreakableRockPt,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_WIND_TURBINE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 1152,
+    .width = 48,
+    .height = 48,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_NONE,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_48x48,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_WindTurbineBase,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1 = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_WIND_TURBINE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 2048,
+    .width = 64,
+    .height = 64,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_NONE,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_64x64,
+    .subspriteTables = sOamTables_64x64,
+    .anims = sAnimTable_WindTurbineBlades,
+    .images = sPicTable_WindTurbineBlades1,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2 = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_WIND_TURBINE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 2048,
+    .width = 64,
+    .height = 64,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_NONE,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_64x64,
+    .subspriteTables = sOamTables_64x64,
+    .anims = sAnimTable_WindTurbineBlades,
+    .images = sPicTable_WindTurbineBlades2,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4441,63 +4498,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableCar = {
     .subspriteTables = sOamTables_64x64,
     .anims = sAnimTable_Inanimate,
     .images = sPicTable_CableCar,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
-
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_WIND_TURBINE,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 1152,
-    .width = 48,
-    .height = 48,
-    .paletteSlot = PALSLOT_NPC_SPECIAL,
-    .shadowSize = SHADOW_SIZE_NONE,
-    .inanimate = TRUE,
-    .compressed = FALSE,
-    .tracks = TRACKS_NONE,
-    .oam = &gObjectEventBaseOam_32x32,
-    .subspriteTables = sOamTables_48x48,
-    .anims = sAnimTable_Inanimate,
-    .images = sPicTable_WindTurbineBase,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
-
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1 = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_WIND_TURBINE,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 2048,
-    .width = 64,
-    .height = 64,
-    .paletteSlot = PALSLOT_NPC_SPECIAL,
-    .shadowSize = SHADOW_SIZE_NONE,
-    .inanimate = TRUE,
-    .compressed = FALSE,
-    .tracks = TRACKS_NONE,
-    .oam = &gObjectEventBaseOam_64x64,
-    .subspriteTables = sOamTables_64x64,
-    .anims = sAnimTable_WindTurbineBlades,
-    .images = sPicTable_WindTurbineBlades1,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
-
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2 = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_WIND_TURBINE,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 2048,
-    .width = 64,
-    .height = 64,
-    .paletteSlot = PALSLOT_NPC_SPECIAL,
-    .shadowSize = SHADOW_SIZE_NONE,
-    .inanimate = TRUE,
-    .compressed = FALSE,
-    .tracks = TRACKS_NONE,
-    .oam = &gObjectEventBaseOam_64x64,
-    .subspriteTables = sOamTables_64x64,
-    .anims = sAnimTable_WindTurbineBlades,
-    .images = sPicTable_WindTurbineBlades2,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

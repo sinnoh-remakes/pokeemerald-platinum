@@ -676,7 +676,7 @@
 #define OBJ_EVENT_PAL_TAG_YOUNGSTER_PT            0x11DF
 
 #define OBJ_EVENT_PAL_TAG_BRIEFCASE_PT            0x11E0
-#define OBJ_EVENT_PAL_TAG_ROCK_PT                 0x11E1
+#define OBJ_EVENT_PAL_TAG_BREAKABLE_ROCK_PT       0x11E1
 #define OBJ_EVENT_PAL_TAG_WIND_TURBINE            0x11E2
 
 // Used as a placeholder follower graphic

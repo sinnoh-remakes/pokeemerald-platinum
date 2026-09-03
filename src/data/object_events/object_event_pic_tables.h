@@ -470,8 +470,32 @@ static const struct SpriteFrameImage sPicTable_BriefcasePt[] = {
     obj_frame_tiles(gObjectEventPic_BriefcasePt),
 };
 
-static const struct SpriteFrameImage sPicTable_RockPt[] = {
-    obj_frame_tiles(gObjectEventPic_RockPt),
+static const struct SpriteFrameImage sPicTable_BreakableRockPt[] = {
+    obj_frame_tiles(gObjectEventPic_BreakableRockPt),
+};
+
+static const struct SpriteFrameImage sPicTable_WindTurbineBase[] = {
+    obj_frame_tiles(gObjectEventPic_WindTurbineBase),
+};
+
+static const struct SpriteFrameImage sPicTable_WindTurbineBlades1[] = {
+    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 0),
+    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 1),
+    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 2),
+    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 3),
+    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 4),
+    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 5),
+    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 6),
+};
+
+static const struct SpriteFrameImage sPicTable_WindTurbineBlades2[] = {
+    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 0),
+    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 1),
+    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 2),
+    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 3),
+    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 4),
+    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 5),
+    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 6),
 };
 
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
@@ -939,30 +963,6 @@ static const struct SpriteFrameImage sPicTable_MovingBox[] = {
 
 static const struct SpriteFrameImage sPicTable_CableCar[] = {
     obj_frame_tiles(gObjectEventPic_CableCar),
-};
-
-static const struct SpriteFrameImage sPicTable_WindTurbineBase[] = {
-    obj_frame_tiles(gObjectEventPic_WindTurbineBase),
-};
-
-static const struct SpriteFrameImage sPicTable_WindTurbineBlades1[] = {
-    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 0),
-    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 1),
-    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 2),
-    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 3),
-    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 4),
-    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 5),
-    overworld_frame(gObjectEventPic_WindTurbineBlades1, 8, 8, 6),
-};
-
-static const struct SpriteFrameImage sPicTable_WindTurbineBlades2[] = {
-    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 0),
-    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 1),
-    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 2),
-    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 3),
-    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 4),
-    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 5),
-    overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 6),
 };
 
 static const struct SpriteFrameImage sPicTable_Scientist2[] = {
