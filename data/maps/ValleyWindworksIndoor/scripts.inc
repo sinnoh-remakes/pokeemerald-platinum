@@ -70,7 +70,7 @@ ValleyWindworksIndoor_EventScript_Mars_Top::
 	goto ValleyWindworksIndoor_EventScript_Mars
 
 ValleyWindworksIndoor_EventScript_Mars::
-	msgbox ValleyWindworksIndoor_Text_Mars, MSGBOX_DEFAULT
+	msgbox ValleyWindworksIndoor_Text_Mars_Intro, MSGBOX_DEFAULT
 	closemessage
 	trainerbattle_no_intro TRAINER_VALLEY_WINDWORKS_MARS, ValleyWindworksIndoor_Text_Mars_Defeat
 	setflag FLAG_DEFEATED_MARS
@@ -197,7 +197,7 @@ ValleyWindworksIndoor_Text_SmooshYou:
 	.string "Humph! Just you wait!\n"
 	.string "Our Commander will smoosh you!$"
 
-ValleyWindworksIndoor_Text_Mars:
+ValleyWindworksIndoor_Text_Mars_Intro:
 	.string "I’m one of Team Galactic’s three\n"
 	.string "Commanders.\p"
 	.string "...No, wait.\n"

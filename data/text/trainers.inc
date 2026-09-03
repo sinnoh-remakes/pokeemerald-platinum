@@ -5201,7 +5201,7 @@ Route204North_Text_LizRematch:
 	.string "Liz: We're the best in our class.\n"
 	.string "We can't be losers all the time!$"
 
-ValleyWindworks_Text_Galactic_Grunt1_Intro:
+ValleyWindworks_Text_Grunt1_Intro:
 	.string "Don't you dare go into the Valley\n"
 	.string "Windworks.\p"
 	.string "I got ordered to keep everyone out\n"
@@ -5211,11 +5211,11 @@ ValleyWindworks_Text_Galactic_Grunt1_Intro:
 	.string "OK, then.\n"
 	.string "You'll have to battle me for it!$"
 
-ValleyWindworks_Text_Galactic_Grunt1_Defeated:
+ValleyWindworks_Text_Grunt1_Defeated:
 	.string "Yeah, like I'm really supposed to\n"
 	.string "win with a Pokémon like this...$"
 
-ValleyWindworks_Text_Galactic_Grunt1_PostBattle:
+ValleyWindworks_Text_Grunt1_PostBattle:
 	.string "Isn't that just great.\n"
 	.string "Getting defeated by some kid.\p"
 	.string "But you can't do a thing if I lock\n"
