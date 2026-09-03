@@ -29,6 +29,7 @@ FloaromaMeadow_EventScript_Galactic::
 	msgbox FloaromaMeadow_Text_Galactic_Grunt1_AfterBattle, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceDown
 	waitmovement 0
+	msgbox FloaromaMeadow_Text_Galactic_Grunt2_Intro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_FLOAROMA_MEADOW_GRUNT_2, FloaromaMeadow_Text_Galactic_Grunt2_Defeat
 	msgbox FloaromaMeadow_Text_Galactic_Grunt2_AfterBattle, MSGBOX_AUTOCLOSE
 	fadescreen 1
@@ -101,7 +102,9 @@ FloaromaMeadow_Text_Galactic_Grunt1_Defeat:
 
 FloaromaMeadow_Text_Galactic_Grunt1_AfterBattle:
 	.string "Grunt 1: This is so lame...\n"
-	.string "They're going to dock my pay!\p"
+	.string "They're going to dock my pay!$"
+
+FloaromaMeadow_Text_Galactic_Grunt2_Intro:
 	.string "Grunt 2: I'm up next!\n"
 	.string "Heheheh...\p"
 	.string "Battling you right after my cohort\n"
