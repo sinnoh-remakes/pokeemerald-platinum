@@ -5252,3 +5252,103 @@ ValleyWindworks_Text_Grunt3_PostBattle:
 	.string "Team Galactic is trying to achieve!\p"
 	.string "Of course, they don't tell a grunt\n"
 	.string "like me anything, either... But still!$"
+
+Route205South_Text_JacobIntro:
+	.string "Hey, how about you and me battle before\n"
+	.string "I go into Eterna Forest?$"
+
+Route205South_Text_JacobDefeated:
+	.string "That really dampened my spirits.$"
+
+Route205South_Text_JacobPostBattle:
+	.string "I heard that really tough Pokémon\n"
+	.string "appear in Eterna Forest.\p"
+	.string "I need to be more prepared than this!$"
+
+Route205South_Text_DanielIntro:
+	.string "There’s no mountain here, but I’m\n"
+	.string "dressed to hike! Gahaha! Here goes!$"
+	
+Route205South_Text_DanielDefeated:
+	.string "Oh, yeah!\n"
+	.string "A refreshing battle that was!$"
+
+Route205South_Text_DanielPostBattle:
+	.string "You can find the same kinds of\n"
+	.string "Pokémon in all sorts of places.\p"
+	.string "There’s no law saying a Hiker can’t\n"
+	.string "go searching off in the mountains!$"
+
+Route205South_Text_ElizabethIntro:
+	.string "I love Pokémon that smell sweet.\n"
+	.string "Like this one--get a whiff of this!$"
+
+Route205South_Text_ElizabethDefeated:
+	.string "Did you understand what I meant?\n"
+	.string "Didn’t my Pokémon smell nice?$"
+
+Route205South_Text_ElizabethPostBattle:
+	.string "If you plant lots of Berries, you\n"
+	.string "can be surrounded by sweet scents.$"
+
+Route205South_Text_ZackaryIntro:
+	.string "It’s a long way between Floaroma\n"
+	.string "and Eterna City. So, let’s battle!$"
+
+Route205South_Text_ZackaryDefeated:
+	.string "Wawawaah!\n"
+	.string "I’m out of Pokémon that can battle!$"
+
+Route205South_Text_ZackaryPostBattle:
+	.string "Camping with Pokémon!\n"
+	.string "Do you have any idea how fun that is?$"
+
+Route205South_Text_SienaIntro:
+	.string "What kinds of Pokémon live around\n"
+	.string "here, I wonder?$"
+
+Route205South_Text_SienaDefeated:
+	.string "I’m shocked!\n"
+	.string "How did I lose?$"
+
+Route205South_Text_SienaPostBattle:
+	.string "I know all sorts of things about\n"
+	.string "Pokémon!\p"
+	.string "Let’s see... There are males and\n"
+	.string "females, and some aren’t either!$"
+
+Route205South_Text_NicholasIntro:
+	.string "I’ve lost my way...\n"
+	.string "Here of all places...$"
+
+Route205South_Text_NicholasDefeated:
+	.string "Having lost his way, the Trainer lost\n"
+	.string "the battle too...$"
+
+Route205South_Text_NicholasPostBattle:
+	.string "From being lost in the mountains so\n"
+	.string "long, I became a Hiker...$"
+
+Route205South_Text_KelseyIntro:
+	.string "Hiyah!\n"
+	.string "There’s no holding anything back!$"
+
+Route205South_Text_KelseyDefeated:
+	.string "I... I concede!\n"
+	.string "I think you’re on a different level...$"
+
+Route205South_Text_KelseyPostBattle:
+	.string "Hiyah! You put me in my place!\n"
+	.string "I appreciate it!$"
+
+Route205South_Text_KarinaIntro:
+	.string "Oh, I don’t know.\n"
+	.string "Should I play a little?$"
+
+Route205South_Text_KarinaDefeated:
+	.string "Oh, boo!\n"
+	.string "How insulting!$"
+
+Route205South_Text_KarinaPostBattle:
+	.string "Listen very closely...\n"
+	.string "Can you hear the cries of Pokémon?$"

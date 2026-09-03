@@ -129,14 +129,14 @@
       "y": 54,
       "elevation": 0,
       "dest_map": "MAP_FLOAROMA_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 13,
       "y": 54,
       "elevation": 0,
       "dest_map": "MAP_FLOAROMA_TOWN",
-      "dest_warp_id": "1"
+      "dest_warp_id": "5"
     },
     {
       "x": 39,

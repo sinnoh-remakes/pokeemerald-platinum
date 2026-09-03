@@ -908,19 +908,36 @@
 #define TRAINER_PT_BRANDON_3                902
 #define TRAINER_PT_BRANDON_4                903
 #define TRAINER_PT_LIV_AND_LIZ              904
-#define TRAINER_VALLEY_WINDWORKS_GRUNT_1    905
-#define TRAINER_FLOAROMA_MEADOW_GRUNT       906
+#define TRAINER_FLOAROMA_MEADOW_GRUNT_1     906
 #define TRAINER_FLOAROMA_MEADOW_GRUNT_2     907
+#define TRAINER_VALLEY_WINDWORKS_GRUNT_1    905
 #define TRAINER_VALLEY_WINDWORKS_GRUNT_2    908
 #define TRAINER_VALLEY_WINDWORKS_GRUNT_3    909
 #define TRAINER_VALLEY_WINDWORKS_MARS       910
+#define TRAINER_PT_JACOB                    911
+#define TRAINER_PT_DANIEL                   912
+#define TRAINER_PT_ELIZABETH_1              913
+#define TRAINER_PT_ELIZABETH_2              914
+#define TRAINER_PT_ELIZABETH_3              915
+#define TRAINER_PT_ELIZABETH_4              916
+#define TRAINER_PT_ZACKARY_1                917
+#define TRAINER_PT_ZACKARY_2                918
+#define TRAINER_PT_ZACKARY_3                919
+#define TRAINER_PT_ZACKARY_4                920
+#define TRAINER_PT_SIENA                    921
+#define TRAINER_PT_NICHOLAS                 922
+#define TRAINER_PT_KELSEY                   923
+#define TRAINER_PT_KARINA_1                 924
+#define TRAINER_PT_KARINA_2                 925
+#define TRAINER_PT_KARINA_3                 926
+#define TRAINER_PT_KARINA_4                 927
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      911
-#define MAX_TRAINERS_COUNT                  911
+#define TRAINERS_COUNT                      928
+#define MAX_TRAINERS_COUNT                  928
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

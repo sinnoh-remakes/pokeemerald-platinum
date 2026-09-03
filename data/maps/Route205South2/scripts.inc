@@ -3,7 +3,8 @@ Route205South2_MapScripts::
 
 @ State descriptions for VAR_ROUTE205_SOUTH_2_STATE
 @ 1: Talked to the girl
-@ 2: Defeated Mars
+@ 2: Entered Windworks Valley Indoors
+@ 3: Defeated Mars
 
 Route205South2_EventScript_Galactic_Roadblock::
 	lock
@@ -124,6 +125,15 @@ Route205South2_EventScript_Galactic_Dialog_Right::
 	release
 	end
 
+Route205South2_EventScript_Jacob::
+	trainerbattle_single TRAINER_PT_JACOB, Route205South_Text_JacobIntro, Route205South_Text_JacobDefeated
+	msgbox Route205South_Text_JacobPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route205South2_EventScript_RouteSign::
+	msgbox Route205South2_Text_RouteSign, MSGBOX_SIGN
+	end
+
 Route205South2_Text_Galactic_Roadblock_Left:
 	.string "We, Team Galactic, are conducting\n"
 	.string "research in the Eterna Forest!\p"
@@ -151,3 +161,7 @@ Route205South2_Text_Girl:
 Route205South2_Text_Girl_Second_Dialog:
 	.string "Please, Trainer! I want to see my papa.\n"
 	.string "He’s at the Valley Windworks...$"
+
+Route205South2_Text_RouteSign:
+	.string "    Rt.205\n"
+	.string "{LEFT_ARROW} Floaroma Town$"
