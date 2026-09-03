@@ -474,6 +474,10 @@ static const struct SpriteFrameImage sPicTable_BreakableRockPt[] = {
     obj_frame_tiles(gObjectEventPic_BreakableRockPt),
 };
 
+static const struct SpriteFrameImage sPicTable_CuttableTreePt[] = {
+    obj_frame_tiles(gObjectEventPic_CuttableTreePt),
+};
+
 static const struct SpriteFrameImage sPicTable_WindTurbineBase[] = {
     obj_frame_tiles(gObjectEventPic_WindTurbineBase),
 };

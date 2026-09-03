@@ -644,6 +644,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_YoungsterPt,           OBJ_EVENT_PAL_TAG_YOUNGSTER_PT},
     {gObjectEventPal_BriefcasePt,           OBJ_EVENT_PAL_TAG_BRIEFCASE_PT},
     {gObjectEventPal_BreakableRockPt,       OBJ_EVENT_PAL_TAG_BREAKABLE_ROCK_PT},
+    {gObjectEventPal_CuttableTreePt,        OBJ_EVENT_PAL_TAG_CUTTABLE_TREE_PT},
     {gObjectEventPal_WindTurbine,           OBJ_EVENT_PAL_TAG_WIND_TURBINE},
 
 
