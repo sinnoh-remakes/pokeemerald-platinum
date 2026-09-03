@@ -110,7 +110,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ValleyWindworksIndoor_EventScript_Girl",
-      "flag": "FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL"
+      "flag": "FLAG_HIDE_WINDWORKS_INDOOR_GIRL"
     },
     {
       "local_id": "LOCALID_VALLEYWINDWORKS_GRUNT_INTRO",
@@ -124,7 +124,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ValleyWindworksIndoor_EventScript_Grunt3",
-      "flag": "FLAG_HIDE_WINDWORKSVALLEY_GRUNT"
+      "flag": "FLAG_HIDE_WINDWORKS_INDOOR_GRUNT"
     }
   ],
   "warp_events": [
