@@ -38,9 +38,9 @@ FloaromaMeadow_EventScript_Galactic::
 	removeobject LOCALID_GRUNT_2
 	addobject LOCALID_WORKS_KEY_BALL
 	fadescreen 0
-	applymovement LOCALID_MAN, Common_Movement_WalkDown
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_MAN, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 32
 	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT
@@ -51,14 +51,14 @@ FloaromaMeadow_EventScript_Galactic::
 	goto FloaromaMeadow_EventScript_Galactic_Outro_Left
 
 FloaromaMeadow_EventScript_Galactic_Outro_Right::
-	applymovement LOCALID_MAN, Common_Movement_WalkRight
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement LOCALID_MAN, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	goto FloaromaMeadow_EventScript_Galactic_Outro
 
 FloaromaMeadow_EventScript_Galactic_Outro_Left::
-	applymovement LOCALID_MAN, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	goto FloaromaMeadow_EventScript_Galactic_Outro
 
