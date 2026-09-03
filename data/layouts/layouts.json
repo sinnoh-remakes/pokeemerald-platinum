@@ -4875,7 +4875,7 @@
       "id": "LAYOUT_ETERNA_CITY_SOUTH",
       "name": "EternaCitySouth_Layout",
       "width": 60,
-      "height": 29,
+      "height": 30,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Eterna",
       "border_filepath": "data/layouts/EternaCitySouth/border.bin",
