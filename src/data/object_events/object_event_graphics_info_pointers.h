@@ -117,7 +117,11 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YoungsterPt;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BriefcasePt;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RockPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRockPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableTreePt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
@@ -233,9 +237,6 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanUnde
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayUnderwater;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MovingBox;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableCar;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DevonEmployee;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AquaMemberM;
@@ -490,9 +491,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MAY_UNDERWATER] =           &gObjectEventGraphicsInfo_MayUnderwater,
     [OBJ_EVENT_GFX_MOVING_BOX] =               &gObjectEventGraphicsInfo_MovingBox,
     [OBJ_EVENT_GFX_CABLE_CAR] =                &gObjectEventGraphicsInfo_CableCar,
-    [OBJ_EVENT_GFX_WIND_TURBINE_BASE] =         &gObjectEventGraphicsInfo_WindTurbineBase,
-    [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1] =     &gObjectEventGraphicsInfo_WindTurbineBlades1,
-    [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2] =     &gObjectEventGraphicsInfo_WindTurbineBlades2,
     [OBJ_EVENT_GFX_SCIENTIST_2] =              &gObjectEventGraphicsInfo_Scientist2,
     [OBJ_EVENT_GFX_DEVON_EMPLOYEE] =           &gObjectEventGraphicsInfo_DevonEmployee,
     [OBJ_EVENT_GFX_AQUA_MEMBER_M] =            &gObjectEventGraphicsInfo_AquaMemberM,
@@ -755,7 +753,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WORKER_PT] =                &gObjectEventGraphicsInfo_WorkerPt,
     [OBJ_EVENT_GFX_YOUNGSTER_PT] =             &gObjectEventGraphicsInfo_YoungsterPt,
     [OBJ_EVENT_GFX_BRIEFCASE_PT] =             &gObjectEventGraphicsInfo_BriefcasePt,
-    [OBJ_EVENT_GFX_BREAKABLE_ROCK_PT] =        &gObjectEventGraphicsInfo_RockPt,
+    [OBJ_EVENT_GFX_BREAKABLE_ROCK_PT] =        &gObjectEventGraphicsInfo_BreakableRockPt,
+    [OBJ_EVENT_GFX_CUTTABLE_TREE_PT] =         &gObjectEventGraphicsInfo_CuttableTreePt,
+    [OBJ_EVENT_GFX_WIND_TURBINE_BASE] =        &gObjectEventGraphicsInfo_WindTurbineBase,
+    [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1] =    &gObjectEventGraphicsInfo_WindTurbineBlades1,
+    [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2] =    &gObjectEventGraphicsInfo_WindTurbineBlades2,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
