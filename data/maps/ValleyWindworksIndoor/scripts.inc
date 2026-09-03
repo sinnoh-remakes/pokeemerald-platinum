@@ -30,7 +30,7 @@ ValleyWindworksIndoor_1F_EventScript_Grunt_Intro::
 	msgbox ValleyWindworksIndoor_Text_Grunt_Intro, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_VALLEYWINDWORKS_GRUNT_INTRO, ValleyWindworksIndoor_Movement_Grunt_Intro
 	waitmovement 0
-	setflag FLAG_HIDE_WINDWORKSVALLEY_GRUNT
+	setflag FLAG_HIDE_WINDWORKS_INDOOR_GRUNT
 	removeobject LOCALID_VALLEYWINDWORKS_GRUNT_INTRO
 	release
 	end
@@ -114,7 +114,7 @@ ValleyWindworksIndoor_EventScript_Mars_Outro_Top::
 ValleyWindworksIndoor_EventScript_Mars_Outro::
 	msgbox ValleyWindworksIndoor_Text_Scientist, MSGBOX_DEFAULT
 	closemessage
-	clearflag FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL
+	clearflag FLAG_HIDE_WINDWORKS_INDOOR_GIRL
 	addobject LOCALID_VALLEYWINDWORKS_GIRL
 	setobjectxy LOCALID_VALLEYWINDWORKS_GIRL, 9, 7
 	applymovement LOCALID_VALLEYWINDWORKS_GIRL, ValleyWindworksIndoor_Movement_Girl_1

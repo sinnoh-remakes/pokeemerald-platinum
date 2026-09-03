@@ -19,7 +19,7 @@ ValleyWindworks_EventScript_Galactic_Grunt::
 	waitmovement 0
 	removeobject LOCALID_GALACTIC_GRUNT
 	playse SE_DOOR
-	setflag FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT
+	setflag FLAG_HIDE_WINDWORKS_GALACTIC_GRUNT
 	delay 12
 	msgbox ValleyWindworks_Text_Kerchunk, MSGBOX_AUTOCLOSE
 	release
@@ -44,7 +44,7 @@ ValleyWindworks_EventScript_Use_Key::
 ValleyWindworks_EventScript_Unlock::
 	msgbox ValleyWindworks_Text_Unlocked, MSGBOX_AUTOCLOSE
 	removeobject LOCALID_DOOR_LOCK
-	setflag FLAG_HIDE_VALLEYWINDWORKS_DOOR_LOCK
+	setflag FLAG_HIDE_WINDWORKS_LOCK
 	removeitem ITEM_WORKS_KEY
 	release
 	end

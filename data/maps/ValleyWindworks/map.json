@@ -401,7 +401,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ValleyWindworks_EventScript_Galactic_Grunt",
-      "flag": "FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT"
+      "flag": "FLAG_HIDE_WINDWORKS_GALACTIC_GRUNT"
     },
     {
       "local_id": "LOCALID_DOOR_LOCK",
@@ -415,7 +415,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ValleyWindworks_EventScript_Locked",
-      "flag": "FLAG_HIDE_VALLEYWINDWORKS_DOOR_LOCK"
+      "flag": "FLAG_HIDE_WINDWORKS_LOCK"
     }
   ],
   "warp_events": [

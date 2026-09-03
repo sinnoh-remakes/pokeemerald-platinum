@@ -54,7 +54,7 @@
 #define FLAG_OREBURGH_CITY_DUSK_BALL                     0x28
 #define FLAG_OREBURGH_CITY_GREAT_BALL                    0x29
 #define FLAG_TM_STEALTH_ROCK                             0x2A
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_DEFEATED_MARS                               0x2B
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
@@ -686,13 +686,13 @@
 #define FLAG_HIDE_OREBURGH_CITY_RIVAL                    0x277
 #define FLAG_HIDE_JUBILIFE_CITY_GALACTIC_EVENT           0x278
 #define FLAG_HIDE_JUBILIFE_LOOKER_3                      0x279
-#define FLAG_HIDE_VALLEYWINDWORKS_GALACTIC_GRUNT         0x27A
-#define FLAG_HIDE_VALLEYWINDWORKS_DOOR_LOCK              0x27B
+#define FLAG_HIDE_WINDWORKS_GALACTIC_GRUNT               0x27A
+#define FLAG_HIDE_WINDWORKS_LOCK                         0x27B
 #define FLAG_HIDE_FLOAROMA_MEADOW_GALACTIC_EVENT         0x27C
 #define FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT        0x27D
-#define FLAG_DEFEATED_MARS                               0x27E
-#define FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL           0x27F
-#define FLAG_HIDE_WINDWORKSVALLEY_GRUNT                  0x280
+#define FLAG_HIDE_WINDWORKS_INDOOR_GIRL                  0x27E
+#define FLAG_HIDE_WINDWORKS_INDOOR_GRUNT                 0x27F
+#define FLAG_UNUSED_0x281  0x280 // Unused Flag
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag
 #define FLAG_UNUSED_0x282  0x282 // Unused Flag
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
