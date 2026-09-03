@@ -2,171 +2,87 @@
   "map_sections": [
     {
       "id": "MAPSEC_TWINLEAF_TOWN",
-      "name": "TWINLEAF TOWN",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "TWINLEAF TOWN"
     },
     {
       "id": "MAPSEC_SANDGEM_TOWN",
-      "name": "SANDGEM TOWN",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "SANDGEM TOWN"
     },
     {
       "id": "MAPSEC_JUBILIFE_CITY",
-      "name": "JUBILIFE CITY",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "JUBILIFE CITY"
     },
     {
       "id": "MAPSEC_OREBURGH_CITY",
-      "name": "OREBURGH CITY",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "OREBURGH CITY"
     },
     {
       "id": "MAPSEC_FLOAROMA_TOWN",
-      "name": "FLOAROMA TOWN",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "FLOAROMA TOWN"
     },
     {
       "id": "MAPSEC_ROUTE_201",
-      "name": "ROUTE 201",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 201"
     },
     {
       "id": "MAPSEC_ROUTE_202",
-      "name": "ROUTE 202",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 202"
     },
     {
       "id": "MAPSEC_ROUTE_203",
-      "name": "ROUTE 203",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 203"
     },
     {
       "id": "MAPSEC_ROUTE_204",
-      "name": "ROUTE 204",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 204"
     },
     {
       "id": "MAPSEC_ROUTE_205_NORTH",
-      "name": "ROUTE 205",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 205"
     },
     {
       "id": "MAPSEC_ROUTE_205_SOUTH",
-      "name": "ROUTE 205",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 205"
     },
     {
       "id": "MAPSEC_ROUTE_207",
-      "name": "ROUTE 207",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 207"
     },
     {
       "id": "MAPSEC_ROUTE_219",
-      "name": "ROUTE 219",
-      "x": 4,
-      "y": 11,
-      "width": 4,
-      "height": 1
+      "name": "ROUTE 219"
     },
     {
       "id": "MAPSEC_RAVAGED_PATH",
-      "name": "RAVAGED PATH",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "RAVAGED PATH"
     },
     {
       "id": "MAPSEC_OREBURGH_GATE",
-      "name": "OREBURGH GATE",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "OREBURGH GATE"
     },
     {
       "id": "MAPSEC_OREBURGH_MINE",
-      "name": "OREBURGH MINE",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "OREBURGH MINE"
     },
     {
       "id": "MAPSEC_LAKE_VERITY",
-      "name": "LAKE VERITY",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "LAKE VERITY"
     },
     {
       "id": "MAPSEC_LAKEFRONT_VERITY",
-      "name": "VERITY LAKEFRONT",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "VERITY LAKEFRONT"
     },
     {
       "id": "MAPSEC_VALLEY_WINDWORKS",
-      "name": "VALLEY WINDWORKS",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "VALLEY WINDWORKS"
     },
     {
       "id": "MAPSEC_FLOAROMA_MEADOW",
-      "name": "FLOAROMA MEADOW",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "FLOAROMA MEADOW"
     },
     {
       "id": "MAPSEC_ETERNA_FOREST",
-      "name": "ETERNA FOREST",
-      "x": 4,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "name": "ETERNA FOREST"
     },
     {
       "id": "MAPSEC_LITTLEROOT_TOWN",
