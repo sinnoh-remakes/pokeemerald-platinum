@@ -24,7 +24,11 @@ FloaromaMeadow_EventScript_Galactic::
 	delay 48
 	msgbox FloaromaMeadow_Text_Galactic_PreBattle, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_FLOAROMA_MEADOW_GRUNT_1, FloaromaMeadow_Text_Galactic_Grunt1_Defeat
+	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceRight
+	waitmovement 0
 	msgbox FloaromaMeadow_Text_Galactic_Grunt1_AfterBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceDown
+	waitmovement 0
 	trainerbattle_no_intro TRAINER_FLOAROMA_MEADOW_GRUNT_2, FloaromaMeadow_Text_Galactic_Grunt2_Defeat
 	msgbox FloaromaMeadow_Text_Galactic_Grunt2_AfterBattle, MSGBOX_AUTOCLOSE
 	fadescreen 1
