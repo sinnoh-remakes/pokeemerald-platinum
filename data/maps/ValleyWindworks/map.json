@@ -19,7 +19,7 @@
       "direction": "up"
     },
     {
-      "map": "MAP_ROUTE205_SOUTH",
+      "map": "MAP_ROUTE205_SOUTH2",
       "offset": 0,
       "direction": "left"
     }
@@ -416,6 +416,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ValleyWindworks_EventScript_Locked",
       "flag": "FLAG_HIDE_VALLEYWINDWORKS_DOOR_LOCK"
+    },
+    {
+      "local_id": "LOCALID_VALLEY_WINDWORKS_LOOKER",
+      "graphics_id": "OBJ_EVENT_GFX_LOOKER_PT",
+      "x": 18,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VALLEY_WINDWORKS_LOOKER"
     }
   ],
   "warp_events": [

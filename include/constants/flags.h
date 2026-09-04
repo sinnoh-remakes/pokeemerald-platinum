@@ -449,6 +449,10 @@
 #define FLAG_REGISTERED_PT_DALLAS            (TRAINER_REGISTERED_FLAGS_START + REMATCH_PT_DALLAS)
 #define FLAG_REGISTERED_PT_MADELINE          (TRAINER_REGISTERED_FLAGS_START + REMATCH_PT_MADELINE)
 #define FLAG_REGISTERED_PT_SAMANTHA          (TRAINER_REGISTERED_FLAGS_START + REMATCH_PT_SAMANTHA)
+#define FLAG_REGISTERED_PT_BRANDON           (TRAINER_REGISTERED_FLAGS_START + REMATCH_PT_BRANDON)
+#define FLAG_REGISTERED_PT_ELIZABETH         (TRAINER_REGISTERED_FLAGS_START + REMATCH_PT_ELIZABETH)
+#define FLAG_REGISTERED_PT_ZACKARY           (TRAINER_REGISTERED_FLAGS_START + REMATCH_PT_ZACKARY)
+#define FLAG_REGISTERED_PT_KARINA            (TRAINER_REGISTERED_FLAGS_START + REMATCH_PT_KARINA)
 #define FLAG_REGISTERED_WALLY                (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLY)
 #define FLAG_REGISTERED_ROXANNE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_ROXANNE)
 #define FLAG_REGISTERED_BRAWLY               (TRAINER_REGISTERED_FLAGS_START + REMATCH_BRAWLY)
@@ -689,7 +693,7 @@
 #define FLAG_DEFEATED_MARS                               0x27E
 #define FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL           0x27F
 #define FLAG_HIDE_WINDWORKSVALLEY_GRUNT                  0x280
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
+#define FLAG_HIDE_VALLEY_WINDWORKS_LOOKER                0x281
 #define FLAG_UNUSED_0x282  0x282 // Unused Flag
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
@@ -1250,10 +1254,10 @@
 #define FLAG_ITEM_FLOAROMA_MEADOW_ULTRA_BALL                        0x4A8
 #define FLAG_ITEM_FLOAROMA_MEADOW_RARE_CANDY                        0x4A9
 #define FLAG_ITEM_FLOAROMA_MEADOW_LEAF_STONE                        0x4AA
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
+#define FLAG_ITEM_ROUTE_205_REPEL                                   0x4AB
+#define FLAG_ITEM_ROUTE_205_HEAL_BALL                               0x4AC
+#define FLAG_ITEM_ROUTE_205_SUPER_POTION                            0x4AD
+#define FLAG_ITEM_ROUTE_205_X_SP_DEF                                0x4AE
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
 #define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
 #define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag

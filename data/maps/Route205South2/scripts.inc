@@ -5,6 +5,7 @@ Route205South2_MapScripts::
 @ 1: Talked to the girl
 @ 2: Entered Windworks Valley Indoors
 @ 3: Defeated Mars
+@ 4: Met Looker in Valley Windworks
 
 Route205South2_EventScript_Galactic_Roadblock::
 	lock
