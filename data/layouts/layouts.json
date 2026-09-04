@@ -4867,7 +4867,7 @@
       "width": 60,
       "height": 25,
       "primary_tileset": "gTileset_OutdoorEterna",
-      "secondary_tileset": "gTileset_Eterna",
+      "secondary_tileset": "gTileset_EternaNorth",
       "border_filepath": "data/layouts/EternaCityNorth/border.bin",
       "blockdata_filepath": "data/layouts/EternaCityNorth/map.bin"
     },
@@ -4877,7 +4877,7 @@
       "width": 60,
       "height": 30,
       "primary_tileset": "gTileset_OutdoorEterna",
-      "secondary_tileset": "gTileset_Eterna",
+      "secondary_tileset": "gTileset_EternaSouth",
       "border_filepath": "data/layouts/EternaCitySouth/border.bin",
       "blockdata_filepath": "data/layouts/EternaCitySouth/map.bin"
     }
