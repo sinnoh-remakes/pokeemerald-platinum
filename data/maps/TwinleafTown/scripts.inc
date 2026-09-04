@@ -384,36 +384,12 @@ TwinleafTown_EventScript_TownSign::
 	end
 
 TwinleafTown_EventScript_PlayersHouseSign::
-	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, TwinleafTown_EventScript_PlayersHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, TwinleafTown_EventScript_BirchsHouseSignFemale
-	releaseall
+	msgbox TwinleafTown_Text_PlayersHouse, MSGBOX_SIGN
 	end
 
-TwinleafTown_EventScript_PlayersHouseSignMale::
-	msgbox TwinleafTown_Text_PlayersHouse, MSGBOX_DEFAULT
-	return
-
-TwinleafTown_EventScript_BirchsHouseSignFemale::
-	msgbox TwinleafTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-	return
-
-TwinleafTown_EventScript_MaysHouseSign::
-	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, TwinleafTown_EventScript_BirchsHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, TwinleafTown_EventScript_PlayersHouseSignFemale
-	releaseall
+TwinleafTown_EventScript_RivalsHouseSign::
+	msgbox TwinleafTown_Text_RivalsHouse, MSGBOX_SIGN
 	end
-
-TwinleafTown_EventScript_BirchsHouseSignMale::
-	msgbox TwinleafTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-	return
-
-TwinleafTown_EventScript_PlayersHouseSignFemale::
-	msgbox TwinleafTown_Text_PlayersHouse, MSGBOX_DEFAULT
-	return
 
 TwinleafTown_EventScript_FatMan::
 	msgbox TwinleafTown_Text_FatMan, MSGBOX_NPC
@@ -512,5 +488,5 @@ TwinleafTown_Text_TownSign:
 TwinleafTown_Text_PlayersHouse:
 	.string "{PLAYER}'s House$"
 
-TwinleafTown_Text_ProfBirchsHouse:
+TwinleafTown_Text_RivalsHouse:
 	.string "{RIVAL}'s House$"
