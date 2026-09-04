@@ -19,15 +19,18 @@ ValleyWindworks_EventScript_Looker::
 	applymovement LOCALID_VALLEY_WINDWORKS_LOOKER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	delay 64
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	applymovement LOCALID_VALLEY_WINDWORKS_LOOKER, ValleyWindworks_Movement_Looker
 	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
 	msgbox ValleyWindworks_Text_Looker, MSGBOX_AUTOCLOSE
-	applymovement LOCALID_VALLEY_WINDWORKS_LOOKER, Common_Movement_WalkRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_VALLEY_WINDWORKS_LOOKER, Common_Movement_FaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_VALLEY_WINDWORKS_LOOKER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement LOCALID_VALLEY_WINDWORKS_LOOKER, Common_Movement_FaceUp
+	waitmovement 0
 	delay 8
 	removeobject LOCALID_VALLEY_WINDWORKS_LOOKER
 	playse SE_DOOR
@@ -41,9 +44,9 @@ ValleyWindworks_EventScript_Looker::
 	msgbox ValleyWindworks_Text_Looker_2, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_VALLEY_WINDWORKS_LOOKER, ValleyWindworks_Movement_Looker_2
 	delay 16
-	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceLeft
 	delay 8
-	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceDown
 	waitmovement LOCALID_VALLEY_WINDWORKS_LOOKER
 	removeobject LOCALID_VALLEY_WINDWORKS_LOOKER
 	setflag FLAG_HIDE_VALLEY_WINDWORKS_LOOKER
