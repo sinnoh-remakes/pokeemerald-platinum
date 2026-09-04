@@ -1,2 +1,2 @@
-EternaCity_MapScripts::
+EternaCityNorth_MapScripts::
 	.byte 0
