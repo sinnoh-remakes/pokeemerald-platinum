@@ -4865,7 +4865,7 @@
       "id": "LAYOUT_ETERNA_CITY_NORTH",
       "name": "EternaCityNorth_Layout",
       "width": 60,
-      "height": 25,
+      "height": 26,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_EternaNorth",
       "border_filepath": "data/layouts/EternaCityNorth/border.bin",
