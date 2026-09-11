@@ -45,6 +45,10 @@ EternaForest_EventScript_BugCatcher::
 	msgbox EternaForest_Text_BugPokemon, MSGBOX_NPC
 	end
 
+EternaForest_EventScript_MossyRock::
+	msgbox EternaForest_Text_MossyRock, MSGBOX_SIGN
+	end
+
 EternaForest_EventScript_RouteSign::
 	msgbox EternaForest_Text_RouteSign, MSGBOX_SIGN
 	end
