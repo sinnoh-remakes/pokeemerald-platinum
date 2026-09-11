@@ -80,7 +80,36 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 60,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE205_SOUTH1",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 19,
+      "y": 60,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE205_SOUTH1",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 77,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE205NORTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 77,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE205NORTH",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
