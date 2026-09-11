@@ -40,3 +40,36 @@ EternaForest_EventScript_Rachael::
 	trainerbattle_single TRAINER_PT_RACHAEL, EternaForest_Text_RachaelIntro, EternaForest_Text_RachaelDefeated
 	msgbox EternaForest_Text_RachaelPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+EternaForest_EventScript_BugCatcher::
+	msgbox EternaForest_Text_BugPokemon, MSGBOX_NPC
+	end
+
+EternaForest_EventScript_RouteSign::
+	msgbox EternaForest_Text_RouteSign, MSGBOX_SIGN
+	end
+
+EternaForest_EventScript_TrainerTips::
+	msgbox EternaForest_Text_TrainerTips, MSGBOX_SIGN
+	end
+
+EternaForest_Text_BugPokemon:
+	.string "I’m searching for bug Pokémon so I can\n"
+	.string "win at the Eterna Gym.\p"
+	.string "Bug Pokémon are great, you know?\n"
+	.string "They grow really fast!$"
+
+EternaForest_Text_MossyRock::
+	.string "The rock is covered in moss.\n"
+	.string "It feels pleasantly cool.$"
+
+EternaForest_Text_RouteSign:
+	.string "The Eterna Forest\n"
+	.string "Where Time Flows Eternally$"
+
+EternaForest_Text_TrainerTips:
+	.string "Trainer Tips!\p"
+	.string "In forests and caves, there are many\n"
+	.string "items on the ground that cannot be\l"
+	.string "seen in the murky darkness.\p"
+	.string "Take the time to search carefully!$"
