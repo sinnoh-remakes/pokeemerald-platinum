@@ -179,9 +179,9 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnChimchar::
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Lucas::
 	switch VAR_STARTER_MON
-	case 0, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnPiplup
-	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnTurtwig
-	case 2, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnChimchar
+	case 0, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasPiplup
+	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasTurtwig
+	case 2, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasChimchar
 	release
 	end
 
@@ -389,7 +389,9 @@ JubilifeCity_EventScript_HelperWalkUp::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp17
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp17
 	waitmovement 0
-	msgbox JubilifeCity_Text_ThatMan, MSGBOX_DEFAULT
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_DawnThatMan
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_LucasThatMan
 	closemessage
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry1
 	waitmovement 0
@@ -398,7 +400,9 @@ JubilifeCity_EventScript_HelperWalkUp::
 	applymovement LOCALID_CAMERA, JubilifeCity_Movement_PlayerMeetLooker
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerMeetLooker
 	waitmovement 0
-	msgbox JubilifeCity_Text_Um, MSGBOX_DEFAULT
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_DawnUm
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_LucasUm
 	applymovement LOCALID_JUBILIFE_LOOKER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	playse SE_PIN
@@ -411,7 +415,9 @@ JubilifeCity_EventScript_HelperWalkUp::
 	closemessage
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
-	msgbox JubilifeCity_Text_BegYourPardon, MSGBOX_YESNO
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_DawnBegYourPardon
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_LucasBegYourPardon
 	call_if_eq VAR_RESULT, YES, JubilifeCity_EventScript_LookerYes
 	call_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_LookerNo
 	msgbox JubilifeCity_Text_DoNotHeed, MSGBOX_DEFAULT
@@ -431,7 +437,9 @@ JubilifeCity_EventScript_HelperWalkUp::
 	fadedefaultbgm
 	closemessage
 	delay 48
-	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_DEFAULT
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_DawnWorkingInternational
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_LucasWorkingInternational
 	closemessage
 	delay 48
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerSeeSchool
@@ -459,6 +467,38 @@ JubilifeCity_EventScript_LookerYes::
 
 JubilifeCity_EventScript_LookerNo::
 	msgbox JubilifeCity_Text_ClaimNotKnow, MSGBOX_DEFAULT
+	return
+
+JubilifeCity_EventScript_DawnThatMan::
+	msgbox JubilifeCity_Text_ThatMan, MSGBOX_DEFAULT
+	return
+
+JubilifeCity_EventScript_LucasThatMan::
+	msgbox JubilifeCity_Text_ThatManLucas, MSGBOX_DEFAULT
+	return
+
+JubilifeCity_EventScript_DawnUm::
+	msgbox JubilifeCity_Text_Um, MSGBOX_DEFAULT
+	return
+
+JubilifeCity_EventScript_LucasUm::
+	msgbox JubilifeCity_Text_UmLucas, MSGBOX_DEFAULT
+	return
+
+JubilifeCity_EventScript_DawnBegYourPardon::
+	msgbox JubilifeCity_Text_BegYourPardon, MSGBOX_YESNO
+	return
+
+JubilifeCity_EventScript_LucasBegYourPardon::
+	msgbox JubilifeCity_Text_BegYourPardonLucas, MSGBOX_YESNO
+	return
+
+JubilifeCity_EventScript_DawnWorkingInternational::
+	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_DEFAULT
+	return
+
+JubilifeCity_EventScript_LucasWorkingInternational::
+	msgbox JubilifeCity_Text_WorkingInternationalLucas, MSGBOX_DEFAULT
 	return
 	
 JubilifeCity_Movement_LookerScurry1:
@@ -1565,6 +1605,13 @@ JubilifeCity_Text_ThatMan:
 JubilifeCity_Text_Um:
 	.string "Dawn: Um...$"
 
+JubilifeCity_Text_ThatManLucas:
+	.string "Lucas: That guy...\n"
+	.string "What's he doing?$"
+
+JubilifeCity_Text_UmLucas:
+	.string "Lucas: Uh, excuse...$"
+
 JubilifeCity_Text_HowDidYouKnow:
 	.string "WHAAAT?!\p"
 	.string "Mysterious man: ...How did you know?\p"
@@ -1574,6 +1621,29 @@ JubilifeCity_Text_HowDidYouKnow:
 JubilifeCity_Text_BegYourPardon:
 	.string "Dawn: Huh? What? I beg your pardon?\n"
 	.string "I was just making conversation...\p"
+	.string "Shady man: ...Heh. You claim you were\n"
+	.string "only making conversation, do you?\p"
+	.string "But I know better not to believe that.\n"
+	.string "No, no, no.\p"
+	.string "You recognized right away that I was\n"
+	.string "someone extraordinary.\p"
+	.string "That is why you spoke to me, is it not?\n"
+	.string "Your power of observation is fearsome!\p"
+	.string "Quite admirable, you are!\p"
+	.string "Now that my cover has been blown, let\n"
+	.string "me introduce myself.\p"
+	.string "I am a globe-trotting elite of the\n"
+	.string "International Police.\p"
+	.string "My name... Ah, no, I shall inform you\n"
+	.string "only of my code name.\p"
+	.string "My code name, it is Looker.\n"
+	.string "It is what they all call me.\p"
+	.string "Incidentally, is the saying, “Don't be\n"
+	.string "a thief!” familar to you?$"
+
+JubilifeCity_Text_BegYourPardonLucas:
+	.string "Lucas: Huh? What? Are you kidding?\n"
+	.string "I was just making a small talk...\p"
 	.string "Shady man: ...Heh. You claim you were\n"
 	.string "only making conversation, do you?\p"
 	.string "But I know better not to believe that.\n"
@@ -1638,6 +1708,10 @@ JubilifeCity_Text_HaveRequest:
 JubilifeCity_Text_WorkingInternational:
 	.string "Dawn: ...Working for the International\n"
 	.string "Police must be hard.$"
+
+JubilifeCity_Text_WorkingInternationalLucas:
+	.string "Lucas: ...Working for the International\n"
+	.string "Police sounds hard.$"
 
 JubilifeCity_Text_HereItIs:
 	.string "{PLAYER}, here it is.\n"
