@@ -1,5 +1,5 @@
 {
-  "id": "MAP_ROUTE205NORTH",
+  "id": "MAP_ROUTE205_NORTH",
   "name": "Route205North",
   "layout": "LAYOUT_ROUTE205_NORTH",
   "music": "MUS_DP_ROUTE205_DAY",
@@ -20,7 +20,22 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 2,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_FOREST",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 2,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_FOREST",
+      "dest_warp_id": "3"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
