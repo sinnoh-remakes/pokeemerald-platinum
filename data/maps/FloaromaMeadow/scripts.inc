@@ -34,7 +34,7 @@ FloaromaMeadow_EventScript_Galactic::
 	msgbox FloaromaMeadow_Text_Galactic_Grunt2_AfterBattle, MSGBOX_AUTOCLOSE
 	fadescreen 1
 	setflag FLAG_HIDE_FLOAROMA_MEADOW_GALACTIC_EVENT
-	clearflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT
+	clearflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	removeobject LOCALID_GRUNT_1
 	removeobject LOCALID_GRUNT_2
 	addobject LOCALID_WORKS_KEY_BALL
@@ -44,7 +44,7 @@ FloaromaMeadow_EventScript_Galactic::
 	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 32
-	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT
+	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	addvar VAR_FLOAROMA_MEADOW_STATE, 1
 	removeobject LOCALID_WORKS_KEY_BALL
 	compare VAR_0x8007, TRUE
