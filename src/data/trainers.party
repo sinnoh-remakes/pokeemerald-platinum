@@ -18024,3 +18024,127 @@ AI: Check Bad Move
 Empoleon (M)
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_JACK ===
+Name: Jack
+Class: Pt Bug Catcher
+Pic: Bug Catcher DP
+Gender: Male
+Music: Bug Catcher DP
+Double Battle: No
+AI: Check Bad Move
+
+Wurmple (M)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Silcoon (M)
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Beautifly (M)
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_BRIANA ===
+Name: Briana
+Class: Pt Lass
+Pic: Lass DP
+Gender: Female
+Music: Lass DP
+Double Battle: No
+AI: Check Bad Move
+
+Pachirisu (F)
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_LINDSEY ===
+Name: Lindsey
+Class: Pt Psychic
+Pic: Psychic F DP
+Gender: Female
+Music: Psychic F DP
+Double Battle: No
+AI: Check Bad Move
+
+Abra (M)
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_ELIJAH ===
+Name: Elijah
+Class: Pt Psychic
+Pic: Psychic M DP
+Gender: Male
+Music: Psychic M DP
+Double Battle: No
+AI: Check Bad Move
+
+Abra (M)
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_PHILLIP ===
+Name: Phillip
+Class: Pt Bug Catcher
+Pic: Bug Catcher DP
+Gender: Male
+Music: Bug Catcher DP
+Double Battle: No
+AI: Check Bad Move
+
+Wurmple (M)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Cascoon (M)
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Dustox (M)
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_DONALD ===
+Name: Donald
+Class: Pt Bug Catcher
+Pic: Bug Catcher DP
+Gender: Male
+Music: Bug Catcher DP
+Double Battle: No
+AI: Check Bad Move
+
+Burmy-Sandy (M)
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Burmy-Trash (M)
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_KODY ===
+Name: Kody
+Class: Pt Psychic
+Pic: Psychic M DP
+Gender: Male
+Music: Psychic M DP
+Double Battle: No
+AI: Check Bad Move
+
+Meditite (M)
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_RACHAEL ===
+Name: Rachael
+Class: Pt Psychic
+Pic: Psychic F DP
+Gender: Female
+Music: Psychic F DP
+Double Battle: No
+AI: Check Bad Move
+
+Psyduck (F)
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

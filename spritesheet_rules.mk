@@ -765,6 +765,12 @@ $(OBJEVENTGFXDIR)/people/youngster.4bpp: %.4bpp: %.png
 
 
 
+$(OBJEVENTGFXDIR)/misc/breakable_rock_pt.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 1 -mheight 2
+
+$(OBJEVENTGFXDIR)/misc/cuttable_tree_pt.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 1 -mheight 2
+
 $(OBJEVENTGFXDIR)/misc/wind_turbine_blades_1.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 

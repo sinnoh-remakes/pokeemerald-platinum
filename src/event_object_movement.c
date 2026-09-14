@@ -513,7 +513,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_MayReflection,         OBJ_EVENT_PAL_TAG_MAY_REFLECTION},
     {gObjectEventPal_MovingBox,             OBJ_EVENT_PAL_TAG_MOVING_BOX},
     {gObjectEventPal_CableCar,              OBJ_EVENT_PAL_TAG_CABLE_CAR},
-    {gObjectEventPal_WindTurbine,           OBJ_EVENT_PAL_TAG_WIND_TURBINE},
     {gObjectEventPal_SSTidal,               OBJ_EVENT_PAL_TAG_SSTIDAL},
     {gObjectEventPal_Kyogre,                OBJ_EVENT_PAL_TAG_KYOGRE},
     {gObjectEventPal_KyogreReflection,      OBJ_EVENT_PAL_TAG_KYOGRE_REFLECTION},
@@ -644,7 +643,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_WorkerPt,              OBJ_EVENT_PAL_TAG_WORKER_PT},
     {gObjectEventPal_YoungsterPt,           OBJ_EVENT_PAL_TAG_YOUNGSTER_PT},
     {gObjectEventPal_BriefcasePt,           OBJ_EVENT_PAL_TAG_BRIEFCASE_PT},
-    {gObjectEventPal_RockPt,                OBJ_EVENT_PAL_TAG_ROCK_PT},
+    {gObjectEventPal_BreakableRockPt,       OBJ_EVENT_PAL_TAG_BREAKABLE_ROCK_PT},
+    {gObjectEventPal_CuttableTreePt,        OBJ_EVENT_PAL_TAG_CUTTABLE_TREE_PT},
+    {gObjectEventPal_WindTurbine,           OBJ_EVENT_PAL_TAG_WIND_TURBINE},
 
 
 #if OW_FOLLOWERS_POKEBALLS

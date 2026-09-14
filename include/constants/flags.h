@@ -693,7 +693,7 @@
 #define FLAG_DEFEATED_MARS                               0x27E
 #define FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL           0x27F
 #define FLAG_HIDE_WINDWORKSVALLEY_GRUNT                  0x280
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
+#define FLAG_HIDE_VALLEY_WINDWORKS_LOOKER                0x281
 #define FLAG_UNUSED_0x282  0x282 // Unused Flag
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
@@ -1258,11 +1258,11 @@
 #define FLAG_ITEM_ROUTE_205_HEAL_BALL                               0x4AC
 #define FLAG_ITEM_ROUTE_205_SUPER_POTION                            0x4AD
 #define FLAG_ITEM_ROUTE_205_X_SP_DEF                                0x4AE
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
+#define FLAG_ITEM_ETERNA_FOREST_ANTIDOTE                            0x4AF
+#define FLAG_ITEM_ETERNA_FOREST_PARLYZ_HEAL                         0x4B0
+#define FLAG_ITEM_ETERNA_FOREST_NET_BALL                            0x4B1
+#define FLAG_ITEM_ETERNA_FOREST_POTION                              0x4B2
+#define FLAG_ITEM_ETERNA_FOREST_GREEN_SHARD                         0x4B3
 #define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
 #define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
 #define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
