@@ -1,0 +1,18 @@
+{
+  "flowers": {
+    "frame_factor": 32,
+    "frames": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "frame_order": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "tile_offset": 1
+  }
+}
