@@ -180,7 +180,12 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
     if (version == "firered")
         text << "\t.byte " << json_to_string(map_data, "floor_number") << "\n";
 
-     text << "\t.byte " << json_to_string(map_data, "battle_scene") << "\n\n";
+    text << "\t.byte " << json_to_string(map_data, "battle_scene") << "\n";
+
+    if (map_data.object_items().find("overlay") != map_data.object_items().end())
+        text << "\t.4byte " << mapName << "_MapOverlay\n" << "\n";
+    else
+        text << "\t.4byte NULL\n" << "\n";
 
     return text.str();
 }
@@ -205,6 +210,61 @@ string generate_map_connections_text(Json map_data) {
     text << "\n" << mapName << "_MapConnections:\n"
          << "\t.4byte " << map_data["connections"].array_items().size() << "\n"
          << "\t.4byte " << mapName << "_MapConnectionsList\n\n";
+
+    return text.str();
+}
+
+string generate_map_overlay_text(Json map_data) {
+    if (map_data["overlay"] == Json())
+        return string("\n");
+
+    string mapName = json_to_string(map_data, "name");
+    ostringstream text;
+
+    text << get_generated_warning("data/maps/" + mapName + "/map.json", true);
+    text << "\t.align 2\n\n";
+
+
+    // --- Collect indices for sorting ---
+    vector<size_t> indices;
+    if (map_data["overlay"].object_items().find("tiles") != map_data["overlay"].object_items().end()
+        && map_data["overlay"]["tiles"].array_items().size() > 0) {
+
+        auto &tiles = map_data["overlay"]["tiles"].array_items();
+        indices.resize(tiles.size());
+        for (size_t i = 0; i < tiles.size(); ++i)
+            indices[i] = i;
+
+        // Sort indices by X then Y
+        std::sort(indices.begin(), indices.end(), [&tiles](size_t a, size_t b) {
+            int aidx = stoi(json_to_string(tiles[a], "idx"));
+            int bidx = stoi(json_to_string(tiles[b], "idx"));
+            return aidx < bidx;
+        });
+
+        // Emit tile data in sorted order
+        text << mapName << "_MapOverlayTiles:\n";
+        for (size_t i : indices) {
+            auto &tile = tiles[i];
+            // text << "\t.2byte " << json_to_string(tile, "x") << ", " << json_to_string(tile, "y") << "\n";
+            text << "\t.2byte " << json_to_string(tile, "top_tile_id") << "\n";
+        }
+
+        // Emit the count dynamically
+        text << "\n" << mapName << "_MapOverlay:\n";
+        text << "\t.4byte " << mapName << "_MapOverlayTiles\n";
+        text << "\t.2byte " << tiles.size() << "\n";
+    }
+
+    int initial_eva = 8;
+    int initial_evb = 8;
+    if (map_data["overlay"].object_items().find("initial_eva") != map_data["overlay"].object_items().end())
+        initial_eva = stoi(json_to_string(map_data["overlay"], "initial_eva"));
+    if (map_data["overlay"].object_items().find("initial_evb") != map_data["overlay"].object_items().end())
+        initial_evb = stoi(json_to_string(map_data["overlay"], "initial_evb"));
+
+    text << "\t.byte " << initial_eva << "\n";
+    text << "\t.byte " << initial_evb << "\n\n";
 
     return text.str();
 }
@@ -384,11 +444,13 @@ void process_map(string map_filepath, string layouts_filepath, string output_dir
     string header_text = generate_map_header_text(map_data, layouts_data);
     string events_text = generate_map_events_text(map_data);
     string connections_text = generate_map_connections_text(map_data);
+    string overlays_text = generate_map_overlay_text(map_data);
 
     string out_dir = strip_trailing_separator(output_dir).append(sep);
     write_text_file(out_dir + "header.inc", header_text);
     write_text_file(out_dir + "events.inc", events_text);
     write_text_file(out_dir + "connections.inc", connections_text);
+    write_text_file(out_dir + "overlays.inc", overlays_text);
 }
 
 void process_event_constants(const vector<string> &map_filepaths, string output_ids_file) {
@@ -481,6 +543,22 @@ string generate_connections_text(Json groups_data, string include_path) {
 
     for (Json map_name : map_names)
         text << "\t.include \"" << include_path << "/" <<  json_to_string(map_name) << "/connections.inc\"\n";
+
+    return text.str();
+}
+
+string generate_overlays_text(Json groups_data, string include_path) {
+    vector<string> map_names;
+
+    for (auto &group : groups_data["group_order"].array_items())
+        for (auto map_name : groups_data[json_to_string(group)].array_items())
+            map_names.push_back(json_to_string(map_name));
+
+    ostringstream text;
+    text << get_generated_warning(include_path + "/map_groups.json", true);
+
+    for (string map_name : map_names)
+        text << "\t.include \"" << include_path << "/" << map_name << "/overlays.inc\"\n";
 
     return text.str();
 }
@@ -596,12 +674,14 @@ void process_groups(string groups_filepath, string output_asm, string output_c) 
 
     string groups_text = generate_groups_text(groups_data);
     string connections_text = generate_connections_text(groups_data, output_asm);
+    string overlays_text = generate_overlays_text(groups_data, output_asm);
     string headers_text = generate_headers_text(groups_data, output_asm);
     string events_text = generate_events_text(groups_data, output_asm);
     string map_header_text = generate_map_constants_text(groups_filepath, groups_data);
 
     write_text_file(output_asm + sep + "groups.inc", groups_text);
     write_text_file(output_asm + sep + "connections.inc", connections_text);
+    write_text_file(output_asm + sep + "overlays.inc", overlays_text);
     write_text_file(output_asm + sep + "headers.inc", headers_text);
     write_text_file(output_asm + sep + "events.inc", events_text);
     write_text_file(output_c + sep + "map_groups.h", map_header_text);

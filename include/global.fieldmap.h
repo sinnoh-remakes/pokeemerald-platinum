@@ -38,9 +38,10 @@
 #define UNPACK_LAYER_TYPE(data) UNPACK(data, METATILE_ATTR_LAYER_SHIFT, METATILE_ATTR_LAYER_MASK)
 
 enum {
-    METATILE_LAYER_TYPE_NORMAL,  // Metatile uses middle and top bg layers
-    METATILE_LAYER_TYPE_COVERED, // Metatile uses bottom and middle bg layers
-    METATILE_LAYER_TYPE_SPLIT,   // Metatile uses bottom and top bg layers
+    METATILE_LAYER_TYPE_NORMAL,  // Metatile uses bottom, middle and top layers | On overlay: No difference. Top tile gets alpha blended
+    METATILE_LAYER_TYPE_COVERED, // Metatile uses bottom and middle bg layers   | On overlay: No difference.
+    METATILE_LAYER_TYPE_SPLIT,   // Metatile uses bottom and top bg layers      | On overlay: Top tile moved to middle layer
+    METATILE_LAYER_TYPE_TOP,     // Metatile uses middle and top bg layers      | On overlay: Middle moved to bottom, Top Moved to middle
 };
 
 #define METATILE_ID(tileset, name) (METATILE_##tileset##_##name)
@@ -161,6 +162,17 @@ struct MapConnections
     const struct MapConnection *connections;
 };
 
+struct MapOverlayTiles {
+    u16 topTileId; // The top layer from this metatile will replace the top layer of the overlaid metatile
+} __attribute__((packed));
+
+struct MapOverlay {
+    const struct MapOverlayTiles *overlayTiles;
+    u16 overlayTileCount;
+    u8 initialEVA;
+    u8 initialEVB;
+} __attribute__((packed));
+
 struct MapHeader
 {
     /* 0x00 */ const struct MapLayout *mapLayout;
@@ -181,6 +193,7 @@ struct MapHeader
                bool8 showMapName:5; // the last 4 bits are unused
                                     // but the 5 bit sized bitfield is required to match
     /* 0x1B */ u8 battleType;
+               const struct MapOverlay *overlay;
 };
 
 
