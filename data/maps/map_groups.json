@@ -53,7 +53,9 @@
     "JubilifeCity",
     "OreburghCityNorth",
     "OreburghCitySouth",
-    "FloaromaTown"
+    "FloaromaTown",
+    "EternaCityNorth",
+    "EternaCitySouth"
   ],
   "gMapGroup_Routes": [
     "Route201",

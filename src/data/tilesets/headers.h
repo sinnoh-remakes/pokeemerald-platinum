@@ -1424,3 +1424,25 @@ const struct Tileset gTileset_Route205North =
     .metatileAttributes = gMetatileAttributes_Route205North,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_EternaNorth =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EternaNorth,
+    .palettes = gTilesetPalettes_EternaNorth,
+    .metatiles = gMetatiles_EternaNorth,
+    .metatileAttributes = gMetatileAttributes_EternaNorth,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EternaSouth =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EternaSouth,
+    .palettes = gTilesetPalettes_EternaSouth,
+    .metatiles = gMetatiles_EternaSouth,
+    .metatileAttributes = gMetatileAttributes_EternaSouth,
+    .callback = NULL,
+};

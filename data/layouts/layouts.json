@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_ROUTE205_NORTH",
       "name": "Route205North_Layout",
-      "width": 32,
+      "width": 33,
       "height": 36,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Route205North",
@@ -4860,6 +4860,26 @@
       "secondary_tileset": "gTileset_SunyshoreHouse",
       "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_NORTH",
+      "name": "EternaCityNorth_Layout",
+      "width": 60,
+      "height": 27,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_EternaNorth",
+      "border_filepath": "data/layouts/EternaCityNorth/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCityNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_SOUTH",
+      "name": "EternaCitySouth_Layout",
+      "width": 60,
+      "height": 29,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_EternaSouth",
+      "border_filepath": "data/layouts/EternaCitySouth/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCitySouth/map.bin"
     }
   ]
 }

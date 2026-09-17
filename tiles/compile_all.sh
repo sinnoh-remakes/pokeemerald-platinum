@@ -1,123 +1,130 @@
 #!/bin/bash
 
 echo "Compiling [PRIMARY] indoor_center"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_center ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_center ./tiles/indoor_center ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] common_center_1f"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_center_1f ./tiles/common_center_1f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/common_center_1f ./tiles/common_center_1f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] common_center_2f"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_center_2f ./tiles/common_center_2f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/common_center_2f ./tiles/common_center_2f ./tiles/indoor_center ./include/constants/metatile_behaviors.h
 echo "Compiling [PRIMARY] indoor_mart"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] common_mart"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/common_mart ./tiles/common_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/common_mart ./tiles/common_mart ./tiles/indoor_mart ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] outdoor_jubilife"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_jubilife ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_jubilife ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf ./tiles/twinleaf ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/twinleaf ./tiles/twinleaf ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_201"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_201 ./tiles/route_201 ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_201 ./tiles/route_201 ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] lake"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/lake ./tiles/lake ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/lake ./tiles/lake ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] sandgem"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem ./tiles/sandgem ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/sandgem ./tiles/sandgem ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] jubilife"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/jubilife ./tiles/jubilife ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/jubilife ./tiles/jubilife ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_203"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_203 ./tiles/route_203 ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_203 ./tiles/route_203 ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_204_south"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_204_south ./tiles/route_204_south ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_204_south ./tiles/route_204_south ./tiles/outdoor_jubilife ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_twinleaf"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_twinleaf ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_player"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_player ./tiles/twinleaf_player ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/twinleaf_player ./tiles/twinleaf_player ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_living"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_living ./tiles/twinleaf_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/twinleaf_living ./tiles/twinleaf_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_house"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_house ./tiles/twinleaf_house ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/twinleaf_house ./tiles/twinleaf_house ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] sandgem_living"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_living ./tiles/sandgem_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/sandgem_living ./tiles/sandgem_living ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] sandgem_helper"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_helper ./tiles/sandgem_helper ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/sandgem_helper ./tiles/sandgem_helper ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_twinleaf_rival"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf_rival ./tiles/indoor_twinleaf_rival ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_twinleaf_rival ./tiles/indoor_twinleaf_rival ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_rival"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/twinleaf_rival ./tiles/twinleaf_rival ./tiles/indoor_twinleaf_rival ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/twinleaf_rival ./tiles/twinleaf_rival ./tiles/indoor_twinleaf_rival ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_sandgem_lab"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_sandgem_lab ./tiles/indoor_sandgem_lab ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_sandgem_lab ./tiles/indoor_sandgem_lab ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] sandgem_lab"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_lab ./tiles/sandgem_lab ./tiles/indoor_sandgem_lab ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/sandgem_lab ./tiles/sandgem_lab ./tiles/indoor_sandgem_lab ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_jubilife"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_jubilife ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_jubilife ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] jubilife_tower"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/jubilife_tower ./tiles/jubilife_tower ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/jubilife_tower ./tiles/jubilife_tower ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] jubilife_school"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/jubilife_school ./tiles/jubilife_school ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/jubilife_school ./tiles/jubilife_school ./tiles/indoor_jubilife ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] outdoor_oreburgh"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_oreburgh ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_oreburgh ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] oreburgh_north"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_north ./tiles/oreburgh_north ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/oreburgh_north ./tiles/oreburgh_north ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] oreburgh_south"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_south ./tiles/oreburgh_south ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/oreburgh_south ./tiles/oreburgh_south ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_207"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_207 ./tiles/route_207 ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_207 ./tiles/route_207 ./tiles/outdoor_oreburgh ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] gym_oreburgh"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/gym_oreburgh ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/gym_oreburgh ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] oreburgh_gym"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_gym ./tiles/oreburgh_gym ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/oreburgh_gym ./tiles/oreburgh_gym ./tiles/gym_oreburgh ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] cave_coronet"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/cave_coronet ./tiles/cave_coronet ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/cave_coronet ./tiles/cave_coronet ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] ravaged_path"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/ravaged_path ./tiles/ravaged_path ./tiles/cave_coronet ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/ravaged_path ./tiles/ravaged_path ./tiles/cave_coronet ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] cave_oreburgh"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/cave_oreburgh ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/cave_oreburgh ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] oreburgh_mine"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/oreburgh_mine ./tiles/oreburgh_mine ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/oreburgh_mine ./tiles/oreburgh_mine ./tiles/cave_oreburgh ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] outdoor_route_204"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_route_204 ./tiles/outdoor_route_204 ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_route_204 ./tiles/outdoor_route_204 ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_204_north"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_204_north ./tiles/route_204_north ./tiles/outdoor_route_204 ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_204_north ./tiles/route_204_north ./tiles/outdoor_route_204 ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] outdoor_floaroma"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_floaroma ./tiles/outdoor_floaroma ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_floaroma ./tiles/outdoor_floaroma ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] floaroma"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/floaroma ./tiles/floaroma ./tiles/outdoor_floaroma ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/floaroma ./tiles/floaroma ./tiles/outdoor_floaroma ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] outdoor_route_205"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_route_205 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_route_205 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_205_south_1"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_205_south_1 ./tiles/route_205_south_1 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_205_south_1 ./tiles/route_205_south_1 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_205_south_2"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_205_south_2 ./tiles/route_205_south_2 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_205_south_2 ./tiles/route_205_south_2 ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] valley_windworks"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/valley_windworks ./tiles/valley_windworks ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/valley_windworks ./tiles/valley_windworks ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] floaroma_meadow"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/floaroma_meadow ./tiles/floaroma_meadow ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/floaroma_meadow ./tiles/floaroma_meadow ./tiles/outdoor_route_205 ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_sunyshore"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_sunyshore ./tiles/indoor_sunyshore ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_sunyshore ./tiles/indoor_sunyshore ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] sunyshore_house"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sunyshore_house ./tiles/sunyshore_house ./tiles/indoor_sunyshore ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/sunyshore_house ./tiles/sunyshore_house ./tiles/indoor_sunyshore ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] indoor_windworks"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_windworks ./tiles/indoor_windworks ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_windworks ./tiles/indoor_windworks ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] valley_windworks_indoor"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/valley_windworks_indoor ./tiles/valley_windworks_indoor ./tiles/indoor_windworks ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/valley_windworks_indoor ./tiles/valley_windworks_indoor ./tiles/indoor_windworks ./include/constants/metatile_behaviors.h
 
 # SKIP indoor_forest, as it uses triple-layer metatile config that porytiles does not support
 # echo "Compiling [PRIMARY] indoor_forest"
 # porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_forest ./tiles/indoor_forest ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] outdoor_eterna"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/outdoor_eterna ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_eterna ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] route_205_north"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/route_205_north ./tiles/route_205_north ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_205_north ./tiles/route_205_north ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
+
+echo "Compiling [PRIMARY] outdoor_eterna"
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_eterna ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] eterna_north"
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/eterna_north ./tiles/eterna_north ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] eterna_south"
+porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/eterna_south ./tiles/eterna_south ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h

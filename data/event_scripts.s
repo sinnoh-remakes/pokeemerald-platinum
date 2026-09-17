@@ -589,6 +589,8 @@ gStdScripts_End::
 	.include "data/maps/OreburghCityNorth/scripts.inc"
 	.include "data/maps/OreburghCitySouth/scripts.inc"
 	.include "data/maps/FloaromaTown/scripts.inc"
+	.include "data/maps/EternaCityNorth/scripts.inc"
+	.include "data/maps/EternaCitySouth/scripts.inc"
 	.include "data/maps/Route201/scripts.inc"
 	.include "data/maps/Route202/scripts.inc"
 	.include "data/maps/Route203/scripts.inc"
