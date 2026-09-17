@@ -4884,7 +4884,7 @@
     {
       "id": "LAYOUT_ROUTE211_WEST",
       "name": "Route211West_Layout",
-      "width": 32,
+      "width": 36,
       "height": 32,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_Petalburg",
