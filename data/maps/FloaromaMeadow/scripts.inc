@@ -23,23 +23,28 @@ FloaromaMeadow_EventScript_Galactic::
 	playse SE_PIN
 	delay 48
 	msgbox FloaromaMeadow_Text_Galactic_PreBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_FLOAROMA_MEADOW_GRUNT, FloaromaMeadow_Text_Galactic_Grunt1_Defeat
+	trainerbattle_no_intro TRAINER_FLOAROMA_MEADOW_GRUNT_1, FloaromaMeadow_Text_Galactic_Grunt1_Defeat
+	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceRight
+	waitmovement 0
 	msgbox FloaromaMeadow_Text_Galactic_Grunt1_AfterBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox FloaromaMeadow_Text_Galactic_Grunt2_Intro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_FLOAROMA_MEADOW_GRUNT_2, FloaromaMeadow_Text_Galactic_Grunt2_Defeat
 	msgbox FloaromaMeadow_Text_Galactic_Grunt2_AfterBattle, MSGBOX_AUTOCLOSE
 	fadescreen 1
 	setflag FLAG_HIDE_FLOAROMA_MEADOW_GALACTIC_EVENT
-	clearflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT
+	clearflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	removeobject LOCALID_GRUNT_1
 	removeobject LOCALID_GRUNT_2
 	addobject LOCALID_WORKS_KEY_BALL
 	fadescreen 0
-	applymovement LOCALID_MAN, Common_Movement_WalkDown
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_MAN, Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 32
-	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT
+	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	addvar VAR_FLOAROMA_MEADOW_STATE, 1
 	removeobject LOCALID_WORKS_KEY_BALL
 	compare VAR_0x8007, TRUE
@@ -47,14 +52,14 @@ FloaromaMeadow_EventScript_Galactic::
 	goto FloaromaMeadow_EventScript_Galactic_Outro_Left
 
 FloaromaMeadow_EventScript_Galactic_Outro_Right::
-	applymovement LOCALID_MAN, Common_Movement_WalkRight
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement LOCALID_MAN, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	goto FloaromaMeadow_EventScript_Galactic_Outro
 
 FloaromaMeadow_EventScript_Galactic_Outro_Left::
-	applymovement LOCALID_MAN, Common_Movement_WalkInPlaceDown
+	applymovement LOCALID_HONEY_MAN, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	goto FloaromaMeadow_EventScript_Galactic_Outro
 
@@ -97,7 +102,9 @@ FloaromaMeadow_Text_Galactic_Grunt1_Defeat:
 
 FloaromaMeadow_Text_Galactic_Grunt1_AfterBattle:
 	.string "Grunt 1: This is so lame...\n"
-	.string "They're going to dock my pay!\p"
+	.string "They're going to dock my pay!$"
+
+FloaromaMeadow_Text_Galactic_Grunt2_Intro:
 	.string "Grunt 2: I'm up next!\n"
 	.string "Heheheh...\p"
 	.string "Battling you right after my cohort\n"
