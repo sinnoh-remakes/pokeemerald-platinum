@@ -31,19 +31,19 @@ ValleyWindworksIndoor_1F_EventScript_Grunt_Intro::
 	msgbox ValleyWindworksIndoor_Text_Grunt_Intro, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_VALLEYWINDWORKS_GRUNT_INTRO, ValleyWindworksIndoor_Movement_Grunt_Intro
 	waitmovement 0
-	setflag FLAG_HIDE_WINDWORKSVALLEY_GRUNT
+	setflag FLAG_HIDE_VALLEY_WINDWORKS_INDOOR_GRUNT
 	removeobject LOCALID_VALLEYWINDWORKS_GRUNT_INTRO
 	release
 	end
 
 ValleyWindworksIndoor_EventScript_Grunt1::
-	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_1, ValleyWindworksIndoor_Text_Grunt1Intro, ValleyWindworksIndoor_Text_Grunt1Defeated
-	msgbox ValleyWindworksIndoor_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_2, ValleyWindworks_Text_Grunt2_Intro, ValleyWindworks_Text_Grunt2_Defeated
+	msgbox ValleyWindworks_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ValleyWindworksIndoor_EventScript_Grunt2::
-	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_2, ValleyWindworksIndoor_Text_Grunt2Intro, ValleyWindworksIndoor_Text_Grunt2Defeated
-	msgbox ValleyWindworksIndoor_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_VALLEY_WINDWORKS_GRUNT_3, ValleyWindworks_Text_Grunt3_Intro, ValleyWindworks_Text_Grunt3_Defeated
+	msgbox ValleyWindworks_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ValleyWindworksIndoor_EventScript_Grunt3::
@@ -71,7 +71,7 @@ ValleyWindworksIndoor_EventScript_Mars_Top::
 	goto ValleyWindworksIndoor_EventScript_Mars
 
 ValleyWindworksIndoor_EventScript_Mars::
-	msgbox ValleyWindworksIndoor_Text_Mars, MSGBOX_DEFAULT
+	msgbox ValleyWindworksIndoor_Text_Mars_Intro, MSGBOX_DEFAULT
 	closemessage
 	trainerbattle_no_intro TRAINER_VALLEY_WINDWORKS_MARS, ValleyWindworksIndoor_Text_Mars_Defeat
 	setflag FLAG_DEFEATED_MARS
@@ -116,7 +116,7 @@ ValleyWindworksIndoor_EventScript_Mars_Outro_Top::
 ValleyWindworksIndoor_EventScript_Mars_Outro::
 	msgbox ValleyWindworksIndoor_Text_Scientist, MSGBOX_DEFAULT
 	closemessage
-	clearflag FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL
+	clearflag FLAG_HIDE_VALLEY_WINDWORKS_INDOOR_GIRL
 	addobject LOCALID_VALLEYWINDWORKS_GIRL
 	setobjectxy LOCALID_VALLEYWINDWORKS_GIRL, 9, 7
 	applymovement LOCALID_VALLEYWINDWORKS_GIRL, ValleyWindworksIndoor_Movement_Girl_1
@@ -199,7 +199,7 @@ ValleyWindworksIndoor_Text_SmooshYou:
 	.string "Humph! Just you wait!\n"
 	.string "Our Commander will smoosh you!$"
 
-ValleyWindworksIndoor_Text_Mars:
+ValleyWindworksIndoor_Text_Mars_Intro:
 	.string "I’m one of Team Galactic’s three\n"
 	.string "Commanders.\p"
 	.string "...No, wait.\n"

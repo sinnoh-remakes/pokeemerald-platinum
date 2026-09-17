@@ -17698,7 +17698,7 @@ Pachirisu (F)
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WINDWORKS_VALLEY_GRUNT ===
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
 Name: Grunt
 Class: Pt Galactic
 Pic: Galactic Grunt M DP
@@ -17711,7 +17711,7 @@ Glameow
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FLOAROMA_MEADOW_GRUNT ===
+=== TRAINER_FLOAROMA_MEADOW_GRUNT_1 ===
 Name: Grunt
 Class: Pt Galactic
 Pic: Galactic Grunt M DP
@@ -17741,7 +17741,7 @@ Zubat
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_VALLEY_WINDWORKS_GRUNT_1 ===
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_2 ===
 Name: Grunt
 Class: Pt Galactic
 Pic: Galactic Grunt M DP
@@ -17754,7 +17754,7 @@ Zubat (M)
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_VALLEY_WINDWORKS_GRUNT_2 ===
+=== TRAINER_VALLEY_WINDWORKS_GRUNT_3 ===
 Name: Grunt
 Class: Pt Galactic
 Pic: Galactic Grunt M DP

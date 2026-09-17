@@ -1400,7 +1400,7 @@ const struct Tileset gTileset_IndoorForest =
     .palettes = gTilesetPalettes_IndoorForest,
     .metatiles = gMetatiles_IndoorForest,
     .metatileAttributes = gMetatileAttributes_IndoorForest,
-    .callback = InitTilesetAnim_EternaForest,
+    .callback = InitTilesetAnim_IndoorForest,
 };
 
 const struct Tileset gTileset_OutdoorEterna =

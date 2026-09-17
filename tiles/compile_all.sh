@@ -113,8 +113,9 @@ porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/p
 echo "Compiling [secondary] valley_windworks_indoor"
 porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/valley_windworks_indoor ./tiles/valley_windworks_indoor ./tiles/indoor_windworks ./include/constants/metatile_behaviors.h
 
-echo "Compiling [PRIMARY] indoor_forest"
-porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_forest ./tiles/indoor_forest ./include/constants/metatile_behaviors.h
+# SKIP indoor_forest, as it uses triple-layer metatile config that porytiles does not support
+# echo "Compiling [PRIMARY] indoor_forest"
+# porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_forest ./tiles/indoor_forest ./include/constants/metatile_behaviors.h
 
 echo "Compiling [PRIMARY] outdoor_eterna"
 porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/outdoor_eterna ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h

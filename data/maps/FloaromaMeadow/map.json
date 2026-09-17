@@ -95,7 +95,7 @@
       "flag": "FLAG_HIDE_FLOAROMA_MEADOW_GALACTIC_EVENT"
     },
     {
-      "local_id": "LOCALID_MAN",
+      "local_id": "LOCALID_HONEY_MAN",
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M_PT",
       "x": 12,
       "y": 45,
@@ -120,7 +120,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY_EVENT"
+      "flag": "FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY"
     }
   ],
   "warp_events": [
