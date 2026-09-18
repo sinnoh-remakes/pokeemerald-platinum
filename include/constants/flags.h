@@ -1263,7 +1263,7 @@
 #define FLAG_ITEM_ETERNA_FOREST_NET_BALL                            0x4B1
 #define FLAG_ITEM_ETERNA_FOREST_POTION                              0x4B2
 #define FLAG_ITEM_ETERNA_FOREST_GREEN_SHARD                         0x4B3
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
+#define FLAG_ITEM_ROUTE_205_GUARD_SPEC                              0x4B4
 #define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
 #define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
 #define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
