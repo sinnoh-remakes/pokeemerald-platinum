@@ -1657,3 +1657,43 @@ void InitTilesetAnim_IndoorForest(void)
     sPrimaryTilesetAnimCounterMax = 256;
     sPrimaryTilesetAnimCallback = TilesetAnim_IndoorForest;
 }
+
+const u16 gTilesetAnims_Route211West_Water_Frame0[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/00.4bpp");
+const u16 gTilesetAnims_Route211West_Water_Frame1[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/01.4bpp");
+const u16 gTilesetAnims_Route211West_Water_Frame2[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/02.4bpp");
+const u16 gTilesetAnims_Route211West_Water_Frame3[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/03.4bpp");
+const u16 gTilesetAnims_Route211West_Water_Frame4[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/04.4bpp");
+const u16 gTilesetAnims_Route211West_Water_Frame5[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/05.4bpp");
+const u16 gTilesetAnims_Route211West_Water_Frame6[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/06.4bpp");
+const u16 gTilesetAnims_Route211West_Water_Frame7[] = INCBIN_U16("data/tilesets/secondary/route_211_west/anim/sea_water/07.4bpp");
+
+const u16 *const gTilesetAnims_Route211West_Water[] = {
+    gTilesetAnims_Route211West_Water_Frame0,
+    gTilesetAnims_Route211West_Water_Frame1,
+    gTilesetAnims_Route211West_Water_Frame2,
+    gTilesetAnims_Route211West_Water_Frame3,
+    gTilesetAnims_Route211West_Water_Frame4,
+    gTilesetAnims_Route211West_Water_Frame5,
+    gTilesetAnims_Route211West_Water_Frame6,
+    gTilesetAnims_Route211West_Water_Frame7
+};
+
+static void QueueAnimTiles_Route211West(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Route211West_Water);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Route211West_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 2 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_Route211West(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_Route211West(timer / 16);
+    }
+}
+
+void InitTilesetAnim_Route211West(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Route211West;
+}

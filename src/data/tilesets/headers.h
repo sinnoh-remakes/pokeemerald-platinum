@@ -1455,5 +1455,5 @@ const struct Tileset gTileset_Route211West =
     .palettes = gTilesetPalettes_Route211West,
     .metatiles = gMetatiles_Route211West,
     .metatileAttributes = gMetatileAttributes_Route211West,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Route211West,
 };
