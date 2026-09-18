@@ -4887,7 +4887,7 @@
       "width": 36,
       "height": 32,
       "primary_tileset": "gTileset_OutdoorEterna",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Route211West",
       "border_filepath": "data/layouts/Route211West/border.bin",
       "blockdata_filepath": "data/layouts/Route211West/map.bin"
     }
