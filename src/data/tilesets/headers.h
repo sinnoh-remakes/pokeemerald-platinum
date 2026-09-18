@@ -1446,3 +1446,14 @@ const struct Tileset gTileset_EternaSouth =
     .metatileAttributes = gMetatileAttributes_EternaSouth,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route211West =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route211West,
+    .palettes = gTilesetPalettes_Route211West,
+    .metatiles = gMetatiles_Route211West,
+    .metatileAttributes = gMetatileAttributes_Route211West,
+    .callback = InitTilesetAnim_Route211West,
+};
