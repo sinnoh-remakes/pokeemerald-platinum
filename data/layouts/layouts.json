@@ -4880,6 +4880,16 @@
       "secondary_tileset": "gTileset_EternaSouth",
       "border_filepath": "data/layouts/EternaCitySouth/border.bin",
       "blockdata_filepath": "data/layouts/EternaCitySouth/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE211_WEST",
+      "name": "Route211West_Layout",
+      "width": 36,
+      "height": 32,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Route211West",
+      "border_filepath": "data/layouts/Route211West/border.bin",
+      "blockdata_filepath": "data/layouts/Route211West/map.bin"
     }
   ]
 }

@@ -600,6 +600,7 @@ gStdScripts_End::
 	.include "data/maps/Route205South1/scripts.inc"
 	.include "data/maps/Route205South2/scripts.inc"
 	.include "data/maps/Route207/scripts.inc"
+	.include "data/maps/Route211West/scripts.inc"
 	.include "data/maps/Route219/scripts.inc"
 	.include "data/maps/OreburghGate/scripts.inc"
 	.include "data/maps/OreburghMine_B1F/scripts.inc"
