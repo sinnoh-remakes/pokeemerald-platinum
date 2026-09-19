@@ -4894,8 +4894,8 @@
     {
       "id": "LAYOUT_MT_CORONET_N1FS",
       "name": "MtCoronetN1FS_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 32,
+      "height": 28,
       "primary_tileset": "gTileset_CaveCoronetNorth",
       "secondary_tileset": "gTileset_Gatehouse",
       "border_filepath": "data/layouts/MtCoronetN1FS/border.bin",
