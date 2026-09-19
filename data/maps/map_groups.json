@@ -71,10 +71,11 @@
     "Route219"
   ],
   "gMapGroup_Caves": [
-    "RavagedPath",
     "OreburghGate",
     "OreburghMine_B1F",
-    "OreburghMine_B2F"
+    "OreburghMine_B2F",
+    "RavagedPath",
+    "MtCoronet_N1FS"
   ],
   "gMapGroup_Lakes": [
     "LakeVerity",

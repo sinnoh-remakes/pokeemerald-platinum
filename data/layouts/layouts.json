@@ -4606,7 +4606,7 @@
       "name": "OreburghGate_Layout",
       "width": 28,
       "height": 32,
-      "primary_tileset": "gTileset_CaveCoronet",
+      "primary_tileset": "gTileset_CaveCoronetSouth",
       "secondary_tileset": "gTileset_Gatehouse",
       "border_filepath": "data/layouts/OreburghGate/border.bin",
       "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
@@ -4636,7 +4636,7 @@
       "name": "RavagedPath_Layout",
       "width": 24,
       "height": 20,
-      "primary_tileset": "gTileset_CaveCoronet",
+      "primary_tileset": "gTileset_CaveCoronetSouth",
       "secondary_tileset": "gTileset_RavagedPath",
       "border_filepath": "data/layouts/RavagedPath/border.bin",
       "blockdata_filepath": "data/layouts/RavagedPath/map.bin"
@@ -4890,6 +4890,16 @@
       "secondary_tileset": "gTileset_Route211West",
       "border_filepath": "data/layouts/Route211West/border.bin",
       "blockdata_filepath": "data/layouts/Route211West/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_CORONET_N1FS",
+      "name": "MtCoronet_N1FS_Layout",
+      "width": 32,
+      "height": 58,
+      "primary_tileset": "gTileset_CaveCoronetNorth",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/MtCoronet_N1FS/border.bin",
+      "blockdata_filepath": "data/layouts/MtCoronet_N1FS/map.bin"
     }
   ]
 }
