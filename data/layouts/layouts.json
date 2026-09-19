@@ -4890,6 +4890,16 @@
       "secondary_tileset": "gTileset_Route211West",
       "border_filepath": "data/layouts/Route211West/border.bin",
       "blockdata_filepath": "data/layouts/Route211West/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_CORONET_N1FS",
+      "name": "MtCoronetN1FS_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_CaveCoronetNorth",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/MtCoronetN1FS/border.bin",
+      "blockdata_filepath": "data/layouts/MtCoronetN1FS/map.bin"
     }
   ]
 }

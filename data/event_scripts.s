@@ -606,6 +606,7 @@ gStdScripts_End::
 	.include "data/maps/OreburghMine_B1F/scripts.inc"
 	.include "data/maps/OreburghMine_B2F/scripts.inc"
 	.include "data/maps/RavagedPath/scripts.inc"
+	.include "data/maps/MtCoronetN1FS/scripts.inc"
 	.include "data/maps/LakefrontVerity/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/Gate_Jubilife/scripts.inc"
