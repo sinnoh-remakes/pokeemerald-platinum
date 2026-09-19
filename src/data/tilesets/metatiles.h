@@ -378,3 +378,6 @@ const u16 gMetatileAttributes_EternaSouth[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_Route211West[] = INCBIN_U16("data/tilesets/secondary/route_211_west/metatiles.bin");
 const u16 gMetatileAttributes_Route211West[] = INCBIN_U16("data/tilesets/secondary/route_211_west/metatile_attributes.bin");
+
+const u16 gMetatiles_CaveCoronetNorth[] = INCBIN_U16("data/tilesets/primary/cave_coronet_north/metatiles.bin");
+const u16 gMetatileAttributes_CaveCoronetNorth[] = INCBIN_U16("data/tilesets/primary/cave_coronet_north/metatile_attributes.bin");
