@@ -5446,3 +5446,38 @@ EternaForest_Text_RachaelDefeated:
 EternaForest_Text_RachaelPostBattle:
 	.string "Forests are mystifying... They seem\n"
 	.string "to gather such unexplainable energy.$"
+
+Route205North_Text_JosephIntro:
+	.string "How about that!\n"
+	.string "I’ve netted me a feisty Trainer!$"
+
+Route205North_Text_JosephDefeated:
+	.string "I let a big win slip away...$"
+
+Route205North_Text_JosephPostBattle:
+	.string "Do you have a fishing rod?\n"
+	.string "Catch some big ones!$"
+
+Route205North_Text_AndrewIntro:
+	.string "Nothing’s biting...\n"
+	.string "I could use a break, I suppose.$"
+
+Route205North_Text_AndrewDefeated:
+	.string "Well, that didn’t do anything for me...$"
+
+Route205North_Text_AndrewPostBattle:
+	.string "!\p"
+	.string "Yank your fishing rod when that\n"
+	.string "appears. That’s how you fish.$"
+
+Route205North_Text_ZacharyIntro:
+	.string "I fished up some tough Pokémon!\n"
+	.string "Let’s have ourselves a battle!$"
+
+Route205North_Text_ZacharyDefeated:
+	.string "Losing to a kid has me gasping like\n"
+	.string "a MAGIKARP...$"
+
+Route205North_Text_ZacharyPostBattle:
+	.string "My feet are tangled, too!\n"
+	.string "Ouch! Ouch!$"
