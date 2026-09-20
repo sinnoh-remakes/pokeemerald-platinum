@@ -37,5 +37,11 @@ void InitTilesetAnim_Route203(void);
 void InitTilesetAnim_Route204South(void);
 void InitTilesetAnim_Oreburgh(void);
 void InitTilesetAnim_OreburghMine(void);
+void InitTilesetAnim_Floaroma(void);
+void InitTilesetAnim_Route205South(void);
+void InitTilesetAnim_FloaromaMeadow(void);
+void InitTilesetAnim_ValleyWindworksIndoor(void);
+void InitTilesetAnim_IndoorForest(void);
+void InitTilesetAnim_Route211West(void);
 
 #endif // GUARD_TILESET_ANIMS_H

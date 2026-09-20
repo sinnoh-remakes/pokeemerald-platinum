@@ -1,7 +1,9 @@
 connections.inc
+overlays.inc
 events.inc
 groups.inc
 headers.inc
 **/connections.inc
+**/overlays.inc
 **/events.inc
 **/header.inc

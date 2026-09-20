@@ -584,13 +584,43 @@ gStdScripts_End::
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
 	.include "data/maps/TwinleafTown/scripts.inc"
+	.include "data/maps/SandgemTown/scripts.inc"
+	.include "data/maps/JubilifeCity/scripts.inc"
+	.include "data/maps/OreburghCityNorth/scripts.inc"
+	.include "data/maps/OreburghCitySouth/scripts.inc"
+	.include "data/maps/FloaromaTown/scripts.inc"
+	.include "data/maps/EternaCityNorth/scripts.inc"
+	.include "data/maps/EternaCitySouth/scripts.inc"
+	.include "data/maps/Route201/scripts.inc"
+	.include "data/maps/Route202/scripts.inc"
+	.include "data/maps/Route203/scripts.inc"
+	.include "data/maps/Route204North/scripts.inc"
+	.include "data/maps/Route204South/scripts.inc"
+	.include "data/maps/Route205North/scripts.inc"
+	.include "data/maps/Route205South1/scripts.inc"
+	.include "data/maps/Route205South2/scripts.inc"
+	.include "data/maps/Route207/scripts.inc"
+	.include "data/maps/Route211West/scripts.inc"
+	.include "data/maps/Route219/scripts.inc"
+	.include "data/maps/OreburghGate/scripts.inc"
+	.include "data/maps/OreburghMine_B1F/scripts.inc"
+	.include "data/maps/OreburghMine_B2F/scripts.inc"
+	.include "data/maps/RavagedPath/scripts.inc"
+	.include "data/maps/MtCoronet_N1FS/scripts.inc"
+	.include "data/maps/LakefrontVerity/scripts.inc"
+	.include "data/maps/LakeVerity/scripts.inc"
+	.include "data/maps/Gate_Jubilife/scripts.inc"
+	.include "data/maps/ValleyWindworks/scripts.inc"
+	.include "data/maps/FloaromaMeadow/scripts.inc"
+	.include "data/maps/EternaForest/scripts.inc"
+	.include "data/maps/EternaForestOuter1/scripts.inc"
+	.include "data/maps/EternaForestOuter2/scripts.inc"
 	.include "data/maps/TwinleafTown_PlayersHouse_1F/scripts.inc"
 	.include "data/maps/TwinleafTown_PlayersHouse_2F/scripts.inc"
 	.include "data/maps/TwinleafTown_RivalsHouse_1F/scripts.inc"
 	.include "data/maps/TwinleafTown_RivalsHouse_2F/scripts.inc"
 	.include "data/maps/TwinleafTown_HouseA/scripts.inc"
 	.include "data/maps/TwinleafTown_HouseB/scripts.inc"
-	.include "data/maps/SandgemTown/scripts.inc"
 	.include "data/maps/SandgemTown_ProfessorRowansLab/scripts.inc"
 	.include "data/maps/SandgemTown_HelperHouse_1F/scripts.inc"
 	.include "data/maps/SandgemTown_HelperHouse_2F/scripts.inc"
@@ -598,7 +628,6 @@ gStdScripts_End::
 	.include "data/maps/SandgemTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/SandgemTown_Mart/scripts.inc"
-	.include "data/maps/JubilifeCity/scripts.inc"
 	.include "data/maps/JubilifeCity_TowerA_1F/scripts.inc"
 	.include "data/maps/JubilifeCity_TowerA_2F/scripts.inc"
 	.include "data/maps/JubilifeCity_TowerB_1F/scripts.inc"
@@ -622,23 +651,14 @@ gStdScripts_End::
 	.include "data/maps/OreburghCity_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/OreburghCity_Mart/scripts.inc"
 	.include "data/maps/OreburghCity_Gym/scripts.inc"
-	.include "data/maps/LakefrontVerity/scripts.inc"
-	.include "data/maps/LakeVerity/scripts.inc"
-	.include "data/maps/Gate_Jubilife/scripts.inc"
-	.include "data/maps/Route201/scripts.inc"
-	.include "data/maps/Route202/scripts.inc"
-	.include "data/maps/Route203/scripts.inc"
-	.include "data/maps/Route204North/scripts.inc"
-	.include "data/maps/Route204South/scripts.inc"
-	.include "data/maps/Route207/scripts.inc"
-	.include "data/maps/Route219/scripts.inc"
-	.include "data/maps/RavagedPath/scripts.inc"
-	.include "data/maps/OreburghGate/scripts.inc"
-	.include "data/maps/OreburghCityNorth/scripts.inc"
-	.include "data/maps/OreburghCitySouth/scripts.inc"
-	.include "data/maps/OreburghMine_B1F/scripts.inc"
-	.include "data/maps/OreburghMine_B2F/scripts.inc"
-
+	.include "data/maps/FloaromaTown_HouseA/scripts.inc"
+	.include "data/maps/FloaromaTown_HouseB/scripts.inc"
+	.include "data/maps/FloaromaTown_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/FloaromaTown_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/FloaromaTown_Mart/scripts.inc"
+	.include "data/maps/FloaromaMeadow_House/scripts.inc"
+	.include "data/maps/ValleyWindworksIndoor/scripts.inc"
+	.include "data/maps/Route205South1_House/scripts.inc"
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/new_game.inc"
@@ -1110,10 +1130,6 @@ gText_Sudowoodo_Attacked::
 gText_LegendaryFlewAway::
 	.string "The {STR_VAR_1} flew away!$"
 
-gText_RuggedRock::
-	.string "It's a rugged rock, but a Pokémon\n"
-	.string "may be able to smash it.$"
-
 	.include "data/text/pc_transfer.inc"
 	.include "data/text/questionnaire.inc"
 	.include "data/text/abnormal_weather.inc"
@@ -1161,12 +1177,6 @@ Common_EventScript_LegendaryFlewAway::
 	fadescreenswapbuffers FADE_FROM_BLACK
 	bufferspeciesname STR_VAR_1, VAR_0x8004
 	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
-	release
-	end
-
-Common_EventScript_RuggedRock::
-	msgbox gText_RuggedRock, MSGBOX_DEFAULT
-	closemessage
 	release
 	end
 
@@ -1231,3 +1241,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+	.include "data/scripts/honey_tree.inc"

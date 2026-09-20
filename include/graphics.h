@@ -1575,8 +1575,6 @@ extern const u16 gItemIconPalette_FameChecker[];
 extern const u32 gItemIcon_TeachyTV[];
 extern const u16 gItemIconPalette_TeachyTV[];
 // Story Key Items
-extern const u32 gItemIcon_SSTicket[];
-extern const u16 gItemIconPalette_SSTicket[];
 extern const u32 gItemIcon_EonTicket[];
 extern const u16 gItemIconPalette_EonTicket[];
 extern const u32 gItemIcon_MysticTicket[];
@@ -1630,6 +1628,8 @@ extern const u16 gItemIconPalette_Tea[];
 extern const u32 gItemIcon_Gem[];
 extern const u16 gItemIconPalette_Ruby[];
 extern const u16 gItemIconPalette_Sapphire[];
+extern const u32 gItemIcon_WorksKey[];
+extern const u16 gItemIconPalette_WorksKey[];
 
 // GEN IX ITEMS
 extern const u32 gItemIcon_AbilityShield[];

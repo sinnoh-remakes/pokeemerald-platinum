@@ -42,6 +42,7 @@ prefabs.json
 *.diff
 *.sym
 *.js
+!tools/porymapScripts/*.js
 /pokeemerald-*.png
 src/data/map_group_count.h
 include/constants/heal_locations.h

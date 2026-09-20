@@ -1872,8 +1872,8 @@ const u16 gItemIconPalette_TeachyTV[] = INCBIN_U16("graphics/items/icon_palettes
 
 // Story Key Items
 
-const u32 gItemIcon_SSTicket[] = INCBIN_U32("graphics/items/icons/ss_ticket.4bpp.smol");
-const u16 gItemIconPalette_SSTicket[] = INCBIN_U16("graphics/items/icon_palettes/ss_ticket.gbapal");
+const u32 gItemIcon_WorksKey[] = INCBIN_U32("graphics/items/icons/works_key.4bpp.smol");
+const u16 gItemIconPalette_WorksKey[] = INCBIN_U16("graphics/items/icon_palettes/works_key.gbapal");
 
 const u32 gItemIcon_EonTicket[] = INCBIN_U32("graphics/items/icons/eon_ticket.4bpp.smol");
 const u16 gItemIconPalette_EonTicket[] = INCBIN_U16("graphics/items/icon_palettes/eon_ticket.gbapal");

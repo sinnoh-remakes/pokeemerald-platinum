@@ -924,6 +924,22 @@ static const union AnimCmd sAnim_TreeCut[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_RockBreakPt[] =
+{
+    ANIMCMD_FRAME(0, 32),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_BreakableRockPt[] = {
+    [ANIM_STAY_STILL]      = sAnim_StayStill,
+    [ANIM_REMOVE_OBSTACLE] = sAnim_RockBreakPt,
+};
+
+static const union AnimCmd *const sAnimTable_CuttableTreePt[] = {
+    [ANIM_STAY_STILL]      = sAnim_StayStill,
+    [ANIM_REMOVE_OBSTACLE] = sAnim_RockBreakPt,
+};
+
 static const union AnimCmd sAnim_TakeOutRodSouth[] =
 {
     ANIMCMD_FRAME(8, 4),
@@ -1096,6 +1112,22 @@ static const union AnimCmd sAnim_HoOhStayStill[] =
 
 static const union AnimCmd *const sAnimTable_Inanimate[] = {
     [ANIM_STAY_STILL] = sAnim_StayStill,
+};
+
+static const union AnimCmd sAnim_WindTurbineBladesSpin[] =
+{
+    ANIMCMD_FRAME(0, 12),
+    ANIMCMD_FRAME(1, 12),
+    ANIMCMD_FRAME(2, 12),
+    ANIMCMD_FRAME(3, 12),
+    ANIMCMD_FRAME(4, 12),
+    ANIMCMD_FRAME(5, 12),
+    ANIMCMD_FRAME(6, 12),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_WindTurbineBlades[] = {
+    [ANIM_STAY_STILL] = sAnim_WindTurbineBladesSpin,
 };
 
 static const union AnimCmd *const sAnimTable_QuintyPlump[] = {

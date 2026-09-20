@@ -259,10 +259,8 @@ OreburghCityNorth_Movement_RivalLeaving:
     walk_left
     walk_left
 	walk_left
-	walk_up
     walk_left
 	walk_left
-	walk_up
     walk_left
     step_end
 

@@ -16,3 +16,4 @@
 	.include "data/maps/headers.inc"
 	.include "data/maps/groups.inc"
 	.include "data/maps/connections.inc"
+	.include "data/maps/overlays.inc"

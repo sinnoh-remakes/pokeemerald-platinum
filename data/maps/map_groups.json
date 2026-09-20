@@ -5,10 +5,13 @@
     "gMapGroup_Caves",
     "gMapGroup_Lakes",
     "gMapGroup_Gates",
+    "gMapGroup_Miscellaneous",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
     "gMapGroup_IndoorOreburgh",
+    "gMapGroup_IndoorFloaroma",
+    "gMapGroup_IndoorMiscellaneous",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -49,7 +52,10 @@
     "SandgemTown",
     "JubilifeCity",
     "OreburghCityNorth",
-    "OreburghCitySouth"
+    "OreburghCitySouth",
+    "FloaromaTown",
+    "EternaCityNorth",
+    "EternaCitySouth"
   ],
   "gMapGroup_Routes": [
     "Route201",
@@ -57,21 +63,33 @@
     "Route203",
     "Route204North",
     "Route204South",
+    "Route205North",
+    "Route205South1",
+    "Route205South2",
     "Route207",
-    "Route219",
-    "LakefrontVerity"
+    "Route211West",
+    "Route219"
   ],
   "gMapGroup_Caves": [
-    "RavagedPath",
     "OreburghGate",
     "OreburghMine_B1F",
-    "OreburghMine_B2F"
+    "OreburghMine_B2F",
+    "RavagedPath",
+    "MtCoronet_N1FS"
   ],
   "gMapGroup_Lakes": [
-    "LakeVerity"
+    "LakeVerity",
+    "LakefrontVerity"
   ],
   "gMapGroup_Gates": [
     "Gate_Jubilife"
+  ],
+  "gMapGroup_Miscellaneous": [
+    "ValleyWindworks",
+    "FloaromaMeadow",
+    "EternaForest",
+    "EternaForestOuter1",
+    "EternaForestOuter2"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "TwinleafTown_PlayersHouse_1F",
@@ -116,6 +134,18 @@
     "OreburghCity_PokemonCenter_2F",
     "OreburghCity_Mart",
     "OreburghCity_Gym"
+  ],
+  "gMapGroup_IndoorFloaroma": [
+    "FloaromaTown_HouseA",
+    "FloaromaTown_HouseB",
+    "FloaromaTown_PokemonCenter_1F",
+    "FloaromaTown_PokemonCenter_2F",
+    "FloaromaTown_Mart"
+  ],
+  "gMapGroup_IndoorMiscellaneous": [
+    "FloaromaMeadow_House",
+    "ValleyWindworksIndoor",
+    "Route205South1_House"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

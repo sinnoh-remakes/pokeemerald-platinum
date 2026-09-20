@@ -12394,7 +12394,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    // FODO: Figure out how to add new items without failing compilation
+    // FODO: Figure out how to add new TMs without failing compilation
     [ITEM_TM76] =
     {
         .name = ITEM_NAME("TM76"),
@@ -12420,11 +12420,15 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
+    // FODO: Figure out how to add new TMs without failing compilation
     [ITEM_TM78] =
     {
         .name = ITEM_NAME("TM78"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "If it is the opposite gender of\n"
+            "the user, the foe is charmed into\n"
+            "sharply lowering its Sp. Atk stat.\n"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12530,11 +12534,15 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
+    // FODO: Figure out how to add new TMs without failing compilation
     [ITEM_TM88] =
     {
         .name = ITEM_NAME("TM88"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The user pecks the foe. If the\n"
+            "foe is holding a Berry, the user\n"
+            "plucks it and gains its effect.\n"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13400,20 +13408,21 @@ const struct Item gItemsInfo[] =
 
 // Story Key Items
 
-    [ITEM_SS_TICKET] =
+    [ITEM_WORKS_KEY] =
     {
-        .name = ITEM_NAME("S.S. Ticket"),
+        .name = ITEM_NAME("Works Key"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "The ticket required\n"
-            "for sailing on a\n"
-            "ferry."),
+            "A large key for operating the\n"
+            "doors of the Valley Windworks\n"
+            "in the canyon. It was held by\n"
+            "a Team Galactic Grunt."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_SSTicket,
-        .iconPalette = gItemIconPalette_SSTicket,
+        .iconPic = gItemIcon_WorksKey,
+        .iconPalette = gItemIconPalette_WorksKey,
     },
 
     [ITEM_EON_TICKET] =

@@ -340,6 +340,26 @@ const u8 gText_MatchCallLass_Samantha_Pt_Pokemon[] = _("");
 const u8 gText_MatchCallLass_Samantha_Pt_Intro1[] = _("");
 const u8 gText_MatchCallLass_Samantha_Pt_Intro2[] = _("");
 
+const u8 gText_MatchCallBugCatcher_Brandon_Pt_Strategy[] = _("");
+const u8 gText_MatchCallBugCatcher_Brandon_Pt_Pokemon[] = _("");
+const u8 gText_MatchCallBugCatcher_Brandon_Pt_Intro1[] = _("");
+const u8 gText_MatchCallBugCatcher_Brandon_Pt_Intro2[] = _("");
+
+const u8 gText_MatchCallAromaLady_Elizabeth_Pt_Strategy[] = _("");
+const u8 gText_MatchCallAromaLady_Elizabeth_Pt_Pokemon[] = _("");
+const u8 gText_MatchCallAromaLady_Elizabeth_Pt_Intro1[] = _("");
+const u8 gText_MatchCallAromaLady_Elizabeth_Pt_Intro2[] = _("");
+
+const u8 gText_MatchCallCamper_Zackary_Pt_Strategy[] = _("");
+const u8 gText_MatchCallCamper_Zackary_Pt_Pokemon[] = _("");
+const u8 gText_MatchCallCamper_Zackary_Pt_Intro1[] = _("");
+const u8 gText_MatchCallCamper_Zackary_Pt_Intro2[] = _("");
+
+const u8 gText_MatchCallPicnicker_Karina_Pt_Strategy[] = _("");
+const u8 gText_MatchCallPicnicker_Karina_Pt_Pokemon[] = _("");
+const u8 gText_MatchCallPicnicker_Karina_Pt_Intro1[] = _("");
+const u8 gText_MatchCallPicnicker_Karina_Pt_Intro2[] = _("");
+
 const u8 gText_MatchCallPkmnTrainer_Wally_Strategy[] = _("We let it all hang out.");
 const u8 gText_MatchCallPkmnTrainer_Wally_Pokemon[] = _("The 1st POKéMON I caught.");
 const u8 gText_MatchCallPkmnTrainer_Wally_Intro1[] = _("POKéMON and I have grown");
@@ -480,6 +500,10 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
     [REMATCH_PT_DALLAS] = MCFLAVOR(Youngster_Dallas_Pt),
     [REMATCH_PT_MADELINE] = MCFLAVOR(Lass_Madeline_Pt),
     [REMATCH_PT_SAMANTHA] = MCFLAVOR(Lass_Samantha_Pt),
+    [REMATCH_PT_BRANDON] = MCFLAVOR(BugCatcher_Brandon_Pt),
+    [REMATCH_PT_ELIZABETH] = MCFLAVOR(AromaLady_Elizabeth_Pt),
+    [REMATCH_PT_ZACKARY] = MCFLAVOR(Camper_Zackary_Pt),
+    [REMATCH_PT_KARINA] = MCFLAVOR(Picnicker_Karina_Pt),
     [REMATCH_WALLY_VR] = MCFLAVOR(PkmnTrainer_Wally),
     [REMATCH_ROXANNE] = MCFLAVOR(RockinWhiz_Roxanne),
     [REMATCH_BRAWLY] = MCFLAVOR(TheBigHit_Brawly),

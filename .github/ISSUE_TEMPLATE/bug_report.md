@@ -1,7 +1,7 @@
 ---
 name: Bug report
-about: Create a report to address a bug
-title: Untitled Bug
+about: For reporting or addressing a bug
+title: ''
 labels: ''
 assignees: ''
 type: Bug
@@ -12,8 +12,7 @@ type: Bug
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
+Steps to reproduce the behavior
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
@@ -21,9 +20,9 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**System (please complete the following information):**
- - OS: [e.g. Linux, WIndows, MacOS]
- - Commit [commit hash, branch name, etc)
+**System Information**
+ - Emulation: [e.g. Delta, mGBA, Hardware, etc.]
+ - Version [e.g. v0.1.0, commit abc123, etc.]
 
 **Additional context**
 Add any other context about the problem here.

@@ -5128,3 +5128,356 @@ OreburghCity_Gym_Text_DariusPostBattle:
 OreburghCity_Gym_Text_RoarkDefeated:
 	.string "W-what? That can’t be!\n"
 	.string "My buffed-up Pokémon!$"
+
+Route204North_Text_TaylorDefeated:
+	.string "It was a strong Trainer who was drawn\n"
+	.string "here by the scent of flowers!$"
+
+Route204North_Text_TaylorPostBattle:
+	.string "By the way, have you collected new\n"
+	.string "apps from the Pokétch Company?$"
+
+Route204North_Text_TaylorIntro:
+	.string "What kind of person are you, to be\n"
+	.string "drawn here by the scent of flowers?$"
+
+Route204North_Text_TaylorRematch:
+	.string "You came back to me because you\n"
+	.string "couldn’t forget the smell of flowers!$"
+
+Route204North_Text_BrandonDefeated:
+	.string "I’m not going to be able to explain\n"
+	.string "the charms of bug Pokémon this way!$"
+
+Route204North_Text_BrandonPostBattle:
+	.string "Bug Pokémon grow quickly, and they do\n"
+	.string "stuff like poison and paralyze, and\p"
+	.string "they’re cute and yet cool.\p"
+	.string "You gotta believe me. They’re good!$"
+
+Route204North_Text_BrandonIntro:
+	.string "Hey, hey, let me show off my bug\n"
+	.string "Pokémon!$"
+
+Route204North_Text_BrandonRematch:
+	.string "So, listen. Tell me you’ve grown to\n"
+	.string "like bug Pokémon since we last met.$"
+
+Route204North_Text_LivIntro:
+	.string "Liv: We can one-shot this Trainer,\n"
+	.string "can't we, Liz?\p"
+
+Route204North_Text_LivDefeated:
+	.string "Liv: Oh, oh, oh?\n"
+
+Route204North_Text_LivPostBattle:
+	.string "Liv: This Trainer...will brag about\n"
+	.string "beating us, Liz.$"
+
+Route204North_Text_LivNotEnoughMons:
+	.string "Liv: You only have one Pokémon?\n"
+	.string "That's so boring!$"
+
+Route204North_Text_LivRematch:
+	.string "Liv: Oh! You're that Trainer!\n"
+	.string "Let's get payback, Liz!$"
+
+Route204North_Text_LizIntro:
+	.string "Liz: We're the strongest in our\n"
+	.string "class!$"
+
+Route204North_Text_LizDefeated:
+	.string "Liz: Oh, but, wait!$"
+
+Route204North_Text_LizPostBattle:
+	.string "Liz: This Trainer...is really happy about\n"
+	.string "beating us, Liv.$"
+
+Route204North_Text_LizNotEnoughMons:
+	.string "Liz: Um, will you battle with us?\n"
+	.string "Me and Liv?$"
+
+Route204North_Text_LizRematch:
+	.string "Liz: We're the best in our class.\n"
+	.string "We can't be losers all the time!$"
+
+ValleyWindworks_Text_Grunt1_Intro:
+	.string "Don't you dare go into the Valley\n"
+	.string "Windworks.\p"
+	.string "I got ordered to keep everyone out\n"
+	.string "if they're not part of Team Galactic\p"
+	.string "You're giving me a look that makes\n"
+	.string "me think you're gonna try to get in.\p"
+	.string "OK, then.\n"
+	.string "You'll have to battle me for it!$"
+
+ValleyWindworks_Text_Grunt1_Defeated:
+	.string "Yeah, like I'm really supposed to\n"
+	.string "win with a Pokémon like this...$"
+
+ValleyWindworks_Text_Grunt1_PostBattle:
+	.string "Isn't that just great.\n"
+	.string "Getting defeated by some kid.\p"
+	.string "But you can't do a thing if I lock\n"
+	.string "myself in with my Works Key!\p"
+	.string "That's right, the other Works Key's\n"
+	.string "not here!\p"
+	.string "My cohorts in the flower patch have\n"
+	.string "the only other one!\p"
+	.string "Hahaha! In that sense, I'm no longer\n"
+	.string "the loser!$"
+
+ValleyWindworks_Text_Grunt2_Intro:
+	.string "Oi! This is no fun and games!\n"
+	.string "This is proper work, I tell you!$"
+
+ValleyWindworks_Text_Grunt2_Defeated:
+	.string "What...?!\n"
+	.string "Some brat messed up my job...$"
+
+ValleyWindworks_Text_Grunt2_PostBattle:
+	.string "Team Galactic needs electricity for\n"
+	.string "doing something big!$"
+
+ValleyWindworks_Text_Grunt3_Intro:
+	.string "Collecting electricity from the Valley\n"
+	.string "Windworks... That's our mission.$"
+
+ValleyWindworks_Text_Grunt3_Defeated:
+	.string "I really don't like kids who also\n"
+	.string "happen to be tough Trainers...$"
+
+ValleyWindworks_Text_Grunt3_PostBattle:
+	.string "You don't have an inkling of what\n"
+	.string "Team Galactic is trying to achieve!\p"
+	.string "Of course, they don't tell a grunt\n"
+	.string "like me anything, either... But still!$"
+
+Route205South_Text_JacobIntro:
+	.string "Hey, how about you and me battle before\n"
+	.string "I go into Eterna Forest?$"
+
+Route205South_Text_JacobDefeated:
+	.string "That really dampened my spirits.$"
+
+Route205South_Text_JacobPostBattle:
+	.string "I heard that really tough Pokémon\n"
+	.string "appear in Eterna Forest.\p"
+	.string "I need to be more prepared than this!$"
+
+Route205South_Text_DanielIntro:
+	.string "There’s no mountain here, but I’m\n"
+	.string "dressed to hike! Gahaha! Here goes!$"
+	
+Route205South_Text_DanielDefeated:
+	.string "Oh, yeah!\n"
+	.string "A refreshing battle that was!$"
+
+Route205South_Text_DanielPostBattle:
+	.string "You can find the same kinds of\n"
+	.string "Pokémon in all sorts of places.\p"
+	.string "There’s no law saying a Hiker can’t\n"
+	.string "go searching off in the mountains!$"
+
+Route205South_Text_ElizabethIntro:
+	.string "I love Pokémon that smell sweet.\n"
+	.string "Like this one--get a whiff of this!$"
+
+Route205South_Text_ElizabethDefeated:
+	.string "Did you understand what I meant?\n"
+	.string "Didn’t my Pokémon smell nice?$"
+
+Route205South_Text_ElizabethPostBattle:
+	.string "If you plant lots of Berries, you\n"
+	.string "can be surrounded by sweet scents.$"
+
+Route205South_Text_ZackaryIntro:
+	.string "It’s a long way between Floaroma\n"
+	.string "and Eterna City. So, let’s battle!$"
+
+Route205South_Text_ZackaryDefeated:
+	.string "Wawawaah!\n"
+	.string "I’m out of Pokémon that can battle!$"
+
+Route205South_Text_ZackaryPostBattle:
+	.string "Camping with Pokémon!\n"
+	.string "Do you have any idea how fun that is?$"
+
+Route205South_Text_SienaIntro:
+	.string "What kinds of Pokémon live around\n"
+	.string "here, I wonder?$"
+
+Route205South_Text_SienaDefeated:
+	.string "I’m shocked!\n"
+	.string "How did I lose?$"
+
+Route205South_Text_SienaPostBattle:
+	.string "I know all sorts of things about\n"
+	.string "Pokémon!\p"
+	.string "Let’s see... There are males and\n"
+	.string "females, and some aren’t either!$"
+
+Route205South_Text_NicholasIntro:
+	.string "I’ve lost my way...\n"
+	.string "Here of all places...$"
+
+Route205South_Text_NicholasDefeated:
+	.string "Having lost his way, the Trainer lost\n"
+	.string "the battle too...$"
+
+Route205South_Text_NicholasPostBattle:
+	.string "From being lost in the mountains so\n"
+	.string "long, I became a Hiker...$"
+
+Route205South_Text_KelseyIntro:
+	.string "Hiyah!\n"
+	.string "There’s no holding anything back!$"
+
+Route205South_Text_KelseyDefeated:
+	.string "I... I concede!\n"
+	.string "I think you’re on a different level...$"
+
+Route205South_Text_KelseyPostBattle:
+	.string "Hiyah! You put me in my place!\n"
+	.string "I appreciate it!$"
+
+Route205South_Text_KarinaIntro:
+	.string "Oh, I don’t know.\n"
+	.string "Should I play a little?$"
+
+Route205South_Text_KarinaDefeated:
+	.string "Oh, boo!\n"
+	.string "How insulting!$"
+
+Route205South_Text_KarinaPostBattle:
+	.string "Listen very closely...\n"
+	.string "Can you hear the cries of Pokémon?$"
+
+EternaForest_Text_JackIntro:
+	.string "What’s cool, you might ask? No?\n"
+	.string "I’ll tell you anyway: bug Pokémon!$"
+
+EternaForest_Text_JackDefeated:
+	.string "Don’t ignore bug Pokémon!\n"
+	.string "That really bugs me!$"
+
+EternaForest_Text_JackPostBattle:
+	.string "It would seem that coolness alone\n"
+	.string "doesn’t add up to any wins...$"
+
+EternaForest_Text_BrianaIntro:
+	.string "We’re just out on a power walk!$"
+
+EternaForest_Text_BrianaDefeated:
+	.string "Oh, you!$"
+
+EternaForest_Text_BrianaPostBattle:
+	.string "You can’t avoid bug Pokémon ever in\n"
+	.string "the forest.\p"
+	.string "I didn’t have any Antidotes with me,\n"
+	.string "either. It was the worst!$"
+
+EternaForest_Text_LindseyIntro:
+	.string "I see it...\n"
+	.string "I see it...\p"
+	.string "I see you going down in defeat...$"
+
+EternaForest_Text_LindseyDefeated:
+	.string "It is I that has gone down in defeat.$"
+
+EternaForest_Text_LindseyPostBattle:
+	.string "The Old Chateau...\n"
+	.string "There should be none alive in it...\p"
+	.string "And yet there is a pervasive sense of\n"
+	.string "a presence...$"
+
+EternaForest_Text_ElijahIntro:
+	.string "When a Trainer and a Pokémon bond\n"
+	.string "as one, a wondrous power is born...$"
+
+EternaForest_Text_ElijahDefeated:
+	.string "Urmmm...\n"
+	.string "Urrrrmmmmm...$"
+
+EternaForest_Text_ElijahPostBattle:
+	.string "There still remain many mysteries yet\n"
+	.string "to be solved in this strange world...$"
+
+EternaForest_Text_PhillipIntro:
+	.string "Here comes the swarm!$"
+
+EternaForest_Text_PhillipDefeated:
+	.string "Whoooh...$"
+
+EternaForest_Text_DonaldIntro:
+	.string "My senses tingle...\n"
+	.string "I’ve spotted a rare Pokémon!$"
+
+EternaForest_Text_PhillipPostBattle:
+	.string "There’s a Pokémon ability named Swarm.$"
+
+EternaForest_Text_DonaldDefeated:
+	.string "Awawawawah...$"
+
+EternaForest_Text_DonaldPostBattle:
+	.string "I thought it was a rare Pokémon, but\n"
+	.string "it turned out to be just a Trainer!$"
+
+EternaForest_Text_KodyIntro:
+	.string "A strange presence has been felt...\n"
+	.string "It is emanating from...you!$"
+
+EternaForest_Text_KodyDefeated:
+	.string "Oh, no!\n"
+	.string "My MEDITITE!$"
+
+EternaForest_Text_KodyPostBattle:
+	.string "The Old Chateau... I sense...\n"
+	.string "a particularly strong presence there.$"
+
+EternaForest_Text_RachaelIntro:
+	.string "This forest is strange, you know...\n"
+	.string "It seems to fill me with energy...$"
+
+EternaForest_Text_RachaelDefeated:
+	.string "Your victory...\n"
+	.string "There is nothing strange about it.$"
+
+EternaForest_Text_RachaelPostBattle:
+	.string "Forests are mystifying... They seem\n"
+	.string "to gather such unexplainable energy.$"
+
+Route205North_Text_JosephIntro:
+	.string "How about that!\n"
+	.string "I’ve netted me a feisty Trainer!$"
+
+Route205North_Text_JosephDefeated:
+	.string "I let a big win slip away...$"
+
+Route205North_Text_JosephPostBattle:
+	.string "Do you have a fishing rod?\n"
+	.string "Catch some big ones!$"
+
+Route205North_Text_AndrewIntro:
+	.string "Nothing’s biting...\n"
+	.string "I could use a break, I suppose.$"
+
+Route205North_Text_AndrewDefeated:
+	.string "Well, that didn’t do anything for me...$"
+
+Route205North_Text_AndrewPostBattle:
+	.string "!\p"
+	.string "Yank your fishing rod when that\n"
+	.string "appears. That’s how you fish.$"
+
+Route205North_Text_ZacharyIntro:
+	.string "I fished up some tough Pokémon!\n"
+	.string "Let’s have ourselves a battle!$"
+
+Route205North_Text_ZacharyDefeated:
+	.string "Losing to a kid has me gasping like\n"
+	.string "a MAGIKARP...$"
+
+Route205North_Text_ZacharyPostBattle:
+	.string "My feet are tangled, too!\n"
+	.string "Ouch! Ouch!$"
