@@ -29,8 +29,124 @@
       "direction": "right"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_BARRY_ETERNA_CITY",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY_PT",
+      "x": 12,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BARRY_ETERNA_CITY"
+    },
+    {
+      "local_id": "LOCALID_POKEMON_CENTRE_GRUNT_ETERNA",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M_PT",
+      "x": 13,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt_Basic",
+      "flag": "FLAG_HIDE_GALACTIC_ETERNA"
+    },
+    {
+      "local_id": "LOCALID_CYRUS_ETERNA",
+      "graphics_id": "OBJ_EVENT_GFX_CYRUS_PT",
+      "x": 39,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_GALACTIC_ETERNA"
+    }
+  ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt_See2"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt_See3"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt_See4"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt_See5"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt_See1"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "1",
+      "script": "EternaCity_EventScript_BarryApproach1"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "1",
+      "script": "EternaCity_EventScript_BarryApproach2"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ETERNA_CITY_STATE",
+      "var_value": "1",
+      "script": "EternaCity_EventScript_BarryApproach3"
+    }
+  ],
   "bg_events": []
 }
