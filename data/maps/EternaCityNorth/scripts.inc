@@ -72,6 +72,7 @@ EternaCity_EventScript_GalacticGrunt_See5::
 	end
 
 EternaCity_EventScript_GalacticGrunt_Basic::
+	setvar VAR_ETERNA_CITY_STATE, 1
 	msgbox EternaCity_EventScript_GalacticGrunt_See_Msg, MSGBOX_NPC
 	end
 
