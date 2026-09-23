@@ -4882,6 +4882,16 @@
       "blockdata_filepath": "data/layouts/EternaCitySouth/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_CITY_TOWER_2F",
+      "name": "EternaCity_TowerA_2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/EternaCity_TowerA_2F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_TowerA_2F/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE211_WEST",
       "name": "Route211West_Layout",
       "width": 36,
