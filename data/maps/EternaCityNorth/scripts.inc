@@ -70,7 +70,7 @@ EternaCity_EventScript_BarryApproach2::
 	lock
 	msgbox EternaCity_Text_BarryApproach1_BarryMsg, MSGBOX_DEFAULT
 	release
-	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_MoveAroundPlayer
+	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach2_MoveAroundPlayer
 	waitmovement 0
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach2_MoveToStatue
 	applymovement LOCALID_PLAYER, EternaCity_EventScript_BarryApproach2_PlayerFollowBarry
@@ -123,7 +123,7 @@ EternaCity_EventScript_BarryApproach3::
 	lock
 	msgbox EternaCity_Text_BarryApproach1_BarryMsg, MSGBOX_DEFAULT
 	release
-	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_MoveAroundPlayer
+	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach3_MoveAroundPlayer
 	waitmovement 0
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach3_MoveToStatue
 	applymovement LOCALID_PLAYER, EternaCity_EventScript_BarryApproach3_PlayerFollowBarry
@@ -164,13 +164,14 @@ EternaCity_EventScript_BarryApproach3::
 	end
 
 EternaCity_EventScript_BarryApproach1_Movement:
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 EternaCity_EventScript_BarryApproach1_Push:
@@ -185,12 +186,11 @@ EternaCity_EventScript_BarryApproach1_PlayerPushed:
 EternaCity_EventScript_BarryApproach1_MoveAroundPlayer:
 	walk_up
 	walk_right
-	walk_right
-	walk_down
+	face_down
 	step_end
 
 EternaCity_EventScript_BarryApproach1_PlayerFollowBarry:
-	walk_right
+	walk_up
 	walk_right
 	walk_right
 	walk_right
@@ -210,6 +210,8 @@ EternaCity_EventScript_BarryApproach1_PlayerFollowBarry:
 	walk_slow_diag_northeast
 	walk_right
 	walk_right
+	walk_down
+	face_right
 	step_end
 
 EternaCity_EventScript_BarryApproach1_InevitableCameraPan:
@@ -239,7 +241,6 @@ EternaCity_EventScript_BarryApproach1_MoveToStatue:
 	walk_slow_diag_northeast
 	walk_right
 	walk_right
-	walk_up
 	face_right
 	step_end
 
@@ -300,23 +301,30 @@ EternaCity_EventScript_BarryApproach1_LookAtBarry:
 	step_end
 
 EternaCity_EventScript_BarryApproach2_Movement:
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
 	step_end
+
+EternaCity_EventScript_BarryApproach2_MoveAroundPlayer:
+	walk_down
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
 
 EternaCity_EventScript_BarryApproach2_MoveToStatue:
 	walk_right
 	walk_right
 	walk_right
 	walk_right
-	walk_down
-	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -331,7 +339,6 @@ EternaCity_EventScript_BarryApproach2_MoveToStatue:
 	walk_slow_diag_northeast
 	walk_right
 	walk_right
-	walk_up
 	face_right
 	step_end
 
@@ -341,42 +348,47 @@ EternaCity_EventScript_BarryApproach2_PlayerFollowBarry:
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_right
+	walk_right
+	walk_down
+	face_right
+	step_end
+
+EternaCity_EventScript_BarryApproach3_MoveAroundPlayer:
 	walk_down
 	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_slow_diag_northeast
-	walk_slow_diag_northeast
-	walk_right
-	walk_right
+	face_up
 	step_end
 
 EternaCity_EventScript_BarryApproach3_Movement:
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 EternaCity_EventScript_BarryApproach3_MoveToStatue:
 	walk_right
 	walk_right
 	walk_right
-	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
@@ -393,17 +405,14 @@ EternaCity_EventScript_BarryApproach3_MoveToStatue:
 	walk_slow_diag_northeast
 	walk_right
 	walk_right
-	walk_up
 	face_right
 	step_end
 
 EternaCity_EventScript_BarryApproach3_PlayerFollowBarry:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
 	walk_down
-	walk_down
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -420,6 +429,8 @@ EternaCity_EventScript_BarryApproach3_PlayerFollowBarry:
 	walk_slow_diag_northeast
 	walk_right
 	walk_right
+	walk_down
+	face_right
 	step_end
 
 EternaCity_EventScript_GalacticGrunt_See_Msg:
