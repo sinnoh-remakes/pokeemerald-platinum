@@ -92,7 +92,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 14,
+      "x": 15,
       "y": 14,
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
@@ -101,7 +101,7 @@
     },
     {
       "type": "trigger",
-      "x": 14,
+      "x": 15,
       "y": 13,
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
@@ -110,7 +110,7 @@
     },
     {
       "type": "trigger",
-      "x": 14,
+      "x": 15,
       "y": 12,
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
