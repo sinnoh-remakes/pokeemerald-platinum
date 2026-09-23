@@ -77,56 +77,11 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 9,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "0",
-      "script": "EternaCity_EventScript_GalacticGrunt_See2"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "0",
-      "script": "EternaCity_EventScript_GalacticGrunt_See3"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "0",
-      "script": "EternaCity_EventScript_GalacticGrunt_See4"
-    },
-    {
-      "type": "trigger",
-      "x": 12,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "0",
-      "script": "EternaCity_EventScript_GalacticGrunt_See5"
-    },
-    {
-      "type": "trigger",
-      "x": 14,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "0",
-      "script": "EternaCity_EventScript_GalacticGrunt_See1"
-    },
-    {
-      "type": "trigger",
       "x": 14,
       "y": 14,
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "1",
+      "var_value": "0",
       "script": "EternaCity_EventScript_BarryApproach1"
     },
     {
@@ -135,7 +90,7 @@
       "y": 13,
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "1",
+      "var_value": "0",
       "script": "EternaCity_EventScript_BarryApproach2"
     },
     {
@@ -144,7 +99,7 @@
       "y": 12,
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
-      "var_value": "1",
+      "var_value": "0",
       "script": "EternaCity_EventScript_BarryApproach3"
     }
   ],
