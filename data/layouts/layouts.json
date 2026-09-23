@@ -4502,6 +4502,26 @@
       "blockdata_filepath": "data/layouts/FloaromaTown/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_CITY_NORTH",
+      "name": "EternaCityNorth_Layout",
+      "width": 60,
+      "height": 27,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_EternaNorth",
+      "border_filepath": "data/layouts/EternaCityNorth/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCityNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_SOUTH",
+      "name": "EternaCitySouth_Layout",
+      "width": 60,
+      "height": 29,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_EternaSouth",
+      "border_filepath": "data/layouts/EternaCitySouth/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCitySouth/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE201",
       "name": "Route201_Layout",
       "width": 62,
@@ -4592,6 +4612,16 @@
       "blockdata_filepath": "data/layouts/Route207/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE211_WEST",
+      "name": "Route211West_Layout",
+      "width": 36,
+      "height": 32,
+      "primary_tileset": "gTileset_OutdoorEterna",
+      "secondary_tileset": "gTileset_Route211West",
+      "border_filepath": "data/layouts/Route211West/border.bin",
+      "blockdata_filepath": "data/layouts/Route211West/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE219",
       "name": "Route219_Layout",
       "width": 36,
@@ -4640,6 +4670,16 @@
       "secondary_tileset": "gTileset_RavagedPath",
       "border_filepath": "data/layouts/RavagedPath/border.bin",
       "blockdata_filepath": "data/layouts/RavagedPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_CORONET_N1FS",
+      "name": "MtCoronet_N1FS_Layout",
+      "width": 32,
+      "height": 58,
+      "primary_tileset": "gTileset_CaveCoronetNorth",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/MtCoronet_N1FS/border.bin",
+      "blockdata_filepath": "data/layouts/MtCoronet_N1FS/map.bin"
     },
     {
       "id": "LAYOUT_LAKEFRONT_VERITY",
@@ -4842,6 +4882,26 @@
       "blockdata_filepath": "data/layouts/OreburghCity_Gym/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_CITY_TOWER_2F",
+      "name": "EternaCity_TowerA_2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorJubilife",
+      "secondary_tileset": "gTileset_JubilifeTower",
+      "border_filepath": "data/layouts/EternaCity_TowerA_2F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_TowerA_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_HOUSE",
+      "name": "EternaCity_HouseA_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_EternaIndoor",
+      "border_filepath": "data/layouts/EternaCity_HouseA/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_HouseA/map.bin"
+    },
+    {
       "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",
       "name": "ValleyWindworksIndoor_Layout",
       "width": 22,
@@ -4860,46 +4920,6 @@
       "secondary_tileset": "gTileset_SunyshoreHouse",
       "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
-    },
-    {
-      "id": "LAYOUT_ETERNA_CITY_NORTH",
-      "name": "EternaCityNorth_Layout",
-      "width": 60,
-      "height": 27,
-      "primary_tileset": "gTileset_OutdoorEterna",
-      "secondary_tileset": "gTileset_EternaNorth",
-      "border_filepath": "data/layouts/EternaCityNorth/border.bin",
-      "blockdata_filepath": "data/layouts/EternaCityNorth/map.bin"
-    },
-    {
-      "id": "LAYOUT_ETERNA_CITY_SOUTH",
-      "name": "EternaCitySouth_Layout",
-      "width": 60,
-      "height": 29,
-      "primary_tileset": "gTileset_OutdoorEterna",
-      "secondary_tileset": "gTileset_EternaSouth",
-      "border_filepath": "data/layouts/EternaCitySouth/border.bin",
-      "blockdata_filepath": "data/layouts/EternaCitySouth/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE211_WEST",
-      "name": "Route211West_Layout",
-      "width": 36,
-      "height": 32,
-      "primary_tileset": "gTileset_OutdoorEterna",
-      "secondary_tileset": "gTileset_Route211West",
-      "border_filepath": "data/layouts/Route211West/border.bin",
-      "blockdata_filepath": "data/layouts/Route211West/map.bin"
-    },
-    {
-      "id": "LAYOUT_MT_CORONET_N1FS",
-      "name": "MtCoronet_N1FS_Layout",
-      "width": 32,
-      "height": 58,
-      "primary_tileset": "gTileset_CaveCoronetNorth",
-      "secondary_tileset": "gTileset_Gatehouse",
-      "border_filepath": "data/layouts/MtCoronet_N1FS/border.bin",
-      "blockdata_filepath": "data/layouts/MtCoronet_N1FS/map.bin"
     }
   ]
 }
