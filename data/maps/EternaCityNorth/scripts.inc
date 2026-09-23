@@ -1,136 +1,9 @@
 EternaCityNorth_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, EternaCityNorth_OnLoad
 	.byte 0
 
-EternaCityNorth_OnLoad:
-	goto_if_unset FLAG_GALACTIVITY_DONE, EternaCityNorth_Var_Init
-	end
-
-EternaCityNorth_Var_Init:
-	setvar VAR_ETERNA_CITY_STATE, 0
-	setflag FLAG_HIDE_BARRY_ETERNA_CITY
-	setflag FLAG_GALACTIVITY_DONE
-	end
-
-EternaCity_EventScript_GalacticGrunt_See1::
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See1_Movement
-	waitmovement 0
-	applymovement LOCALID_PLAYER, EternaCity_EventScript_GalacticGrunt_See_MovementPlayer2
-	waitmovement 0
-	lock
-	msgbox EternaCity_EventScript_GalacticGrunt_See_Msg, MSGBOX_DEFAULT
-	release
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See1_ReverseMovement
-	setvar VAR_ETERNA_CITY_STATE, 1
-	end
-
-EternaCity_EventScript_GalacticGrunt_See2::
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See2_Movement
-	waitmovement 0
-	applymovement LOCALID_PLAYER, EternaCity_EventScript_GalacticGrunt_See_MovementPlayer
-	waitmovement 0
-	lock
-	msgbox EternaCity_EventScript_GalacticGrunt_See_Msg, MSGBOX_DEFAULT
-	release
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See2_ReverseMovement
-	setvar VAR_ETERNA_CITY_STATE, 1
-	end
-
-EternaCity_EventScript_GalacticGrunt_See3::
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See3_Movement
-	waitmovement 0
-	applymovement LOCALID_PLAYER, EternaCity_EventScript_GalacticGrunt_See_MovementPlayer
-	waitmovement 0
-	lock
-	msgbox EternaCity_EventScript_GalacticGrunt_See_Msg, MSGBOX_DEFAULT
-	release
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See3_ReverseMovement
-	setvar VAR_ETERNA_CITY_STATE, 1
-	end
-
-EternaCity_EventScript_GalacticGrunt_See4::
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See4_Movement
-	waitmovement 0
-	applymovement LOCALID_PLAYER, EternaCity_EventScript_GalacticGrunt_See_MovementPlayer
-	waitmovement 0
-	lock
-	msgbox EternaCity_EventScript_GalacticGrunt_See_Msg, MSGBOX_DEFAULT
-	release
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See4_ReverseMovement
-	setvar VAR_ETERNA_CITY_STATE, 1
-	end
-
-EternaCity_EventScript_GalacticGrunt_See5::
-	applymovement LOCALID_POKEMON_CENTRE_GRUNT_ETERNA, EternaCity_EventScript_GalacticGrunt_See5_Movement
-	waitmovement 0
-	applymovement LOCALID_PLAYER, EternaCity_EventScript_GalacticGrunt_See_MovementPlayer
-	waitmovement 0
-	lock
-	msgbox EternaCity_EventScript_GalacticGrunt_See_Msg, MSGBOX_DEFAULT
-	release
-	setvar VAR_ETERNA_CITY_STATE, 1
-	end
-
 EternaCity_EventScript_GalacticGrunt_Basic::
-	setvar VAR_ETERNA_CITY_STATE, 1
 	msgbox EternaCity_EventScript_GalacticGrunt_See_Msg, MSGBOX_NPC
 	end
-
-EternaCity_EventScript_GalacticGrunt_See1_Movement:
-	face_right
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See_MovementPlayer:
-	face_right
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See_MovementPlayer2:
-	face_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See1_ReverseMovement:
-	face_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See2_Movement:
-	face_left
-	walk_left
-	walk_left
-	walk_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See2_ReverseMovement:
-	walk_right
-	walk_right
-	walk_right
-	face_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See3_Movement:
-	face_left
-	walk_left
-	walk_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See3_ReverseMovement:
-	walk_right
-	walk_right
-	face_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See4_Movement:
-	face_left
-	walk_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See4_ReverseMovement:
-	walk_right
-	face_left
-	step_end
-
-EternaCity_EventScript_GalacticGrunt_See5_Movement:
-	face_left
-	step_end
 
 EternaCity_EventScript_BarryApproach1::
 	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
@@ -180,7 +53,7 @@ EternaCity_EventScript_BarryApproach1::
 	release
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_BarryGoByeBye
 	waitmovement 0
-	setvar VAR_ETERNA_CITY_STATE, 2
+	setvar VAR_ETERNA_CITY_STATE, 1
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	end
@@ -233,7 +106,7 @@ EternaCity_EventScript_BarryApproach2::
 	release
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_BarryGoByeBye
 	waitmovement 0
-	setvar VAR_ETERNA_CITY_STATE, 2
+	setvar VAR_ETERNA_CITY_STATE, 1
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	end
@@ -285,7 +158,7 @@ EternaCity_EventScript_BarryApproach3::
 	release
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_BarryGoByeBye
 	waitmovement 0
-	setvar VAR_ETERNA_CITY_STATE, 2
+	setvar VAR_ETERNA_CITY_STATE, 1
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	end
