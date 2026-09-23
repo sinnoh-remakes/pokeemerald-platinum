@@ -143,7 +143,9 @@
     "FloaromaTown_Mart"
   ],
   "gMapGroup_IndoorEterna": [
-    "EternaCity_TowerA_2F"
+    "EternaCity_TowerA_1F",
+    "EternaCity_TowerA_2F",
+    "EternaCity_TowerA_3F"
   ],
   "gMapGroup_IndoorMiscellaneous": [
     "FloaromaMeadow_House",
