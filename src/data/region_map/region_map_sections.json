@@ -61,16 +61,20 @@
       "name": "ROUTE 219"
     },
     {
-      "id": "MAPSEC_RAVAGED_PATH",
-      "name": "RAVAGED PATH"
-    },
-    {
       "id": "MAPSEC_OREBURGH_GATE",
       "name": "OREBURGH GATE"
     },
     {
       "id": "MAPSEC_OREBURGH_MINE",
       "name": "OREBURGH MINE"
+    },
+    {
+      "id": "MAPSEC_RAVAGED_PATH",
+      "name": "RAVAGED PATH"
+    },
+    {
+      "id": "MAPSEC_MT_CORONET_NORTH",
+      "name": "MT CORONET"
     },
     {
       "id": "MAPSEC_LAKE_VERITY",

@@ -1040,14 +1040,14 @@ const struct Tileset gTileset_Route207 =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_CaveCoronet =
+const struct Tileset gTileset_CaveCoronetSouth =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_CaveCoronet,
-    .palettes = gTilesetPalettes_CaveCoronet,
-    .metatiles = gMetatiles_CaveCoronet,
-    .metatileAttributes = gMetatileAttributes_CaveCoronet,
+    .tiles = gTilesetTiles_CaveCoronetSouth,
+    .palettes = gTilesetPalettes_CaveCoronetSouth,
+    .metatiles = gMetatiles_CaveCoronetSouth,
+    .metatileAttributes = gMetatileAttributes_CaveCoronetSouth,
     .callback = NULL,
 };
 
