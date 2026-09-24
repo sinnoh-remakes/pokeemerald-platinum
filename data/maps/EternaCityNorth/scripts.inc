@@ -44,7 +44,7 @@ EternaCity_EventScript_BarryApproach1::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_GALACTIC_ETERNA
+	setflag FLAG_HIDE_CYRUS_ETERNA
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_LookAtPlayer
 	applymovement LOCALID_PLAYER, EternaCity_EventScript_BarryApproach1_LookAtBarry
 	waitmovement 0
@@ -97,7 +97,7 @@ EternaCity_EventScript_BarryApproach2::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_GALACTIC_ETERNA
+	setflag FLAG_HIDE_CYRUS_ETERNA
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_LookAtPlayer
 	applymovement LOCALID_PLAYER, EternaCity_EventScript_BarryApproach1_LookAtBarry
 	waitmovement 0
@@ -149,7 +149,7 @@ EternaCity_EventScript_BarryApproach3::
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_BarryLookAtCyrus
 	waitmovement LOCALID_CYRUS_ETERNA
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_GALACTIC_ETERNA
+	setflag FLAG_HIDE_CYRUS_ETERNA
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCity_EventScript_BarryApproach1_LookAtPlayer
 	applymovement LOCALID_PLAYER, EternaCity_EventScript_BarryApproach1_LookAtBarry
 	waitmovement 0
@@ -161,6 +161,118 @@ EternaCity_EventScript_BarryApproach3::
 	setvar VAR_ETERNA_CITY_STATE, 1
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
 	removeobject LOCALID_BARRY_ETERNA_CITY
+	end
+
+EternaCity_EventScript_CynthiaApproach1::
+	clearflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
+	addobject LOCALID_CYNTHIA_ETERNA, MAP_ETERNA_CITY_NORTH
+	setobjectxy LOCALID_CYNTHIA_ETERNA, 24, 12
+	delay 45
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Movement1
+	waitmovement
+	playse SE_PIN
+	waitse
+	delay 30
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Movement2
+	waitmovement
+	applymovement LOCALID_PLAYER, EternaCity_EventScript_CynthiaApproach_LookRight
+	waitmovement
+	lock
+	msgbox EternaCity_Text_Cynthia1, MSGBOX_DEFAULT
+	release
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_LookRight
+	waitmovement
+	delay 45
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_LookLeft
+	lock
+	msgbox EternaCity_Text_Cynthia2, MSGBOX_DEFAULT
+	release
+	giveitem ITEM_HM01
+	setflag FLAG_RECEIVED_HM_CUT
+	waitmessage
+	lock
+	msgbox EternaCity_Text_Cynthia3, MSGBOX_DEFAULT
+	release
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Leave
+	applymovement LOCALID_PLAYER, EternaCity_EventScript_CynthiaApproach_LookLeft
+	waitmovement LOCALID_CYNTHIA_ETERNA
+	setflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
+	removeobject LOCALID_CYNTHIA_ETERNA
+	setvar VAR_ETERNA_CITY_STATE, 2
+	end
+
+EternaCity_EventScript_CynthiaApproach2::
+	clearflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
+	addobject LOCALID_CYNTHIA_ETERNA, MAP_ETERNA_CITY_NORTH
+	setobjectxy LOCALID_CYNTHIA_ETERNA, 24, 13
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Movement1
+	waitmovement
+	playse SE_PIN
+	waitse
+	delay 30
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Movement2
+	waitmovement
+	applymovement LOCALID_PLAYER, EternaCity_EventScript_CynthiaApproach_LookRight
+	waitmovement
+	lock
+	msgbox EternaCity_Text_Cynthia1, MSGBOX_DEFAULT
+	release
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_LookRight
+	waitmovement
+	delay 45
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_LookLeft
+	lock
+	msgbox EternaCity_Text_Cynthia2, MSGBOX_DEFAULT
+	release
+	giveitem ITEM_HM01
+	setflag FLAG_RECEIVED_HM_CUT
+	waitmessage
+	lock
+	msgbox EternaCity_Text_Cynthia3, MSGBOX_DEFAULT
+	release
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Leave
+	applymovement LOCALID_PLAYER, EternaCity_EventScript_CynthiaApproach_LookLeft
+	waitmovement LOCALID_CYNTHIA_ETERNA
+	setflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
+	removeobject LOCALID_CYNTHIA_ETERNA
+	setvar VAR_ETERNA_CITY_STATE, 2
+	end
+
+EternaCity_EventScript_CynthiaApproach3::
+	clearflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
+	addobject LOCALID_CYNTHIA_ETERNA, MAP_ETERNA_CITY_NORTH
+	setobjectxy LOCALID_CYNTHIA_ETERNA, 24, 14
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Movement1
+	waitmovement
+	playse SE_PIN
+	waitse
+	delay 30
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Movement2
+	waitmovement
+	applymovement LOCALID_PLAYER, EternaCity_EventScript_CynthiaApproach_LookRight
+	waitmovement
+	lock
+	msgbox EternaCity_Text_Cynthia1, MSGBOX_DEFAULT
+	release
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_LookRight
+	waitmovement
+	delay 45
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_LookLeft
+	lock
+	msgbox EternaCity_Text_Cynthia2, MSGBOX_DEFAULT
+	release
+	giveitem ITEM_HM01
+	setflag FLAG_RECEIVED_HM_CUT
+	waitmessage
+	lock
+	msgbox EternaCity_Text_Cynthia3, MSGBOX_DEFAULT
+	release
+	applymovement LOCALID_CYNTHIA_ETERNA, EternaCity_EventScript_CynthiaApproach_Leave2
+	applymovement LOCALID_PLAYER, EternaCity_EventScript_CynthiaApproach_LookLeft
+	waitmovement LOCALID_CYNTHIA_ETERNA
+	setflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
+	removeobject LOCALID_CYNTHIA_ETERNA
+	setvar VAR_ETERNA_CITY_STATE, 2
 	end
 
 EternaCity_EventScript_BarryApproach1_Movement:
@@ -433,6 +545,64 @@ EternaCity_EventScript_BarryApproach3_PlayerFollowBarry:
 	face_right
 	step_end
 
+EternaCity_EventScript_CynthiaApproach_Movement1:
+	walk_left
+	walk_left
+	walk_left
+	emote_exclamation_mark
+	step_end
+
+EternaCity_EventScript_CynthiaApproach_Movement2:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+EternaCity_EventScript_CynthiaApproach_LookRight:
+	face_right
+	step_end
+
+EternaCity_EventScript_CynthiaApproach_LookLeft:
+	face_left
+	step_end
+
+EternaCity_EventScript_CynthiaApproach_Leave:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+EternaCity_EventScript_CynthiaApproach_Leave2:
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
 EternaCity_EventScript_GalacticGrunt_See_Msg:
 	.string "Hey, you! Yeah, you, Trainer!\p"
 	.string "Err...\n"
@@ -477,3 +647,39 @@ EternaCity_Text_BarryApproach1_BarryAdvice:
 	.string "You'd be the invincible Trainer!\p"
 	.string "Anyway, go check out the POKéMON\n"
 	.string "statue. See you around!$"
+
+EternaCity_Text_Cynthia1:
+	.string "Oh, that device you have...\p"
+	.string "It is a POKéDEX?\n"
+	.string "Wow, it brings back some memories.\p"
+	.string "Pardon me, but what's your name?\p"
+	.string "...\p"
+	.string "OK, hello, {PLAYER}.\n"
+	.string "I'll be sure to remember that name!\p"
+	.string "My name is Cynthia.\n"
+	.string "I'm a Trainer just like you.\p"
+	.string "I've been studying POKéMON mythology\n"
+	.string "lately, just out of curiosity.$"
+
+EternaCity_Text_Cynthia2:
+	.string "Here in Eterna City, there is a statue\n"
+	.string "of an ancient POKéMON.\p"
+	.string "Have you seen it already?\p"
+	.string "According to myth, it was an extremely\n"
+	.string "powerful POKéMON.\p"
+	.string "Who knows? You may encounter something\n"
+	.string "like it while you're travelling with your\l"
+	.string "POKéDEX.\p"
+	.string "Oh, I know! Try using this.\n"
+	.string "It should be helpful.$"
+
+EternaCity_Text_Cynthia3:
+	.string "Cynthia: Remember, the hidden move\n"
+	.string "Cut, can be used in the field.\p"
+	.string "It will let you go places that were\n"
+	.string "previously inaccessible to you.\p"
+	.string "That's important for filling up your\n"
+	.string "POKéDEX, right?\p"
+	.string "Then luck be with you, young Trainer!\p"
+	.string "Oh, there's one last thing!\n"
+	.string "Please give my regards to Prof. Rowan.$"

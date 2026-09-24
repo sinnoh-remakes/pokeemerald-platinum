@@ -120,7 +120,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_UNUSED_0x068                    0x68  // Unused Flag
+#define FLAG_HIDE_CYNTHIA_ETERNA_CITY        0x68
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
@@ -695,8 +695,8 @@
 #define FLAG_HIDE_VALLEY_WINDWORKS_INDOOR_GRUNT          0x27F
 #define FLAG_HIDE_VALLEY_WINDWORKS_LOOKER                0x280
 #define FLAG_HIDE_BARRY_ETERNA_CITY                      0x281
-#define FLAG_HIDE_GALACTIC_ETERNA                        0x282
-#define FLAG_GALACTIVITY_DONE                            0x283
+#define FLAG_HIDE_CYRUS_ETERNA                           0x282
+#define FLAG_HIDE_GALACTIC_ETERNA                        0x283
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag
