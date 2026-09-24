@@ -302,5 +302,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_VALLEY_WINDWORKS_INDOOR_GIRL
 	setflag FLAG_HIDE_VALLEY_WINDWORKS_LOOKER
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
+	setflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
 	call EventScript_ResetAllBerries
 	end
