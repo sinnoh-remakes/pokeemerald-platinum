@@ -4904,9 +4904,9 @@
     {
       "id": "LAYOUT_ETERNA_CITY_GYM",
       "name": "EternaCity_Gym_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
+      "width": 21,
+      "height": 27,
+      "primary_tileset": "gTileset_GymEterna",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/EternaCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity_Gym/map.bin"

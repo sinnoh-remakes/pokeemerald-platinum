@@ -384,3 +384,6 @@ const u16 gMetatileAttributes_CaveCoronetNorth[] = INCBIN_U16("data/tilesets/pri
 
 const u16 gMetatiles_EternaIndoor[] = INCBIN_U16("data/tilesets/secondary/eterna_indoor/metatiles.bin");
 const u16 gMetatileAttributes_EternaIndoor[] = INCBIN_U16("data/tilesets/secondary/eterna_indoor/metatile_attributes.bin");
+
+const u16 gMetatiles_GymEterna[] = INCBIN_U16("data/tilesets/primary/gym_eterna/metatiles.bin");
+const u16 gMetatileAttributes_GymEterna[] = INCBIN_U16("data/tilesets/primary/gym_eterna/metatile_attributes.bin");

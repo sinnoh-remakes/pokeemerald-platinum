@@ -1479,3 +1479,14 @@ const struct Tileset gTileset_EternaIndoor =
     .metatileAttributes = gMetatileAttributes_EternaIndoor,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GymEterna =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymEterna,
+    .palettes = gTilesetPalettes_GymEterna,
+    .metatiles = gMetatiles_GymEterna,
+    .metatileAttributes = gMetatileAttributes_GymEterna,
+    .callback = NULL,
+};
