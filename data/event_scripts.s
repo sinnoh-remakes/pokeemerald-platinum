@@ -662,6 +662,7 @@ gStdScripts_End::
 	.include "data/maps/EternaCity_TowerA_3F/scripts.inc"
 	.include "data/maps/EternaCity_HouseA/scripts.inc"
 	.include "data/maps/EternaCity_HouseB/scripts.inc"
+	.include "data/maps/EternaCity_Gym/scripts.inc"
 	.include "data/maps/ValleyWindworksIndoor/scripts.inc"
 	.include "data/maps/Route205South1_House/scripts.inc"
 	.include "data/scripts/std_msgbox.inc"

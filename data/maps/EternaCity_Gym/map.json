@@ -1,0 +1,20 @@
+{
+  "id": "MAP_ETERNA_CITY_GYM",
+  "name": "EternaCity_Gym",
+  "layout": "LAYOUT_ETERNA_CITY_GYM",
+  "music": "MUS_DP_GYM",
+  "region_map_section": "MAPSEC_ETERNA_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}
