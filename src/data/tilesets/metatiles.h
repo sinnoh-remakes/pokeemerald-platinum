@@ -387,3 +387,6 @@ const u16 gMetatileAttributes_EternaIndoor[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_GymEterna[] = INCBIN_U16("data/tilesets/primary/gym_eterna/metatiles.bin");
 const u16 gMetatileAttributes_GymEterna[] = INCBIN_U16("data/tilesets/primary/gym_eterna/metatile_attributes.bin");
+
+const u16 gMetatiles_EternaGym[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/metatiles.bin");
+const u16 gMetatileAttributes_EternaGym[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/metatile_attributes.bin");
