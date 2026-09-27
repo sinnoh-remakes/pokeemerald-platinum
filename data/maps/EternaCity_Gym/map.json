@@ -1,7 +1,7 @@
 {
   "id": "MAP_ETERNA_CITY_GYM",
   "name": "EternaCity_Gym",
-  "layout": "LAYOUT_ETERNA_CITY_GYM",
+  "layout": "LAYOUT_ETERNA_CITY_GYM_1",
   "music": "MUS_DP_GYM",
   "region_map_section": "MAPSEC_ETERNA_CITY",
   "requires_flash": false,
