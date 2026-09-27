@@ -1499,5 +1499,5 @@ const struct Tileset gTileset_EternaGym =
     .palettes = gTilesetPalettes_EternaGym,
     .metatiles = gMetatiles_EternaGym,
     .metatileAttributes = gMetatileAttributes_EternaGym,
-    .callback = NULL,
+    .callback = InitTilesetAnim_EternaGym,
 };
