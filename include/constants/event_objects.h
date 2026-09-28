@@ -384,14 +384,15 @@
 #define OBJ_EVENT_GFX_BRIEFCASE_PT               376
 #define OBJ_EVENT_GFX_BREAKABLE_ROCK_PT          377
 #define OBJ_EVENT_GFX_CUTTABLE_TREE_PT           378
-#define OBJ_EVENT_GFX_WIND_TURBINE_BASE          379
-#define OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1      380
-#define OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2      381
+#define OBJ_EVENT_GFX_PUSHABLE_BOULDER_PT        379
+#define OBJ_EVENT_GFX_WIND_TURBINE_BASE          380
+#define OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1      381
+#define OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2      382
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        382
+#define NUM_OBJ_EVENT_GFX                        383
 
 
 // These are dynamic object gfx ids.
@@ -679,7 +680,8 @@
 #define OBJ_EVENT_PAL_TAG_BRIEFCASE_PT            0x11E0
 #define OBJ_EVENT_PAL_TAG_BREAKABLE_ROCK_PT       0x11E1
 #define OBJ_EVENT_PAL_TAG_CUTTABLE_TREE_PT        0x11E2
-#define OBJ_EVENT_PAL_TAG_WIND_TURBINE            0x11E3
+#define OBJ_EVENT_PAL_TAG_PUSHABLE_BOULDER_PT     0x11E3
+#define OBJ_EVENT_PAL_TAG_WIND_TURBINE            0x11E4
 
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
