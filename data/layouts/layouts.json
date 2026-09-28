@@ -4903,7 +4903,7 @@
     },
     {
       "id": "LAYOUT_ETERNA_CITY_GYM_1",
-      "name": "EternaCity_Gym_Layout",
+      "name": "EternaCity_Gym_1_Layout",
       "width": 21,
       "height": 29,
       "primary_tileset": "gTileset_GymEterna",
@@ -4913,7 +4913,7 @@
     },
     {
       "id": "LAYOUT_ETERNA_CITY_GYM_2",
-      "name": "EternaCity_Gym_Layout",
+      "name": "EternaCity_Gym_2_Layout",
       "width": 21,
       "height": 29,
       "primary_tileset": "gTileset_GymEterna",
@@ -4923,7 +4923,7 @@
     },
     {
       "id": "LAYOUT_ETERNA_CITY_GYM_3",
-      "name": "EternaCity_Gym_Layout",
+      "name": "EternaCity_Gym_3_Layout",
       "width": 21,
       "height": 29,
       "primary_tileset": "gTileset_GymEterna",
@@ -4933,7 +4933,7 @@
     },
     {
       "id": "LAYOUT_ETERNA_CITY_GYM_4",
-      "name": "EternaCity_Gym_Layout",
+      "name": "EternaCity_Gym_4_Layout",
       "width": 21,
       "height": 29,
       "primary_tileset": "gTileset_GymEterna",
@@ -4943,7 +4943,7 @@
     },
     {
       "id": "LAYOUT_ETERNA_CITY_GYM_5",
-      "name": "EternaCity_Gym_Layout",
+      "name": "EternaCity_Gym_5_Layout",
       "width": 21,
       "height": 29,
       "primary_tileset": "gTileset_GymEterna",
