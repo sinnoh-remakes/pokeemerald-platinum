@@ -1697,3 +1697,35 @@ void InitTilesetAnim_Route211West(void)
     sSecondaryTilesetAnimCounterMax = 256;
     sSecondaryTilesetAnimCallback = TilesetAnim_Route211West;
 }
+
+const u16 gTilesetAnims_EternaGym_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/anim/fountain/00.4bpp");
+const u16 gTilesetAnims_EternaGym_Fountain_Frame1[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/anim/fountain/01.4bpp");
+const u16 gTilesetAnims_EternaGym_Fountain_Frame2[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/anim/fountain/02.4bpp");
+const u16 gTilesetAnims_EternaGym_Fountain_Frame3[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/anim/fountain/03.4bpp");
+
+const u16 *const gTilesetAnims_EternaGym_Fountain[] = {
+    gTilesetAnims_EternaGym_Fountain_Frame0,
+    gTilesetAnims_EternaGym_Fountain_Frame1,
+    gTilesetAnims_EternaGym_Fountain_Frame2,
+    gTilesetAnims_EternaGym_Fountain_Frame3
+};
+
+static void QueueAnimTiles_EternaGym(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_EternaGym_Fountain);
+    AppendTilesetAnimToBuffer(gTilesetAnims_EternaGym_Fountain[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(384)), 3 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_EternaGym(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_EternaGym(timer / 16);
+    }
+}
+
+void InitTilesetAnim_EternaGym(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_EternaGym;
+}
