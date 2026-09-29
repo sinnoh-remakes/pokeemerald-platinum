@@ -1,12 +1,13 @@
 import json
 from pathlib import Path
 
-# EternaForest2: the top 26 rows, with the left 48 columns trimmed of the original 86x68 EternaForest overlay.
+# EternaForest2: the top 26 rows, with the left 44 columns trimmed off,
+# of the original 86x68 EternaForest overlay.
 # The overlay is a 16x16 pattern tiled over the original map, so the offset of this
 # map within the original map must be included when indexing the pattern.
-cols = 38
+cols = 42
 rows = 26
-x_offset = 48
+x_offset = 44
 y_offset = 0
 
 matrix = []

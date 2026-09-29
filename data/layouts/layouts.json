@@ -4744,7 +4744,7 @@
     {
       "id": "LAYOUT_ETERNA_FOREST_2",
       "name": "EternaForest2_Layout",
-      "width": 38,
+      "width": 42,
       "height": 26,
       "primary_tileset": "gTileset_IndoorForest",
       "secondary_tileset": "gTileset_Petalburg",
