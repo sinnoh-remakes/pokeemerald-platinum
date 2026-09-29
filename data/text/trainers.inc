@@ -5353,97 +5353,97 @@ Route205South_Text_KarinaPostBattle:
 	.string "Listen very closely...\n"
 	.string "Can you hear the cries of Pokémon?$"
 
-EternaForest_Text_JackIntro:
+EternaForest1_Text_JackIntro:
 	.string "What’s cool, you might ask? No?\n"
 	.string "I’ll tell you anyway: bug Pokémon!$"
 
-EternaForest_Text_JackDefeated:
+EternaForest1_Text_JackDefeated:
 	.string "Don’t ignore bug Pokémon!\n"
 	.string "That really bugs me!$"
 
-EternaForest_Text_JackPostBattle:
+EternaForest1_Text_JackPostBattle:
 	.string "It would seem that coolness alone\n"
 	.string "doesn’t add up to any wins...$"
 
-EternaForest_Text_BrianaIntro:
+EternaForest1_Text_BrianaIntro:
 	.string "We’re just out on a power walk!$"
 
-EternaForest_Text_BrianaDefeated:
+EternaForest1_Text_BrianaDefeated:
 	.string "Oh, you!$"
 
-EternaForest_Text_BrianaPostBattle:
+EternaForest1_Text_BrianaPostBattle:
 	.string "You can’t avoid bug Pokémon ever in\n"
 	.string "the forest.\p"
 	.string "I didn’t have any Antidotes with me,\n"
 	.string "either. It was the worst!$"
 
-EternaForest_Text_LindseyIntro:
+EternaForest1_Text_LindseyIntro:
 	.string "I see it...\n"
 	.string "I see it...\p"
 	.string "I see you going down in defeat...$"
 
-EternaForest_Text_LindseyDefeated:
+EternaForest1_Text_LindseyDefeated:
 	.string "It is I that has gone down in defeat.$"
 
-EternaForest_Text_LindseyPostBattle:
+EternaForest1_Text_LindseyPostBattle:
 	.string "The Old Chateau...\n"
 	.string "There should be none alive in it...\p"
 	.string "And yet there is a pervasive sense of\n"
 	.string "a presence...$"
 
-EternaForest_Text_ElijahIntro:
+EternaForest1_Text_ElijahIntro:
 	.string "When a Trainer and a Pokémon bond\n"
 	.string "as one, a wondrous power is born...$"
 
-EternaForest_Text_ElijahDefeated:
+EternaForest1_Text_ElijahDefeated:
 	.string "Urmmm...\n"
 	.string "Urrrrmmmmm...$"
 
-EternaForest_Text_ElijahPostBattle:
+EternaForest1_Text_ElijahPostBattle:
 	.string "There still remain many mysteries yet\n"
 	.string "to be solved in this strange world...$"
 
-EternaForest_Text_PhillipIntro:
+EternaForest1_Text_PhillipIntro:
 	.string "Here comes the swarm!$"
 
-EternaForest_Text_PhillipDefeated:
+EternaForest1_Text_PhillipDefeated:
 	.string "Whoooh...$"
 
-EternaForest_Text_DonaldIntro:
+EternaForest1_Text_DonaldIntro:
 	.string "My senses tingle...\n"
 	.string "I’ve spotted a rare Pokémon!$"
 
-EternaForest_Text_PhillipPostBattle:
+EternaForest1_Text_PhillipPostBattle:
 	.string "There’s a Pokémon ability named Swarm.$"
 
-EternaForest_Text_DonaldDefeated:
+EternaForest1_Text_DonaldDefeated:
 	.string "Awawawawah...$"
 
-EternaForest_Text_DonaldPostBattle:
+EternaForest1_Text_DonaldPostBattle:
 	.string "I thought it was a rare Pokémon, but\n"
 	.string "it turned out to be just a Trainer!$"
 
-EternaForest_Text_KodyIntro:
+EternaForest1_Text_KodyIntro:
 	.string "A strange presence has been felt...\n"
 	.string "It is emanating from...you!$"
 
-EternaForest_Text_KodyDefeated:
+EternaForest1_Text_KodyDefeated:
 	.string "Oh, no!\n"
 	.string "My MEDITITE!$"
 
-EternaForest_Text_KodyPostBattle:
+EternaForest1_Text_KodyPostBattle:
 	.string "The Old Chateau... I sense...\n"
 	.string "a particularly strong presence there.$"
 
-EternaForest_Text_RachaelIntro:
+EternaForest1_Text_RachaelIntro:
 	.string "This forest is strange, you know...\n"
 	.string "It seems to fill me with energy...$"
 
-EternaForest_Text_RachaelDefeated:
+EternaForest1_Text_RachaelDefeated:
 	.string "Your victory...\n"
 	.string "There is nothing strange about it.$"
 
-EternaForest_Text_RachaelPostBattle:
+EternaForest1_Text_RachaelPostBattle:
 	.string "Forests are mystifying... They seem\n"
 	.string "to gather such unexplainable energy.$"
 
