@@ -32,7 +32,7 @@ static s32 MapPosToBgTilemapOffset(struct FieldCameraOffset *, s32, s32);
 static void DrawWholeMapViewInternal(int, int, const struct MapLayout *);
 static void DrawMetatileAt(const struct MapLayout *, u16, int, int);
 static void DrawMetatile(s32, const u16 *, u16);
-static void DrawMetatileForOverlay(s32 metatileLayerType, const u16 *tiles, u16 offset, int x, int y, int width);
+static void DrawMetatileForOverlay(s32 metatileLayerType, const u16 *tiles, u16 offset, int x, int y);
 static void CameraPanningCB_PanAhead(void);
 
 static struct FieldCameraOffset sFieldCameraOffset;
@@ -83,7 +83,8 @@ void FieldUpdateBgTilemapScroll(void)
     r5 = sFieldCameraOffset.xPixelOffset + sHorizontalCameraPan;
     r4 = sVerticalCameraPan + sFieldCameraOffset.yPixelOffset + 8;
 
-    if (gMapHeader.mapLayoutId == LAYOUT_ETERNA_FOREST)
+    if (gMapHeader.mapLayoutId == LAYOUT_ETERNA_FOREST_1
+     || gMapHeader.mapLayoutId == LAYOUT_ETERNA_FOREST_2)
     {
         if (sBG1AnimFrame >= (32 * 10))
             sBG1AnimFrame = 0;
@@ -264,7 +265,7 @@ static void DrawMetatileAt(const struct MapLayout *mapLayout, u16 offset, int x,
     }
     else
     {
-        DrawMetatileForOverlay(MapGridGetMetatileLayerTypeAt(x, y), metatiles + metatileId * NUM_TILES_PER_METATILE, offset, (x - MAP_OFFSET), (y - MAP_OFFSET), mapLayout->width);
+        DrawMetatileForOverlay(MapGridGetMetatileLayerTypeAt(x, y), metatiles + metatileId * NUM_TILES_PER_METATILE, offset, (x - MAP_OFFSET), (y - MAP_OFFSET));
     }
 }
 
@@ -320,7 +321,61 @@ static void DrawMetatile(s32 metatileLayerType, const u16 *tiles, u16 offset)
     ScheduleBgCopyTilemapToVram(3);
 }
 
-static void DrawMetatileForOverlay(s32 metatileLayerType, const u16 *tiles, u16 offset, int x, int y, int width)
+// Finds the overlay top tile for a position given in map coordinates (0,0 is the map's top left).
+// Positions outside the map belong to a connected map, so use that map's overlay if it has one.
+static bool8 GetOverlayTopTileId(int x, int y, u16 *topTileId)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    const struct MapConnection *connection;
+    const struct MapHeader *connectedHeader;
+    const struct MapOverlay *overlay = gMapHeader.overlay;
+    int width = layout->width;
+    int height = layout->height;
+
+    if (x < 0 || y < 0 || x >= width || y >= height)
+    {
+        connection = GetMapConnectionAtPos(x + MAP_OFFSET, y + MAP_OFFSET);
+        if (connection == NULL)
+            return FALSE;
+
+        connectedHeader = GetMapHeaderFromConnection(connection);
+        overlay = connectedHeader->overlay;
+        if (overlay == NULL)
+            return FALSE;
+
+        switch (connection->direction)
+        {
+        case CONNECTION_NORTH:
+            x -= connection->offset;
+            y += connectedHeader->mapLayout->height;
+            break;
+        case CONNECTION_SOUTH:
+            x -= connection->offset;
+            y -= height;
+            break;
+        case CONNECTION_WEST:
+            x += connectedHeader->mapLayout->width;
+            y -= connection->offset;
+            break;
+        case CONNECTION_EAST:
+            x -= width;
+            y -= connection->offset;
+            break;
+        default:
+            return FALSE;
+        }
+
+        width = connectedHeader->mapLayout->width;
+        height = connectedHeader->mapLayout->height;
+        if (x < 0 || y < 0 || x >= width || y >= height)
+            return FALSE;
+    }
+
+    *topTileId = overlay->overlayTiles[y * width + x].topTileId;
+    return TRUE;
+}
+
+static void DrawMetatileForOverlay(s32 metatileLayerType, const u16 *tiles, u16 offset, int x, int y)
 {
     u16 topTileId = 0;
     const u16 *ovTiles = NULL;
@@ -427,7 +482,14 @@ static void DrawMetatileForOverlay(s32 metatileLayerType, const u16 *tiles, u16 
             break;
     }
 
-    topTileId = gMapHeader.overlay->overlayTiles[y * width + x].topTileId;
+    // No overlay tile here (e.g. the border or a map without an overlay), keep the metatile's own top layer
+    if (!GetOverlayTopTileId(x, y, &topTileId))
+    {
+        ScheduleBgCopyTilemapToVram(1);
+        ScheduleBgCopyTilemapToVram(2);
+        ScheduleBgCopyTilemapToVram(3);
+        return;
+    }
 
     if (topTileId < NUM_METATILES_IN_PRIMARY)
     {
