@@ -4902,6 +4902,56 @@
       "blockdata_filepath": "data/layouts/EternaCity_HouseA/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_CITY_GYM_1",
+      "name": "EternaCity_Gym_1_Layout",
+      "width": 21,
+      "height": 29,
+      "primary_tileset": "gTileset_GymEterna",
+      "secondary_tileset": "gTileset_EternaGym",
+      "border_filepath": "data/layouts/EternaCity_Gym_1/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Gym_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GYM_2",
+      "name": "EternaCity_Gym_2_Layout",
+      "width": 21,
+      "height": 29,
+      "primary_tileset": "gTileset_GymEterna",
+      "secondary_tileset": "gTileset_EternaGym",
+      "border_filepath": "data/layouts/EternaCity_Gym_2/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Gym_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GYM_3",
+      "name": "EternaCity_Gym_3_Layout",
+      "width": 21,
+      "height": 29,
+      "primary_tileset": "gTileset_GymEterna",
+      "secondary_tileset": "gTileset_EternaGym",
+      "border_filepath": "data/layouts/EternaCity_Gym_3/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Gym_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GYM_4",
+      "name": "EternaCity_Gym_4_Layout",
+      "width": 21,
+      "height": 29,
+      "primary_tileset": "gTileset_GymEterna",
+      "secondary_tileset": "gTileset_EternaGym",
+      "border_filepath": "data/layouts/EternaCity_Gym_4/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Gym_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GYM_5",
+      "name": "EternaCity_Gym_5_Layout",
+      "width": 21,
+      "height": 29,
+      "primary_tileset": "gTileset_GymEterna",
+      "secondary_tileset": "gTileset_EternaGym",
+      "border_filepath": "data/layouts/EternaCity_Gym_5/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Gym_5/map.bin"
+    },
+    {
       "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",
       "name": "ValleyWindworksIndoor_Layout",
       "width": 22,
