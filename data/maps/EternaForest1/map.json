@@ -265,8 +265,8 @@
     }
   ],
   "overlay": {
-    "initial_eva": 6,
-    "initial_evb": 10,
+    "initial_eva": 9,
+    "initial_evb": 7,
     "tiles": [
       {
         "idx": 0,

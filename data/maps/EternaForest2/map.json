@@ -92,8 +92,8 @@
   "coord_events": [],
   "bg_events": [],
   "overlay": {
-    "initial_eva": 8,
-    "initial_evb": 8,
+    "initial_eva": 9,
+    "initial_evb": 7,
     "tiles": [
       {
         "idx": 0,
