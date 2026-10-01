@@ -54,6 +54,8 @@ class TilePainter:
         self.selected_prefab = 0
 
         self.tiles = {}
+        self.undo_stack = []
+        self.redo_stack = []
         self.tk_cache = {}
 
         self.controls_frame = tk.Frame(self.root)
@@ -64,6 +66,10 @@ class TilePainter:
         self.main_area.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
         self.create_canvas() 
+        self.root.bind_all("<Command-z>", lambda e: self.undo())
+        self.root.bind_all("<Command-y>", lambda e: self.redo())
+        self.root.bind_all("<Command-Shift-z>", lambda e: self.redo())
+        self.root.bind_all("<Command-Shift-Z>", lambda e: self.redo())
         self.create_palette()
         self.rebuild_palette()
 
@@ -86,6 +92,8 @@ class TilePainter:
         self.h_entry.insert(0, "20")
         self.h_entry.pack(side=tk.LEFT)
 
+        tk.Button(frame, text="Undo", command=self.undo).pack(side=tk.LEFT)
+        tk.Button(frame, text="Redo", command=self.redo).pack(side=tk.LEFT)
         tk.Button(frame, text="Apply", command=self.update_size).pack(side=tk.LEFT)
 
         # Shift buttons
@@ -131,11 +139,32 @@ class TilePainter:
         return self.play_h + BORDER_H * 2
 
     # ------------------------------
+    def push_undo(self):
+        """Snapshot tiles before a change; any new edit invalidates redo."""
+        self.undo_stack.append(dict(self.tiles))
+        self.redo_stack.clear()
+
+    def undo(self):
+        if not self.undo_stack:
+            return
+        self.redo_stack.append(dict(self.tiles))
+        self.tiles = self.undo_stack.pop()
+        self.redraw()
+
+    def redo(self):
+        if not self.redo_stack:
+            return
+        self.undo_stack.append(dict(self.tiles))
+        self.tiles = self.redo_stack.pop()
+        self.redraw()
+
+    # ------------------------------
     def paint_tile(self, ev):
         x0 = ev.x // self.tile_size
         y0 = ev.y // self.tile_size
         if not (0 <= x0 < self.full_w and 0 <= y0 < self.full_h):
             return
+        self.push_undo()
         # Top-left of the prefab lands on the clicked tile; tiles past the edge are clipped.
         for dy, row in enumerate(PREFABS[self.selected_prefab]):
             for dx, tid in enumerate(row):
@@ -149,11 +178,13 @@ class TilePainter:
         x = ev.x // self.tile_size
         y = ev.y // self.tile_size
         if (x, y) in self.tiles:
+            self.push_undo()
             del self.tiles[(x, y)]
             self.redraw()
 
     # ------------------------------
     def shift(self, dx, dy):
+        self.push_undo()
         shifted = {}
         for (x, y), val in self.tiles.items():
             shifted[(x + dx, y + dy)] = val
@@ -309,8 +340,10 @@ class TilePainter:
             self.initial_eva = ov.get("initial_eva", self.initial_eva)
             self.initial_evb = ov.get("initial_evb", self.initial_evb)
 
-            # Wipe existing tiles
+            # Wipe existing tiles (a loaded map starts a fresh history)
             self.tiles = {}
+            self.undo_stack.clear()
+            self.redo_stack.clear()
 
             # Paint tiles from JSON
             for t in ov.get("tiles", []):
