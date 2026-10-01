@@ -11,6 +11,21 @@ BORDER_W = 7
 BORDER_H = 5
 BG_ALPHA = 0.8
 
+# Prefabs: rows of primary-tileset metatile ids (128-255). Rows may be shorter than
+# the widest row; missing cells are left untouched when placing.
+PREFABS = [
+    [[129, 130, 131], [132, 133, 134]],
+    [[128, 135, 136], [137, 138, 139], [128, 140, 141]],
+    [[142, 143, 144, 145], [146, 222, 147, 148], [149, 222, 150, 151], [152, 153, 154, 155]],
+    [[128, 156, 157, 128, 128], [158, 159, 160, 161, 162], [163, 164, 165, 166, 167], [128, 168, 169, 170, 128]],
+    [[171, 172, 173, 174], [175, 176, 177, 178], [179, 180, 181, 128]],
+    [[128, 182, 183, 184, 185], [186, 187, 222, 222, 188], [189, 190, 191, 192, 193], [128, 194, 195, 128, 128]],
+    [[196, 197, 198, 199, 200], [201, 202, 222, 222, 203], [204, 205, 222, 222, 206], [128, 207, 208, 222, 209], [128, 128, 210, 211, 212]],
+    [[213, 214, 215], [216, 217, 218], [219, 220, 221]],
+    [[128, 128, 128, 128, 128], [128, 128, 128, 128, 128], [128, 128, 128, 128, 128], [128, 128, 128, 128, 128], [128, 128, 128, 128, 128]]
+]
+
+
 def id_to_color(num):
     return f"#{(num * 123457) & 0xFFFFFF:06x}"
 
@@ -36,7 +51,7 @@ class TilePainter:
         self.flat_metatiles = []
 
         self.tile_size = 20
-        self.current_tile_id = DEFAULT_TOP_TILE_ID
+        self.selected_prefab = 0
 
         self.tiles = {}
         self.tk_cache = {}
@@ -50,6 +65,7 @@ class TilePainter:
 
         self.create_canvas() 
         self.create_palette()
+        self.rebuild_palette()
 
         self.draw_grid()
 
@@ -71,11 +87,6 @@ class TilePainter:
         self.h_entry.pack(side=tk.LEFT)
 
         tk.Button(frame, text="Apply", command=self.update_size).pack(side=tk.LEFT)
-
-        tk.Label(frame, text="Tile Num:").pack(side=tk.LEFT)
-        self.tile_entry = tk.Entry(frame, width=6)
-        self.tile_entry.insert(0, str(self.current_tile_id))
-        self.tile_entry.pack(side=tk.LEFT)
 
         # Shift buttons
         tk.Button(frame, text="↑", command=lambda: self.shift(0, -1)).pack(side=tk.LEFT)
@@ -121,12 +132,17 @@ class TilePainter:
 
     # ------------------------------
     def paint_tile(self, ev):
-        self.update_tile_id()
-        x = ev.x // self.tile_size
-        y = ev.y // self.tile_size
-        if 0 <= x < self.full_w and 0 <= y < self.full_h:
-            self.tiles[(x, y)] = self.current_tile_id
-            self.redraw()
+        x0 = ev.x // self.tile_size
+        y0 = ev.y // self.tile_size
+        if not (0 <= x0 < self.full_w and 0 <= y0 < self.full_h):
+            return
+        # Top-left of the prefab lands on the clicked tile; tiles past the edge are clipped.
+        for dy, row in enumerate(PREFABS[self.selected_prefab]):
+            for dx, tid in enumerate(row):
+                x, y = x0 + dx, y0 + dy
+                if x < self.full_w and y < self.full_h:
+                    self.tiles[(x, y)] = tid
+        self.redraw()
 
     # ------------------------------
     def erase_tile(self, ev):
@@ -159,12 +175,6 @@ class TilePainter:
             pass
 
     # ------------------------------
-    def update_tile_id(self):
-        try:
-            self.current_tile_id = int(self.tile_entry.get())
-        except:
-            self.current_tile_id = DEFAULT_TOP_TILE_ID
-
     # ------------------------------
     def draw_grid(self):
         self.canvas.delete("all")
@@ -307,7 +317,6 @@ class TilePainter:
                 x = t.get("x") + BORDER_W
                 y = t.get("y") + BORDER_H
                 tid = t.get("top_tile_id", DEFAULT_TOP_TILE_ID)
-                self.current_tile_id
                 if x is not None and y is not None:
                     self.tiles[(x, y)] = tid
 
@@ -621,7 +630,6 @@ class TilePainter:
 
         self.palette_tiles = []     # PhotoImages to keep references
         self.palette_buttons = []   # Buttons / labels representing tiles
-        self.selected_palette_idx = None
 
     # ------------------------------
 
@@ -632,54 +640,44 @@ class TilePainter:
 
         self.palette_tiles.clear()
         self.palette_buttons.clear()
-        self.selected_palette_idx = None
 
-        if not self.flat_metatiles:
-            return
+        cell = self.tile_size  # match drawing size
 
-        TILE_DISPLAY_SIZE = self.tile_size  # match drawing size
+        for i, rows in enumerate(PREFABS):
+            cols = max(len(r) for r in rows)
+            img = Image.new("RGBA", (cols * cell, len(rows) * cell), (0, 0, 0, 0))
+            for dy, row in enumerate(rows):
+                for dx, tid in enumerate(row):
+                    if 0 <= tid < len(self.flat_metatiles):
+                        tile = self.flat_metatiles[tid].resize((cell, cell), Image.NEAREST)
+                    else:
+                        tile = Image.new("RGBA", (cell, cell), id_to_color(tid))
+                    img.paste(tile, (dx * cell, dy * cell))
 
-        for i, img in enumerate(self.flat_metatiles):
-            # scale for display
-            thumb = img.resize((TILE_DISPLAY_SIZE, TILE_DISPLAY_SIZE), Image.NEAREST)
-            tkimg = ImageTk.PhotoImage(thumb)
+            tkimg = ImageTk.PhotoImage(img)
             self.palette_tiles.append(tkimg)
 
             lbl = tk.Label(
                 self.palette_inner,
                 image=tkimg,
-                bd=2,
+                bd=3,
                 relief="flat"
             )
-
-            lbl.grid(row=i // 8, column=i % 8, padx=2, pady=2)  # 8 columns
-            lbl.bind("<Button-1>", lambda e, idx=i: self.select_palette_tile(idx))
-
+            lbl.grid(row=i, column=0, padx=4, pady=4)
+            lbl.bind("<Button-1>", lambda e, idx=i: self.select_prefab(idx))
             self.palette_buttons.append(lbl)
+
+        self.select_prefab(self.selected_prefab)
 
     # ------------------------------
 
-    def select_palette_tile(self, idx):
-        # Update selected tile
-        self.current_tile_id = idx
-
-        # Update tile entry field
-        self.tile_entry.delete(0, tk.END)
-        self.tile_entry.insert(0, str(idx))
-
-        # Update border highlighting
-        if self.selected_palette_idx is not None:
-            old = self.palette_buttons[self.selected_palette_idx]
-            old.config(relief="flat", bd=2)
-
-        btn = self.palette_buttons[idx]
-        btn.config(relief="solid", bd=2)
-
-        self.selected_palette_idx = idx
-
-
-
-
+    def select_prefab(self, idx):
+        self.selected_prefab = idx
+        for i, btn in enumerate(self.palette_buttons):
+            if i == idx:
+                btn.config(relief="solid", bd=3, bg="#ffd54a")
+            else:
+                btn.config(relief="flat", bd=3, bg=self.root.cget("bg"))
 
 
 # ------------------------------
