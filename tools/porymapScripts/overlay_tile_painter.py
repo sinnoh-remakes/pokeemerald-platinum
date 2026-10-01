@@ -280,11 +280,17 @@ class TilePainter:
             "initial_evb": self.initial_evb,
             "tiles": []
         }
-        for (x, y), tid in self.tiles.items():
+        # idx = y * map_width + x (row-major), which is the order mapjson/the game expect.
+        # Tiles painted in the border have no valid idx, so they are left out.
+        for (x, y), tid in sorted(self.tiles.items(), key=lambda t: (t[0][1], t[0][0])):
+            mx, my = x - BORDER_W, y - BORDER_H
+            if not (0 <= mx < self.play_w and 0 <= my < self.play_h):
+                continue
             overlay["tiles"].append({
-                "top_tile_id": tid,
-                "x": x - BORDER_W,
-                "y": y - BORDER_H
+                "idx": my * self.play_w + mx,
+                "x": mx,
+                "y": my,
+                "top_tile_id": tid
             })
 
         # Generate JSON string for overlay only
