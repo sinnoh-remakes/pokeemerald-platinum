@@ -55,7 +55,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EternaCity_EventScript_GalacticGrunt_Basic",
+      "script": "EternaCityNorth_EventScript_GalacticGrunt_Basic",
       "flag": "FLAG_HIDE_GALACTIC_ETERNA"
     },
     {
@@ -96,7 +96,7 @@
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
       "var_value": "0",
-      "script": "EternaCity_EventScript_BarryApproach1"
+      "script": "EternaCityNorth_EventScript_BarryApproach1"
     },
     {
       "type": "trigger",
@@ -105,7 +105,7 @@
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
       "var_value": "0",
-      "script": "EternaCity_EventScript_BarryApproach2"
+      "script": "EternaCityNorth_EventScript_BarryApproach2"
     },
     {
       "type": "trigger",
@@ -114,7 +114,7 @@
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
       "var_value": "0",
-      "script": "EternaCity_EventScript_BarryApproach3"
+      "script": "EternaCityNorth_EventScript_BarryApproach3"
     },
     {
       "type": "trigger",
@@ -123,7 +123,7 @@
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
       "var_value": "1",
-      "script": "EternaCity_EventScript_CynthiaApproach1"
+      "script": "EternaCityNorth_EventScript_CynthiaApproach1"
     },
     {
       "type": "trigger",
@@ -132,7 +132,7 @@
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
       "var_value": "1",
-      "script": "EternaCity_EventScript_CynthiaApproach2"
+      "script": "EternaCityNorth_EventScript_CynthiaApproach2"
     },
     {
       "type": "trigger",
@@ -141,7 +141,7 @@
       "elevation": 0,
       "var": "VAR_ETERNA_CITY_STATE",
       "var_value": "1",
-      "script": "EternaCity_EventScript_CynthiaApproach3"
+      "script": "EternaCityNorth_EventScript_CynthiaApproach3"
     }
   ],
   "bg_events": []
