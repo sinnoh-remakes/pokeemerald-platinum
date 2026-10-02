@@ -12,8 +12,7 @@ enum MapType
     MAP_TYPE_OCEAN_ROUTE,
     MAP_TYPE_UNKNOWN, // Not used by any map.
     MAP_TYPE_INDOOR,
-    MAP_TYPE_SECRET_BASE,
-    MAP_TYPE_NIGHT,
+    MAP_TYPE_SECRET_BASE
 };
 
 enum MapBattleScene

@@ -4732,14 +4732,24 @@
       "blockdata_filepath": "data/layouts/FloaromaMeadow/map.bin"
     },
     {
-      "id": "LAYOUT_ETERNA_FOREST",
+      "id": "LAYOUT_ETERNA_FOREST_1",
       "name": "EternaForest_Layout",
-      "width": 86,
-      "height": 68,
+      "width": 90,
+      "height": 40,
       "primary_tileset": "gTileset_IndoorForest",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/EternaForest/border.bin",
-      "blockdata_filepath": "data/layouts/EternaForest/map.bin"
+      "border_filepath": "data/layouts/EternaForest1/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForest1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_FOREST_2",
+      "name": "EternaForest2_Layout",
+      "width": 42,
+      "height": 46,
+      "primary_tileset": "gTileset_IndoorForest",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/EternaForest2/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForest2/map.bin"
     },
     {
       "id": "LAYOUT_ETERNA_FOREST_OUTER1",
