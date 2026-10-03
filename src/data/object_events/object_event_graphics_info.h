@@ -373,7 +373,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BuckPt = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_StandardAsymm,
     .images = sPicTable_BuckPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
@@ -544,7 +544,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CherylPt = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_StandardAsymm,
     .images = sPicTable_CherylPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
@@ -1247,7 +1247,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MarleyPt = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_StandardAsymm,
     .images = sPicTable_MarleyPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
@@ -1304,7 +1304,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MiraPt = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_StandardAsymm,
     .images = sPicTable_MiraPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
@@ -1456,7 +1456,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParasolLadyPt = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_StandardAsymm,
     .images = sPicTable_ParasolLadyPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
@@ -1684,7 +1684,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RileyPt = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_StandardAsymm,
     .images = sPicTable_RileyPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
