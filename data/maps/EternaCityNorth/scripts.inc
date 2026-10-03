@@ -8,9 +8,9 @@ EternaCityNorth_EventScript_GalacticGrunt_Basic::
 	end
 
 EternaCityNorth_EventScript_BarryApproach1::
+	lock
 	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
-	lock
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_Rush
 	waitmovement 0
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_Push
@@ -59,12 +59,13 @@ EternaCityNorth_EventScript_BarryApproach1::
 	setvar VAR_ETERNA_CITY_STATE, 1
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
 	removeobject LOCALID_BARRY_ETERNA_CITY
+	release
 	end
 
 EternaCityNorth_EventScript_BarryApproach2::
+	lock
 	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
-	lock
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach2_Rush
 	waitmovement 0
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_Push
@@ -117,12 +118,13 @@ EternaCityNorth_EventScript_BarryApproach2::
 	setvar VAR_ETERNA_CITY_STATE, 1
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
 	removeobject LOCALID_BARRY_ETERNA_CITY
+	release
 	end
 
 EternaCityNorth_EventScript_BarryApproach3::
+	lock
 	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
-	lock
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach3_Rush
 	waitmovement 0
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_Push
@@ -171,6 +173,7 @@ EternaCityNorth_EventScript_BarryApproach3::
 	setvar VAR_ETERNA_CITY_STATE, 1
 	setflag FLAG_HIDE_BARRY_ETERNA_CITY
 	removeobject LOCALID_BARRY_ETERNA_CITY
+	release
 	end
 
 
@@ -202,10 +205,10 @@ EternaCityNorth_EventScript_BarrysAdvice::
 
 @ Cynthia cutscene
 EternaCityNorth_EventScript_CynthiaApproach1::
+	lock
 	clearflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
 	addobject LOCALID_CYNTHIA_ETERNA, MAP_ETERNA_CITY_NORTH
 	setobjectxy LOCALID_CYNTHIA_ETERNA, 24, 12
-	lock
 	delay 45
 	applymovement LOCALID_CYNTHIA_ETERNA, EternaCityNorth_Movement_CynthiaApproach_Movement1
 	waitmovement 0
@@ -240,6 +243,7 @@ EternaCityNorth_EventScript_CynthiaApproach1::
 	end
 
 EternaCityNorth_EventScript_CynthiaApproach2::
+	lock
 	clearflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
 	addobject LOCALID_CYNTHIA_ETERNA, MAP_ETERNA_CITY_NORTH
 	setobjectxy LOCALID_CYNTHIA_ETERNA, 24, 13
@@ -276,6 +280,7 @@ EternaCityNorth_EventScript_CynthiaApproach2::
 	end
 
 EternaCityNorth_EventScript_CynthiaApproach3::
+	lock
 	clearflag FLAG_HIDE_CYNTHIA_ETERNA_CITY
 	addobject LOCALID_CYNTHIA_ETERNA, MAP_ETERNA_CITY_NORTH
 	setobjectxy LOCALID_CYNTHIA_ETERNA, 24, 14
