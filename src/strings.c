@@ -1294,3 +1294,5 @@ const u8 gText_Rename[] = _("RENAME");
 const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
 const u8 gText_CannotSendMonToBoxActive[] = _("Cannot send an active battler\nto the box.{PAUSE_UNTIL_PRESS}");
 const u8 gText_CannotSendMonToBoxPartner[] = _("Cannot send a mon that doesn't,\nbelong to you to the box.{PAUSE_UNTIL_PRESS}");
+const u8 gText_SaveFileOldUpdated[] = _("Your save file is for an older release\nof RETRO PLATINUM.\pYour save will be updated. Please back\nup your old save if you wish to keep it.");
+const u8 gText_SaveFileOldErrored[] = _("Your save file is for an older release\nof RETRO PLATINUM.\pThe attempt to update the save file\nhas failed.\pPlease report this to the developers.");
