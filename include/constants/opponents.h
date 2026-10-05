@@ -944,13 +944,16 @@
 #define TRAINER_PT_JOSEPH_3                 938
 #define TRAINER_PT_ANDREW                   939
 #define TRAINER_PT_ZACHARY                  940
+#define TRAINER_PT_CAROLINE                 941
+#define TRAINER_PT_JENNA                    942
+#define TRAINER_PT_ANGELA                   943
 
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 4 additional trainer before trainer flag space overflows
+// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 1 additional trainer before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      941
-#define MAX_TRAINERS_COUNT                  941
+#define TRAINERS_COUNT                      944
+#define MAX_TRAINERS_COUNT                  944
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
