@@ -1468,3 +1468,36 @@ const struct Tileset gTileset_CaveCoronetNorth =
     .metatileAttributes = gMetatileAttributes_CaveCoronetNorth,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_EternaIndoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EternaIndoor,
+    .palettes = gTilesetPalettes_EternaIndoor,
+    .metatiles = gMetatiles_EternaIndoor,
+    .metatileAttributes = gMetatileAttributes_EternaIndoor,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymEterna =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymEterna,
+    .palettes = gTilesetPalettes_GymEterna,
+    .metatiles = gMetatiles_GymEterna,
+    .metatileAttributes = gMetatileAttributes_GymEterna,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EternaGym =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EternaGym,
+    .palettes = gTilesetPalettes_EternaGym,
+    .metatiles = gMetatiles_EternaGym,
+    .metatileAttributes = gMetatileAttributes_EternaGym,
+    .callback = InitTilesetAnim_EternaGym,
+};

@@ -1,0 +1,2 @@
+EternaCity_TowerA_3F_MapScripts::
+	.byte 0

@@ -11,6 +11,7 @@
     "gMapGroup_IndoorJubilife",
     "gMapGroup_IndoorOreburgh",
     "gMapGroup_IndoorFloaroma",
+    "gMapGroup_IndoorEterna",
     "gMapGroup_IndoorMiscellaneous",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
@@ -87,7 +88,8 @@
   "gMapGroup_Miscellaneous": [
     "ValleyWindworks",
     "FloaromaMeadow",
-    "EternaForest",
+    "EternaForest1",
+    "EternaForest2",
     "EternaForestOuter1",
     "EternaForestOuter2"
   ],
@@ -141,6 +143,14 @@
     "FloaromaTown_PokemonCenter_1F",
     "FloaromaTown_PokemonCenter_2F",
     "FloaromaTown_Mart"
+  ],
+  "gMapGroup_IndoorEterna": [
+    "EternaCity_TowerA_1F",
+    "EternaCity_TowerA_2F",
+    "EternaCity_TowerA_3F",
+    "EternaCity_HouseA",
+    "EternaCity_HouseB",
+    "EternaCity_Gym"
   ],
   "gMapGroup_IndoorMiscellaneous": [
     "FloaromaMeadow_House",

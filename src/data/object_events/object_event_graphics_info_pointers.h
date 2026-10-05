@@ -119,6 +119,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YoungsterPt
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BriefcasePt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRockPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableTreePt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PushableBoulderPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2;
@@ -755,6 +756,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BRIEFCASE_PT] =             &gObjectEventGraphicsInfo_BriefcasePt,
     [OBJ_EVENT_GFX_BREAKABLE_ROCK_PT] =        &gObjectEventGraphicsInfo_BreakableRockPt,
     [OBJ_EVENT_GFX_CUTTABLE_TREE_PT] =         &gObjectEventGraphicsInfo_CuttableTreePt,
+    [OBJ_EVENT_GFX_PUSHABLE_BOULDER_PT] =      &gObjectEventGraphicsInfo_PushableBoulderPt,
     [OBJ_EVENT_GFX_WIND_TURBINE_BASE] =        &gObjectEventGraphicsInfo_WindTurbineBase,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1] =    &gObjectEventGraphicsInfo_WindTurbineBlades1,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2] =    &gObjectEventGraphicsInfo_WindTurbineBlades2,
