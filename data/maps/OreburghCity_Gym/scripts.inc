@@ -105,17 +105,6 @@ OreburghCity_Gym_Text_GymGuidePostVictory:
 	.string "If my advice was useful, it’d be\n"
 	.string "great if you’d become my fan!$"
 
-OreburghCity_Gym_Text_RoarkIntro:
-	.string "Welcome!\n"
-	.string "This is the Oreburgh Pokémon Gym!\p"
-	.string "I’m Roark, the Gym Leader!\p"
-	.string "I’m but one Trainer who decided to\n"
-	.string "walk proudly with Rock-type Pokémon!\p"
-	.string "As the Gym Leader, I need to see\n"
-	.string "your potential as a Trainer.\p"
-	.string "And, I’ll need to see the toughness\n"
-	.string "of the Pokémon that battle with you!$"
-
 OreburghCity_Gym_Text_ThisIsEmbarrassing:
 	.string "This is embarrassing...\p"
 	.string "I went and lost to a Trainer who\n"
@@ -148,12 +137,6 @@ OreburghCity_Gym_Text_TheMoveStealthRock:
 	.string "But a TM will break when you use it,\n"
 	.string "so make certain you want a Pokémon\l"
 	.string "to learn that move.$"
-
-OreburghCity_Gym_Text_RoarkPostBattle:
-	.string "In this region of Sinnoh, there are\n"
-	.string "seven other Gym Leaders.\p"
-	.string "I should warn you--they’re a lot\n"
-	.string "tougher than I am!$"
 
 OreburghCity_Gym_Text_GymStatue:
 	.string "Oreburgh City Pokémon Gym\n"

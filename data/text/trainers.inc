@@ -5125,9 +5125,26 @@ OreburghCity_Gym_Text_DariusPostBattle:
 	.string "One day, I'm going to become a tough\n"
 	.string "trainer like you.$"
 
+OreburghCity_Gym_Text_RoarkIntro:
+	.string "Welcome!\n"
+	.string "This is the Oreburgh Pokémon Gym!\p"
+	.string "I’m Roark, the Gym Leader!\p"
+	.string "I’m but one Trainer who decided to\n"
+	.string "walk proudly with Rock-type Pokémon!\p"
+	.string "As the Gym Leader, I need to see\n"
+	.string "your potential as a Trainer.\p"
+	.string "And, I’ll need to see the toughness\n"
+	.string "of the Pokémon that battle with you!$"
+
 OreburghCity_Gym_Text_RoarkDefeated:
 	.string "W-what? That can’t be!\n"
 	.string "My buffed-up Pokémon!$"
+
+OreburghCity_Gym_Text_RoarkPostBattle:
+	.string "In this region of Sinnoh, there are\n"
+	.string "seven other Gym Leaders.\p"
+	.string "I should warn you--they’re a lot\n"
+	.string "tougher than I am!$"
 
 Route204North_Text_TaylorDefeated:
 	.string "It was a strong Trainer who was drawn\n"
@@ -5539,37 +5556,6 @@ EternaCity_Gym_Text_GardeniaIntro:
 EternaCity_Gym_Text_GardeniaDefeated:
 	.string "Amazing!\n"
 	.string "You’re very good, aren’t you?$"
-
-EternaCity_Gym_Text_ImpressedByYourPokemon:
-	.string "I might’ve said it before, but you’re\n"
-	.string "really tough!\p"
-	.string "Wasn’t it hard for you to raise your\n"
-	.string "Pokémon to be so good?\p"
-	.string "I guess that’s a measure of how much\n"
-	.string "you love your Pokémon.\p"
-	.string "In recognition of that, I proudly\n"
-	.string "grant you this!$"
-
-EternaCity_Gym_Text_ReceivedForestBadge:
-	.string "{PLAYER} received\n"
-	.string "the Forest Badge from Gardenia!$"
-
-EternaCity_Gym_Text_HavingThatForestBadge:
-	.string "With the Forest Badge, your Pokémon\n"
-	.string "can use the hidden move Cut outside\l"
-	.string "of battle.\p"
-	.string "Now that you have two Gym Badges,\n"
-	.string "all Pokémon you received in trades\l"
-	.string "will obey you up to Lv. 30.\p"
-	.string "I’ve also got something else.\n"
-	.string "It’s a gift from me!$"
-
-EternaCity_Gym_Text_TheMoveGrassKnot:
-	.string "That TM86 contains\n"
-	.string "the move Grass Knot.\p"
-	.string "It’s one of my favorite moves.\p"
-	.string "The heavier the foe, the more\n"
-	.string "damage this move will cause.$"
 
 EternaCity_Gym_Text_GardeniaPostBattle:
 	.string "Yup! If there’s one thing I can tell\n"
