@@ -55,9 +55,9 @@
 #define FLAG_OREBURGH_CITY_GREAT_BALL                    0x29
 #define FLAG_TM_STEALTH_ROCK                             0x2A
 #define FLAG_DEFEATED_MARS                               0x2B
-#define FLAG_ETERNA_GYM_CAROLINE_DONE                    0x2C
-#define FLAG_ETERNA_GYM_JENNA_DONE                       0x2D
-#define FLAG_ETERNA_GYM_ANGELA_DONE                      0x2E
+#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
+#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
+#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag

@@ -95,7 +95,7 @@
 #define VAR_POKELOT_RND1                                 0x404B
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
-#define VAR_ETERNA_GYM_CAMERA_PAN_BACK                   0x404E
+#define VAR_UNUSED_0x404E                                0x404E
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
 #define VAR_OLDALE_TOWN_STATE                            0x4051
@@ -276,8 +276,9 @@
 #define VAR_ROUTE202_STATE                               0x4100
 #define VAR_ROUTE203_STATE                               0x4101
 #define VAR_LAKE_VERITY_STATE                            0x4102
+#define VAR_ETERNA_GYM_STATE                             0x4103
 
-#define VARS_END                                         0x4102
+#define VARS_END                                         0x4103
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000
