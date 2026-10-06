@@ -4,8 +4,12 @@ EternaCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, EternaCity_Gym_OnFrame
 	.byte 0
 
-@ VAR_ETERNA_GYM_STATE: 0 = nothing beaten, 1 = Caroline, 2 = Jenna, 3 = Angela.
-@ Adding 10 marks a layout swap whose camera pan back is still pending.
+@ State descriptions For VAR_ETERNA_GYM_STATE
+@ 1: Defeated Caroline
+@ 2: Defeated Jenna
+@ 3: Defeated Angela
+@ 4: Defeated Gardenia
+@ 11-14: Same as 1-4 (state + 10), but the layout swap's camera pan back is still pending
 
 EternaCity_Gym_OnTransition:
 	switch VAR_ETERNA_GYM_STATE
@@ -15,18 +19,22 @@ EternaCity_Gym_OnTransition:
 	case 12, EternaCity_Gym_EventScript_SetLayout3
 	case 3, EternaCity_Gym_EventScript_SetLayout4
 	case 13, EternaCity_Gym_EventScript_SetLayout4
+	case 4, EternaCity_Gym_EventScript_SetLayout5
+	case 14, EternaCity_Gym_EventScript_SetLayout5
 	end
 
 EternaCity_Gym_OnFrame:
 	map_script_2 VAR_ETERNA_GYM_STATE, 11, EternaCity_Gym_EventScript_PanCameraBack
 	map_script_2 VAR_ETERNA_GYM_STATE, 12, EternaCity_Gym_EventScript_PanCameraBack
 	map_script_2 VAR_ETERNA_GYM_STATE, 13, EternaCity_Gym_EventScript_PanCameraBack
+	map_script_2 VAR_ETERNA_GYM_STATE, 14, EternaCity_Gym_EventScript_PanCameraBack
 	.2byte 0
 
 EternaCity_Gym_OnWarpIntoMap:
 	map_script_2 VAR_ETERNA_GYM_STATE, 11, EternaCity_Gym_EventScript_RestoreFacing
 	map_script_2 VAR_ETERNA_GYM_STATE, 12, EternaCity_Gym_EventScript_RestoreFacing
 	map_script_2 VAR_ETERNA_GYM_STATE, 13, EternaCity_Gym_EventScript_RestoreFacing
+	map_script_2 VAR_ETERNA_GYM_STATE, 14, EternaCity_Gym_EventScript_RestoreFacing
 	.2byte 0
 
 @ The self-warp resets the player's and the fought NPC's facing direction. SwapLayout stashes them in
@@ -95,6 +103,10 @@ EternaCity_Gym_EventScript_SetLayout4::
 	setmaplayoutindex LAYOUT_ETERNA_CITY_GYM_4
 	end
 
+EternaCity_Gym_EventScript_SetLayout5::
+	setmaplayoutindex LAYOUT_ETERNA_CITY_GYM_5
+	end
+
 @ Shared by all three trainers. A trainer can be fought from 4 sides and the player/NPC always face
 @ each other, so the side determines the facings to restore after the warp, and (together with
 @ VAR_ETERNA_GYM_STATE, which identifies the trainer) the camera path to the room center.
@@ -116,6 +128,7 @@ EternaCity_Gym_EventScript_SwapLayoutFromTop::
 	case 1, EternaCity_Gym_EventScript_CarolineFromTop
 	case 2, EternaCity_Gym_EventScript_JennaFromTop
 	case 3, EternaCity_Gym_EventScript_AngelaFromTop
+	case 4, EternaCity_Gym_EventScript_GardeniaFromTop
 	end
 
 EternaCity_Gym_EventScript_SwapLayoutFromLeft::
@@ -125,6 +138,7 @@ EternaCity_Gym_EventScript_SwapLayoutFromLeft::
 	case 1, EternaCity_Gym_EventScript_CarolineFromLeft
 	case 2, EternaCity_Gym_EventScript_JennaFromLeft
 	case 3, EternaCity_Gym_EventScript_AngelaFromLeft
+	case 4, EternaCity_Gym_EventScript_GardeniaFromLeft
 	end
 
 EternaCity_Gym_EventScript_SwapLayoutFromRight::
@@ -134,6 +148,7 @@ EternaCity_Gym_EventScript_SwapLayoutFromRight::
 	case 1, EternaCity_Gym_EventScript_CarolineFromRight
 	case 2, EternaCity_Gym_EventScript_JennaFromRight
 	case 3, EternaCity_Gym_EventScript_AngelaFromRight
+	case 4, EternaCity_Gym_EventScript_GardeniaFromRight
 	end
 
 EternaCity_Gym_EventScript_SwapLayoutFromBottom::
@@ -143,6 +158,7 @@ EternaCity_Gym_EventScript_SwapLayoutFromBottom::
 	case 1, EternaCity_Gym_EventScript_CarolineFromBottom
 	case 2, EternaCity_Gym_EventScript_JennaFromBottom
 	case 3, EternaCity_Gym_EventScript_AngelaFromBottom
+	case 4, EternaCity_Gym_EventScript_GardeniaFromBottom
 	end
 
 @ Self-warps so ON_TRANSITION swaps the layout, then pans back in PanCameraBack
@@ -175,6 +191,7 @@ EternaCity_Gym_EventScript_PanCameraBackFromTop::
 	case 11, EternaCity_Gym_EventScript_CarolineBackFromTop
 	case 12, EternaCity_Gym_EventScript_JennaBackFromTop
 	case 13, EternaCity_Gym_EventScript_AngelaBackFromTop
+	case 14, EternaCity_Gym_EventScript_GardeniaBackFromTop
 	end
 
 EternaCity_Gym_EventScript_PanCameraBackFromLeft::
@@ -182,6 +199,7 @@ EternaCity_Gym_EventScript_PanCameraBackFromLeft::
 	case 11, EternaCity_Gym_EventScript_CarolineBackFromLeft
 	case 12, EternaCity_Gym_EventScript_JennaBackFromLeft
 	case 13, EternaCity_Gym_EventScript_AngelaBackFromLeft
+	case 14, EternaCity_Gym_EventScript_GardeniaBackFromLeft
 	end
 
 EternaCity_Gym_EventScript_PanCameraBackFromRight::
@@ -189,6 +207,7 @@ EternaCity_Gym_EventScript_PanCameraBackFromRight::
 	case 11, EternaCity_Gym_EventScript_CarolineBackFromRight
 	case 12, EternaCity_Gym_EventScript_JennaBackFromRight
 	case 13, EternaCity_Gym_EventScript_AngelaBackFromRight
+	case 14, EternaCity_Gym_EventScript_GardeniaBackFromRight
 	end
 
 EternaCity_Gym_EventScript_PanCameraBackFromBottom::
@@ -196,6 +215,7 @@ EternaCity_Gym_EventScript_PanCameraBackFromBottom::
 	case 11, EternaCity_Gym_EventScript_CarolineBackFromBottom
 	case 12, EternaCity_Gym_EventScript_JennaBackFromBottom
 	case 13, EternaCity_Gym_EventScript_AngelaBackFromBottom
+	case 14, EternaCity_Gym_EventScript_GardeniaBackFromBottom
 	end
 
 EternaCity_Gym_EventScript_PanCameraBackDone::
@@ -287,6 +307,12 @@ EternaCity_Gym_Movement_\trainer\()BackFrom\side\():
 	eterna_gym_pan Angela, Right, 8, 5, vfirst=1
 	eterna_gym_pan Angela, Bottom, 9, 4, vfirst=1
 
+@ Gardenia: camera moves right/left then down.
+	eterna_gym_pan Gardenia, Top, 0, 10
+	eterna_gym_pan Gardenia, Left, 1, 9
+	eterna_gym_pan Gardenia, Right, -1, 9
+	eterna_gym_pan Gardenia, Bottom, 0, 8
+
 EternaCity_Gym_EventScript_Caroline::
 	trainerbattle_single TRAINER_PT_CAROLINE, EternaCity_Gym_Text_CarolineIntro, EternaCity_Gym_Text_CarolineDefeated, EternaCity_Gym_EventScript_CarolineAfterBattle
 	end
@@ -350,7 +376,9 @@ EternaCity_Gym_EventScript_GiveGrassKnot::
 	giveitem ITEM_TM86
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox EternaCity_Gym_Text_TheMoveGrassKnot, MSGBOX_DEFAULT
-	release
+	closemessage
+	setvar VAR_ETERNA_GYM_STATE, 4
+	goto EternaCity_Gym_EventScript_SwapLayout
 	end
 
 EternaCity_Gym_Text_ImpressedByYourPokemon:
