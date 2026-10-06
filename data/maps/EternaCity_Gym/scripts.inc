@@ -412,6 +412,28 @@ EternaCity_Gym_Text_TheMoveGrassKnot:
 	.string "The heavier the foe, the more\n"
 	.string "damage this move will cause.$"
 
+EternaCity_Gym_EventScript_GymGuide::
+	msgbox EternaCity_Gym_Text_GymGuideAdvice, MSGBOX_NPC
+	end
+
+EternaCity_Gym_Text_GymGuideAdvice:
+	.string "Hey, there!\n"
+	.string "How’s it going, Champ-to-be?\p"
+	.string "Actually, that’s what I said to some\n"
+	.string "boy who zipped in here earlier, too!\p"
+	.string "The Gym Leader, Gardenia, is a user\n"
+	.string "of Grass-type Pokémon.\p"
+	.string "It should be obvious, but Grass-type\n"
+	.string "Pokémon really hate fire.\p"
+	.string "They’re also at a huge disadvantage\n"
+	.string "against the Flying type, too.\p"
+	.string "Oh, wait a second. I should tell you\n"
+	.string "about the Gym itself first.\p"
+	.string "You can’t challenge the Gym Leader\n"
+	.string "until you beat all the Gym’s Trainers.\p"
+	.string "It’s a bit challenging, but just think\n"
+	.string "of it as good training and go for it!$"
+
 EternaCity_Gym_EventScript_GymStatue::
 	lockall
 	goto_if_set FLAG_BADGE02_GET, EternaCity_Gym_EventScript_GymStatueCertified
