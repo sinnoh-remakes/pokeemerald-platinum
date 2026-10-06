@@ -411,3 +411,32 @@ EternaCity_Gym_Text_TheMoveGrassKnot:
 	.string "It’s one of my favorite moves.\p"
 	.string "The heavier the foe, the more\n"
 	.string "damage this move will cause.$"
+
+EternaCity_Gym_EventScript_GymStatue::
+	lockall
+	goto_if_set FLAG_BADGE02_GET, EternaCity_Gym_EventScript_GymStatueCertified
+	goto EternaCity_Gym_EventScript_GymStatueDefault
+	end
+
+EternaCity_Gym_EventScript_GymStatueCertified::
+	msgbox EternaCity_Gym_Text_GymStatueCertified, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EternaCity_Gym_EventScript_GymStatueDefault::
+	msgbox EternaCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EternaCity_Gym_Text_GymStatue:
+	.string "Eterna City Pokémon Gym\n"
+	.string "Leader: Gardenia\p"
+	.string "Certified Trainers:\n"
+	.string "{RIVAL}$"
+
+EternaCity_Gym_Text_GymStatueCertified:
+	.string "Eterna City Pokémon Gym\n"
+	.string "Leader: Gardenia\p"
+	.string "Certified Trainers:\n"
+	.string "{RIVAL}\l"
+	.string "{PLAYER}$"

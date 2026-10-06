@@ -54,16 +54,10 @@ OreburghCity_Gym_EventScript_GymGuidePostVictory::
 	release
 	end
 
-OreburghCity_Gym_EventScript_LeftGymStatue::
+OreburghCity_Gym_EventScript_GymStatue::
 	lockall
 	goto_if_set FLAG_BADGE01_GET, OreburghCity_Gym_EventScript_GymStatueCertified
-	goto OreburghCity_Gym_EventScript_GymStatue
-	end
-
-OreburghCity_Gym_EventScript_RightGymStatue::
-	lockall
-	goto_if_set FLAG_BADGE01_GET, OreburghCity_Gym_EventScript_GymStatueCertified
-	goto OreburghCity_Gym_EventScript_GymStatue
+	goto OreburghCity_Gym_EventScript_GymStatueDefault
 	end
 
 OreburghCity_Gym_EventScript_GymStatueCertified::
@@ -71,7 +65,7 @@ OreburghCity_Gym_EventScript_GymStatueCertified::
 	releaseall
 	end
 
-OreburghCity_Gym_EventScript_GymStatue::
+OreburghCity_Gym_EventScript_GymStatueDefault::
 	msgbox OreburghCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	releaseall
 	end
