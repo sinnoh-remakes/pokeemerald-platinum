@@ -5524,3 +5524,55 @@ EternaCity_Gym_Text_AngelaPostBattle:
     .string "flows...\p"
     .string "There’s only our Gym Leader left.\n"
     .string "Go on, don’t be afraid!$"
+
+EternaCity_Gym_Text_GardeniaIntro:
+	.string "You kept me waiting!\p"
+	.string "I’m Eterna’s Gym Leader, Gardenia,\n"
+	.string "the Grass-type master!\p"
+	.string "When I first saw you, I was convinced\n"
+	.string "you’d find your way to me.\p"
+	.string "My hunch was right on the money.\n"
+	.string "You have a winning aura about you.\p"
+	.string "So, anyway, this will be fun.\n"
+	.string "Let’s have our battle!$"
+
+EternaCity_Gym_Text_GardeniaDefeated:
+	.string "Amazing!\n"
+	.string "You’re very good, aren’t you?$"
+
+EternaCity_Gym_Text_ImpressedByYourPokemon:
+	.string "I might’ve said it before, but you’re\n"
+	.string "really tough!\p"
+	.string "Wasn’t it hard for you to raise your\n"
+	.string "Pokémon to be so good?\p"
+	.string "I guess that’s a measure of how much\n"
+	.string "you love your Pokémon.\p"
+	.string "In recognition of that, I proudly\n"
+	.string "grant you this!$"
+
+EternaCity_Gym_Text_ReceivedForestBadge:
+	.string "{PLAYER} received\n"
+	.string "the Forest Badge from Gardenia!$"
+
+EternaCity_Gym_Text_HavingThatForestBadge:
+	.string "With the Forest Badge, your Pokémon\n"
+	.string "can use the hidden move Cut outside\l"
+	.string "of battle.\p"
+	.string "Now that you have two Gym Badges,\n"
+	.string "all Pokémon you received in trades\l"
+	.string "will obey you up to Lv. 30.\p"
+	.string "I’ve also got something else.\n"
+	.string "It’s a gift from me!$"
+
+EternaCity_Gym_Text_TheMoveGrassKnot:
+	.string "That TM86 contains\n"
+	.string "the move Grass Knot.\p"
+	.string "It’s one of my favorite moves.\p"
+	.string "The heavier the foe, the more\n"
+	.string "damage this move will cause.$"
+
+EternaCity_Gym_Text_GardeniaPostBattle:
+	.string "Yup! If there’s one thing I can tell\n"
+	.string "about you, it’s this!\p"
+	.string "You and your Pokémon are gonna get\n"
+	.string "even tougher, and I mean seriously!$"

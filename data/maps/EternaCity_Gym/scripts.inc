@@ -326,3 +326,29 @@ EternaCity_Gym_EventScript_AngelaAfterBattle::
 EternaCity_Gym_EventScript_EndTrainer::
 	releaseall
 	end
+
+EternaCity_Gym_EventScript_Gardenia::
+	trainerbattle_single TRAINER_PT_GARDENIA, EternaCity_Gym_Text_GardeniaIntro, EternaCity_Gym_Text_GardeniaDefeated, EternaCity_Gym_EventScript_GardeniaDefeated, NO_MUSIC
+	msgbox EternaCity_Gym_Text_GardeniaPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+EternaCity_Gym_EventScript_GardeniaDefeated::
+	msgbox EternaCity_Gym_Text_ImpressedByYourPokemon, MSGBOX_DEFAULT
+	message EternaCity_Gym_Text_ReceivedForestBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfarePt
+	msgbox EternaCity_Gym_Text_HavingThatForestBadge, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_ETERNA_GYM
+	setflag FLAG_BADGE02_GET
+	setvar VAR_0x8008, 10
+	call Common_EventScript_SetGymTrainers
+	goto EternaCity_Gym_EventScript_GiveGrassKnot
+	end
+
+EternaCity_Gym_EventScript_GiveGrassKnot::
+	giveitem ITEM_TM86
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox EternaCity_Gym_Text_TheMoveGrassKnot, MSGBOX_DEFAULT
+	release
+	end
