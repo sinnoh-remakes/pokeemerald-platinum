@@ -38,10 +38,13 @@ EternaCity_Gym_OnWarpIntoMap:
 	.2byte 0
 
 @ The self-warp resets the player's and the fought NPC's facing direction. SwapLayout stashes them in
-@ VAR_0x8004 (player) and VAR_0x8005 (NPC); VAR_LAST_TALKED still holds the NPC's local id.
+@ VAR_0x8004 (player) and VAR_0x8005 (NPC), and the NPC's local id in VAR_0x8009.
 @ The warp lands on the camera's end point (so the map fades in centered there), so this also moves
 @ the player back to their real tile, stashed in VAR_0x8002/3. Runs after objects load but before the
 @ fade in.
+@ The NPC may not exist yet (only objects near the camera are spawned, and the camera starts at the
+@ room center), so its facing is also written to its template's movement type, which is what an
+@ object uses for its initial facing when it spawns later; turnobject covers an already-spawned NPC.
 EternaCity_Gym_EventScript_RestoreFacing::
 	setobjectxy LOCALID_PLAYER, VAR_0x8002, VAR_0x8003
 	switch VAR_0x8004
@@ -76,19 +79,23 @@ EternaCity_Gym_EventScript_RestoreNpcFacing::
 	end
 
 EternaCity_Gym_EventScript_NpcFaceSouth::
-	turnobject VAR_LAST_TALKED, DIR_SOUTH
+	setobjectmovementtype VAR_0x8009, MOVEMENT_TYPE_FACE_DOWN
+	turnobject VAR_0x8009, DIR_SOUTH
 	end
 
 EternaCity_Gym_EventScript_NpcFaceNorth::
-	turnobject VAR_LAST_TALKED, DIR_NORTH
+	setobjectmovementtype VAR_0x8009, MOVEMENT_TYPE_FACE_UP
+	turnobject VAR_0x8009, DIR_NORTH
 	end
 
 EternaCity_Gym_EventScript_NpcFaceWest::
-	turnobject VAR_LAST_TALKED, DIR_WEST
+	setobjectmovementtype VAR_0x8009, MOVEMENT_TYPE_FACE_LEFT
+	turnobject VAR_0x8009, DIR_WEST
 	end
 
 EternaCity_Gym_EventScript_NpcFaceEast::
-	turnobject VAR_LAST_TALKED, DIR_EAST
+	setobjectmovementtype VAR_0x8009, MOVEMENT_TYPE_FACE_RIGHT
+	turnobject VAR_0x8009, DIR_EAST
 	end
 
 EternaCity_Gym_EventScript_SetLayout2::
@@ -110,8 +117,12 @@ EternaCity_Gym_EventScript_SetLayout5::
 @ Shared by all three trainers. A trainer can be fought from 4 sides and the player/NPC always face
 @ each other, so the side determines the facings to restore after the warp, and (together with
 @ VAR_ETERNA_GYM_STATE, which identifies the trainer) the camera path to the room center.
+@ The trainers' object events are in the same order as the states (Caroline 1, Jenna 2, Angela 3,
+@ Gardenia 4), so the state doubles as the NPC's local id, stashed in VAR_0x8009 for the facing
+@ restore. (VAR_LAST_TALKED can't be used: it's reset by the time the post-battle script runs.)
 EternaCity_Gym_EventScript_SwapLayout::
 	getplayerxy VAR_0x8002, VAR_0x8003
+	copyvar VAR_0x8009, VAR_ETERNA_GYM_STATE
 	special SpawnCameraObject
 	specialvar VAR_RESULT, GetPlayerFacingDirection
 	switch VAR_RESULT
