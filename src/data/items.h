@@ -12784,7 +12784,6 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-
     [ITEM_HM_CUT] =
     {
         .name = ITEM_NAME("HM01"),
@@ -12841,7 +12840,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-        [ITEM_HM_DEFOG] =
+    [ITEM_HM_DEFOG] =
     {
         .name = ITEM_NAME("HM05"),
         .price = 0,
@@ -12910,8 +12909,6 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
-
 
 // Charms
 
