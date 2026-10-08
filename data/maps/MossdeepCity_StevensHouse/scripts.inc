@@ -143,7 +143,7 @@ MossdeepCity_StevensHouse_EventScript_Letter::
 
 @ Unused, leftover from RS
 MossdeepCity_StevensHouse_EventScript_DiveItemBall::
-	finditem ITEM_HM_DIVE
+	finditem ITEM_HM08
 	setflag FLAG_RECEIVED_HM_DIVE
 	end
 
