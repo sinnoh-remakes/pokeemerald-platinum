@@ -104,10 +104,10 @@
     F(DEFOG) \
     F(ROCK_SMASH) \
     F(WATERFALL) \
-    F(ROCK_CLIMB) \
-    F(DIVE) 
+    F(ROCK_CLIMB)
 
 #else
+#define FOREACH_HM(F) \
     F(CUT) \
     F(FLY) \
     F(SURF) \

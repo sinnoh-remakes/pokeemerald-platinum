@@ -104,7 +104,6 @@
 // - MOVE_ROCK_SMASH                                   //
 // - MOVE_WATERFALL                                    //
 // - MOVE_ROCK_CLIMB                                   //
-// - MOVE_DIVE                                         //
 // - MOVE_CUT                                          //
 // - MOVE_FLY                                          //
 // - MOVE_SURF                                         //
