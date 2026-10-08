@@ -825,6 +825,13 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
 
     ResetSpinTimer(); // Everything below will move the player a space, reset the timer.
     gPlayerAvatar.creeping = FALSE;
+    if (collision == COLLISION_NONE
+     && !(gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_UNDERWATER))
+     && MetatileBehavior_IsJumpOneTile(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior, direction))
+    {
+        PlayerJumpOneTile(direction);
+        return;
+    }
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
         if (FlagGet(DN_FLAG_SEARCHING) && (heldKeys & A_BUTTON))
@@ -1269,6 +1276,13 @@ void PlayerFaceDirection(u8 direction)
 void PlayerTurnInPlace(u8 direction)
 {
     PlayerSetAnimId(GetWalkInPlaceFastMovementAction(direction), COPY_MOVE_FACE);
+}
+
+// Hop to the adjacent tile (a single-tile jump, unlike PlayerJumpLedge which skips a tile)
+void PlayerJumpOneTile(u8 direction)
+{
+    PlaySE(SE_LEDGE);
+    PlayerSetAnimId(GetJumpMovementAction(direction), COPY_MOVE_JUMP);
 }
 
 void PlayerJumpLedge(u8 direction)
