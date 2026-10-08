@@ -827,6 +827,8 @@
 #define ITEM_HM06 687
 #define ITEM_HM07 688
 #define ITEM_HM08 689
+#define ITEM_HM09 856 //Id for Dive
+
 
 // Charms
 #define ITEM_OVAL_CHARM 690

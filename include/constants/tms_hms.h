@@ -51,17 +51,60 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(ROOST) \
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(FALSE_SWIPE) \
+    F(BRINE) \
+    F(FLING) \
+    F(CHARGE_BEAM) \
+    F(ENDURE) \
+    F(DRAGON_PULSE) \
+    F(DRAIN_PUNCH) \
+    F(WILL_O_WISP) \
+    F(SILVER_WIND) \
+    F(EMBARGO) \
+    F(EXPLOSION) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(RECYCLE) \
+    F(GIGA_IMPACT) \
+    F(ROCK_POLISH) \
+    F(FLASH) \
+    F(STONE_EDGE) \
+    F(AVALANCHE) \
+    F(THUNDER_WAVE) \
+    F(GYRO_BALL) \
+    F(SWORDS_DANCE) \
+    F(STEALTH_ROCK) \
+    F(PSYCH_UP) \
+    F(CAPTIVATE) \
+    F(DARK_PULSE) \
+    F(ROCK_SLIDE) \
+    F(X_SCISSOR) \
+    F(SLEEP_TALK) \
+    F(NATURAL_GIFT) \
+    F(POISON_JAB) \
+    F(DREAM_EATER) \
+    F(GRASS_KNOT) \
+    F(SWAGGER) \
+    F(PLUCK) \
+    F(U_TURN) \
+    F(SUBSTITUTE) \
+    F(FLASH_CANNON) \
+    F(TRICK_ROOM)
 
 #define FOREACH_HM(F) \
     F(CUT) \
     F(FLY) \
     F(SURF) \
     F(STRENGTH) \
-    F(FLASH) \
+    F(DEFOG) \
     F(ROCK_SMASH) \
     F(WATERFALL) \
-    F(DIVE)
+    F(ROCK_CLIMB) \
+    F(DIVE) 
 
 #define FOREACH_TMHM(F) \
     FOREACH_TM(F) \
