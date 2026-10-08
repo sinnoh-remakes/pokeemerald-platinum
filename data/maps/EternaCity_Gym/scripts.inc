@@ -264,7 +264,7 @@ EternaCity_Gym_EventScript_PanCameraBackDone::
 	.endif
 	.endm
 
-	.macro eterna_gym_pan trainer:req, side:req, dx:req, dy:req, vfirst=0
+	.macro eterna_gym_pan trainer:req, side:req, dx:req, dy:req, vfirst=0, detour=0
 	.global EternaCity_Gym_EventScript_\trainer\()From\side\()
 EternaCity_Gym_EventScript_\trainer\()From\side\():
 	applymovement LOCALID_CAMERA, EternaCity_Gym_Movement_\trainer\()From\side\()
@@ -276,6 +276,12 @@ EternaCity_Gym_EventScript_\trainer\()From\side\():
 EternaCity_Gym_EventScript_\trainer\()BackFrom\side\():
 	applymovement LOCALID_CAMERA, EternaCity_Gym_Movement_\trainer\()BackFrom\side\()
 	waitmovement 0
+	.if \detour
+	msgbox EternaCity_Gym_Text_FountainDropped, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CAMERA, EternaCity_Gym_Movement_\trainer\()ReturnFrom\side\()
+	waitmovement 0
+	.endif
 	goto EternaCity_Gym_EventScript_PanCameraBackDone
 
 EternaCity_Gym_Movement_\trainer\()From\side\():
@@ -289,7 +295,10 @@ EternaCity_Gym_Movement_\trainer\()From\side\():
 	step_end
 
 EternaCity_Gym_Movement_\trainer\()BackFrom\side\():
-	.if \vfirst
+	.if \detour
+	eterna_gym_pan_vertical 6
+	eterna_gym_pan_horizontal (-(\dx))
+	.elseif \vfirst
 	eterna_gym_pan_horizontal (-(\dx))
 	eterna_gym_pan_vertical (-(\dy))
 	.else
@@ -298,7 +307,17 @@ EternaCity_Gym_Movement_\trainer\()BackFrom\side\():
 	.endif
 	step_end
 
+	.if \detour
+EternaCity_Gym_Movement_\trainer\()ReturnFrom\side\():
+	eterna_gym_pan_vertical (-(\dy)-6)
+	step_end
+	.endif
+
 	.endm
+
+@ Detour: for Jenna and Angela (detour=1), the pan back first goes down 6 tiles and across to the
+@ player's column (reversing dx), shows a message, then goes vertically to the player's row
+@ (reversing dy, minus the 6 tiles already moved).
 
 @ Caroline: camera moves left then up.
 	eterna_gym_pan Caroline, Top, -3, -8
@@ -307,16 +326,16 @@ EternaCity_Gym_Movement_\trainer\()BackFrom\side\():
 	eterna_gym_pan Caroline, Bottom, -3, -10
 
 @ Jenna: same as Caroline with the left/up counts swapped, moving up before left.
-	eterna_gym_pan Jenna, Top, -9, -3, vfirst=1
-	eterna_gym_pan Jenna, Left, -8, -4, vfirst=1
-	eterna_gym_pan Jenna, Right, -10, -4, vfirst=1
-	eterna_gym_pan Jenna, Bottom, -9, -5, vfirst=1
+	eterna_gym_pan Jenna, Top, -9, -3, vfirst=1, detour=1
+	eterna_gym_pan Jenna, Left, -8, -4, vfirst=1, detour=1
+	eterna_gym_pan Jenna, Right, -10, -4, vfirst=1, detour=1
+	eterna_gym_pan Jenna, Bottom, -9, -5, vfirst=1, detour=1
 
 @ Angela: camera moves down then right.
-	eterna_gym_pan Angela, Top, 9, 6, vfirst=1
-	eterna_gym_pan Angela, Left, 10, 5, vfirst=1
-	eterna_gym_pan Angela, Right, 8, 5, vfirst=1
-	eterna_gym_pan Angela, Bottom, 9, 4, vfirst=1
+	eterna_gym_pan Angela, Top, 9, 6, vfirst=1, detour=1
+	eterna_gym_pan Angela, Left, 10, 5, vfirst=1, detour=1
+	eterna_gym_pan Angela, Right, 8, 5, vfirst=1, detour=1
+	eterna_gym_pan Angela, Bottom, 9, 4, vfirst=1, detour=1
 
 @ Gardenia: camera moves right/left then down.
 	eterna_gym_pan Gardenia, Top, 0, 10
@@ -473,3 +492,8 @@ EternaCity_Gym_Text_GymStatueCertified:
 	.string "Certified Trainers:\n"
 	.string "{RIVAL}\l"
 	.string "{PLAYER}$"
+
+EternaCity_Gym_Text_FountainDropped:
+    .string "The fountain’s water level dropped!\p"
+    .string "It’s possible to walk across the\n"
+    .string "fountain now!$"
