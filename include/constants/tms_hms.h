@@ -95,6 +95,7 @@
     F(FLASH_CANNON) \
     F(TRICK_ROOM)
 
+#if OW_ROCK_CLIMB_FIELD_MOVE == TRUE && OW_DEFOG_FIELD_MOVE == TRUE
 #define FOREACH_HM(F) \
     F(CUT) \
     F(FLY) \
@@ -106,6 +107,15 @@
     F(ROCK_CLIMB) \
     F(DIVE) 
 
+#else
+    F(CUT) \
+    F(FLY) \
+    F(SURF) \
+    F(STRENGTH) \
+    F(ROCK_SMASH) \
+    F(WATERFALL) \
+    F(DIVE) 
+#endif
 #define FOREACH_TMHM(F) \
     FOREACH_TM(F) \
     FOREACH_HM(F)

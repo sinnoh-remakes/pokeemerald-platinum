@@ -827,7 +827,7 @@
 #define ITEM_HM06 687
 #define ITEM_HM07 688
 #define ITEM_HM08 689
-#define ITEM_HM09 856 //Id for Dive
+#define ITEM_HM09 856 //dummy Id for extra HM slot
 
 
 // Charms

@@ -105,6 +105,13 @@
 // - MOVE_WATERFALL                                    //
 // - MOVE_ROCK_CLIMB                                   //
 // - MOVE_DIVE                                         //
+// - MOVE_CUT                                          //
+// - MOVE_FLY                                          //
+// - MOVE_SURF                                         //
+// - MOVE_STRENGTH                                     //
+// - MOVE_ROCK_SMASH                                   //
+// - MOVE_WATERFALL                                    //
+// - MOVE_DIVE                                         //
 // *************************************************** //
 // Tutor moves found from map scripts:                 //
 // - MOVE_BODY_SLAM                                    //

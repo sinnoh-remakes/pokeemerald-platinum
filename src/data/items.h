@@ -12784,7 +12784,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_CUT] =
+    [ITEM_HM01] = //Cut
     {
         .name = ITEM_NAME("HM01"),
         .price = 0,
@@ -12798,7 +12798,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_FLY] =
+    [ITEM_HM02] = //Fly
     {
         .name = ITEM_NAME("HM02"),
         .price = 0,
@@ -12812,7 +12812,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_SURF] =
+    [ITEM_HM03] = //Surf
     {
         .name = ITEM_NAME("HM03"),
         .price = 0,
@@ -12826,7 +12826,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_STRENGTH] =
+    [ITEM_HM04] = //Strength
     {
         .name = ITEM_NAME("HM04"),
         .price = 0,
@@ -12840,7 +12840,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_DEFOG] =
+    [ITEM_HM05] = //Defog
     {
         .name = ITEM_NAME("HM05"),
         .price = 0,
@@ -12853,7 +12853,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_ROCK_SMASH] =
+    [ITEM_HM06] = //Rock Smash
     {
         .name = ITEM_NAME("HM06"),
         .price = 0,
@@ -12867,7 +12867,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_WATERFALL] =
+    [ITEM_HM07] = //Waterfall
     {
         .name = ITEM_NAME("HM07"),
         .price = 0,
@@ -12881,7 +12881,9 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_ROCK_CLIMB] =
+#if OW_ROCK_CLIMB_FIELD_MOVE
+
+    [ITEM_HM08] = //Rock Climb
     {
         .name = ITEM_NAME("HM08"),
         .price = 0,
@@ -12894,11 +12896,10 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
-//Todo - Remove Dive HM without affecting vanilla scripts/flags
-    [ITEM_HM_DIVE] =
+#else
+    [ITEM_HM08] = //Dive
     {
-        .name = ITEM_NAME("HM09"),
+        .name = ITEM_NAME("HM08"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Dives underwater\n"
@@ -12909,6 +12910,7 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
+#endif
 
 // Charms
 
