@@ -12845,9 +12845,9 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("HM05"),
         .price = 0,
-        .description = COMPOUND_STRING(  // Plat description too long so reused default description
-           "Removes obstacles and\n"
-           "lowers evasion."),
+        .description = COMPOUND_STRING(
+           "Removes obstacles\n"
+           "and lowers evasion."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
