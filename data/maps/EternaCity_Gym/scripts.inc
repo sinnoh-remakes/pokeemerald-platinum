@@ -443,7 +443,16 @@ EternaCity_Gym_Text_TheMoveGrassKnot:
 	.string "damage this move will cause.$"
 
 EternaCity_Gym_EventScript_GymGuide::
-	msgbox EternaCity_Gym_Text_GymGuideAdvice, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ETERNA_GYM, EternaCity_Gym_EventScript_GymGuidePostVictory
+	msgbox EternaCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
+	release
+	end
+
+EternaCity_Gym_EventScript_GymGuidePostVictory::
+	msgbox EternaCity_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
+	release
 	end
 
 EternaCity_Gym_Text_GymGuideAdvice:
@@ -463,6 +472,14 @@ EternaCity_Gym_Text_GymGuideAdvice:
 	.string "until you beat all the Gym’s Trainers.\p"
 	.string "It’s a bit challenging, but just think\n"
 	.string "of it as good training and go for it!$"
+	
+EternaCity_Gym_Text_GymGuidePostVictory:
+    .string "Oh! {PLAYER}!\n"
+    .string "You’ve taken care of the Gym Leader!\p"
+    .string "So, did my advice come in handy\n"
+    .string "or what?\p"
+    .string "If my advice was useful, it’d be\n"
+    .string "great if you’d become my fan!$"
 
 EternaCity_Gym_EventScript_GymStatue::
 	lockall
