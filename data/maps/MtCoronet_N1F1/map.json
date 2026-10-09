@@ -1,7 +1,7 @@
 {
-  "id": "MAP_MT_CORONET_N1FS",
-  "name": "MtCoronet_N1FS",
-  "layout": "LAYOUT_MT_CORONET_N1FS",
+  "id": "MAP_MT_CORONET_N1F1",
+  "name": "MtCoronet_N1F1",
+  "layout": "LAYOUT_MT_CORONET_N1F1",
   "music": "MUS_DP_MT_CORONET",
   "region_map_section": "MAPSEC_MT_CORONET_NORTH",
   "requires_flash": false,
