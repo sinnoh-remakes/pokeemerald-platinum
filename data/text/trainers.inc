@@ -5500,8 +5500,8 @@ Route205North_Text_ZacharyPostBattle:
 	.string "Ouch! Ouch!$"
 
 EternaCity_Gym_Text_CarolineIntro:
-	.string "A forest inside a Gym...\n"
-	.string "Shocking, isn’t it?$"
+	.string "Welcome!\n"
+	.string "Without further ado, let’s go!$"
 
 EternaCity_Gym_Text_CarolineDefeated:
 	.string "Giggle...\n"
@@ -5529,8 +5529,8 @@ EternaCity_Gym_Text_JennaPostBattle:
     .string "Center during your challenge.$$"
 
 EternaCity_Gym_Text_AngelaIntro:
-	.string "Even concealed, there is no hiding\n"
-	.string "the aroma of flowers.$"
+	.string "You can’t win when you’re distracted by\n"
+	.string "the lovely aromas of Pokémon!$"
 
 EternaCity_Gym_Text_AngelaDefeated:
 	.string "Just like your inability to conceal\n"
