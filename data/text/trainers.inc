@@ -5125,9 +5125,26 @@ OreburghCity_Gym_Text_DariusPostBattle:
 	.string "One day, I'm going to become a tough\n"
 	.string "trainer like you.$"
 
+OreburghCity_Gym_Text_RoarkIntro:
+	.string "Welcome!\n"
+	.string "This is the Oreburgh Pokémon Gym!\p"
+	.string "I’m Roark, the Gym Leader!\p"
+	.string "I’m but one Trainer who decided to\n"
+	.string "walk proudly with Rock-type Pokémon!\p"
+	.string "As the Gym Leader, I need to see\n"
+	.string "your potential as a Trainer.\p"
+	.string "And, I’ll need to see the toughness\n"
+	.string "of the Pokémon that battle with you!$"
+
 OreburghCity_Gym_Text_RoarkDefeated:
 	.string "W-what? That can’t be!\n"
 	.string "My buffed-up Pokémon!$"
+
+OreburghCity_Gym_Text_RoarkPostBattle:
+	.string "In this region of Sinnoh, there are\n"
+	.string "seven other Gym Leaders.\p"
+	.string "I should warn you--they’re a lot\n"
+	.string "tougher than I am!$"
 
 Route204North_Text_TaylorDefeated:
 	.string "It was a strong Trainer who was drawn\n"
@@ -5481,3 +5498,67 @@ Route205North_Text_ZacharyDefeated:
 Route205North_Text_ZacharyPostBattle:
 	.string "My feet are tangled, too!\n"
 	.string "Ouch! Ouch!$"
+
+EternaCity_Gym_Text_CarolineIntro:
+	.string "Welcome!\n"
+	.string "Without further ado, let’s go!$"
+
+EternaCity_Gym_Text_CarolineDefeated:
+	.string "Giggle...\n"
+	.string "The clock will turn now.$"
+
+EternaCity_Gym_Text_CarolinePostBattle:
+    .string "This gym’s floral clock...\n"
+    .string "You can walk on its hands.\l"
+    .string "That’s how you get to the next Trainer.$"
+
+EternaCity_Gym_Text_JennaIntro:
+	.string "My Grass-type Pokémon can dole out\n"
+	.string "special attacks...\p"
+	.string "I won’t let you win easily!$"
+
+EternaCity_Gym_Text_JennaDefeated:
+	.string "The more beautiful a flower,\n"
+	.string "the faster it withers...$"
+
+EternaCity_Gym_Text_JennaPostBattle:
+    .string "Every time you beat a Trainer, the\n"
+    .string "floral clock moves.\p"
+    .string "The fountain also stops if I lose.\p"
+    .string "It’s so you can go to the Pokémon\n"
+    .string "Center during your challenge.$$"
+
+EternaCity_Gym_Text_AngelaIntro:
+	.string "You can’t win when you’re distracted by\n"
+	.string "the lovely aromas of Pokémon!$"
+
+EternaCity_Gym_Text_AngelaDefeated:
+	.string "Just like your inability to conceal\n"
+	.string "your abundant skill.$"
+
+EternaCity_Gym_Text_AngelaPostBattle:
+    .string "The floral clock moves, and time\n"
+    .string "flows...\p"
+    .string "There’s only our Gym Leader left.\n"
+    .string "Go on, don’t be afraid!$"
+
+EternaCity_Gym_Text_GardeniaIntro:
+	.string "You kept me waiting!\p"
+	.string "I’m Eterna’s Gym Leader, Gardenia,\n"
+	.string "the Grass-type master!\p"
+	.string "When I first saw you, I was convinced\n"
+	.string "you’d find your way to me.\p"
+	.string "My hunch was right on the money.\n"
+	.string "You have a winning aura about you.\p"
+	.string "So, anyway, this will be fun.\n"
+	.string "Let’s have our battle!$"
+
+EternaCity_Gym_Text_GardeniaDefeated:
+	.string "Amazing!\n"
+	.string "You’re very good, aren’t you?$"
+
+EternaCity_Gym_Text_GardeniaPostBattle:
+	.string "Yup! If there’s one thing I can tell\n"
+	.string "about you, it’s this!\p"
+	.string "You and your Pokémon are gonna get\n"
+	.string "even tougher, and I mean seriously!$"
