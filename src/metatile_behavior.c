@@ -134,10 +134,6 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_SIDEWAYS_STAIRS_LEFT_SIDE_BOTTOM]   = TILE_FLAG_UNUSED,
     [MB_ROCK_STAIRS]                        = TILE_FLAG_UNUSED,
     [MB_ROCK_CLIMB]                         = TILE_FLAG_UNUSED,
-    [MB_JUMP_NORTH_ONE_TILE]                = TILE_FLAG_UNUSED,
-    [MB_JUMP_SOUTH_ONE_TILE]                = TILE_FLAG_UNUSED,
-    [MB_JUMP_EAST_ONE_TILE]                 = TILE_FLAG_UNUSED,
-    [MB_JUMP_WEST_ONE_TILE]                 = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -175,23 +171,6 @@ bool8 MetatileBehavior_IsJumpNorth(u8 metatileBehavior)
         return TRUE;
     else
         return FALSE;
-}
-
-bool8 MetatileBehavior_IsJumpOneTile(u8 metatileBehavior, u8 direction)
-{
-    switch (direction)
-    {
-    case DIR_NORTH:
-        return metatileBehavior == MB_JUMP_NORTH_ONE_TILE;
-    case DIR_SOUTH:
-        return metatileBehavior == MB_JUMP_SOUTH_ONE_TILE;
-    case DIR_EAST:
-        return metatileBehavior == MB_JUMP_EAST_ONE_TILE;
-    case DIR_WEST:
-        return metatileBehavior == MB_JUMP_WEST_ONE_TILE;
-    default:
-        return FALSE;
-    }
 }
 
 bool8 MetatileBehavior_IsJumpSouth(u8 metatileBehavior)
