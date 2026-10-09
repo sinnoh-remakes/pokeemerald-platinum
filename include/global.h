@@ -573,6 +573,9 @@ struct RankingHall2P
 
 struct SaveBlock2
 {
+    u8 _saveSentinel; // 0xFF
+    // u8 unused;
+    u16 saveVersion;
     /*0x00*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
     /*0x08*/ u8 playerGender; // MALE, FEMALE
     /*0x09*/ u8 specialSaveWarpFlags;

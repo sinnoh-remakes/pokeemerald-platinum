@@ -12,6 +12,8 @@
 #include "trainer_hill.h"
 #include "link.h"
 #include "constants/game_stat.h"
+#include "data/old_saves/save.v0.h"
+#include "malloc.h"
 
 static u16 CalculateChecksum(void *, u16);
 static bool8 ReadFlashSector(u8, struct SaveSector *);
@@ -485,6 +487,13 @@ static u8 TryLoadSaveSlot(u16 sectorId, struct SaveSectorLocation *locations)
         CopySaveSlotData(FULL_SAVE_SLOT, locations);
     }
 
+    if (status == SAVE_STATUS_OK) {
+        if (gSaveBlock2Ptr->_saveSentinel != 0xFF)
+            status = SAVE_STATUS_OUTDATED;
+        else if (gSaveBlock2Ptr->saveVersion != SAVE_VERSION)
+            status = SAVE_STATUS_OUTDATED;
+    }
+
     return status;
 }
 
@@ -504,7 +513,7 @@ static u8 CopySaveSlotData(u16 sectorId, struct SaveSectorLocation *locations)
         if (id == 0)
             gLastWrittenSector = i;
 
-        checksum = CalculateChecksum(gReadWriteSector->data, locations[id].size);
+        checksum = CalculateChecksum(gReadWriteSector->data, SECTOR_DATA_SIZE);
 
         // Only copy data for sectors whose signature and checksum fields are correct
         if (gReadWriteSector->signature == SECTOR_SIGNATURE && gReadWriteSector->checksum == checksum)
@@ -537,7 +546,7 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
         if (gReadWriteSector->signature == SECTOR_SIGNATURE)
         {
             signatureValid = TRUE;
-            checksum = CalculateChecksum(gReadWriteSector->data, locations[gReadWriteSector->id].size);
+            checksum = CalculateChecksum(gReadWriteSector->data, SECTOR_DATA_SIZE);
             if (gReadWriteSector->checksum == checksum)
             {
                 saveSlot1Counter = gReadWriteSector->counter;
@@ -569,7 +578,7 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
         if (gReadWriteSector->signature == SECTOR_SIGNATURE)
         {
             signatureValid = TRUE;
-            checksum = CalculateChecksum(gReadWriteSector->data, locations[gReadWriteSector->id].size);
+            checksum = CalculateChecksum(gReadWriteSector->data, SECTOR_DATA_SIZE);
             if (gReadWriteSector->checksum == checksum)
             {
                 saveSlot2Counter = gReadWriteSector->counter;
@@ -651,7 +660,7 @@ static u8 TryLoadSaveSector(u8 sectorId, u8 *data, u16 size)
     ReadFlashSector(sectorId, sector);
     if (sector->signature == SECTOR_SIGNATURE)
     {
-        u16 checksum = CalculateChecksum(sector->data, size);
+        u16 checksum = CalculateChecksum(sector->data, SECTOR_DATA_SIZE);
         if (sector->id == checksum)
         {
             // Signature and checksum are correct, copy data
@@ -1086,4 +1095,53 @@ static void CopyFromSaveBlock3(u32 sectorId, struct SaveSector *sector)
 {
     u32 size = SaveBlock3Size(sectorId);
     memcpy(sector->saveBlock3Chunk, (u8 *)&gSaveblock3 + (sectorId * SAVE_BLOCK_3_CHUNK_SIZE), size);
+}
+
+u16 DetermineSaveVersion()
+{
+    if (gSaveBlock2Ptr->_saveSentinel != 0xFF) return 0;
+    return gSaveBlock2Ptr->saveVersion;
+}
+
+bool8 UpdateSaveFile(void)
+{
+    u16 version = DetermineSaveVersion();
+    u8 *sOldSaveBlock;
+    bool8 result = TRUE;
+    u16 i;
+
+    // Load the old save file into the heap
+    sOldSaveBlock = AllocZeroed(SECTOR_DATA_SIZE * NUM_SECTORS_PER_SLOT);
+
+    // Map each old save sector directly into the heap
+    for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
+    {
+        gRamSaveSectorLocations[i].data =
+            sOldSaveBlock + (i * SECTOR_DATA_SIZE);
+        gRamSaveSectorLocations[i].size = SECTOR_DATA_SIZE;
+    }
+
+    // Load the save from FLASH onto the heap
+    CopySaveSlotData(FULL_SAVE_SLOT, gRamSaveSectorLocations);
+
+    // Zero out the data currently loaded into the save structs
+    CpuFill16(0, &gSaveblock2, sizeof(struct SaveBlock2ASLR));
+    CpuFill16(0, &gSaveblock1, sizeof(struct SaveBlock1ASLR));
+    CpuFill16(0, &gPokemonStorage, sizeof(struct PokemonStorageASLR));
+
+    // Attempt to update the save
+    switch (version)
+    {
+    case SAVE_VERSION_0:
+        result = UpdateSave_v0_v1(gRamSaveSectorLocations);
+        break;
+    default:
+        result = FALSE;
+        break;
+    }
+
+    Free(sOldSaveBlock);
+    CopyPartyAndObjectsFromSave();
+
+    return result;
 }

@@ -57,8 +57,16 @@
 #define LANGUAGE_SPANISH  7
 #define NUM_LANGUAGES     7
 
+// When updating saveblock 1, 2 or pokemon storage a new save version definition should be added and the current save version
+// be changed to it. Do not change definitions of already existing versions. If you add a new version please update the
+// UpdateSaveFile() function in src/save.c and add a new interpreter function to src/data/old_saves/save.v0.h
+
+#define SAVE_VERSION_0 0
+#define SAVE_VERSION_1 1
+
 #define GAME_VERSION (VERSION_PLATINUM)
 #define GAME_LANGUAGE (LANGUAGE_ENGLISH)
+#define SAVE_VERSION (SAVE_VERSION_1)
 
 // party sizes
 #define PARTY_SIZE 6
