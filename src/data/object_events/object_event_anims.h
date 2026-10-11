@@ -902,6 +902,150 @@ static const union AnimCmd sAnim_RunEastAsymm[] =
 // };
 //
 
+static const union AnimCmd sAnim_GoSouthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(3, 8),
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(5, 8),
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoNorthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(6, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_FRAME(8, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_JUMP(6),
+};
+
+static const union AnimCmd sAnim_GoWestBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 8),
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_FRAME(11, 8),
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_JUMP(10),
+};
+
+static const union AnimCmd sAnim_GoEastBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(11, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 8, .hFlip = TRUE),
+    ANIMCMD_JUMP(10),
+};
+
+static const union AnimCmd sAnim_GoFastSouthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_FRAME(4, 4),
+    ANIMCMD_FRAME(5, 4),
+    ANIMCMD_FRAME(4, 4),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFastNorthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(6, 4),
+    ANIMCMD_FRAME(7, 4),
+    ANIMCMD_FRAME(8, 4),
+    ANIMCMD_FRAME(7, 4),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFastWestBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 4),
+    ANIMCMD_FRAME(10, 4),
+    ANIMCMD_FRAME(11, 4),
+    ANIMCMD_FRAME(10, 4),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFastEastBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(10, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(11, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(10, 4, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFasterSouthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(3, 2),
+    ANIMCMD_FRAME(4, 2),
+    ANIMCMD_FRAME(5, 2),
+    ANIMCMD_FRAME(4, 2),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFasterNorthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(6, 2),
+    ANIMCMD_FRAME(7, 2),
+    ANIMCMD_FRAME(8, 2),
+    ANIMCMD_FRAME(7, 2),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFasterWestBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 2),
+    ANIMCMD_FRAME(10, 2),
+    ANIMCMD_FRAME(11, 2),
+    ANIMCMD_FRAME(10, 2),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFasterEastBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(10, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(11, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(10, 2, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFastestSouthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(3, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_FRAME(5, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFastestNorthBikeDPPt[] =
+{
+    ANIMCMD_FRAME(6, 1),
+    ANIMCMD_FRAME(7, 1),
+    ANIMCMD_FRAME(8, 1),
+    ANIMCMD_FRAME(7, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFastestWestBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 1),
+    ANIMCMD_FRAME(10, 1),
+    ANIMCMD_FRAME(11, 1),
+    ANIMCMD_FRAME(10, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_GoFastestEastBikeDPPt[] =
+{
+    ANIMCMD_FRAME(9, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(10, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(11, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(10, 1, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
 static const union AnimCmd sAnim_FieldMove[] =
 {
     ANIMCMD_FRAME(0, 4),
@@ -1684,6 +1828,29 @@ static const union AnimCmd *const sAnimTable_AcroBike[] = {
     [ANIM_MOVING_WHEELIE_EAST] = sAnim_MovingWheelieEast,
 };
 
+static const union AnimCmd *const sAnimTable_BikeDPPt[] = {
+    [ANIM_STD_FACE_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_FACE_WEST] = sAnim_FaceWest,
+    [ANIM_STD_FACE_EAST] = sAnim_FaceEast,
+    [ANIM_STD_GO_SOUTH] = sAnim_GoSouthBikeDPPt,
+    [ANIM_STD_GO_NORTH] = sAnim_GoNorthBikeDPPt,
+    [ANIM_STD_GO_WEST] = sAnim_GoWestBikeDPPt,
+    [ANIM_STD_GO_EAST] = sAnim_GoEastBikeDPPt,
+    [ANIM_STD_GO_FAST_SOUTH] = sAnim_GoFastSouthBikeDPPt,
+    [ANIM_STD_GO_FAST_NORTH] = sAnim_GoFastNorthBikeDPPt,
+    [ANIM_STD_GO_FAST_WEST] = sAnim_GoFastWestBikeDPPt,
+    [ANIM_STD_GO_FAST_EAST] = sAnim_GoFastEastBikeDPPt,
+    [ANIM_STD_GO_FASTER_SOUTH] = sAnim_GoFasterSouthBikeDPPt,
+    [ANIM_STD_GO_FASTER_NORTH] = sAnim_GoFasterNorthBikeDPPt,
+    [ANIM_STD_GO_FASTER_WEST] = sAnim_GoFasterWestBikeDPPt,
+    [ANIM_STD_GO_FASTER_EAST] = sAnim_GoFasterEastBikeDPPt,
+    [ANIM_STD_GO_FASTEST_SOUTH] = sAnim_GoFastestSouthBikeDPPt,
+    [ANIM_STD_GO_FASTEST_NORTH] = sAnim_GoFastestNorthBikeDPPt,
+    [ANIM_STD_GO_FASTEST_WEST] = sAnim_GoFastestWestBikeDPPt,
+    [ANIM_STD_GO_FASTEST_EAST] = sAnim_GoFastestEastBikeDPPt,
+};
+
 static const union AnimCmd *const sAnimTable_Surfing[] = {
     [ANIM_STD_FACE_SOUTH] = sAnim_FaceSouth,
     [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
@@ -1843,6 +2010,14 @@ static const struct StepAnimTable sStepAnimTables[] = {
         .animPos = {1, 3, 0, 2},
     },
     {
+        .anims = sAnimTable_BikeDPPt,
+        .animPos = {1, 3, 0, 2},
+    },
+    // {
+        // .anims = sAnimTable_WateringDPPt,
+        // .animPos = {1, 3, 0, 2},
+    // },
+{
         .anims = sAnimTable_Nurse,
         .animPos = {1, 3, 0, 2},
     },
