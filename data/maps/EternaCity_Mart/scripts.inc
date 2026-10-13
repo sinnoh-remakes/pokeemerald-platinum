@@ -42,3 +42,30 @@ EteranCity_Mart_Pokemart_Secondary:
 	.2byte ITEM_NET_BALL
 	.2byte ITEM_NEST_BALL
 	pokemartlistend
+
+EternaCity_Mart_EventScript_Guitarist::
+	msgbox EternaCity_Mart_Text_MoreGymBadges, MSGBOX_NPC
+	end
+
+EternaCity_Mart_EventScript_Hiker::
+	msgbox EternaCity_Mart_Text_EscapeRope, MSGBOX_NPC
+	end
+
+EternaCity_Mart_Text_MoreGymBadges:
+	.string "The more Gym Badges you have, the\n"
+	.string "better they treat you at Poké Marts.\p"
+	.string "You get to buy a better selection of\n"
+	.string "merchandise, you see.\p"
+	.string "But I don’t have a single Gym Badge.\n"
+	.string "It’s because Gardenia’s too much!\p"
+	.string "Argh! I don’t want to see another\n"
+	.string "grass Pokémon ever again!\p"
+	.string "If only I had Flying-type Pokémon...\n"
+	.string "Then my losing streak would end!$"
+
+EternaCity_Mart_Text_EscapeRope:
+	.string "An Escape Rope is indispensable!\p"
+	.string "I wish I’d had one when I got into a \n"
+	.string "tough spot in the Eterna Forest.\p"
+	.string "I would’ve been able to warp to the\n"
+	.string "entrance instantly!$"
