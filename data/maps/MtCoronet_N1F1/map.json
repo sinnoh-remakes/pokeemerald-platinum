@@ -2,7 +2,7 @@
   "id": "MAP_MT_CORONET_N1F1",
   "name": "MtCoronet_N1F1",
   "layout": "LAYOUT_MT_CORONET_N1F1",
-  "music": "MUS_DP_MT_CORONET",
+  "music": "MUS_DP_OREBURGH_GATE",
   "region_map_section": "MAPSEC_MT_CORONET_NORTH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
