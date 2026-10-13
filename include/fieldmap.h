@@ -1,7 +1,7 @@
 #ifndef GUARD_FIELDMAP_H
 #define GUARD_FIELDMAP_H
 
-#define NUM_TILES_IN_PRIMARY 384
+#define NUM_TILES_IN_PRIMARY 512
 // gTileset_OutdoorEterna (and its secondary tilesets) use a smaller primary to leave more room for secondary tiles
 #define NUM_TILES_IN_PRIMARY_ETERNA 384
 #define NUM_TILES_TOTAL 1024
