@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_MT_CORONET_NORTH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_INDOOR",
+  "map_type": "MAP_TYPE_NIGHT",
   "allow_cycling": true,
   "allow_escaping": true,
   "allow_running": true,
