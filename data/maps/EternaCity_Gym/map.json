@@ -85,8 +85,8 @@
       "x": 10,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_ETERNA_CITY_GYM",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ETERNA_CITY_SOUTH",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [],

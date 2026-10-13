@@ -30,7 +30,36 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 21,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_TOWER_A_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_HOUSE_B",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_GYM",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
