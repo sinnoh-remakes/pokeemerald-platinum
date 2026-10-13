@@ -16965,19 +16965,6 @@ Staraptor (M)
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_PT_TRISTAN_5 ===
-Name: Tristan
-Class: Pt Youngster
-Pic: Youngster DP
-Gender: Male
-Music: Youngster DP
-Double Battle: No
-AI: Check Bad Move
-
-Staraptor (M)
-Level: 45
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_PT_NATALIE ===
 Name: Natalie
 Class: Pt Lass
@@ -17150,31 +17137,6 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_4 ===
-Name: Dallas
-Class: Pt Youngster
-Pic: Youngster DP
-Gender: Male
-Music: Youngster DP
-Double Battle: No
-AI: Check Bad Move
-
-Luxray (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Bibarel (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Golem (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Staraptor (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_PT_DALLAS_5 ===
 Name: Dallas
 Class: Pt Youngster
 Pic: Youngster DP
@@ -17388,27 +17350,6 @@ Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_4 ===
-Name: Samantha
-Class: Pt Lass
-Pic: Lass DP
-Gender: Female
-Music: Lass DP
-Double Battle: No
-AI: Check Bad Move
-
-Combee (M)
-Level: 51
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Roselia (F)
-Level: 51
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Beautifly (F)
-Level: 51
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_PT_SAMANTHA_5 ===
 Name: Samantha
 Class: Pt Lass
 Pic: Lass DP
