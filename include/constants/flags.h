@@ -1265,11 +1265,11 @@
 #define FLAG_ITEM_ETERNA_FOREST_POTION                              0x4B2
 #define FLAG_ITEM_ETERNA_FOREST_GREEN_SHARD                         0x4B3
 #define FLAG_ITEM_ROUTE_205_GUARD_SPEC                              0x4B4
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
+#define FLAG_ITEM_MT_CORONET_N1F1_ICE_HEAL                          0x4B5
+#define FLAG_ITEM_MT_CORONET_N1F1_TM_ROCK_POLISH                    0x4B6
+#define FLAG_ITEM_MT_CORONET_N1F1_ESCAPE_ROPE                       0x4B7
+#define FLAG_ITEM_MT_CORONET_N1F1_RARE_CANDY                        0x4B8
+#define FLAG_ITEM_MT_CORONET_N1F1_TM_DRAGON_CLAW                    0x4B9
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
 #define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
 #define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
