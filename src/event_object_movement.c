@@ -172,6 +172,7 @@ static void VirtualObject_UpdateAnim(struct Sprite *);
 static void ApplyLevitateMovement(u8);
 static bool8 MovementType_Disguise_Callback(struct ObjectEvent *, struct Sprite *);
 static bool8 MovementType_Buried_Callback(struct ObjectEvent *, struct Sprite *);
+static bool8 MovementType_BuriedPt_Callback(struct ObjectEvent *, struct Sprite *);
 static bool8 MovementType_WindTurbineBlades_Callback(struct ObjectEvent *, struct Sprite *);
 static void CreateReflectionEffectSprites(void);
 static u8 GetObjectEventIdByLocalIdAndMapInternal(u8, u8, u8);
@@ -350,6 +351,7 @@ static void (*const sMovementTypeCallbacks[])(struct Sprite *) =
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = MovementType_WalkSlowlyInPlace,
     [MOVEMENT_TYPE_FOLLOW_PLAYER] = MovementType_FollowPlayer,
     [MOVEMENT_TYPE_WIND_TURBINE_BLADES] = MovementType_WindTurbineBlades,
+    [MOVEMENT_TYPE_BURIED_PT] = MovementType_BuriedPt,
 };
 
 static const bool8 sMovementTypeHasRange[NUM_MOVEMENT_TYPES] = {
@@ -480,6 +482,7 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = DIR_EAST,
     [MOVEMENT_TYPE_FOLLOW_PLAYER] = DIR_SOUTH,
     [MOVEMENT_TYPE_WIND_TURBINE_BLADES] = DIR_SOUTH,
+    [MOVEMENT_TYPE_BURIED_PT] = DIR_SOUTH,
 };
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -6054,6 +6057,37 @@ static bool8 MovementType_Buried_Callback(struct ObjectEvent *objectEvent, struc
     return gMovementTypeFuncs_Buried[sprite->sTypeFuncId](objectEvent, sprite);
 }
 
+// Like MovementType_Buried, but the trainer is hidden by a mound object instead of being
+// covered by a tile. The object's template graphics are the revealed trainer.
+void MovementType_BuriedPt(struct Sprite *sprite)
+{
+    struct ObjectEvent *objectEvent = &gObjectEvents[sprite->sObjEventId];
+
+    if (!sprite->data[7])
+    {
+        ObjectEventSetGraphicsId(objectEvent, OBJ_EVENT_GFX_BREAKABLE_ROCK_PT);
+        sprite->data[7]++;
+    }
+    UpdateObjectEventCurrentMovement(objectEvent, sprite, MovementType_BuriedPt_Callback);
+}
+
+static bool8 MovementType_BuriedPt_Callback(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    return gMovementTypeFuncs_BuriedPt[sprite->sTypeFuncId](objectEvent, sprite);
+}
+
+// Replaces the mound with the trainer's own graphics
+void RevealBuriedPtTrainerGraphics(struct ObjectEvent *objectEvent)
+{
+    struct ObjectEventTemplate *template = GetBaseTemplateForObjectEvent(objectEvent);
+
+    if (template == NULL)
+        return;
+    ObjectEventSetGraphicsId(objectEvent, template->graphicsId);
+    // The mound is inanimate, so restart the facing animation for the trainer sprite
+    ObjectEventTurn(objectEvent, objectEvent->facingDirection);
+}
+
 void MovementType_WindTurbineBlades(struct Sprite *sprite)
 {
     if (!sprite->data[7])
@@ -6072,6 +6106,12 @@ static bool8 MovementType_WindTurbineBlades_Callback(struct ObjectEvent *objectE
 }
 
 bool8 MovementType_Buried_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    ClearObjectEventMovement(objectEvent, sprite);
+    return FALSE;
+}
+
+bool8 MovementType_BuriedPt_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     ClearObjectEventMovement(objectEvent, sprite);
     return FALSE;
@@ -8721,7 +8761,7 @@ bool8 MovementAction_EmoteHeart_Step0(struct ObjectEvent *objectEvent, struct Sp
 
 bool8 MovementAction_RevealTrainer_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (objectEvent->movementType == MOVEMENT_TYPE_BURIED)
+    if (objectEvent->movementType == MOVEMENT_TYPE_BURIED || objectEvent->movementType == MOVEMENT_TYPE_BURIED_PT)
     {
         SetBuriedTrainerMovement(objectEvent);
         return FALSE;
