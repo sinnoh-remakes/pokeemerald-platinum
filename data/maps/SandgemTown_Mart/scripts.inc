@@ -48,7 +48,7 @@ SandgemTown_Mart_EventScript_PokeBallsInStock::
 	release
 	end
 
-SandgemTown_Mart_EventScript_Boy::
+SandgemTown_Mart_EventScript_Breeder::
 	msgbox SandgemTown_Mart_Text_RestoreHPWithPotion, MSGBOX_NPC
 	end
 

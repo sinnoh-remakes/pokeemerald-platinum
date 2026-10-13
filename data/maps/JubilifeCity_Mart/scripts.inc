@@ -35,7 +35,7 @@ JubilifeCity_Mart_Pokemart_Secondary:
 	.2byte ITEM_HEAL_BALL
 	pokemartlistend
 
-JubilifeCity_Mart_EventScript_Woman::
+JubilifeCity_Mart_EventScript_PokefanF::
 	msgbox JubilifeCity_Mart_Text_PackPotions, MSGBOX_NPC
 	release
 	end
