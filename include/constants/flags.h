@@ -55,7 +55,7 @@
 #define FLAG_OREBURGH_CITY_GREAT_BALL                    0x29
 #define FLAG_TM_STEALTH_ROCK                             0x2A
 #define FLAG_DEFEATED_MARS                               0x2B
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
+#define FLAG_ETERNA_NPC_TRADE_COMPLETED 0x2C
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
@@ -1272,7 +1272,7 @@
 #define FLAG_ITEM_MT_CORONET_N1F1_ESCAPE_ROPE                       0x4B8
 #define FLAG_ITEM_MT_CORONET_N1F1_RARE_CANDY                        0x4B9
 #define FLAG_ITEM_MT_CORONET_N1F1_TM_DRAGON_CLAW                    0x4BA
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
+#define FLAG_ITEM_ETERNA_CITY_TM_RECYCLE                            0x4BB
 #define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
 #define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
 #define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag

@@ -11,6 +11,7 @@ enum InGameTradeID
     INGAME_TRADE_PLUSLE,
     INGAME_TRADE_HORSEA,
     INGAME_TRADE_MEOWTH,
+    INGAME_TRADE_CHATOT,
 };
 
 // Return values for CanTradeSelectedMon and CanSpinTradeMon
