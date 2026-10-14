@@ -10,13 +10,13 @@ EternaCity_TowerA_3F_EventScript_Veteran::
 	end
 
 EternaCity_TowerA_2F_EventScript_Expert::
-	goto_if_set FLAG_ITEM_ETERNA_CITY_TM_RECYCLE, EternaCity_TowerA_2F_EventScript_ExpertReceived
+	goto_if_set FLAG_ETERNA_CITY_TM_RECYCLE, EternaCity_TowerA_2F_EventScript_ExpertReceived
 	lock
 	faceplayer
 	msgbox EternaCity_TowerA_2F_Text_HadThisTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM67
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_ITEM_ETERNA_CITY_TM_RECYCLE
+	setflag FLAG_ETERNA_CITY_TM_RECYCLE
 	release
 	end
 
