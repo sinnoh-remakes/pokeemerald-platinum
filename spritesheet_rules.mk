@@ -783,6 +783,9 @@ $(OBJEVENTGFXDIR)/misc/wind_turbine_blades_1.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/wind_turbine_blades_2.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/misc/buried_trainer_pt.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
+
 
 
 $(OBJEVENTGFXDIR)/pokemon_old/azumarill.4bpp: %.4bpp: %.png

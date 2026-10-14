@@ -650,6 +650,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_CuttableTreePt,        OBJ_EVENT_PAL_TAG_CUTTABLE_TREE_PT},
     {gObjectEventPal_PushableBoulderPt,     OBJ_EVENT_PAL_TAG_PUSHABLE_BOULDER_PT},
     {gObjectEventPal_WindTurbine,           OBJ_EVENT_PAL_TAG_WIND_TURBINE},
+    {gObjectEventPal_BuriedTrainerBrownPt,  OBJ_EVENT_PAL_TAG_BURIED_TRAINER_BROWN_PT},
+    {gObjectEventPal_BuriedTrainerGreenPt,  OBJ_EVENT_PAL_TAG_BURIED_TRAINER_GREEN_PT},
+    {gObjectEventPal_BuriedTrainerGrayPt,   OBJ_EVENT_PAL_TAG_BURIED_TRAINER_GRAY_PT},
+    {gObjectEventPal_BuriedTrainerWhitePt,  OBJ_EVENT_PAL_TAG_BURIED_TRAINER_WHITE_PT},
 
 
 #if OW_FOLLOWERS_POKEBALLS
