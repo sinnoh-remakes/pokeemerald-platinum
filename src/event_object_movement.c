@@ -6069,7 +6069,7 @@ void MovementType_BuriedPt(struct Sprite *sprite)
 
     if (!sprite->data[7])
     {
-        ObjectEventSetGraphicsId(objectEvent, OBJ_EVENT_GFX_BREAKABLE_ROCK_PT);
+        ObjectEventSetGraphicsId(objectEvent, OBJ_EVENT_GFX_BURIED_TRAINER_BROWN_PT);
         sprite->data[7]++;
     }
     UpdateObjectEventCurrentMovement(objectEvent, sprite, MovementType_BuriedPt_Callback);
