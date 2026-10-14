@@ -41,7 +41,7 @@ EternaCity_TowerA_2F_Text_HadThisTM:
 	.string "It’s not anything that I have much\n"
 	.string "use for these days.\p"
 	.string "I do hope you’ll put it to good\n"
-	.string "use, young Trainer.\p"
+	.string "use, young Trainer.$"
 
 EternaCity_TowerA_2F_Text_LongHistory:
 	.string "Folks like me have a long history\n"

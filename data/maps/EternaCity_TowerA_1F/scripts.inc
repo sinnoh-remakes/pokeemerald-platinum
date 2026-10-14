@@ -24,18 +24,22 @@ EternaCity_TowerA_1F_EventScript_NinjaBoy::
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
 	waitstate
+	lock
+	faceplayer
 	msgbox EternaCity_TowerA_1F_Text_SoAwesome, MSGBOX_DEFAULT
 	setflag FLAG_ETERNA_NPC_TRADE_COMPLETED
 	release
 	end
 
-EternaCity_TowerA_1F_EventScript_DeclineTrade::
-	msgbox EternaCity_TowerA_1F_Text_TotallyGotit, MSGBOX_DEFAULT
+EternaCity_TowerA_1F_EventScript_NotRequestedMon::
+	lock
+	faceplayer
+	msgbox EternaCity_TowerA_1F_Text_NotBuizel, MSGBOX_DEFAULT
 	release
 	end
 
-EternaCity_TowerA_1F_EventScript_NotRequestedMon::
-	msgbox EternaCity_TowerA_1F_Text_NotBuizel, MSGBOX_DEFAULT
+EternaCity_TowerA_1F_EventScript_DeclineTrade::
+	msgbox EternaCity_TowerA_1F_Text_TotallyGotit, MSGBOX_DEFAULT
 	release
 	end
 
