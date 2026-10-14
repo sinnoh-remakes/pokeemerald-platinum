@@ -671,7 +671,11 @@ static void StartTrainerApproach(TaskFunc followupFunc)
 
     taskFunc = Task_RunTrainerSeeFuncList;
     SetTaskFuncWithFollowupFunc(taskId, taskFunc, followupFunc);
-    gTasks[taskId].tFuncId = TRSEE_EXCLAMATION;
+    // Pt buried trainers pop out immediately, without an exclamation mark
+    if (gObjectEvents[gTasks[taskId].tTrainerObjectEventId].movementType == MOVEMENT_TYPE_BURIED_PT)
+        gTasks[taskId].tFuncId = TRSEE_REVEAL_BURIED;
+    else
+        gTasks[taskId].tFuncId = TRSEE_EXCLAMATION;
     taskFunc(taskId);
 }
 
@@ -720,7 +724,7 @@ static bool8 WaitTrainerExclamationMark(u8 taskId, struct Task *task, struct Obj
         task->tFuncId++; // TRSEE_MOVE_TO_PLAYER
         if (trainerObj->movementType == MOVEMENT_TYPE_TREE_DISGUISE || trainerObj->movementType == MOVEMENT_TYPE_MOUNTAIN_DISGUISE)
             task->tFuncId = TRSEE_REVEAL_DISGUISE;
-        if (trainerObj->movementType == MOVEMENT_TYPE_BURIED)
+        if (trainerObj->movementType == MOVEMENT_TYPE_BURIED || trainerObj->movementType == MOVEMENT_TYPE_BURIED_PT)
             task->tFuncId = TRSEE_REVEAL_BURIED;
         return TRUE;
     }
@@ -834,11 +838,18 @@ static bool8 JumpInPlaceBuriedTrainer(u8 taskId, struct Task *task, struct Objec
 
     if (gSprites[task->tOutOfAshSpriteId].animCmdIndex == 2)
     {
-        trainerObj->fixedPriority = 0;
+        sprite = &gSprites[trainerObj->spriteId];
+        if (trainerObj->movementType == MOVEMENT_TYPE_BURIED_PT)
+        {
+            RevealBuriedPtTrainerGraphics(trainerObj);
+        }
+        else
+        {
+            trainerObj->fixedPriority = 0;
+            sprite->oam.priority = 2;
+        }
         trainerObj->triggerGroundEffectsOnMove = TRUE;
 
-        sprite = &gSprites[trainerObj->spriteId];
-        sprite->oam.priority = 2;
         ObjectEventClearHeldMovementIfFinished(trainerObj);
         ObjectEventSetHeldMovement(trainerObj, GetJumpInPlaceMovementAction(trainerObj->facingDirection));
         task->tFuncId++;

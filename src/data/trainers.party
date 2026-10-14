@@ -16965,19 +16965,6 @@ Staraptor (M)
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_PT_TRISTAN_5 ===
-Name: Tristan
-Class: Pt Youngster
-Pic: Youngster DP
-Gender: Male
-Music: Youngster DP
-Double Battle: No
-AI: Check Bad Move
-
-Staraptor (M)
-Level: 45
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_PT_NATALIE ===
 Name: Natalie
 Class: Pt Lass
@@ -17009,7 +16996,7 @@ Name: Harrison
 Class: Pt School Kid
 Pic: School Kid M DP
 Gender: Male
-Music: Male
+Music: School Kid M DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17022,7 +17009,7 @@ Name: Christine
 Class: Pt School Kid
 Pic: School Kid F DP
 Gender: Female
-Music: Female
+Music: School Kid F DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17150,31 +17137,6 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_DALLAS_4 ===
-Name: Dallas
-Class: Pt Youngster
-Pic: Youngster DP
-Gender: Male
-Music: Youngster DP
-Double Battle: No
-AI: Check Bad Move
-
-Luxray (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Bibarel (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Golem (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Staraptor (M)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_PT_DALLAS_5 ===
 Name: Dallas
 Class: Pt Youngster
 Pic: Youngster DP
@@ -17388,27 +17350,6 @@ Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PT_SAMANTHA_4 ===
-Name: Samantha
-Class: Pt Lass
-Pic: Lass DP
-Gender: Female
-Music: Lass DP
-Double Battle: No
-AI: Check Bad Move
-
-Combee (M)
-Level: 51
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Roselia (F)
-Level: 51
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Beautifly (F)
-Level: 51
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_PT_SAMANTHA_5 ===
 Name: Samantha
 Class: Pt Lass
 Pic: Lass DP
@@ -17793,7 +17734,7 @@ Name: Jacob
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17806,7 +17747,7 @@ Name: Daniel
 Class: Pt Hiker
 Pic: Hiker DP
 Gender: Male
-Music: Male
+Music: Hiker DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17879,7 +17820,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17892,7 +17833,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17905,7 +17846,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17918,7 +17859,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17952,7 +17893,7 @@ Name: Nicholas
 Class: Pt Hiker
 Pic: Hiker DP
 Gender: Male
-Music: Male
+Music: Hiker DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -18326,3 +18267,117 @@ Ability: Natural Cure
 - Grass Knot
 - Stun Spore
 - Poison Sting
+
+=== TRAINER_PT_ZACH_1 ===
+Name: Zach
+Class: Pt Ninja Boy
+Pic: Ninja Boy DP
+Gender: Male
+Music: Ninja Boy DP
+Double Battle: No
+AI: Check Bad Move
+
+Zubat (M)
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zubat (M)
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zubat (M)
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_ZACH_2 ===
+Name: Zach
+Class: Pt Ninja Boy
+Pic: Ninja Boy DP
+Gender: Male
+Music: Ninja Boy DP
+Double Battle: No
+AI: Check Bad Move
+
+Zubat (M)
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golbat (M)
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golbat (M)
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_ZACH_3 ===
+Name: Zach
+Class: Pt Ninja Boy
+Pic: Ninja Boy DP
+Gender: Male
+Music: Ninja Boy DP
+Double Battle: No
+AI: Check Bad Move
+
+Golbat (M)
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golbat (M)
+Level: 37
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golbat (M)
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_ZACH_4 ===
+Name: Zach
+Class: Pt Ninja Boy
+Pic: Ninja Boy DP
+Gender: Male
+Music: Ninja Boy DP
+Double Battle: No
+AI: Check Bad Move
+
+Golbat (M)
+Level: 51
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Crobat (M)
+Level: 52
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Crobat (M)
+Level: 53
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_LOUIS ===
+Name: Louis
+Class: Pt Hiker
+Pic: Hiker DP
+Gender: Male
+Music: Hiker DP
+Double Battle: No
+AI: Check Bad Move
+
+Geodude (M)
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Onix (M)
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_ALEXANDRA ===
+Name: Alexandra
+Class: Pt Bird Keeper
+Pic: Bird Keeper DP
+Gender: Female
+Music: Bird Keeper DP
+Double Battle: No
+AI: Check Bad Move
+
+Hoothoot (F)
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

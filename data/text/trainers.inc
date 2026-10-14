@@ -5562,3 +5562,39 @@ EternaCity_Gym_Text_GardeniaPostBattle:
 	.string "about you, it’s this!\p"
 	.string "You and your Pokémon are gonna get\n"
 	.string "even tougher, and I mean seriously!$"
+
+Route211West_Text_ZachIntro:
+	.string "ZUBAT! Doesn’t that sound like a\n"
+	.string "ninja bursting from cover?$"
+
+Route211West_Text_ZachDefeated:
+	.string "What’s with you?\n"
+	.string "You didn’t give me any openings!$"
+
+Route211West_Text_ZachPostBattle:
+	.string "Sowing confusion among the foe is\n"
+	.string "one way a ninja battles.\p"
+	.string "A Pokémon can’t overcome its\n"
+	.string "confusion unless it switches out.$"
+
+Route211West_Text_LouisIntro:
+	.string "See how Mt. Coronet towers above us.\n"
+	.string "I want to be big like that one day!$"
+
+Route211West_Text_LouisDefeated:
+	.string "You loom before me as a giant presence!$"
+
+Route211West_Text_LouisPostBattle:
+	.string "Mt. Coronet has long been known as\n"
+	.string "an ancient and mysterious mountain.$"
+
+Route211West_Text_AlexandraIntro:
+	.string "Look at these beautiful wings!$"
+
+Route211West_Text_AlexandraDefeated:
+	.string "Oh, you!\n"
+	.string "I’m going to peck you for that!$"
+
+Route211West_Text_AlexandraPostBattle:
+	.string "There’s a bird Pokémon that can learn\n"
+	.string "human speech! Did you know that?$"

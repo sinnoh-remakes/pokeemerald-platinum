@@ -1,2 +1,33 @@
 Route211West_MapScripts::
 	.byte 0
+
+Route211West_EventScript_Zach::
+	trainerbattle_single TRAINER_PT_ZACH_1, Route211West_Text_ZachIntro, Route211West_Text_ZachDefeated
+	msgbox Route211West_Text_ZachPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route211West_EventScript_Louis::
+	trainerbattle_single TRAINER_PT_LOUIS, Route211West_Text_LouisIntro, Route211West_Text_LouisDefeated
+	msgbox Route211West_Text_LouisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route211West_EventScript_Alexandra::
+	trainerbattle_single TRAINER_PT_ALEXANDRA, Route211West_Text_AlexandraIntro, Route211West_Text_AlexandraDefeated
+	msgbox Route211West_Text_AlexandraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route203_EventScript_RouteSignWest::
+	msgbox Route203_Text_RouteSignWest, MSGBOX_SIGN
+	end
+
+Route203_EventScript_RouteSignEast::
+	msgbox Route203_Text_RouteSignEast, MSGBOX_SIGN
+	end
+
+Route203_Text_RouteSignWest:
+	.string "    Rt.211\n"
+	.string "{LEFT_ARROW} Eterna City$"
+
+Route203_Text_RouteSignEast:
+	.string "    Rt.211\n"
+	.string "{RIGHT_ARROW} Mt. Coronet$"
