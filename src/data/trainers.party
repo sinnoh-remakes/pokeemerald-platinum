@@ -16996,7 +16996,7 @@ Name: Harrison
 Class: Pt School Kid
 Pic: School Kid M DP
 Gender: Male
-Music: Male
+Music: School Kid M DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17009,7 +17009,7 @@ Name: Christine
 Class: Pt School Kid
 Pic: School Kid F DP
 Gender: Female
-Music: Female
+Music: School Kid F DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17734,7 +17734,7 @@ Name: Jacob
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17747,7 +17747,7 @@ Name: Daniel
 Class: Pt Hiker
 Pic: Hiker DP
 Gender: Male
-Music: Male
+Music: Hiker DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17820,7 +17820,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17833,7 +17833,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17846,7 +17846,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17859,7 +17859,7 @@ Name: Zackary
 Class: Pt Camper
 Pic: Camper DP
 Gender: Male
-Music: Male
+Music: Camper DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -17893,7 +17893,7 @@ Name: Nicholas
 Class: Pt Hiker
 Pic: Hiker DP
 Gender: Male
-Music: Male
+Music: Hiker DP
 Double Battle: No
 AI: Check Bad Move
 
@@ -18357,7 +18357,7 @@ Name: Louis
 Class: Pt Hiker
 Pic: Hiker DP
 Gender: Male
-Music: Male
+Music: Hiker DP
 Double Battle: No
 AI: Check Bad Move
 
