@@ -53,11 +53,11 @@
 #define FLAG_OREBURGH_CITY_SUPER_POTION                  0x27
 #define FLAG_OREBURGH_CITY_DUSK_BALL                     0x28
 #define FLAG_OREBURGH_CITY_GREAT_BALL                    0x29
-#define FLAG_TM_STEALTH_ROCK                             0x2A
-#define FLAG_DEFEATED_MARS                               0x2B
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
+#define FLAG_ROUTE_204_TM_CAPTIVATE                      0x2A 
+#define FLAG_FLOAROMA_TOWN_TM_PLUCK                      0x2B
+#define FLAG_DEFEATED_MARS                               0x2C
+#define FLAG_ETERNA_NPC_TRADE_COMPLETED                  0x2D
+#define FLAG_ETERNA_CITY_TM_RECYCLE                      0x2E
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag

@@ -26,7 +26,6 @@ OreburghCity_Gym_EventScript_RoarkDefeated::
 OreburghCity_Gym_EventScript_GiveStealthRock::
 	giveitem ITEM_TM76
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_TM_STEALTH_ROCK
 	msgbox OreburghCity_Gym_Text_TheMoveStealthRock, MSGBOX_DEFAULT
 	release
 	end

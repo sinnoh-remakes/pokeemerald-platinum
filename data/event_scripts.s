@@ -664,6 +664,9 @@ gStdScripts_End::
 	.include "data/maps/EternaCity_HouseA/scripts.inc"
 	.include "data/maps/EternaCity_HouseB/scripts.inc"
 	.include "data/maps/EternaCity_Gym/scripts.inc"
+	.include "data/maps/EternaCity_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/EternaCity_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/EternaCity_Mart/scripts.inc"
 	.include "data/maps/ValleyWindworksIndoor/scripts.inc"
 	.include "data/maps/Route205South1_House/scripts.inc"
 	.include "data/scripts/std_msgbox.inc"
@@ -787,6 +790,10 @@ Common_EventScript_ShowPokemartSign::
 
 Common_EventScript_ShowPokemonCenterSign::
 	msgbox gText_PokemonCenterSign, MSGBOX_SIGN
+	end
+
+Common_EventScript_PokemonCenter_Underground::
+	msgbox gText_WeAreWorkingUnderground, MSGBOX_NPC
 	end
 
 Common_ShowEasyChatScreen::
@@ -979,6 +986,12 @@ gText_PokemartSign::
 gText_PokemonCenterSign::
 	.string "Heal Your Pokémon!\n"
 	.string "Pokémon Center$"
+
+gText_WeAreWorkingUnderground::
+	.string "I'm very sorry.\p"
+	.string "We are working underground right now.\n"
+	.string "It's off-limits to the public.\p"
+	.string "Please try later on.$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"

@@ -31,13 +31,6 @@ SandgemTown_PokemonCenter_1F_EventScript_Girl::
 	release
 	end
 
-SandgemTown_PokemonCenter_1F_EventScript_Lady::
-	lock
-	faceplayer
-	msgbox SandgemTown_PokemonCenter_1F_Text_WorkingUnderground, MSGBOX_DEFAULT
-	release
-	end
-
 SandgemTown_PokemonCenter_1F_Text_FancyBlueOne:
 	.string "Do you see that PC over there?\n"
 	.string "That fancy blue one?.\p"
@@ -55,9 +48,3 @@ SandgemTown_PokemonCenter_1F_Text_TopFloor:
 	.string "is the Pokémon Communication Club.\p"
 	.string "There, you can have all sorts of fun\n"
 	.string "with your friends.$"
-
-SandgemTown_PokemonCenter_1F_Text_WorkingUnderground:
-	.string "I'm very sorry\p"
-	.string "We are working underground right now.\n"
-	.string "It's off-limits to the public.\p"
-	.string "Please try later on.$"

@@ -130,7 +130,7 @@ EventScript_PkmnCenterNurse_TrainerCard::
 	release
 	end
 
-EventScript_PkmnCenterNurse_UnionRoom:
+EventScript_PkmnCenterNurse_UnionRoom::
 	lock
 	msgbox gText_ClubUnionRoom, MSGBOX_YESNO
 	message gText_PleaseDoVisitAgain

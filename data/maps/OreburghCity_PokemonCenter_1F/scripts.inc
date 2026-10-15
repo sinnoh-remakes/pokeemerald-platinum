@@ -111,10 +111,6 @@ OreburghCity_PokemonCenter_1F_EventScript_NDSKidB::
 	msgbox OreburghCity_PokemonCenter_1F_Text_HaveAVsRecorder, MSGBOX_NPC
 	end
 
-OreburghCity_PokemonCenter_1F_EventScript_Teala::
-	msgbox OreburghCity_PokemonCenter_1F_Text_WorkingUnderground, MSGBOX_NPC
-	end
-
 OreburghCity_PokemonCenter_1F_Text_SwitchOn:
 	.string "Switch on the PC at any Pokémon\n"
 	.string "Center.\p"
@@ -204,9 +200,3 @@ OreburghCity_PokemonCenter_1F_Text_HaveAVsRecorder:
 	.string "You have a Vs. Recorder!\p"
 	.string "So, did you go to the Global Terminal in\n"
 	.string "Jubilife City? Did ya? Did ya?$"
-
-OreburghCity_PokemonCenter_1F_Text_WorkingUnderground::
-	.string "I'm very sorry.\p"
-	.string "We are working underground right now.\n"
-	.string "It's off-limits to the public.\p"
-	.string "Please try later on.$"
