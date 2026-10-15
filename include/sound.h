@@ -7,6 +7,7 @@ void InitMapMusic(void);
 void MapMusicMain(void);
 void ResetMapMusic(void);
 u16 GetCurrentMapMusic(void);
+u16 GetDayNightMusic(u16 songNum);
 void PlayNewMapMusic(u16 songNum);
 void StopMapMusic(void);
 void FadeOutMapMusic(u8 speed);

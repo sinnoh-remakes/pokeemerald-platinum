@@ -9,12 +9,19 @@
 #include "constants/songs.h"
 #include "task.h"
 #include "test_runner.h"
+#include "rtc.h"
 
 struct Fanfare
 {
     u16 songNum;
     u16 duration;
 };
+
+struct DayNightPair {
+    u16 daySongNum;
+    u16 nightSongNum;
+};
+
 
 EWRAM_DATA struct MusicPlayerInfo *gMPlay_PokemonCry = NULL;
 EWRAM_DATA u8 gPokemonCryBGMDuckingCounter = 0;
@@ -78,6 +85,33 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_PL_OBTAIN_B_POINTS]       = { MUS_PL_OBTAIN_B_POINTS      , 264 },
 };
 
+// map DP day and night tracks
+static const struct DayNightPair sDayNightMusTable[] = {
+    {MUS_DP_TWINLEAF_DAY, MUS_DP_TWINLEAF_NIGHT },
+    {MUS_DP_SANDGEM_DAY, MUS_DP_SANDGEM_NIGHT},
+    {MUS_DP_FLOAROMA_DAY, MUS_DP_FLOAROMA_NIGHT},
+    {MUS_DP_SOLACEON_DAY, MUS_DP_SOLACEON_NIGHT},
+    {MUS_DP_ROUTE225_DAY, MUS_DP_ROUTE225_NIGHT},
+    {MUS_DP_VALOR_LAKEFRONT_DAY, MUS_DP_VALOR_LAKEFRONT_NIGHT},
+    {MUS_DP_JUBILIFE_DAY, MUS_DP_JUBILIFE_NIGHT},
+    {MUS_DP_CANALAVE_DAY, MUS_DP_CANALAVE_NIGHT},
+    {MUS_DP_OREBURGH_DAY, MUS_DP_OREBURGH_NIGHT},
+    {MUS_DP_ETERNA_DAY, MUS_DP_ETERNA_NIGHT},
+    {MUS_DP_HEARTHOME_DAY, MUS_DP_HEARTHOME_NIGHT},
+    {MUS_DP_VEILSTONE_DAY, MUS_DP_VEILSTONE_NIGHT},
+    {MUS_DP_SUNYSHORE_DAY, MUS_DP_SUNYSHORE_NIGHT},
+    {MUS_DP_SNOWPOINT_DAY, MUS_DP_SNOWPOINT_NIGHT},
+    {MUS_DP_POKEMON_LEAGUE_DAY, MUS_DP_POKEMON_LEAGUE_NIGHT},
+    {MUS_DP_ROUTE201_DAY, MUS_DP_ROUTE201_NIGHT},
+    {MUS_DP_ROUTE203_DAY, MUS_DP_ROUTE203_NIGHT},
+    {MUS_DP_ROUTE205_DAY, MUS_DP_ROUTE205_NIGHT},
+    {MUS_DP_ROUTE206_DAY, MUS_DP_ROUTE206_NIGHT},
+    {MUS_DP_ROUTE210_DAY, MUS_DP_ROUTE210_NIGHT},
+    {MUS_DP_ROUTE216_DAY, MUS_DP_ROUTE216_NIGHT},
+    {MUS_DP_ROUTE228_DAY, MUS_DP_ROUTE228_NIGHT},
+    {MUS_DP_POKE_CENTER_DAY, MUS_DP_POKE_CENTER_NIGHT},
+};
+
 void InitMapMusic(void)
 {
     gDisableMusic = FALSE;
@@ -138,6 +172,24 @@ void ResetMapMusic(void)
 u16 GetCurrentMapMusic(void)
 {
     return sCurrentMapMusic;
+}
+
+u16 GetDayNightMusic(u16 songNum)
+{
+  //override and play night variant of track if it's not playing already
+  //if no day/night variant exists for track - current track will be played
+    if (GetTimeOfDay() == TIME_NIGHT)
+    {
+        int i;
+        for (i = 0; i < ARRAY_COUNT(sDayNightMusTable); i++)
+        {
+            if (sDayNightMusTable[i].daySongNum == songNum)
+            {
+                return sDayNightMusTable[i].nightSongNum;
+            }
+        }
+    }
+    return songNum;
 }
 
 void PlayNewMapMusic(u16 songNum)
