@@ -666,8 +666,20 @@ EternaCityNorth_Text_Cynthia3:
 	.string "Oh, there's one last thing!\n"
 	.string "Please give my regards to Prof. Rowan.$"
 
-EternaCityNorth_EventScript_GalacticGrunt_Basic::
-	msgbox EternaCityNorth_EventScript_GalacticGrunt_See_Msg, MSGBOX_NPC
+EternaCityNorth_EventScript_GalacticGrunt1::
+	msgbox EternaCityNorth_EventScript_HeyYou, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_GalacticGrunt2::
+	msgbox EternaCityNorth_Text_SeenOurBuilding, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_BugCatcher::
+	msgbox EternaCityNorth_Text_FeelsGreat, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_NinjaBoy::
+	msgbox EternaCityNorth_AwesomePokemon, MSGBOX_NPC
 	end
 
 EternaCityNorth_EventScript_TownSign::
@@ -686,12 +698,25 @@ EternaCityNorth_EventScript_UndergroundSign::
 	msgbox EternaCityNorth_Text_UndergroundSign, MSGBOX_SIGN
 	end
 
-EternaCityNorth_EventScript_GalacticGrunt_See_Msg:
+EternaCityNorth_EventScript_HeyYou:
 	.string "Hey, you! Yeah, you, Trainer!\p"
 	.string "Err...\n"
 	.string "It's OK. Never mind. You look tough.\p"
 	.string "I won't take... Um, I'll just let you\n"
 	.string "keep your POKéMON. Carry on!$"
+
+EternaCityNorth_Text_SeenOurBuilding:
+	.string "Have you seen our building?\p"
+	.string "Team Galactic is so stinking rich\n"
+	.string "that we can have one built instantly!$"
+
+EternaCityNorth_Text_FeelsGreat:
+	.string "It feels great riding a Bike with the\n"
+	.string "wind in your face, doesn’t it?$"
+
+EternaCityNorth_AwesomePokemon:
+	.string "They say this is an awesome Pokémon\n"
+	.string "that people saw long ago.$"
 
 EternaCityNorth_Text_TownSign:
 	.string "Eterna City\n"
