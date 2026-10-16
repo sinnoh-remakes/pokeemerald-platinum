@@ -5,13 +5,9 @@ EternaCityNorth_MapScripts::
 @ 1: Encountered Barry and completed Statue scene
 @ 2: Encountered Cynthia and received HM Cut
 
-EternaCityNorth_EventScript_GalacticGrunt_Basic::
-	msgbox EternaCityNorth_EventScript_GalacticGrunt_See_Msg, MSGBOX_NPC
-	end
-
 EternaCityNorth_EventScript_BarryApproach1::
 	lock
-	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
+	clearflag FLAG_HIDE_ETERNA_CITY_BARRY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_Rush
 	waitmovement 0
@@ -47,7 +43,7 @@ EternaCityNorth_EventScript_BarryApproach1::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_CYRUS_ETERNA
+	setflag FLAG_HIDE_ETERNA_CITY_CYRUS
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkDownFast
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -56,14 +52,14 @@ EternaCityNorth_EventScript_BarryApproach1::
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_BarryGoByeBye
 	waitmovement 0
 	setvar VAR_ETERNA_CITY_STATE, 1
-	setflag FLAG_HIDE_BARRY_ETERNA_CITY
+	setflag FLAG_HIDE_ETERNA_CITY_BARRY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	release
 	end
 
 EternaCityNorth_EventScript_BarryApproach2::
 	lock
-	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
+	clearflag FLAG_HIDE_ETERNA_CITY_BARRY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach2_Rush
 	waitmovement 0
@@ -103,7 +99,7 @@ EternaCityNorth_EventScript_BarryApproach2::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_CYRUS_ETERNA
+	setflag FLAG_HIDE_ETERNA_CITY_CYRUS
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkDownFast
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -112,14 +108,14 @@ EternaCityNorth_EventScript_BarryApproach2::
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_BarryGoByeBye
 	waitmovement 0
 	setvar VAR_ETERNA_CITY_STATE, 1
-	setflag FLAG_HIDE_BARRY_ETERNA_CITY
+	setflag FLAG_HIDE_ETERNA_CITY_BARRY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	release
 	end
 
 EternaCityNorth_EventScript_BarryApproach3::
 	lock
-	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
+	clearflag FLAG_HIDE_ETERNA_CITY_BARRY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach3_Rush
 	waitmovement 0
@@ -155,7 +151,7 @@ EternaCityNorth_EventScript_BarryApproach3::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_CYRUS_ETERNA
+	setflag FLAG_HIDE_ETERNA_CITY_CYRUS
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkDownFast
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -164,7 +160,7 @@ EternaCityNorth_EventScript_BarryApproach3::
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_BarryGoByeBye
 	waitmovement 0
 	setvar VAR_ETERNA_CITY_STATE, 1
-	setflag FLAG_HIDE_BARRY_ETERNA_CITY
+	setflag FLAG_HIDE_ETERNA_CITY_BARRY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	release
 	end
@@ -594,13 +590,6 @@ EternaCityNorth_Movement_CynthiaApproach_Leave2:
 	walk_down
 	step_end
 
-EternaCityNorth_EventScript_GalacticGrunt_See_Msg:
-	.string "Hey, you! Yeah, you, Trainer!\p"
-	.string "Err...\n"
-	.string "It's OK. Never mind. You look tough.\p"
-	.string "I won't take... Um, I'll just let you\n"
-	.string "keep your POKéMON. Carry on!$"
-
 EternaCityNorth_Text_BarryThud:
 	.string "Barry: THUD!$"
 
@@ -676,3 +665,72 @@ EternaCityNorth_Text_Cynthia3:
 	.string "Then luck be with you, young Trainer!\p"
 	.string "Oh, there's one last thing!\n"
 	.string "Please give my regards to Prof. Rowan.$"
+
+EternaCityNorth_EventScript_GalacticGrunt1::
+	msgbox EternaCityNorth_EventScript_HeyYou, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_GalacticGrunt2::
+	msgbox EternaCityNorth_Text_SeenOurBuilding, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_BugCatcher::
+	msgbox EternaCityNorth_Text_FeelsGreat, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_NinjaBoy::
+	msgbox EternaCityNorth_AwesomePokemon, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_TownSign::
+	msgbox EternaCityNorth_Text_TownSign, MSGBOX_SIGN
+	end
+
+EternaCityNorth_EventScript_GalacticSign::
+	msgbox EternaCityNorth_Text_GalacticSign, MSGBOX_SIGN
+	end
+
+EternaCity_North_EventScript_Statue::
+	msgbox EternaCityNorth_Text_Statue, MSGBOX_SIGN
+	end
+
+EternaCityNorth_EventScript_UndergroundSign::
+	msgbox EternaCityNorth_Text_UndergroundSign, MSGBOX_SIGN
+	end
+
+EternaCityNorth_EventScript_HeyYou:
+	.string "Hey, you! Yeah, you, Trainer!\p"
+	.string "Err...\n"
+	.string "It's OK. Never mind. You look tough.\p"
+	.string "I won't take... Um, I'll just let you\n"
+	.string "keep your POKéMON. Carry on!$"
+
+EternaCityNorth_Text_SeenOurBuilding:
+	.string "Have you seen our building?\p"
+	.string "Team Galactic is so stinking rich\n"
+	.string "that we can have one built instantly!$"
+
+EternaCityNorth_Text_FeelsGreat:
+	.string "It feels great riding a Bike with the\n"
+	.string "wind in your face, doesn’t it?$"
+
+EternaCityNorth_AwesomePokemon:
+	.string "They say this is an awesome Pokémon\n"
+	.string "that people saw long ago.$"
+
+EternaCityNorth_Text_TownSign:
+	.string "Eterna City\n"
+	.string "History Living$"
+
+EternaCityNorth_Text_GalacticSign:
+	.string "Team Galactic Eterna Building\n"
+	.string "We Want Your Pokémon!$"
+
+EternaCityNorth_Text_Statue:
+	.string "It’s Eterna City’s Pokémon statue.\p"
+	.string "There seems to have been a descriptive\n"
+	.string "plate, but it appears it was torn off.$"
+
+EternaCityNorth_Text_UndergroundSign:
+	.string "Underground Man’s House\n"
+	.string "Goin’ Down for Adventure!$"

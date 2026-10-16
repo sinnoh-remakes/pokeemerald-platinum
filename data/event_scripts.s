@@ -796,6 +796,10 @@ Common_EventScript_PokemonCenter_Underground::
 	msgbox gText_WeAreWorkingUnderground, MSGBOX_NPC
 	end
 
+Common_EventScript_ThisBuildingIsClosed::
+	msgbox gText_ThisBuildingIsClosed, MSGBOX_NPC
+	end
+
 Common_ShowEasyChatScreen::
 	fadescreen FADE_TO_BLACK
 	special ShowEasyChatScreen
@@ -992,6 +996,11 @@ gText_WeAreWorkingUnderground::
 	.string "We are working underground right now.\n"
 	.string "It's off-limits to the public.\p"
 	.string "Please try later on.$"
+	
+gText_ThisBuildingIsClosed::
+	.string "This building is closed for\n"
+	.string "maintenance.\p"
+	.string "Please come back later.$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"
