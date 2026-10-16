@@ -1210,6 +1210,7 @@ u16 GetLocationMusic(struct WarpData *warp)
 u16 GetCurrLocationDefaultMusic(void)
 {
     u16 music;
+    u16 musicToPlay;
 
     // Play the desert music only when the sandstorm is active on Route 111.
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE111)
@@ -1218,9 +1219,13 @@ u16 GetCurrLocationDefaultMusic(void)
         return MUS_DESERT;
 
     music = GetLocationMusic(&gSaveBlock1Ptr->location);
-    if (music != MUS_ROUTE118)
+    //get day/night variant of track and set default to that
+    //plays default track otherwise
+    musicToPlay = GetDayNightMusic(music);
+    
+    if (musicToPlay != MUS_ROUTE118)
     {
-        return music;
+        return musicToPlay;
     }
     else
     {
@@ -1234,9 +1239,11 @@ u16 GetCurrLocationDefaultMusic(void)
 u16 GetWarpDestinationMusic(void)
 {
     u16 music = GetLocationMusic(&sWarpDestination);
-    if (music != MUS_ROUTE118)
+    // play day/night variant of track
+    u16 musicToPlay = GetDayNightMusic(music);
+    if (musicToPlay != MUS_ROUTE118)
     {
-        return music;
+        return musicToPlay;
     }
     else
     {
