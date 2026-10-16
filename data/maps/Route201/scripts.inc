@@ -11,6 +11,7 @@ Route201_MapScripts::
 	
 	@ State descriptions for VAR_TEXT_FOLLOWER
 	@ 1-6: Visit lake with Rival
+	@ 7-9: Eterna Forest with Cheryl
 
 Route201_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
@@ -1180,7 +1181,7 @@ Route201_Text_RivalTalk5:
 Route201_Text_RivalTalk6:
 	.string "{RIVAL}: Hey, that's enough\n"
 	.string "talking already.\p"
-	.string "I'm itching to get going to the  lake.\n"
+	.string "I'm itching to get going to the lake.\n"
 	.string "Come on, come on!$"
 
 Route201_Text_FollowLeave:
