@@ -61,7 +61,7 @@ EternaForest1_EventScript_CherylGreetFirst::
 
 EternaForest1_EventScript_Cheryl::
 	facefollowernpc
-	goto_if_eq VAR_TEXT_FOLLOWER, 7, EternaForest1_EventScript_CherylTalk1
+	goto_if_lt VAR_TEXT_FOLLOWER, 8, EternaForest1_EventScript_CherylTalk1
 	goto_if_eq VAR_TEXT_FOLLOWER, 8, EternaForest1_EventScript_CherylTalk2
 	goto EternaForest1_EventScript_CherylTalk3
 
