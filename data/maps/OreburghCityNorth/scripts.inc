@@ -375,10 +375,6 @@ OreburghCityNorth_EventScript_MuseumSign::
 	msgbox OreburghCityNorth_Text_MuseumSign, MSGBOX_SIGN
 	end
 
-OreburghCityNorth_EventScript_MuseumBlock::
-	msgbox OreburghCityNorth_Text_MuseumBlock, MSGBOX_NPC
-	end
-
 OreburghCityNorth_Text_HowdyTrainer:
 	.string "Howdy, Trainer!\p"
 	.string "Huh? Uh-oh!\n"
@@ -486,8 +482,3 @@ OreburghCityNorth_Text_GymSign:
 OreburghCityNorth_Text_MuseumSign:
 	.string "Oreburgh Mining Museum\n"
 	.string "“Coal Mining and You!”$"
-
-OreburghCityNorth_Text_MuseumBlock:
-	.string "This building is closed for\n"
-	.string "maintenance.\p"
-	.string "Please come back later.$"
