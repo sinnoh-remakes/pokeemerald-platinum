@@ -82,7 +82,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "EternaCitySouth_EventScript_BikeShopSign"
     },
     {
       "type": "sign",
@@ -90,7 +90,7 @@
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "EternaCitySouth_EventScript_CondominiumSign"
     },
     {
       "type": "sign",
@@ -98,7 +98,7 @@
       "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "EternaCitySouth_EventScript_GymSign"
     }
   ]
 }

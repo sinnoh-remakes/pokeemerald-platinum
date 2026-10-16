@@ -171,5 +171,46 @@
       "script": "EternaCityNorth_EventScript_CynthiaApproach3"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCityNorth_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCityNorth_EventScript_GalacticSign"
+    },
+    {
+      "type": "sign",
+      "x": 39,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCity_North_EventScript_Statue"
+    },
+    {
+      "type": "sign",
+      "x": 56,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCityNorth_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCityNorth_EventScript_UndergroundSign"
+    }
+  ]
 }

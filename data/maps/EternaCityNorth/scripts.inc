@@ -5,10 +5,6 @@ EternaCityNorth_MapScripts::
 @ 1: Encountered Barry and completed Statue scene
 @ 2: Encountered Cynthia and received HM Cut
 
-EternaCityNorth_EventScript_GalacticGrunt_Basic::
-	msgbox EternaCityNorth_EventScript_GalacticGrunt_See_Msg, MSGBOX_NPC
-	end
-
 EternaCityNorth_EventScript_BarryApproach1::
 	lock
 	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
@@ -594,13 +590,6 @@ EternaCityNorth_Movement_CynthiaApproach_Leave2:
 	walk_down
 	step_end
 
-EternaCityNorth_EventScript_GalacticGrunt_See_Msg:
-	.string "Hey, you! Yeah, you, Trainer!\p"
-	.string "Err...\n"
-	.string "It's OK. Never mind. You look tough.\p"
-	.string "I won't take... Um, I'll just let you\n"
-	.string "keep your POKéMON. Carry on!$"
-
 EternaCityNorth_Text_BarryThud:
 	.string "Barry: THUD!$"
 
@@ -676,3 +665,47 @@ EternaCityNorth_Text_Cynthia3:
 	.string "Then luck be with you, young Trainer!\p"
 	.string "Oh, there's one last thing!\n"
 	.string "Please give my regards to Prof. Rowan.$"
+
+EternaCityNorth_EventScript_GalacticGrunt_Basic::
+	msgbox EternaCityNorth_EventScript_GalacticGrunt_See_Msg, MSGBOX_NPC
+	end
+
+EternaCityNorth_EventScript_TownSign::
+	msgbox EternaCityNorth_Text_TownSign, MSGBOX_SIGN
+	end
+
+EternaCityNorth_EventScript_GalacticSign::
+	msgbox EternaCityNorth_Text_GalacticSign, MSGBOX_SIGN
+	end
+
+EternaCity_North_EventScript_Statue::
+	msgbox EternaCityNorth_Text_Statue, MSGBOX_SIGN
+	end
+
+EternaCityNorth_EventScript_UndergroundSign::
+	msgbox EternaCityNorth_Text_UndergroundSign, MSGBOX_SIGN
+	end
+
+EternaCityNorth_EventScript_GalacticGrunt_See_Msg:
+	.string "Hey, you! Yeah, you, Trainer!\p"
+	.string "Err...\n"
+	.string "It's OK. Never mind. You look tough.\p"
+	.string "I won't take... Um, I'll just let you\n"
+	.string "keep your POKéMON. Carry on!$"
+
+EternaCityNorth_Text_TownSign:
+	.string "Eterna City\n"
+	.string "History Living$"
+
+EternaCityNorth_Text_GalacticSign:
+	.string "Team Galactic Eterna Building\n"
+	.string "We Want Your Pokémon!$"
+
+EternaCityNorth_Text_Statue:
+	.string "It’s Eterna City’s Pokémon statue.\p"
+	.string "There seems to have been a descriptive\n"
+	.string "plate, but it appears it was torn off.$"
+
+EternaCityNorth_Text_UndergroundSign:
+	.string "Underground Man’s House\n"
+	.string "Goin’ Down for Adventure!$"
