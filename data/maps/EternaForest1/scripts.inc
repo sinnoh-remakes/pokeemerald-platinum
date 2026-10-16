@@ -39,7 +39,7 @@ EternaForest1_EventScript_CherylTeamUp::
 	msgbox EternaForest1_Text_DecidedToGo, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox EternaForest1_Text_PerfectHealth, MSGBOX_DEFAULT
-	setfollowernpc LOCALID_ETERNA_FOREST_CHERYL, 0, EternaForest1_EventScript_Cheryl
+	setfollowernpc LOCALID_ETERNA_FOREST_CHERYL, 0, EternaForest1_EventScript_Cheryl, PARTNER_CHERYL
 	call_if_ge VAR_TEXT_FOLLOWER, 7, EternaForest1_EventScript_CherylResetTalk
 	setvar VAR_ETERNA_FOREST_STATE, 1
 	release
