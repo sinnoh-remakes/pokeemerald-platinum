@@ -36,6 +36,7 @@ EternaCitySouth_EventScript_Gardenia::
 	applymovement LOCALID_ETERNA_CITY_GARDENIA, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	removeobject LOCALID_ETERNA_CITY_GARDENIA
+	setflag FLAG_HIDE_ETERNA_CITY_GARDENIA
 	delay 16
 	release
 	end

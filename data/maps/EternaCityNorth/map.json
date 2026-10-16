@@ -42,7 +42,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_BARRY_ETERNA_CITY"
+      "flag": "FLAG_HIDE_ETERNA_CITY_BARRY"
     },
     {
       "local_id": "LOCALID_CYRUS_ETERNA",
@@ -56,7 +56,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_CYRUS_ETERNA"
+      "flag": "FLAG_HIDE_ETERNA_CITY_CYRUS"
     },
     {
       "local_id": "LOCALID_CYNTHIA_ETERNA",

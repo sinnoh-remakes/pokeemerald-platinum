@@ -7,7 +7,7 @@ EternaCityNorth_MapScripts::
 
 EternaCityNorth_EventScript_BarryApproach1::
 	lock
-	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
+	clearflag FLAG_HIDE_ETERNA_CITY_BARRY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_Rush
 	waitmovement 0
@@ -43,7 +43,7 @@ EternaCityNorth_EventScript_BarryApproach1::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_CYRUS_ETERNA
+	setflag FLAG_HIDE_ETERNA_CITY_CYRUS
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkDownFast
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -52,14 +52,14 @@ EternaCityNorth_EventScript_BarryApproach1::
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_BarryGoByeBye
 	waitmovement 0
 	setvar VAR_ETERNA_CITY_STATE, 1
-	setflag FLAG_HIDE_BARRY_ETERNA_CITY
+	setflag FLAG_HIDE_ETERNA_CITY_BARRY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	release
 	end
 
 EternaCityNorth_EventScript_BarryApproach2::
 	lock
-	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
+	clearflag FLAG_HIDE_ETERNA_CITY_BARRY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach2_Rush
 	waitmovement 0
@@ -99,7 +99,7 @@ EternaCityNorth_EventScript_BarryApproach2::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_CYRUS_ETERNA
+	setflag FLAG_HIDE_ETERNA_CITY_CYRUS
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkDownFast
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -108,14 +108,14 @@ EternaCityNorth_EventScript_BarryApproach2::
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_BarryGoByeBye
 	waitmovement 0
 	setvar VAR_ETERNA_CITY_STATE, 1
-	setflag FLAG_HIDE_BARRY_ETERNA_CITY
+	setflag FLAG_HIDE_ETERNA_CITY_BARRY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	release
 	end
 
 EternaCityNorth_EventScript_BarryApproach3::
 	lock
-	clearflag FLAG_HIDE_BARRY_ETERNA_CITY
+	clearflag FLAG_HIDE_ETERNA_CITY_BARRY
 	addobject LOCALID_BARRY_ETERNA_CITY, MAP_ETERNA_CITY_NORTH
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach3_Rush
 	waitmovement 0
@@ -151,7 +151,7 @@ EternaCityNorth_EventScript_BarryApproach3::
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
 	removeobject LOCALID_CYRUS_ETERNA
-	setflag FLAG_HIDE_CYRUS_ETERNA
+	setflag FLAG_HIDE_ETERNA_CITY_CYRUS
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkDownFast
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -160,7 +160,7 @@ EternaCityNorth_EventScript_BarryApproach3::
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_BarryGoByeBye
 	waitmovement 0
 	setvar VAR_ETERNA_CITY_STATE, 1
-	setflag FLAG_HIDE_BARRY_ETERNA_CITY
+	setflag FLAG_HIDE_ETERNA_CITY_BARRY
 	removeobject LOCALID_BARRY_ETERNA_CITY
 	release
 	end
