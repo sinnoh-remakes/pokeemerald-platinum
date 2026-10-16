@@ -33,8 +33,10 @@ EternaCitySouth_EventScript_Gardenia::
 	lock
 	faceplayer
 	msgbox EternaCitySouth_Text_GardeniaIntro, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ETERNA_CITY_GARDENIA, Common_Movement_WalkInPlaceUp
 	waitmovement 0
+	delay 16
 	removeobject LOCALID_ETERNA_CITY_GARDENIA
 	setflag FLAG_HIDE_ETERNA_CITY_GARDENIA
 	delay 16
