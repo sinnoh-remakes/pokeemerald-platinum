@@ -58,7 +58,7 @@
 #define FLAG_DEFEATED_MARS                               0x2C
 #define FLAG_ETERNA_NPC_TRADE_COMPLETED                  0x2D
 #define FLAG_ETERNA_CITY_TM_RECYCLE                      0x2E
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_DEFEATED_JUPITER                            0x2F
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
@@ -697,7 +697,7 @@
 #define FLAG_HIDE_VALLEY_WINDWORKS_LOOKER                0x280
 #define FLAG_HIDE_BARRY_ETERNA_CITY                      0x281
 #define FLAG_HIDE_CYRUS_ETERNA                           0x282
-#define FLAG_HIDE_GALACTIC_ETERNA                        0x283
+#define FLAG_UNUSED_0x283  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag

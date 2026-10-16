@@ -1,8 +1,10 @@
 EternaCityNorth_MapScripts::
 	.byte 0
 
-@ if the var ETERNA_CITY_STATE is 0, then eligble for Barry Cutscene
-@ if the var ETERNA_CITY_STATE is 1, then eligble for Cynthia Cutscene
+@ State descriptions For VAR_ETERNA_CITY_STATE
+@ 1: Encountered Barry and completed Statue scene
+@ 2: Encountered Cynthia and received HM Cut
+
 EternaCityNorth_EventScript_GalacticGrunt_Basic::
 	msgbox EternaCityNorth_EventScript_GalacticGrunt_See_Msg, MSGBOX_NPC
 	end
@@ -19,9 +21,6 @@ EternaCityNorth_EventScript_BarryApproach1::
 	waitmovement 0
 	playbgm MUS_DP_RIVAL, TRUE
 	call EternaCityNorth_EventScript_BarryThud
-	closemessage
-	call EternaCityNorth_EventScript_BarryPrimaryMsg
-	closemessage
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach1_MoveAroundPlayer
 	waitmovement 0
 	delay 20
@@ -30,20 +29,20 @@ EternaCityNorth_EventScript_BarryApproach1::
 	waitmovement 0
 	call EternaCityNorth_EventScript_BarrySecondaryMsg
 	closemessage
-	playbgm MUS_DP_RIVAL, FALSE
+	fadedefaultbgm
 	special SpawnCameraObject
-	applymovement LOCALID_CAMERA, EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan
+	applymovement LOCALID_CAMERA, Common_Movement_WalkSlowRight4
 	waitmovement 0
 	call EternaCityNorth_EventScript_CyrusMain
 	closemessage
-	applymovement LOCALID_CAMERA, EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan2
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft4
 	applymovement LOCALID_CYRUS_ETERNA, EternaCityNorth_Movement_BarryApproach1_CyrusApproach
 	waitmovement 0
 	special RemoveCameraObject
 	call EternaCityNorth_EventScript_CyrusStepAside
 	closemessage
 	applymovement LOCALID_PLAYER, EternaCityNorth_Movement_BarryApproach1_PlayerStepAside
-	applymovement LOCALID_CYRUS_ETERNA, EternaCityNorth_Movement_BarryApproach1_CyrusLeave
+	applymovement LOCALID_CYRUS_ETERNA, Common_Movement_WalkLeft9
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
@@ -74,9 +73,6 @@ EternaCityNorth_EventScript_BarryApproach2::
 	waitmovement 0
 	playbgm MUS_DP_RIVAL, TRUE
 	call EternaCityNorth_EventScript_BarryThud
-	closemessage
-	call EternaCityNorth_EventScript_BarryPrimaryMsg
-	closemessage
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach2_MoveAroundPlayer
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
@@ -89,20 +85,20 @@ EternaCityNorth_EventScript_BarryApproach2::
 	waitmovement 0
 	call EternaCityNorth_EventScript_BarrySecondaryMsg
 	closemessage
-	playbgm MUS_DP_RIVAL, FALSE
+	fadedefaultbgm
 	special SpawnCameraObject
-	applymovement LOCALID_CAMERA, EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan
+	applymovement LOCALID_CAMERA, Common_Movement_WalkSlowRight4
 	waitmovement 0
 	call EternaCityNorth_EventScript_CyrusMain
 	closemessage
-	applymovement LOCALID_CAMERA, EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan2
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft4
 	applymovement LOCALID_CYRUS_ETERNA, EternaCityNorth_Movement_BarryApproach1_CyrusApproach
 	waitmovement 0
 	special RemoveCameraObject
 	call EternaCityNorth_EventScript_CyrusStepAside
 	closemessage
 	applymovement LOCALID_PLAYER, EternaCityNorth_Movement_BarryApproach1_PlayerStepAside
-	applymovement LOCALID_CYRUS_ETERNA, EternaCityNorth_Movement_BarryApproach1_CyrusLeave
+	applymovement LOCALID_CYRUS_ETERNA, Common_Movement_WalkLeft9
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
@@ -133,9 +129,6 @@ EternaCityNorth_EventScript_BarryApproach3::
 	waitmovement 0
 	playbgm MUS_DP_RIVAL, TRUE
 	call EternaCityNorth_EventScript_BarryThud
-	closemessage
-	call EternaCityNorth_EventScript_BarryPrimaryMsg
-	closemessage
 	applymovement LOCALID_BARRY_ETERNA_CITY, EternaCityNorth_Movement_BarryApproach3_MoveAroundPlayer
 	waitmovement 0
 	delay 20
@@ -144,20 +137,20 @@ EternaCityNorth_EventScript_BarryApproach3::
 	waitmovement 0
 	call EternaCityNorth_EventScript_BarrySecondaryMsg
 	closemessage
-	playbgm MUS_DP_RIVAL, FALSE
+	fadedefaultbgm
 	special SpawnCameraObject
-	applymovement LOCALID_CAMERA, EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan
+	applymovement LOCALID_CAMERA, Common_Movement_WalkSlowRight4
 	waitmovement 0
 	call EternaCityNorth_EventScript_CyrusMain
 	closemessage
-	applymovement LOCALID_CAMERA, EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan2
+	applymovement LOCALID_CAMERA, Common_Movement_WalkLeft4
 	applymovement LOCALID_CYRUS_ETERNA, EternaCityNorth_Movement_BarryApproach1_CyrusApproach
 	waitmovement 0
 	special RemoveCameraObject
 	call EternaCityNorth_EventScript_CyrusStepAside
 	closemessage
 	applymovement LOCALID_PLAYER, EternaCityNorth_Movement_BarryApproach1_PlayerStepAside
-	applymovement LOCALID_CYRUS_ETERNA, EternaCityNorth_Movement_BarryApproach1_CyrusLeave
+	applymovement LOCALID_CYRUS_ETERNA, Common_Movement_WalkLeft9
 	applymovement LOCALID_BARRY_ETERNA_CITY, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement LOCALID_CYRUS_ETERNA
 	waitmovement 0
@@ -176,14 +169,11 @@ EternaCityNorth_EventScript_BarryApproach3::
 	release
 	end
 
-
-@ text calls
 EternaCityNorth_EventScript_BarryThud::
 	msgbox EternaCityNorth_Text_BarryThud, MSGBOX_DEFAULT
-	return
-
-EternaCityNorth_EventScript_BarryPrimaryMsg::
+	closemessage
 	msgbox EternaCityNorth_Text_BarryApproach1_BarryMsg, MSGBOX_DEFAULT
+	closemessage
 	return
 
 EternaCityNorth_EventScript_BarrySecondaryMsg::
@@ -215,7 +205,7 @@ EternaCityNorth_EventScript_CynthiaApproach1::
 	playse SE_PIN
 	waitse
 	delay 30
-	applymovement LOCALID_CYNTHIA_ETERNA, EternaCityNorth_Movement_CynthiaApproach_Movement2
+	applymovement LOCALID_CYNTHIA_ETERNA, Common_Movement_WalkLeft4
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -252,7 +242,7 @@ EternaCityNorth_EventScript_CynthiaApproach2::
 	playse SE_PIN
 	waitse
 	delay 30
-	applymovement LOCALID_CYNTHIA_ETERNA, EternaCityNorth_Movement_CynthiaApproach_Movement2
+	applymovement LOCALID_CYNTHIA_ETERNA, Common_Movement_WalkLeft4
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -289,7 +279,7 @@ EternaCityNorth_EventScript_CynthiaApproach3::
 	playse SE_PIN
 	waitse
 	delay 30
-	applymovement LOCALID_CYNTHIA_ETERNA, EternaCityNorth_Movement_CynthiaApproach_Movement2
+	applymovement LOCALID_CYNTHIA_ETERNA, Common_Movement_WalkLeft4
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -379,13 +369,6 @@ EternaCityNorth_Movement_BarryApproach1_PlayerFollowBarry:
 	walk_right
 	step_end
 
-EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan:
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	step_end
-
 EternaCityNorth_Movement_BarryApproach1_MoveToStatue:
 	walk_right
 	walk_right
@@ -409,13 +392,6 @@ EternaCityNorth_Movement_BarryApproach1_MoveToStatue:
 	face_right
 	step_end
 
-EternaCityNorth_Movement_BarryApproach1_InevitableCameraPan2:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	step_end
-
 EternaCityNorth_Movement_BarryApproach1_CyrusApproach:
 	walk_left
 	walk_left
@@ -428,22 +404,6 @@ EternaCityNorth_Movement_BarryApproach1_CyrusApproach:
 EternaCityNorth_Movement_BarryApproach1_PlayerStepAside:
 	walk_down
 	face_left
-	step_end
-
-EternaCityNorth_Movement_BarryApproach1_CyrusLeave:
-	walk_left
-	walk_left
-	walk_left
-	walk_left @ stairs
-	walk_left @ stairs
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	step_end
-
-EternaCityNorth_Movement_BarryApproach1_LookAtPlayer:
-	walk_fast_down
 	step_end
 
 EternaCityNorth_Movement_BarryApproach1_BarryGoByeBye:
@@ -596,13 +556,6 @@ EternaCityNorth_Movement_CynthiaApproach_Movement1:
 	walk_left
 	walk_left
 	emote_exclamation_mark
-	step_end
-
-EternaCityNorth_Movement_CynthiaApproach_Movement2:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
 	step_end
 
 EternaCityNorth_Movement_CynthiaApproach_Leave:

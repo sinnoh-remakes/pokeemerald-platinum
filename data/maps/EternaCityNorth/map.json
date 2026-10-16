@@ -45,7 +45,6 @@
       "flag": "FLAG_HIDE_BARRY_ETERNA_CITY"
     },
     {
-      "local_id": "LOCALID_POKEMON_CENTRE_GRUNT_ETERNA",
       "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M_PT",
       "x": 13,
       "y": 19,
@@ -56,7 +55,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EternaCityNorth_EventScript_GalacticGrunt_Basic",
-      "flag": "FLAG_HIDE_GALACTIC_ETERNA"
+      "flag": "FLAG_DEFEATED_JUPITER"
     },
     {
       "local_id": "LOCALID_CYRUS_ETERNA",
