@@ -522,10 +522,10 @@ TwinleafTown_PlayersHouse_1F_Text_TakeThis:
 	.string "{PLAYER}, please take this to\n"
 	.string "{RIVAL} for me.$"
 
+@ FODO: Implement Parcel key item
 TwinleafTown_PlayersHouse_1F_Text_ReceivedParcel:
 	.string "{PLAYER} obtained\n"
 	.string "the Parcel!$"
-	.string ""
 
 TwinleafTown_PlayersHouse_1F_Text_KnowingMyBoy:
 	.string "{PLAYER} put the Parcel\n"

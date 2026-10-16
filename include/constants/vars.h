@@ -276,10 +276,11 @@
 #define VAR_ROUTE202_STATE                               0x4100
 #define VAR_ROUTE203_STATE                               0x4101
 #define VAR_LAKE_VERITY_STATE                            0x4102
-#define VAR_ETERNA_CITY_STATE                            0x4103
-#define VAR_ETERNA_GYM_STATE                             0x4104
+#define VAR_ETERNA_FOREST_STATE                          0x4103
+#define VAR_ETERNA_CITY_STATE                            0x4104
+#define VAR_ETERNA_GYM_STATE                             0x4105
 
-#define VARS_END                                         0x4104
+#define VARS_END                                         0x4105
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000
