@@ -58,7 +58,7 @@
 #define FLAG_DEFEATED_MARS                               0x2C
 #define FLAG_ETERNA_NPC_TRADE_COMPLETED                  0x2D
 #define FLAG_ETERNA_CITY_TM_RECYCLE                      0x2E
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_DEFEATED_JUPITER                            0x2F
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
@@ -120,7 +120,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_UNUSED_0x068                    0x68  // Unused Flag
+#define FLAG_HIDE_CYNTHIA_ETERNA_CITY        0x68
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
@@ -695,8 +695,8 @@
 #define FLAG_HIDE_VALLEY_WINDWORKS_INDOOR_GIRL           0x27E
 #define FLAG_HIDE_VALLEY_WINDWORKS_INDOOR_GRUNT          0x27F
 #define FLAG_HIDE_VALLEY_WINDWORKS_LOOKER                0x280
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
+#define FLAG_HIDE_BARRY_ETERNA_CITY                      0x281
+#define FLAG_HIDE_CYRUS_ETERNA                           0x282
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
