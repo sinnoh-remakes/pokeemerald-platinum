@@ -2,7 +2,7 @@
   "id": "MAP_FLOAROMA_TOWN_MART",
   "name": "FloaromaTown_Mart",
   "layout": "LAYOUT_MART_PT",
-  "music": "MUS_DP_FLOAROMA_DAY",
+  "music": "MUS_DP_POKE_MART",
   "region_map_section": "MAPSEC_FLOAROMA_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
