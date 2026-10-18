@@ -295,10 +295,12 @@ const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pic
 const u8 gTrainerBackPic_Lucas[] = INCBIN_U8("graphics/trainers/back_pics/lucas.4bpp");
 const u8 gTrainerBackPic_Dawn[] = INCBIN_U8("graphics/trainers/back_pics/dawn.4bpp");
 const u8 gTrainerBackPic_Barry[] = INCBIN_U8("graphics/trainers/back_pics/barry.4bpp");
+const u8 gTrainerBackPic_Cheryl[] = INCBIN_U8("graphics/trainers/back_pics/cheryl.4bpp");
 
 const u16 gTrainerBackPicPalette_Lucas[] = INCBIN_U16("graphics/trainers/back_pics/lucas.gbapal");
 const u16 gTrainerBackPicPalette_Dawn[] = INCBIN_U16("graphics/trainers/back_pics/dawn.gbapal");
 const u16 gTrainerBackPicPalette_Barry[] = INCBIN_U16("graphics/trainers/back_pics/barry.gbapal");
+const u16 gTrainerBackPicPalette_Cheryl[] = INCBIN_U16("graphics/trainers/back_pics/cheryl.gbapal");
 
 const u32 gTrainerFrontPic_LucasDP[] = INCBIN_U32("graphics/trainers/front_pics/lucas_dp.4bpp.lz");
 const u16 gTrainerPalette_LucasDP[] = INCBIN_U16("graphics/trainers/front_pics/lucas_dp.gbapal");
@@ -874,4 +876,5 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_LUCAS, 4, gTrainerBackPic_Lucas, gTrainerBackPicPalette_Lucas, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_DAWN, 4, gTrainerBackPic_Dawn, gTrainerBackPicPalette_Dawn, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_BARRY, 4, gTrainerBackPic_Barry, gTrainerBackPicPalette_Barry, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_CHERYL, 5, gTrainerBackPic_Cheryl, gTrainerBackPicPalette_Cheryl, sBackAnims_Kanto),
 };
