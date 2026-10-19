@@ -220,6 +220,7 @@
 #define TRAINER_BACK_PIC_BRENDAN                8
 #define TRAINER_BACK_PIC_MAY                    9
 #define TRAINER_BACK_PIC_BARRY                  10
+#define TRAINER_BACK_PIC_CHERYL                 11
 
 #define FACILITY_CLASS_HIKER                 0x0
 #define FACILITY_CLASS_AQUA_GRUNT_M          0x1
