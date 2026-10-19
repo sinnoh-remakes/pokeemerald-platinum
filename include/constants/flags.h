@@ -1272,7 +1272,7 @@
 #define FLAG_ITEM_MT_CORONET_N1F1_ESCAPE_ROPE                       0x4B8
 #define FLAG_ITEM_MT_CORONET_N1F1_RARE_CANDY                        0x4B9
 #define FLAG_ITEM_MT_CORONET_N1F1_TM_DRAGON_CLAW                    0x4BA
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
+#define FLAG_ITEM_JUBILIFE_CITY_POTION                              0x4BB
 #define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
 #define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
 #define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
