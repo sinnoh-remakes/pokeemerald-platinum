@@ -182,6 +182,94 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_HoneyTree"
+    },
+    {
+      "type": "hidden_item",
+      "x": 21,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_HONEY",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_HONEY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_REVIVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 33,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_HONEY",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_HONEY_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 25,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_HONEY",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_HONEY_3"
+    },
+    {
+      "type": "hidden_item",
+      "x": 39,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_PP_UP",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_PP_UP"
+    },
+    {
+      "type": "hidden_item",
+      "x": 48,
+      "y": 23,
+      "elevation": 0,
+      "item": "ITEM_HONEY",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_HONEY_4"
+    },
+    {
+      "type": "hidden_item",
+      "x": 29,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_MAX_REVIVE",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_MAX_REVIVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 52,
+      "y": 30,
+      "elevation": 0,
+      "item": "ITEM_HYPER_POTION",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_HYPER_POTION"
+    },
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 35,
+      "elevation": 0,
+      "item": "ITEM_HONEY",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_HONEY_5"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 34,
+      "elevation": 0,
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_FULL_HEAL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 39,
+      "y": 37,
+      "elevation": 0,
+      "item": "ITEM_HONEY",
+      "flag": "FLAG_ITEM_FLOAROMA_MEADOW_HONEY_6"
     }
   ]
 }

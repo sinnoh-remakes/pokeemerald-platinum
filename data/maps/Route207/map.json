@@ -44,6 +44,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route207_EventScript_RouteSignOreburgh"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_POKE_BALL",
+      "flag": "FLAG_ITEM_ROUTE_207_POKE_BALL_2"
     }
   ]
 }

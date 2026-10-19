@@ -396,6 +396,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_HoneyTree"
+    },
+    {
+      "type": "hidden_item",
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_MAX_ELIXIR",
+      "flag": "FLAG_ITEM_VALLEY_WINDWORKS_MAX_ELIXIR"
     }
   ]
 }

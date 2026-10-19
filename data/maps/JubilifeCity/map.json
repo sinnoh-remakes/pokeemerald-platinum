@@ -720,6 +720,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "JubilifeCity_EventScript_TownSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 49,
+      "y": 59,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_ITEM_JUBILIFE_CITY_STARDUST"
     }
   ]
 }

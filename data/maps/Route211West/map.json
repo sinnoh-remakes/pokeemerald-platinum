@@ -117,6 +117,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route203_EventScript_RouteSignEast"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_GREAT_BALL",
+      "flag": "FLAG_ITEM_ROUTE_211_WEST_GREAT_BALL"
     }
   ]
 }
