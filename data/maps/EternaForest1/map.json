@@ -282,14 +282,6 @@
       "var": "VAR_ETERNA_FOREST_STATE",
       "var_value": "1",
       "script": "EternaForest1_EventScript_CherylLeave2"
-    },
-    {
-      "type": "hidden_item",
-      "x": 78,
-      "y": 29,
-      "elevation": 0,
-      "item": "ITEM_POTION",
-      "flag": "FLAG_ITEM_ETERNA_FOREST_POTION"
     }
   ],
   "bg_events": [
@@ -308,6 +300,14 @@
       "elevation": 2,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EternaForest1_EventScript_TrainerTips"
+    },
+    {
+      "type": "hidden_item",
+      "x": 78,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_POTION",
+      "flag": "FLAG_ITEM_ETERNA_FOREST_POTION"
     }
   ],
   "overlay": {
