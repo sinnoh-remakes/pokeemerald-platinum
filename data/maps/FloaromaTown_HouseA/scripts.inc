@@ -8,7 +8,7 @@ FloaromaTown_HouseA_EventScript_Twin::
 	msgbox FloaromaTown_HouseA_Text_ItsCute, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, FloaromaTown_HouseA_EventScript_TwinRejected
 	msgbox FloaromaTown_HouseA_Text_Agreed, MSGBOX_DEFAULT
-	giveitem ITEM_TM88
+	giveitem ITEM_TM_PLUCK
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_FLOAROMA_TOWN_TM_PLUCK
 	release

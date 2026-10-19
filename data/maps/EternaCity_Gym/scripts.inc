@@ -403,7 +403,7 @@ EternaCity_Gym_EventScript_GardeniaDefeated::
 	end
 
 EternaCity_Gym_EventScript_GiveGrassKnot::
-	giveitem ITEM_TM86
+	giveitem ITEM_TM_GRASS_KNOT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox EternaCity_Gym_Text_TheMoveGrassKnot, MSGBOX_DEFAULT
 	closemessage

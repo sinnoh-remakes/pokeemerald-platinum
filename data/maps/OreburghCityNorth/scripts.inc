@@ -9,6 +9,10 @@ OreburghCityNorth_MapScripts::
 @ 5: Obtained Coal Badge
 @ 6: Rival left Oreburgh
 
+OreburghCityNorth_OnTransition:
+	setflag FLAG_VISITED_OREBURGH_CITY
+	end
+
 OreburghCityNorth_EventScript_RivalLeaving::
 	setvar VAR_OREBURGH_CITY_STATE, 6
 
