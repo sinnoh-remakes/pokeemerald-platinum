@@ -1,6 +1,10 @@
 FloaromaTown_MapScripts::
 	.byte 0
 
+FloaromaTown_OnTransition:
+	setflag FLAG_VISITED_FLOAROMA_TOWN
+	end
+
 FloaromaTown_EventScript_GalacticGrunts::
 	lock
 	applymovement LOCALID_GALACTIC_GRUNT1, Common_Movement_WalkInPlaceRight

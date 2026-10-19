@@ -5,6 +5,10 @@ EternaCityNorth_MapScripts::
 @ 1: Encountered Barry and completed Statue scene
 @ 2: Encountered Cynthia and received HM Cut
 
+EternaCity_OnTransition:
+	setflag FLAG_VISITED_ETERNA_CITY
+	end
+
 EternaCityNorth_EventScript_BarryApproach1::
 	lock
 	clearflag FLAG_HIDE_ETERNA_CITY_BARRY
