@@ -522,6 +522,10 @@ static const struct SpriteFrameImage sPicTable_WindTurbineBlades2[] = {
     overworld_frame(gObjectEventPic_WindTurbineBlades2, 8, 8, 6),
 };
 
+static const struct SpriteFrameImage sPicTable_BuriedTrainerPt[] = {
+    obj_frame_tiles(gObjectEventPic_BuriedTrainerPt),
+};
+
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
 };

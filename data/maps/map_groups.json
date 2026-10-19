@@ -76,7 +76,7 @@
     "OreburghMine_B1F",
     "OreburghMine_B2F",
     "RavagedPath",
-    "MtCoronet_N1FS"
+    "MtCoronet_N1F1"
   ],
   "gMapGroup_Lakes": [
     "LakeVerity",
@@ -150,7 +150,10 @@
     "EternaCity_TowerA_3F",
     "EternaCity_HouseA",
     "EternaCity_HouseB",
-    "EternaCity_Gym"
+    "EternaCity_Gym",
+    "EternaCity_PokemonCenter_1F",
+    "EternaCity_PokemonCenter_2F",
+    "EternaCity_Mart"
   ],
   "gMapGroup_IndoorMiscellaneous": [
     "FloaromaMeadow_House",

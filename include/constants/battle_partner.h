@@ -10,7 +10,8 @@
 #define PARTNER_LUCAS_PIPLUP     5
 #define PARTNER_LUCAS_TURTWIG    6
 #define PARTNER_LUCAS_CHIMCHAR   7
+#define PARTNER_CHERYL           8
 
-#define PARTNER_COUNT            8
+#define PARTNER_COUNT            9
 
 #endif // GUARD_CONSTANTS_BATTLE_PARTNERS_H

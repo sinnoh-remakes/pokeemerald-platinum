@@ -431,6 +431,10 @@ u8 (*const gMovementTypeFuncs_Buried[])(struct ObjectEvent *, struct Sprite *) =
     MovementType_Buried_Step0,
 };
 
+u8 (*const gMovementTypeFuncs_BuriedPt[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementType_BuriedPt_Step0,
+};
+
 u8 (*const gMovementTypeFuncs_WalkInPlace[])(struct ObjectEvent *, struct Sprite *) = {
     MovementType_WalkInPlace_Step0,
     MovementType_MoveInPlace_Step1,

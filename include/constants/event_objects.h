@@ -388,11 +388,15 @@
 #define OBJ_EVENT_GFX_WIND_TURBINE_BASE          380
 #define OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1      381
 #define OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2      382
+#define OBJ_EVENT_GFX_BURIED_TRAINER_BROWN_PT    383
+#define OBJ_EVENT_GFX_BURIED_TRAINER_GREEN_PT    384
+#define OBJ_EVENT_GFX_BURIED_TRAINER_WHITE_PT    385
+#define OBJ_EVENT_GFX_BURIED_TRAINER_GRAY_PT     386
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        383
+#define NUM_OBJ_EVENT_GFX                        387
 
 
 // These are dynamic object gfx ids.
@@ -682,6 +686,10 @@
 #define OBJ_EVENT_PAL_TAG_CUTTABLE_TREE_PT        0x11E2
 #define OBJ_EVENT_PAL_TAG_PUSHABLE_BOULDER_PT     0x11E3
 #define OBJ_EVENT_PAL_TAG_WIND_TURBINE            0x11E4
+#define OBJ_EVENT_PAL_TAG_BURIED_TRAINER_BROWN_PT 0x11E5
+#define OBJ_EVENT_PAL_TAG_BURIED_TRAINER_GREEN_PT 0x11E6
+#define OBJ_EVENT_PAL_TAG_BURIED_TRAINER_WHITE_PT 0x11E7
+#define OBJ_EVENT_PAL_TAG_BURIED_TRAINER_GRAY_PT  0x11E8
 
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

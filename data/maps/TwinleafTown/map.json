@@ -203,6 +203,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "TwinleafTown_EventScript_RivalsHouseSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 31,
+      "elevation": 0,
+      "item": "ITEM_ODD_KEYSTONE",
+      "flag": "FLAG_ITEM_TWINLEAF_TOWN_ODD_KEYSTONE"
     }
   ]
 }
