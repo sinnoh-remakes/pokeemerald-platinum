@@ -14,7 +14,7 @@ EternaCity_TowerA_2F_EventScript_Expert::
 	lock
 	faceplayer
 	msgbox EternaCity_TowerA_2F_Text_HadThisTM, MSGBOX_DEFAULT
-	giveitem ITEM_TM67
+	giveitem ITEM_TM_RECYCLE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_ETERNA_CITY_TM_RECYCLE
 	release
