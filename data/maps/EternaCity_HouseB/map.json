@@ -19,8 +19,8 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ETERNA_CITY_NORTH",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_ETERNA_CITY_SOUTH",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],
