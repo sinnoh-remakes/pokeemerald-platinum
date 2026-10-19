@@ -239,7 +239,7 @@ static bool8 (*const sArrowWarpMetatileBehaviorChecks[])(u8) =
     [DIR_EAST - 1]  = MetatileBehavior_IsEastArrowWarp,
 };
 
-static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
+static const u16 sRivalAvatarGfxIds[][GENDER_COUNT] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
     [PLAYER_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_LUCAS_BIKE,       OBJ_EVENT_GFX_DAWN_BIKE},
@@ -248,11 +248,11 @@ static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
     [PLAYER_AVATAR_STATE_UNDERWATER] = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
     [PLAYER_AVATAR_STATE_FIELD_MOVE] = {OBJ_EVENT_GFX_LUCAS_FIELD_MOVE, OBJ_EVENT_GFX_DAWN_FIELD_MOVE},
     [PLAYER_AVATAR_STATE_FISHING]    = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
-    [PLAYER_AVATAR_STATE_WATERING]   = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
+    [PLAYER_AVATAR_STATE_WATERING]   = {OBJ_EVENT_GFX_LUCAS_WATERING,   OBJ_EVENT_GFX_DAWN_WATERING},
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
 };
 
-static const u8 sPlayerAvatarGfxIds[][GENDER_COUNT] =
+static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
     [PLAYER_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_LUCAS_BIKE,       OBJ_EVENT_GFX_DAWN_BIKE},
@@ -261,7 +261,7 @@ static const u8 sPlayerAvatarGfxIds[][GENDER_COUNT] =
     [PLAYER_AVATAR_STATE_UNDERWATER] = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
     [PLAYER_AVATAR_STATE_FIELD_MOVE] = {OBJ_EVENT_GFX_LUCAS_FIELD_MOVE, OBJ_EVENT_GFX_DAWN_FIELD_MOVE},
     [PLAYER_AVATAR_STATE_FISHING]    = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
-    [PLAYER_AVATAR_STATE_WATERING]   = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
+    [PLAYER_AVATAR_STATE_WATERING]   = {OBJ_EVENT_GFX_LUCAS_WATERING,   OBJ_EVENT_GFX_DAWN_WATERING},
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_LUCAS_NORMAL,     OBJ_EVENT_GFX_DAWN_NORMAL},
 };
 
@@ -1674,11 +1674,11 @@ void PlayerUseAcroBikeOnBumpySlope(u8 direction)
     SeekSpriteAnim(&gSprites[gPlayerAvatar.spriteId], 1);
 }
 
-void SetPlayerAvatarWatering(u8 direction)
+void SetPlayerAvatarWatering(void)
 {
     EndORASDowsing();
     ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_WATERING));
-    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFaceDirectionAnimNum(direction));
+    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], ANIM_BERRY_WATERING);
 }
 
 static void HideShowWarpArrow(struct ObjectEvent *objectEvent)

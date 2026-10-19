@@ -1056,6 +1056,14 @@ static const union AnimCmd sAnim_FieldMove[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_BerryWateringDPPt[] =
+{
+    ANIMCMD_FRAME(0, 12),
+    ANIMCMD_FRAME(1, 12),
+    ANIMCMD_FRAME(2, 12),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_GetOnOffSurfBlobSouth[] =
 {
     ANIMCMD_FRAME(9, 32),
@@ -1935,6 +1943,10 @@ static const union AnimCmd *const sAnimTable_FieldMove[] = {
     [ANIM_FIELD_MOVE] = sAnim_FieldMove,
 };
 
+static const union AnimCmd *const sAnimTable_BerryWateringDPPt[] = {
+    [ANIM_BERRY_WATERING] = sAnim_BerryWateringDPPt,
+};
+
 static const union AnimCmd *const sAnimTable_BerryTree[] = {
     [BERRY_STAGE_PLANTED - 1] = sAnim_BerryTreeStage0,
     [BERRY_STAGE_SPROUTED - 1] = sAnim_BerryTreeStage1,
@@ -2013,11 +2025,7 @@ static const struct StepAnimTable sStepAnimTables[] = {
         .anims = sAnimTable_BikeDPPt,
         .animPos = {1, 3, 0, 2},
     },
-    // {
-        // .anims = sAnimTable_WateringDPPt,
-        // .animPos = {1, 3, 0, 2},
-    // },
-{
+    {
         .anims = sAnimTable_Nurse,
         .animPos = {1, 3, 0, 2},
     },

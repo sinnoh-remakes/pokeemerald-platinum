@@ -10,6 +10,10 @@ static const struct SpriteFrameImage sPicTable_LucasBike[] = {
     overworld_ascending_frames(gObjectEventPic_LucasBike, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_LucasWatering[] = {
+    overworld_ascending_frames(gObjectEventPic_LucasWatering, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_DawnNormal[] = {
     overworld_ascending_frames(gObjectEventPic_DawnNormalRunning, 4, 4),
 };
@@ -20,6 +24,10 @@ static const struct SpriteFrameImage sPicTable_DawnFieldMove[] = {
 
 static const struct SpriteFrameImage sPicTable_DawnBike[] = {
     overworld_ascending_frames(gObjectEventPic_DawnBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_DawnWatering[] = {
+    overworld_ascending_frames(gObjectEventPic_DawnWatering, 4, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_AaronPt[] = {
