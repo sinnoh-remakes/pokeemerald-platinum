@@ -7,6 +7,7 @@ void CreateScriptedWildMon(u16 species, u8 level, u16 item);
 void CreateScriptedDoubleWildMon(u16 species, u8 level, u16 item, u16 species2, u8 level2, u16 item2);
 void ScriptSetMonMoveSlot(u8 monIndex, u16 move, u8 slot);
 void ReducePlayerPartyToSelectedMons(void);
+void ReducePlayerPartyToFirstThreeMons(void);
 void HealPlayerParty(void);
 void Script_GetChosenMonOffensiveEVs(void);
 void Script_GetChosenMonDefensiveEVs(void);
