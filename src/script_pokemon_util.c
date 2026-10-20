@@ -236,6 +236,14 @@ void ReducePlayerPartyToSelectedMons(void)
     CalculatePlayerPartyCount();
 }
 
+void ReducePlayerPartyToFirstThreeMons(void)
+{
+    gSaveBlock2Ptr->frontier.selectedPartyMons[0] = 1;
+    gSaveBlock2Ptr->frontier.selectedPartyMons[1] = 2;
+    gSaveBlock2Ptr->frontier.selectedPartyMons[2] = 3;
+    gSaveBlock2Ptr->frontier.selectedPartyMons[3] = 0;
+}
+
 void CanHyperTrain(struct ScriptContext *ctx)
 {
     u32 stat = ScriptReadByte(ctx);

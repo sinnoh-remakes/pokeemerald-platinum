@@ -126,15 +126,6 @@ JubilifeCity_EventScript_GalacticGruntsEventMain_Dawn:
 	return
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init1::
-	special SavePlayerParty
-	fadescreen FADE_TO_BLACK
-	special ChooseHalfPartyForBattle
-	waitstate
-	goto_if_ne VAR_RESULT, 0, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init2
-	special LoadPlayerParty
-	goto JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init1
-
-JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Init2::
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Dawn
 	goto_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Lucas
@@ -148,7 +139,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Dawn::
 	end
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnTurtwig::
-	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_TURTWIG
+	multi_2_vs_2_autoselect_party TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_TURTWIG
 	switch VAR_RESULT
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
@@ -158,7 +149,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnTurtwig::
 	end
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnPiplup::
-	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_PIPLUP
+	multi_2_vs_2_autoselect_party TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_PIPLUP
 	switch VAR_RESULT
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
@@ -168,7 +159,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnPiplup::
 	end
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnChimchar::
-	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_CHIMCHAR
+	multi_2_vs_2_autoselect_party TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_DAWN_CHIMCHAR
 	switch VAR_RESULT
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
@@ -186,7 +177,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_Lucas::
 	end
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasTurtwig::
-	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_TURTWIG
+	multi_2_vs_2_autoselect_party TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_TURTWIG
 	switch VAR_RESULT
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
@@ -196,7 +187,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasTurtwig::
 	end
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasPiplup::
-	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_PIPLUP
+	multi_2_vs_2_autoselect_party TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_PIPLUP
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
@@ -205,7 +196,7 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasPiplup::
 	end
 
 JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasChimchar::
-	multi_2_vs_2 TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_CHIMCHAR
+	multi_2_vs_2_autoselect_party TRAINER_JUBILIFE_CITY_GRUNT_1, JubilifeCity_Text_GalacticGrunts_PlayerVictory1, TRAINER_JUBILIFE_CITY_GRUNT_2, JubilifeCity_Text_GalacticGrunts_PlayerVictory2, PARTNER_LUCAS_CHIMCHAR
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
@@ -1376,10 +1367,6 @@ JubilifeCity_EventScript_PoketchCompanySign::
 	msgbox JubilifeCity_Text_PoketchCompanySign, MSGBOX_SIGN
 	end
 
-JubilifeCity_EventScript_CompanyBlock::
-	msgbox JubilifeCity_Text_CompanyBlock, MSGBOX_NPC
-	end
-
 JubilifeCity_Text_LookerAfterOreburgh1:
 	.string "Looker: Tell me, have you not obtained\n"
 	.string "a Pal Pad?\p"
@@ -1999,8 +1986,3 @@ JubilifeCity_Text_JubilifeTVSign:
 JubilifeCity_Text_PoketchCompanySign:
 	.string "The Pokétch Company\n"
 	.string "Pokémon Watches for the World!$"
-
-JubilifeCity_Text_CompanyBlock:
-	.string "This building is closed for\n"
-	.string "maintenance.\p"
-	.string "Please come back later.$"
