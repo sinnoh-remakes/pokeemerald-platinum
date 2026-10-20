@@ -5,7 +5,6 @@ SandgemTown_PokemonCenter_1F_MapScripts::
 
 SandgemTown_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_SANDGEM_TOWN
-	call Common_EventScript_UpdateBrineyLocation
 	end
 
 SandgemTown_PokemonCenter_1F_EventScript_Nurse::
