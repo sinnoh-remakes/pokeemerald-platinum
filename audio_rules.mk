@@ -22,7 +22,7 @@ $(MID_BUILDDIR)/%.o: $(MID_ASM_DIR)/%.s
 # Compressed cries
 $(CRY_BIN_DIR)/%.bin: $(CRY_SUBDIR)/%.wav
 # NOTE: If using ipatix's High Quality Audio Mixer, remove "--no-pad" below.
-	$(WAV2AGB) -b -c -l 1 --no-pad $< $@
+	$(WAV2AGB) -b -c -l 1 $< $@
 
 # Uncompressed cries
 $(CRY_BIN_DIR)/uncomp_%.bin: $(CRY_SUBDIR)/uncomp_%.aif 
