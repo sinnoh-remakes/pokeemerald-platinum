@@ -310,6 +310,8 @@ void MovementType_TreeDisguise(struct Sprite *sprite);
 void MovementType_MountainDisguise(struct Sprite *sprite);
 void MovementType_CopyPlayerInGrass(struct Sprite *sprite);
 void MovementType_Buried(struct Sprite *sprite);
+void MovementType_BuriedPt(struct Sprite *sprite);
+void RevealBuriedPtTrainerGraphics(struct ObjectEvent *objectEvent);
 void MovementType_WalkInPlace(struct Sprite *sprite);
 void MovementType_JogInPlace(struct Sprite *sprite);
 void MovementType_RunInPlace(struct Sprite *sprite);
@@ -483,6 +485,7 @@ bool8 FollowablePlayerMovement_Jump(struct ObjectEvent *objectEvent, struct Spri
 bool8 CopyablePlayerMovement_Jump2(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8, bool8 tileCallback(u8));
 u8 MovementType_CopyPlayerInGrass_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite);
 u8 MovementType_Buried_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);
+u8 MovementType_BuriedPt_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);
 u8 MovementType_WalkInPlace_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);
 u8 MovementType_MoveInPlace_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite);
 u8 MovementType_WalkSlowlyInPlace_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);

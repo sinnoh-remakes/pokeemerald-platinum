@@ -1,6 +1,10 @@
 FloaromaTown_MapScripts::
 	.byte 0
 
+FloaromaTown_OnTransition:
+	setflag FLAG_VISITED_FLOAROMA_TOWN
+	end
+
 FloaromaTown_EventScript_GalacticGrunts::
 	lock
 	applymovement LOCALID_GALACTIC_GRUNT1, Common_Movement_WalkInPlaceRight
@@ -58,10 +62,6 @@ FloaromaTown_EventScript_SchoolKidM_PostEvent::
 
 FloaromaTown_EventScript_AromaLady::
 	msgbox FloaromaTown_Text_Welcome, MSGBOX_NPC
-	end
-
-FloaromaTown_EventScript_ShopBlock::
-	msgbox FloaromaTown_Text_ShopBlock, MSGBOX_NPC
 	end
 
 FloaromaTown_EventScript_TownSign::
@@ -122,11 +122,6 @@ FloaromaTown_Text_Welcome:
 	.string "flowers, flowers, and more flowers!\p"
 	.string "You should plant some flowers of\n"
 	.string "your own, too. Yay for flowers!$"
-	
-FloaromaTown_Text_ShopBlock:
-	.string "This building is closed for\n"
-	.string "maintenance.\p"
-	.string "Please come back later.$"
 
 FloaromaTown_Text_TownSign:
 	.string "Floaroma Town\n"

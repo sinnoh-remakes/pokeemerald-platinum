@@ -322,6 +322,7 @@ SandgemTown_ProfessorRowansLab_Text_GoodAnswer:
 	.string "Rowan: Hm!\p"
 	.string "Good answer!$"
 
+@ FODO: Implement Pokedex key item
 SandgemTown_ProfessorRowansLab_Text_ReceivedPokedex:
 	.string "{PLAYER} obtained\n"
 	.string "the Pokédex!$"

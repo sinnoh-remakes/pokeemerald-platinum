@@ -2426,4 +2426,9 @@ extern const u8 gText_CannotSendMonToBoxHM[];
 extern const u8 gText_CannotSendMonToBoxActive[];
 extern const u8 gText_CannotSendMonToBoxPartner[];
 
+// Saveblock version control strings
+
+extern const u8 gText_SaveFileOldUpdated[];
+extern const u8 gText_SaveFileOldErrored[];
+
 #endif // GUARD_STRINGS_H

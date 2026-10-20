@@ -774,11 +774,17 @@ $(OBJEVENTGFXDIR)/misc/cuttable_tree_pt.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/pushable_boulder_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 
+$(OBJEVENTGFXDIR)/misc/wind_turbine_base.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 6 -mheight 6
+
 $(OBJEVENTGFXDIR)/misc/wind_turbine_blades_1.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
 $(OBJEVENTGFXDIR)/misc/wind_turbine_blades_2.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
+
+$(OBJEVENTGFXDIR)/misc/buried_trainer_pt.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
 
 
 

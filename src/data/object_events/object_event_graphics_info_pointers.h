@@ -123,6 +123,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PushableBou
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BuriedTrainerBrownPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BuriedTrainerGreenPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BuriedTrainerWhitePt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BuriedTrainerGrayPt;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
@@ -760,6 +764,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WIND_TURBINE_BASE] =        &gObjectEventGraphicsInfo_WindTurbineBase,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1] =    &gObjectEventGraphicsInfo_WindTurbineBlades1,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2] =    &gObjectEventGraphicsInfo_WindTurbineBlades2,
+    [OBJ_EVENT_GFX_BURIED_TRAINER_BROWN_PT] =  &gObjectEventGraphicsInfo_BuriedTrainerBrownPt,
+    [OBJ_EVENT_GFX_BURIED_TRAINER_GREEN_PT] =  &gObjectEventGraphicsInfo_BuriedTrainerGreenPt,
+    [OBJ_EVENT_GFX_BURIED_TRAINER_WHITE_PT] =  &gObjectEventGraphicsInfo_BuriedTrainerWhitePt,
+    [OBJ_EVENT_GFX_BURIED_TRAINER_GRAY_PT] =  &gObjectEventGraphicsInfo_BuriedTrainerGrayPt,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

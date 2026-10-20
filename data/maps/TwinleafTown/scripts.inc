@@ -25,6 +25,7 @@ TwinleafTown_MapScripts::
 	@ 1: Mom saying bye in intro event
 	@ 2: Rival's Mom speaking after Rival leaves Twinleaf
 	@ 3: Helper Route 202 requesting you notify family
+	@ 4: Cheryl requesting to follow the player
 
 TwinleafTown_OnTransition:
 	call_if_eq VAR_TWINLEAF_INTRO_STATE, 7, TwinleafTown_EventScript_LeaveRunning

@@ -1210,6 +1210,7 @@ u16 GetLocationMusic(struct WarpData *warp)
 u16 GetCurrLocationDefaultMusic(void)
 {
     u16 music;
+    u16 musicToPlay;
 
     // Play the desert music only when the sandstorm is active on Route 111.
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE111)
@@ -1218,9 +1219,13 @@ u16 GetCurrLocationDefaultMusic(void)
         return MUS_DESERT;
 
     music = GetLocationMusic(&gSaveBlock1Ptr->location);
-    if (music != MUS_ROUTE118)
+    //get day/night variant of track and set default to that
+    //plays default track otherwise
+    musicToPlay = GetDayNightMusic(music);
+    
+    if (musicToPlay != MUS_ROUTE118)
     {
-        return music;
+        return musicToPlay;
     }
     else
     {
@@ -1234,9 +1239,11 @@ u16 GetCurrLocationDefaultMusic(void)
 u16 GetWarpDestinationMusic(void)
 {
     u16 music = GetLocationMusic(&sWarpDestination);
-    if (music != MUS_ROUTE118)
+    // play day/night variant of track
+    u16 musicToPlay = GetDayNightMusic(music);
+    if (musicToPlay != MUS_ROUTE118)
     {
-        return music;
+        return musicToPlay;
     }
     else
     {
@@ -1598,6 +1605,16 @@ const struct BlendSettings gTimeOfDayBlend[] =
 void UpdateTimeOfDay(void)
 {
     s32 hours, minutes;
+
+    if (gMapHeader.mapType == MAP_TYPE_NIGHT)
+    {
+        gTimeBlend.weight = DEFAULT_WEIGHT;
+        gTimeBlend.altWeight = 0;
+        gTimeBlend.startBlend = gTimeBlend.endBlend = gTimeOfDayBlend[TIME_NIGHT];
+        gTimeOfDay = TIME_NIGHT;
+        return;
+    }
+
     RtcCalcLocalTime();
     hours = sHoursOverride ? sHoursOverride : gLocalTime.hours;
     minutes = sHoursOverride ? 0 : gLocalTime.minutes;
@@ -1660,7 +1677,8 @@ bool32 MapHasNaturalLight(enum MapType mapType)
          && (mapType == MAP_TYPE_TOWN
           || mapType == MAP_TYPE_CITY
           || mapType == MAP_TYPE_ROUTE
-          || mapType == MAP_TYPE_OCEAN_ROUTE));
+          || mapType == MAP_TYPE_OCEAN_ROUTE
+          || mapType == MAP_TYPE_NIGHT));
 }
 
 bool32 CurrentMapHasShadows(void)
