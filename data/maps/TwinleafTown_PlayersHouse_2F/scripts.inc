@@ -326,7 +326,7 @@ TwinleafTown_PlayersHouse_2F_EventScript_TV::
 	end
 
 TwinleafTown_PlayersHouse_2F_EventScript_GameCube::
-	msgbox TwinleafTown_PlayersHouse_2F_Text_GameCube, MSGBOX_SIGN
+	msgbox TwinleafTown_PlayersHouse_2F_Text_Wii, MSGBOX_SIGN
 	end
 
 TwinleafTown_PlayersHouse_2F_Text_ThereYouAre:
@@ -371,6 +371,6 @@ TwinleafTown_PlayersHouse_2F_Text_TV:
 	.string "The TV is showing the title screen\n"
 	.string "of a video game.$"
 
-TwinleafTown_PlayersHouse_2F_Text_GameCube:
-	.string "It's a Nintendo GameCube!\p"
-	.string "It's controlled by a Gameboy Advance!$"
+TwinleafTown_PlayersHouse_2F_Text_Wii:
+	.string "It's a Wii!\n"
+	.string "It's controlled by a Wii Remote!$"

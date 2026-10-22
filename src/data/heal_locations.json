@@ -236,6 +236,16 @@
       "respawn_npc": "LOCALID_FLOAROMA_NURSE",
       "respawn_x": 7,
       "respawn_y": 8
+    },
+    {
+      "id": "HEAL_LOCATION_ETERNA_CITY",
+      "map": "MAP_ETERNA_CITY_POKEMON_CENTER_1F",
+      "x": 7,
+      "y": 8,
+      "respawn_map": "MAP_ETERNA_CITY_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_ETERNA_NURSE",
+      "respawn_x": 7,
+      "respawn_y": 8
     }
   ]
 }
