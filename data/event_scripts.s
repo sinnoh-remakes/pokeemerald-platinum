@@ -612,6 +612,7 @@ gStdScripts_End::
 	.include "data/maps/Gate_Jubilife/scripts.inc"
 	.include "data/maps/ValleyWindworks/scripts.inc"
 	.include "data/maps/FloaromaMeadow/scripts.inc"
+	.include "data/maps/Gate_Cycling_North/scripts.inc"
 	.include "data/maps/EternaForest1/scripts.inc"
 	.include "data/maps/EternaForest2/scripts.inc"
 	.include "data/maps/EternaForestOuter1/scripts.inc"

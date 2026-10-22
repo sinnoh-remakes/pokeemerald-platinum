@@ -4980,6 +4980,16 @@
       "secondary_tileset": "gTileset_SunyshoreHouse",
       "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_GATE_CYCLING_NORTH",
+      "name": "Gate_Cycling_North_Layout",
+      "width": 9,
+      "height": 14,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/Gate_Cycling_North/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Cycling_North/map.bin"
     }
   ]
 }
