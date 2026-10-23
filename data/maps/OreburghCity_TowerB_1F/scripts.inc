@@ -43,13 +43,11 @@ OreburghCity_TowerB_1F_EventScript_WhatIAskedFor::
 	end
 
 OreburghCity_TowerB_1F_EventScript_SchoolKidFReject::
-	lock
 	msgbox OreburghCity_TowerB_1F_Text_MakeYouTradeMe, MSGBOX_DEFAULT
 	release
 	end
 
 OreburghCity_TowerB_1F_EventScript_TradeCompleted::
-	lock
 	msgbox OreburghCity_TowerB_1F_Text_FriendsWithYou, MSGBOX_DEFAULT
 	release
 	end
