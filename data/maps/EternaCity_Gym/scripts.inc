@@ -345,6 +345,8 @@ EternaCity_Gym_Movement_\trainer\()ReturnFrom\side\():
 
 EternaCity_Gym_EventScript_Caroline::
 	trainerbattle_single TRAINER_PT_CAROLINE, EternaCity_Gym_Text_CarolineIntro, EternaCity_Gym_Text_CarolineDefeated, EternaCity_Gym_EventScript_CarolineAfterBattle
+	msgbox EternaCity_Gym_Text_CarolinePostBattle, MSGBOX_DEFAULT
+	release
 	end
 
 EternaCity_Gym_EventScript_CarolineAfterBattle::
@@ -357,6 +359,8 @@ EternaCity_Gym_EventScript_CarolineAfterBattle::
 
 EternaCity_Gym_EventScript_Jenna::
 	trainerbattle_single TRAINER_PT_JENNA, EternaCity_Gym_Text_JennaIntro, EternaCity_Gym_Text_JennaDefeated, EternaCity_Gym_EventScript_JennaAfterBattle
+	msgbox EternaCity_Gym_Text_JennaPostBattle, MSGBOX_DEFAULT
+	release
 	end
 
 EternaCity_Gym_EventScript_JennaAfterBattle::
@@ -369,6 +373,8 @@ EternaCity_Gym_EventScript_JennaAfterBattle::
 
 EternaCity_Gym_EventScript_Angela::
 	trainerbattle_single TRAINER_PT_ANGELA, EternaCity_Gym_Text_AngelaIntro, EternaCity_Gym_Text_AngelaDefeated, EternaCity_Gym_EventScript_AngelaAfterBattle
+	msgbox EternaCity_Gym_Text_AngelaPostBattle, MSGBOX_DEFAULT
+	release
 	end
 
 EternaCity_Gym_EventScript_AngelaAfterBattle::

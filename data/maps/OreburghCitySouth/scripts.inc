@@ -27,7 +27,7 @@ OreburghCitySouth_EventScript_Machop2::
 
 OreburghCitySouth_EventScript_WorkerSuperPotion::
 	goto_if_set FLAG_OREBURGH_CITY_SUPER_POTION, OreburghCitySouth_EventScript_WorkerSuperPotionGiven
-	msgbox OreburghCitySouth_Text_NoQuestion, MSGBOX_DEFAULT
+	msgbox OreburghCitySouth_Text_NoQuestion, MSGBOX_NPC
 	giveitem ITEM_SUPER_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_OREBURGH_CITY_SUPER_POTION

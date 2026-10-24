@@ -3,6 +3,7 @@ EternaForest2_MapScripts::
 
 EternaForest2_EventScript_CherylLeave::
 	lock
+	playse SE_PIN
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 32

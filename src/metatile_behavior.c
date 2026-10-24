@@ -136,6 +136,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_ROCK_CLIMB]                         = TILE_FLAG_UNUSED,
     [MB_JUMP_NORTH_SOUTH]                   = TILE_FLAG_UNUSED,
     [MB_JUMP_WEST_EAST]                     = TILE_FLAG_UNUSED,
+    [MB_PC_PT]                              = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -502,6 +503,15 @@ bool8 MetatileBehavior_IsPlayerFacingTVScreen(u8 metatileBehavior, u8 playerDir)
 bool8 MetatileBehavior_IsPC(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_PC)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+// Opens the PC without the screen turn on/off effect, so no metatiles are overwritten
+bool8 MetatileBehavior_IsPlatinumPC(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_PC_PT)
         return TRUE;
     else
         return FALSE;
