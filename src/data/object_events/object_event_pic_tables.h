@@ -14,6 +14,10 @@ static const struct SpriteFrameImage sPicTable_LucasWatering[] = {
     overworld_ascending_frames(gObjectEventPic_LucasWatering, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_LucasFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_LucasFishing, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_DawnNormal[] = {
     overworld_ascending_frames(gObjectEventPic_DawnNormalRunning, 4, 4),
 };
@@ -28,6 +32,10 @@ static const struct SpriteFrameImage sPicTable_DawnBike[] = {
 
 static const struct SpriteFrameImage sPicTable_DawnWatering[] = {
     overworld_ascending_frames(gObjectEventPic_DawnWatering, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_DawnFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_DawnFishing, 4, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_AaronPt[] = {
