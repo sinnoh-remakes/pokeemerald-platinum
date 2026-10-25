@@ -4702,14 +4702,24 @@
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
     {
-      "id": "LAYOUT_GATE_PT",
-      "name": "Gate_Pt_Layout",
+      "id": "LAYOUT_GATE_HORIZONTAL",
+      "name": "Gate_Horizontal_Layout",
       "width": 16,
       "height": 11,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_Gatehouse",
-      "border_filepath": "data/layouts/Gate_Pt/border.bin",
-      "blockdata_filepath": "data/layouts/Gate_Pt/map.bin"
+      "border_filepath": "data/layouts/Gate_Horizontal/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Horizontal/map.bin"
+    },
+    {
+      "id": "LAYOUT_GATE_CYCLING_NORTH",
+      "name": "Gate_Cycling_North_Layout",
+      "width": 9,
+      "height": 14,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/Gate_Cycling_North/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Cycling_North/map.bin"
     },
     {
       "id": "LAYOUT_VALLEY_WINDWORKS",
@@ -4982,14 +4992,14 @@
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
     },
     {
-      "id": "LAYOUT_GATE_CYCLING_NORTH",
-      "name": "Gate_Cycling_North_Layout",
-      "width": 9,
+      "id": "LAYOUT_GATE_CYCLING_SOUTH",
+      "name": "Gate_Cycling_South_Layout",
+      "width": 13,
       "height": 14,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_Gatehouse",
-      "border_filepath": "data/layouts/Gate_Cycling_North/border.bin",
-      "blockdata_filepath": "data/layouts/Gate_Cycling_North/map.bin"
+      "border_filepath": "data/layouts/Gate_Cycling_South/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Cycling_South/map.bin"
     }
   ]
 }
