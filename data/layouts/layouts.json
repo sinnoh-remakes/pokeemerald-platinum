@@ -4962,6 +4962,16 @@
       "blockdata_filepath": "data/layouts/EternaCity_Gym_5/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_CITY_CYCLE_SHOP",
+      "name": "EternaCity_CycleShop_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorCycleShop",
+      "secondary_tileset": "gTileset_CycleShop",
+      "border_filepath": "data/layouts/EternaCity_CycleShop/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_CycleShop/map.bin"
+    },
+    {
       "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",
       "name": "ValleyWindworksIndoor_Layout",
       "width": 22,
@@ -4980,16 +4990,6 @@
       "secondary_tileset": "gTileset_SunyshoreHouse",
       "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
-    },
-    {
-      "id": "LAYOUT_ETERNA_CITY_CYCLE_SHOP",
-      "name": "EternaCity_CycleShop_Layout",
-      "width": 15,
-      "height": 12,
-      "primary_tileset": "gTileset_IndoorCycleShop",
-      "secondary_tileset": "gTileset_CycleShop",
-      "border_filepath": "data/layouts/EternaCity_CycleShop/border.bin",
-      "blockdata_filepath": "data/layouts/EternaCity_CycleShop/map.bin"
     }
   ]
 }
