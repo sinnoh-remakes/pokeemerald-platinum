@@ -113,13 +113,13 @@
     "SandgemTown_Mart"
   ],
   "gMapGroup_IndoorJubilife": [
+    "JubilifeCity_TrainerSchool",
     "JubilifeCity_TowerA_1F",
     "JubilifeCity_TowerA_2F",
     "JubilifeCity_TowerB_1F",
     "JubilifeCity_TowerB_2F",
     "JubilifeCity_TowerC_1F",
     "JubilifeCity_TowerC_2F",
-    "JubilifeCity_TrainerSchool",
     "JubilifeCity_PokemonCenter_1F",
     "JubilifeCity_PokemonCenter_2F",
     "JubilifeCity_Mart"
@@ -147,15 +147,16 @@
     "FloaromaTown_Mart"
   ],
   "gMapGroup_IndoorEterna": [
+    "EternaCity_CycleShop",
     "EternaCity_TowerA_1F",
     "EternaCity_TowerA_2F",
     "EternaCity_TowerA_3F",
     "EternaCity_HouseA",
     "EternaCity_HouseB",
-    "EternaCity_Gym",
     "EternaCity_PokemonCenter_1F",
     "EternaCity_PokemonCenter_2F",
-    "EternaCity_Mart"
+    "EternaCity_Mart",
+    "EternaCity_Gym"
   ],
   "gMapGroup_IndoorMiscellaneous": [
     "FloaromaMeadow_House",
