@@ -10,7 +10,6 @@ const u32 gObjectEventPic_DawnBike[] = INCBIN_U32("graphics/object_events/pics/p
 const u32 gObjectEventPic_DawnWatering[] = INCBIN_U32("graphics/object_events/pics/people/dawn/watering.4bpp");
 const u32 gObjectEventPic_DawnFishing[] = INCBIN_U32("graphics/object_events/pics/people/dawn/fishing.4bpp");
 const u16 gObjectEventPal_Dawn[] = INCBIN_U16("graphics/object_events/palettes/dawn.gbapal");
-const u16 gObjectEventPal_DawnFishing[] = INCBIN_U16("graphics/object_events/palettes/dawn_fishing.gbapal");
 const u16 gObjectEventPal_AaronPt[] = INCBIN_U16("graphics/object_events/palettes/aaron_pt.gbapal");
 const u32 gObjectEventPic_AaronPt[] = INCBIN_U32("graphics/object_events/pics/people/aaron_pt.4bpp");
 const u16 gObjectEventPal_AceTrainerColdFPt[] = INCBIN_U16("graphics/object_events/palettes/ace_trainer_cold_f_pt.gbapal");
