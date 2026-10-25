@@ -21,10 +21,6 @@
       "name": "FLOAROMA TOWN"
     },
     {
-      "id": "MAPSEC_CYCLING_ROAD",
-      "name": "CYCLING ROAD"
-    },
-    {
       "id": "MAPSEC_ETERNA_CITY",
       "name": "ETERNA CITY"
     },
@@ -63,6 +59,10 @@
     {
       "id": "MAPSEC_ROUTE_219",
       "name": "ROUTE 219"
+    },
+    {
+      "id": "MAPSEC_CYCLING_ROAD",
+      "name": "CYCLING ROAD"
     },
     {
       "id": "MAPSEC_OREBURGH_GATE",
