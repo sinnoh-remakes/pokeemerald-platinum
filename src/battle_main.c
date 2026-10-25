@@ -78,6 +78,9 @@
 #include "cable_club.h"
 #include "test/test_runner_battle.h"
 
+// Remove this preprocessor if you want to show party merging animation before partner battles
+#define DONT_SHOW_MULTIBATTLE_PARTY_MENU
+
 extern const struct BgTemplate gBattleBgTemplates[];
 extern const struct WindowTemplate *const gBattleWindowTemplates[];
 
@@ -1398,7 +1401,9 @@ static void CB2_PreInitMultiBattle(void)
             *savedCallback = gMain.savedCallback;
             *savedBattleTypeFlags = gBattleTypeFlags;
             gMain.savedCallback = CB2_PreInitMultiBattle;
+            #ifndef DONT_SHOW_MULTIBATTLE_PARTY_MENU
             ShowPartyMenuToShowcaseMultiBattleParty();
+            #endif
         }
         break;
     case 2:
@@ -1454,8 +1459,10 @@ static void CB2_PreInitIngamePlayerPartnerBattle(void)
         *savedCallback = gMain.savedCallback;
         *savedBattleTypeFlags = gBattleTypeFlags;
         gMain.savedCallback = CB2_PreInitIngamePlayerPartnerBattle;
+        #ifndef DONT_SHOW_MULTIBATTLE_PARTY_MENU
         if (!PlayerHasFollowerNPC() || !FollowerNPCIsBattlePartner() || (FNPC_NPC_FOLLOWER_PARTY_PREVIEW && FollowerNPCIsBattlePartner()))
             ShowPartyMenuToShowcaseMultiBattleParty();
+        #endif
 
         break;
     case 1:
