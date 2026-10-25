@@ -83,7 +83,9 @@
     "LakefrontVerity"
   ],
   "gMapGroup_Gates": [
-    "Gate_Jubilife"
+    "Gate_Jubilife",
+    "Gate_Cycling_North",
+    "Gate_Cycling_South"
   ],
   "gMapGroup_Miscellaneous": [
     "ValleyWindworks",

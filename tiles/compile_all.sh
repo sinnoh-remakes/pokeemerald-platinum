@@ -41,6 +41,9 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_living ./
 echo "Compiling [secondary] sandgem_helper"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_helper ./tiles/sandgem_helper ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 
+echo "Compiling [secondary] gatehouse"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/gatehouse ./tiles/gatehouse ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+
 echo "Compiling [PRIMARY] indoor_twinleaf_rival"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf_rival ./tiles/indoor_twinleaf_rival ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_rival"
