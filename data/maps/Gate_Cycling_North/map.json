@@ -61,21 +61,21 @@
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_SOUTH",
-      "dest_warp_id": "4"
+      "dest_warp_id": "5"
     },
     {
       "x": 4,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_SOUTH",
-      "dest_warp_id": "4"
+      "dest_warp_id": "5"
     },
     {
       "x": 5,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_SOUTH",
-      "dest_warp_id": "4"
+      "dest_warp_id": "5"
     },
     {
       "x": 3,
