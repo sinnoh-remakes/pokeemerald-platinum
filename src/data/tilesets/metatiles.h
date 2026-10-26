@@ -396,3 +396,6 @@ const u16 gMetatileAttributes_IndoorCycleShop[] = INCBIN_U16("data/tilesets/prim
 
 const u16 gMetatiles_CycleShop[] = INCBIN_U16("data/tilesets/secondary/cycle_shop/metatiles.bin");
 const u16 gMetatileAttributes_CycleShop[] = INCBIN_U16("data/tilesets/secondary/cycle_shop/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorGalacticEterna[] = INCBIN_U16("data/tilesets/primary/indoor_galactic_eterna/metatiles.bin");
+const u16 gMetatileAttributes_IndoorGalacticEterna[] = INCBIN_U16("data/tilesets/primary/indoor_galactic_eterna/metatile_attributes.bin");

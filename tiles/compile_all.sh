@@ -132,7 +132,5 @@ porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets
 # echo "Compiling [secondary] route_211_west"
 # porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_211_west ./tiles/route_211_west ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
 
-echo "Compiling [PRIMARY] indoor_cycle_shop"
-porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_cycle_shop ./tiles/indoor_cycle_shop ./include/constants/metatile_behaviors.h
-echo "Compiling [secondary] cycle_shop"
-porytiles compile-secondary -Wall -o ./data/tilesets/secondary/cycle_shop ./tiles/cycle_shop ./tiles/indoor_cycle_shop ./include/constants/metatile_behaviors.h
+echo "Compiling [PRIMARY] indoor_galactic_eterna"
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_galactic_eterna ./tiles/indoor_galactic_eterna ./include/constants/metatile_behaviors.h

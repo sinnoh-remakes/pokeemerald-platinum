@@ -1274,3 +1274,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/honey_tree.inc"
+
+	.include "data/maps/EternaCity_Galactic_1F/scripts.inc"

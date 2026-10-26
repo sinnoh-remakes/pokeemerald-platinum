@@ -5010,6 +5010,16 @@
       "secondary_tileset": "gTileset_SunyshoreHouse",
       "border_filepath": "data/layouts/SunyshoreCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GALACTIC_1F",
+      "name": "EternaCity_Galactic_1F_Layout",
+      "width": 22,
+      "height": 13,
+      "primary_tileset": "gTileset_IndoorGalacticEterna",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/EternaCity_Galactic_1F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Galactic_1F/map.bin"
     }
   ]
 }
