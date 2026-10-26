@@ -1253,8 +1253,8 @@ static void Task_WateringBerryTreeAnim_Start(u8 taskId)
         || ObjectEventClearHeldMovementIfFinished(playerObjEvent))
     {
         // Start watering
-        SetPlayerAvatarWatering(GetPlayerFacingDirection());
-        ObjectEventSetHeldMovement(playerObjEvent, GetWalkInPlaceNormalMovementAction(GetPlayerFacingDirection()));
+        SetPlayerAvatarWatering();
+        ObjectEventSetHeldMovement(playerObjEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
         gTasks[taskId].func = Task_WateringBerryTreeAnim_Continue;
     }
 }
@@ -1267,9 +1267,9 @@ static void Task_WateringBerryTreeAnim_Continue(u8 taskId)
     {
         s16 value = gTasks[taskId].data[1]++;
 
-        // Continue holding watering action 10 times, then end
-        if (value < 10)
-            ObjectEventSetHeldMovement(playerObjEvent, GetWalkInPlaceNormalMovementAction(GetPlayerFacingDirection()));
+        // Continue holding watering action 18 times, then end
+        if (value < 18)
+            ObjectEventSetHeldMovement(playerObjEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
         else
             gTasks[taskId].func = Task_WateringBerryTreeAnim_End;
     }
