@@ -1534,3 +1534,14 @@ const struct Tileset gTileset_IndoorGalacticEterna =
     .metatileAttributes = gMetatileAttributes_IndoorGalacticEterna,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GalacticEternaIndoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GalacticEternaIndoor,
+    .palettes = gTilesetPalettes_GalacticEternaIndoor,
+    .metatiles = gMetatiles_GalacticEternaIndoor,
+    .metatileAttributes = gMetatileAttributes_GalacticEternaIndoor,
+    .callback = NULL,
+};

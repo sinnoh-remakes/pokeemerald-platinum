@@ -2850,3 +2850,22 @@ const u16 gTilesetPalettes_IndoorGalacticEterna[][16] =
 };
 
 const u32 gTilesetTiles_IndoorGalacticEterna[] = INCBIN_U32("data/tilesets/primary/indoor_galactic_eterna/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_GalacticEternaIndoor[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_GalacticEternaIndoor[] = INCBIN_U32("data/tilesets/secondary/galactic_eterna_indoor/tiles.4bpp.lz");

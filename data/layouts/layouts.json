@@ -5017,7 +5017,7 @@
       "width": 22,
       "height": 13,
       "primary_tileset": "gTileset_IndoorGalacticEterna",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_GalacticEternaIndoor",
       "border_filepath": "data/layouts/EternaCity_Galactic_1F/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity_Galactic_1F/map.bin"
     }
