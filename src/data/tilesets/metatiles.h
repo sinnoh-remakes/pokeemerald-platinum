@@ -390,3 +390,9 @@ const u16 gMetatileAttributes_GymEterna[] = INCBIN_U16("data/tilesets/primary/gy
 
 const u16 gMetatiles_EternaGym[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/metatiles.bin");
 const u16 gMetatileAttributes_EternaGym[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorCycleShop[] = INCBIN_U16("data/tilesets/primary/indoor_cycle_shop/metatiles.bin");
+const u16 gMetatileAttributes_IndoorCycleShop[] = INCBIN_U16("data/tilesets/primary/indoor_cycle_shop/metatile_attributes.bin");
+
+const u16 gMetatiles_CycleShop[] = INCBIN_U16("data/tilesets/secondary/cycle_shop/metatiles.bin");
+const u16 gMetatileAttributes_CycleShop[] = INCBIN_U16("data/tilesets/secondary/cycle_shop/metatile_attributes.bin");

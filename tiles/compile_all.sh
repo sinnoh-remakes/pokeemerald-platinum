@@ -41,6 +41,9 @@ porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_living ./
 echo "Compiling [secondary] sandgem_helper"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/sandgem_helper ./tiles/sandgem_helper ./tiles/indoor_twinleaf ./include/constants/metatile_behaviors.h
 
+echo "Compiling [secondary] gatehouse"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/gatehouse ./tiles/gatehouse ./tiles/indoor_center ./include/constants/metatile_behaviors.h
+
 echo "Compiling [PRIMARY] indoor_twinleaf_rival"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_twinleaf_rival ./tiles/indoor_twinleaf_rival ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] twinleaf_rival"
@@ -128,3 +131,8 @@ porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets
 # SKIP route_211_west, as it uses custom tile indices to align with map connection
 # echo "Compiling [secondary] route_211_west"
 # porytiles compile-secondary -tiles-primary-override=384 -Wall -o ./data/tilesets/secondary/route_211_west ./tiles/route_211_west ./tiles/outdoor_eterna ./include/constants/metatile_behaviors.h
+
+echo "Compiling [PRIMARY] indoor_cycle_shop"
+porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_cycle_shop ./tiles/indoor_cycle_shop ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] cycle_shop"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/cycle_shop ./tiles/cycle_shop ./tiles/indoor_cycle_shop ./include/constants/metatile_behaviors.h
