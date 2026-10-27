@@ -5005,11 +5005,21 @@
       "id": "LAYOUT_ETERNA_CITY_GALACTIC_2F",
       "name": "EternaCity_Galactic_2F_Layout",
       "width": 22,
-      "height": 13,
+      "height": 12,
       "primary_tileset": "gTileset_IndoorGalacticEterna",
       "secondary_tileset": "gTileset_GalacticEternaIndoor",
       "border_filepath": "data/layouts/EternaCity_Galactic_2F/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity_Galactic_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GALACTIC_3F",
+      "name": "EternaCity_Galactic_3F_Layout",
+      "width": 22,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorGalacticEterna",
+      "secondary_tileset": "gTileset_GalacticEternaIndoor",
+      "border_filepath": "data/layouts/EternaCity_Galactic_3F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Galactic_3F/map.bin"
     },
     {
       "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",
