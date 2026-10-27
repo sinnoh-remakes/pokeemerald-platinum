@@ -661,6 +661,8 @@ gStdScripts_End::
 	.include "data/maps/FloaromaTown_Mart/scripts.inc"
 	.include "data/maps/FloaromaMeadow_House/scripts.inc"
 	.include "data/maps/EternaCity_CycleShop/scripts.inc"
+	.include "data/maps/EternaCity_Galactic_1F/scripts.inc"
+	.include "data/maps/EternaCity_Galactic_2F/scripts.inc"
 	.include "data/maps/EternaCity_TowerA_1F/scripts.inc"
 	.include "data/maps/EternaCity_TowerA_2F/scripts.inc"
 	.include "data/maps/EternaCity_TowerA_3F/scripts.inc"
@@ -1275,4 +1277,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/honey_tree.inc"
 
-	.include "data/maps/EternaCity_Galactic_1F/scripts.inc"
