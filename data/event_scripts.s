@@ -664,6 +664,7 @@ gStdScripts_End::
 	.include "data/maps/EternaCity_Galactic_1F/scripts.inc"
 	.include "data/maps/EternaCity_Galactic_2F/scripts.inc"
 	.include "data/maps/EternaCity_Galactic_3F/scripts.inc"
+	.include "data/maps/EternaCity_Galactic_4F/scripts.inc"
 	.include "data/maps/EternaCity_TowerA_1F/scripts.inc"
 	.include "data/maps/EternaCity_TowerA_2F/scripts.inc"
 	.include "data/maps/EternaCity_TowerA_3F/scripts.inc"

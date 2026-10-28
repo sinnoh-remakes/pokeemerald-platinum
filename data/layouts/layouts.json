@@ -5022,6 +5022,16 @@
       "blockdata_filepath": "data/layouts/EternaCity_Galactic_3F/map.bin"
     },
     {
+      "id": "LAYOUT_ETERNA_CITY_GALACTIC_4F",
+      "name": "EternaCity_Galactic_4F_Layout",
+      "width": 22,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorGalacticSpace",
+      "secondary_tileset": "gTileset_GalacticSpaceIndoor",
+      "border_filepath": "data/layouts/EternaCity_Galactic_4F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Galactic_4F/map.bin"
+    },
+    {
       "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",
       "name": "ValleyWindworksIndoor_Layout",
       "width": 22,
