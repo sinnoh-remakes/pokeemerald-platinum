@@ -136,3 +136,12 @@ echo "Compiling [PRIMARY] indoor_cycle_shop"
 porytiles compile-primary -Wall -o ./data/tilesets/primary/indoor_cycle_shop ./tiles/indoor_cycle_shop ./include/constants/metatile_behaviors.h
 echo "Compiling [secondary] cycle_shop"
 porytiles compile-secondary -Wall -o ./data/tilesets/secondary/cycle_shop ./tiles/cycle_shop ./tiles/indoor_cycle_shop ./include/constants/metatile_behaviors.h
+
+echo "Compiling [PRIMARY] indoor_galactic_eterna"
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_galactic_eterna ./tiles/indoor_galactic_eterna ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] galactic_eterna_indoor"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/galactic_eterna_indoor ./tiles/galactic_eterna_indoor ./tiles/indoor_galactic_eterna ./include/constants/metatile_behaviors.h
+echo "Compiling [PRIMARY] indoor_galactic_space"
+porytiles compile-primary -tiles-primary-override=384 -Wall -o ./data/tilesets/primary/indoor_galactic_space ./tiles/indoor_galactic_space ./include/constants/metatile_behaviors.h
+echo "Compiling [secondary] galactic_space_indoor"
+porytiles compile-secondary -Wall -o ./data/tilesets/secondary/galactic_space_indoor ./tiles/galactic_space_indoor ./tiles/indoor_galactic_space ./include/constants/metatile_behaviors.h

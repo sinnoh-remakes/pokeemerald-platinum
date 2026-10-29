@@ -1523,3 +1523,47 @@ const struct Tileset gTileset_CycleShop =
     .metatileAttributes = gMetatileAttributes_CycleShop,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_IndoorGalacticEterna =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorGalacticEterna,
+    .palettes = gTilesetPalettes_IndoorGalacticEterna,
+    .metatiles = gMetatiles_IndoorGalacticEterna,
+    .metatileAttributes = gMetatileAttributes_IndoorGalacticEterna,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GalacticEternaIndoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GalacticEternaIndoor,
+    .palettes = gTilesetPalettes_GalacticEternaIndoor,
+    .metatiles = gMetatiles_GalacticEternaIndoor,
+    .metatileAttributes = gMetatileAttributes_GalacticEternaIndoor,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_IndoorGalacticSpace =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorGalacticSpace,
+    .palettes = gTilesetPalettes_IndoorGalacticSpace,
+    .metatiles = gMetatiles_IndoorGalacticSpace,
+    .metatileAttributes = gMetatileAttributes_IndoorGalacticSpace,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GalacticSpaceIndoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GalacticSpaceIndoor,
+    .palettes = gTilesetPalettes_GalacticSpaceIndoor,
+    .metatiles = gMetatiles_GalacticSpaceIndoor,
+    .metatileAttributes = gMetatileAttributes_GalacticSpaceIndoor,
+    .callback = NULL,
+};
