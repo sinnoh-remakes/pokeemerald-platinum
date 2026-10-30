@@ -792,6 +792,12 @@ $(OBJEVENTGFXDIR)/misc/cuttable_tree_pt.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/pushable_boulder_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 
+$(OBJEVENTGFXDIR)/misc/bike_rack_pt.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
+
+$(OBJEVENTGFXDIR)/misc/bike_display_pt.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 6 -mheight 6
+
 $(OBJEVENTGFXDIR)/misc/wind_turbine_base.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 6 -mheight 6
 
