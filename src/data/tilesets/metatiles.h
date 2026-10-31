@@ -408,3 +408,6 @@ const u16 gMetatileAttributes_IndoorGalacticSpace[] = INCBIN_U16("data/tilesets/
 
 const u16 gMetatiles_GalacticSpaceIndoor[] = INCBIN_U16("data/tilesets/secondary/galactic_space_indoor/metatiles.bin");
 const u16 gMetatileAttributes_GalacticSpaceIndoor[] = INCBIN_U16("data/tilesets/secondary/galactic_space_indoor/metatile_attributes.bin");
+
+const u16 gMetatiles_OutdoorRoute206[] = INCBIN_U16("data/tilesets/primary/outdoor_route_206/metatiles.bin");
+const u16 gMetatileAttributes_OutdoorRoute206[] = INCBIN_U16("data/tilesets/primary/outdoor_route_206/metatile_attributes.bin");
