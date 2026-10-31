@@ -2278,3 +2278,14 @@ const struct Tileset gTileset_GalacticSpaceIndoor =
     .metatileAttributes = gMetatileAttributes_GalacticSpaceIndoor,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OutdoorRoute206 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_OutdoorRoute206,
+    .palettes = gTilesetPalettes_OutdoorRoute206,
+    .metatiles = gMetatiles_OutdoorRoute206,
+    .metatileAttributes = gMetatileAttributes_OutdoorRoute206,
+    .callback = NULL,
+};
