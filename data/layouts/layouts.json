@@ -9515,6 +9515,16 @@
       "blockdata_filepath": "data/layouts/Route205South2/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE_206",
+      "name": "Route206_Layout",
+      "width": 25,
+      "height": 25,
+      "primary_tileset": "gTileset_OutdoorRoute206",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route206/border.bin",
+      "blockdata_filepath": "data/layouts/Route206/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE207",
       "name": "Route207_Layout",
       "width": 28,
