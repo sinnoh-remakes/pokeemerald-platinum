@@ -33,6 +33,7 @@ OreburghCityNorth_EventScript_RivalLeaving::
 	playbgm MUS_DP_RIVAL, FALSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
+	msgbox OreburghCityNorth_Text_Thud, MSGBOX_DEFAULT
 	msgbox OreburghCityNorth_Text_RivalLeaving, MSGBOX_DEFAULT
 	applymovement LOCALID_RIVAL_EVENT, Common_Movement_WalkInPlaceRight
 	waitmovement 0
@@ -390,8 +391,11 @@ OreburghCityNorth_Text_SomeoneThere:
 	.string "Huh?\n"
 	.string "There’s someone there.$"
 
+OreburghCityNorth_Text_Thud:
+	.string "{FONT_BIG}"
+	.string "THUD!$"
+
 OreburghCityNorth_Text_RivalLeaving:
-    .string "Thud!\p"
 	.string "{RIVAL}: Whoops! {PLAYER}!\n"
 	.string "You got the Gym Badge, huh?\p"
 	.string "Eterna City is the next place with\n"
