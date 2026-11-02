@@ -610,16 +610,22 @@ static void AlignFishingAnimationFrames(void)
             animCmdIndex--;
     }
     animType = playerSprite->anims[playerSprite->animNum][animCmdIndex].type;
-    if (animType == 1 || animType == 2 || animType == 3)
-    {
-        playerSprite->x2 = 8;
-        if (GetPlayerFacingDirection() == 3)
-            playerSprite->x2 = -8;
-    }
+    if (animType == 2 || animType == 3)
+        playerSprite->y2 = 7;
     if (animType == 5)
-        playerSprite->y2 = -8;
+        playerSprite->y2 = 0;
     if (animType == 10 || animType == 11)
-        playerSprite->y2 = 8;
+    {
+        if (GetPlayerFacingDirection() == 3)
+        {
+            playerSprite->x2 = -6;
+        }
+        else
+        {
+            playerSprite->x2 = 6;
+
+        }
+    }
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
         SetSurfBlob_PlayerOffset(gObjectEvents[gPlayerAvatar.objectEventId].fieldEffectSpriteId, TRUE, playerSprite->y2);
 }

@@ -1501,3 +1501,69 @@ const struct Tileset gTileset_EternaGym =
     .metatileAttributes = gMetatileAttributes_EternaGym,
     .callback = InitTilesetAnim_EternaGym,
 };
+
+const struct Tileset gTileset_IndoorCycleShop =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorCycleShop,
+    .palettes = gTilesetPalettes_IndoorCycleShop,
+    .metatiles = gMetatiles_IndoorCycleShop,
+    .metatileAttributes = gMetatileAttributes_IndoorCycleShop,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_CycleShop =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CycleShop,
+    .palettes = gTilesetPalettes_CycleShop,
+    .metatiles = gMetatiles_CycleShop,
+    .metatileAttributes = gMetatileAttributes_CycleShop,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_IndoorGalacticEterna =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorGalacticEterna,
+    .palettes = gTilesetPalettes_IndoorGalacticEterna,
+    .metatiles = gMetatiles_IndoorGalacticEterna,
+    .metatileAttributes = gMetatileAttributes_IndoorGalacticEterna,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GalacticEternaIndoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GalacticEternaIndoor,
+    .palettes = gTilesetPalettes_GalacticEternaIndoor,
+    .metatiles = gMetatiles_GalacticEternaIndoor,
+    .metatileAttributes = gMetatileAttributes_GalacticEternaIndoor,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_IndoorGalacticSpace =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorGalacticSpace,
+    .palettes = gTilesetPalettes_IndoorGalacticSpace,
+    .metatiles = gMetatiles_IndoorGalacticSpace,
+    .metatileAttributes = gMetatileAttributes_IndoorGalacticSpace,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GalacticSpaceIndoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GalacticSpaceIndoor,
+    .palettes = gTilesetPalettes_GalacticSpaceIndoor,
+    .metatiles = gMetatiles_GalacticSpaceIndoor,
+    .metatileAttributes = gMetatileAttributes_GalacticSpaceIndoor,
+    .callback = NULL,
+};

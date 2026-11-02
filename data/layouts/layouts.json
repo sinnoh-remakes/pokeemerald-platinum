@@ -4515,7 +4515,7 @@
       "id": "LAYOUT_ETERNA_CITY_SOUTH",
       "name": "EternaCitySouth_Layout",
       "width": 60,
-      "height": 32,
+      "height": 37,
       "primary_tileset": "gTileset_OutdoorEterna",
       "secondary_tileset": "gTileset_EternaSouth",
       "border_filepath": "data/layouts/EternaCitySouth/border.bin",
@@ -4702,14 +4702,34 @@
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
     {
-      "id": "LAYOUT_GATE_PT",
-      "name": "Gate_Pt_Layout",
+      "id": "LAYOUT_GATE_HORIZONTAL",
+      "name": "Gate_Horizontal_Layout",
       "width": 16,
       "height": 11,
       "primary_tileset": "gTileset_IndoorTwinleaf",
       "secondary_tileset": "gTileset_Gatehouse",
-      "border_filepath": "data/layouts/Gate_Pt/border.bin",
-      "blockdata_filepath": "data/layouts/Gate_Pt/map.bin"
+      "border_filepath": "data/layouts/Gate_Horizontal/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Horizontal/map.bin"
+    },
+    {
+      "id": "LAYOUT_GATE_CYCLING_NORTH",
+      "name": "Gate_Cycling_North_Layout",
+      "width": 9,
+      "height": 14,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/Gate_Cycling_North/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Cycling_North/map.bin"
+    },
+    {
+      "id": "LAYOUT_GATE_CYCLING_SOUTH",
+      "name": "Gate_Cycling_South_Layout",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_IndoorTwinleaf",
+      "secondary_tileset": "gTileset_Gatehouse",
+      "border_filepath": "data/layouts/Gate_Cycling_South/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Cycling_South/map.bin"
     },
     {
       "id": "LAYOUT_VALLEY_WINDWORKS",
@@ -4960,6 +4980,56 @@
       "secondary_tileset": "gTileset_EternaGym",
       "border_filepath": "data/layouts/EternaCity_Gym_5/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity_Gym_5/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_CYCLE_SHOP",
+      "name": "EternaCity_CycleShop_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorCycleShop",
+      "secondary_tileset": "gTileset_CycleShop",
+      "border_filepath": "data/layouts/EternaCity_CycleShop/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_CycleShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GALACTIC_1F",
+      "name": "EternaCity_Galactic_1F_Layout",
+      "width": 22,
+      "height": 13,
+      "primary_tileset": "gTileset_IndoorGalacticEterna",
+      "secondary_tileset": "gTileset_GalacticEternaIndoor",
+      "border_filepath": "data/layouts/EternaCity_Galactic_1F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Galactic_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GALACTIC_2F",
+      "name": "EternaCity_Galactic_2F_Layout",
+      "width": 22,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorGalacticEterna",
+      "secondary_tileset": "gTileset_GalacticEternaIndoor",
+      "border_filepath": "data/layouts/EternaCity_Galactic_2F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Galactic_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GALACTIC_3F",
+      "name": "EternaCity_Galactic_3F_Layout",
+      "width": 22,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorGalacticEterna",
+      "secondary_tileset": "gTileset_GalacticEternaIndoor",
+      "border_filepath": "data/layouts/EternaCity_Galactic_3F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Galactic_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY_GALACTIC_4F",
+      "name": "EternaCity_Galactic_4F_Layout",
+      "width": 22,
+      "height": 12,
+      "primary_tileset": "gTileset_IndoorGalacticSpace",
+      "secondary_tileset": "gTileset_GalacticSpaceIndoor",
+      "border_filepath": "data/layouts/EternaCity_Galactic_4F/border.bin",
+      "blockdata_filepath": "data/layouts/EternaCity_Galactic_4F/map.bin"
     },
     {
       "id": "LAYOUT_VALLEY_WINDWORKS_INDOOR",

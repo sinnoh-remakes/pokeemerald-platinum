@@ -1,7 +1,13 @@
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFishing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFishing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AaronPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerColdFPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerColdMPt;
@@ -120,6 +126,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BriefcasePt
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRockPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableTreePt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PushableBoulderPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BikeRackPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BikeDisplayPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBase;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WindTurbineBlades2;
@@ -625,25 +633,25 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
     [OBJ_EVENT_GFX_LUCAS_NORMAL] =             &gObjectEventGraphicsInfo_LucasNormal,
-    [OBJ_EVENT_GFX_LUCAS_BIKE] =               &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_BIKE] =               &gObjectEventGraphicsInfo_LucasBike,
     [OBJ_EVENT_GFX_LUCAS_FIELD_MOVE] =         &gObjectEventGraphicsInfo_LucasFieldMove,
-    [OBJ_EVENT_GFX_LUCAS_FISHING] =            &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_FISHING] =            &gObjectEventGraphicsInfo_LucasFishing,
     [OBJ_EVENT_GFX_LUCAS_HEAL] =               &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_LUCAS_POKETCH] =            &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_LUCAS_SAVE] =               &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_LUCAS_SURF] =               &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_LUCAS_SEEKER] =             &gObjectEventGraphicsInfo_LucasNormal,
-    [OBJ_EVENT_GFX_LUCAS_WATERING] =           &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_WATERING] =           &gObjectEventGraphicsInfo_LucasWatering,
     [OBJ_EVENT_GFX_DAWN_NORMAL] =              &gObjectEventGraphicsInfo_DawnNormal,
-    [OBJ_EVENT_GFX_DAWN_BIKE] =                &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_BIKE] =                &gObjectEventGraphicsInfo_DawnBike,
     [OBJ_EVENT_GFX_DAWN_FIELD_MOVE] =          &gObjectEventGraphicsInfo_DawnFieldMove,
-    [OBJ_EVENT_GFX_DAWN_FISHING] =             &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_FISHING] =             &gObjectEventGraphicsInfo_DawnFishing,
     [OBJ_EVENT_GFX_DAWN_HEAL] =                &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_POKETCH] =             &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_SAVE] =                &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_SURF] =                &gObjectEventGraphicsInfo_DawnNormal,
     [OBJ_EVENT_GFX_DAWN_SEEKER] =              &gObjectEventGraphicsInfo_DawnNormal,
-    [OBJ_EVENT_GFX_DAWN_WATERING] =            &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_WATERING] =            &gObjectEventGraphicsInfo_DawnWatering,
     [OBJ_EVENT_GFX_AARON_PT] =                 &gObjectEventGraphicsInfo_AaronPt,
     [OBJ_EVENT_GFX_ACE_TRAINER_COLD_F_PT] =    &gObjectEventGraphicsInfo_AceTrainerColdFPt,
     [OBJ_EVENT_GFX_ACE_TRAINER_COLD_M_PT] =    &gObjectEventGraphicsInfo_AceTrainerColdMPt,
@@ -761,6 +769,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BREAKABLE_ROCK_PT] =        &gObjectEventGraphicsInfo_BreakableRockPt,
     [OBJ_EVENT_GFX_CUTTABLE_TREE_PT] =         &gObjectEventGraphicsInfo_CuttableTreePt,
     [OBJ_EVENT_GFX_PUSHABLE_BOULDER_PT] =      &gObjectEventGraphicsInfo_PushableBoulderPt,
+    [OBJ_EVENT_GFX_BIKE_RACK_PT] =             &gObjectEventGraphicsInfo_BikeRackPt,
+    [OBJ_EVENT_GFX_BIKE_DISPLAY_PT] =          &gObjectEventGraphicsInfo_BikeDisplayPt,
     [OBJ_EVENT_GFX_WIND_TURBINE_BASE] =        &gObjectEventGraphicsInfo_WindTurbineBase,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_1] =    &gObjectEventGraphicsInfo_WindTurbineBlades1,
     [OBJ_EVENT_GFX_WIND_TURBINE_BLADES_2] =    &gObjectEventGraphicsInfo_WindTurbineBlades2,

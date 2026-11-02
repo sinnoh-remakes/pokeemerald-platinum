@@ -390,3 +390,21 @@ const u16 gMetatileAttributes_GymEterna[] = INCBIN_U16("data/tilesets/primary/gy
 
 const u16 gMetatiles_EternaGym[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/metatiles.bin");
 const u16 gMetatileAttributes_EternaGym[] = INCBIN_U16("data/tilesets/secondary/eterna_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorCycleShop[] = INCBIN_U16("data/tilesets/primary/indoor_cycle_shop/metatiles.bin");
+const u16 gMetatileAttributes_IndoorCycleShop[] = INCBIN_U16("data/tilesets/primary/indoor_cycle_shop/metatile_attributes.bin");
+
+const u16 gMetatiles_CycleShop[] = INCBIN_U16("data/tilesets/secondary/cycle_shop/metatiles.bin");
+const u16 gMetatileAttributes_CycleShop[] = INCBIN_U16("data/tilesets/secondary/cycle_shop/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorGalacticEterna[] = INCBIN_U16("data/tilesets/primary/indoor_galactic_eterna/metatiles.bin");
+const u16 gMetatileAttributes_IndoorGalacticEterna[] = INCBIN_U16("data/tilesets/primary/indoor_galactic_eterna/metatile_attributes.bin");
+
+const u16 gMetatiles_GalacticEternaIndoor[] = INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/metatiles.bin");
+const u16 gMetatileAttributes_GalacticEternaIndoor[] = INCBIN_U16("data/tilesets/secondary/galactic_eterna_indoor/metatile_attributes.bin");
+
+const u16 gMetatiles_IndoorGalacticSpace[] = INCBIN_U16("data/tilesets/primary/indoor_galactic_space/metatiles.bin");
+const u16 gMetatileAttributes_IndoorGalacticSpace[] = INCBIN_U16("data/tilesets/primary/indoor_galactic_space/metatile_attributes.bin");
+
+const u16 gMetatiles_GalacticSpaceIndoor[] = INCBIN_U16("data/tilesets/secondary/galactic_space_indoor/metatiles.bin");
+const u16 gMetatileAttributes_GalacticSpaceIndoor[] = INCBIN_U16("data/tilesets/secondary/galactic_space_indoor/metatile_attributes.bin");
