@@ -58,13 +58,15 @@
 // number of item slots that could fit in a single pocket, + 1 for Cancel.
 // This constant picks the max of the existing pocket sizes.
 // By default, the largest pocket is BAG_TMHM_COUNT at 100.
+// Pt Bag Order: Items, Meds, Balls, TM&HM's, Berries, Mail, Battle Items, Key Items
 #define MAX_POCKET_ITEMS  ((max(BAG_TMHM_COUNT,              \
                             max(BAG_BERRIES_COUNT,           \
                             max(BAG_ITEMS_COUNT,             \
                             max(BAG_KEYITEMS_COUNT,          \
                             max(BAG_BATTLE_ITEMS_COUNT,      \
                             max(BAG_MEDICINE_COUNT,          \
-                                BAG_POKEBALLS_COUNT))))))) + 1)
+                            max(BAG_MAIL_COUNT,              \
+                                BAG_POKEBALLS_COUNT)))))))) + 1)
 
 // Up to 8 item slots can be visible at a time
 #define MAX_ITEMS_SHOWN 8
@@ -325,16 +327,6 @@ static const u8 sContextMenuItems_MedicinePocket[] = {
     ACTION_TOSS,        ACTION_CANCEL
 };
 
-static const u8 sContextMenuItems_BattleItemsPocket[] = {
-    ACTION_USE,         ACTION_GIVE,
-    ACTION_TOSS,        ACTION_CANCEL
-};
-
-static const u8 sContextMenuItems_KeyItemsPocket[] = {
-    ACTION_USE,         ACTION_REGISTER,
-    ACTION_DUMMY,       ACTION_CANCEL
-};
-
 static const u8 sContextMenuItems_BallsPocket[] = {
     ACTION_GIVE,        ACTION_DUMMY,
     ACTION_TOSS,        ACTION_CANCEL
@@ -349,6 +341,21 @@ static const u8 sContextMenuItems_BerriesPocket[] = {
     ACTION_CHECK_TAG,   ACTION_DUMMY,
     ACTION_USE,         ACTION_GIVE,
     ACTION_TOSS,        ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_MailPocket[] = {
+    ACTION_USE,         ACTION_GIVE,
+    ACTION_TOSS,        ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_BattleItemsPocket[] = {
+    ACTION_USE,         ACTION_GIVE,
+    ACTION_TOSS,        ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_KeyItemsPocket[] = {
+    ACTION_USE,         ACTION_REGISTER,
+    ACTION_DUMMY,       ACTION_CANCEL
 };
 
 static const u8 sContextMenuItems_BattleUse[] = {
@@ -1706,20 +1713,12 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
                 memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_ItemsPocket, sizeof(sContextMenuItems_ItemsPocket));
-                if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
+                // if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
                     gBagMenu->contextMenuItemsBuffer[0] = ACTION_CHECK;
                 break;
-            case POCKET_KEY_ITEMS:
-                gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
-                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_KeyItemsPocket);
-                memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_KeyItemsPocket, sizeof(sContextMenuItems_KeyItemsPocket));
-                if (gSaveBlock1Ptr->registeredItem == gSpecialVar_ItemId)
-                    gBagMenu->contextMenuItemsBuffer[1] = ACTION_DESELECT;
-                if (gSpecialVar_ItemId == ITEM_MACH_BIKE || gSpecialVar_ItemId == ITEM_ACRO_BIKE)
-                {
-                    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
-                        gBagMenu->contextMenuItemsBuffer[0] = ACTION_WALK;
-                }
+            case POCKET_MEDICINE:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_MedicinePocket;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_MedicinePocket);
                 break;
             case POCKET_POKE_BALLS:
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BallsPocket;
@@ -1733,13 +1732,28 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BerriesPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerriesPocket);
                 break;
-            case POCKET_MEDICINE:
-                gBagMenu->contextMenuItemsPtr = sContextMenuItems_MedicinePocket;
-                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_MedicinePocket);
+            case POCKET_MAIL:
+                gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
+                memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_ItemsPocket, sizeof(sContextMenuItems_ItemsPocket));
+                if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
+                    gBagMenu->contextMenuItemsBuffer[0] = ACTION_CHECK;
                 break;
             case POCKET_BATTLE_ITEMS:
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleItemsPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleItemsPocket);
+                break;
+            case POCKET_KEY_ITEMS:
+                gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_KeyItemsPocket);
+                memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_KeyItemsPocket, sizeof(sContextMenuItems_KeyItemsPocket));
+                if (gSaveBlock1Ptr->registeredItem == gSpecialVar_ItemId)
+                    gBagMenu->contextMenuItemsBuffer[1] = ACTION_DESELECT;
+                if (gSpecialVar_ItemId == ITEM_MACH_BIKE || gSpecialVar_ItemId == ITEM_ACRO_BIKE)
+                {
+                    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+                        gBagMenu->contextMenuItemsBuffer[0] = ACTION_WALK;
+                }
                 break;
             }
         }

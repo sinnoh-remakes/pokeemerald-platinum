@@ -102,12 +102,13 @@
 
 // Bag constants
 #define BAG_ITEMS_COUNT 40
-#define BAG_KEYITEMS_COUNT 30
+#define BAG_MEDICINE_COUNT 34
 #define BAG_POKEBALLS_COUNT 16
 #define BAG_TMHM_COUNT 100
 #define BAG_BERRIES_COUNT 46
-#define BAG_MEDICINE_COUNT 34
+#define BAG_MAIL_COUNT 12 // Is this the right number?
 #define BAG_BATTLE_ITEMS_COUNT 47
+#define BAG_KEYITEMS_COUNT 30
 
 // Number of facilities for Ranking Hall.
 // 7 facilities for single mode + tower double mode + tower multi mode.

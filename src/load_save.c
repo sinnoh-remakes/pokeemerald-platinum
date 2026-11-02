@@ -264,14 +264,6 @@ void LoadPlayerBag(void)
     for (i = 0; i < MAIL_COUNT; i++)
         gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
 
-    // // load player medicine.
-    // for (i = 0; i < BAG_MEDICINE_COUNT; i++)
-    //     gLoadedSaveData.medicine[i] = gSaveBlock1Ptr->medicine[i];
-    //
-    // // load player battle items.
-    // for (i = 0; i < BAG_BATTLE_ITEMS_COUNT; i++)
-    //     gLoadedSaveData.battleItems[i] = gSaveBlock1Ptr->battleitems[i];
-    //
     gLastEncryptionKey = gSaveBlock2Ptr->encryptionKey;
 }
 
@@ -287,14 +279,6 @@ void SavePlayerBag(void)
     for (i = 0; i < MAIL_COUNT; i++)
         gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
 
-    // // save player medicine.
-    // for (i = 0; i < BAG_MEDICINE_COUNT; i++)
-    //     gLoadedSaveData.medicine[i] = gSaveBlock1Ptr->medicine[i];
-    //
-    // // save player battle items.
-    // for (i = 0; i < BAG_BATTLE_ITEMS_COUNT; i++)
-    //     gLoadedSaveData.battleItems[i] = gSaveBlock1Ptr->battleitems[i];
-    //
     encryptionKeyBackup = gSaveBlock2Ptr->encryptionKey;
     gSaveBlock2Ptr->encryptionKey = gLastEncryptionKey;
     ApplyNewEncryptionKeyToBagItems(encryptionKeyBackup);

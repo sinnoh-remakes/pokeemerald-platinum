@@ -954,10 +954,13 @@ const u8 *const gStdStrings[] =
     [STDSTRING_SMART2] = gText_Smart2,
     [STDSTRING_TOUGH2] = gText_Tough2,
     [STDSTRING_ITEMS] = gText_Items,
-    [STDSTRING_KEYITEMS] = gText_Key_Items,
+    [STDSTRING_MEDICINE] = gText_Medicine,
     [STDSTRING_POKEBALLS] = gText_Poke_Balls,
     [STDSTRING_TMHMS] = gText_TMs_Hms,
     [STDSTRING_BERRIES] = gText_Berries2,
+    [STDSTRING_MAIL] = gText_Mail_Bag,
+    [STDSTRING_BATTLEITEMS] = gText_BattleItems,
+    [STDSTRING_KEYITEMS] = gText_Key_Items,
     [STDSTRING_SINGLE] = gText_Single2,
     [STDSTRING_DOUBLE] = gText_Double2,
     [STDSTRING_MULTI] = gText_Multi,
@@ -969,8 +972,6 @@ const u8 *const gStdStrings[] =
     [STDSTRING_BATTLE_ARENA] = gText_BattleArena,
     [STDSTRING_BATTLE_PIKE] = gText_BattlePike,
     [STDSTRING_BATTLE_PYRAMID] = gText_BattlePyramid,
-    [STDSTRING_MEDICINE] = gText_Medicine,
-    [STDSTRING_BATTLEITEMS] = gText_BattleItems,
 };
 
 static const u8 sLinkServicesMultichoiceIds[] =

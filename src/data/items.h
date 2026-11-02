@@ -3816,7 +3816,7 @@ const struct Item gItemsInfo[] =
             "A Zigzagoon-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3834,7 +3834,7 @@ const struct Item gItemsInfo[] =
             "A Wingull-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3852,7 +3852,7 @@ const struct Item gItemsInfo[] =
             "A Pikachu-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3870,7 +3870,7 @@ const struct Item gItemsInfo[] =
             "A Magnemite-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3888,7 +3888,7 @@ const struct Item gItemsInfo[] =
             "A Slakoth-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3906,7 +3906,7 @@ const struct Item gItemsInfo[] =
             "A Wailmer-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3921,7 +3921,7 @@ const struct Item gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Bead Mail"),
         .price = 50,
         .description = sBeadMailDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3939,7 +3939,7 @@ const struct Item gItemsInfo[] =
             "A Duskull-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3957,7 +3957,7 @@ const struct Item gItemsInfo[] =
             "A Bellossom-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3972,7 +3972,7 @@ const struct Item gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Dream Mail"),
         .price = 50,
         .description = sBeadMailDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -3990,7 +3990,7 @@ const struct Item gItemsInfo[] =
             "A gorgeous-print\n"
             "Mail to be held\n"
             "by a Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
@@ -4008,7 +4008,7 @@ const struct Item gItemsInfo[] =
             "Mail featuring the\n"
             "drawings of three\n"
             "Pokémon."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MAIL,
         .sortType = ITEM_TYPE_MAIL,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,

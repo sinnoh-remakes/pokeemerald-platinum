@@ -72,25 +72,19 @@ static const union AnimCmd sSpriteAnim_Bag_Items[] =
 
 static const union AnimCmd sSpriteAnim_Bag_Medicine[] =
 {
-    ANIMCMD_FRAME(192, 4),
+    ANIMCMD_FRAME(128, 4),
     ANIMCMD_END
 };
 
 static const union AnimCmd sSpriteAnim_Bag_Pokeballs[] =
 {
-    ANIMCMD_FRAME(256, 4),
-    ANIMCMD_END
-};
-
-static const union AnimCmd sSpriteAnim_Bag_BattleItems[] =
-{
-    ANIMCMD_FRAME(64, 4),
+    ANIMCMD_FRAME(192, 4),
     ANIMCMD_END
 };
 
 static const union AnimCmd sSpriteAnim_Bag_Berries[] =
 {
-    ANIMCMD_FRAME(192, 4),
+    ANIMCMD_FRAME(256, 4),
     ANIMCMD_END
 };
 
@@ -100,9 +94,21 @@ static const union AnimCmd sSpriteAnim_Bag_TMsHMs[] =
     ANIMCMD_END
 };
 
+static const union AnimCmd sSpriteAnim_Bag_Mail[] =
+{
+    ANIMCMD_FRAME(384, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_BattleItems[] =
+{
+    ANIMCMD_FRAME(448, 4),
+    ANIMCMD_END
+};
+
 static const union AnimCmd sSpriteAnim_Bag_KeyItems[] =
 {
-    ANIMCMD_FRAME(128, 4),
+    ANIMCMD_FRAME(512, 4),
     ANIMCMD_END
 };
 
@@ -111,9 +117,10 @@ static const union AnimCmd *const sBagSpriteAnimTable[] =
     [POCKET_ITEMS]         = sSpriteAnim_Bag_Items,
     [POCKET_MEDICINE]      = sSpriteAnim_Bag_Medicine,
     [POCKET_POKE_BALLS]    = sSpriteAnim_Bag_Pokeballs,
-    [POCKET_BATTLE_ITEMS]  = sSpriteAnim_Bag_BattleItems,
     [POCKET_BERRIES]       = sSpriteAnim_Bag_Berries,
     [POCKET_TM_HM]         = sSpriteAnim_Bag_TMsHMs,
+    [POCKET_MAIL]          = sSpriteAnim_Bag_Mail,
+    [POCKET_BATTLE_ITEMS]  = sSpriteAnim_Bag_BattleItems,
     [POCKET_KEY_ITEMS]     = sSpriteAnim_Bag_KeyItems,
     [POCKET_DUMMY]         = sSpriteAnim_Bag_Closed,
 };
@@ -540,6 +547,14 @@ void ShakeBagSprite(void)
         sprite->callback = SpriteCB_ShakeBagSprite;
     }
 }
+
+// TODO: Remove the shadow background thing on the bag sprites so that only the bag shakes, not the shadow. This may require doing something like the Rowan scene?
+// TODO: Remove the bag "jump"/shake when switching pockets but keep when scrolling through the items.
+// TODO: Fix the animations/sprites for the bag to show all the pockets correctly and in order.
+// TODO: Fix the "dots" for the Key Items pocket not showing up in the vanilla emerald bag menu UI.
+// TODO: Fix the mail pocket bag sprite showing incorrectly as a jumbled mess when scrolling through the bag pockets sequentially (left to right).
+// TODO: Fix the bag sprites not showing up when going in "reverse" order of the pockets sequentially (i.e. items to key items to battle items).
+// TODO: Add "blank" bag sprite for the female PC's bag.
 
 static void SpriteCB_ShakeBagSprite(struct Sprite *sprite)
 {
