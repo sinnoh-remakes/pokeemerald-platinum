@@ -9517,10 +9517,10 @@
     {
       "id": "LAYOUT_ROUTE_206",
       "name": "Route206_Layout",
-      "width": 39,
+      "width": 31,
       "height": 113,
       "primary_tileset": "gTileset_OutdoorRoute206",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Route206",
       "border_filepath": "data/layouts/Route206/border.bin",
       "blockdata_filepath": "data/layouts/Route206/map.bin"
     },
