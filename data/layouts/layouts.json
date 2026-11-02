@@ -9518,7 +9518,7 @@
       "id": "LAYOUT_ROUTE_206",
       "name": "Route206_Layout",
       "width": 39,
-      "height": 112,
+      "height": 113,
       "primary_tileset": "gTileset_OutdoorRoute206",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route206/border.bin",
