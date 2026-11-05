@@ -551,10 +551,13 @@ void ShakeBagSprite(void)
 // TODO: Remove the shadow background thing on the bag sprites so that only the bag shakes, not the shadow. This may require doing something like the Rowan scene?
 // TODO: Remove the bag "jump"/shake when switching pockets but keep when scrolling through the items.
 // TODO: Fix the animations/sprites for the bag to show all the pockets correctly and in order.
-// TODO: Fix the "dots" for the Key Items pocket not showing up in the vanilla emerald bag menu UI.
-// TODO: Fix the mail pocket bag sprite showing incorrectly as a jumbled mess when scrolling through the bag pockets sequentially (left to right).
-// TODO: Fix the bag sprites not showing up when going in "reverse" order of the pockets sequentially (i.e. items to key items to battle items).
+// FIXED the "dots" for the Key Items pocket not showing up in the vanilla emerald bag menu UI - Fixed by uncommenting out part of case 13 in SetupBagMenu in src/item_menu.c.
+// TODO: Fix the mail pocket bag sprite showing incorrectly as a jumbled mess when scrolling through the bag pockets sequentially (left to right). - See SwitchBagPocket in src/item_menu.c?
+// TODO: Fix the bag sprites not showing up when going in "reverse" order of the pockets sequentially (i.e. items to key items to battle items) - See AddBagVisualSprite in src/item_menu_icons.c?
 // TODO: Add "blank" bag sprite for the female PC's bag.
+// TODO: Somehow fix the text for the battle items pocket being too long to display properly - See PrintPocketNames in src/item_menu.c?
+// TODO: Verify if 12 is the correct number of mail items in vanilla emerald (found in include/constants/global.h under "bag constants")
+// TODO: Add or replace the vanilla emerald mail with the correct sprites/info/etc. for the ones from Platinum.
 
 static void SpriteCB_ShakeBagSprite(struct Sprite *sprite)
 {
