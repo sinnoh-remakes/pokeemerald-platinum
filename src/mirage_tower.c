@@ -73,12 +73,12 @@ static void Task_FossilFallAndSink(u8);
 static void SpriteCB_FallingFossil(struct Sprite *);
 static void UpdateDisintegrationEffect(u8 *, u16, u8, u8, u8);
 
-static const ALIGNED(2) u8 sMirageTower_Gfx[] = INCBIN_U8("graphics/misc/mirage_tower.4bpp");
+static const ALIGNED(2) u8 sMirageTower_Gfx[] = INCGFX_U8("graphics/misc/mirage_tower.png", ".4bpp", "-num_tiles 73 -Wnum_tiles");
 static const u16 sMirageTowerTilemap[] = INCBIN_U16("graphics/misc/mirage_tower.bin");
-static const u16 sFossil_Pal[] = INCBIN_U16("graphics/object_events/pics/misc/fossil.gbapal"); // Unused
-static const u8 sFossil_Gfx[] = INCBIN_U8("graphics/object_events/pics/misc/fossil.4bpp"); // Duplicate of gObjectEventPic_Fossil
-static const u8 sMirageTowerCrumbles_Gfx[] = INCBIN_U8("graphics/misc/mirage_tower_crumbles.4bpp");
-static const u16 sMirageTowerCrumbles_Palette[] = INCBIN_U16("graphics/misc/mirage_tower_crumbles.gbapal");
+static const u16 sFossil_Pal[] = INCGFX_U16("graphics/object_events/pics/misc/fossil.png", ".gbapal"); // Unused
+static const u8 sFossil_Gfx[] = INCGFX_U8("graphics/object_events/pics/misc/fossil.png", ".4bpp"); // Duplicate of gObjectEventPic_Fossil
+static const u8 sMirageTowerCrumbles_Gfx[] = INCGFX_U8("graphics/misc/mirage_tower_crumbles.png", ".4bpp");
+static const u16 sMirageTowerCrumbles_Palette[] = INCGFX_U16("graphics/misc/mirage_tower_crumbles.png", ".gbapal");
 
 static const s16 sCeilingCrumblePositions[][3] =
 {
@@ -154,9 +154,6 @@ static const struct SpriteTemplate sSpriteTemplate_FallingFossil =
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .oam = &sOamData_FallingFossil,
     .anims = sAnims_FallingFossil,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCallbackDummy
 };
 
 const struct PulseBlendSettings gMirageTowerPulseBlendSettings = {
@@ -205,8 +202,6 @@ static const struct SpriteTemplate sSpriteTemplate_CeilingCrumbleSmall =
     .paletteTag = TAG_CEILING_CRUMBLE,
     .oam = &sOamData_CeilingCrumbleSmall,
     .anims = sAnims_CeilingCrumbleSmall,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_CeilingCrumble
 };
 
@@ -244,8 +239,6 @@ static const struct SpriteTemplate sSpriteTemplate_CeilingCrumbleLarge =
     .paletteTag = TAG_CEILING_CRUMBLE,
     .oam = &sOamData_CeilingCrumbleLarge,
     .anims = sAnims_CeilingCrumbleLarge,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_CeilingCrumble
 };
 
@@ -255,17 +248,6 @@ EWRAM_DATA static struct FallAnim_Fossil *sFallingFossil = NULL;
 EWRAM_DATA static struct FallAnim_Tower *sFallingTower = NULL;
 EWRAM_DATA static struct BgRegOffsets *sBgShakeOffsets = NULL;
 EWRAM_DATA static struct MirageTowerPulseBlend *sMirageTowerPulseBlend = NULL;
-
-// Holds data about the disintegration effect for Mirage Tower / the unchosen fossil.
-// Never read, presumably for debugging
-static u16 sDebug_DisintegrationData[8];
-
-bool8 IsMirageTowerVisible(void)
-{
-    if (!(gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE111) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE111)))
-        return FALSE;
-    return FlagGet(FLAG_MIRAGE_TOWER_VISIBLE);
-}
 
 static void UpdateMirageTowerPulseBlend(u8 taskId)
 {
@@ -713,7 +695,7 @@ static void Task_FossilFallAndSink(u8 taskId)
         FieldEffectFreePaletteIfUnused(gSprites[sFallingFossil->spriteId].oam.paletteNum);
         gSprites[sFallingFossil->spriteId].inUse = TRUE;
         DestroySprite(&gSprites[sFallingFossil->spriteId]);
-        FREE_AND_SET_NULL(sFallingFossil->disintegrateRand);;
+        FREE_AND_SET_NULL(sFallingFossil->disintegrateRand);
         FREE_AND_SET_NULL(sFallingFossil->frameImage);
         FREE_AND_SET_NULL(sFallingFossil->frameImageTiles);
         FREE_AND_SET_NULL(sFallingFossil);
@@ -756,27 +738,19 @@ static void UpdateDisintegrationEffect(u8 *tiles, u16 randId, u8 c, u8 size, u8 
     u8 flag, tileMask;
 
     height = randId / size;
-    sDebug_DisintegrationData[0] = height;
 
     width = randId % size;
-    sDebug_DisintegrationData[1] = width;
 
     row = height & 7;
     col = width & 7;
-    sDebug_DisintegrationData[2] = height & 7;
-    sDebug_DisintegrationData[3] = width & 7;
 
     widthTiles = width / 8;
     heightTiles = height / 8;
-    sDebug_DisintegrationData[4] = width / 8;
-    sDebug_DisintegrationData[5] = height / 8;
 
     var = (size / 8) * (heightTiles * 64) + (widthTiles * 64);
-    sDebug_DisintegrationData[6] = var;
 
     baseOffset = var + ((row * 8) + col);
     baseOffset /= 2;
-    sDebug_DisintegrationData[7] = var + ((row * 8) + col);
 
     flag = ((randId % 2) ^ 1);
     tileMask = (c << (flag << 2)) | 15 << (((flag ^ 1) << 2));
