@@ -4310,7 +4310,7 @@ const u16 gTilesetPalettes_GalacticSpaceIndoor[][16] =
     INCGFX_U16("data/tilesets/secondary/galactic_space_indoor/palettes/12.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_GalacticSpaceIndoor[] = INCBIN_U32("data/tilesets/secondary/galactic_space_indoor/tiles.png", ".4bpp.lz");
+const u32 gTilesetTiles_GalacticSpaceIndoor[] = INCGFX_U32("data/tilesets/secondary/galactic_space_indoor/tiles.png", ".4bpp.lz");
 
 const u16 gTilesetPalettes_OutdoorRoute206[][16] =
 {
@@ -4329,4 +4329,23 @@ const u16 gTilesetPalettes_OutdoorRoute206[][16] =
     INCBIN_U16("data/tilesets/primary/outdoor_route_206/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_OutdoorRoute206[] = INCBIN_U32("data/tilesets/primary/outdoor_route_206/tiles.4bpp.lz");
+const u32 gTilesetTiles_OutdoorRoute206[] = INCGFX_U32("data/tilesets/primary/outdoor_route_206/tiles.png", ".4bpp.lz");
+
+const u16 gTilesetPalettes_Route206[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route_206/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Route206[] = INCGFX_U32("data/tilesets/secondary/route_206/tiles.png", ".4bpp.lz");
