@@ -1578,3 +1578,14 @@ const struct Tileset gTileset_OutdoorRoute206 =
     .metatileAttributes = gMetatileAttributes_OutdoorRoute206,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route206 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route206,
+    .palettes = gTilesetPalettes_Route206,
+    .metatiles = gMetatiles_Route206,
+    .metatileAttributes = gMetatileAttributes_Route206,
+    .callback = NULL,
+};

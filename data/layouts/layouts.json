@@ -4605,7 +4605,7 @@
       "id": "LAYOUT_ROUTE_206",
       "name": "Route206_Layout",
       "width": 31,
-      "height": 113,
+      "height": 116,
       "primary_tileset": "gTileset_OutdoorRoute206",
       "secondary_tileset": "gTileset_Route206",
       "border_filepath": "data/layouts/Route206/border.bin",
