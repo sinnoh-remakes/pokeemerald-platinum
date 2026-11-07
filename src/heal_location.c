@@ -71,7 +71,8 @@ bool32 IsLastHealLocationPlayerHouse()
         || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
         || IsLastHealLocation(HEAL_LOCATION_TWINLEAF_TOWN)
         || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE)
-        || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F))
+        || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F)
+        || IsLastHealLocation(HEAL_LOCATION_PALLET_TOWN))
         return TRUE;
 
     return FALSE;
@@ -80,7 +81,7 @@ bool32 IsLastHealLocationPlayerHouse()
 u32 GetHealNpcLocalId(u32 healLocationId)
 {
     if (healLocationId == HEAL_LOCATION_NONE || healLocationId >= NUM_HEAL_LOCATIONS)
-        return 0;
+        return LOCALID_NONE;
 
     return sWhiteoutRespawnHealerNpcIds[healLocationId - 1];
 }
@@ -102,4 +103,5 @@ void SetWhiteoutRespawnWarpAndHealerNPC(struct WarpData *warp)
     warp->x = sWhiteoutRespawnHealCenterMapIdxs[healLocationId - 1][2];
     warp->y = sWhiteoutRespawnHealCenterMapIdxs[healLocationId - 1][3];
     gSpecialVar_LastTalked = healNpcLocalId;
+    gSpecialVar_0x800B = healNpcLocalId;
 }

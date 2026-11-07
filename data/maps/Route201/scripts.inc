@@ -449,8 +449,7 @@ Route201_EventScript_RivalChooseMsg::
 Route201_EventScript_PickStarter::
 	lock
 	fadescreen FADE_TO_BLACK
-	special ChooseStarter
-	fadescreen FADE_FROM_BLACK
+	special ChooseStarter @ waits here until the starter screen returns; the return fades in from black
 	delay 30
 	removeobject LOCALID_ROUTE201_BRIEFCASE
 	setflag FLAG_SYS_POKEMON_GET
