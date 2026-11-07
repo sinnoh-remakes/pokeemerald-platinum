@@ -16,7 +16,6 @@ OreburghCity_TowerB_1F_EventScript_SchoolKidF::
 	msgbox OreburghCity_TowerB_1F_Text_ListenListen, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OreburghCity_TowerB_1F_EventScript_SchoolKidFReject
 	special ChoosePartyMon
-	waitstate
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OreburghCity_TowerB_1F_EventScript_SchoolKidFReject
 	copyvar VAR_0x8005, VAR_0x800A
@@ -27,7 +26,6 @@ OreburghCity_TowerB_1F_EventScript_SchoolKidF::
 	copyvar VAR_0x8005, VAR_0x800A
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
-	waitstate
 	lock
 	faceplayer
 	msgbox OreburghCity_TowerB_1F_Text_BeNiceTo, MSGBOX_DEFAULT

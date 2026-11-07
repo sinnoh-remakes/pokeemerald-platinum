@@ -12,7 +12,6 @@ EternaCity_TowerA_1F_EventScript_NinjaBoy::
 	msgbox EternaCity_TowerA_1F_Text_ExcuseMe, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EternaCity_TowerA_1F_EventScript_DeclineTrade
 	special ChoosePartyMon
-	waitstate
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, EternaCity_TowerA_1F_EventScript_DeclineTrade
 	copyvar VAR_0x8005, VAR_0x800A
@@ -23,7 +22,6 @@ EternaCity_TowerA_1F_EventScript_NinjaBoy::
 	copyvar VAR_0x8005, VAR_0x800A
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
-	waitstate
 	lock
 	faceplayer
 	msgbox EternaCity_TowerA_1F_Text_SoAwesome, MSGBOX_DEFAULT
@@ -59,7 +57,6 @@ EternaCity_TowerA_1F_EventScript_Veteran::
 EternaCity_TowerA_1F_EventScript_ChooseMonToRate::
 	msgbox EternaCity_TowerA_1F_Text_WhichPokemon, MSGBOX_DEFAULT
 	special ChoosePartyMon
-	waitstate
 	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, EternaCity_TowerA_1F_EventScript_RateMonNickname
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, EternaCity_TowerA_1F_EventScript_DeclineNameRate
 	end

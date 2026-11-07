@@ -83,7 +83,7 @@ struct SaveBlock1_v0
 #if FREE_LINK_BATTLE_RECORDS == FALSE
     /*0x3150*/ struct LinkBattleRecords linkBattleRecords;
 #endif //FREE_LINK_BATTLE_RECORDS
-    /*0x31A8*/ u8 giftRibbons[GIFT_RIBBONS_COUNT];
+    /*0x31A8*/ u8 giftRibbons[11]; // frozen v0 layout: was GIFT_RIBBONS_COUNT (11) before expansion's NUM_GIFT_RIBBONS (7)
     /*0x31B3*/ struct ExternalEventData externalEventData;
     /*0x31C7*/ struct ExternalEventFlags externalEventFlags;
     /*0x31DC*/ struct Roamer roamer[ROAMER_COUNT];

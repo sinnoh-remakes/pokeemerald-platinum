@@ -4,6 +4,7 @@
 #include "battle.h"
 #include "m4a.h"
 #include "main.h"
+#include "overworld.h"
 #include "pokemon.h"
 #include "constants/cries.h"
 #include "constants/songs.h"
@@ -22,6 +23,7 @@ struct DayNightPair {
     u16 nightSongNum;
 };
 
+extern u8 gDisableMapMusicChangeOnMapLoad;
 
 EWRAM_DATA struct MusicPlayerInfo *gMPlay_PokemonCry = NULL;
 EWRAM_DATA u8 gPokemonCryBGMDuckingCounter = 0;
@@ -281,12 +283,6 @@ bool8 WaitFanfare(bool8 stop)
     }
 }
 
-// Unused
-void StopFanfareByFanfareNum(u8 fanfareNum)
-{
-    m4aSongNumStop(sFanfares[fanfareNum].songNum);
-}
-
 void PlayFanfare(u16 songNum)
 {
     s32 i;
@@ -383,7 +379,7 @@ bool8 IsBGMStopped(void)
     return FALSE;
 }
 
-void PlayCry_Normal(u16 species, s8 pan)
+void PlayCry_Normal(enum Species species, s8 pan)
 {
     m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 85);
     PlayCryInternal(species, pan, CRY_VOLUME, CRY_PRIORITY_NORMAL, CRY_MODE_NORMAL);
@@ -391,13 +387,13 @@ void PlayCry_Normal(u16 species, s8 pan)
     RestoreBGMVolumeAfterPokemonCry();
 }
 
-void PlayCry_NormalNoDucking(u16 species, s8 pan, s8 volume, u8 priority)
+void PlayCry_NormalNoDucking(enum Species species, s8 pan, s8 volume, u8 priority)
 {
     PlayCryInternal(species, pan, volume, priority, CRY_MODE_NORMAL);
 }
 
 // Assuming it's not CRY_MODE_DOUBLES, this is equivalent to PlayCry_Normal except it allows other modes.
-void PlayCry_ByMode(u16 species, s8 pan, u8 mode)
+void PlayCry_ByMode(enum Species species, s8 pan, u8 mode)
 {
     if (mode == CRY_MODE_DOUBLES)
     {
@@ -413,7 +409,7 @@ void PlayCry_ByMode(u16 species, s8 pan, u8 mode)
 }
 
 // Used when releasing multiple Pokémon at once in battle.
-void PlayCry_ReleaseDouble(u16 species, s8 pan, u8 mode)
+void PlayCry_ReleaseDouble(enum Species species, s8 pan, u8 mode)
 {
     if (mode == CRY_MODE_DOUBLES)
     {
@@ -428,7 +424,7 @@ void PlayCry_ReleaseDouble(u16 species, s8 pan, u8 mode)
 }
 
 // Duck the BGM but don't restore it. Not present in R/S
-void PlayCry_DuckNoRestore(u16 species, s8 pan, u8 mode)
+void PlayCry_DuckNoRestore(enum Species species, s8 pan, u8 mode)
 {
     if (mode == CRY_MODE_DOUBLES)
     {
@@ -442,7 +438,7 @@ void PlayCry_DuckNoRestore(u16 species, s8 pan, u8 mode)
     }
 }
 
-void PlayCry_Script(u16 species, u8 mode)
+void PlayCry_Script(enum Species species, u8 mode)
 {
     m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 85);
     PlayCryInternal(species, 0, CRY_VOLUME, CRY_PRIORITY_NORMAL, mode);
@@ -450,7 +446,7 @@ void PlayCry_Script(u16 species, u8 mode)
     RestoreBGMVolumeAfterPokemonCry();
 }
 
-void PlayCryInternal(u16 species, s8 pan, s8 volume, u8 priority, u8 mode)
+void PlayCryInternal(enum Species species, s8 pan, s8 volume, u8 priority, u8 mode)
 {
     bool32 reverse;
     u32 release;
@@ -465,6 +461,10 @@ void PlayCryInternal(u16 species, s8 pan, s8 volume, u8 priority, u8 mode)
     release = 0;
     pitch = 15360;
     chorus = 0;
+
+    // If we're not using extra mega cries, we need to modify the cry mode for mega evolutions.
+    if (!P_MODIFIED_MEGA_CRIES && gSpeciesInfo[species].isMegaEvolution)
+        mode = P_MODIFIED_MEGA_CRY_MODE;
 
     switch (mode)
     {
@@ -635,7 +635,8 @@ void PlayBGM(u16 songNum)
 
 void PlaySE(u16 songNum)
 {
-    m4aSongNumStart(songNum);
+    if (gDisableMapMusicChangeOnMapLoad == MUSIC_DISABLE_OFF)
+        m4aSongNumStart(songNum);
 }
 
 void PlaySE12WithPanning(u16 songNum, s8 pan)
