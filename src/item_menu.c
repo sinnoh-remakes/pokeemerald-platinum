@@ -903,37 +903,156 @@ static void AllocateBagItemListBuffers(void)
     sListBuffer2 = Alloc(sizeof(*sListBuffer2));
 }
 
+
+bool8 CheckItemUsabilityInBattle(u16 ItemId)
+{
+    switch (ItemId)
+    {
+        // Poké Balls
+        case ITEM_POKE_BALL:
+        case ITEM_GREAT_BALL:
+        case ITEM_ULTRA_BALL:
+        case ITEM_MASTER_BALL:
+        case ITEM_PREMIER_BALL:
+        case ITEM_HEAL_BALL:
+        case ITEM_NET_BALL:
+        case ITEM_NEST_BALL:
+        case ITEM_DIVE_BALL:
+        case ITEM_DUSK_BALL:
+        case ITEM_TIMER_BALL:
+        case ITEM_QUICK_BALL:
+        case ITEM_REPEAT_BALL:
+        case ITEM_LUXURY_BALL:
+        case ITEM_LEVEL_BALL:
+        case ITEM_LURE_BALL:
+        case ITEM_MOON_BALL:
+        case ITEM_FRIEND_BALL:
+        case ITEM_LOVE_BALL:
+        case ITEM_FAST_BALL:
+        case ITEM_HEAVY_BALL:
+        case ITEM_DREAM_BALL:
+        case ITEM_SAFARI_BALL:
+        case ITEM_SPORT_BALL:
+        case ITEM_PARK_BALL:
+        case ITEM_BEAST_BALL:
+        case ITEM_CHERISH_BALL:
+
+        // Medicine
+        case ITEM_POTION:
+        case ITEM_SUPER_POTION:
+        case ITEM_HYPER_POTION:
+        case ITEM_MAX_POTION:
+        case ITEM_FULL_RESTORE:
+        case ITEM_REVIVE:
+        case ITEM_MAX_REVIVE:
+        case ITEM_FRESH_WATER:
+        case ITEM_SODA_POP:
+        case ITEM_LEMONADE:
+        case ITEM_MOOMOO_MILK:
+        case ITEM_ENERGY_POWDER:
+        case ITEM_ENERGY_ROOT:
+        case ITEM_HEAL_POWDER:
+        case ITEM_REVIVAL_HERB:
+        case ITEM_ANTIDOTE:
+        case ITEM_PARALYZE_HEAL:
+        case ITEM_BURN_HEAL:
+        case ITEM_ICE_HEAL:
+        case ITEM_AWAKENING:
+        case ITEM_FULL_HEAL:
+        case ITEM_ETHER:
+        case ITEM_MAX_ETHER:
+        case ITEM_ELIXIR:
+        case ITEM_MAX_ELIXIR:
+        case ITEM_BERRY_JUICE:
+        case ITEM_SWEET_HEART:
+
+        // Regional healing items
+        case ITEM_PEWTER_CRUNCHIES:
+        case ITEM_RAGE_CANDY_BAR:
+        case ITEM_LAVA_COOKIE:
+        case ITEM_OLD_GATEAU:
+        case ITEM_CASTELIACONE:
+        case ITEM_LUMIOSE_GALETTE:
+        case ITEM_SHALOUR_SABLE:
+        case ITEM_BIG_MALASADA:
+
+        // Medicinal Flutes
+        case ITEM_BLUE_FLUTE:
+        case ITEM_YELLOW_FLUTE:
+        case ITEM_RED_FLUTE:
+
+        // X Items
+        case ITEM_X_ATTACK:
+        case ITEM_X_DEFENSE:
+        case ITEM_X_SP_ATK:
+        case ITEM_X_SP_DEF:
+        case ITEM_X_SPEED:
+        case ITEM_X_ACCURACY:
+        case ITEM_DIRE_HIT:
+        case ITEM_GUARD_SPEC:
+
+        // Escape items
+        case ITEM_POKE_DOLL:
+        case ITEM_FLUFFY_TAIL:
+        case ITEM_POKE_TOY:
+
+        // Berries (Only the ones that can be used in battle)
+        case ITEM_CHERI_BERRY:
+        case ITEM_CHESTO_BERRY:
+        case ITEM_PECHA_BERRY:
+        case ITEM_RAWST_BERRY:
+        case ITEM_ASPEAR_BERRY:
+        case ITEM_LEPPA_BERRY:
+        case ITEM_ORAN_BERRY:
+        case ITEM_PERSIM_BERRY:
+        case ITEM_LUM_BERRY:
+        case ITEM_SITRUS_BERRY:
+            return TRUE;
+
+        default:
+            return FALSE;
+    }
+}
+
 static void LoadBagItemListBuffers(u8 pocketId)
 {
     u16 i;
+    u16 visibleItemsCount = 0;
     struct ListMenuItem *subBuffer;
 
     if (!gBagMenu->hideCloseBagText)
     {
         for (i = 0; i < gBagMenu->numItemStacks[pocketId] - 1; i++)
         {
-            GetItemNameFromPocket(sListBuffer2->name[i], GetBagItemId(pocketId, i));
+            if (gMain.inBattle && !(CheckItemUsabilityInBattle(GetBagItemId(pocketId, i)))) continue;
+
+            GetItemNameFromPocket(sListBuffer2->name[visibleItemsCount], GetBagItemId(pocketId, i));
             subBuffer = sListBuffer1->subBuffers;
-            subBuffer[i].name = sListBuffer2->name[i];
-            subBuffer[i].id = i;
+            subBuffer[visibleItemsCount].name = sListBuffer2->name[visibleItemsCount];
+            subBuffer[visibleItemsCount].id = i;
+            visibleItemsCount++;
         }
-        StringCopy(sListBuffer2->name[i], gText_CloseBag);
+        StringCopy(sListBuffer2->name[visibleItemsCount], gText_CloseBag);
         subBuffer = sListBuffer1->subBuffers;
-        subBuffer[i].name = sListBuffer2->name[i];
-        subBuffer[i].id = LIST_CANCEL;
+        subBuffer[visibleItemsCount].name = sListBuffer2->name[visibleItemsCount];
+        subBuffer[visibleItemsCount].id = LIST_CANCEL;
+        visibleItemsCount++;
     }
     else
     {
         for (i = 0; i < gBagMenu->numItemStacks[pocketId]; i++)
         {
-            GetItemNameFromPocket(sListBuffer2->name[i], GetBagItemId(pocketId, i));
+            if (gMain.inBattle && (CheckItemUsabilityInBattle(GetBagItemId(pocketId, i)))) continue;
+
+            GetItemNameFromPocket(sListBuffer2->name[visibleItemsCount], GetBagItemId(pocketId, i));
             subBuffer = sListBuffer1->subBuffers;
-            subBuffer[i].name = sListBuffer2->name[i];
-            subBuffer[i].id = i;
+            subBuffer[visibleItemsCount].name = sListBuffer2->name[visibleItemsCount];
+            subBuffer[visibleItemsCount].id = i;
+            visibleItemsCount++;
         }
     }
     gMultiuseListMenuTemplate = sItemListMenu;
-    gMultiuseListMenuTemplate.totalItems = gBagMenu->numItemStacks[pocketId];
+    gMultiuseListMenuTemplate.totalItems = visibleItemsCount;
     gMultiuseListMenuTemplate.items = sListBuffer1->subBuffers;
     gMultiuseListMenuTemplate.maxShowed = gBagMenu->numShownItems[pocketId];
 }
@@ -1174,7 +1293,10 @@ void UpdatePocketItemList(enum Pocket pocketId)
     gBagMenu->numItemStacks[pocketId] = 0;
 
     for (u32 i = 0; i < pocket->capacity && BagPocket_GetSlotData(pocket, i).itemId; i++)
+    {    
+        if (gMain.inBattle && !(CheckItemUsabilityInBattle(GetBagItemId(pocketId, i)))) continue;
         gBagMenu->numItemStacks[pocketId]++;
+    }
 
     if (!gBagMenu->hideCloseBagText)
         gBagMenu->numItemStacks[pocketId]++;
