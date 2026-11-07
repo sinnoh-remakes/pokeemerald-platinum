@@ -512,7 +512,6 @@ void SetBagVisualPocketId(u8 bagPocketId, bool8 isSwitchingPockets)
     struct Sprite *sprite = &gSprites[gBagMenu->spriteIds[ITEMMENUSPRITE_BAG]];
     if (isSwitchingPockets)
     {
-        sprite->y2 = -5;
         sprite->callback = SpriteCB_BagVisualSwitchingPockets;
         sprite->sPocketId = bagPocketId;
         StartSpriteAnim(sprite, POCKET_DUMMY);
@@ -525,15 +524,8 @@ void SetBagVisualPocketId(u8 bagPocketId, bool8 isSwitchingPockets)
 
 static void SpriteCB_BagVisualSwitchingPockets(struct Sprite *sprite)
 {
-    if (sprite->y2 != 0)
-    {
-        sprite->y2++;
-    }
-    else
-    {
         StartSpriteAnim(sprite, sprite->sPocketId);
         sprite->callback = SpriteCallbackDummy;
-    }
 }
 
 #undef sPocketId
