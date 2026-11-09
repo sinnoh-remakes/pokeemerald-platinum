@@ -68,7 +68,7 @@
 #define FLAG_ETERNA_CITY_TM_RECYCLE                      0x2E
 #define FLAG_DEFEATED_JUPITER                            0x2F
 #define FLAG_OREBURGH_NPC_TRADE_COMPLETED                0x30
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
+#define FLAG_CYCLING_ROAD_FLAG                           0x31
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
