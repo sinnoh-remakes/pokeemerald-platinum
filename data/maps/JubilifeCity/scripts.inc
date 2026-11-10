@@ -144,7 +144,6 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnTurtwig::
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	waitstate
 	release
 	end
 
@@ -154,7 +153,6 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnPiplup::
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	waitstate
 	release
 	end
 
@@ -164,7 +162,6 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_DawnChimchar::
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	waitstate
 	release
 	end
 
@@ -182,7 +179,6 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasTurtwig::
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	waitstate
 	release
 	end
 
@@ -191,7 +187,6 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasPiplup::
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	waitstate
 	release
 	end
 
@@ -200,7 +195,6 @@ JubilifeCity_EventScript_GalacticGruntsEvent_Battle_LucasChimchar::
 	case 1, JubilifeCity_EventScript_GalacticGruntsEvent_Win
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	waitstate
 	release
 	end
 

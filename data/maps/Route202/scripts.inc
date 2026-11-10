@@ -117,7 +117,6 @@ Route202_EventScript_HelperAccept::
 	waitmovement 0
 	delay 16
 	special StartWallyTutorialBattle
-	waitstate
 	applymovement LOCALID_ROUTE202_HELPER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	checkplayergender

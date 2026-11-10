@@ -45,4 +45,12 @@ void InitTilesetAnim_IndoorForest(void);
 void InitTilesetAnim_Route211West(void);
 void InitTilesetAnim_EternaGym(void);
 
+// FRLG
+void InitTilesetAnim_General_Frlg(void);
+void InitTilesetAnim_CeladonCity(void);
+void InitTilesetAnim_VermilionGym(void);
+void InitTilesetAnim_CeladonGym(void);
+void InitTilesetAnim_SilphCo(void);
+void InitTilesetAnim_MtEmber(void);
+
 #endif // GUARD_TILESET_ANIMS_H
