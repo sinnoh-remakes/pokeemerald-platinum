@@ -320,6 +320,20 @@
       "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_GYM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_GATE_CYCLING_NORTH",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 17,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_GATE_CYCLING_NORTH",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
