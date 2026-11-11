@@ -1734,6 +1734,11 @@ const u32 gBagMaleTiles[] = INCGFX_U32("graphics/bag/bag_male.png", ".4bpp.smol"
 const u32 gBagFemaleTiles[] = INCGFX_U32("graphics/bag/bag_female.png", ".4bpp.smol");
 const u16 gBagPalette[] = INCGFX_U16("graphics/bag/bag.pal", ".gbapal");
 
+const u32 gBagMalePtTiles[] = INCGFX_U32("graphics/bag/bag_male_pt.png", ".4bpp.smol");
+const u32 gBagFemalePtTiles[] = INCGFX_U32("graphics/bag/bag_female_pt.png", ".4bpp.smol");
+const u16 gBagMalePtPalette[] = INCGFX_U16("graphics/bag/bag_male_pt.pal", ".gbapal");
+const u16 gBagFemalePtPalette[] = INCGFX_U16("graphics/bag/bag_female_pt.pal", ".gbapal");
+
 const u16 gBagScreenMale_Pal[] = INCGFX_U16("graphics/bag/menu_male.pal", ".gbapal");
 const u16 gBagScreenFemale_Pal[] = INCGFX_U16("graphics/bag/menu_female.pal", ".gbapal");
 
