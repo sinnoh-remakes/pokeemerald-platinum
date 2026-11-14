@@ -157,12 +157,12 @@ const struct CompressedSpriteSheet gBagFemaleSpriteSheet =
 
 const struct CompressedSpriteSheet gBagMalePtSpriteSheet =
 {
-    gBagMalePtTiles, 0x3000, TAG_BAG_GFX
+    gBagMalePtTiles, 0x4800, TAG_BAG_GFX
 };
 
 const struct CompressedSpriteSheet gBagFemalePtSpriteSheet =
 {
-    gBagFemalePtTiles, 0x3000, TAG_BAG_GFX
+    gBagFemalePtTiles, 0x4800, TAG_BAG_GFX
 };
 
 const struct SpritePalette gBagPaletteTable =

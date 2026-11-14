@@ -72,9 +72,15 @@ extern const u8 gText_DecorationWillBeDiscarded[];
 extern const u8 gText_CantThrowAwayInUse[];
 extern const u8 gText_DecorationThrownAway[];
 
+// Bag Pocket Names
+extern const u8 gText_Items[];
 extern const u8 gText_PokeBalls[];
 extern const u8 gText_Berries[];
 extern const u8 gText_Berry[];
+extern const u8 gText_Medicine[];
+extern const u8 gText_BattleItems[];
+extern const u8 gText_MailBag[];
+extern const u8 gText_KeyItems[];
 
 extern const u8 gText_Desk[];
 extern const u8 gText_Chair[];
