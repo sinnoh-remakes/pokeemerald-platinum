@@ -9528,7 +9528,7 @@
       "id": "LAYOUT_ROUTE207",
       "name": "Route207_Layout",
       "width": 65,
-      "height": 28,
+      "height": 45,
       "primary_tileset": "gTileset_OutdoorOreburgh",
       "secondary_tileset": "gTileset_Route207",
       "border_filepath": "data/layouts/Route207/border.bin",
