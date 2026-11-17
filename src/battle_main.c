@@ -433,6 +433,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PT_FISHERMAN] =         { _("Fisherman"), 10 },
     [TRAINER_CLASS_PT_NINJA_BOY] =         { _("Ninja Boy"), 3 },
     [TRAINER_CLASS_PT_BIRD_KEEPER] =       { _("Bird Keeper"), 8 },
+    [TRAINER_CLASS_PT_CYCLIST] =           { _("Cyclist"), 8 },
     [TRAINER_CLASS_PT_LEADER] =            { _("Leader"), 25 },
     [TRAINER_CLASS_PT_ELITE_FOUR] =        { _("Elite Four"), 25 },
     [TRAINER_CLASS_PT_CHAMPION] =          { _("Champion"), 25 },

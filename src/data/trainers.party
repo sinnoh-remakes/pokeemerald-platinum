@@ -18387,3 +18387,225 @@ AI: Check Bad Move
 Hoothoot (F)
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_AXEL ===
+Name: Axel
+Class: Pt Cyclist
+Pic: Cyclist M DP
+Gender: Male
+Music: Cyclist M DP
+Double Battle: No
+AI: Check Bad Move
+
+Pikachu (M)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_MEGAN ===
+Name: Megan
+Class: Pt Cyclist
+Pic: Cyclist F DP
+Gender: Female
+Music: Cyclist F DP
+Double Battle: No
+AI: Check Bad Move
+
+Staravia (F)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_JAMES ===
+Name: James
+Class: Pt Cyclist
+Pic: Cyclist M DP
+Gender: Male
+Music: Cyclist M DP
+Double Battle: No
+AI: Check Bad Move
+
+Ponyta (M)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_NICOLE ===
+Name: Nicole
+Class: Pt Cyclist
+Pic: Cyclist F DP
+Gender: Female
+Music: Cyclist F DP
+Double Battle: No
+AI: Check Bad Move
+
+Starly (F)
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Starly (F)
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Starly (F)
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_JOHN_1 ===
+Name: John
+Class: Pt Cyclist
+Pic: Cyclist M DP
+Gender: Male
+Music: Cyclist M DP
+Double Battle: No
+AI: Check Bad Move
+
+Starly (M)
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staravia (M)
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_JOHN_2 ===
+Name: John
+Class: Pt Cyclist
+Pic: Cyclist M DP
+Gender: Male
+Music: Cyclist M DP
+Double Battle: No
+AI: Check Bad Move
+
+Staravia (M)
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staraptor (M)
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_JOHN_3 ===
+Name: John
+Class: Pt Cyclist
+Pic: Cyclist M DP
+Gender: Male
+Music: Cyclist M DP
+Double Battle: No
+AI: Check Bad Move
+
+Staraptor (M)
+Level: 43
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staraptor (M)
+Level: 43
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_JOHN_4 ===
+Name: John
+Class: Pt Cyclist
+Pic: Cyclist M DP
+Gender: Male
+Music: Cyclist M DP
+Double Battle: No
+AI: Check Bad Move
+
+Farfetchd (M)
+Level: 57
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Dodrio (M)
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staraptor (M)
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_RYAN ===
+Name: Ryan
+Class: Pt Cyclist
+Pic: Cyclist M DP
+Gender: Male
+Music: Cyclist M DP
+Double Battle: No
+AI: Check Bad Move
+
+Shinx (M)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_RACHEL ===
+Name: Rachel
+Class: Pt Cyclist
+Pic: Cyclist F DP
+Gender: Female
+Music: Cyclist F DP
+Double Battle: No
+AI: Check Bad Move
+
+Ponyta (F)
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Shinx (F)
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_KAYLA_1 ===
+Name: Kayla
+Class: Pt Cyclist
+Pic: Cyclist F DP
+Gender: Female
+Music: Cyclist F DP
+Double Battle: No
+AI: Check Bad Move
+
+Pikachu (F)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_KAYLA_2 ===
+Name: Kayla
+Class: Pt Cyclist
+Pic: Cyclist F DP
+Gender: Female
+Music: Cyclist F DP
+Double Battle: No
+AI: Check Bad Move
+
+Pikachu (F)
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_KAYLA_3 ===
+Name: Kayla
+Class: Pt Cyclist
+Pic: Cyclist F DP
+Gender: Female
+Music: Cyclist F DP
+Double Battle: No
+AI: Check Bad Move
+
+Raichu (F)
+Level: 45
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_KAYLA_4 ===
+Name: Kayla
+Class: Pt Cyclist
+Pic: Cyclist F DP
+Gender: Female
+Music: Cyclist F DP
+Double Battle: No
+AI: Check Bad Move
+
+Plusle (F)
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Minun (F)
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Raichu (F)
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

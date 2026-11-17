@@ -5598,3 +5598,106 @@ Route211West_Text_AlexandraDefeated:
 Route211West_Text_AlexandraPostBattle:
 	.string "There’s a bird Pokémon that can learn\n"
 	.string "human speech! Did you know that?$"
+
+Route206_Text_AxelIntro:
+	.string "Yo! Cycling and Pokémon!\n"
+	.string "Which do you prefer?$"
+
+Route206_Text_AxelDefeated:
+	.string "Hey, not bad, you!$"
+
+Route206_Text_AxelPostBattle:
+	.string "This Cycling Road is one fine place--\n"
+	.string "great bikes, superb Pokémon,\p"
+	.string "and awesome Trainers all around!$"
+
+Route206_Text_MeganIntro:
+	.string "Cycling feels great!\p"
+	.string "It will feel even better when I beat\n"
+	.string "you in a battle!$"
+
+Route206_Text_MeganDefeated:
+	.string "Whew!\n"
+	.string "You worked us over.$"
+
+Route206_Text_MeganPostBattle:
+	.string "I like spinning the pedals backward\n"
+	.string "while sailing downhill.$"
+
+Route206_Text_JamesIntro:
+	.string "Ding-ding! Watch out, you!\n"
+	.string "Or, did you want to battle?$"
+
+Route206_Text_JamesDefeated:
+	.string "Despite all the effort, I’m just spinning\n"
+	.string "my wheels...\p"
+	.string "It’s always that way with me!$"
+
+Route206_Text_JamesPostBattle:
+	.string "I might try racing through Cycling\n"
+	.string "Road in one long shot.$"
+
+Route206_Text_NicoleIntro:
+	.string "The both of us are on Bikes, and we\n"
+	.string "both have Pokémon!\p"
+	.string "I can’t let you get the better of me!$"
+
+Route206_Text_NicoleDefeated:
+	.string "Oh, geez...\n"
+	.string "I seem to have fallen off my Bike.$"
+
+Route206_Text_NicolePostBattle:
+	.string "I should have challenged you to a race,\n"
+	.string "not a battle!$"
+
+Route206_Text_JohnIntro:
+	.string "That Bike you’ve got there...it’s the\n"
+	.string "type that can change gears!\p"
+	.string "You gotta love that!\n"
+	.string "Sure, I’ll give you a battle!$"
+
+Route206_Text_JohnDefeated:
+	.string "Crash! Tinkle...$"
+
+Route206_Text_JohnPostBattle:
+	.string "The 3-speed makes for easy turning,\n"
+	.string "and the 4-speed’s for going fast.\p"
+	.string "I love them both!$"
+
+Route206_Text_RyanIntro:
+	.string "A bike will carry you a long way.\p"
+	.string "The only thing that limits you is your\n"
+	.string "own endurance!$"
+
+Route206_Text_RyanDefeated:
+	.string "Gasp... Gasp... Gasp...$"
+
+Route206_Text_RyanPostBattle:
+	.string "My Pokémon and I are plumb worn out.\n"
+	.string "We should be getting home to rest...$"
+
+Route206_Text_RachelIntro:
+	.string "Some people compete over speed, and\n"
+	.string "some compete over technique.\p"
+	.string "Which kind are you?$"
+
+Route206_Text_RachelDefeated:
+	.string "You’re a speedy technician!$"
+
+Route206_Text_RachelPostBattle:
+	.string "I enjoy the scenery.\p"
+	.string "Don’t you think the area below\n"
+	.string "Cycling Road looks nice?$"
+
+Route206_Text_KaylaIntro:
+	.string "If you beat me, you can count on\n"
+	.string "something rotten coming your way!$"
+
+Route206_Text_KaylaDefeated:
+	.string "Kerrrash!$"
+
+Route206_Text_KaylaPostBattle:
+	.string "Aww!\n"
+	.string "Why did you beat me?!\p"
+	.string "I hope you get so lost in Wayward Cave\n"
+	.string "you cry! Boo-hoo-hoo!$"
