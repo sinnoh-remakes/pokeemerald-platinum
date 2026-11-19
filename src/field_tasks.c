@@ -8,6 +8,7 @@
 #include "field_special_scene.h"
 #include "field_tasks.h"
 #include "fieldmap.h"
+#include "tilesets.h"
 #include "item.h"
 #include "main.h"
 #include "metatile_behavior.h"
@@ -933,7 +934,10 @@ static void Task_MuddySlope(u8 taskId)
 
         tPrevX = x;
         tPrevY = y;
-        if (MetatileBehavior_IsMuddySlope(MapGridGetMetatileBehaviorAt(x, y)))
+        // The animation swaps in General tileset metatiles, so skip it on maps with other primary tilesets.
+        // FODO: Add slope animation on a per-tileset basis for Sinnoh maps
+        if (MetatileBehavior_IsMuddySlope(MapGridGetMetatileBehaviorAt(x, y))
+         && gMapHeader.mapLayout->primaryTileset == &gTileset_General)
         {
             for (i = SLOPE_DATA_START; i <= SLOPE_DATA_END; i += SLOPE_DATA_SIZE)
             {
