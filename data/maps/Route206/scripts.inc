@@ -1,2 +1,42 @@
 Route206_MapScripts::
 	.byte 0
+
+Route206_EventScript_Axel::
+	trainerbattle_single TRAINER_PT_AXEL, Route206_Text_AxelIntro, Route206_Text_AxelDefeated
+	msgbox Route206_Text_AxelPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route206_EventScript_Megan::
+	trainerbattle_single TRAINER_PT_MEGAN, Route206_Text_MeganIntro, Route206_Text_MeganDefeated
+	msgbox Route206_Text_MeganPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route206_EventScript_James::
+	trainerbattle_single TRAINER_PT_JAMES, Route206_Text_JamesIntro, Route206_Text_JamesDefeated
+	msgbox Route206_Text_JamesPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route206_EventScript_Nicole::
+	trainerbattle_single TRAINER_PT_NICOLE, Route206_Text_NicoleIntro, Route206_Text_NicoleDefeated
+	msgbox Route206_Text_NicolePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route206_EventScript_John::
+	trainerbattle_single TRAINER_PT_JOHN_1, Route206_Text_JohnIntro, Route206_Text_JohnDefeated
+	msgbox Route206_Text_JohnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route206_EventScript_Ryan::
+	trainerbattle_single TRAINER_PT_RYAN, Route206_Text_RyanIntro, Route206_Text_RyanDefeated
+	msgbox Route206_Text_RyanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route206_EventScript_Rachel::
+	trainerbattle_single TRAINER_PT_RACHEL, Route206_Text_RachelIntro, Route206_Text_RachelDefeated
+	msgbox Route206_Text_RachelPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route206_EventScript_Kayla::
+	trainerbattle_single TRAINER_PT_KAYLA_1, Route206_Text_KaylaIntro, Route206_Text_KaylaDefeated
+	msgbox Route206_Text_KaylaPostBattle, MSGBOX_AUTOCLOSE
+	end
