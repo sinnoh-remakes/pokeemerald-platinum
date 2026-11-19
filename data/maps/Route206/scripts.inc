@@ -40,3 +40,11 @@ Route206_EventScript_Kayla::
 	trainerbattle_single TRAINER_PT_KAYLA_1, Route206_Text_KaylaIntro, Route206_Text_KaylaDefeated
 	msgbox Route206_Text_KaylaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route206_EventScript_RouteSign::
+	msgbox Route206_Text_RouteSign, MSGBOX_SIGN
+	end
+
+Route206_Text_RouteSign:
+	.string "{UP_ARROW} Rt.206\n"
+	.string "   Eterna City$"
