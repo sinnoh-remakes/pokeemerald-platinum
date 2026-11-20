@@ -28,7 +28,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_PT",
       "x": 32,
-      "y": 7,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -41,7 +41,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_PT",
       "x": 32,
-      "y": 1,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -54,7 +54,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER_PT",
       "x": 41,
-      "y": 6,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
       "movement_range_x": 0,
@@ -67,7 +67,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_PT",
       "x": 37,
-      "y": 15,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
       "movement_range_x": 6,
@@ -80,7 +80,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER_PT",
       "x": 31,
-      "y": 11,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
       "movement_range_x": 0,
@@ -93,7 +93,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL_PT",
       "x": 48,
-      "y": 12,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
       "movement_range_x": 4,
@@ -106,7 +106,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 3,
-      "y": 2,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -119,7 +119,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CYCLIST_M_PT",
       "x": 19,
-      "y": 14,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -135,7 +135,7 @@
     {
       "type": "trigger",
       "x": 32,
-      "y": 12,
+      "y": 17,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -146,7 +146,7 @@
     {
       "type": "sign",
       "x": 9,
-      "y": 17,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route207_EventScript_RouteSignOreburgh"
@@ -154,7 +154,7 @@
     {
       "type": "hidden_item",
       "x": 11,
-      "y": 2,
+      "y": 7,
       "elevation": 0,
       "item": "ITEM_POKE_BALL",
       "flag": "FLAG_ITEM_ROUTE_207_POKE_BALL_2"
@@ -162,7 +162,7 @@
     {
       "type": "sign",
       "x": 52,
-      "y": 2,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route207_EventScript_RouteSignCoronet"
@@ -170,7 +170,7 @@
     {
       "type": "sign",
       "x": 25,
-      "y": 1,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route207_EventScript_TrainerTips"
