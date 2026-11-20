@@ -5701,3 +5701,78 @@ Route206_Text_KaylaPostBattle:
 	.string "Why did you beat me?!\p"
 	.string "I hope you get so lost in Wayward Cave\n"
 	.string "you cry! Boo-hoo-hoo!$"
+
+Route207_Text_AnthonyIntro:
+	.string "Go for it, my Pokémon!\n"
+	.string "I’ll do my best, too!$"
+
+Route207_Text_AnthonyDefeated:
+	.string "Oh...\n"
+	.string "We lost...$"
+
+Route207_Text_AnthonyPostBattle:
+	.string "Dig for Fossils in the Underground.\p"
+	.string "The mining museum might be able to\n"
+	.string "bring back the ancient Pokémon!$"
+
+Route207_Text_LaurenIntro:
+	.string "Go do it, my Pokémon!\n"
+	.string "I’ll work hard, too!$"
+
+Route207_Text_LaurenDefeated:
+	.string "Oh...\n"
+	.string "We lost...$"
+
+Route207_Text_LaurenPostBattle:
+	.string "I think we’ll visit the TV station in\n"
+	.string "Jubilife City next.\p"
+	.string "Or maybe we should go to the Global\n"
+	.string "Terminal?$"
+
+Route207_Text_JustinIntro:
+	.string "I just got through Mt. Coronet, but\n"
+	.string "I’ve still got energy to burn!$"
+
+Route207_Text_JustinDefeated:
+	.string "Whoops!\n"
+	.string "Taken down easily!$"
+
+Route207_Text_JustinPostBattle:
+	.string "We need to rest up in Oreburgh City\n"
+	.string "before heading to Mt. Coronet again.$"
+
+Route207_Text_AustinIntro:
+	.string "I wear shorts the whole year!\n"
+	.string "I’ve got energy to burn!$"
+
+Route207_Text_AustinDefeated:
+	.string "I couldn’t win with just energy...\n"
+	.string "Nothing’s really that easy!$"
+
+Route207_Text_AustinPostBattle:
+	.string "Pokémon don’t wear clothes.\n"
+	.string "I worry about them getting cold.$"
+
+Route207_Text_KevinIntro:
+	.string "Wahaha!\n"
+	.string "Laughter brings good fortune!$"
+
+Route207_Text_KevinDefeated:
+	.string "Wahahaha! There’s nothing that\n"
+	.string "I can do but laugh!$"
+
+Route207_Text_KevinPostBattle:
+	.string "Wahahahaha!\n"
+	.string "...Go ahead, laugh at me--the loser!$"
+
+Route207_Text_HelenIntro:
+	.string "OK, OK!\n"
+	.string "Let’s be quick about this!$"
+
+Route207_Text_HelenDefeated:
+	.string "No way! Give us another battle!\n"
+	.string "...Oh, right. I’m out of Pokémon.$"
+
+Route207_Text_HelenPostBattle:
+	.string "Yup! Good going!\n"
+	.string "I like the way you battle!$"
