@@ -1,5 +1,6 @@
 #include "global.h"
 #include "bike.h"
+#include "event_data.h"
 #include "event_object_movement.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
@@ -158,11 +159,32 @@ static const struct BikeHistoryInputInfo sAcroBikeTricksList[] =
 };
 
 // code
+static bool8 IsPlayerOnStandardBike(void)
+{
+    return (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_BIKE) == PLAYER_AVATAR_FLAG_BIKE;
+}
+
 void MovePlayerOnBike(enum Direction direction, u16 newKeys, u16 heldKeys)
 {
-    if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE) && (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE))
-        MovePlayerOnStandardBike(direction, newKeys, heldKeys);
-    else if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+    if (IsPlayerOnStandardBike())
+    {
+        // Platinum-style gears. The fast gear accelerates like the Mach bike; the slow gear moves at
+        // a constant speed. Cycling Road slopes always use the Standard bike handling, so the
+        // pull-down works in both gears.
+        if (FlagGet(FLAG_SYS_BIKE_FAST_GEAR)
+         && !MetatileBehavior_IsCyclingRoadPullDownTile(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
+        {
+            gPlayerAvatar.acroBikeState = BIKE_STATE_NORMAL;
+            MovePlayerOnMachBike(direction, newKeys, heldKeys);
+        }
+        else
+        {
+            MovePlayerOnStandardBike(direction, newKeys, heldKeys);
+        }
+        return; // The R gear swap below is only for the separate Mach and Acro bikes.
+    }
+
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
         MovePlayerOnMachBike(direction, newKeys, heldKeys);
     else
         MovePlayerOnAcroBike(direction, newKeys, heldKeys);
@@ -192,6 +214,9 @@ static void MovePlayerOnStandardBike(u8 direction, u16 newKeys, u16 heldKeys)
 
 static u8 GetStandardBikeTransitionId(u8 *direction, u16 newKeys, u16 heldKeys)
 {
+    // Guard against an Acro bike state (e.g. from a bumpy slope) indexing past the Standard bike handlers.
+    if (gPlayerAvatar.acroBikeState > BIKE_STATE_SLOPE)
+        gPlayerAvatar.acroBikeState = BIKE_STATE_NORMAL;
     return sStandardBikeInputHandlers[gPlayerAvatar.acroBikeState](direction, newKeys, heldKeys);
 }
 
@@ -216,24 +241,13 @@ static u8 StandardBikeInputHandler_Normal(u8 *direction_p, u16 newKeys, u16 held
     gPlayerAvatar.bikeFrameCounter = 0;
     if (MetatileBehavior_IsCyclingRoadPullDownTile(playerObjEvent->currentMetatileBehavior) == TRUE)
     {
-        if (!JOY_HELD(B_BUTTON))
-        {
-            gPlayerAvatar.acroBikeState = BIKE_STATE_SLOPE;
-            gPlayerAvatar.runningState = MOVING;
-            if (*direction_p < DIR_NORTH)
-                return BIKE_TRANS_DOWNHILL;
-            else
-                return BIKE_TRANS_UPHILL;
-        }
+        // Unlike FRLG, holding B doesn't brake here, since B switches gears.
+        gPlayerAvatar.acroBikeState = BIKE_STATE_SLOPE;
+        gPlayerAvatar.runningState = MOVING;
+        if (*direction_p < DIR_NORTH)
+            return BIKE_TRANS_DOWNHILL;
         else
-        {
-            if (*direction_p != DIR_NONE)
-            {
-                gPlayerAvatar.acroBikeState = BIKE_STATE_SLOPE;
-                gPlayerAvatar.runningState = MOVING;
-                return BIKE_TRANS_UPHILL;
-            }
-        }
+            return BIKE_TRANS_UPHILL;
     }
     if (*direction_p == DIR_NONE)
     {
@@ -353,6 +367,9 @@ static void StandardBikeTransition_Downhill(u8 v)
 
     if (collision == COLLISION_NONE)
         PlayerWalkFaster(DIR_SOUTH);
+        // In the fast gear, keep top speed when rolling off the bottom of the slope.
+        if (FlagGet(FLAG_SYS_BIKE_FAST_GEAR))
+            Bike_UpdateBikeCounterSpeed(2);
     else if (collision == COLLISION_LEDGE_JUMP)
         PlayerJumpLedge(DIR_SOUTH);
 }
@@ -1075,8 +1092,21 @@ static void AcroBikeTransition_WheelieLoweringMoving(enum Direction direction)
 
 void Bike_TryAcroBikeHistoryUpdate(u16 newKeys, u16 heldKeys)
 {
-    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_BIKE) == PLAYER_AVATAR_FLAG_ACRO_BIKE)
         AcroBike_TryHistoryUpdate(newKeys, heldKeys);
+}
+
+// Called every frame, so a B press mid-step isn't lost. The new gear takes effect on the next tile,
+// and the fast gear starts accelerating from a standstill.
+void Bike_TryToggleStandardBikeGear(u16 newKeys)
+{
+    if (!IsPlayerOnStandardBike() || !(newKeys & B_BUTTON))
+        return;
+
+    FlagToggle(FLAG_SYS_BIKE_FAST_GEAR);
+    gPlayerAvatar.acroBikeState = BIKE_STATE_NORMAL;
+    Bike_SetBikeStill();
+    // FODO: Play gear change sound effect
 }
 
 static void AcroBike_TryHistoryUpdate(u16 newKeys, u16 heldKeys) // newKeys is unused
@@ -1296,6 +1326,7 @@ bool8 IsPlayerNotUsingAcroBikeOnBumpySlope(void)
 
 void GetOnOffBike(u8 transitionFlags)
 {
+    PlaySE(SE_BIKE_BELL);
     if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
     {
         SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
@@ -1306,8 +1337,8 @@ void GetOnOffBike(u8 transitionFlags)
     {
         EndORASDowsing();
         SetPlayerAvatarTransitionFlags(transitionFlags);
-        Overworld_SetSavedMusic(IS_FRLG ? MUS_RG_CYCLING : MUS_CYCLING);
-        Overworld_ChangeMusicTo(IS_FRLG ? MUS_RG_CYCLING : MUS_CYCLING);
+        Overworld_SetSavedMusic(IS_FRLG ? MUS_RG_CYCLING : MUS_DP_CYCLING);
+        Overworld_ChangeMusicTo(IS_FRLG ? MUS_RG_CYCLING : MUS_DP_CYCLING);
     }
 }
 

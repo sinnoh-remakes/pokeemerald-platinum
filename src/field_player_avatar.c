@@ -365,6 +365,7 @@ void PlayerStep(enum Direction direction, u16 newKeys, u16 heldKeys)
     if (gPlayerAvatar.preventStep == FALSE && !TryUpdatePlayerSpinDirection())
     {
         Bike_TryAcroBikeHistoryUpdate(newKeys, heldKeys);
+        Bike_TryToggleStandardBikeGear(newKeys);
         if (TryInterruptObjectEventSpecialAnim(playerObjEvent, direction) == 0)
         {
             npc_clear_strange_bits(playerObjEvent);
@@ -1128,11 +1129,21 @@ static void PlayerAvatarTransition_Normal(struct ObjectEvent *objEvent)
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ON_FOOT);
 }
 
+// The Standard bike sets both bike flags. Keep both through the Mach and Acro transitions, both when
+// mounting it and when the player sprite is respawned (after a battle or menu) while already riding it.
+// Otherwise each transition clears the other's flag and the player ends up on the Acro bike.
+static bool8 KeepStandardBikeState(void)
+{
+    return IS_FRLG
+        || (gPlayerAvatar.transitionFlags & PLAYER_AVATAR_FLAG_BIKE) == PLAYER_AVATAR_FLAG_BIKE
+        || (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_BIKE) == PLAYER_AVATAR_FLAG_BIKE;
+}
+
 static void PlayerAvatarTransition_MachBike(struct ObjectEvent *objEvent)
 {
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_MACH_BIKE));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
-    if (IS_FRLG)
+    if (KeepStandardBikeState())
         SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_BIKE);
     else
         SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_MACH_BIKE);
@@ -1143,7 +1154,7 @@ static void PlayerAvatarTransition_AcroBike(struct ObjectEvent *objEvent)
 {
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_ACRO_BIKE));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
-    if (IS_FRLG)
+    if (KeepStandardBikeState())
         SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_BIKE);
     else
         SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ACRO_BIKE);

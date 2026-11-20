@@ -86,6 +86,7 @@ extern bool8 gUnusedBikeCameraAheadPanback;
 // Exported ROM declarations
 void MovePlayerOnBike(enum Direction direction, u16 newKeys, u16 heldKeys);
 void Bike_TryAcroBikeHistoryUpdate(u16 newKeys, u16 heldKeys);
+void Bike_TryToggleStandardBikeGear(u16 newKeys);
 bool8 IsBikingDisallowedByPlayer(void);
 bool8 IsPlayerNotUsingAcroBikeOnBumpySlope(void);
 void GetOnOffBike(u8 transitionFlags);
