@@ -198,17 +198,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 32,
-      "y": 17,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
@@ -257,6 +247,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_HoneyTree"
+    },
+    {
+      "type": "sign",
+      "x": 56,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_UseRockClimb"
+    },
+    {
+      "type": "sign",
+      "x": 58,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_UseRockClimb"
     }
   ]
 }
