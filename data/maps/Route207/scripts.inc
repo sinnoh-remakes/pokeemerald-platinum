@@ -35,10 +35,6 @@ Route207_EventScript_RouteSignOreburgh::
 	msgbox Route207_Text_RouteSignOreburgh, MSGBOX_SIGN
 	end
 
-Route207_EventScript_RouteSign206::
-	msgbox Route207_Text_RouteSign206, MSGBOX_SIGN
-	end
-
 Route207_EventScript_RouteSignCoronet::
 	msgbox Route207_Text_RouteSignCoronet, MSGBOX_SIGN
 	end
@@ -49,11 +45,7 @@ Route207_EventScript_TrainerTips::
 
 Route207_Text_RouteSignOreburgh:
 	.string "   Rt.207\n"
-	.string "{DOWN_ARROW} Oreburgh City$"
-
-Route207_Text_RouteSign206:
-	.string "   Rt.206\n"
-	.string "{DOWN_ARROW} Oreburgh City$"
+.string "{DOWN_ARROW} Oreburgh City$"
 
 Route207_Text_RouteSignCoronet:
 	.string "   Rt.207\n"

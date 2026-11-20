@@ -9525,10 +9525,20 @@
       "blockdata_filepath": "data/layouts/Route206/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE206_SOUTH",
+      "name": "Route206South_Layout",
+      "width": 62,
+      "height": 29,
+      "primary_tileset": "gTileset_OutdoorOreburgh",
+      "secondary_tileset": "gTileset_Route207",
+      "border_filepath": "data/layouts/Route206South/border.bin",
+      "blockdata_filepath": "data/layouts/Route206South/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE207",
       "name": "Route207_Layout",
       "width": 64,
-      "height": 53,
+      "height": 24,
       "primary_tileset": "gTileset_OutdoorOreburgh",
       "secondary_tileset": "gTileset_Route207",
       "border_filepath": "data/layouts/Route207/border.bin",
