@@ -31,6 +31,20 @@ Route207_EventScript_Helen::
 	msgbox Route207_Text_HelenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route207_EventScript_CyclistM::
+	checkitem ITEM_BICYCLE
+	goto_if_eq VAR_RESULT, TRUE, Route207_EventScript_CyclistMChangeGear
+	msgbox Route207_Text_TooSlippery, MSGBOX_NPC
+	end
+
+Route207_EventScript_CyclistMChangeGear::
+	msgbox Route207_Text_ChangeGear, MSGBOX_NPC
+	end
+
+Route207_EventScript_TrainerTips::
+	msgbox Route207_Text_TrainerTips, MSGBOX_SIGN
+	end
+
 Route207_EventScript_RouteSignOreburgh::
 	msgbox Route207_Text_RouteSignOreburgh, MSGBOX_SIGN
 	end
@@ -39,17 +53,15 @@ Route207_EventScript_RouteSignCoronet::
 	msgbox Route207_Text_RouteSignCoronet, MSGBOX_SIGN
 	end
 
-Route207_EventScript_TrainerTips::
-	msgbox Route207_Text_TrainerTips, MSGBOX_SIGN
-	end
+Route207_Text_TooSlippery:
+	.string "That slope’s too slippery.\n"
+	.string "You’ll need a Bike to get up.\p"
+	.string "You don’t have a Bicycle?\n"
+	.string "There’s a Cycle Shop in Eterna City.$"
 
-Route207_Text_RouteSignOreburgh:
-	.string "   Rt.207\n"
-.string "{DOWN_ARROW} Oreburgh City$"
-
-Route207_Text_RouteSignCoronet:
-	.string "   Rt.207\n"
-	.string "{RIGHT_ARROW} Mt.Coronet$"
+Route207_Text_ChangeGear:
+	.string "Change to the 4th gear and take a run.\n"
+	.string "That’ll shoot you right up that slope.$"
 
 Route207_Text_TrainerTips:
 	.string "Trainer Tips\p"
@@ -59,3 +71,11 @@ Route207_Text_TrainerTips:
 	.string "it could be disastrous.\p"
 	.string "If your opponent’s Pokémon can’t\n"
 	.string "move, it’s a big opportunity!$"
+
+Route207_Text_RouteSignOreburgh:
+	.string "   Rt.207\n"
+	.string "{DOWN_ARROW} Oreburgh City$"
+
+Route207_Text_RouteSignCoronet:
+	.string "   Rt.207\n"
+	.string "{RIGHT_ARROW} Mt.Coronet$"
