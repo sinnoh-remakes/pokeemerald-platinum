@@ -966,13 +966,22 @@
 #define TRAINER_PT_KAYLA_2                  959
 #define TRAINER_PT_KAYLA_3                  960
 #define TRAINER_PT_KAYLA_4                  961
+#define TRAINER_PT_ANTHONY                  962
+#define TRAINER_PT_LAUREN                   963
+#define TRAINER_PT_JUSTIN                   964
+#define TRAINER_PT_AUSTIN                   965
+#define TRAINER_PT_KEVIN                    966
+#define TRAINER_PT_HELEN_1                  967
+#define TRAINER_PT_HELEN_2                  968
+#define TRAINER_PT_HELEN_3                  969
+#define TRAINER_PT_HELEN_4                  970
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     962
-#define MAX_TRAINERS_COUNT_EMERALD 962
+#define TRAINERS_COUNT_EMERALD     971
+#define MAX_TRAINERS_COUNT_EMERALD 971
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

@@ -18609,3 +18609,160 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Raichu (F)
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_ANTHONY ===
+Name: Anthony
+Class: Pt Camper
+Pic: Camper DP
+Gender: Male
+Music: Camper DP
+Double Battle: No
+AI: Check Bad Move
+
+Chimchar (M)
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_LAUREN ===
+Name: Lauren
+Class: Pt Picnicker
+Pic: Picnicker DP
+Gender: Female
+Music: Picnicker DP
+Double Battle: No
+AI: Check Bad Move
+
+Pachirisu (F)
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_JUSTIN ===
+Name: Justin
+Class: Pt Hiker
+Pic: Hiker DP
+Gender: Male
+Music: Hiker DP
+Double Battle: No
+AI: Check Bad Move
+
+Geodude (M)
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Nosepass (M)
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_AUSTIN ===
+Name: Austin
+Class: Pt Youngster
+Pic: Youngster DP
+Gender: Male
+Music: Youngster DP
+Double Battle: No
+AI: Check Bad Move
+
+Buizel (M)
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Luxio (M)
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gligar (M)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_KEVIN ===
+Name: Kevin
+Class: Pt Hiker
+Pic: Hiker DP
+Gender: Male
+Music: Hiker DP
+Double Battle: No
+AI: Check Bad Move
+
+Geodude (M)
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Geodude (M)
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Onix (M)
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Geodude (M)
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_HELEN_1 ===
+Name: Helen
+Class: Pt Battle Girl
+Pic: Battle Girl DP
+Gender: Female
+Music: Battle Girl DP
+Double Battle: No
+AI: Check Bad Move
+
+Machop (M)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Meditite (F)
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_HELEN_2 ===
+Name: Helen
+Class: Pt Battle Girl
+Pic: Battle Girl DP
+Gender: Female
+Music: Battle Girl DP
+Double Battle: No
+AI: Check Bad Move
+
+Meditite (F)
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Machop (M)
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_HELEN_3 ===
+Name: Helen
+Class: Pt Battle Girl
+Pic: Battle Girl DP
+Gender: Female
+Music: Battle Girl DP
+Double Battle: No
+AI: Check Bad Move
+
+Medicham (F)
+Level: 44
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Machoke (M)
+Level: 44
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PT_HELEN_4 ===
+Name: Helen
+Class: Pt Battle Girl
+Pic: Battle Girl DP
+Gender: Female
+Music: Battle Girl DP
+Double Battle: No
+AI: Check Bad Move
+
+Medicham (F)
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Machamp (M)
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
