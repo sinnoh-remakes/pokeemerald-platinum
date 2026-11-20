@@ -1273,8 +1273,8 @@ Common_EventScript_PokemonCenter_Underground::
 	msgbox gText_WeAreWorkingUnderground, MSGBOX_NPC
 	end
 
-Common_EventScript_ThisBuildingIsClosed::
-	msgbox gText_ThisBuildingIsClosed, MSGBOX_NPC
+Common_EventScript_ThisAreaIsClosed::
+	msgbox gText_ThisAreaIsClosed, MSGBOX_NPC
 	end
 
 Common_ShowEasyChatScreen::
@@ -1478,9 +1478,9 @@ gText_WeAreWorkingUnderground::
 	.string "It's off-limits to the public.\p"
 	.string "Please try later on.$"
 	
-gText_ThisBuildingIsClosed::
-	.string "This building is closed for\n"
-	.string "maintenance.\p"
+gText_ThisAreaIsClosed::
+	.string "This area is still under\n"
+	.string "development.\p"
 	.string "Please come back later.$"
 
 gText_MomOrDadMightLikeThisProgram::
