@@ -35,6 +35,35 @@ Route207_EventScript_RouteSignOreburgh::
 	msgbox Route207_Text_RouteSignOreburgh, MSGBOX_SIGN
 	end
 
+Route207_EventScript_RouteSign206::
+	msgbox Route207_Text_RouteSign206, MSGBOX_SIGN
+	end
+
+Route207_EventScript_RouteSignCoronet::
+	msgbox Route207_Text_RouteSignCoronet, MSGBOX_SIGN
+	end
+
+Route207_EventScript_TrainerTips::
+	msgbox Route207_Text_TrainerTips, MSGBOX_SIGN
+	end
+
 Route207_Text_RouteSignOreburgh:
 	.string "   Rt.207\n"
 	.string "{DOWN_ARROW} Oreburgh City$"
+
+Route207_Text_RouteSign206:
+	.string "   Rt.206\n"
+	.string "{DOWN_ARROW} Oreburgh City$"
+
+Route207_Text_RouteSignCoronet:
+	.string "   Rt.207\n"
+	.string "{RIGHT_ARROW} Mt.Coronet$"
+
+Route207_Text_TrainerTips:
+	.string "Trainer Tips\p"
+	.string "Pokémon may become immobilized if\n"
+	.string "they are asleep or paralyzed.\p"
+	.string "If it happens to your Pokémon,\n"
+	.string "it could be disastrous.\p"
+	.string "If your opponent’s Pokémon can’t\n"
+	.string "move, it’s a big opportunity!$"
