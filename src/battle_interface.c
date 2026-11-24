@@ -1968,32 +1968,35 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
     gSprites[healthboxSpriteId].data[1] = healthboxSpriteId2;
     gSprites[healthboxSpriteId2].data[1] = SPRITE_NONE;
 
-    u32 maxNameWidth = 65;
-    if (GetBattlerCoordsIndex(gSprites[healthboxSpriteId].hMain_Battler) == BATTLE_COORDS_SINGLES)
-        maxNameWidth = IsOnPlayerSide(gSprites[healthboxSpriteId].hMain_Battler) ? 53 : 52;
+    enum BattlerId battler = gSprites[healthboxSpriteId].hMain_Battler;
+    bool32 isSingles = (GetBattlerCoordsIndex(battler) == BATTLE_COORDS_SINGLES);
+    u8 lvl = GetMonData(mon, MON_DATA_LEVEL);
+    u8 lvlText[16];
+    if (GetIndicatorPalTag(battler) != TAG_NONE)
+    {
+        ConvertIntToDecimalStringN(lvlText, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
+    }
+    else
+    {
+        lvlText[0] = CHAR_EXTRA_SYMBOL;
+        lvlText[1] = CHAR_LV_2;
+        ConvertIntToDecimalStringN(lvlText + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
+    }
+    u32 lvlWidth = GetStringWidth(FONT_SMALL, lvlText, 0);
+
+    u32 maxNameWidth = 58;
+    if (isSingles)
+        maxNameWidth = IsOnPlayerSide(battler) ? 53 : 52;
     u32 fontId = GetFontIdToFit(nickname, FONT_NORMAL, 0, maxNameWidth);
 
-    if (IsOnPlayerSide(gSprites[healthboxSpriteId].hMain_Battler))
+    if (IsOnPlayerSide(battler))
     {
-        if (GetBattlerCoordsIndex(gSprites[healthboxSpriteId].hMain_Battler) == BATTLE_COORDS_SINGLES)
+        if (isSingles)
         {
+            s32 genderX = (47 - lvlWidth) - 9;
+
             RestoreHealthboxRect(healthboxSpriteId, healthboxSpriteId, 25, 5, 53, 16);
             AddSpriteTextPrinterParameterized6(healthboxSpriteId, fontId, 25, 5, 0, 0, sHealthBoxTextColor, 0, nickname);
-
-            u8 lvl = GetMonData(mon, MON_DATA_LEVEL);
-            u8 lvlText[16];
-            if (GetIndicatorPalTag(gSprites[healthboxSpriteId].hMain_Battler) != TAG_NONE)
-            {
-                ConvertIntToDecimalStringN(lvlText, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
-            }
-            else
-            {
-                lvlText[0] = CHAR_EXTRA_SYMBOL;
-                lvlText[1] = CHAR_LV_2;
-                ConvertIntToDecimalStringN(lvlText + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
-            }
-            u32 lvlWidth = GetStringWidth(FONT_SMALL, lvlText, 0);
-            s32 genderX = (47 - lvlWidth) - 9;
 
             RestoreHealthboxRect(healthboxSpriteId, healthboxSpriteId2, genderX, 3, 9, 16);
             if (genderStr[0] != EOS)
@@ -2001,27 +2004,25 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
         }
         else
         {
-            RestoreHealthboxRect(healthboxSpriteId, healthboxSpriteId, 16, 3, 55, 16);
-            AddSpriteTextPrinterParameterized6(healthboxSpriteId, fontId, 16, 3, 0, 0, sHealthBoxTextColor, 0, gDisplayedStringBattle);
+            s32 lvlStartX = 64 + (48 - lvlWidth);
+            s32 genderX = lvlStartX - 9;
+
+            RestoreHealthboxRect(healthboxSpriteId, healthboxSpriteId, 16, 2, lvlStartX - 16, 17);
+            AddSpriteTextPrinterParameterized6(healthboxSpriteId, fontId, 16, 3, 0, 0, sHealthBoxTextColor, 0, nickname);
+
+            if (genderStr[0] != EOS)
+            {
+                if (genderX < 64)
+                    AddSpriteTextPrinterParameterized6(healthboxSpriteId, fontId, genderX, 2, 0, 0, sHealthBoxTextColor, 0, genderStr);
+                else
+                    AddSpriteTextPrinterParameterized6(healthboxSpriteId2, fontId, genderX - 64, 2, 0, 0, sHealthBoxTextColor, 0, genderStr);
+            }
         }
     }
     else
     {
-        if (GetBattlerCoordsIndex(gSprites[healthboxSpriteId].hMain_Battler) == BATTLE_COORDS_SINGLES)
+        if (isSingles)
         {
-            u8 lvl = GetMonData(mon, MON_DATA_LEVEL);
-            u8 lvlText[16];
-            if (GetIndicatorPalTag(gSprites[healthboxSpriteId].hMain_Battler) != TAG_NONE)
-            {
-                ConvertIntToDecimalStringN(lvlText, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
-            }
-            else
-            {
-                lvlText[0] = CHAR_EXTRA_SYMBOL;
-                lvlText[1] = CHAR_LV_2;
-                ConvertIntToDecimalStringN(lvlText + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
-            }
-            u32 lvlWidth = GetStringWidth(FONT_SMALL, lvlText, 0);
             s32 lvlStartX = 64 + (24 - lvlWidth);
             s32 genderX = lvlStartX - 9;
 
@@ -2038,8 +2039,19 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
         }
         else
         {
-            RestoreHealthboxRect(healthboxSpriteId, healthboxSpriteId, 8, 3, 55, 16);
-            AddSpriteTextPrinterParameterized6(healthboxSpriteId, fontId, 8, 3, 0, 0, sHealthBoxTextColor, 0, gDisplayedStringBattle);
+            s32 lvlStartX = 64 + (40 - lvlWidth);
+            s32 genderX = lvlStartX - 9;
+
+            RestoreHealthboxRect(healthboxSpriteId, healthboxSpriteId, 8, 2, lvlStartX - 8, 17);
+            AddSpriteTextPrinterParameterized6(healthboxSpriteId, fontId, 8, 3, 0, 0, sHealthBoxTextColor, 0, nickname);
+
+            if (genderStr[0] != EOS)
+            {
+                if (genderX < 64)
+                    AddSpriteTextPrinterParameterized6(healthboxSpriteId, fontId, genderX, 2, 0, 0, sHealthBoxTextColor, 0, genderStr);
+                else
+                    AddSpriteTextPrinterParameterized6(healthboxSpriteId2, fontId, genderX - 64, 2, 0, 0, sHealthBoxTextColor, 0, genderStr);
+            }
         }
     }
 
