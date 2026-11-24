@@ -31,19 +31,11 @@ void InitTilesetAnim_MauvilleGym(void);
 void InitTilesetAnim_EliteFour(void);
 void InitTilesetAnim_BattleDome(void);
 void InitTilesetAnim_BattlePyramid(void);
-void InitTilesetAnim_Twinleaf(void);
-void InitTilesetAnim_Lake(void);
-void InitTilesetAnim_Route203(void);
-void InitTilesetAnim_Route204South(void);
 void InitTilesetAnim_Oreburgh(void);
-void InitTilesetAnim_OreburghMine(void);
 void InitTilesetAnim_Floaroma(void);
 void InitTilesetAnim_Route205South(void);
 void InitTilesetAnim_FloaromaMeadow(void);
-void InitTilesetAnim_ValleyWindworksIndoor(void);
-void InitTilesetAnim_IndoorForest(void);
 void InitTilesetAnim_Route211West(void);
-void InitTilesetAnim_EternaGym(void);
 
 // FRLG
 void InitTilesetAnim_General_Frlg(void);
@@ -52,5 +44,29 @@ void InitTilesetAnim_VermilionGym(void);
 void InitTilesetAnim_CeladonGym(void);
 void InitTilesetAnim_SilphCo(void);
 void InitTilesetAnim_MtEmber(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_IndoorForest(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_Twinleaf(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_Lake(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_Route203(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_Route204South(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_OreburghMine(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_ValleyWindworksIndoor(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_EternaGym(void);
 
 #endif // GUARD_TILESET_ANIMS_H

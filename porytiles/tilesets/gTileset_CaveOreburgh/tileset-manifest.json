@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_CaveOreburgh",
+  ".metatiles": "gMetatiles_CaveOreburgh",
+  ".palettes": "gTilesetPalettes_CaveOreburgh",
+  ".tiles": "gTilesetTiles_CaveOreburgh",
+  "imported": true,
+  "version": 1
+}

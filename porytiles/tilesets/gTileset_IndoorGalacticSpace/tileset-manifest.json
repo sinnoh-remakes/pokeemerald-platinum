@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorGalacticSpace",
+  ".metatiles": "gMetatiles_IndoorGalacticSpace",
+  ".palettes": "gTilesetPalettes_IndoorGalacticSpace",
+  ".tiles": "gTilesetTiles_IndoorGalacticSpace",
+  "imported": true,
+  "version": 1
+}

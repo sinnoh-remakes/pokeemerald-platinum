@@ -1546,10 +1546,10 @@ const struct Tileset gTileset_OutdoorJubilife =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_OutdoorJubilife,
-    .palettes = gTilesetPalettes_OutdoorJubilife,
-    .metatiles = gMetatiles_OutdoorJubilife,
-    .metatileAttributes = gMetatileAttributes_OutdoorJubilife,
+    .tiles = gTilesetTiles_PorytilesManaged_OutdoorJubilife,
+    .palettes = gTilesetPalettes_PorytilesManaged_OutdoorJubilife,
+    .metatiles = gMetatiles_PorytilesManaged_OutdoorJubilife,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_OutdoorJubilife,
     .callback = NULL,
 };
 
@@ -1557,21 +1557,21 @@ const struct Tileset gTileset_Twinleaf =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Twinleaf,
-    .palettes = gTilesetPalettes_Twinleaf,
-    .metatiles = gMetatiles_Twinleaf,
-    .metatileAttributes = gMetatileAttributes_Twinleaf,
-    .callback = InitTilesetAnim_Twinleaf,
+    .tiles = gTilesetTiles_PorytilesManaged_Twinleaf,
+    .palettes = gTilesetPalettes_PorytilesManaged_Twinleaf,
+    .metatiles = gMetatiles_PorytilesManaged_Twinleaf,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Twinleaf,
+    .callback = InitTilesetAnim_PorytilesManaged_Twinleaf,
 };
 
 const struct Tileset gTileset_Gatehouse =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Gatehouse,
-    .palettes = gTilesetPalettes_Gatehouse,
-    .metatiles = gMetatiles_Gatehouse,
-    .metatileAttributes = gMetatileAttributes_Gatehouse,
+    .tiles = gTilesetTiles_PorytilesManaged_Gatehouse,
+    .palettes = gTilesetPalettes_PorytilesManaged_Gatehouse,
+    .metatiles = gMetatiles_PorytilesManaged_Gatehouse,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Gatehouse,
     .callback = NULL,
 };
 
@@ -1590,10 +1590,10 @@ const struct Tileset gTileset_Route201 =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Route201,
-    .palettes = gTilesetPalettes_Route201,
-    .metatiles = gMetatiles_Route201,
-    .metatileAttributes = gMetatileAttributes_Route201,
+    .tiles = gTilesetTiles_PorytilesManaged_Route201,
+    .palettes = gTilesetPalettes_PorytilesManaged_Route201,
+    .metatiles = gMetatiles_PorytilesManaged_Route201,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Route201,
     .callback = NULL,
 };
 
@@ -1601,21 +1601,21 @@ const struct Tileset gTileset_Lake =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Lake,
-    .palettes = gTilesetPalettes_Lake,
-    .metatiles = gMetatiles_Lake,
-    .metatileAttributes = gMetatileAttributes_Lake,
-    .callback = InitTilesetAnim_Lake,
+    .tiles = gTilesetTiles_PorytilesManaged_Lake,
+    .palettes = gTilesetPalettes_PorytilesManaged_Lake,
+    .metatiles = gMetatiles_PorytilesManaged_Lake,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Lake,
+    .callback = InitTilesetAnim_PorytilesManaged_Lake,
 };
 
 const struct Tileset gTileset_IndoorTwinleaf =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorTwinleaf,
-    .palettes = gTilesetPalettes_IndoorTwinleaf,
-    .metatiles = gMetatiles_IndoorTwinleaf,
-    .metatileAttributes = gMetatileAttributes_IndoorTwinleaf,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorTwinleaf,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorTwinleaf,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorTwinleaf,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorTwinleaf,
     .callback = NULL,
 };
 
@@ -1623,10 +1623,10 @@ const struct Tileset gTileset_TwinleafPlayer =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TwinleafPlayer,
-    .palettes = gTilesetPalettes_TwinleafPlayer,
-    .metatiles = gMetatiles_TwinleafPlayer,
-    .metatileAttributes = gMetatileAttributes_TwinleafPlayer,
+    .tiles = gTilesetTiles_PorytilesManaged_TwinleafPlayer,
+    .palettes = gTilesetPalettes_PorytilesManaged_TwinleafPlayer,
+    .metatiles = gMetatiles_PorytilesManaged_TwinleafPlayer,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_TwinleafPlayer,
     .callback = NULL,
 };
 
@@ -1634,10 +1634,10 @@ const struct Tileset gTileset_TwinleafLiving =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TwinleafLiving,
-    .palettes = gTilesetPalettes_TwinleafLiving,
-    .metatiles = gMetatiles_TwinleafLiving,
-    .metatileAttributes = gMetatileAttributes_TwinleafLiving,
+    .tiles = gTilesetTiles_PorytilesManaged_TwinleafLiving,
+    .palettes = gTilesetPalettes_PorytilesManaged_TwinleafLiving,
+    .metatiles = gMetatiles_PorytilesManaged_TwinleafLiving,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_TwinleafLiving,
     .callback = NULL,
 };
 
@@ -1645,10 +1645,10 @@ const struct Tileset gTileset_TwinleafRival =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TwinleafRival,
-    .palettes = gTilesetPalettes_TwinleafRival,
-    .metatiles = gMetatiles_TwinleafRival,
-    .metatileAttributes = gMetatileAttributes_TwinleafRival,
+    .tiles = gTilesetTiles_PorytilesManaged_TwinleafRival,
+    .palettes = gTilesetPalettes_PorytilesManaged_TwinleafRival,
+    .metatiles = gMetatiles_PorytilesManaged_TwinleafRival,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_TwinleafRival,
     .callback = NULL,
 };
 
@@ -1656,10 +1656,10 @@ const struct Tileset gTileset_IndoorTwinleafRival =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorTwinleafRival,
-    .palettes = gTilesetPalettes_IndoorTwinleafRival,
-    .metatiles = gMetatiles_IndoorTwinleafRival,
-    .metatileAttributes = gMetatileAttributes_IndoorTwinleafRival,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorTwinleafRival,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorTwinleafRival,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorTwinleafRival,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorTwinleafRival,
     .callback = NULL,
 };
 
@@ -1667,10 +1667,10 @@ const struct Tileset gTileset_TwinleafHouse =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TwinleafHouse,
-    .palettes = gTilesetPalettes_TwinleafHouse,
-    .metatiles = gMetatiles_TwinleafHouse,
-    .metatileAttributes = gMetatileAttributes_TwinleafHouse,
+    .tiles = gTilesetTiles_PorytilesManaged_TwinleafHouse,
+    .palettes = gTilesetPalettes_PorytilesManaged_TwinleafHouse,
+    .metatiles = gMetatiles_PorytilesManaged_TwinleafHouse,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_TwinleafHouse,
     .callback = NULL,
 };
 
@@ -1678,10 +1678,10 @@ const struct Tileset gTileset_Sandgem =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Sandgem,
-    .palettes = gTilesetPalettes_Sandgem,
-    .metatiles = gMetatiles_Sandgem,
-    .metatileAttributes = gMetatileAttributes_Sandgem,
+    .tiles = gTilesetTiles_PorytilesManaged_Sandgem,
+    .palettes = gTilesetPalettes_PorytilesManaged_Sandgem,
+    .metatiles = gMetatiles_PorytilesManaged_Sandgem,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Sandgem,
     .callback = NULL,
 };
 
@@ -1689,10 +1689,10 @@ const struct Tileset gTileset_SandgemLab =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_SandgemLab,
-    .palettes = gTilesetPalettes_SandgemLab,
-    .metatiles = gMetatiles_SandgemLab,
-    .metatileAttributes = gMetatileAttributes_SandgemLab,
+    .tiles = gTilesetTiles_PorytilesManaged_SandgemLab,
+    .palettes = gTilesetPalettes_PorytilesManaged_SandgemLab,
+    .metatiles = gMetatiles_PorytilesManaged_SandgemLab,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_SandgemLab,
     .callback = NULL,
 };
 
@@ -1700,10 +1700,10 @@ const struct Tileset gTileset_IndoorSandgemLab =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorSandgemLab,
-    .palettes = gTilesetPalettes_IndoorSandgemLab,
-    .metatiles = gMetatiles_IndoorSandgemLab,
-    .metatileAttributes = gMetatileAttributes_IndoorSandgemLab,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorSandgemLab,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorSandgemLab,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorSandgemLab,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorSandgemLab,
     .callback = NULL,
 };
 
@@ -1711,10 +1711,10 @@ const struct Tileset gTileset_Jubilife =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Jubilife,
-    .palettes = gTilesetPalettes_Jubilife,
-    .metatiles = gMetatiles_Jubilife,
-    .metatileAttributes = gMetatileAttributes_Jubilife,
+    .tiles = gTilesetTiles_PorytilesManaged_Jubilife,
+    .palettes = gTilesetPalettes_PorytilesManaged_Jubilife,
+    .metatiles = gMetatiles_PorytilesManaged_Jubilife,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Jubilife,
     .callback = NULL,
 };
 
@@ -1722,22 +1722,22 @@ const struct Tileset gTileset_Route203 =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Route203,
-    .palettes = gTilesetPalettes_Route203,
-    .metatiles = gMetatiles_Route203,
-    .metatileAttributes = gMetatileAttributes_Route203,
-    .callback = InitTilesetAnim_Route203,
+    .tiles = gTilesetTiles_PorytilesManaged_Route203,
+    .palettes = gTilesetPalettes_PorytilesManaged_Route203,
+    .metatiles = gMetatiles_PorytilesManaged_Route203,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Route203,
+    .callback = InitTilesetAnim_PorytilesManaged_Route203,
 };
 
 const struct Tileset gTileset_Route204South =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Route204South,
-    .palettes = gTilesetPalettes_Route204South,
-    .metatiles = gMetatiles_Route204South,
-    .metatileAttributes = gMetatileAttributes_Route204South,
-    .callback = InitTilesetAnim_Route204South,
+    .tiles = gTilesetTiles_PorytilesManaged_Route204South,
+    .palettes = gTilesetPalettes_PorytilesManaged_Route204South,
+    .metatiles = gMetatiles_PorytilesManaged_Route204South,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Route204South,
+    .callback = InitTilesetAnim_PorytilesManaged_Route204South,
 };
 
 const struct Tileset gTileset_Route207 =
@@ -1755,10 +1755,10 @@ const struct Tileset gTileset_CaveCoronetSouth =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_CaveCoronetSouth,
-    .palettes = gTilesetPalettes_CaveCoronetSouth,
-    .metatiles = gMetatiles_CaveCoronetSouth,
-    .metatileAttributes = gMetatileAttributes_CaveCoronetSouth,
+    .tiles = gTilesetTiles_PorytilesManaged_CaveCoronetSouth,
+    .palettes = gTilesetPalettes_PorytilesManaged_CaveCoronetSouth,
+    .metatiles = gMetatiles_PorytilesManaged_CaveCoronetSouth,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_CaveCoronetSouth,
     .callback = NULL,
 };
 
@@ -1799,10 +1799,10 @@ const struct Tileset gTileset_RavagedPath =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_RavagedPath,
-    .palettes = gTilesetPalettes_RavagedPath,
-    .metatiles = gMetatiles_RavagedPath,
-    .metatileAttributes = gMetatileAttributes_RavagedPath,
+    .tiles = gTilesetTiles_PorytilesManaged_RavagedPath,
+    .palettes = gTilesetPalettes_PorytilesManaged_RavagedPath,
+    .metatiles = gMetatiles_PorytilesManaged_RavagedPath,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_RavagedPath,
     .callback = NULL,
 };
 
@@ -1810,10 +1810,10 @@ const struct Tileset gTileset_SandgemLiving =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_SandgemLiving,
-    .palettes = gTilesetPalettes_SandgemLiving,
-    .metatiles = gMetatiles_SandgemLiving,
-    .metatileAttributes = gMetatileAttributes_SandgemLiving,
+    .tiles = gTilesetTiles_PorytilesManaged_SandgemLiving,
+    .palettes = gTilesetPalettes_PorytilesManaged_SandgemLiving,
+    .metatiles = gMetatiles_PorytilesManaged_SandgemLiving,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_SandgemLiving,
     .callback = NULL,
 };
 
@@ -1821,10 +1821,10 @@ const struct Tileset gTileset_SandgemHelper =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_SandgemHelper,
-    .palettes = gTilesetPalettes_SandgemHelper,
-    .metatiles = gMetatiles_SandgemHelper,
-    .metatileAttributes = gMetatileAttributes_SandgemHelper,
+    .tiles = gTilesetTiles_PorytilesManaged_SandgemHelper,
+    .palettes = gTilesetPalettes_PorytilesManaged_SandgemHelper,
+    .metatiles = gMetatiles_PorytilesManaged_SandgemHelper,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_SandgemHelper,
     .callback = NULL,
 };
 
@@ -1832,10 +1832,10 @@ const struct Tileset gTileset_IndoorCenter =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorCenter,
-    .palettes = gTilesetPalettes_IndoorCenter,
-    .metatiles = gMetatiles_IndoorCenter,
-    .metatileAttributes = gMetatileAttributes_IndoorCenter,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorCenter,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorCenter,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorCenter,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorCenter,
     .callback = NULL,
 };
 
@@ -1843,10 +1843,10 @@ const struct Tileset gTileset_CommonCenter1F =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_CommonCenter1F,
-    .palettes = gTilesetPalettes_CommonCenter1F,
-    .metatiles = gMetatiles_CommonCenter1F,
-    .metatileAttributes = gMetatileAttributes_CommonCenter1F,
+    .tiles = gTilesetTiles_PorytilesManaged_CommonCenter1F,
+    .palettes = gTilesetPalettes_PorytilesManaged_CommonCenter1F,
+    .metatiles = gMetatiles_PorytilesManaged_CommonCenter1F,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_CommonCenter1F,
     .callback = NULL,
 };
 
@@ -1854,10 +1854,10 @@ const struct Tileset gTileset_IndoorMart =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorMart,
-    .palettes = gTilesetPalettes_IndoorMart,
-    .metatiles = gMetatiles_IndoorMart,
-    .metatileAttributes = gMetatileAttributes_IndoorMart,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorMart,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorMart,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorMart,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorMart,
     .callback = NULL,
 };
 
@@ -1865,10 +1865,10 @@ const struct Tileset gTileset_CommonMart =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_CommonMart,
-    .palettes = gTilesetPalettes_CommonMart,
-    .metatiles = gMetatiles_CommonMart,
-    .metatileAttributes = gMetatileAttributes_CommonMart,
+    .tiles = gTilesetTiles_PorytilesManaged_CommonMart,
+    .palettes = gTilesetPalettes_PorytilesManaged_CommonMart,
+    .metatiles = gMetatiles_PorytilesManaged_CommonMart,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_CommonMart,
     .callback = NULL,
 };
 
@@ -1876,10 +1876,10 @@ const struct Tileset gTileset_IndoorJubilife =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorJubilife,
-    .palettes = gTilesetPalettes_IndoorJubilife,
-    .metatiles = gMetatiles_IndoorJubilife,
-    .metatileAttributes = gMetatileAttributes_IndoorJubilife,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorJubilife,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorJubilife,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorJubilife,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorJubilife,
     .callback = NULL,
 };
 
@@ -1887,10 +1887,10 @@ const struct Tileset gTileset_JubilifeTower =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_JubilifeTower,
-    .palettes = gTilesetPalettes_JubilifeTower,
-    .metatiles = gMetatiles_JubilifeTower,
-    .metatileAttributes = gMetatileAttributes_JubilifeTower,
+    .tiles = gTilesetTiles_PorytilesManaged_JubilifeTower,
+    .palettes = gTilesetPalettes_PorytilesManaged_JubilifeTower,
+    .metatiles = gMetatiles_PorytilesManaged_JubilifeTower,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_JubilifeTower,
     .callback = NULL,
 };
 
@@ -1898,10 +1898,10 @@ const struct Tileset gTileset_JubilifeSchool =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_JubilifeSchool,
-    .palettes = gTilesetPalettes_JubilifeSchool,
-    .metatiles = gMetatiles_JubilifeSchool,
-    .metatileAttributes = gMetatileAttributes_JubilifeSchool,
+    .tiles = gTilesetTiles_PorytilesManaged_JubilifeSchool,
+    .palettes = gTilesetPalettes_PorytilesManaged_JubilifeSchool,
+    .metatiles = gMetatiles_PorytilesManaged_JubilifeSchool,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_JubilifeSchool,
     .callback = NULL,
 };
 
@@ -1909,10 +1909,10 @@ const struct Tileset gTileset_CommonCenter2F =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_CommonCenter2F,
-    .palettes = gTilesetPalettes_CommonCenter2F,
-    .metatiles = gMetatiles_CommonCenter2F,
-    .metatileAttributes = gMetatileAttributes_CommonCenter2F,
+    .tiles = gTilesetTiles_PorytilesManaged_CommonCenter2F,
+    .palettes = gTilesetPalettes_PorytilesManaged_CommonCenter2F,
+    .metatiles = gMetatiles_PorytilesManaged_CommonCenter2F,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_CommonCenter2F,
     .callback = NULL,
 };
 
@@ -1920,10 +1920,10 @@ const struct Tileset gTileset_CaveOreburgh =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_CaveOreburgh,
-    .palettes = gTilesetPalettes_CaveOreburgh,
-    .metatiles = gMetatiles_CaveOreburgh,
-    .metatileAttributes = gMetatileAttributes_CaveOreburgh,
+    .tiles = gTilesetTiles_PorytilesManaged_CaveOreburgh,
+    .palettes = gTilesetPalettes_PorytilesManaged_CaveOreburgh,
+    .metatiles = gMetatiles_PorytilesManaged_CaveOreburgh,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_CaveOreburgh,
     .callback = NULL,
 };
 
@@ -1931,21 +1931,21 @@ const struct Tileset gTileset_OreburghMine =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_OreburghMine,
-    .palettes = gTilesetPalettes_OreburghMine,
-    .metatiles = gMetatiles_OreburghMine,
-    .metatileAttributes = gMetatileAttributes_OreburghMine,
-    .callback = InitTilesetAnim_OreburghMine,
+    .tiles = gTilesetTiles_PorytilesManaged_OreburghMine,
+    .palettes = gTilesetPalettes_PorytilesManaged_OreburghMine,
+    .metatiles = gMetatiles_PorytilesManaged_OreburghMine,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_OreburghMine,
+    .callback = InitTilesetAnim_PorytilesManaged_OreburghMine,
 };
 
 const struct Tileset gTileset_OreburghGym =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_OreburghGym,
-    .palettes = gTilesetPalettes_OreburghGym,
-    .metatiles = gMetatiles_OreburghGym,
-    .metatileAttributes = gMetatileAttributes_OreburghGym,
+    .tiles = gTilesetTiles_PorytilesManaged_OreburghGym,
+    .palettes = gTilesetPalettes_PorytilesManaged_OreburghGym,
+    .metatiles = gMetatiles_PorytilesManaged_OreburghGym,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_OreburghGym,
     .callback = NULL,
 };
 
@@ -1953,10 +1953,10 @@ const struct Tileset gTileset_GymOreburgh =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_GymOreburgh,
-    .palettes = gTilesetPalettes_GymOreburgh,
-    .metatiles = gMetatiles_GymOreburgh,
-    .metatileAttributes = gMetatileAttributes_GymOreburgh,
+    .tiles = gTilesetTiles_PorytilesManaged_GymOreburgh,
+    .palettes = gTilesetPalettes_PorytilesManaged_GymOreburgh,
+    .metatiles = gMetatiles_PorytilesManaged_GymOreburgh,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_GymOreburgh,
     .callback = NULL,
 };
 
@@ -1964,10 +1964,10 @@ const struct Tileset gTileset_OutdoorRoute204 =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_OutdoorRoute204,
-    .palettes = gTilesetPalettes_OutdoorRoute204,
-    .metatiles = gMetatiles_OutdoorRoute204,
-    .metatileAttributes = gMetatileAttributes_OutdoorRoute204,
+    .tiles = gTilesetTiles_PorytilesManaged_OutdoorRoute204,
+    .palettes = gTilesetPalettes_PorytilesManaged_OutdoorRoute204,
+    .metatiles = gMetatiles_PorytilesManaged_OutdoorRoute204,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_OutdoorRoute204,
     .callback = NULL,
 };
 
@@ -1975,10 +1975,10 @@ const struct Tileset gTileset_Route204North =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Route204North,
-    .palettes = gTilesetPalettes_Route204North,
-    .metatiles = gMetatiles_Route204North,
-    .metatileAttributes = gMetatileAttributes_Route204North,
+    .tiles = gTilesetTiles_PorytilesManaged_Route204North,
+    .palettes = gTilesetPalettes_PorytilesManaged_Route204North,
+    .metatiles = gMetatiles_PorytilesManaged_Route204North,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Route204North,
     .callback = NULL,
 };
 
@@ -2063,10 +2063,10 @@ const struct Tileset gTileset_IndoorSunyshore =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorSunyshore,
-    .palettes = gTilesetPalettes_IndoorSunyshore,
-    .metatiles = gMetatiles_IndoorSunyshore,
-    .metatileAttributes = gMetatileAttributes_IndoorSunyshore,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorSunyshore,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorSunyshore,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorSunyshore,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorSunyshore,
     .callback = NULL,
 };
 
@@ -2074,10 +2074,10 @@ const struct Tileset gTileset_SunyshoreHouse =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_SunyshoreHouse,
-    .palettes = gTilesetPalettes_SunyshoreHouse,
-    .metatiles = gMetatiles_SunyshoreHouse,
-    .metatileAttributes = gMetatileAttributes_SunyshoreHouse,
+    .tiles = gTilesetTiles_PorytilesManaged_SunyshoreHouse,
+    .palettes = gTilesetPalettes_PorytilesManaged_SunyshoreHouse,
+    .metatiles = gMetatiles_PorytilesManaged_SunyshoreHouse,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_SunyshoreHouse,
     .callback = NULL,
 };
 
@@ -2085,10 +2085,10 @@ const struct Tileset gTileset_IndoorWindworks =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorWindworks,
-    .palettes = gTilesetPalettes_IndoorWindworks,
-    .metatiles = gMetatiles_IndoorWindworks,
-    .metatileAttributes = gMetatileAttributes_IndoorWindworks,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorWindworks,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorWindworks,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorWindworks,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorWindworks,
     .callback = NULL,
 };
 
@@ -2096,22 +2096,22 @@ const struct Tileset gTileset_ValleyWindworksIndoor =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_ValleyWindworksIndoor,
-    .palettes = gTilesetPalettes_ValleyWindworksIndoor,
-    .metatiles = gMetatiles_ValleyWindworksIndoor,
-    .metatileAttributes = gMetatileAttributes_ValleyWindworksIndoor,
-    .callback = InitTilesetAnim_ValleyWindworksIndoor,
+    .tiles = gTilesetTiles_PorytilesManaged_ValleyWindworksIndoor,
+    .palettes = gTilesetPalettes_PorytilesManaged_ValleyWindworksIndoor,
+    .metatiles = gMetatiles_PorytilesManaged_ValleyWindworksIndoor,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_ValleyWindworksIndoor,
+    .callback = InitTilesetAnim_PorytilesManaged_ValleyWindworksIndoor,
 };
 
 const struct Tileset gTileset_IndoorForest =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorForest,
-    .palettes = gTilesetPalettes_IndoorForest,
-    .metatiles = gMetatiles_IndoorForest,
-    .metatileAttributes = gMetatileAttributes_IndoorForest,
-    .callback = InitTilesetAnim_IndoorForest,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorForest,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorForest,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorForest,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorForest,
+    .callback = InitTilesetAnim_PorytilesManaged_IndoorForest,
 };
 
 const struct Tileset gTileset_OutdoorEterna =
@@ -2173,10 +2173,10 @@ const struct Tileset gTileset_CaveCoronetNorth =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_CaveCoronetNorth,
-    .palettes = gTilesetPalettes_CaveCoronetNorth,
-    .metatiles = gMetatiles_CaveCoronetNorth,
-    .metatileAttributes = gMetatileAttributes_CaveCoronetNorth,
+    .tiles = gTilesetTiles_PorytilesManaged_CaveCoronetNorth,
+    .palettes = gTilesetPalettes_PorytilesManaged_CaveCoronetNorth,
+    .metatiles = gMetatiles_PorytilesManaged_CaveCoronetNorth,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_CaveCoronetNorth,
     .callback = NULL,
 };
 
@@ -2184,10 +2184,10 @@ const struct Tileset gTileset_EternaIndoor =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_EternaIndoor,
-    .palettes = gTilesetPalettes_EternaIndoor,
-    .metatiles = gMetatiles_EternaIndoor,
-    .metatileAttributes = gMetatileAttributes_EternaIndoor,
+    .tiles = gTilesetTiles_PorytilesManaged_EternaIndoor,
+    .palettes = gTilesetPalettes_PorytilesManaged_EternaIndoor,
+    .metatiles = gMetatiles_PorytilesManaged_EternaIndoor,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_EternaIndoor,
     .callback = NULL,
 };
 
@@ -2195,10 +2195,10 @@ const struct Tileset gTileset_GymEterna =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_GymEterna,
-    .palettes = gTilesetPalettes_GymEterna,
-    .metatiles = gMetatiles_GymEterna,
-    .metatileAttributes = gMetatileAttributes_GymEterna,
+    .tiles = gTilesetTiles_PorytilesManaged_GymEterna,
+    .palettes = gTilesetPalettes_PorytilesManaged_GymEterna,
+    .metatiles = gMetatiles_PorytilesManaged_GymEterna,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_GymEterna,
     .callback = NULL,
 };
 
@@ -2206,21 +2206,21 @@ const struct Tileset gTileset_EternaGym =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_EternaGym,
-    .palettes = gTilesetPalettes_EternaGym,
-    .metatiles = gMetatiles_EternaGym,
-    .metatileAttributes = gMetatileAttributes_EternaGym,
-    .callback = InitTilesetAnim_EternaGym,
+    .tiles = gTilesetTiles_PorytilesManaged_EternaGym,
+    .palettes = gTilesetPalettes_PorytilesManaged_EternaGym,
+    .metatiles = gMetatiles_PorytilesManaged_EternaGym,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_EternaGym,
+    .callback = InitTilesetAnim_PorytilesManaged_EternaGym,
 };
 
 const struct Tileset gTileset_IndoorCycleShop =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorCycleShop,
-    .palettes = gTilesetPalettes_IndoorCycleShop,
-    .metatiles = gMetatiles_IndoorCycleShop,
-    .metatileAttributes = gMetatileAttributes_IndoorCycleShop,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorCycleShop,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorCycleShop,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorCycleShop,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorCycleShop,
     .callback = NULL,
 };
 
@@ -2228,10 +2228,10 @@ const struct Tileset gTileset_CycleShop =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_CycleShop,
-    .palettes = gTilesetPalettes_CycleShop,
-    .metatiles = gMetatiles_CycleShop,
-    .metatileAttributes = gMetatileAttributes_CycleShop,
+    .tiles = gTilesetTiles_PorytilesManaged_CycleShop,
+    .palettes = gTilesetPalettes_PorytilesManaged_CycleShop,
+    .metatiles = gMetatiles_PorytilesManaged_CycleShop,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_CycleShop,
     .callback = NULL,
 };
 
@@ -2239,10 +2239,10 @@ const struct Tileset gTileset_IndoorGalacticEterna =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorGalacticEterna,
-    .palettes = gTilesetPalettes_IndoorGalacticEterna,
-    .metatiles = gMetatiles_IndoorGalacticEterna,
-    .metatileAttributes = gMetatileAttributes_IndoorGalacticEterna,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorGalacticEterna,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorGalacticEterna,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorGalacticEterna,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorGalacticEterna,
     .callback = NULL,
 };
 
@@ -2250,10 +2250,10 @@ const struct Tileset gTileset_GalacticEternaIndoor =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_GalacticEternaIndoor,
-    .palettes = gTilesetPalettes_GalacticEternaIndoor,
-    .metatiles = gMetatiles_GalacticEternaIndoor,
-    .metatileAttributes = gMetatileAttributes_GalacticEternaIndoor,
+    .tiles = gTilesetTiles_PorytilesManaged_GalacticEternaIndoor,
+    .palettes = gTilesetPalettes_PorytilesManaged_GalacticEternaIndoor,
+    .metatiles = gMetatiles_PorytilesManaged_GalacticEternaIndoor,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_GalacticEternaIndoor,
     .callback = NULL,
 };
 
@@ -2261,10 +2261,10 @@ const struct Tileset gTileset_IndoorGalacticSpace =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IndoorGalacticSpace,
-    .palettes = gTilesetPalettes_IndoorGalacticSpace,
-    .metatiles = gMetatiles_IndoorGalacticSpace,
-    .metatileAttributes = gMetatileAttributes_IndoorGalacticSpace,
+    .tiles = gTilesetTiles_PorytilesManaged_IndoorGalacticSpace,
+    .palettes = gTilesetPalettes_PorytilesManaged_IndoorGalacticSpace,
+    .metatiles = gMetatiles_PorytilesManaged_IndoorGalacticSpace,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IndoorGalacticSpace,
     .callback = NULL,
 };
 
@@ -2272,10 +2272,10 @@ const struct Tileset gTileset_GalacticSpaceIndoor =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_GalacticSpaceIndoor,
-    .palettes = gTilesetPalettes_GalacticSpaceIndoor,
-    .metatiles = gMetatiles_GalacticSpaceIndoor,
-    .metatileAttributes = gMetatileAttributes_GalacticSpaceIndoor,
+    .tiles = gTilesetTiles_PorytilesManaged_GalacticSpaceIndoor,
+    .palettes = gTilesetPalettes_PorytilesManaged_GalacticSpaceIndoor,
+    .metatiles = gMetatiles_PorytilesManaged_GalacticSpaceIndoor,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_GalacticSpaceIndoor,
     .callback = NULL,
 };
 

@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_EternaIndoor",
+  ".metatiles": "gMetatiles_EternaIndoor",
+  ".palettes": "gTilesetPalettes_EternaIndoor",
+  ".tiles": "gTilesetTiles_EternaIndoor",
+  "imported": true,
+  "version": 1
+}

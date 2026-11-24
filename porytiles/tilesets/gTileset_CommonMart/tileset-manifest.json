@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_CommonMart",
+  ".metatiles": "gMetatiles_CommonMart",
+  ".palettes": "gTilesetPalettes_CommonMart",
+  ".tiles": "gTilesetTiles_CommonMart",
+  "imported": true,
+  "version": 1
+}

@@ -1,0 +1,8 @@
+fieldmap:
+  # Treat the layer-type bits as a plain number column in attributes.csv
+  # instead of Porytiles' layer_type role: this tileset uses this project's
+  # fourth layer type (METATILE_LAYER_TYPE_TOP = 3), which the role cannot
+  # express. Metatiles are triple-layer, so the role is not needed.
+  metatile_attribute_field_overrides:
+    layer_type:
+      role: null

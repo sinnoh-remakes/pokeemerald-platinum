@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_SandgemLiving",
+  ".metatiles": "gMetatiles_SandgemLiving",
+  ".palettes": "gTilesetPalettes_SandgemLiving",
+  ".tiles": "gTilesetTiles_SandgemLiving",
+  "imported": true,
+  "version": 1
+}

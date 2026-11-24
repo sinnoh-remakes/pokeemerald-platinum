@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_JubilifeTower",
+  ".metatiles": "gMetatiles_JubilifeTower",
+  ".palettes": "gTilesetPalettes_JubilifeTower",
+  ".tiles": "gTilesetTiles_JubilifeTower",
+  "imported": true,
+  "version": 1
+}

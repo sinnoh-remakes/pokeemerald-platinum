@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_GymEterna",
+  ".metatiles": "gMetatiles_GymEterna",
+  ".palettes": "gTilesetPalettes_GymEterna",
+  ".tiles": "gTilesetTiles_GymEterna",
+  "imported": true,
+  "version": 1
+}

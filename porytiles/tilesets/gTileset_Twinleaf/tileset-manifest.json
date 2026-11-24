@@ -1,0 +1,9 @@
+{
+  ".callback": "InitTilesetAnim_Twinleaf",
+  ".metatileAttributes": "gMetatileAttributes_Twinleaf",
+  ".metatiles": "gMetatiles_Twinleaf",
+  ".palettes": "gTilesetPalettes_Twinleaf",
+  ".tiles": "gTilesetTiles_Twinleaf",
+  "imported": true,
+  "version": 1
+}

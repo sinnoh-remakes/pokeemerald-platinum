@@ -1,0 +1,3 @@
+fieldmap:
+  # Matches NUM_TILES_IN_PRIMARY_ETERNA in include/fieldmap.h
+  num_tiles_in_primary: 384

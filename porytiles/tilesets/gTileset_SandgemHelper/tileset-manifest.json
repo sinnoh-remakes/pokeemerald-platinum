@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_SandgemHelper",
+  ".metatiles": "gMetatiles_SandgemHelper",
+  ".palettes": "gTilesetPalettes_SandgemHelper",
+  ".tiles": "gTilesetTiles_SandgemHelper",
+  "imported": true,
+  "version": 1
+}

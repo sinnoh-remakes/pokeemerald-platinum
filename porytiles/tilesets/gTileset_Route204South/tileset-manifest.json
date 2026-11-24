@@ -1,0 +1,9 @@
+{
+  ".callback": "InitTilesetAnim_Route204South",
+  ".metatileAttributes": "gMetatileAttributes_Route204South",
+  ".metatiles": "gMetatiles_Route204South",
+  ".palettes": "gTilesetPalettes_Route204South",
+  ".tiles": "gTilesetTiles_Route204South",
+  "imported": true,
+  "version": 1
+}

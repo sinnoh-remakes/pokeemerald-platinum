@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_Route204North",
+  ".metatiles": "gMetatiles_Route204North",
+  ".palettes": "gTilesetPalettes_Route204North",
+  ".tiles": "gTilesetTiles_Route204North",
+  "imported": true,
+  "version": 1
+}

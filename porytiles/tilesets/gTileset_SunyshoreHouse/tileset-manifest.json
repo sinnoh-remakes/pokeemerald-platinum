@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_SunyshoreHouse",
+  ".metatiles": "gMetatiles_SunyshoreHouse",
+  ".palettes": "gTilesetPalettes_SunyshoreHouse",
+  ".tiles": "gTilesetTiles_SunyshoreHouse",
+  "imported": true,
+  "version": 1
+}

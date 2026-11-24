@@ -1,0 +1,9 @@
+{
+  ".callback": "InitTilesetAnim_Lake",
+  ".metatileAttributes": "gMetatileAttributes_Lake",
+  ".metatiles": "gMetatiles_Lake",
+  ".palettes": "gTilesetPalettes_Lake",
+  ".tiles": "gTilesetTiles_Lake",
+  "imported": true,
+  "version": 1
+}

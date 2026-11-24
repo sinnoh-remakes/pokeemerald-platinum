@@ -1,0 +1,9 @@
+{
+  ".callback": "InitTilesetAnim_IndoorForest",
+  ".metatileAttributes": "gMetatileAttributes_IndoorForest",
+  ".metatiles": "gMetatiles_IndoorForest",
+  ".palettes": "gTilesetPalettes_IndoorForest",
+  ".tiles": "gTilesetTiles_IndoorForest",
+  "imported": true,
+  "version": 1
+}

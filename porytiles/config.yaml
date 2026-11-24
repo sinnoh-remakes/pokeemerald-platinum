@@ -1,0 +1,6 @@
+# Project-wide Porytiles 2.x configuration.
+# See https://grunt-lucas.github.io/porytiles-user-docs/configuration.html
+fieldmap:
+  # This project declares both the 2-byte Emerald and the 4-byte FRLG metatile
+  # attribute layouts; the Sinnoh tilesets use 2-byte attributes (INCBIN_U16).
+  metatile_attribute_size: 2

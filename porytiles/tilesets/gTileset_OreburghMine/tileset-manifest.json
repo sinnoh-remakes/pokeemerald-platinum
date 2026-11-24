@@ -1,0 +1,9 @@
+{
+  ".callback": "InitTilesetAnim_OreburghMine",
+  ".metatileAttributes": "gMetatileAttributes_OreburghMine",
+  ".metatiles": "gMetatiles_OreburghMine",
+  ".palettes": "gTilesetPalettes_OreburghMine",
+  ".tiles": "gTilesetTiles_OreburghMine",
+  "imported": true,
+  "version": 1
+}

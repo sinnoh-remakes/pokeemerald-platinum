@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_TwinleafLiving",
+  ".metatiles": "gMetatiles_TwinleafLiving",
+  ".palettes": "gTilesetPalettes_TwinleafLiving",
+  ".tiles": "gTilesetTiles_TwinleafLiving",
+  "imported": true,
+  "version": 1
+}

@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorJubilife",
+  ".metatiles": "gMetatiles_IndoorJubilife",
+  ".palettes": "gTilesetPalettes_IndoorJubilife",
+  ".tiles": "gTilesetTiles_IndoorJubilife",
+  "imported": true,
+  "version": 1
+}

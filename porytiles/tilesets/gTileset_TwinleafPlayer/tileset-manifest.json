@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_TwinleafPlayer",
+  ".metatiles": "gMetatiles_TwinleafPlayer",
+  ".palettes": "gTilesetPalettes_TwinleafPlayer",
+  ".tiles": "gTilesetTiles_TwinleafPlayer",
+  "imported": true,
+  "version": 1
+}

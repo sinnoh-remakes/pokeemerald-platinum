@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorTwinleaf",
+  ".metatiles": "gMetatiles_IndoorTwinleaf",
+  ".palettes": "gTilesetPalettes_IndoorTwinleaf",
+  ".tiles": "gTilesetTiles_IndoorTwinleaf",
+  "imported": true,
+  "version": 1
+}

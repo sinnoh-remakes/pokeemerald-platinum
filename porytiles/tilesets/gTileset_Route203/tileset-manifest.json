@@ -1,0 +1,9 @@
+{
+  ".callback": "InitTilesetAnim_Route203",
+  ".metatileAttributes": "gMetatileAttributes_Route203",
+  ".metatiles": "gMetatiles_Route203",
+  ".palettes": "gTilesetPalettes_Route203",
+  ".tiles": "gTilesetTiles_Route203",
+  "imported": true,
+  "version": 1
+}

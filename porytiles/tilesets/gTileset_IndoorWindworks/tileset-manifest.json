@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorWindworks",
+  ".metatiles": "gMetatiles_IndoorWindworks",
+  ".palettes": "gTilesetPalettes_IndoorWindworks",
+  ".tiles": "gTilesetTiles_IndoorWindworks",
+  "imported": true,
+  "version": 1
+}

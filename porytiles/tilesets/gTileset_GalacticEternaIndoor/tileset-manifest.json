@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_GalacticEternaIndoor",
+  ".metatiles": "gMetatiles_GalacticEternaIndoor",
+  ".palettes": "gTilesetPalettes_GalacticEternaIndoor",
+  ".tiles": "gTilesetTiles_GalacticEternaIndoor",
+  "imported": true,
+  "version": 1
+}

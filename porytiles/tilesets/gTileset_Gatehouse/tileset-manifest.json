@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_Gatehouse",
+  ".metatiles": "gMetatiles_Gatehouse",
+  ".palettes": "gTilesetPalettes_Gatehouse",
+  ".tiles": "gTilesetTiles_Gatehouse",
+  "imported": true,
+  "version": 1
+}

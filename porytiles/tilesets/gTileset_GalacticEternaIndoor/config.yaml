@@ -1,0 +1,8 @@
+tileset:
+  animations:
+    # This animation has never been hooked up in game; keep it inactive.
+    wire_anim_code: false
+  primary_pairing:
+    mode: manual
+    partners:
+      - gTileset_IndoorGalacticEterna

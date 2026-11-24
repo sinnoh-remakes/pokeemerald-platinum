@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorSandgemLab",
+  ".metatiles": "gMetatiles_IndoorSandgemLab",
+  ".palettes": "gTilesetPalettes_IndoorSandgemLab",
+  ".tiles": "gTilesetTiles_IndoorSandgemLab",
+  "imported": true,
+  "version": 1
+}

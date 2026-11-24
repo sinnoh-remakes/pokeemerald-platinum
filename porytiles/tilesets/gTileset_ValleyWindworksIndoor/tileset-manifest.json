@@ -1,0 +1,9 @@
+{
+  ".callback": "InitTilesetAnim_ValleyWindworksIndoor",
+  ".metatileAttributes": "gMetatileAttributes_ValleyWindworksIndoor",
+  ".metatiles": "gMetatiles_ValleyWindworksIndoor",
+  ".palettes": "gTilesetPalettes_ValleyWindworksIndoor",
+  ".tiles": "gTilesetTiles_ValleyWindworksIndoor",
+  "imported": true,
+  "version": 1
+}

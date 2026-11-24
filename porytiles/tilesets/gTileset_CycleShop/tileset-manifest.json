@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_CycleShop",
+  ".metatiles": "gMetatiles_CycleShop",
+  ".palettes": "gTilesetPalettes_CycleShop",
+  ".tiles": "gTilesetTiles_CycleShop",
+  "imported": true,
+  "version": 1
+}

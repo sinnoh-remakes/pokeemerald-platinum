@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorSunyshore",
+  ".metatiles": "gMetatiles_IndoorSunyshore",
+  ".palettes": "gTilesetPalettes_IndoorSunyshore",
+  ".tiles": "gTilesetTiles_IndoorSunyshore",
+  "imported": true,
+  "version": 1
+}

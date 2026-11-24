@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorCycleShop",
+  ".metatiles": "gMetatiles_IndoorCycleShop",
+  ".palettes": "gTilesetPalettes_IndoorCycleShop",
+  ".tiles": "gTilesetTiles_IndoorCycleShop",
+  "imported": true,
+  "version": 1
+}

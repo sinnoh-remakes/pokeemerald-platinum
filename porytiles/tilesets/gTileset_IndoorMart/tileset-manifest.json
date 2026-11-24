@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IndoorMart",
+  ".metatiles": "gMetatiles_IndoorMart",
+  ".palettes": "gTilesetPalettes_IndoorMart",
+  ".tiles": "gTilesetTiles_IndoorMart",
+  "imported": true,
+  "version": 1
+}

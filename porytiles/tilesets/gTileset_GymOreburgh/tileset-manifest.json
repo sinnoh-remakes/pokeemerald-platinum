@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_GymOreburgh",
+  ".metatiles": "gMetatiles_GymOreburgh",
+  ".palettes": "gTilesetPalettes_GymOreburgh",
+  ".tiles": "gTilesetTiles_GymOreburgh",
+  "imported": true,
+  "version": 1
+}

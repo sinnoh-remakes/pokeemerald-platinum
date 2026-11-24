@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_CaveCoronetSouth",
+  ".metatiles": "gMetatiles_CaveCoronetSouth",
+  ".palettes": "gTilesetPalettes_CaveCoronetSouth",
+  ".tiles": "gTilesetTiles_CaveCoronetSouth",
+  "imported": true,
+  "version": 1
+}
