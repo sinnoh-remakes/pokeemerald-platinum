@@ -2739,10 +2739,7 @@ static void SpriteCB_BounceEffect(struct Sprite *sprite)
     s32 index = sprite->sSinIndex;
     s32 y = Sin(index, sprite->sAmplitude) + sprite->sAmplitude;
 
-    if (sprite->sWhich != BOUNCE_HEALTHBOX)
-        gSprites[bouncerSpriteId].y2 = y;
-    // Disabled healthbox up-down bounce so healthbox and its elements stay in place:
-    // gSprites[bouncerSpriteId].y2 = y;
+    gSprites[bouncerSpriteId].y2 = y;
     sprite->sSinIndex = (sprite->sSinIndex + sprite->sDelta) & 0xFF;
 }
 

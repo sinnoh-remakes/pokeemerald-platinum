@@ -953,13 +953,13 @@ static const s16 sBattlerHealthboxCoords[BATTLE_COORDS_COUNT][MAX_BATTLERS_COUNT
 {
     [BATTLE_COORDS_SINGLES] =
     {
-        [B_POSITION_PLAYER_LEFT]   = { 146, 88 },
+        [B_POSITION_PLAYER_LEFT]   = { 146, 85 },
         [B_POSITION_OPPONENT_LEFT] = { 32,  (B_HP_PERCENTAGE_DISPLAY ? 22 : 30)},
     },
     [BATTLE_COORDS_DOUBLES] =
     {
-        [B_POSITION_PLAYER_LEFT]    = { 144, 76 },
-        [B_POSITION_PLAYER_RIGHT]   = { 148, 101 },
+        [B_POSITION_PLAYER_LEFT]    = { 144, 73 },
+        [B_POSITION_PLAYER_RIGHT]   = { 148, 98 },
         [B_POSITION_OPPONENT_LEFT]  = { 32,  16 },
         [B_POSITION_OPPONENT_RIGHT] = { 28,  44 },
     },
@@ -1062,14 +1062,18 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     enum BattlerId battler = gSprites[healthboxSpriteId].hMain_Battler;
     u32 spriteId = gSprites[healthboxSpriteId].oam.affineParam;
 
-    ConvertIntToDecimalStringN(text, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
     if (GetIndicatorPalTag(battler) != TAG_NONE)
     {
+        ConvertIntToDecimalStringN(text, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
         UpdateIndicatorLevelData(healthboxSpriteId, lvl);
         UpdateIndicatorVisibilityAndType(healthboxSpriteId, FALSE);
     }
     else
     {
+        text[0] = CHAR_EXTRA_SYMBOL;
+        text[1] = CHAR_LV_2;
+
+        ConvertIntToDecimalStringN(text + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
         UpdateIndicatorVisibilityAndType(healthboxSpriteId, TRUE);
     }
 
