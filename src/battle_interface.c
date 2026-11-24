@@ -1054,34 +1054,6 @@ static void RestoreHealthboxRect(u32 healthboxSpriteId, u32 targetSpriteId, u32 
     Free(cleanGfx);
 }
 
-static void Blit4bppStripOnHealthbox(u32 healthboxSpriteId, u32 left, u32 top, u32 numTiles, const u8 *srcTilesGfx, u32 tileStrideBytes)
-{
-    u32 healthboxSpriteId2 = gSprites[healthboxSpriteId].oam.affineParam;
-
-    for (u32 tile = 0; tile < numTiles; tile++)
-    {
-        const u32 *srcTile = (const u32 *)(srcTilesGfx + tile * tileStrideBytes);
-        for (u32 row = 0; row < 8; row++)
-        {
-            u32 py = top + row;
-            u32 rowPixels = srcTile[row];
-            for (u32 col = 0; col < 8; col++)
-            {
-                u32 color = (rowPixels >> (col * 4)) & 0xF;
-                if (color == 0)
-                    continue;
-                u32 gx = left + tile * 8 + col;
-                u32 spriteIdx = (gx < 64) ? healthboxSpriteId : healthboxSpriteId2;
-                u32 sx = gx & 63;
-                u32 *vram = (u32 *)(OBJ_VRAM0 + gSprites[spriteIdx].oam.tileNum * TILE_SIZE_4BPP);
-                u32 wordIdx = (py / 8) * 64 + (sx / 8) * 8 + (py % 8);
-                u32 shift = (sx % 8) * 4;
-                vram[wordIdx] = (vram[wordIdx] & ~(0xFu << shift)) | (color << shift);
-            }
-        }
-    }
-}
-
 
 
 static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
@@ -2261,7 +2233,7 @@ void UpdateHealthboxAttribute(u8 healthboxSpriteId, struct Pokemon *mon, u8 elem
     }
 }
 
-#define B_EXPBAR_PIXELS 64
+#define B_EXPBAR_PIXELS 96
 #define B_HEALTHBAR_PIXELS 48
 
 s32 MoveBattleBar(enum BattlerId battler, u8 healthboxSpriteId, u8 whichBar, u8 unused)
@@ -2281,7 +2253,7 @@ s32 MoveBattleBar(enum BattlerId battler, u8 healthboxSpriteId, u8 whichBar, u8 
     {
         u16 expFraction = GetScaledExpFraction(gBattleSpritesDataPtr->battleBars[battler].oldValue,
                     gBattleSpritesDataPtr->battleBars[battler].receivedValue,
-                    gBattleSpritesDataPtr->battleBars[battler].maxValue, 8);
+                    gBattleSpritesDataPtr->battleBars[battler].maxValue, B_EXPBAR_PIXELS / 8);
         if (expFraction == 0)
             expFraction = 1;
         expFraction = abs(gBattleSpritesDataPtr->battleBars[battler].receivedValue / expFraction);
@@ -2304,7 +2276,7 @@ s32 MoveBattleBar(enum BattlerId battler, u8 healthboxSpriteId, u8 whichBar, u8 
 
 static void MoveBattleBarGraphically(enum BattlerId battler, u8 whichBar)
 {
-    u8 array[8];
+    u8 array[12];
     u8 level;
     u8 barElementId;
     u8 i;
@@ -2375,14 +2347,23 @@ static void MoveBattleBarGraphically(enum BattlerId battler, u8 whichBar)
         level = GetMonData(GetBattlerMon(battler), MON_DATA_LEVEL);
         if (level >= MAX_LEVEL)
         {
-            for (i = 0; i < 8; i++)
+            for (i = 0; i < B_EXPBAR_PIXELS / 8; i++)
                 array[i] = 0;
         }
-                {
+        {
             u8 healthboxSpriteId = gBattleSpritesDataPtr->battleBars[battler].healthboxSpriteId;
-            RestoreHealthboxRect(healthboxSpriteId, healthboxSpriteId, 44, 37, 70, 16);
-            for (i = 0; i < 8; i++)
-                Blit4bppStripOnHealthbox(healthboxSpriteId, 44 + i * 8, 37, 1, GetHealthboxElementGfxPtr(HEALTHBOX_GFX_12) + array[i] * 32, 32);
+            u8 healthboxSpriteId2 = gSprites[healthboxSpriteId].oam.affineParam;
+            u32 *vramLeft = (u32 *)(OBJ_VRAM0 + gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP);
+            u32 *vramRight = (u32 *)(OBJ_VRAM0 + gSprites[healthboxSpriteId2].oam.tileNum * TILE_SIZE_4BPP);
+
+            for (i = 0; i < B_EXPBAR_PIXELS / 8; i++)
+            {
+                const u32 *srcTile = (const u32 *)(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_12) + array[i] * 32);
+                if (i < 5)
+                    vramLeft[4 * 64 + (3 + i) * 8 + 7] = srcTile[2];
+                else
+                    vramRight[4 * 64 + (i - 5) * 8 + 7] = srcTile[2];
+            }
         }
         break;
     }
