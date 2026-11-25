@@ -157,9 +157,9 @@ static const struct WindowTemplate sStandardBattleWindowTemplates[] =
 {
     [B_WIN_MSG] = {
         .bg = 0,
-        .tilemapLeft = 2,
+        .tilemapLeft = 1,
         .tilemapTop = 15,
-        .width = 26,
+        .width = 28,
         .height = 4,
         .paletteNum = 5,
         .baseBlock = 0x0090,
@@ -396,9 +396,9 @@ static const struct WindowTemplate sKantoTutorialBattleWindowTemplates[] =
 {
     [B_WIN_MSG] = {
         .bg = 0,
-        .tilemapLeft = 2,
+        .tilemapLeft = 1,
         .tilemapTop = 15,
-        .width = 26,
+        .width = 28,
         .height = 4,
         .paletteNum = 0,
         .baseBlock = 0x0090,
@@ -635,9 +635,9 @@ static const struct WindowTemplate sBattleArenaWindowTemplates[] =
 {
     [B_WIN_MSG] = {
         .bg = 0,
-        .tilemapLeft = 2,
+        .tilemapLeft = 1,
         .tilemapTop = 15,
-        .width = 26,
+        .width = 28,
         .height = 4,
         .paletteNum = 0,
         .baseBlock = 0x0090,
@@ -1052,7 +1052,6 @@ void DrawMainBattleBackground(void)
 static void DrawBattleTextboxUserFrame(void)
 {
     // Main battle dialogue box (rows 14..19, cols 0..29)
-    // Keep cols 1 & 28 inside rows 15..18 as tile 0x0A (pal 0) to match B_WIN_MSG fill
     FillBgTilemapBufferRect(0, 0x12,  0, 14,  1, 1, 1);
     FillBgTilemapBufferRect(0, 0x13,  1, 14, 28, 1, 1);
     FillBgTilemapBufferRect(0, 0x14, 29, 14,  1, 1, 1);

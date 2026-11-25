@@ -1924,15 +1924,6 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
 
     GetMonData(mon, MON_DATA_NICKNAME, nickname);
     StringGet_Nickname(nickname);
-    for (u32 j = 0; nickname[j] != EOS; j++)
-    {
-        if (nickname[j] >= 0xD5 && nickname[j] <= 0xEE)
-            nickname[j] -= (0xD5 - 0xBB); // 'a'-'z' -> 'A'-'Z'
-        else if (nickname[j] >= 0x16 && nickname[j] <= 0x29)
-            nickname[j] -= 0x15;         // accented lower -> upper
-        else if (nickname[j] >= 0xF4 && nickname[j] <= 0xF6)
-            nickname[j] -= 0x03;         // 'ä','ö','ü' -> 'Ä','Ö','Ü'
-    }
     ptr = StringCopy(gDisplayedStringBattle, nickname);
 
     gender = GetMonGender(mon);
