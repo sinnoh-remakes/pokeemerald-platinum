@@ -16,7 +16,6 @@
 #include "reset_rtc_screen.h"
 #include "berry_fix_program.h"
 #include "sound.h"
-#include "sprite.h"
 #include "task.h"
 #include "scanline_effect.h"
 #include "gpu_regs.h"
@@ -24,6 +23,7 @@
 #include "graphics.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/species.h"
 
 enum {
     TAG_VERSION = 1000,
@@ -53,25 +53,20 @@ static void CB2_GoToResetRtcScreen(void);
 static void CB2_GoToBerryFixScreen(void);
 static void CB2_GoToCopyrightScreen(void);
 
-static bool8 sTitleBgmStarted;
-// static void UpdateLegendaryMarkingColor(u8);
+static bool8 sTitleBgmStarted; // Set after the title theme replaces the intro music.
 
 static void SpriteCB_VersionBannerLeft(struct Sprite *sprite);
 static void SpriteCB_VersionBannerRight(struct Sprite *sprite);
 static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite);
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
 
-// const rom data
-static const u16 sUnusedUnknownPal[] = INCGFX_U16("graphics/title_screen/unused.pal", ".gbapal");
+// ROM graphics data.
 
-static const u32 sTitleScreenRayquazaGfx[] = INCGFX_U32("graphics/title_screen/giratina.png", ".4bpp.smol");
-static const u32 sTitleScreenRayquazaTilemap[] = INCGFX_U32("graphics/title_screen/giratina.bin", ".smolTM");
+static const u32 sTitleScreenGiratinaGfx[] = INCGFX_U32("graphics/title_screen/giratina.png", ".4bpp.smol");
+static const u32 sTitleScreenGiratinaTilemap[] = INCGFX_U32("graphics/title_screen/giratina.bin", ".smolTM");
 static const u32 sTitleScreenLogoShineGfx[] = INCGFX_U32("graphics/title_screen/logo_shine.png", ".4bpp.smol");
-static const u32 sTitleScreenCloudsGfx[] = INCGFX_U32("graphics/title_screen/clouds.png", ".4bpp.smol");
 
-
-
-// Used to blend "Emerald Version" as it passes over over the Pokémon banner.
+// Used to blend "Emerald Version" as it passes over the Pokémon logo.
 // Also used by the intro to blend the Game Freak name/logo in and out as they appear and disappear
 const u16 gTitleScreenAlphaBlend[64] =
 {
@@ -450,64 +445,18 @@ static void CreateCopyrightBanner(s16 x, s16 y)
 
 // Defines for SpriteCB_PokemonLogoShine
 enum {
-    SHINE_MODE_SINGLE_NO_BG_COLOR,
-    SHINE_MODE_DOUBLE,
     SHINE_MODE_SINGLE,
+    SHINE_MODE_DOUBLE,
 };
 
 #define SHINE_SPEED  4
 
-#define sMode     data[0]
-#define sBgColor  data[1]
-
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
 {
     if (sprite->x < DISPLAY_WIDTH + 32)
-    {
-        // In any mode except SHINE_MODE_SINGLE_NO_BG_COLOR the background
-        // color will change, in addition to the shine sprite moving.
-        if (sprite->sMode != SHINE_MODE_SINGLE_NO_BG_COLOR)
-        {
-            u16 backgroundColor;
-
-            if (sprite->x < DISPLAY_WIDTH / 2)
-            {
-                // Brighten background color
-                if (sprite->sBgColor < 31)
-                    sprite->sBgColor++;
-                if (sprite->sBgColor < 31)
-                    sprite->sBgColor++;
-            }
-            else
-            {
-                // Darken background color
-                if (sprite->sBgColor != 0)
-                    sprite->sBgColor--;
-                if (sprite->sBgColor != 0)
-                    sprite->sBgColor--;
-            }
-
-            backgroundColor = _RGB(sprite->sBgColor, sprite->sBgColor, sprite->sBgColor);
-
-            // Flash the background green for 4 frames of movement.
-            // Otherwise use the updating color.
-            if (sprite->x == DISPLAY_WIDTH / 2 + (3 * SHINE_SPEED)
-             || sprite->x == DISPLAY_WIDTH / 2 + (4 * SHINE_SPEED)
-             || sprite->x == DISPLAY_WIDTH / 2 + (5 * SHINE_SPEED)
-             || sprite->x == DISPLAY_WIDTH / 2 + (6 * SHINE_SPEED))
-                gPlttBufferFaded[0] = RGB(24, 31, 12);
-            else
-                gPlttBufferFaded[0] = backgroundColor;
-        }
-
         sprite->x += SHINE_SPEED;
-    }
     else
-    {
-        // Sprite has moved fully offscreen
-        gPlttBufferFaded[0] = RGB_BLACK;
         DestroySprite(sprite);
-    }
 }
 
 static void SpriteCB_PokemonLogoShine_Fast(struct Sprite *sprite)
@@ -524,22 +473,12 @@ static void StartPokemonLogoShine(u8 mode)
 
     switch (mode)
     {
-    case SHINE_MODE_SINGLE_NO_BG_COLOR:
     case SHINE_MODE_SINGLE:
-        // Create one regular shine sprite.
-        // If mode is SHINE_MODE_SINGLE it will also change the background color.
         spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, 68, 0);
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
-        gSprites[spriteId].sMode = mode;
         break;
-    case SHINE_MODE_DOUBLE:
-        // Create an invisible sprite with mode set to update the background color
-        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, 68, 0);
-        gSprites[spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
-        gSprites[spriteId].sMode = mode;
-        gSprites[spriteId].invisible = TRUE;
 
-        // Create two faster shine sprites
+    case SHINE_MODE_DOUBLE:
         spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, 68, 0);
         gSprites[spriteId].callback = SpriteCB_PokemonLogoShine_Fast;
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
@@ -551,16 +490,12 @@ static void StartPokemonLogoShine(u8 mode)
     }
 }
 
-#undef sMode
-#undef sBgColor
-
 static void VBlankCB(void)
 {
     ScanlineEffect_InitHBlankDmaTransfer();
     LoadOam();
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
-    // SetGpuReg(REG_OFFSET_BG1VOFS, gBattle_BG1_Y);
 }
 
 void CB2_InitTitleScreen(void)
@@ -597,16 +532,13 @@ void CB2_InitTitleScreen(void)
         gMain.state = 1;
         break;
     case 1:
-        // bg2
+        // BG2: Pokémon logo.
         DecompressDataWithHeaderVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
         DecompressDataWithHeaderVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
         LoadPalette(gTitleScreenBgPalettes, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
-        // bg3
-        DecompressDataWithHeaderVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
-        DecompressDataWithHeaderVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
-        // bg1
-        // DecompressDataWithHeaderVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
-        // DecompressDataWithHeaderVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
+        // BG0: Giratina artwork.
+        DecompressDataWithHeaderVram(sTitleScreenGiratinaGfx, (void *)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(sTitleScreenGiratinaTilemap, (void *)(BG_SCREEN_ADDR(26)));
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();
@@ -631,7 +563,7 @@ void CB2_InitTitleScreen(void)
         break;
     }
     case 3:
-        BeginNormalPaletteFade(PALETTES_ALL, 1, 16, 0, RGB_BLACK);
+        BeginNormalPaletteFade(PALETTES_ALL, 2, 16, 0, RGB_BLACK);
         SetVBlankCallback(VBlankCB);
         gMain.state = 4;
         break;
@@ -651,7 +583,6 @@ void CB2_InitTitleScreen(void)
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 12);
         SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(26) | BGCNT_16COLOR | BGCNT_TXT256x256);
-        // SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(9) | BGCNT_256COLOR | BGCNT_AFF256x256);
         EnableInterrupts(INTR_FLAG_VBLANK);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1
@@ -660,6 +591,7 @@ void CB2_InitTitleScreen(void)
                                     | DISPCNT_OBJ_ON
                                     | DISPCNT_WIN0_ON
                                     | DISPCNT_OBJWIN_ON);
+        // A skipped intro has no outro music to wait for.
         if (gIntroSkipped || (gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             m4aSongNumStart(MUS_PL_TITLE);
@@ -670,8 +602,7 @@ void CB2_InitTitleScreen(void)
     case 5:
         if (!UpdatePaletteFade())
         {
-            StartPokemonLogoShine(SHINE_MODE_SINGLE_NO_BG_COLOR);
-            // ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
+            StartPokemonLogoShine(SHINE_MODE_SINGLE);
             SetMainCallback2(MainCB2);
         }
         break;
@@ -686,8 +617,7 @@ static void MainCB2(void)
     UpdatePaletteFade();
 }
 
-// Shine the Pokémon logo two more times, and fade in the version banner
-
+// Start the title theme when the intro track has finished.
 static void CheckSwitchToTitleBgm(void)
 {
     if (!sTitleBgmStarted && (gMPlayInfo_BGM.status & 0xFFFF) == 0)
@@ -696,6 +626,8 @@ static void CheckSwitchToTitleBgm(void)
         sTitleBgmStarted = TRUE;
     }
 }
+
+// Shine the Pokémon logo two more times, then fade in the version banner.
 static void Task_TitleScreenPhase1(u8 taskId)
 {
     CheckSwitchToTitleBgm();
@@ -749,6 +681,7 @@ static void Task_TitleScreenPhase2(u8 taskId)
 {
     CheckSwitchToTitleBgm();
     u32 yPos;
+    u8 paletteNum;
 
     // Skip to next phase when A, B, Start, or Select is pressed
     if (JOY_NEW(A_B_START_SELECT) || gTasks[taskId].tSkipToNext)
@@ -766,8 +699,10 @@ static void Task_TitleScreenPhase2(u8 taskId)
         gTasks[taskId].tSkipToNext = TRUE;
         SetGpuReg(REG_OFFSET_BLDCNT, 0);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
+        SetGpuReg(REG_OFFSET_BLDY, 16); // Start Giratina fully dark
         SetGpuReg(REG_OFFSET_BG0HOFS, 16); // Shift Giratina left by 2 tiles
+        // Darken BG0 only; the Pokémon logo and title sprites stay unaffected.
+        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_EFFECT_DARKEN);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1
                                     | DISPCNT_OBJ_1D_MAP
                                     | DISPCNT_BG0_ON
@@ -775,10 +710,15 @@ static void Task_TitleScreenPhase2(u8 taskId)
                                     | DISPCNT_OBJ_ON);
         CreatePressStartBanner(START_BANNER_X, 132);
         CreateCopyrightBanner(80, 152);
+        // Fade the shared Press Start/copyright sprite palette in from black.
+        paletteNum = IndexOfSpritePaletteTag(TAG_PRESS_START_COPYRIGHT);
+        if (paletteNum < 16)
+            BeginNormalPaletteFade(1u << (16 + paletteNum), 2, 16, 0, RGB_BLACK);
         if (QUICKSTART && QUICKSTART_HUD)
             CreateQuickstartHud();
         gTasks[taskId].tBg1Y = 0;
         gTasks[taskId].data[7] = 0; // Giratina float timer
+        gTasks[taskId].data[8] = 0; // Giratina fade-in timer
         gTasks[taskId].func = Task_TitleScreenPhase3;
     }
 
@@ -796,14 +736,28 @@ static void Task_TitleScreenPhase2(u8 taskId)
     gTasks[taskId].data[6] = 6;  // Unused
 }
 
-// Show Rayquaza silhouette and process main title screen input
+// Show Giratina and process title-screen input
 static void Task_TitleScreenPhase3(u8 taskId)
 {
+    // Fade BG0 from fully dark to normal over 64 frames (~1.07 seconds).
+    if (gTasks[taskId].data[8] < 64)
+    {
+        gTasks[taskId].data[8]++;
+        if (!(gTasks[taskId].data[8] & 3))
+        {
+            SetGpuReg(REG_OFFSET_BLDY, 16 - (gTasks[taskId].data[8] >> 2));
+            if (gTasks[taskId].data[8] >= 64)
+                SetGpuReg(REG_OFFSET_BLDCNT, 0);
+        }
+    }
+
     if (QUICKSTART && JOY_NEW(SELECT_BUTTON))
         Quickstart();
 
     if (JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON))
     {
+        // Play the cry over the title theme as it fades away.
+        PlayCry_NormalNoDucking(SPECIES_GIRATINA, 0, CRY_VOLUME, CRY_PRIORITY_NORMAL);
         FadeOutBGM(4);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
         SetMainCallback2(CB2_GoToMainMenu);
@@ -833,7 +787,6 @@ static void Task_TitleScreenPhase3(u8 taskId)
         // Float Giratina with a sine wave
         gTasks[taskId].data[7] = (gTasks[taskId].data[7] + 1) & 0xFF;
         SetGpuReg(REG_OFFSET_BG0VOFS, 4 + Sin((u8)gTasks[taskId].data[7], 4));
-        // UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
         if (!sTitleBgmStarted && (gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             m4aSongNumStart(MUS_PL_TITLE);
@@ -879,17 +832,3 @@ static void CB2_GoToBerryFixScreen(void)
         SetMainCallback2(CB2_InitBerryFixProgram);
     }
 }
-
-// static void UpdateLegendaryMarkingColor(u8 frameNum)
-// {
-//     if ((frameNum % 4) == 0) // Change color every 4th frame
-//     {
-//         s32 intensity = Cos(frameNum, Q_8_8(0.5)) + Q_8_8(0.5);
-//         u32 r = 31 - Q_8_8_TO_INT(intensity * 31);
-//         u32 g = 31 - Q_8_8_TO_INT(intensity * 22);
-//         u32 b = 12;
-
-//         u16 color = RGB(r, g, b);
-//         LoadPalette(&color, BG_PLTT_ID(14) + 15, sizeof(color));
-//    }
-// }

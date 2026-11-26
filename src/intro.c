@@ -159,6 +159,7 @@ enum {
 static EWRAM_DATA enum Gender sIntroCharacterGender = 0;
 static EWRAM_DATA u16 sFlygonYOffset = 0;
 
+// Set when the player skips the intro; the full intro resets it on entry.
 COMMON_DATA bool8 gIntroSkipped = FALSE;
 COMMON_DATA u32 gIntroFrameCounter = 0;
 COMMON_DATA struct GcmbStruct gMultibootProgramStruct = {0};
@@ -1588,6 +1589,8 @@ void Task_Scene1_Load(u8 taskId)
     DecompressDataWithHeaderVram(sPtGfLogo_Gfx, (void *)BG_CHAR_ADDR(1));
     DecompressDataWithHeaderVram(sPtGfLogo_Tilemap, (void *)BG_SCREEN_ADDR(29));
     LoadPalette(sPtGfLogo_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
+    // Fade only the Game Freak BG1 palette up from black.
+    BeginNormalPaletteFade(1u << 1, 2, 16, 0, RGB_BLACK);
 
     LoadCompressedSpriteSheet(&sPtStars_SpriteSheet);
     LoadSpritePalette(&sPtStars_SpritePal);
@@ -1659,6 +1662,8 @@ static void Task_Scene1_Pt(u8 taskId)
                 DecompressDataWithHeaderVram(sPtGfPresents_Gfx, (void *)BG_CHAR_ADDR(1));
                 DecompressDataWithHeaderVram(sPtGfPresents_Tilemap, (void *)BG_SCREEN_ADDR(29));
                 LoadPalette(sPtGfPresents_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
+                // Reuse the same slow black fade for the Presents artwork.
+                BeginNormalPaletteFade(1u << 1, 2, 16, 0, RGB_BLACK);
                 tPtState = 3;
             }
         }
