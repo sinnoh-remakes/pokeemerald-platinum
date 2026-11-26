@@ -278,18 +278,29 @@ void WallyBufferExecCompleted(enum BattlerId battler)
     }
 }
 
+// Use the protagonist of the opposite gender for the tutorial helper.
+static enum TrainerPicID GetWallyTutorialTrainerPic(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return TRAINER_PIC_DAWN;
+
+    return TRAINER_PIC_LUCAS;
+}
+
 #define sSpeedX data[0]
 
 static void WallyHandleDrawTrainerPic(enum BattlerId battler)
 {
-    BtlController_HandleDrawTrainerPic(battler, TRAINER_PIC_WALLY, FALSE,
-                                       80, 80 + 4 * (8 - GetTrainerBackPicCoords(TRAINER_PIC_WALLY)->size),
+    enum TrainerPicID trainerPic = GetWallyTutorialTrainerPic();
+
+    BtlController_HandleDrawTrainerPic(battler, trainerPic, FALSE,
+                                       80, 80 + 4 * (8 - GetTrainerBackPicCoords(trainerPic)->size),
                                        30);
 }
 
 static void WallyHandleTrainerSlide(enum BattlerId battler)
 {
-    BtlController_HandleTrainerSlide(battler, TRAINER_PIC_WALLY);
+    BtlController_HandleTrainerSlide(battler, GetWallyTutorialTrainerPic());
 }
 
 #undef sSpeedX
@@ -366,7 +377,7 @@ static void WallyHandleFaintingCry(enum BattlerId battler)
 
 static void WallyHandleIntroTrainerBallThrow(enum BattlerId battler)
 {
-    const u16 *trainerPal = GetTrainerBackPicPalette(TRAINER_PIC_WALLY);
+    const u16 *trainerPal = GetTrainerBackPicPalette(GetWallyTutorialTrainerPic());
     BtlController_HandleIntroTrainerBallThrow(battler, 0xD6F8, trainerPal, 31, Intro_TryShinyAnimShowHealthbox);
 }
 
