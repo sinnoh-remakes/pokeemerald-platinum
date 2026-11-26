@@ -584,6 +584,7 @@ Route201_EventScript_PostRivalBattle::
 	clearflag B_FLAG_NO_WHITEOUT
 	delay 48
 	warp MAP_TWINLEAF_TOWN_PLAYERS_HOUSE_1F, 1, 5
+	waitstate
 	fadedefaultbgm
 	fadescreenswapbuffers FADE_TO_BLACK
 	release
