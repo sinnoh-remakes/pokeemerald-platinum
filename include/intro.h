@@ -6,6 +6,7 @@
 // Exported RAM declarations
 
 // Exported ROM declarations
+extern bool8 gIntroSkipped;
 void CB2_InitCopyrightScreenAfterBootup(void);
 void CB2_InitCopyrightScreenAfterTitleScreen(void);
 void PanFadeAndZoomScreen(u16 screenX, u16 screenY, u16 zoom, u16 alpha);

@@ -52,6 +52,8 @@ static void CB2_GoToClearSaveDataScreen(void);
 static void CB2_GoToResetRtcScreen(void);
 static void CB2_GoToBerryFixScreen(void);
 static void CB2_GoToCopyrightScreen(void);
+
+static bool8 sTitleBgmStarted;
 // static void UpdateLegendaryMarkingColor(u8);
 
 static void SpriteCB_VersionBannerLeft(struct Sprite *sprite);
@@ -572,11 +574,12 @@ void CB2_InitTitleScreen(void)
     {
     default:
     case 0:
+        sTitleBgmStarted = FALSE;
         SetVBlankCallback(NULL);
         SetGpuReg(REG_OFFSET_BLDCNT, 0);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 0);
-        *((u16 *)PLTT) = RGB_WHITE;
+        *((u16 *)PLTT) = RGB_BLACK;
         SetGpuReg(REG_OFFSET_DISPCNT, 0);
         SetGpuReg(REG_OFFSET_BG2CNT, 0);
         SetGpuReg(REG_OFFSET_BG1CNT, 0);
@@ -585,7 +588,7 @@ void CB2_InitTitleScreen(void)
         SetGpuReg(REG_OFFSET_BG2VOFS, 0);
         SetGpuReg(REG_OFFSET_BG1HOFS, 0);
         SetGpuReg(REG_OFFSET_BG1VOFS, 0);
-        SetGpuReg(REG_OFFSET_BG0HOFS, 0);
+        SetGpuReg(REG_OFFSET_BG0HOFS, 16);
         SetGpuReg(REG_OFFSET_BG0VOFS, 0);
         DmaFill16(3, 0, (void *)VRAM, VRAM_SIZE);
         DmaFill32(3, 0, (void *)OAM, OAM_SIZE);
@@ -628,7 +631,7 @@ void CB2_InitTitleScreen(void)
         break;
     }
     case 3:
-        BeginNormalPaletteFade(PALETTES_ALL, 1, 16, 0, RGB_WHITEALPHA);
+        BeginNormalPaletteFade(PALETTES_ALL, 1, 16, 0, RGB_BLACK);
         SetVBlankCallback(VBlankCB);
         gMain.state = 4;
         break;
@@ -657,7 +660,11 @@ void CB2_InitTitleScreen(void)
                                     | DISPCNT_OBJ_ON
                                     | DISPCNT_WIN0_ON
                                     | DISPCNT_OBJWIN_ON);
-        m4aSongNumStart(MUS_PL_TITLE);
+        if (gIntroSkipped || (gMPlayInfo_BGM.status & 0xFFFF) == 0)
+        {
+            m4aSongNumStart(MUS_PL_TITLE);
+            sTitleBgmStarted = TRUE;
+        }
         gMain.state = 5;
         break;
     case 5:
@@ -680,8 +687,18 @@ static void MainCB2(void)
 }
 
 // Shine the Pokémon logo two more times, and fade in the version banner
+
+static void CheckSwitchToTitleBgm(void)
+{
+    if (!sTitleBgmStarted && (gMPlayInfo_BGM.status & 0xFFFF) == 0)
+    {
+        m4aSongNumStart(MUS_PL_TITLE);
+        sTitleBgmStarted = TRUE;
+    }
+}
 static void Task_TitleScreenPhase1(u8 taskId)
 {
+    CheckSwitchToTitleBgm();
     // Skip to next phase when A, B, Start, or Select is pressed
     if (JOY_NEW(A_B_START_SELECT) || gTasks[taskId].tSkipToNext)
     {
@@ -730,6 +747,7 @@ static void Task_TitleScreenPhase1(u8 taskId)
 // Create "Press Start" and copyright banners, and slide Pokémon logo up
 static void Task_TitleScreenPhase2(u8 taskId)
 {
+    CheckSwitchToTitleBgm();
     u32 yPos;
 
     // Skip to next phase when A, B, Start, or Select is pressed
@@ -746,20 +764,21 @@ static void Task_TitleScreenPhase2(u8 taskId)
     else
     {
         gTasks[taskId].tSkipToNext = TRUE;
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG0 | BLDCNT_TGT2_BD);
-        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(6, 15));
+        SetGpuReg(REG_OFFSET_BLDCNT, 0);
+        SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 0);
+        SetGpuReg(REG_OFFSET_BG0HOFS, 16); // Shift Giratina left by 2 tiles
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1
                                     | DISPCNT_OBJ_1D_MAP
                                     | DISPCNT_BG0_ON
-                                    | DISPCNT_BG1_ON
                                     | DISPCNT_BG2_ON
                                     | DISPCNT_OBJ_ON);
-        CreatePressStartBanner(START_BANNER_X, 108);
-        CreateCopyrightBanner(START_BANNER_X, 148);
+        CreatePressStartBanner(START_BANNER_X, 132);
+        CreateCopyrightBanner(80, 152);
         if (QUICKSTART && QUICKSTART_HUD)
             CreateQuickstartHud();
         gTasks[taskId].tBg1Y = 0;
+        gTasks[taskId].data[7] = 0; // Giratina float timer
         gTasks[taskId].func = Task_TitleScreenPhase3;
     }
 
@@ -810,14 +829,17 @@ static void Task_TitleScreenPhase3(u8 taskId)
     {
         SetGpuReg(REG_OFFSET_BG2Y_L, 0);
         SetGpuReg(REG_OFFSET_BG2Y_H, 0);
-        if (++gTasks[taskId].tCounter & 1)
-        {
-            gTasks[taskId].tBg1Y++;
-            gBattle_BG1_Y = gTasks[taskId].tBg1Y / 2;
-            gBattle_BG1_X = 0;
-        }
+        SetGpuReg(REG_OFFSET_BG0HOFS, 16);
+        // Float Giratina with a sine wave
+        gTasks[taskId].data[7] = (gTasks[taskId].data[7] + 1) & 0xFF;
+        SetGpuReg(REG_OFFSET_BG0VOFS, 4 + Sin((u8)gTasks[taskId].data[7], 4));
         // UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
-        if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
+        if (!sTitleBgmStarted && (gMPlayInfo_BGM.status & 0xFFFF) == 0)
+        {
+            m4aSongNumStart(MUS_PL_TITLE);
+            sTitleBgmStarted = TRUE;
+        }
+        else if (sTitleBgmStarted && (gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
             SetMainCallback2(CB2_GoToCopyrightScreen);
