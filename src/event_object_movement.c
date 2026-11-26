@@ -2760,18 +2760,24 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         switch (gMapHeader.regionMapSectionId)
         {
         case MAPSEC_RUSTBORO_CITY:
+#if IS_FRLG
         case MAPSEC_PEWTER_CITY:
+#endif
             multi = TYPE_ROCK;
             break;
         case MAPSEC_DEWFORD_TOWN:
             multi = TYPE_FIGHTING;
             break;
         case MAPSEC_MAUVILLE_CITY:
+#if IS_FRLG
         case MAPSEC_VERMILION_CITY:
+#endif
             multi = TYPE_ELECTRIC;
             break;
         case MAPSEC_LAVARIDGE_TOWN:
+#if IS_FRLG
         case MAPSEC_CINNABAR_ISLAND:
+#endif
             multi = TYPE_FIRE;
             break;
         case MAPSEC_PETALBURG_CITY:
@@ -2781,13 +2787,18 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
             multi = TYPE_FLYING;
             break;
         case MAPSEC_MOSSDEEP_CITY:
+#if IS_FRLG
         case MAPSEC_SAFFRON_CITY:
+#endif
             multi = TYPE_PSYCHIC;
             break;
         case MAPSEC_SOOTOPOLIS_CITY:
+#if IS_FRLG
         case MAPSEC_CERULEAN_CITY:
+#endif
             multi = TYPE_WATER;
             break;
+#if IS_FRLG
         case MAPSEC_CELADON_CITY:
             multi = TYPE_GRASS;
             break;
@@ -2797,6 +2808,7 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         case MAPSEC_VIRIDIAN_CITY:
             multi = TYPE_GROUND;
             break;
+#endif
         default:
             multi = NUMBER_OF_MON_TYPES;
         }

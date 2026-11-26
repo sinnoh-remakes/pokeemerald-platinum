@@ -22,6 +22,7 @@ static EWRAM_DATA bool8 sAllocedBg0TilemapBuffer = FALSE;
 
 static void Task_MapPreviewScreen_FadeIn(u8 taskId);
 
+#if IS_FRLG
 static const u8 sViridianForestMapPreviewPalette[] = INCGFX_U8("graphics/map_preview/viridian_forest/tiles.png", ".gbapal");
 static const u8 sViridianForestMapPreviewTiles[] = INCGFX_U8("graphics/map_preview/viridian_forest/tiles.png", ".4bpp.smol");
 static const u8 sViridianForestMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/viridian_forest/tilemap.bin.smolTM");
@@ -312,6 +313,9 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .palptr = sMoneanChamberMapPreviewPalette
     }
 };
+#else
+static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {0};
+#endif
 
 static const struct WindowTemplate sMapNameWindow = {
     .bg = 0,
@@ -349,6 +353,7 @@ bool32 ShouldRunMapPreview(void)
 
 static u8 GetMapPreviewScreenIdx(mapsec_u8_t mapsec)
 {
+#if IS_FRLG
     s32 i;
 
     for (i = 0; i < MPS_COUNT; i++)
@@ -359,6 +364,9 @@ static u8 GetMapPreviewScreenIdx(mapsec_u8_t mapsec)
         }
     }
     return MPS_COUNT;
+#else
+    return MPS_COUNT;
+#endif
 }
 
 bool32 CurrentMapHasPreviewScreen(enum MapPreviewScreenType type)
