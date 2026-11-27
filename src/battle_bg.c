@@ -1027,10 +1027,18 @@ void InitBattleBgsVideo(void)
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJWIN_ON | DISPCNT_WIN0_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
 }
 
+enum
+{
+    // F_PAL_BG fades palette banks 1–3; keep the custom frame separate.
+    BATTLE_TEXTBOX_FRAME_PALETTE = 12,
+};
+
 void LoadBattleMenuWindowGfx(void)
 {
     LoadUserWindowBorderGfx(2, 0x12, BG_PLTT_ID(1));
     LoadUserWindowBorderGfx(2, 0x22, BG_PLTT_ID(1));
+    // Keep the custom frame outside F_PAL_BG palette fades.
+    LoadPalette(&gPlttBufferUnfaded[BG_PLTT_ID(1)], BG_PLTT_ID(BATTLE_TEXTBOX_FRAME_PALETTE), PLTT_SIZE_4BPP);
     LoadPalette(gBattleWindowTextPalette, BG_PLTT_ID(5), PLTT_SIZE_4BPP);
 
     if ((gBattleTypeFlags & (BATTLE_TYPE_ARENA | BATTLE_TYPE_POKEDUDE))
@@ -1052,26 +1060,26 @@ void DrawMainBattleBackground(void)
 static void DrawBattleTextboxUserFrame(void)
 {
     // Main battle dialogue box (rows 14..19, cols 0..29)
-    FillBgTilemapBufferRect(0, 0x12,  0, 14,  1, 1, 1);
-    FillBgTilemapBufferRect(0, 0x13,  1, 14, 28, 1, 1);
-    FillBgTilemapBufferRect(0, 0x14, 29, 14,  1, 1, 1);
-    FillBgTilemapBufferRect(0, 0x15,  0, 15,  1, 4, 1);
-    FillBgTilemapBufferRect(0, 0x16,  1, 15, 28, 4, 1);
-    FillBgTilemapBufferRect(0, 0x17, 29, 15,  1, 4, 1);
-    FillBgTilemapBufferRect(0, 0x18,  0, 19,  1, 1, 1);
-    FillBgTilemapBufferRect(0, 0x19,  1, 19, 28, 1, 1);
-    FillBgTilemapBufferRect(0, 0x1A, 29, 19,  1, 1, 1);
+    FillBgTilemapBufferRect(0, 0x12,  0, 14,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x13,  1, 14, 28, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x14, 29, 14,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x15,  0, 15,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x16,  1, 15, 28, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x17, 29, 15,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x18,  0, 19,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x19,  1, 19, 28, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x1A, 29, 19,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
 
     // Action prompt box ("What will MON do?", rows 34..39, cols 0..14)
-    FillBgTilemapBufferRect(0, 0x12,  0, 34,  1, 1, 1);
-    FillBgTilemapBufferRect(0, 0x13,  1, 34, 13, 1, 1);
-    FillBgTilemapBufferRect(0, 0x14, 14, 34,  1, 1, 1);
-    FillBgTilemapBufferRect(0, 0x15,  0, 35,  1, 4, 1);
-    FillBgTilemapBufferRect(0, 0x16,  1, 35, 13, 4, 1);
-    FillBgTilemapBufferRect(0, 0x17, 14, 35,  1, 4, 1);
-    FillBgTilemapBufferRect(0, 0x18,  0, 39,  1, 1, 1);
-    FillBgTilemapBufferRect(0, 0x19,  1, 39, 13, 1, 1);
-    FillBgTilemapBufferRect(0, 0x1A, 14, 39,  1, 1, 1);
+    FillBgTilemapBufferRect(0, 0x12,  0, 34,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x13,  1, 34, 13, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x14, 14, 34,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x15,  0, 35,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x16,  1, 35, 13, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x17, 14, 35,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x18,  0, 39,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x19,  1, 39, 13, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x1A, 14, 39,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
 }
 
 void LoadBattleTextboxAndBackground(void)
