@@ -772,6 +772,7 @@ bool8 LoadRegionMapGfx(void)
     case 2:
         regionMapType = GetRegionMapType(gMapHeader.regionMapSectionId);
         if (!FreeTempTileDataBuffersIfPossible())
+            // The 8bpp map uses three BG palette banks starting at palette index 112.
             LoadPalette(gRegionMapInfos[regionMapType].regionMapPalette, BG_PLTT_ID(7), 3 * PLTT_SIZE_4BPP);
         break;
     case 3:

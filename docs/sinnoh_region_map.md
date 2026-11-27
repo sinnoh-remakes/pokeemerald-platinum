@@ -2,21 +2,24 @@
 
 How to link new maps to the Sinnoh Region Map, register locations before their playable maps exist, and enable Fly destinations as towns are completed.
 
-## Architecture & Why Kanto Sections Were Excluded (8-bit `u8` Limit)
+## Architecture & Region Section ID Capacity
 
 Region Map locations, Fly destinations, and playable map warps are kept separate:
 - **Region Map location:** An entry in `src/data/region_map/region_map_sections.json` (plus cells in `src/data/region_map/region_map_layout.h` for overworld areas). Safe to register before the playable map exists.
 - **Fly destination:** An entry in `sFlyLocations` and `GetMapsecType()` (`src/region_map.c`) gated by a `FLAG_VISITED_*` flag.
 - **Map warp:** A valid target map and `HEAL_LOCATION_*` in `src/data/heal_locations.json` and `sMapHealLocations`.
 
-Per `include/gametypes.h`, `mapsec_u8_t` / `metloc_u8_t` is canonically **8-bit** (`0`–`252`, with `0xFD`–`0xFF` reserved for `METLOC_SPECIAL_EGG`, `METLOC_IN_GAME_TRADE`, and `METLOC_FATEFUL_ENCOUNTER`).
+Per `include/gametypes.h`, `mapsec_u8_t` / `metloc_u8_t` currently use an 8-bit representation. Values `0xFD`–`0xFF` are reserved for `METLOC_SPECIAL_EGG`, `METLOC_IN_GAME_TRADE`, and `METLOC_FATEFUL_ENCOUNTER`.
 
-Widening `mapsec_u8_t` to `u16` was intentionally avoided:
-1. Met locations are stored inside `BoxPokemon` and save-block structs, which are packed to fit GBA Flash save limits—changing `u8` to `u16` breaks save-struct layout and existing `.sav` compatibility.
-2. Any call site still expecting `metloc_u8_t` or `mapsec_u8_t` would silently truncate IDs `>= 253` (`id % 256`), corrupting caught-location names.
-3. The `0xFD`–`0xFF` sentinel checks are hardcoded for 8-bit values across egg, trade, and summary-screen logic.
+This is an existing implementation constraint, not an insurmountable save-compatibility restriction. Widening map-section IDs is possible, but it requires coordinated changes:
 
-Instead, we dropped the 103 Kanto/Sevii-only sections from `region_map_sections.json` (moving `MAPSEC_POKEMON_LEAGUE` and `MAPSEC_POKEMON_MANSION` to Sinnoh and guarding FRLG-only C code behind `#if IS_FRLG`). That keeps the total `MAPSEC_COUNT` well under `253` while leaving ~55 free 8-bit slots for new Sinnoh locations.
+1. A Pokémon's met location is stored as a byte in `PokemonSubstruct3`, which is part of the `secure` union in `BoxPokemon`. The union reserves space for four equally sized substructures, so increasing the size of `PokemonSubstruct3` can increase the stored data for every boxed or party Pokémon.
+2. Map-section IDs are also used by map headers, warp state, Pokenav and TV data, and functions that currently accept `mapsec_u8_t`. Those fields and call sites would need to be audited and widened to prevent truncation.
+3. The `0xFD`–`0xFF` met-location sentinel values are part of the current 8-bit representation and would need deliberate handling in a wider format.
+
+Existing saves could be supported with a versioned migration. Since the project is still under development, adopting a new save format or requiring a fresh save could also be considered. Save compatibility is therefore a migration cost, not a technical impossibility.
+
+For this PR, the decision is to retain the current 8-bit representation and keep the change scoped to the existing data model. The 103 Kanto/Sevii-only sections were removed from `region_map_sections.json` to make room for Sinnoh locations; `MAPSEC_POKEMON_LEAGUE` and `MAPSEC_POKEMON_MANSION` were moved to Sinnoh, and FRLG-only C code remains guarded behind `#if IS_FRLG`. Widening the ID format can be reconsidered if the project needs to retain those sections or exceeds the available 8-bit capacity.
 
 *(Note: Do not hand-edit `include/constants/region_map_sections.h` or `src/data/region_map/region_map_entries.h`; both are generated from `region_map_sections.json` during `make`.)*
 
