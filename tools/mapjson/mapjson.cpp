@@ -833,10 +833,16 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
         }
         string map_name = json_to_string(map_data, "name");
 
-        if ((version == "emerald" && region != "REGION_HOENN")
-         || (version == "firered" && region != "REGION_KANTO")) {
+        // This fork builds Sinnoh maps with MAP_VERSION=emerald; mapjson
+        // does not have a separate "platinum" game-version mode.
+        bool is_invalid_region = false;
+        if (version == "emerald")
+            is_invalid_region = region != "REGION_HOENN" && region != "REGION_SINNOH";
+        else if (version == "firered")
+            is_invalid_region = region != "REGION_KANTO";
+
+        if (is_invalid_region)
             invalid_maps.push_back(map_name);
-        }
     }
 
     if (groups_data == Json())

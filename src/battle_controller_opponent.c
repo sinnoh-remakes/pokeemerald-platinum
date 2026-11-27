@@ -320,7 +320,11 @@ static u32 OpponentGetTrainerPicId(enum BattlerId battlerId)
     {
         trainerPicId = GetFrontierBrainTrainerPicIndex();
     }
+#if IS_FRLG
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_TOWER && gMapHeader.regionMapSectionId == MAPSEC_TRAINER_TOWER_2)
+#else
+    else if (FALSE)
+#endif
     {
         trainerPicId = GetTrainerTowerTrainerFrontSpriteId();
     }

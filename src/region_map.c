@@ -133,10 +133,12 @@ static const u16 sRegionMapPlayerIcon_LeafPal[] = INCGFX_U16("graphics/pokenav/r
 static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCGFX_U8("graphics/pokenav/region_map/leaf_icon.png", ".4bpp");
 
 #include "data/region_map/region_map_layout.h"
+#if IS_FRLG
 #include "data/region_map/region_map_layout_kanto.h"
 #include "data/region_map/region_map_layout_sevii123.h"
 #include "data/region_map/region_map_layout_sevii45.h"
 #include "data/region_map/region_map_layout_sevii67.h"
+#endif
 #include "data/region_map/region_map_entries.h"
 
 static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
@@ -437,6 +439,7 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_ROUTE_132] = {MAP_GROUP(MAP_ROUTE132), MAP_NUM(MAP_ROUTE132), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_133] = {MAP_GROUP(MAP_ROUTE133), MAP_NUM(MAP_ROUTE133), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_134] = {MAP_GROUP(MAP_ROUTE134), MAP_NUM(MAP_ROUTE134), HEAL_LOCATION_NONE},
+#if IS_FRLG
     [MAPSEC_PALLET_TOWN] = {MAP_GROUP(MAP_PALLET_TOWN), MAP_NUM(MAP_PALLET_TOWN), HEAL_LOCATION_PALLET_TOWN},
     [MAPSEC_VIRIDIAN_CITY] = {MAP_GROUP(MAP_VIRIDIAN_CITY), MAP_NUM(MAP_VIRIDIAN_CITY), HEAL_LOCATION_VIRIDIAN_CITY},
     [MAPSEC_PEWTER_CITY] = {MAP_GROUP(MAP_PEWTER_CITY), MAP_NUM(MAP_PEWTER_CITY), HEAL_LOCATION_PEWTER_CITY},
@@ -541,6 +544,7 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_RIXY_CHAMBER] = {MAP_GROUP(MAP_PALLET_TOWN), MAP_NUM(MAP_PALLET_TOWN), HEAL_LOCATION_NONE},
     [MAPSEC_VIAPOIS_CHAMBER] = {MAP_GROUP(MAP_PALLET_TOWN), MAP_NUM(MAP_PALLET_TOWN), HEAL_LOCATION_NONE},
     [MAPSEC_EMBER_SPA] = {MAP_GROUP(MAP_PALLET_TOWN), MAP_NUM(MAP_PALLET_TOWN), HEAL_LOCATION_NONE},
+#endif
 };
 
 static const u8 *const sEverGrandeCityNames[] =
@@ -768,6 +772,7 @@ bool8 LoadRegionMapGfx(void)
     case 2:
         regionMapType = GetRegionMapType(gMapHeader.regionMapSectionId);
         if (!FreeTempTileDataBuffersIfPossible())
+            // The 8bpp map uses three BG palette banks starting at palette index 112.
             LoadPalette(gRegionMapInfos[regionMapType].regionMapPalette, BG_PLTT_ID(7), 3 * PLTT_SIZE_4BPP);
         break;
     case 3:
@@ -1170,6 +1175,7 @@ enum RegionMapType GetRegionMapType(u32 mapSecId)
 {
     switch (GetRegionForSectionId(mapSecId))
     {
+#if IS_FRLG
     case REGION_KANTO:
         switch (GetKantoSubregion(mapSecId))
         {
@@ -1183,6 +1189,7 @@ enum RegionMapType GetRegionMapType(u32 mapSecId)
         default:
             return REGION_MAP_KANTO;
         }
+#endif
     case REGION_HOENN:
     default:
         return REGION_MAP_HOENN;
@@ -1200,6 +1207,7 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
 
     switch (GetCurrentRegion())
     {
+#if IS_FRLG
     case REGION_KANTO:
         switch (GetKantoSubregion(gMapHeader.regionMapSectionId))
         {
@@ -1213,6 +1221,7 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
         default:
                 return sRegionMapSections_Kanto[y][x];
         }
+#endif
     case REGION_HOENN:
     default:
             return sRegionMap_MapSectionLayout[y][x];
@@ -1440,6 +1449,24 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
         return FlagGet(FLAG_VISITED_JUBILIFE_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_OREBURGH_CITY:
         return FlagGet(FLAG_VISITED_OREBURGH_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+    // Completed Sinnoh towns check FLAG_VISITED_*; unbuilt towns stay CANTFLY until wired.
+    case MAPSEC_FLOAROMA_TOWN:
+        return FlagGet(FLAG_VISITED_FLOAROMA_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+    case MAPSEC_ETERNA_CITY:
+        return FlagGet(FLAG_VISITED_ETERNA_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+    case MAPSEC_HEARTHOME_CITY:
+    case MAPSEC_SOLACEON_TOWN:
+    case MAPSEC_CELESTIC_TOWN:
+    case MAPSEC_VEILSTONE_CITY:
+    case MAPSEC_PASTORIA_CITY:
+    case MAPSEC_CANALAVE_CITY:
+    case MAPSEC_SNOWPOINT_CITY:
+    case MAPSEC_SUNYSHORE_CITY:
+    case MAPSEC_FIGHT_AREA:
+    case MAPSEC_SURVIVAL_AREA:
+    case MAPSEC_RESORT_AREA:
+    case MAPSEC_POKEMON_LEAGUE:
+        return MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_LITTLEROOT_TOWN:
         return FlagGet(FLAG_VISITED_LITTLEROOT_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_OLDALE_TOWN:
@@ -1476,6 +1503,7 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
         return FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
     case MAPSEC_SOUTHERN_ISLAND:
         return FlagGet(FLAG_LANDMARK_SOUTHERN_ISLAND) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
+#if IS_FRLG
     case MAPSEC_PALLET_TOWN:
         return FlagGet(FLAG_WORLD_MAP_PALLET_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_VIRIDIAN_CITY:
@@ -1516,6 +1544,7 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
         return FlagGet(FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_ROUTE_10_POKECENTER:
         return FlagGet(FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+#endif
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -2151,88 +2180,40 @@ struct FlyLocation
     u16 mapsec;
 };
 
+// Sinnoh uses the REGION_MAP_HOENN slot; only add towns here once their map, heal location, and visited flag exist.
 static const struct FlyLocation sFlyLocations[] =
 {
     {
         .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_LITTLEROOT_TOWN,
-        .flag = FLAG_VISITED_LITTLEROOT_TOWN,
+        .mapsec = MAPSEC_TWINLEAF_TOWN,
+        .flag = FLAG_VISITED_TWINLEAF_TOWN,
     },
     {
         .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_OLDALE_TOWN,
-        .flag = FLAG_VISITED_OLDALE_TOWN,
+        .mapsec = MAPSEC_SANDGEM_TOWN,
+        .flag = FLAG_VISITED_SANDGEM_TOWN,
     },
     {
         .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_DEWFORD_TOWN,
-        .flag = FLAG_VISITED_DEWFORD_TOWN,
+        .mapsec = MAPSEC_JUBILIFE_CITY,
+        .flag = FLAG_VISITED_JUBILIFE_CITY,
     },
     {
         .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_LAVARIDGE_TOWN,
-        .flag = FLAG_VISITED_LAVARIDGE_TOWN,
+        .mapsec = MAPSEC_OREBURGH_CITY,
+        .flag = FLAG_VISITED_OREBURGH_CITY,
     },
     {
         .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_FALLARBOR_TOWN,
-        .flag = FLAG_VISITED_FALLARBOR_TOWN,
+        .mapsec = MAPSEC_FLOAROMA_TOWN,
+        .flag = FLAG_VISITED_FLOAROMA_TOWN,
     },
     {
         .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_VERDANTURF_TOWN,
-        .flag = FLAG_VISITED_VERDANTURF_TOWN,
+        .mapsec = MAPSEC_ETERNA_CITY,
+        .flag = FLAG_VISITED_ETERNA_CITY,
     },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_PACIFIDLOG_TOWN,
-        .flag = FLAG_VISITED_PACIFIDLOG_TOWN,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_PETALBURG_CITY,
-        .flag = FLAG_VISITED_PETALBURG_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_SLATEPORT_CITY,
-        .flag = FLAG_VISITED_SLATEPORT_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_MAUVILLE_CITY,
-        .flag = FLAG_VISITED_MAUVILLE_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_RUSTBORO_CITY,
-        .flag = FLAG_VISITED_RUSTBORO_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_FORTREE_CITY,
-        .flag = FLAG_VISITED_FORTREE_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_LILYCOVE_CITY,
-        .flag = FLAG_VISITED_LILYCOVE_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_MOSSDEEP_CITY,
-        .flag = FLAG_VISITED_MOSSDEEP_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_SOOTOPOLIS_CITY,
-        .flag = FLAG_VISITED_SOOTOPOLIS_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_EVER_GRANDE_CITY,
-        .flag = FLAG_VISITED_EVER_GRANDE_CITY,
-    },
+#if IS_FRLG
     {
         .regionMapType = REGION_MAP_KANTO,
         .mapsec = MAPSEC_PALLET_TOWN,
@@ -2333,6 +2314,7 @@ static const struct FlyLocation sFlyLocations[] =
         .mapsec = MAPSEC_ROUTE_10_POKECENTER,
         .flag = FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F,
     },
+#endif
 };
 
 

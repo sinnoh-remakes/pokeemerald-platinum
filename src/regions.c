@@ -2,6 +2,7 @@
 #include "regions.h"
 
 
+#if IS_FRLG
 static const u16 sKantoSubregionMapsecs[KANTO_SUBREGION_COUNT][30] = {
     [KANTO_SUBREGION_KANTO] =
     {
@@ -69,9 +70,11 @@ static const u16 sKantoSubregionMapsecs[KANTO_SUBREGION_COUNT][30] = {
         MAPSEC_NONE
     }
 };
+#endif
 
 enum KantoSubRegion GetKantoSubregion(u32 mapSecId)
 {
+#if IS_FRLG
     for (u32 i = KANTO_SUBREGION_KANTO; i <= KANTO_SUBREGION_SEVII67; i++)
     {
         for (u32 j = 0; sKantoSubregionMapsecs[i][j] != MAPSEC_NONE; j++)
@@ -80,5 +83,6 @@ enum KantoSubRegion GetKantoSubregion(u32 mapSecId)
                 return i;
         }
     }
+#endif
     return KANTO_SUBREGION_KANTO;
 }

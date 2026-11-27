@@ -515,7 +515,7 @@ static const u8 *ExpandPlaceholder_Region(void)
     if (IS_FRLG)
         return gText_Kanto;
     else
-        return gText_Hoenn;
+        return gText_Sinnoh;
 }
 
 const u8 *GetExpandedPlaceholder(u32 id)
