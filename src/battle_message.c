@@ -1471,7 +1471,6 @@ const u8 gText_PkmnStoppedEvolving[] = _("Huh? {STR_VAR_1}\nstopped evolving!\p"
 const u8 gText_EllipsisQuestionMark[] = _("……?\p");
 const u8 gText_WhatWillPkmnDo[] = _("What will\n{B_BUFF1} do?");
 const u8 gText_WhatWillPkmnDo2[] = _("What will\n{B_PLAYER_NAME} do?");
-const u8 gText_WhatWillWallyDo[] = _("What will\nWALLY do?");
 const u8 gText_LinkStandby[] = _("{PAUSE 16}Link standby…");
 const u8 gText_BattleMenu[] = _("Battle{CLEAR_TO 56}Bag\nPokémon{CLEAR_TO 56}Run");
 const u8 gText_SafariZoneMenu[] = _("Ball{CLEAR_TO 56}{POKEBLOCK}\nGo Near{CLEAR_TO 56}Run");
@@ -3555,9 +3554,17 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                 if (gBattleTypeFlags & BATTLE_TYPE_CATCH_TUTORIAL)
                 {
                     if (IS_FRLG)
+                    {
                         textStart = StringCopy(textStart, COMPOUND_STRING("The old man"));
+                    }
+                    else if (gSaveBlock2Ptr->playerGender == MALE)
+                    {
+                        textStart = StringCopy(textStart, COMPOUND_STRING("DAWN"));
+                    }
                     else
-                        textStart = StringCopy(textStart, COMPOUND_STRING("WALLY"));
+                    {
+                        textStart = StringCopy(textStart, COMPOUND_STRING("LUCAS"));
+                    }
                 }
                 else if (GetBattlerPosition(gBattlerAttacker) == B_POSITION_PLAYER_LEFT)
                 {

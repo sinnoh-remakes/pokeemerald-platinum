@@ -98,6 +98,8 @@ EWRAM_DATA TrainerBattleParameter gTrainerBattleParameter = {0};
 EWRAM_DATA u16 gPartnerTrainerId = 0;
 EWRAM_DATA static u8 *sTrainerBattleEndScript = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
+EWRAM_DATA static struct Pokemon sCatchingTutorialSavedPlayerMon;
+EWRAM_DATA static bool8 sCatchingTutorialSavedPlayerMonValid = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 
 // The first transition is used if the enemy Pokémon are lower level than our Pokémon.
@@ -524,12 +526,30 @@ static void DoBattlePyramidTrainerHillBattle(void)
     TryUpdateGymLeaderRematchFromTrainer();
 }
 
-// Initiates battle where Wally catches Ralts
-void StartWallyTutorialBattle(void)
+// Restore the player's party after the catching tutorial.
+static void CB2_ReturnFromCatchingTutorialBattle(void)
 {
-    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_RALTS, 5);
+    if (sCatchingTutorialSavedPlayerMonValid)
+    {
+        gParties[B_TRAINER_PLAYER][0] = sCatchingTutorialSavedPlayerMon;
+        sCatchingTutorialSavedPlayerMonValid = FALSE;
+    }
+
+    CB2_ReturnToFieldContinueScriptPlayMapMusic();
+}
+
+void StartCatchingTutorialBattle(void)
+{
+    u16 helperStarter = GetStarterPokemon((VarGet(VAR_STARTER_MON) + 2) % 3);
+
+    sCatchingTutorialSavedPlayerMon = gParties[B_TRAINER_PLAYER][0];
+    sCatchingTutorialSavedPlayerMonValid = TRUE;
+
+    CreateMaleMon(&gParties[B_TRAINER_PLAYER][0], helperStarter, 5);
+    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_BIDOOF, 2);
+
     LockPlayerFieldControls();
-    gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
+    gMain.savedCallback = CB2_ReturnFromCatchingTutorialBattle;
     gBattleTypeFlags = BATTLE_TYPE_CATCH_TUTORIAL;
     CreateBattleStartTask(B_TRANSITION_SLICE, 0);
 }

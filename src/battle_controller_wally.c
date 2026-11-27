@@ -278,18 +278,29 @@ void WallyBufferExecCompleted(enum BattlerId battler)
     }
 }
 
+// Use the opposite-gender protagonist as the catching tutorial helper.
+static enum TrainerPicID GetCatchingTutorialTrainerPic(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return TRAINER_PIC_DAWN;
+
+    return TRAINER_PIC_LUCAS;
+}
+
 #define sSpeedX data[0]
 
 static void WallyHandleDrawTrainerPic(enum BattlerId battler)
 {
-    BtlController_HandleDrawTrainerPic(battler, TRAINER_PIC_WALLY, FALSE,
-                                       80, 80 + 4 * (8 - GetTrainerBackPicCoords(TRAINER_PIC_WALLY)->size),
+    enum TrainerPicID trainerPic = GetCatchingTutorialTrainerPic();
+
+    BtlController_HandleDrawTrainerPic(battler, trainerPic, FALSE,
+                                       80, 80 + 4 * (8 - GetTrainerBackPicCoords(trainerPic)->size),
                                        30);
 }
 
 static void WallyHandleTrainerSlide(enum BattlerId battler)
 {
-    BtlController_HandleTrainerSlide(battler, TRAINER_PIC_WALLY);
+    BtlController_HandleTrainerSlide(battler, GetCatchingTutorialTrainerPic());
 }
 
 #undef sSpeedX
@@ -304,6 +315,9 @@ static void HandleChooseActionAfterDma3(enum BattlerId battler)
     }
 }
 
+static const u8 sText_WhatWillDawnDo[] = _("What will\nDAWN do?");
+static const u8 sText_WhatWillLucasDo[] = _("What will\nLUCAS do?");
+
 static void WallyHandleChooseAction(enum BattlerId battler)
 {
     s32 i;
@@ -315,7 +329,12 @@ static void WallyHandleChooseAction(enum BattlerId battler)
         ActionSelectionDestroyCursorAt(i);
 
     ActionSelectionCreateCursorAt(gActionSelectionCursor[battler], 0);
-    BattleStringExpandPlaceholdersToDisplayedString(gText_WhatWillWallyDo);
+
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        BattleStringExpandPlaceholdersToDisplayedString(sText_WhatWillDawnDo);
+    else
+        BattleStringExpandPlaceholdersToDisplayedString(sText_WhatWillLucasDo);
+
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_ACTION_PROMPT);
 }
 
@@ -366,7 +385,7 @@ static void WallyHandleFaintingCry(enum BattlerId battler)
 
 static void WallyHandleIntroTrainerBallThrow(enum BattlerId battler)
 {
-    const u16 *trainerPal = GetTrainerBackPicPalette(TRAINER_PIC_WALLY);
+    const u16 *trainerPal = GetTrainerBackPicPalette(GetCatchingTutorialTrainerPic());
     BtlController_HandleIntroTrainerBallThrow(battler, 0xD6F8, trainerPal, 31, Intro_TryShinyAnimShowHealthbox);
 }
 
