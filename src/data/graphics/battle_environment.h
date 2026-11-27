@@ -37,6 +37,16 @@ const u32 gBattleEnvironmentTilemap_Building[] = INCGFX_U32("graphics/battle_env
 const u16 gBattleEnvironmentPalette_BuildingGym[] = INCGFX_U16("graphics/battle_environment/building/gym.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_BuildingLeader[] = INCGFX_U16("graphics/battle_environment/building/leader.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_Plain[] = INCGFX_U16("graphics/battle_environment/plain/palette.pal", ".gbapal");
+const u32 gBattleEnvironmentTiles_Plain[] = INCGFX_U32("graphics/battle_environment/plain/tiles.png", ".4bpp.smol");
+const u32 gBattleEnvironmentTilemap_Plain[] = INCGFX_U32("graphics/battle_environment/plain/map.bin", ".smolTM");
+
+const u32 gBattleEnvironmentTiles_Snow[] = INCGFX_U32("graphics/battle_environment/snow/tiles.png", ".4bpp.smol");
+const u16 gBattleEnvironmentPalette_Snow[] = INCGFX_U16("graphics/battle_environment/snow/palette.pal", ".gbapal");
+const u32 gBattleEnvironmentTilemap_Snow[] = INCGFX_U32("graphics/battle_environment/snow/map.bin", ".smolTM");
+
+const u32 gBattleEnvironmentTiles_Dark[] = INCGFX_U32("graphics/battle_environment/dark/tiles.png", ".4bpp.smol");
+const u16 gBattleEnvironmentPalette_Dark[] = INCGFX_U16("graphics/battle_environment/dark/palette.pal", ".gbapal");
+const u32 gBattleEnvironmentTilemap_Dark[] = INCGFX_U32("graphics/battle_environment/dark/map.bin", ".smolTM");
 
 const u32 gBattleEnvironmentTiles_Stadium[] = INCGFX_U32("graphics/battle_environment/stadium/tiles.png", ".4bpp.smol");
 const u32 gBattleEnvironmentTilemap_Stadium[] = INCGFX_U32("graphics/battle_environment/stadium/map.bin", ".smolTM");

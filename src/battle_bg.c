@@ -1,4 +1,6 @@
 #include "global.h"
+#include "util.h"
+#include "rtc.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_bg.h"
@@ -155,20 +157,20 @@ static const struct WindowTemplate sStandardBattleWindowTemplates[] =
 {
     [B_WIN_MSG] = {
         .bg = 0,
-        .tilemapLeft = 2,
+        .tilemapLeft = 1,
         .tilemapTop = 15,
-        .width = 26,
+        .width = 28,
         .height = 4,
-        .paletteNum = 0,
+        .paletteNum = 5,
         .baseBlock = 0x0090,
     },
     [B_WIN_ACTION_PROMPT] = {
         .bg = 0,
         .tilemapLeft = 1,
         .tilemapTop = 35,
-        .width = 14,
+        .width = 13,
         .height = 4,
-        .paletteNum = 0,
+        .paletteNum = 5,
         .baseBlock = 0x01c0,
     },
     [B_WIN_ACTION_MENU] = {
@@ -394,9 +396,9 @@ static const struct WindowTemplate sKantoTutorialBattleWindowTemplates[] =
 {
     [B_WIN_MSG] = {
         .bg = 0,
-        .tilemapLeft = 2,
+        .tilemapLeft = 1,
         .tilemapTop = 15,
-        .width = 26,
+        .width = 28,
         .height = 4,
         .paletteNum = 0,
         .baseBlock = 0x0090,
@@ -633,9 +635,9 @@ static const struct WindowTemplate sBattleArenaWindowTemplates[] =
 {
     [B_WIN_MSG] = {
         .bg = 0,
-        .tilemapLeft = 2,
+        .tilemapLeft = 1,
         .tilemapTop = 15,
-        .width = 26,
+        .width = 28,
         .height = 4,
         .paletteNum = 0,
         .baseBlock = 0x0090,
@@ -870,6 +872,62 @@ static u8 GetBattleEnvironmentByMapScene(u8 mapBattleScene)
     return BATTLE_ENVIRONMENT_PLAIN;
 }
 
+static bool32 IsOutdoorBattleEnvironment(u16 environment)
+{
+    switch (environment)
+    {
+    case BATTLE_ENVIRONMENT_GRASS:
+    case BATTLE_ENVIRONMENT_LONG_GRASS:
+    case BATTLE_ENVIRONMENT_SAND:
+    case BATTLE_ENVIRONMENT_WATER:
+    case BATTLE_ENVIRONMENT_POND:
+    case BATTLE_ENVIRONMENT_MOUNTAIN:
+    case BATTLE_ENVIRONMENT_PLAIN:
+    case BATTLE_ENVIRONMENT_RAYQUAZA:
+    case BATTLE_ENVIRONMENT_SOARING:
+    case BATTLE_ENVIRONMENT_SKY_PILLAR:
+    case BATTLE_ENVIRONMENT_BURIAL_GROUND:
+    case BATTLE_ENVIRONMENT_PUDDLE:
+    case BATTLE_ENVIRONMENT_MARSH:
+    case BATTLE_ENVIRONMENT_SWAMP:
+    case BATTLE_ENVIRONMENT_SNOW:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+static void TryApplyBattleEnvironmentDnsTint(u16 environment)
+{
+    u16 tintColor;
+    u8 coeff;
+
+    if (!IsOutdoorBattleEnvironment(environment))
+        return;
+
+    switch (GetTimeOfDay())
+    {
+    case TIME_MORNING:
+        tintColor = RGB(31, 27, 22);
+        coeff = 3;
+        break;
+    case TIME_EVENING:
+        tintColor = RGB(31, 16, 8);
+        coeff = 6;
+        break;
+    case TIME_NIGHT:
+        tintColor = RGB(4, 6, 18);
+        coeff = 9;
+        break;
+    case TIME_DAY:
+    default:
+        return;
+    }
+
+    BlendPalette(BG_PLTT_ID(2), 48, coeff, tintColor);
+    CpuCopy32(&gPlttBufferFaded[BG_PLTT_ID(2)], &gPlttBufferUnfaded[BG_PLTT_ID(2)], 3 * PLTT_SIZE_4BPP);
+}
+
 // Loads the initial battle environment.
 static void LoadBattleEnvironmentGfx(u16 environment)
 {
@@ -879,6 +937,7 @@ static void LoadBattleEnvironmentGfx(u16 environment)
     DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].background.tileset, (void *)(BG_CHAR_ADDR(2)));
     DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].background.tilemap, (void *)(BG_SCREEN_ADDR(26)));
     LoadPalette(gBattleEnvironmentInfo[environment].palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+    TryApplyBattleEnvironmentDnsTint(environment);
 }
 
 // Loads the entry associated with the battle environment.
@@ -968,10 +1027,18 @@ void InitBattleBgsVideo(void)
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJWIN_ON | DISPCNT_WIN0_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
 }
 
+enum
+{
+    // F_PAL_BG fades palette banks 1–3; keep the custom frame separate.
+    BATTLE_TEXTBOX_FRAME_PALETTE = 12,
+};
+
 void LoadBattleMenuWindowGfx(void)
 {
     LoadUserWindowBorderGfx(2, 0x12, BG_PLTT_ID(1));
     LoadUserWindowBorderGfx(2, 0x22, BG_PLTT_ID(1));
+    // Keep the custom frame outside F_PAL_BG palette fades.
+    LoadPalette(&gPlttBufferUnfaded[BG_PLTT_ID(1)], BG_PLTT_ID(BATTLE_TEXTBOX_FRAME_PALETTE), PLTT_SIZE_4BPP);
     LoadPalette(gBattleWindowTextPalette, BG_PLTT_ID(5), PLTT_SIZE_4BPP);
 
     if ((gBattleTypeFlags & (BATTLE_TYPE_ARENA | BATTLE_TYPE_POKEDUDE))
@@ -990,10 +1057,36 @@ void DrawMainBattleBackground(void)
     LoadBattleEnvironmentGfx(GetBattleEnvironmentOverride());
 }
 
+static void DrawBattleTextboxUserFrame(void)
+{
+    // Main battle dialogue box (rows 14..19, cols 0..29)
+    FillBgTilemapBufferRect(0, 0x12,  0, 14,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x13,  1, 14, 28, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x14, 29, 14,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x15,  0, 15,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x16,  1, 15, 28, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x17, 29, 15,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x18,  0, 19,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x19,  1, 19, 28, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x1A, 29, 19,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+
+    // Action prompt box ("What will MON do?", rows 34..39, cols 0..14)
+    FillBgTilemapBufferRect(0, 0x12,  0, 34,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x13,  1, 34, 13, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x14, 14, 34,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x15,  0, 35,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x16,  1, 35, 13, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x17, 14, 35,  1, 4, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x18,  0, 39,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x19,  1, 39, 13, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+    FillBgTilemapBufferRect(0, 0x1A, 14, 39,  1, 1, BATTLE_TEXTBOX_FRAME_PALETTE);
+}
+
 void LoadBattleTextboxAndBackground(void)
 {
     DecompressDataWithHeaderVram(gBattleTextboxTiles, (void *)(BG_CHAR_ADDR(0)));
     CopyToBgTilemapBuffer(0, gBattleTextboxTilemap, 0, 0);
+    DrawBattleTextboxUserFrame();
     CopyBgTilemapBufferToVram(0);
     LoadPalette(gBattleTextboxPalette, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
     LoadBattleMenuWindowGfx();
@@ -1332,6 +1425,7 @@ bool8 LoadChosenBattleElement(u8 caseId)
         break;
     case 1:
         CopyToBgTilemapBuffer(0, gBattleTextboxTilemap, 0, 0);
+        DrawBattleTextboxUserFrame();
         CopyBgTilemapBufferToVram(0);
         break;
     case 2:
@@ -1344,7 +1438,11 @@ bool8 LoadChosenBattleElement(u8 caseId)
         DecompressDataWithHeaderVram(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].background.tilemap, (void *)(BG_SCREEN_ADDR(26)));
         break;
     case 5:
-        LoadPalette(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+        {
+            u16 env = GetBattleEnvironmentOverride();
+            LoadPalette(gBattleEnvironmentInfo[env].palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+            TryApplyBattleEnvironmentDnsTint(env);
+        }
         break;
     case 6:
         LoadBattleMenuWindowGfx();
