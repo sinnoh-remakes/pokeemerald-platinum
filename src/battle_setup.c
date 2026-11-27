@@ -98,8 +98,8 @@ EWRAM_DATA TrainerBattleParameter gTrainerBattleParameter = {0};
 EWRAM_DATA u16 gPartnerTrainerId = 0;
 EWRAM_DATA static u8 *sTrainerBattleEndScript = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
-EWRAM_DATA static struct Pokemon sWallyTutorialSavedPlayerMon;
-EWRAM_DATA static bool8 sWallyTutorialSavedPlayerMonValid = FALSE;
+EWRAM_DATA static struct Pokemon sCatchingTutorialSavedPlayerMon;
+EWRAM_DATA static bool8 sCatchingTutorialSavedPlayerMonValid = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 
 // The first transition is used if the enemy Pokémon are lower level than our Pokémon.
@@ -526,38 +526,30 @@ static void DoBattlePyramidTrainerHillBattle(void)
     TryUpdateGymLeaderRematchFromTrainer();
 }
 
-// Restore the player's original Pokémon after the catching demonstration.
-static void CB2_ReturnFromWallyTutorialBattle(void)
+// Restore the player's party after the Route 202 tutorial.
+static void CB2_ReturnFromCatchingTutorialBattle(void)
 {
-    if (sWallyTutorialSavedPlayerMonValid)
+    if (sCatchingTutorialSavedPlayerMonValid)
     {
-        gParties[B_TRAINER_PLAYER][0] = sWallyTutorialSavedPlayerMon;
-        sWallyTutorialSavedPlayerMonValid = FALSE;
+        gParties[B_TRAINER_PLAYER][0] = sCatchingTutorialSavedPlayerMon;
+        sCatchingTutorialSavedPlayerMonValid = FALSE;
     }
 
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
-// Initiates the Route 202 catching demonstration.
-void StartWallyTutorialBattle(void)
+void StartCatchingTutorialBattle(void)
 {
-    // Starter selection order is Grass, Fire, Water.
-    // Select the starter that is weak to the player's choice.
     u16 helperStarter = GetStarterPokemon((VarGet(VAR_STARTER_MON) + 2) % 3);
 
-    // Preserve the player's actual starter.
-    sWallyTutorialSavedPlayerMon = gParties[B_TRAINER_PLAYER][0];
-    sWallyTutorialSavedPlayerMonValid = TRUE;
+    sCatchingTutorialSavedPlayerMon = gParties[B_TRAINER_PLAYER][0];
+    sCatchingTutorialSavedPlayerMonValid = TRUE;
 
-    // The tutorial controller operates the player-side Pokémon.
-    // Temporarily use the helper's starter instead.
     CreateMaleMon(&gParties[B_TRAINER_PLAYER][0], helperStarter, 5);
-
-    // Replace Ralts with Bidoof as the catching target.
-    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_BIDOOF, 5);
+    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_BIDOOF, 2);
 
     LockPlayerFieldControls();
-    gMain.savedCallback = CB2_ReturnFromWallyTutorialBattle;
+    gMain.savedCallback = CB2_ReturnFromCatchingTutorialBattle;
     gBattleTypeFlags = BATTLE_TYPE_CATCH_TUTORIAL;
     CreateBattleStartTask(B_TRANSITION_SLICE, 0);
 }
