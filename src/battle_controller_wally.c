@@ -278,7 +278,7 @@ void WallyBufferExecCompleted(enum BattlerId battler)
     }
 }
 
-// Route 202 uses the opposite-gender protagonist; Petalburg uses Wally.
+// Use the opposite-gender protagonist as the catching tutorial helper.
 static enum TrainerPicID GetCatchingTutorialTrainerPic(void)
 {
     if (gSaveBlock2Ptr->playerGender == MALE)

@@ -3552,20 +3552,20 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
             case B_TXT_ATK_TRAINER_NAME_WITH_CLASS:
                 toCpy = textStart;
                 if (gBattleTypeFlags & BATTLE_TYPE_CATCH_TUTORIAL)
-{
-    if (IS_FRLG)
-    {
-        textStart = StringCopy(textStart, COMPOUND_STRING("The old man"));
-    }
-    else if (gSaveBlock2Ptr->playerGender == MALE)
-    {
-        textStart = StringCopy(textStart, COMPOUND_STRING("DAWN"));
-    }
-    else
-    {
-        textStart = StringCopy(textStart, COMPOUND_STRING("LUCAS"));
-    }
-}
+                {
+                    if (IS_FRLG)
+                    {
+                        textStart = StringCopy(textStart, COMPOUND_STRING("The old man"));
+                    }
+                    else if (gSaveBlock2Ptr->playerGender == MALE)
+                    {
+                        textStart = StringCopy(textStart, COMPOUND_STRING("DAWN"));
+                    }
+                    else
+                    {
+                        textStart = StringCopy(textStart, COMPOUND_STRING("LUCAS"));
+                    }
+                }
                 else if (GetBattlerPosition(gBattlerAttacker) == B_POSITION_PLAYER_LEFT)
                 {
                     textStart = StringCopy(textStart, BattleStringGetTrainerName(textStart, multiplayerId, gBattlerAttacker));

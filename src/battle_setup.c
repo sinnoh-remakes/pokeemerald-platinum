@@ -526,7 +526,7 @@ static void DoBattlePyramidTrainerHillBattle(void)
     TryUpdateGymLeaderRematchFromTrainer();
 }
 
-// Restore the player's party after the Route 202 tutorial.
+// Restore the player's party after the catching tutorial.
 static void CB2_ReturnFromCatchingTutorialBattle(void)
 {
     if (sCatchingTutorialSavedPlayerMonValid)
