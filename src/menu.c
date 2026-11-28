@@ -25,6 +25,7 @@
 #include "task.h"
 #include "text_window.h"
 #include "window.h"
+#include "start_menu.h"
 #include "constants/songs.h"
 
 struct MenuInfoIcon
@@ -393,7 +394,15 @@ void DisplayYesNoMenuWithDefault(u8 initialCursorPos)
 u8 AddStartMenuWindow(u8 numActions)
 {
     if (sStartMenuWindowId == WINDOW_NONE)
-        sStartMenuWindowId = AddWindowParameterized(0, 22, 1, 7, (numActions * 2) + 2, 15, 0x139);
+    {
+#if START_MENU_USE_ICONS
+        if (gShouldStartMenuIconsBePrinted)
+            sStartMenuWindowId = AddWindowParameterized(0, 22 - START_MENU_ICON_WINDOW_OFFSET, 1,
+                7 + START_MENU_ICON_WINDOW_OFFSET, 18, 15, 0x139);
+        else
+#endif
+            sStartMenuWindowId = AddWindowParameterized(0, 22, 1, 7, (numActions * 2) + 2, 15, 0x139);
+    }
     return sStartMenuWindowId;
 }
 
@@ -675,6 +684,23 @@ void RedrawMenuCursor(u8 oldPos, u8 newPos)
 
     width = GetMenuCursorDimensionByFont(sMenu.fontId, 0);
     height = GetMenuCursorDimensionByFont(sMenu.fontId, 1);
+#if START_MENU_USE_ICONS
+    if (gShouldStartMenuIconsBePrinted && sMenu.windowId == GetStartMenuWindowId())
+    {
+        u8 oldY = GetStartMenuIconRowY(oldPos);
+        u8 newY = GetStartMenuIconRowY(newPos);
+        FillWindowPixelRect(sMenu.windowId, PIXEL_FILL(1), sMenu.left,
+                            oldY, width, height + 4);
+        if (!IsAStartMenuIconAtPosition(newPos))
+            AddTextPrinterParameterized(sMenu.windowId, sMenu.fontId, gText_SelectorArrow3,
+                                        sMenu.left, newY, 0, 0);
+
+        // The normal cursor printer uploads the window graphics to VRAM.
+        // Icon-selected entries suppress that printer, so do the upload here.
+        CopyWindowToVram(sMenu.windowId, COPYWIN_GFX);
+        return;
+    }
+#endif
     FillWindowPixelRect(sMenu.windowId, PIXEL_FILL(1), sMenu.left, sMenu.optionHeight * oldPos + sMenu.top, width, height);
     AddTextPrinterParameterized(sMenu.windowId, sMenu.fontId, gText_SelectorArrow3, sMenu.left, sMenu.optionHeight * newPos + sMenu.top, 0, 0);
 }
