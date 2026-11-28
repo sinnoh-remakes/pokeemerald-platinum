@@ -37,6 +37,9 @@
 #include "script.h"
 #include "sound.h"
 #include "start_menu.h"
+#if START_MENU_USE_ICONS
+#include "sprite.h"
+#endif
 #include "strings.h"
 #include "string_util.h"
 #include "task.h"
@@ -144,6 +147,503 @@ static void SaveGameTask(u8 taskId);
 static void Task_SaveAfterLinkBattle(u8 taskId);
 static void Task_WaitForBattleTowerLinkSave(u8 taskId);
 static bool8 FieldCB_ReturnToFieldStartMenu(void);
+
+#if START_MENU_USE_ICONS
+#define START_MENU_ICON_FRAMES 16
+#define START_MENU_ICON_POSITION_COUNT 9
+#define START_MENU_HIGHLIGHT_SPRITE_COUNT 2
+
+static const u32 sStartMenuIconsGfx[] = INCBIN_U32("graphics/interface/start_menu_icons.4bpp");
+static const u16 sStartMenuIconsPal[] = INCBIN_U16("graphics/interface/start_menu_icons.gbapal");
+
+// The selection frame is split across two adjacent 64x32 OBJ sprites.
+static const u32 sStartMenuHighlightGfx[] =
+    INCBIN_U32("graphics/interface/start_menu_frame.4bpp");
+static const u16 sStartMenuHighlightPal[] =
+    INCBIN_U16("graphics/interface/start_menu_frame.gbapal");
+
+static const struct SpritePalette sStartMenuHighlightPalette =
+{
+    .data = sStartMenuHighlightPal,
+    .tag = START_MENU_FRAME_PALETTE_TAG,
+};
+
+static const struct SpriteFrameImage sStartMenuHighlightFrames[2] =
+{
+    overworld_frame(sStartMenuHighlightGfx, 8, 4, 0),
+    overworld_frame(sStartMenuHighlightGfx, 8, 4, 1),
+};
+
+// Each half explicitly selects its own image from the frame sheet.
+static const union AnimCmd sStartMenuHighlightAnimLeft[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sStartMenuHighlightAnimRight[] =
+{
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sStartMenuHighlightAnims[] =
+{
+    sStartMenuHighlightAnimLeft,
+    sStartMenuHighlightAnimRight,
+};
+
+static const struct SpritePalette sStartMenuIconPalette =
+{
+    .data = sStartMenuIconsPal,
+    .tag = START_MENU_ICON_PALETTE_TAG,
+};
+
+static const struct SpriteFrameImage sStartMenuIconFrames[START_MENU_ICON_FRAMES] =
+{
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 0),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 1),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 2),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 3),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 4),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 5),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 6),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 7),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 8),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 9),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 10),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 11),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 12),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 13),
+    // Dawn's Bag: normal and selected.
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 14),
+    overworld_frame(sStartMenuIconsGfx, 4, 4, 15),
+};
+
+#define START_MENU_ICON_ANIM(n) \
+    static const union AnimCmd sStartMenuIconAnim##n[] = { \
+        ANIMCMD_FRAME(n, 30, FALSE, FALSE), ANIMCMD_END \
+    }
+
+START_MENU_ICON_ANIM(0);
+START_MENU_ICON_ANIM(1);
+START_MENU_ICON_ANIM(2);
+START_MENU_ICON_ANIM(3);
+START_MENU_ICON_ANIM(4);
+START_MENU_ICON_ANIM(5);
+START_MENU_ICON_ANIM(6);
+START_MENU_ICON_ANIM(7);
+START_MENU_ICON_ANIM(8);
+START_MENU_ICON_ANIM(9);
+START_MENU_ICON_ANIM(10);
+START_MENU_ICON_ANIM(11);
+START_MENU_ICON_ANIM(12);
+START_MENU_ICON_ANIM(13);
+START_MENU_ICON_ANIM(14);
+START_MENU_ICON_ANIM(15);
+
+static const union AnimCmd *const sStartMenuIconAnims[START_MENU_ICON_FRAMES] =
+{
+    sStartMenuIconAnim0, sStartMenuIconAnim1, sStartMenuIconAnim2, sStartMenuIconAnim3,
+    sStartMenuIconAnim4, sStartMenuIconAnim5, sStartMenuIconAnim6, sStartMenuIconAnim7,
+    sStartMenuIconAnim8, sStartMenuIconAnim9, sStartMenuIconAnim10, sStartMenuIconAnim11,
+    sStartMenuIconAnim12, sStartMenuIconAnim13,
+    sStartMenuIconAnim14, sStartMenuIconAnim15,
+};
+
+// Unselected icons remain at their normal size and orientation.
+static const union AffineAnimCmd sStartMenuIconAffineAnimIdle[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+    AFFINEANIMCMD_END,
+};
+
+// The selection animation scales the icon before the tilt callback takes over.
+static const union AffineAnimCmd sStartMenuIconAffineAnimSelected[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+
+    // Enlarge briefly, then return to the original size.
+    AFFINEANIMCMD_FRAME( 4,  4, 0, 5),
+    AFFINEANIMCMD_FRAME(-4, -4, 0, 5),
+
+    // The tilt is handled separately by SpriteCB_StartMenuIconTilt.
+    AFFINEANIMCMD_END,
+};
+
+static const union AffineAnimCmd *const sStartMenuIconAffineAnims[] =
+{
+    sStartMenuIconAffineAnimIdle,
+    sStartMenuIconAffineAnimSelected,
+};
+
+// The sprite engine keeps pointers to its template and OAM data, so these must
+// remain alive for as long as the icon sprites exist.
+static struct OamData sStartMenuIconOam;
+static struct SpriteTemplate sStartMenuIconSpriteTemplate;
+static struct OamData sStartMenuHighlightOam;
+static struct SpriteTemplate sStartMenuHighlightSpriteTemplate;
+static bool8 sStartMenuIconSpriteDataInitialized = FALSE;
+
+EWRAM_DATA bool8 gShouldStartMenuIconsBePrinted = FALSE;
+EWRAM_DATA static u8 sStartMenuIconSpriteIds[START_MENU_ICON_POSITION_COUNT];
+EWRAM_DATA static u8 sStartMenuIconFrameIds[START_MENU_ICON_POSITION_COUNT] = {0};
+EWRAM_DATA static u8 sStartMenuIconSelectedFrameIds[START_MENU_ICON_POSITION_COUNT];
+EWRAM_DATA static u8 sStartMenuHighlightSpriteIds[START_MENU_HIGHLIGHT_SPRITE_COUNT];
+
+static void DeleteAllStartMenuIcons(void);
+static void CreateStartMenuIconForAction(u8 action, u8 position);
+static void SpriteCB_StartMenuIconTilt(struct Sprite *sprite);
+static void SetStartMenuHighlightPosition(u8 position);
+
+static void InitStartMenuIconSpriteData(void)
+{
+    u8 i;
+
+    if (sStartMenuIconSpriteDataInitialized)
+        return;
+
+    // EWRAM_DATA arrays must use zero initializers. Set the unused sprite IDs
+    // to SPRITE_NONE at runtime instead.
+    for (i = 0; i < START_MENU_ICON_POSITION_COUNT; i++)
+        sStartMenuIconSpriteIds[i] = SPRITE_NONE;
+
+    for (i = 0; i < START_MENU_HIGHLIGHT_SPRITE_COUNT; i++)
+        sStartMenuHighlightSpriteIds[i] = SPRITE_NONE;
+
+    sStartMenuIconOam = gDummyOamData;
+    sStartMenuIconOam.shape = SPRITE_SHAPE(32x32);
+    sStartMenuIconOam.size = SPRITE_SIZE(32x32);
+    sStartMenuIconOam.affineMode = ST_OAM_AFFINE_DOUBLE;
+    sStartMenuIconOam.priority = 0;
+
+    sStartMenuIconSpriteTemplate.tileTag = TAG_NONE;
+    sStartMenuIconSpriteTemplate.paletteTag = START_MENU_ICON_PALETTE_TAG;
+    sStartMenuIconSpriteTemplate.oam = &sStartMenuIconOam;
+    sStartMenuIconSpriteTemplate.anims = sStartMenuIconAnims;
+    sStartMenuIconSpriteTemplate.images = sStartMenuIconFrames;
+    sStartMenuIconSpriteTemplate.affineAnims = sStartMenuIconAffineAnims;
+    sStartMenuIconSpriteTemplate.callback = SpriteCallbackDummy;
+
+    sStartMenuHighlightOam = gDummyOamData;
+    sStartMenuHighlightOam.shape = SPRITE_SHAPE(64x32);
+    sStartMenuHighlightOam.size = SPRITE_SIZE(64x32);
+    sStartMenuHighlightOam.affineMode = ST_OAM_AFFINE_OFF;
+    sStartMenuHighlightOam.priority = 0;
+
+    sStartMenuHighlightSpriteTemplate.tileTag = TAG_NONE;
+    sStartMenuHighlightSpriteTemplate.paletteTag = START_MENU_FRAME_PALETTE_TAG;
+    sStartMenuHighlightSpriteTemplate.oam = &sStartMenuHighlightOam;
+    sStartMenuHighlightSpriteTemplate.anims = sStartMenuHighlightAnims;
+    sStartMenuHighlightSpriteTemplate.images = sStartMenuHighlightFrames;
+    sStartMenuHighlightSpriteTemplate.affineAnims = sStartMenuIconAffineAnims;
+    sStartMenuHighlightSpriteTemplate.callback = SpriteCallbackDummy;
+    sStartMenuIconSpriteDataInitialized = TRUE;
+}
+
+u8 GetStartMenuIconRowY(u8 position)
+{
+    u16 windowHeight = gWindows[GetStartMenuWindowId()].window.height * 8;
+    u16 rowSpacing;
+    u16 usedHeight;
+    u16 topOffset;
+
+    if (sNumStartMenuActions <= 1)
+        return (windowHeight - 16) / 2;
+
+    // Keep each 16-pixel text row evenly spaced and center the whole list.
+    rowSpacing = (windowHeight - 16) / (sNumStartMenuActions - 1);
+    usedHeight = 16 + rowSpacing * (sNumStartMenuActions - 1);
+    topOffset = (windowHeight - usedHeight) / 2;
+
+    return topOffset + position * rowSpacing;
+}
+
+static bool8 LoadStartMenuIconPalette(void)
+{
+    if (IndexOfSpritePaletteTag(START_MENU_ICON_PALETTE_TAG) == 0xFF
+        && LoadSpritePalette(&sStartMenuIconPalette) == 0xFF)
+        return FALSE;
+
+    return TRUE;
+}
+
+static bool8 LoadStartMenuHighlightPalette(void)
+{
+    if (IndexOfSpritePaletteTag(START_MENU_FRAME_PALETTE_TAG) == 0xFF
+        && LoadSpritePalette(&sStartMenuHighlightPalette) == 0xFF)
+        return FALSE;
+
+    return TRUE;
+}
+
+// Position the two halves of the selection frame.
+static void SetStartMenuHighlightPosition(u8 position)
+{
+    u8 i;
+    u8 windowId;
+    u32 spriteId;
+    s16 frameLeft;
+    s16 frameY;
+    bool8 recreate = FALSE;
+
+    if (!gShouldStartMenuIconsBePrinted || position >= sNumStartMenuActions)
+        return;
+
+    InitStartMenuIconSpriteData();
+
+    if (!LoadStartMenuHighlightPalette())
+        return;
+
+    windowId = GetStartMenuWindowId();
+
+    frameLeft = (gWindows[windowId].window.tilemapLeft * 8) - 16;
+    frameY = (gWindows[windowId].window.tilemapTop * 8)
+           + GetStartMenuIconRowY(position) + 5;
+
+    for (i = 0; i < START_MENU_HIGHLIGHT_SPRITE_COUNT; i++)
+    {
+        spriteId = sStartMenuHighlightSpriteIds[i];
+
+        if (spriteId >= MAX_SPRITES || !gSprites[spriteId].inUse)
+            recreate = TRUE;
+    }
+
+    if (recreate)
+    {
+        // Remove any leftover half before creating a complete pair.
+        for (i = 0; i < START_MENU_HIGHLIGHT_SPRITE_COUNT; i++)
+        {
+            spriteId = sStartMenuHighlightSpriteIds[i];
+
+            if (spriteId < MAX_SPRITES && gSprites[spriteId].inUse)
+                DestroySpriteAndFreeResources(&gSprites[spriteId]);
+
+            sStartMenuHighlightSpriteIds[i] = SPRITE_NONE;
+        }
+
+        spriteId = CreateSpriteUnchecked(
+            &sStartMenuHighlightSpriteTemplate,
+            frameLeft + 32, frameY, 0);
+
+        if (spriteId >= MAX_SPRITES)
+            return;
+
+        sStartMenuHighlightSpriteIds[0] = spriteId;
+        StartSpriteAnim(&gSprites[spriteId], 0);
+
+        spriteId = CreateSpriteUnchecked(
+            &sStartMenuHighlightSpriteTemplate,
+            frameLeft + 96, frameY, 0);
+
+        if (spriteId >= MAX_SPRITES)
+        {
+            DestroySpriteAndFreeResources(
+                &gSprites[sStartMenuHighlightSpriteIds[0]]);
+            sStartMenuHighlightSpriteIds[0] = SPRITE_NONE;
+            return;
+        }
+
+        sStartMenuHighlightSpriteIds[1] = spriteId;
+        StartSpriteAnim(&gSprites[spriteId], 1);
+    }
+
+    // Moving the sprites rather than recreating them avoids OAM churn.
+    for (i = 0; i < START_MENU_HIGHLIGHT_SPRITE_COUNT; i++)
+    {
+        struct Sprite *sprite = &gSprites[sStartMenuHighlightSpriteIds[i]];
+
+        sprite->x = frameLeft + 32 + (i * 64);
+        sprite->y = frameY;
+        sprite->x2 = 0;
+        sprite->y2 = 0;
+    }
+}
+
+static void SpriteCB_StartMenuIconTilt(struct Sprite *sprite)
+{
+    s16 angle;
+
+    // Let the one-time enlargement finish before taking control of rotation.
+    if (!sprite->affineAnimEnded)
+        return;
+
+    // Prevent the affine animation system from overwriting our rotation.
+    sprite->affineAnimPaused = TRUE;
+
+    angle = sprite->data[0];
+
+    // Rotate at a constant speed and reverse at each end of the tilt.
+    if (sprite->data[1] == 0)
+    {
+        angle += 0x40;
+
+        if (angle >= 0x0C16)
+        {
+            // Reflect any overshoot immediately and reverse direction.
+            angle = 0x0C16 - (angle - 0x0C16);
+            sprite->data[1] = 1;
+        }
+    }
+    else
+    {
+        angle -= 0x40;
+
+        if (angle <= -0x0C16)
+        {
+            angle = -0x0C16 + (-0x0C16 - angle);
+            sprite->data[1] = 0;
+        }
+    }
+
+    sprite->data[0] = angle;
+
+    SetOamMatrixRotationScaling(sprite->oam.matrixNum,
+                                0x100, 0x100, (u16)angle);
+}
+
+static void DeleteAllStartMenuIcons(void)
+{
+    u8 i;
+
+    InitStartMenuIconSpriteData();
+
+    for (i = 0; i < START_MENU_ICON_POSITION_COUNT; i++)
+    {
+        u8 spriteId = sStartMenuIconSpriteIds[i];
+        if (spriteId < MAX_SPRITES && gSprites[spriteId].inUse)
+            DestroySpriteAndFreeResources(&gSprites[spriteId]);
+        sStartMenuIconSpriteIds[i] = SPRITE_NONE;
+        sStartMenuIconFrameIds[i] = 0;
+        sStartMenuIconSelectedFrameIds[i] = 0;
+    }
+
+    FreeSpritePaletteByTag(START_MENU_ICON_PALETTE_TAG);
+    gShouldStartMenuIconsBePrinted = FALSE;
+
+    // Remove both parts of the selection frame as well as the icons.
+    for (i = 0; i < START_MENU_HIGHLIGHT_SPRITE_COUNT; i++)
+    {
+        u8 spriteId = sStartMenuHighlightSpriteIds[i];
+
+        if (spriteId < MAX_SPRITES && gSprites[spriteId].inUse)
+            DestroySpriteAndFreeResources(&gSprites[spriteId]);
+
+        sStartMenuHighlightSpriteIds[i] = SPRITE_NONE;
+    }
+
+    FreeSpritePaletteByTag(START_MENU_FRAME_PALETTE_TAG);
+}
+
+bool8 IsAStartMenuIconAtPosition(u8 position)
+{
+    u8 spriteId;
+
+    InitStartMenuIconSpriteData();
+
+    if (position >= START_MENU_ICON_POSITION_COUNT)
+        return FALSE;
+
+    spriteId = sStartMenuIconSpriteIds[position];
+    return spriteId < MAX_SPRITES && gSprites[spriteId].inUse;
+}
+
+void SetStartMenuIconSelected(u8 position, bool8 selected)
+{
+    struct Sprite *sprite;
+    u8 spriteId;
+
+    if (!IsAStartMenuIconAtPosition(position))
+        return;
+
+    spriteId = sStartMenuIconSpriteIds[position];
+    sprite = &gSprites[spriteId];
+    StartSpriteAnim(sprite, selected
+                    ? sStartMenuIconSelectedFrameIds[position]
+                    : sStartMenuIconFrameIds[position]);
+
+    // Never retain vertical displacement from an earlier animation.
+    sprite->y2 = 0;
+    sprite->data[0] = 0;
+    sprite->data[1] = 0;
+    sprite->affineAnimPaused = FALSE;
+    StartSpriteAffineAnim(sprite, selected ? 1 : 0);
+    sprite->callback = selected ? SpriteCB_StartMenuIconTilt : SpriteCallbackDummy;
+}
+
+static void CreateStartMenuIconForAction(u8 action, u8 position)
+{
+    u8 iconId;
+    u8 selectedIconId;
+    u32 spriteId;
+    s16 x;
+    s16 y;
+    u8 rowY;
+
+    if (!gShouldStartMenuIconsBePrinted || position >= START_MENU_ICON_POSITION_COUNT)
+        return;
+
+    if (position == sStartMenuCursorPos)
+        SetStartMenuHighlightPosition(position);
+
+    // The frame ordering is Pokédex, Pokémon, Bag, Trainer Card, Save, Options, Exit.
+    // Platinum-specific extensions without an original DPPt icon retain the normal cursor.
+    switch (action)
+    {
+    case MENU_ACTION_POKEDEX:
+        iconId = 2;
+        break;
+    case MENU_ACTION_POKEMON:
+        iconId = 1;
+        break;
+    case MENU_ACTION_BAG:
+    case MENU_ACTION_PYRAMID_BAG:
+        iconId = (gSaveBlock2Ptr->playerGender == MALE) ? 0 : 14;
+        break;
+    case MENU_ACTION_PLAYER:
+    case MENU_ACTION_PLAYER_LINK:
+        iconId = 3;
+        break;
+    case MENU_ACTION_SAVE:
+    case MENU_ACTION_REST_FRONTIER:
+        iconId = 4;
+        break;
+    case MENU_ACTION_OPTION:
+        iconId = 5;
+        break;
+    case MENU_ACTION_EXIT:
+        iconId = 6;
+        break;
+    default:
+        return;
+    }
+
+    // Most icons use the normal selected-frame offset.
+    selectedIconId = iconId + START_MENU_ICON_SELECTED_OFFSET;
+
+    // Dawn's Bag has its own selected artwork at frame 15.
+    if ((action == MENU_ACTION_BAG || action == MENU_ACTION_PYRAMID_BAG)
+        && gSaveBlock2Ptr->playerGender != MALE)
+        selectedIconId = 15;
+
+    InitStartMenuIconSpriteData();
+    if (!LoadStartMenuIconPalette())
+        return;
+
+    rowY = GetStartMenuIconRowY(position);
+    x = (gWindows[GetStartMenuWindowId()].window.tilemapLeft * 8) + START_MENU_ICON_SPRITE_X;
+    // Sprite coordinates are centered; align the icon with the text row.
+    y = (gWindows[GetStartMenuWindowId()].window.tilemapTop * 8) + rowY + 8;
+    spriteId = CreateSpriteUnchecked(&sStartMenuIconSpriteTemplate, x, y, 0);
+    if (spriteId >= MAX_SPRITES)
+        return;
+
+    sStartMenuIconSpriteIds[position] = spriteId;
+    sStartMenuIconFrameIds[position] = iconId;
+    sStartMenuIconSelectedFrameIds[position] = selectedIconId;
+    SetStartMenuIconSelected(position, position == sStartMenuCursorPos);
+}
+#endif // START_MENU_USE_ICONS
 
 static const struct WindowTemplate sWindowTemplate_SafariBalls = {
     .bg = 0,
@@ -486,15 +986,29 @@ static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
 
     do
     {
-        if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
-        {
-            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
-        }
+        u8 action = sCurrentStartMenuActions[index];
+#if START_MENU_USE_ICONS
+        u8 textX = gShouldStartMenuIconsBePrinted ? START_MENU_ICON_TEXT_X : 8;
+        u8 textY = gShouldStartMenuIconsBePrinted
+                   ? GetStartMenuIconRowY(index)
+                   : (index << 4) + 9;
+#else
+        u8 textX = 8;
+        u8 textY = (index << 4) + 9;
+#endif
+
+        if (sStartMenuItems[action].func.u8_void == StartMenuPlayerNameCallback)
+            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[action].text, textX, textY);
         else
         {
-            StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[index]].text);
-            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, (index << 4) + 9, TEXT_SKIP_DRAW, NULL);
+            StringExpandPlaceholders(gStringVar4, sStartMenuItems[action].text);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, textX, textY, TEXT_SKIP_DRAW, NULL);
         }
+
+#if START_MENU_USE_ICONS
+        if (gShouldStartMenuIconsBePrinted)
+            CreateStartMenuIconForAction(action, index);
+#endif
 
         index++;
         if (index >= sNumStartMenuActions)
@@ -526,6 +1040,8 @@ static bool32 InitStartMenuStep(void)
         break;
     case 2:
         LoadMessageBoxAndBorderGfx();
+        // Window frame IDs are zero-based: index 12 selects visual Frame 13.
+        LoadWindowGfx(0, 12, STD_WINDOW_BASE_TILE_NUM, BG_PLTT_ID(STD_WINDOW_PALETTE_NUM));
         DrawStdWindowFrame(AddStartMenuWindow(sNumStartMenuActions), FALSE);
         sInitStartMenuData[1] = 0;
         sInitStartMenuData[0]++;
@@ -587,6 +1103,9 @@ static bool8 FieldCB_ReturnToFieldStartMenu(void)
 
 void ShowReturnToFieldStartMenu(void)
 {
+#if START_MENU_USE_ICONS
+    gShouldStartMenuIconsBePrinted = TRUE;
+#endif
     sInitStartMenuData[0] = 0;
     sInitStartMenuData[1] = 0;
     gFieldCallback2 = FieldCB_ReturnToFieldStartMenu;
@@ -620,22 +1139,37 @@ void ShowStartMenu(void)
         PlayerFreeze();
         StopPlayerAvatar();
     }
+#if START_MENU_USE_ICONS
+    gShouldStartMenuIconsBePrinted = TRUE;
+#endif
     CreateStartMenuTask(Task_ShowStartMenu);
     LockPlayerFieldControls();
 }
 
 static bool8 HandleStartMenuInput(void)
 {
-    if (JOY_NEW(DPAD_UP))
+    if (JOY_REPEAT(DPAD_UP))
     {
+        u8 oldCursorPos = sStartMenuCursorPos;
         PlaySE(SE_SELECT);
         sStartMenuCursorPos = Menu_MoveCursor(-1);
+#if START_MENU_USE_ICONS
+        SetStartMenuIconSelected(oldCursorPos, FALSE);
+        SetStartMenuIconSelected(sStartMenuCursorPos, TRUE);
+        SetStartMenuHighlightPosition(sStartMenuCursorPos);
+#endif
     }
 
-    if (JOY_NEW(DPAD_DOWN))
+    if (JOY_REPEAT(DPAD_DOWN))
     {
+        u8 oldCursorPos = sStartMenuCursorPos;
         PlaySE(SE_SELECT);
         sStartMenuCursorPos = Menu_MoveCursor(1);
+#if START_MENU_USE_ICONS
+        SetStartMenuIconSelected(oldCursorPos, FALSE);
+        SetStartMenuIconSelected(sStartMenuCursorPos, TRUE);
+        SetStartMenuHighlightPosition(sStartMenuCursorPos);
+#endif
     }
 
     if (JOY_NEW(A_BUTTON))
@@ -651,6 +1185,10 @@ static bool8 HandleStartMenuInput(void)
             return FALSE;
 
         gMenuCallback = sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void;
+#if START_MENU_USE_ICONS
+        // The next screen may reset sprite data or reuse the menu window.
+        DeleteAllStartMenuIcons();
+#endif
 
         if (gMenuCallback != StartMenuSaveCallback
             && gMenuCallback != StartMenuExitCallback
@@ -666,6 +1204,9 @@ static bool8 HandleStartMenuInput(void)
 
     if (JOY_NEW(START_BUTTON | B_BUTTON))
     {
+#if START_MENU_USE_ICONS
+        DeleteAllStartMenuIcons();
+#endif
         RemoveExtraStartMenuWindows();
         HideStartMenu();
         return TRUE;
@@ -815,6 +1356,9 @@ static bool8 StartMenuSafariZoneRetireCallback(void)
 
 static void HideStartMenuDebug(void)
 {
+#if START_MENU_USE_ICONS
+    DeleteAllStartMenuIcons();
+#endif
     PlaySE(SE_SELECT);
     ClearStdWindowAndFrame(GetStartMenuWindowId(), TRUE);
     RemoveStartMenuWindow();
@@ -844,6 +1388,9 @@ static bool8 StartMenuBattlePyramidRetireCallback(void)
 // Functionally unused
 void ShowBattlePyramidStartMenu(void)
 {
+#if START_MENU_USE_ICONS
+    gShouldStartMenuIconsBePrinted = TRUE;
+#endif
     ClearDialogWindowAndFrameToTransparent(0, FALSE);
     ScriptUnfreezeObjectEvents();
     CreateStartMenuTask(Task_ShowStartMenu);
@@ -881,6 +1428,9 @@ static bool8 SaveCallback(void)
         return FALSE;
     case SAVE_CANCELED: // Back to start menu
         ClearDialogWindowAndFrameToTransparent(0, FALSE);
+#if START_MENU_USE_ICONS
+        gShouldStartMenuIconsBePrinted = TRUE;
+#endif
         InitStartMenu();
         gMenuCallback = HandleStartMenuInput;
         return FALSE;
@@ -906,6 +1456,9 @@ static bool8 BattlePyramidRetireStartCallback(void)
 
 static bool8 BattlePyramidRetireReturnCallback(void)
 {
+#if START_MENU_USE_ICONS
+    gShouldStartMenuIconsBePrinted = TRUE;
+#endif
     InitStartMenu();
     gMenuCallback = HandleStartMenuInput;
 
@@ -1480,6 +2033,9 @@ void SaveForBattleTowerLink(void)
 
 static void HideStartMenuWindow(void)
 {
+#if START_MENU_USE_ICONS
+    DeleteAllStartMenuIcons();
+#endif
     ClearStdWindowAndFrame(GetStartMenuWindowId(), TRUE);
     RemoveStartMenuWindow();
     ScriptUnfreezeObjectEvents();
